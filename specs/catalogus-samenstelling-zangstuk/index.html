@@ -2156,8 +2156,9 @@ staat <strong><code>:::include</code></strong> met exporttype (<code>svg</code>,
 <p>De <strong>catalogus</strong> zoekt het stuk op (met <strong><code>default.*</code></strong> uit de sessie) en levert een
 <strong>catalogus-pad</strong>. <strong><code>vsa resolve-catalogus</code></strong> schrijft dat pad in het markdown-bestand;
 pas daarna mag <strong><code>vsa build-markdown</code></strong> / export draaien.</p>
-<p>VSA-build (<code>:::include</code> zonder <code>zoek=</code>) valt buiten dit document; zie
-<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus">VSA-tooling — <code>:::include</code> met <code>zoek=</code></a>.</p>
+<p>VSA-build (<code>:::include</code> zonder <code>zoek=</code>) en <strong><code>@include-vsa</code></strong> in <code>.vsa</code>-brontekst vallen buiten dit
+document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruiken dezelfde resolver — zie
+<a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
 <hr />
 <h2 id="woorden-niet-door-elkaar-halen">Woorden: niet door elkaar halen<a class="headerlink" href="#woorden-niet-door-elkaar-halen" title="Permanent link">&para;</a></h2>
 <table>
@@ -2386,12 +2387,13 @@ Tekst of aanwijzing voor het koor (vrij).
   catalogus-pad.</li>
 </ul>
 <h3 id="resolver-gedrag-catalogus-zoek">Resolver-gedrag (<code>catalogus zoek</code>)<a class="headerlink" href="#resolver-gedrag-catalogus-zoek" title="Permanent link">&para;</a></h3>
+<p>Normatief API-contract: <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
 <ol>
-<li>Lees <strong><code>default.*</code></strong> uit frontmatter van het markdown-bestand.</li>
+<li>Lees <strong><code>default.*</code></strong> uit frontmatter van het markdown- of <code>.vsa</code>-bestand.</li>
 <li>Normaliseer <code>zoek=</code> (<a href="../terminologie/">§2.8</a>).</li>
-<li>Doorzoek metadata-index binnen <code>bronnen</code>.</li>
-<li><strong>Eén</strong> match → <strong>catalogus-pad</strong> (<code>bron:…</code> / <code>lokaal:…</code>).</li>
-<li><strong>Geen</strong> / <strong>meerdere</strong> matches → fout of review.</li>
+<li>Doorzoek catalogusmetadata binnen <code>bronnen</code>.</li>
+<li><strong>Eén</strong> match → <strong>catalogus-pad</strong> (<code>bron:…</code> / <code>lokaal:…</code>) en <strong><code>Path</code></strong> naar brondocument.</li>
+<li><strong>Geen</strong> / <strong>meerdere</strong> matches → fout of review (<code>zoek_kandidaten</code> voor lijst).</li>
 </ol>
 <hr />
 <h2 id="na-resolve-catalogus-pad-in-include">Na resolve — catalogus-pad in <code>:::include</code><a class="headerlink" href="#na-resolve-catalogus-pad-in-include" title="Permanent link">&para;</a></h2>
@@ -2482,11 +2484,19 @@ exportkeuzes (svg, coria, …) vanaf het begin.</p>
 <td>Geïmplementeerd (basis)</td>
 </tr>
 <tr>
-<td><code>catalogus zoek</code> (vrije tekst + <code>default.*</code>)</td>
-<td><strong>Gepland</strong></td>
+<td><strong><code>catalogus zoek</code> API-contract</strong></td>
+<td><strong>Normatief (fase 0)</strong> — <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a></td>
+</tr>
+<tr>
+<td><code>catalogus zoek</code> (implementatie)</td>
+<td><strong>Gepland</strong> (fase 4)</td>
 </tr>
 <tr>
 <td><code>:::include</code> parameter <code>zoek=</code></td>
+<td><strong>Gepland</strong> (VSA-tooling)</td>
+</tr>
+<tr>
+<td><code>@include-vsa zoek=</code></td>
 <td><strong>Gepland</strong> (VSA-tooling)</td>
 </tr>
 <tr>
@@ -2524,6 +2534,10 @@ exportkeuzes (svg, coria, …) vanaf het begin.</p>
 <tr>
 <td>2026-07</td>
 <td><strong><code>:::include zoek=</code></strong> i.p.v. <code>:::zangstuk</code>; sjabloon zonder <code>gelegenheid</code>; <code>vsa resolve-catalogus</code></td>
+</tr>
+<tr>
+<td>2026-07</td>
+<td>Verwijzing naar <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>; <code>@include-vsa</code> als consument</td>
 </tr>
 </tbody>
 </table>

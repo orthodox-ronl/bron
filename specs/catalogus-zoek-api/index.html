@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://orthodox-groningen.github.io/bron/specs/zangstuk-formaat/">
+        <link rel="canonical" href="https://orthodox-groningen.github.io/bron/specs/catalogus-zoek-api/">
       
       
-        <link rel="prev" href="../repo-structuur/">
-      
-      
-        <link rel="next" href="../catalogus-architectuur/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Zangstuk-formaat - bron — documentatie</title>
+        <title>Catalogus — zoek-API (contract) - bron — documentatie</title>
       
     
     
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#zangstuk-formaat" class="md-skip">
+        <a href="#catalogus-zoek-api-contract" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -120,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Zangstuk-formaat
+              Catalogus — zoek-API (contract)
             
           </span>
         </div>
@@ -218,12 +214,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../" class="md-tabs__link">
           
   
@@ -378,31 +372,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -420,7 +411,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -631,37 +622,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Zangstuk-formaat
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../zangstuk-formaat/" class="md-nav__link">
         
   
   
@@ -677,137 +641,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#zangstukyaml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        zangstuk.yaml
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="zangstuk.yaml">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#verplichte-velden" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verplichte velden
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optionele-liturgische-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Optionele liturgische metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#source-entry-optionele-velden" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Source-entry — optionele velden
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Regels
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vsa-bestanden" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VSA-bestanden
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="VSA-bestanden">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#platte-vsa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Platte VSA
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vsa-met-yaml-frontmatter-optioneel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VSA met YAML-frontmatter (optioneel)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#voorbeeld" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Voorbeeld
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1876,22 +1709,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#zangstukyaml" class="md-nav__link">
+  <a href="#doel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        zangstuk.yaml
+        Doel
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="zangstuk.yaml">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zoekgedrag-abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoekgedrag (abstract)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python-API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python-API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#verplichte-velden" class="md-nav__link">
+  <a href="#zoekcontext" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verplichte velden
+        ZoekContext
       
     </span>
   </a>
@@ -1899,10 +1754,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optionele-liturgische-metadata" class="md-nav__link">
+  <a href="#zoekmatch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Optionele liturgische metadata
+        ZoekMatch
       
     </span>
   </a>
@@ -1910,10 +1765,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#source-entry-optionele-velden" class="md-nav__link">
+  <a href="#zoeklijstresult" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Source-entry — optionele velden
+        ZoekLijstResult
       
     </span>
   </a>
@@ -1921,10 +1776,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#regels" class="md-nav__link">
+  <a href="#zoekresult" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Regels
+        ZoekResult
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoek_kandidaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zoek_kandidaten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zoek
       
     </span>
   </a>
@@ -1937,22 +1814,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vsa-bestanden" class="md-nav__link">
+  <a href="#consumentenmatrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VSA-bestanden
+        Consumentenmatrix
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="VSA-bestanden">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-catalogus-zoek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI — catalogus zoek
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consumentencontract-vsa-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consumentencontract (VSA-tooling)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consumentencontract (VSA-tooling)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#platte-vsa" class="md-nav__link">
+  <a href="#markdown-include-zoek" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Platte VSA
+        Markdown — :::include zoek="…"
       
     </span>
   </a>
@@ -1960,10 +1859,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vsa-met-yaml-frontmatter-optioneel" class="md-nav__link">
+  <a href="#vsa-include-vsa-zoek" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VSA met YAML-frontmatter (optioneel)
+        VSA — @include-vsa zoek="…"
       
     </span>
   </a>
@@ -1976,10 +1875,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#voorbeeld" class="md-nav__link">
+  <a href="#foutmodel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Voorbeeld
+        Foutmodel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatiestatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementatiestatus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wijzigingshistorie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wijzigingshistorie
       
     </span>
   </a>
@@ -2003,7 +1924,7 @@
 
 
   
-    <a href="https://github.com/orthodox-groningen/bron/edit/main/docs/specs/zangstuk-formaat.md" title="Wijzig deze pagina" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/orthodox-groningen/bron/edit/main/docs/specs/catalogus-zoek-api.md" title="Wijzig deze pagina" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2011,87 +1932,492 @@
   
 
 
-<h1 id="zangstuk-formaat">Zangstuk-formaat<a class="headerlink" href="#zangstuk-formaat" title="Permanent link">&para;</a></h1>
-<p>Status: specificatie (juni 2026). Schema van <code>zangstuk.yaml</code> en VSA-frontmatter.</p>
-<h2 id="zangstukyaml"><code>zangstuk.yaml</code><a class="headerlink" href="#zangstukyaml" title="Permanent link">&para;</a></h2>
-<h3 id="verplichte-velden">Verplichte velden<a class="headerlink" href="#verplichte-velden" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span><span class="w">          </span><span class="c1"># gelijk aan mapnaam onder zangstukken/</span>
-<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-
-<span class="nt">sources</span><span class="p">:</span><span class="w">              </span><span class="c1"># minstens één entry</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span><span class="w">      </span><span class="c1"># uniek binnen dit zangstuk</span>
-<span class="w">    </span><span class="c1"># precies één van:</span>
-<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;relatief pad&gt;</span>
-<span class="w">    </span><span class="nt">access</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">      </span><span class="nt">contact</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span><span class="w">   </span><span class="c1"># en/of url:</span>
-<span class="w">    </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nog-niet-getranscribeerd</span>
-</code></pre></div>
-<h3 id="optionele-liturgische-metadata">Optionele liturgische metadata<a class="headerlink" href="#optionele-liturgische-metadata" title="Permanent link">&para;</a></h3>
-<p>Nederlandse sleutelnamen (aligned met catalogus <code>ZoekContext</code> / sessie-<code>default.*</code>):</p>
-<div class="highlight"><pre><span></span><code><span class="nt">gelegenheid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span><span class="w">              </span><span class="c1"># canoniek gelegenheid-id of leesbare omschrijving</span>
-<span class="nt">gelegenheidsdatum</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&quot;MM-DD&quot;&gt;</span>
-<span class="nt">gelegenheidstype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vast-feest | zondag-cyclus</span>
-<span class="nt">toon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;integer&gt;</span>
-<span class="nt">koormap_nummer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span><span class="w">           </span><span class="c1"># bijv. &quot;8a&quot; — niet de scan-sorteerprefix 010-</span>
-</code></pre></div>
-<h3 id="source-entry-optionele-velden">Source-entry — optionele velden<a class="headerlink" href="#source-entry-optionele-velden" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">based_on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;source-id&gt;</span><span class="w">       </span><span class="c1"># binnen hetzelfde zangstuk</span>
-<span class="w">    </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">    </span><span class="nt">composer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">    </span><span class="nt">arranger</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">    </span><span class="nt">reference</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">    </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">    </span><span class="nt">copyright_status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vrij | copyrighted | onbekend</span>
-<span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-</code></pre></div>
-<h3 id="regels">Regels<a class="headerlink" href="#regels" title="Permanent link">&para;</a></h3>
+<h1 id="catalogus-zoek-api-contract">Catalogus — zoek-API (contract)<a class="headerlink" href="#catalogus-zoek-api-contract" title="Permanent link">&para;</a></h1>
+<p>Status: <strong>normatief contract</strong> (fase 0); implementatie <strong><code>catalogus.zoek</code></strong> volgt in fase 4.</p>
+<p>Gerelateerd: <a href="../catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>,
+<a href="../catalogus-architectuur/">catalogus-architectuur.md</a>, <a href="../terminologie/">terminologie §2.8</a>,
+<a href="../zangstuk-formaat/">zangstuk-formaat.md</a>, <a href="../../reference/exportcontracten/">exportcontracten</a>.</p>
+<p>Consumenten:</p>
 <ul>
-<li>Exact één van <code>file:</code> / <code>access:</code> / <code>status: nog-niet-getranscribeerd</code> per source</li>
-<li><code>based_on</code> verwijst naar een andere source <strong>binnen hetzelfde zangstuk</strong></li>
-<li>Gedeelde scan: <code>file: ../ander-zangstuk-id/sources/scan/bestand.pdf</code></li>
+<li>markdown <code>:::include … zoek="…"</code> → <strong><code>vsa resolve-catalogus</code></strong> (VSA-tooling);</li>
+<li><code>.vsa</code> <strong><code>@include-vsa zoek="…"</code></strong> → in-memory expand (VSA-tooling).</li>
 </ul>
-<h2 id="vsa-bestanden">VSA-bestanden<a class="headerlink" href="#vsa-bestanden" title="Permanent link">&para;</a></h2>
-<h3 id="platte-vsa">Platte VSA<a class="headerlink" href="#platte-vsa" title="Permanent link">&para;</a></h3>
-<p>Geen <code>---</code>-kop: platte notatietekst, volledig ondersteund.</p>
-<h3 id="vsa-met-yaml-frontmatter-optioneel">VSA met YAML-frontmatter (optioneel)<a class="headerlink" href="#vsa-met-yaml-frontmatter-optioneel" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">muziek</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">do</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">F4</span>
-<span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">major | minor</span>
-<span class="w">  </span><span class="nt">tempo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
-<span class="w">  </span><span class="nt">meter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4/4&quot;</span><span class="w">          </span><span class="c1"># optioneel</span>
-<span class="nt">identificatie</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">  </span><span class="nt">subtitle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">  </span><span class="nt">composer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">  </span><span class="nt">lyricist</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span>
-<span class="w">  </span><span class="nt">rights</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;string&gt;</span><span class="w">       </span><span class="c1"># weergave op export; geen vervanging copyright_status</span>
-<span class="w">  </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nl</span>
-<span class="w">  </span><span class="nt">toon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="nn">---</span>
+<p>Beide roepen <strong>dezelfde</strong> Python-API aan; geen dubbele zoeklogica in VSA-tooling.</p>
+<hr />
+<h2 id="doel">Doel<a class="headerlink" href="#doel" title="Permanent link">&para;</a></h2>
+<p>Gegeven een <strong>vrije zoekstring</strong>, optionele <strong>liturgische context</strong> (<code>default.*</code>) en optioneel
+<strong>bestandsextensie-filter</strong> levert de catalogus <strong>exact één</strong> brondocument, uitgedrukt als:</p>
+<ol>
+<li><strong><code>Path</code></strong> — absoluut pad naar het brondocument op schijf;</li>
+<li><strong><code>catalogus_pad</code></strong> — logische referentie <code>lokaal:…</code> of <code>bron:…</code> (niet <code>id:</code>);</li>
+<li><strong><code>VsaFileEntry</code></strong> — canonieke ids + herkomst (ook bij niet-<code>.vsa</code>-bestanden).</li>
+</ol>
+<p><strong>Geen</strong> relatieve paden in het contract. Lokale registratie loopt via manifesten onder
+<code>content-root/lokaal/</code>.</p>
+<p>Default <strong><code>bestandsextensie</code></strong>: <code>{".vsa"}</code> — verplicht voor <code>@include-vsa</code> en exporttypes
+<code>svg</code> / <code>coria</code> / <code>mxl</code>. Andere extensies (bijv. <code>.pdf</code>) alleen op expliciet verzoek.</p>
+<hr />
+<h2 id="zoekgedrag-abstract">Zoekgedrag (abstract)<a class="headerlink" href="#zoekgedrag-abstract" title="Permanent link">&para;</a></h2>
+<p>De API specificeert <strong>niet</strong> welke yaml-velden geïndexeerd worden. Implementatie doorzoekt
+alle teksten en velden die de catalogus uit manifesten, mapnamen, ids, aliassen en
+liturgische metadata kent.</p>
+<ol>
+<li>Normaliseer <code>query</code> (<a href="../terminologie/">§2.8</a>).</li>
+<li>Verzamel kandidaten waar genormaliseerde query matcht op doorzoekbare tekst (titels,
+   aliassen, id-slugs, optionele metadata — ranking in implementatie-PR).</li>
+<li>Pas <strong><code>ZoekContext</code></strong>-filters toe (<code>gelegenheid</code>, <code>toon</code>, <code>uitvoeringsvorm</code>, …).</li>
+<li>Pas <strong><code>bestandsextensie</code></strong> toe op <code>entry.path.suffix</code>.</li>
+<li>Uitkomst:</li>
+<li><strong>Geen</strong> kandidaat → <code>NotFoundError</code> (<code>niveau="zoek"</code>).</li>
+<li><strong>Meerdere</strong> kandidaten (strict modus) → <code>AmbiguousError</code> met kandidatenlijst.</li>
+<li><strong>Precies één</strong> (strict modus) → <code>ZoekResult</code>.</li>
+</ol>
+<p>Bij conflict tussen context en metadata: <strong>context filtert</strong>; geen stille fallback.</p>
+<p><strong>Liturgische rol</strong> (<code>zoek="Troparion"</code>) is geen apart API-veld — het is schrijfconventie
+voor de zoekstring; zie <a href="../catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.</p>
+<hr />
+<h2 id="python-api">Python-API<a class="headerlink" href="#python-api" title="Permanent link">&para;</a></h2>
+<p>Module: <code>catalogus.zoek</code> (pakket <strong>catalogus</strong> in bron-repo).</p>
+<h3 id="zoekcontext"><code>ZoekContext</code><a class="headerlink" href="#zoekcontext" title="Permanent link">&para;</a></h3>
+<p>Liturgische context; spiegelt <code>default.*</code> uit markdown- of <code>.vsa</code>-frontmatter.</p>
+<table>
+<thead>
+<tr>
+<th>Veld</th>
+<th>Type</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gelegenheid</code></td>
+<td><code>str \| None</code></td>
+<td>Canoniek gelegenheid-id (sessie)</td>
+</tr>
+<tr>
+<td><code>gelegenheidstype</code></td>
+<td><code>str \| None</code></td>
+<td><code>vast-feest</code> | <code>zondag-cyclus</code></td>
+</tr>
+<tr>
+<td><code>toon</code></td>
+<td><code>str \| None</code></td>
+<td>Zondagstoonsysteem (canoniek of invoer)</td>
+</tr>
+<tr>
+<td><code>uitvoeringsvorm</code></td>
+<td><code>str \| None</code></td>
+<td>Default uitvoeringsvorm (alias toegestaan op invoer)</td>
+</tr>
+<tr>
+<td><code>gelegenheidsdatum</code></td>
+<td><code>str \| None</code></td>
+<td><code>"MM-DD"</code></td>
+</tr>
+<tr>
+<td><code>referentie</code></td>
+<td><code>str \| None</code></td>
+<td>Herkomst-filter (<a href="../terminologie/">§9</a>); geen pad</td>
+</tr>
+<tr>
+<td><code>bronnen</code></td>
+<td><code>frozenset[str]</code></td>
+<td><code>"bron"</code>, <code>"lokaal"</code> — default beide</td>
+</tr>
+</tbody>
+</table>
+<p>Factory:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ZoekContext</span><span class="o">.</span><span class="n">from_default_mapping</span><span class="p">(</span>
+    <span class="n">default</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">bronnen</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ZoekContext</span>
 </code></pre></div>
-<p><strong>Voorrangsregel:</strong> <code>zangstuk.yaml</code> is leidend voor overlappende identificatievelden.
-Frontmatter dient voor gebruik van het <code>.vsa</code>-bestand buiten deze repository.</p>
-<h2 id="voorbeeld">Voorbeeld<a class="headerlink" href="#voorbeeld" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">troparion-zondag-toon-1</span>
-<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Troparion - Zondag, toon 1</span>
-<span class="nt">gelegenheid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zondag</span>
-<span class="nt">gelegenheidstype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zondag-cyclus</span>
-<span class="nt">toon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="nt">sources</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scan-koormap-010</span>
-<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sources/scan/010-troparion-kondakion-toon-1.pdf</span>
-<span class="w">    </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Liturgikon</span>
-<span class="w">    </span><span class="nt">copyright_status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vrij</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">groningen</span>
-<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sources/vsa/groningen.vsa</span>
-<span class="w">    </span><span class="nt">based_on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scan-koormap-010</span>
-<span class="w">    </span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Parochie Groningen</span>
-<span class="w">    </span><span class="nt">copyright_status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vrij</span>
+<p>Leest sleutels onder <code>default</code> (yaml-frontmatter) en normaliseert <code>bronnen</code> uit optionele
+sibling <code>bronnen:</code> (<code>bron</code> | <code>lokaal</code> | lijst).</p>
+<h3 id="zoekmatch"><code>ZoekMatch</code><a class="headerlink" href="#zoekmatch" title="Permanent link">&para;</a></h3>
+<p>Één kandidaat na query-, context- en bestandsextensie-filter.</p>
+<table>
+<thead>
+<tr>
+<th>Veld</th>
+<th>Type</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>entry</code></td>
+<td><code>VsaFileEntry</code></td>
+<td>Canonieke ids + pad + <code>origin</code></td>
+</tr>
+<tr>
+<td><code>catalogus_pad</code></td>
+<td><code>str</code></td>
+<td><code>lokaal:…</code> / <code>bron:…</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="zoeklijstresult"><code>ZoekLijstResult</code><a class="headerlink" href="#zoeklijstresult" title="Permanent link">&para;</a></h3>
+<p>Resultaat van <strong><code>zoek_kandidaten</code></strong> — alle matches, desgevraagd.</p>
+<table>
+<thead>
+<tr>
+<th>Veld</th>
+<th>Type</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>query</code></td>
+<td><code>str</code></td>
+<td>Originele zoekstring</td>
+</tr>
+<tr>
+<td><code>query_normalized</code></td>
+<td><code>str</code></td>
+<td>Na <code>normalize_for_match</code></td>
+</tr>
+<tr>
+<td><code>matches</code></td>
+<td><code>list[ZoekMatch]</code></td>
+<td>0..n kandidaten (gesorteerd)</td>
+</tr>
+</tbody>
+</table>
+<p>Property <strong><code>catalogus_paden</code></strong>: <code>[m.catalogus_pad for m in matches]</code>.</p>
+<h3 id="zoekresult"><code>ZoekResult</code><a class="headerlink" href="#zoekresult" title="Permanent link">&para;</a></h3>
+<p>Resultaat van <strong><code>zoek</code></strong> (strict: precies één match).</p>
+<table>
+<thead>
+<tr>
+<th>Veld</th>
+<th>Type</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>query</code></td>
+<td><code>str</code></td>
+<td>Originele zoekstring</td>
+</tr>
+<tr>
+<td><code>query_normalized</code></td>
+<td><code>str</code></td>
+<td>Na <code>normalize_for_match</code></td>
+</tr>
+<tr>
+<td><code>entry</code></td>
+<td><code>VsaFileEntry</code></td>
+<td>Gekozen brondocument</td>
+</tr>
+<tr>
+<td><code>catalogus_pad</code></td>
+<td><code>str</code></td>
+<td><code>lokaal:…</code> / <code>bron:…</code></td>
+</tr>
+</tbody>
+</table>
+<p>Property <strong><code>path</code></strong>: <code>entry.path</code>.</p>
+<p><strong><code>catalogus_pad</code></strong> gebruikt prefix <strong><code>lokaal:</code></strong> of <strong><code>bron:</code></strong> volgens <code>entry.origin</code>
+(lokaal wint bij dubbele registratie). Prefix <strong><code>id:</code></strong> is <strong>geen</strong> uitkomst van zoek.</p>
+<p>Helper (fase 0):</p>
+<div class="highlight"><pre><span></span><code><span class="n">format_catalogus_pad</span><span class="p">(</span><span class="n">entry</span><span class="p">:</span> <span class="n">VsaFileEntry</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-<p>Zie <a href="../../manuals/zangstuk-toevoegen/">Zangstuk toevoegen</a> voor de workflow.</p>
+<h3 id="zoek_kandidaten"><code>zoek_kandidaten</code><a class="headerlink" href="#zoek_kandidaten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">zoek_kandidaten</span><span class="p">(</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">index</span><span class="p">:</span> <span class="n">AliasIndex</span><span class="p">,</span>
+    <span class="n">context</span><span class="p">:</span> <span class="n">ZoekContext</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">bestandsextensie</span><span class="p">:</span> <span class="nb">frozenset</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s2">&quot;.vsa&quot;</span><span class="p">}),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ZoekLijstResult</span><span class="p">:</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p><strong>Kern-API.</strong> Retourneert <strong>alle</strong> matches (0, 1 of meer). Geen exception bij
+ambiguïteit — bedoeld voor review-UI, CLI <code>--lijst</code>, en als basis voor <code>zoek()</code>.</p>
+<ul>
+<li><code>bestandsextensie=None</code> → geen filter op suffix.</li>
+<li>Default <code>{".vsa"}</code> → alleen <code>.vsa</code>-bestanden.</li>
+</ul>
+<p>Convenience:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">zoek_kandidaten_met_roots</span><span class="p">(</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">content_root</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">bron_root</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">fixture_root</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">context</span><span class="p">:</span> <span class="n">ZoekContext</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">bestandsextensie</span><span class="p">:</span> <span class="nb">frozenset</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s2">&quot;.vsa&quot;</span><span class="p">}),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ZoekLijstResult</span><span class="p">:</span>
+    <span class="o">...</span>
+</code></pre></div>
+<h3 id="zoek"><code>zoek</code><a class="headerlink" href="#zoek" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">zoek</span><span class="p">(</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">index</span><span class="p">:</span> <span class="n">AliasIndex</span><span class="p">,</span>
+    <span class="n">context</span><span class="p">:</span> <span class="n">ZoekContext</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">bestandsextensie</span><span class="p">:</span> <span class="nb">frozenset</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s2">&quot;.vsa&quot;</span><span class="p">}),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ZoekResult</span><span class="p">:</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p>Strict wrapper om <strong><code>zoek_kandidaten</code></strong>:</p>
+<table>
+<thead>
+<tr>
+<th><code>len(matches)</code></th>
+<th>Gedrag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><code>NotFoundError</code> — scope vermeldt query en filter (bijv. geen <code>.vsa</code>)</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>ZoekResult</code></td>
+</tr>
+<tr>
+<td>&gt;1</td>
+<td><code>AmbiguousError</code> — <code>candidates</code> uit <code>matches</code></td>
+</tr>
+</tbody>
+</table>
+<p>Convenience:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">zoek_met_roots</span><span class="p">(</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">content_root</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">bron_root</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">fixture_root</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">context</span><span class="p">:</span> <span class="n">ZoekContext</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">bestandsextensie</span><span class="p">:</span> <span class="nb">frozenset</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">({</span><span class="s2">&quot;.vsa&quot;</span><span class="p">}),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ZoekResult</span><span class="p">:</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p><strong>Precondities</strong></p>
+<ul>
+<li><code>query</code> niet leeg na <code>strip()</code>.</li>
+<li>Minstens één index-root bij <code>*_met_roots</code>.</li>
+<li>Consumenten met herhaalde zoekacties: bouw <strong><code>AliasIndex</code> eenmaal</strong>, roep <code>zoek</code> /
+  <code>zoek_kandidaten</code> met <code>index=</code> aan (niet per call <code>*_met_roots</code>).</li>
+</ul>
+<p><strong>Status fase 0:</strong> <code>zoek_kandidaten()</code> werpt <code>NotImplementedError</code>. <code>zoek()</code> delegeert
+daarnaartoe. <code>format_catalogus_pad</code>, <code>ZoekContext</code>, <code>ZoekMatch</code>, <code>ZoekLijstResult</code> zijn
+geïmplementeerd.</p>
+<hr />
+<h2 id="consumentenmatrix">Consumentenmatrix<a class="headerlink" href="#consumentenmatrix" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Consument</th>
+<th>Context uit</th>
+<th><code>bestandsextensie</code></th>
+<th>Gebruikt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@include-vsa zoek=</code></td>
+<td>ouder-<code>.vsa</code> <code>default</code></td>
+<td><code>.vsa</code> (default)</td>
+<td><code>result.path</code></td>
+</tr>
+<tr>
+<td><code>vsa resolve-catalogus</code></td>
+<td>markdown <code>default</code></td>
+<td><code>.vsa</code> (default)</td>
+<td><code>result.catalogus_pad</code></td>
+</tr>
+<tr>
+<td><code>catalogus zoek</code> CLI</td>
+<td>flags</td>
+<td><code>.vsa</code> (default)</td>
+<td>stdout <code>catalogus_pad</code></td>
+</tr>
+<tr>
+<td>Review / debug</td>
+<td>idem</td>
+<td>expliciet</td>
+<td><code>zoek_kandidaten</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>result.path</code> is <strong>leidend</strong>; geen verplichte <code>resolve_vsa_path</code>-verificatie daarna.</p>
+<hr />
+<h2 id="cli-catalogus-zoek">CLI — <code>catalogus zoek</code><a class="headerlink" href="#cli-catalogus-zoek" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
+python -m catalogus.cli zoek &quot;Troparion&quot; ^
+  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --bron-root . ^
+  --default-gelegenheid geboorte-moeder-gods ^
+  --default-uitvoeringsvorm Groningen
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Mapt naar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>query</code> (positioneel)</td>
+<td><code>zoek(query, …)</code></td>
+</tr>
+<tr>
+<td><code>--lijst</code></td>
+<td><code>zoek_kandidaten</code> i.p.v. <code>zoek</code></td>
+</tr>
+<tr>
+<td><code>--bestandsextensie</code></td>
+<td>suffix-filter (default <code>vsa</code>)</td>
+</tr>
+<tr>
+<td><code>--default-gelegenheid</code></td>
+<td><code>context.gelegenheid</code></td>
+</tr>
+<tr>
+<td><code>--default-gelegenheidstype</code></td>
+<td><code>context.gelegenheidstype</code></td>
+</tr>
+<tr>
+<td><code>--default-toon</code></td>
+<td><code>context.toon</code></td>
+</tr>
+<tr>
+<td><code>--default-uitvoeringsvorm</code></td>
+<td><code>context.uitvoeringsvorm</code></td>
+</tr>
+<tr>
+<td><code>--default-gelegenheidsdatum</code></td>
+<td><code>context.gelegenheidsdatum</code></td>
+</tr>
+<tr>
+<td><code>--default-referentie</code></td>
+<td><code>context.referentie</code></td>
+</tr>
+<tr>
+<td><code>--bronnen</code></td>
+<td><code>context.bronnen</code></td>
+</tr>
+<tr>
+<td><code>--content-root</code>, …</td>
+<td>index-roots</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Uitvoer (na implementatie):</strong></p>
+<ul>
+<li>zonder <code>--lijst</code>: één regel <strong><code>catalogus_pad</code></strong>; <code>--verbose</code> met pad + ids.</li>
+<li>met <code>--lijst</code>: één <strong><code>catalogus_pad</code></strong> per regel (0 regels = exit 1).</li>
+</ul>
+<hr />
+<h2 id="consumentencontract-vsa-tooling">Consumentencontract (VSA-tooling)<a class="headerlink" href="#consumentencontract-vsa-tooling" title="Permanent link">&para;</a></h2>
+<h3 id="markdown-include-zoek">Markdown — <code>:::include zoek="…"</code><a class="headerlink" href="#markdown-include-zoek" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Lees <code>default</code> (+ <code>bronnen</code>) uit markdown-frontmatter → <code>ZoekContext</code>.</li>
+<li><code>result = zoek_met_roots(…, bestandsextensie=frozenset({".vsa"}))</code>.</li>
+<li>Resolve-stap vervangt <code>zoek="…"</code> door <code>catalogus_pad</code>.</li>
+</ol>
+<h3 id="vsa-include-vsa-zoek">VSA — <code>@include-vsa zoek="…"</code><a class="headerlink" href="#vsa-include-vsa-zoek" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Lees <code>default</code> uit <strong>ouder</strong>-<code>.vsa</code>-frontmatter → <code>ZoekContext</code>.</li>
+<li><code>result = zoek_met_roots(…, bestandsextensie=frozenset({".vsa"}))</code>.</li>
+<li>Expand leest <code>result.path</code>, strip frontmatter doel, splice body in-memory.</li>
+</ol>
+<p><strong>Gedeelde stap:</strong> <code>zoek</code> / <code>zoek_kandidaten</code>; geen aparte zoekimplementatie in VSA-tooling.</p>
+<hr />
+<h2 id="foutmodel">Foutmodel<a class="headerlink" href="#foutmodel" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Situatie</th>
+<th>Exception</th>
+<th><code>niveau</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geen match</td>
+<td><code>NotFoundError</code></td>
+<td><code>"zoek"</code></td>
+</tr>
+<tr>
+<td>Meerdere matches (<code>zoek</code> strict)</td>
+<td><code>AmbiguousError</code></td>
+<td><code>"zoek"</code></td>
+</tr>
+<tr>
+<td>Lege query</td>
+<td><code>ValueError</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Nog niet geïmplementeerd</td>
+<td><code>NotImplementedError</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><code>AmbiguousError.candidates</code>: lijst <strong><code>MatchCandidate</code></strong> — minimaal <strong><code>catalogus_pad</code></strong>
+(canonical_id = pad of zangstuk-id; implementatie-PR).</p>
+<hr />
+<h2 id="implementatiestatus">Implementatiestatus<a class="headerlink" href="#implementatiestatus" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Onderdeel</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contract + datatypes + <code>format_catalogus_pad</code></td>
+<td><strong>Fase 0</strong></td>
+</tr>
+<tr>
+<td><code>zoek_kandidaten()</code> / <code>zoek()</code> body</td>
+<td><strong>Gepland</strong></td>
+</tr>
+<tr>
+<td><code>catalogus zoek</code> CLI (functioneel)</td>
+<td><strong>Gepland</strong></td>
+</tr>
+<tr>
+<td>VSA <code>@include-vsa zoek=</code></td>
+<td><strong>Gepland</strong></td>
+</tr>
+<tr>
+<td><code>vsa resolve-catalogus</code></td>
+<td><strong>Gepland</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="wijzigingshistorie">Wijzigingshistorie<a class="headerlink" href="#wijzigingshistorie" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Wijziging</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-07</td>
+<td>Fase 0: normatief API-contract; stub <code>zoek()</code>; <code>@include-vsa</code> als consument</td>
+</tr>
+<tr>
+<td>2026-07</td>
+<td>Abstract zoekgedrag; <code>bestandsextensie</code>; <code>zoek_kandidaten</code> / <code>--lijst</code>; NL metadata</td>
+</tr>
+</tbody>
+</table>
 
 
 

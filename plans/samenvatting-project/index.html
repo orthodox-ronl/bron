@@ -2268,10 +2268,10 @@ geïmplementeerd).</p>
 </ul>
 <h3 id="liturgische-metadata-nieuw-ad-hoc-geintroduceerd-mag-verder-groeien">Liturgische metadata (nieuw, ad-hoc geïntroduceerd, mag verder groeien)<a class="headerlink" href="#liturgische-metadata-nieuw-ad-hoc-geintroduceerd-mag-verder-groeien" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>occasion</code>: de liturgische gelegenheid (bijv. "H. Nicolaas van Myra",
+<li><code>gelegenheid</code>: de liturgische gelegenheid (bijv. "H. Nicolaas van Myra",
   "Zondag (opstandingscyclus)").</li>
-<li><code>occasion_date</code>: vaste kalenderdatum indien van toepassing (bijv. "12-06").</li>
-<li><code>occasion_type</code>: bijv. <code>vast-feest</code> of <code>zondag-cyclus</code>.</li>
+<li><code>gelegenheidsdatum</code>: vaste kalenderdatum indien van toepassing (bijv. "12-06").</li>
+<li><code>gelegenheidstype</code>: bijv. <code>vast-feest</code> of <code>zondag-cyclus</code>.</li>
 <li><code>tone</code>: de liturgische toon (los van de identiteit/id van het zangstuk —
   bleek nodig omdat meerdere, totaal verschillende zangstukken in dezelfde
   toon kunnen staan).</li>
@@ -2426,9 +2426,9 @@ staan zodra je de eerder gedeelde bestanden hebt gedownload).</p>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">zangstuk.yaml</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># id</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">troparion-zondag-toon-1</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># title</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Troparion</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Zondag,</span><span class="nv"> </span><span class="s">toon</span><span class="nv"> </span><span class="s">1&quot;</span>
-<span class="w">      </span><span class="c1"># occasion: &quot;Zondag (opstandingscyclus)&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_type: zondag-cyclus</span>
-<span class="w">      </span><span class="c1"># tone: 1</span>
+<span class="w">      </span><span class="c1"># gelegenheid: &quot;Zondag (opstandingscyclus)&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidstype: zondag-cyclus</span>
+<span class="w">      </span><span class="c1"># toon: 1</span>
 <span class="w">      </span><span class="c1"># sources:</span>
 <span class="w">      </span><span class="c1">#   - id: scan-koormap-010</span>
 <span class="w">      </span><span class="c1">#     file: sources/scan/010-troparion-kondakion-toon-1.pdf</span>
@@ -2458,9 +2458,9 @@ staan zodra je de eerder gedeelde bestanden hebt gedownload).</p>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">zangstuk.yaml</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># id</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kondakion-zondag-toon-1</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># title</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Kondakion</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Zondag,</span><span class="nv"> </span><span class="s">toon</span><span class="nv"> </span><span class="s">1&quot;</span>
-<span class="w">      </span><span class="c1"># occasion: &quot;Zondag (opstandingscyclus)&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_type: zondag-cyclus</span>
-<span class="w">      </span><span class="c1"># tone: 1</span>
+<span class="w">      </span><span class="c1"># gelegenheid: &quot;Zondag (opstandingscyclus)&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidstype: zondag-cyclus</span>
+<span class="w">      </span><span class="c1"># toon: 1</span>
 <span class="w">      </span><span class="c1"># sources:</span>
 <span class="w">      </span><span class="c1">#   - id: scan-koormap-010</span>
 <span class="w">      </span><span class="c1">#     file: ../troparion-zondag-toon-1/sources/scan/010-troparion-kondakion-toon-1.pdf</span>
@@ -2548,10 +2548,10 @@ staan zodra je de eerder gedeelde bestanden hebt gedownload).</p>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">zangstuk.yaml</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># id</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">troparion-nicolaas-van-myra</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># title</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Troparion</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">H.</span><span class="nv"> </span><span class="s">Nicolaas</span><span class="nv"> </span><span class="s">van</span><span class="nv"> </span><span class="s">Myra&quot;</span>
-<span class="w">      </span><span class="c1"># occasion: &quot;H. Nicolaas van Myra&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_date: &quot;12-06&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_type: vast-feest</span>
-<span class="w">      </span><span class="c1"># tone: 4</span>
+<span class="w">      </span><span class="c1"># gelegenheid: &quot;H. Nicolaas van Myra&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidsdatum: &quot;12-06&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidstype: vast-feest</span>
+<span class="w">      </span><span class="c1"># toon: 4</span>
 <span class="w">      </span><span class="c1"># sources:</span>
 <span class="w">      </span><span class="c1">#   - id: liturgikon</span>
 <span class="w">      </span><span class="c1">#     file: sources/vsa/liturgikon.vsa</span>
@@ -2565,10 +2565,10 @@ staan zodra je de eerder gedeelde bestanden hebt gedownload).</p>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">zangstuk.yaml</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># id</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kondakion-nicolaas-van-myra</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># title</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Kondakion</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">H.</span><span class="nv"> </span><span class="s">Nicolaas</span><span class="nv"> </span><span class="s">van</span><span class="nv"> </span><span class="s">Myra&quot;</span>
-<span class="w">      </span><span class="c1"># occasion: &quot;H. Nicolaas van Myra&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_date: &quot;12-06&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_type: vast-feest</span>
-<span class="w">      </span><span class="c1"># tone: 3</span>
+<span class="w">      </span><span class="c1"># gelegenheid: &quot;H. Nicolaas van Myra&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidsdatum: &quot;12-06&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidstype: vast-feest</span>
+<span class="w">      </span><span class="c1"># toon: 3</span>
 <span class="w">      </span><span class="c1"># sources:</span>
 <span class="w">      </span><span class="c1">#   - id: liturgikon</span>
 <span class="w">      </span><span class="c1">#     file: sources/vsa/liturgikon.vsa</span>
@@ -2582,10 +2582,10 @@ staan zodra je de eerder gedeelde bestanden hebt gedownload).</p>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">zangstuk.yaml</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># id</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">troparion-apostel-andreas</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># title</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Troparion</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Apostel</span><span class="nv"> </span><span class="s">Andreas,</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">Eerstgeroepene&quot;</span>
-<span class="w">      </span><span class="c1"># occasion: &quot;Apostel Andreas, de Eerstgeroepene&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_date: &quot;11-30&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_type: vast-feest</span>
-<span class="w">      </span><span class="c1"># tone: 4</span>
+<span class="w">      </span><span class="c1"># gelegenheid: &quot;Apostel Andreas, de Eerstgeroepene&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidsdatum: &quot;11-30&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidstype: vast-feest</span>
+<span class="w">      </span><span class="c1"># toon: 4</span>
 <span class="w">      </span><span class="c1"># sources:</span>
 <span class="w">      </span><span class="c1">#   - id: liturgikon</span>
 <span class="w">      </span><span class="c1">#     file: sources/vsa/liturgikon.vsa</span>
@@ -2599,10 +2599,10 @@ staan zodra je de eerder gedeelde bestanden hebt gedownload).</p>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">zangstuk.yaml</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># id</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kondakion-apostel-andreas</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># title</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Kondakion</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Apostel</span><span class="nv"> </span><span class="s">Andreas,</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">Eerstgeroepene&quot;</span>
-<span class="w">      </span><span class="c1"># occasion: &quot;Apostel Andreas, de Eerstgeroepene&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_date: &quot;11-30&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_type: vast-feest</span>
-<span class="w">      </span><span class="c1"># tone: 2</span>
+<span class="w">      </span><span class="c1"># gelegenheid: &quot;Apostel Andreas, de Eerstgeroepene&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidsdatum: &quot;11-30&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidstype: vast-feest</span>
+<span class="w">      </span><span class="c1"># toon: 2</span>
 <span class="w">      </span><span class="c1"># sources:</span>
 <span class="w">      </span><span class="c1">#   - id: liturgikon</span>
 <span class="w">      </span><span class="c1">#     file: sources/vsa/liturgikon.vsa</span>
@@ -2616,10 +2616,10 @@ staan zodra je de eerder gedeelde bestanden hebt gedownload).</p>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">zangstuk.yaml</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># id</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">troparion-tempelgang-moeder-gods</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># title</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Troparion</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Tempelgang</span><span class="nv"> </span><span class="s">van</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">Moeder</span><span class="nv"> </span><span class="s">Gods&quot;</span>
-<span class="w">      </span><span class="c1"># occasion: &quot;Tempelgang van de Moeder Gods&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_date: &quot;11-21&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_type: vast-feest</span>
-<span class="w">      </span><span class="c1"># tone: 4</span>
+<span class="w">      </span><span class="c1"># gelegenheid: &quot;Tempelgang van de Moeder Gods&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidsdatum: &quot;11-21&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidstype: vast-feest</span>
+<span class="w">      </span><span class="c1"># toon: 4</span>
 <span class="w">      </span><span class="c1"># sources:</span>
 <span class="w">      </span><span class="c1">#   - id: liturgikon</span>
 <span class="w">      </span><span class="c1">#     file: sources/vsa/liturgikon.vsa</span>
@@ -2633,10 +2633,10 @@ staan zodra je de eerder gedeelde bestanden hebt gedownload).</p>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">zangstuk.yaml</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># id</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kondakion-tempelgang-moeder-gods</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain"># title</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Kondakion</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Tempelgang</span><span class="nv"> </span><span class="s">van</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">Moeder</span><span class="nv"> </span><span class="s">Gods&quot;</span>
-<span class="w">      </span><span class="c1"># occasion: &quot;Tempelgang van de Moeder Gods&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_date: &quot;11-21&quot;</span>
-<span class="w">      </span><span class="c1"># occasion_type: vast-feest</span>
-<span class="w">      </span><span class="c1"># tone: 4</span>
+<span class="w">      </span><span class="c1"># gelegenheid: &quot;Tempelgang van de Moeder Gods&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidsdatum: &quot;11-21&quot;</span>
+<span class="w">      </span><span class="c1"># gelegenheidstype: vast-feest</span>
+<span class="w">      </span><span class="c1"># toon: 4</span>
 <span class="w">      </span><span class="c1"># sources:</span>
 <span class="w">      </span><span class="c1">#   - id: liturgikon</span>
 <span class="w">      </span><span class="c1">#     file: sources/vsa/liturgikon.vsa</span>

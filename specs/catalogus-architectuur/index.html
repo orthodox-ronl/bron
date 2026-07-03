@@ -2075,7 +2075,8 @@ worden bij index-build gerapporteerd via <code>catalogus index validate</code>.<
 <p>VSA-tooling importeert <code>catalogus</code> en roept <code>AliasIndex.resolve_vsa_path()</code> aan in
 <code>markdown_include.py</code>. Relatieve pad-includes blijven werken.</p>
 <h2 id="fase-4-sjablonen-sessies-resolve">Fase 4 — sjablonen, sessies, resolve<a class="headerlink" href="#fase-4-sjablonen-sessies-resolve" title="Permanent link">&para;</a></h2>
-<p>Status: <strong>ontwerp</strong> — zie <a href="../catalogus-samenstelling-zangstuk/">zangstuk-opzoeken in sjablonen</a>.</p>
+<p>Status: <strong>API-contract (fase 0)</strong> — implementatie volgt.</p>
+<p>Normatief zoek-API: <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
 <p>Parochie-<strong>sjablonen</strong> zijn markdown met:</p>
 <ul>
 <li><strong><code>default.gelegenheidstype</code></strong> (geen individuele feesten in het sjabloon);</li>
@@ -2094,11 +2095,12 @@ worden bij index-build gerapporteerd via <code>catalogus index validate</code>.<
   Cat--&gt;&gt;VSA: catalogus-pad of review
   Rene-&gt;&gt;Build: opgelost bestand
   Build--&gt;&gt;Rene: site</code></pre>
-<p>Geplande CLI: <strong><code>catalogus zoek</code></strong>, <strong><code>vsa resolve-catalogus</code></strong>.</p>
+<p>Geplande CLI: <strong><code>catalogus zoek</code></strong> (stub + contract), <strong><code>vsa resolve-catalogus</code></strong>.</p>
+<p>Consument <strong><code>@include-vsa zoek=</code></strong> in <code>.vsa</code>-brontekst gebruikt dezelfde <code>catalogus.zoek</code>-API
+(in-memory expand; zie <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>).</p>
 <h2 id="later-fase-5">Later (fase 5+)<a class="headerlink" href="#later-fase-5" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Zoek-UI / fuzzy match</li>
-<li>Metadata-index (<code>gelegenheid</code>, <code>toon</code>, …) in AliasIndex</li>
+<li>Zoek-UI / fuzzy match bovenop <strong><code>catalogus.zoek_kandidaten</code></strong></li>
 </ul>
 
 

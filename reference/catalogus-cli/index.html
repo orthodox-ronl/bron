@@ -1573,6 +1573,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#catalogus-zoek-api-contract-fase-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        catalogus zoek (API-contract fase 0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#catalogus-resolve" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1904,6 +1915,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#catalogus-zoek-api-contract-fase-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        catalogus zoek (API-contract fase 0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#catalogus-resolve" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2040,6 +2062,24 @@ python -m pip install -e &quot;.[dev]&quot;
 <div class="highlight"><pre><span></span><code>scripts\test.cmd
 </code></pre></div>
 <h2 id="commandos-fase-2">Commando's (fase 2)<a class="headerlink" href="#commandos-fase-2" title="Permanent link">&para;</a></h2>
+<h3 id="catalogus-zoek-api-contract-fase-0"><code>catalogus zoek</code> (API-contract fase 0)<a class="headerlink" href="#catalogus-zoek-api-contract-fase-0" title="Permanent link">&para;</a></h3>
+<p>Vrije tekst + <code>default.*</code>-context → <strong>catalogus-pad</strong> (<code>lokaal:…</code> / <code>bron:…</code>).</p>
+<p>Normatief contract: <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
+<ul>
+<li><strong><code>zoek</code></strong> — strict: 0 / 1 / meerdere → fout of één pad.</li>
+<li><strong><code>zoek_kandidaten</code></strong> — alle matches (review, <code>--lijst</code>).</li>
+<li>Default <strong><code>bestandsextensie</code></strong>: <code>.vsa</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>python -m catalogus.cli zoek &quot;Troparion&quot; ^
+  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --bron-root . ^
+  --default-gelegenheid geboorte-moeder-gods ^
+  --default-uitvoeringsvorm Groningen
+
+python -m catalogus.cli zoek &quot;Troparion&quot; --lijst --bron-root .
+</code></pre></div>
+<p><strong>Status:</strong> CLI en Python-API aanwezig; <strong><code>zoek_kandidaten()</code></strong> werpt <code>NotImplementedError</code> tot fase 4.
+Exitcode <strong>2</strong> = nog niet geïmplementeerd; <strong>1</strong> = geen match (na implementatie).</p>
 <h3 id="catalogus-resolve"><code>catalogus resolve</code><a class="headerlink" href="#catalogus-resolve" title="Permanent link">&para;</a></h3>
 <p>Los alias of hoofdletter-variant op naar canoniek id.</p>
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli resolve zangstuk &quot;1e antifoon weekdagen&quot; --content-root ..\VSA-tooling\examples\hugo-demo\content-source
@@ -2118,7 +2158,14 @@ python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hu
 <p><code>lang</code> in alias-yaml is metadata; matching negeert taal (casefold op <code>text</code>).</p>
 <h2 id="python-library">Python-library<a class="headerlink" href="#python-library" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">catalogus</span><span class="w"> </span><span class="kn">import</span> <span class="n">AliasIndex</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">catalogus</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AliasIndex</span><span class="p">,</span>
+    <span class="n">ZoekContext</span><span class="p">,</span>
+    <span class="n">format_catalogus_pad</span><span class="p">,</span>
+    <span class="n">zoek</span><span class="p">,</span>
+    <span class="n">zoek_kandidaten</span><span class="p">,</span>
+    <span class="n">zoek_met_roots</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="n">index</span> <span class="o">=</span> <span class="n">AliasIndex</span><span class="o">.</span><span class="n">build</span><span class="p">(</span>
     <span class="n">content_root</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;content-source&quot;</span><span class="p">),</span>
@@ -2128,13 +2175,22 @@ python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hu
     <span class="s2">&quot;antifoon-1-weekdagen&quot;</span><span class="p">,</span> <span class="s2">&quot;liturgikon-weekdagen&quot;</span><span class="p">,</span> <span class="s2">&quot;Hemelum&quot;</span>
 <span class="p">)</span>
 <span class="c1"># → &quot;hemelum&quot;</span>
+
+<span class="c1"># Zoek-API (contract fase 0 — zoek_kandidaten() stub tot fase 4):</span>
+<span class="n">ctx</span> <span class="o">=</span> <span class="n">ZoekContext</span><span class="o">.</span><span class="n">from_default_mapping</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;gelegenheid&quot;</span><span class="p">:</span> <span class="s2">&quot;geboorte-moeder-gods&quot;</span><span class="p">,</span> <span class="s2">&quot;uitvoeringsvorm&quot;</span><span class="p">:</span> <span class="s2">&quot;Groningen&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="c1"># lijst = zoek_kandidaten(&quot;Troparion&quot;, index=index, context=ctx)</span>
+<span class="c1"># lijst.catalogus_paden</span>
+<span class="c1"># result = zoek(&quot;Troparion&quot;, index=index, context=ctx)  # strict: 0/1/meerdere</span>
 </code></pre></div>
+<p>Zie <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a> voor volledig contract.</p>
 <h2 id="relatie-tot-vsa">Relatie tot VSA<a class="headerlink" href="#relatie-tot-vsa" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Fase 2:</strong> <code>catalogus</code> staat los van <code>vsa</code>; build/includes gebruikten relatieve paden.</li>
 <li><strong>Fase 3:</strong> VSA-tooling importeert <code>catalogus</code> bij <code>id:…</code> / <code>lokaal:…</code> / <code>bron:…</code>-includes in markdown.</li>
-<li><strong>Fase 4 (gepland):</strong> <code>:::include zoek=</code> in sjablonen/sessies → <strong><code>vsa resolve-catalogus</code></strong>
-  → catalogus-pad — parser en CLI in VSA-tooling; <strong><code>catalogus zoek</code></strong> in bron.</li>
+<li><strong>Fase 4 (contract fase 0):</strong> <code>:::include zoek=</code> / <code>@include-vsa zoek=</code> → <strong><code>catalogus.zoek</code></strong>
+  → catalogus-pad — <a href="../../specs/catalogus-zoek-api/">API-contract</a>; implementatie gepland.</li>
 </ul>
 <h2 id="geplande-commandos-fase-4">Geplande commando's (fase 4)<a class="headerlink" href="#geplande-commandos-fase-4" title="Permanent link">&para;</a></h2>
 <table>
@@ -2149,12 +2205,17 @@ python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hu
 <tr>
 <td><code>catalogus zoek</code></td>
 <td>bron</td>
-<td>Vrije tekst + <code>default.*</code> → catalogus-pad (of ambiguïteit)</td>
+<td><strong>Contract fase 0</strong> — implementatie volgt; zie <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a></td>
 </tr>
 <tr>
 <td><strong><code>vsa resolve-catalogus</code></strong></td>
 <td>VSA-tooling</td>
 <td>Markdown: alle <code>zoek=</code> → <code>bron:…</code> / <code>lokaal:…</code></td>
+</tr>
+<tr>
+<td><strong><code>@include-vsa</code></strong> expand</td>
+<td>VSA-tooling</td>
+<td><code>.vsa</code>: <code>zoek=</code> → in-memory body-splice via <code>catalogus.zoek</code></td>
 </tr>
 </tbody>
 </table>
