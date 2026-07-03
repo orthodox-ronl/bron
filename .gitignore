@@ -31,4 +31,5 @@ site-*/
 # conversie-/validatie-tools bijkomen
 .venv/
 __pycache__/
+*.egg-info/
 node_modules/
