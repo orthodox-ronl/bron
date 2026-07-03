@@ -1,8 +1,8 @@
 id: kondak-zondag-toon-2
 title: Kondak van de zondag, toon 2
-occasion: Zondag (opstandingscyclus)
-occasion_type: zondag-cyclus
-tone: 2
+gelegenheid: Zondag (opstandingscyclus)
+gelegenheidstype: zondag-cyclus
+toon: 2
 sources:
   - id: groningen
     file: sources/vsa/groningen.vsa

@@ -12,6 +12,12 @@ from catalogus.errors import (
     InvalidIdError,
     NotFoundError,
 )
+from catalogus.zoek import (
+    ZoekContext,
+    parse_bestandsextensie,
+    zoek_kandidaten_met_roots,
+    zoek_met_roots,
+)
 
 
 def _add_root_args(parser: argparse.ArgumentParser) -> None:
@@ -105,6 +111,44 @@ def _cmd_index_validate(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_zoek(args: argparse.Namespace) -> int:
+    context = ZoekContext(
+        gelegenheid=args.default_gelegenheid,
+        gelegenheidstype=args.default_gelegenheidstype,
+        toon=args.default_toon,
+        uitvoeringsvorm=args.default_uitvoeringsvorm,
+        gelegenheidsdatum=args.default_gelegenheidsdatum,
+        referentie=args.default_referentie,
+        bronnen=ZoekContext.from_default_mapping({}, bronnen=args.bronnen).bronnen,
+    )
+    bestandsextensie = parse_bestandsextensie(args.bestandsextensie)
+    zoek_kwargs = {
+        "content_root": args.content_root,
+        "bron_root": args.bron_root,
+        "fixture_root": args.fixture_root,
+        "context": context,
+        "bestandsextensie": bestandsextensie,
+    }
+    try:
+        if args.lijst:
+            lijst = zoek_kandidaten_met_roots(args.query, **zoek_kwargs)
+            if not lijst.matches:
+                print("Geen matches", file=sys.stderr)
+                return 1
+            for match in lijst.matches:
+                print(match.catalogus_pad)
+            return 0
+        result = zoek_met_roots(args.query, **zoek_kwargs)
+    except NotImplementedError as exc:
+        print(exc, file=sys.stderr)
+        return 2
+    except (NotFoundError, AmbiguousError, ValueError) as exc:
+        print(exc, file=sys.stderr)
+        return 1
+    print(result.catalogus_pad)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="catalogus",
@@ -139,6 +183,65 @@ def main(argv: list[str] | None = None) -> int:
     )
     _add_root_args(validate)
     validate.set_defaults(func=_cmd_index_validate)
+
+    zoek_cmd = sub.add_parser(
+        "zoek",
+        help="Vrije tekst + default-context → catalogus-pad (API-contract fase 0)",
+    )
+    zoek_cmd.add_argument("query", help="Zoekstring (liturgische rol, titel, alias, …)")
+    zoek_cmd.add_argument(
+        "--default-gelegenheid",
+        dest="default_gelegenheid",
+        default=None,
+        help="Filter: canoniek gelegenheid-id",
+    )
+    zoek_cmd.add_argument(
+        "--default-gelegenheidstype",
+        dest="default_gelegenheidstype",
+        default=None,
+        help="Filter: vast-feest | zondag-cyclus",
+    )
+    zoek_cmd.add_argument(
+        "--default-toon",
+        dest="default_toon",
+        default=None,
+        help="Filter: zondagstoonsysteem",
+    )
+    zoek_cmd.add_argument(
+        "--default-uitvoeringsvorm",
+        dest="default_uitvoeringsvorm",
+        default=None,
+        help="Default uitvoeringsvorm (alias toegestaan)",
+    )
+    zoek_cmd.add_argument(
+        "--default-gelegenheidsdatum",
+        dest="default_gelegenheidsdatum",
+        default=None,
+        help='Filter: "MM-DD"',
+    )
+    zoek_cmd.add_argument(
+        "--default-referentie",
+        dest="default_referentie",
+        default=None,
+        help="Herkomst-filter (§9 terminologie); geen catalogus-pad",
+    )
+    zoek_cmd.add_argument(
+        "--bronnen",
+        default=None,
+        help="Doorzoekbare herkomsten: bron, lokaal, of bron,lokaal (default: beide)",
+    )
+    zoek_cmd.add_argument(
+        "--bestandsextensie",
+        default=None,
+        help="Suffix-filter: vsa (default), pdf, alle, of komma-lijst (vsa,pdf)",
+    )
+    zoek_cmd.add_argument(
+        "--lijst",
+        action="store_true",
+        help="Alle matches (catalogus-paden), i.p.v. strict één resultaat",
+    )
+    _add_root_args(zoek_cmd)
+    zoek_cmd.set_defaults(func=_cmd_zoek)
 
     args = parser.parse_args(argv)
     try:

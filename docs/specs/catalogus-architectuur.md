@@ -75,7 +75,9 @@ VSA-tooling importeert `catalogus` en roept `AliasIndex.resolve_vsa_path()` aan 
 
 ## Fase 4 — sjablonen, sessies, resolve
 
-Status: **ontwerp** — zie [zangstuk-opzoeken in sjablonen](catalogus-samenstelling-zangstuk.md).
+Status: **API-contract (fase 0)** — implementatie volgt.
+
+Normatief zoek-API: [catalogus-zoek-api.md](catalogus-zoek-api.md).
 
 Parochie-**sjablonen** zijn markdown met:
 
@@ -98,9 +100,11 @@ sequenceDiagram
   Build-->>Rene: site
 ```
 
-Geplande CLI: **`catalogus zoek`**, **`vsa resolve-catalogus`**.
+Geplande CLI: **`catalogus zoek`** (stub + contract), **`vsa resolve-catalogus`**.
+
+Consument **`@include-vsa zoek=`** in `.vsa`-brontekst gebruikt dezelfde `catalogus.zoek`-API
+(in-memory expand; zie [catalogus-zoek-api.md](catalogus-zoek-api.md)).
 
 ## Later (fase 5+)
 
-- Zoek-UI / fuzzy match
-- Metadata-index (`gelegenheid`, `toon`, …) in AliasIndex
+- Zoek-UI / fuzzy match bovenop **`catalogus.zoek_kandidaten`**

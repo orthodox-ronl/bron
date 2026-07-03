@@ -22,12 +22,14 @@ sources:              # minstens één entry
 
 ### Optionele liturgische metadata
 
+Nederlandse sleutelnamen (aligned met catalogus `ZoekContext` / sessie-`default.*`):
+
 ```yaml
-occasion: <string>
-occasion_date: <"MM-DD">
-occasion_type: vast-feest | zondag-cyclus
-tone: <integer>
-koormap_nummer: <string>   # bijv. "8a" — niet de scan-sorteerprefix 010-
+gelegenheid: <string>              # canoniek gelegenheid-id of leesbare omschrijving
+gelegenheidsdatum: <"MM-DD">
+gelegenheidstype: vast-feest | zondag-cyclus
+toon: <integer>
+koormap_nummer: <string>           # bijv. "8a" — niet de scan-sorteerprefix 010-
 ```
 
 ### Source-entry — optionele velden
@@ -72,7 +74,7 @@ identificatie:
   lyricist: <string>
   rights: <string>       # weergave op export; geen vervanging copyright_status
   language: nl
-  tone: 1
+  toon: 1
 ---
 ```
 
@@ -84,9 +86,9 @@ Frontmatter dient voor gebruik van het `.vsa`-bestand buiten deze repository.
 ```yaml
 id: troparion-zondag-toon-1
 title: Troparion - Zondag, toon 1
-occasion: Zondag (opstandingscyclus)
-occasion_type: zondag-cyclus
-tone: 1
+gelegenheid: zondag
+gelegenheidstype: zondag-cyclus
+toon: 1
 sources:
   - id: scan-koormap-010
     file: sources/scan/010-troparion-kondakion-toon-1.pdf

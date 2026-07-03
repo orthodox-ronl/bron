@@ -94,7 +94,7 @@ Minimaal (handmatig of CI):
 - Per source: **exact één** van `file:` / `access:` / `status: nog-niet-getranscribeerd`
 - Elk `file:`-pad bestaat relatief aan de zangstuk-map
 - `based_on` verwijst naar bestaande source-id binnen hetzelfde zangstuk
-- Liturgische velden waar van toepassing (`occasion_type`, `tone`, …)
+- Liturgische velden waar van toepassing (`gelegenheidstype`, `toon`, …)
 - `copyright_status: copyrighted` ⇒ geen `file:`; wel `access:`
 
 ### Workflow invoeren / updaten

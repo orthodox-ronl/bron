@@ -99,10 +99,10 @@ geïmplementeerd).
   overal preventief uit te zoeken.
 
 ### Liturgische metadata (nieuw, ad-hoc geïntroduceerd, mag verder groeien)
-- `occasion`: de liturgische gelegenheid (bijv. "H. Nicolaas van Myra",
+- `gelegenheid`: de liturgische gelegenheid (bijv. "H. Nicolaas van Myra",
   "Zondag (opstandingscyclus)").
-- `occasion_date`: vaste kalenderdatum indien van toepassing (bijv. "12-06").
-- `occasion_type`: bijv. `vast-feest` of `zondag-cyclus`.
+- `gelegenheidsdatum`: vaste kalenderdatum indien van toepassing (bijv. "12-06").
+- `gelegenheidstype`: bijv. `vast-feest` of `zondag-cyclus`.
 - `tone`: de liturgische toon (los van de identiteit/id van het zangstuk —
   bleek nodig omdat meerdere, totaal verschillende zangstukken in dezelfde
   toon kunnen staan).
@@ -259,9 +259,9 @@ bron/                                    # root van de bron-repository
       zangstuk.yaml
       # id: troparion-zondag-toon-1
       # title: "Troparion - Zondag, toon 1"
-      # occasion: "Zondag (opstandingscyclus)"
-      # occasion_type: zondag-cyclus
-      # tone: 1
+      # gelegenheid: "Zondag (opstandingscyclus)"
+      # gelegenheidstype: zondag-cyclus
+      # toon: 1
       # sources:
       #   - id: scan-koormap-010
       #     file: sources/scan/010-troparion-kondakion-toon-1.pdf
@@ -291,9 +291,9 @@ bron/                                    # root van de bron-repository
       zangstuk.yaml
       # id: kondakion-zondag-toon-1
       # title: "Kondakion - Zondag, toon 1"
-      # occasion: "Zondag (opstandingscyclus)"
-      # occasion_type: zondag-cyclus
-      # tone: 1
+      # gelegenheid: "Zondag (opstandingscyclus)"
+      # gelegenheidstype: zondag-cyclus
+      # toon: 1
       # sources:
       #   - id: scan-koormap-010
       #     file: ../troparion-zondag-toon-1/sources/scan/010-troparion-kondakion-toon-1.pdf
@@ -381,10 +381,10 @@ bron/                                    # root van de bron-repository
       zangstuk.yaml
       # id: troparion-nicolaas-van-myra
       # title: "Troparion - H. Nicolaas van Myra"
-      # occasion: "H. Nicolaas van Myra"
-      # occasion_date: "12-06"
-      # occasion_type: vast-feest
-      # tone: 4
+      # gelegenheid: "H. Nicolaas van Myra"
+      # gelegenheidsdatum: "12-06"
+      # gelegenheidstype: vast-feest
+      # toon: 4
       # sources:
       #   - id: liturgikon
       #     file: sources/vsa/liturgikon.vsa
@@ -398,10 +398,10 @@ bron/                                    # root van de bron-repository
       zangstuk.yaml
       # id: kondakion-nicolaas-van-myra
       # title: "Kondakion - H. Nicolaas van Myra"
-      # occasion: "H. Nicolaas van Myra"
-      # occasion_date: "12-06"
-      # occasion_type: vast-feest
-      # tone: 3
+      # gelegenheid: "H. Nicolaas van Myra"
+      # gelegenheidsdatum: "12-06"
+      # gelegenheidstype: vast-feest
+      # toon: 3
       # sources:
       #   - id: liturgikon
       #     file: sources/vsa/liturgikon.vsa
@@ -415,10 +415,10 @@ bron/                                    # root van de bron-repository
       zangstuk.yaml
       # id: troparion-apostel-andreas
       # title: "Troparion - Apostel Andreas, de Eerstgeroepene"
-      # occasion: "Apostel Andreas, de Eerstgeroepene"
-      # occasion_date: "11-30"
-      # occasion_type: vast-feest
-      # tone: 4
+      # gelegenheid: "Apostel Andreas, de Eerstgeroepene"
+      # gelegenheidsdatum: "11-30"
+      # gelegenheidstype: vast-feest
+      # toon: 4
       # sources:
       #   - id: liturgikon
       #     file: sources/vsa/liturgikon.vsa
@@ -432,10 +432,10 @@ bron/                                    # root van de bron-repository
       zangstuk.yaml
       # id: kondakion-apostel-andreas
       # title: "Kondakion - Apostel Andreas, de Eerstgeroepene"
-      # occasion: "Apostel Andreas, de Eerstgeroepene"
-      # occasion_date: "11-30"
-      # occasion_type: vast-feest
-      # tone: 2
+      # gelegenheid: "Apostel Andreas, de Eerstgeroepene"
+      # gelegenheidsdatum: "11-30"
+      # gelegenheidstype: vast-feest
+      # toon: 2
       # sources:
       #   - id: liturgikon
       #     file: sources/vsa/liturgikon.vsa
@@ -449,10 +449,10 @@ bron/                                    # root van de bron-repository
       zangstuk.yaml
       # id: troparion-tempelgang-moeder-gods
       # title: "Troparion - Tempelgang van de Moeder Gods"
-      # occasion: "Tempelgang van de Moeder Gods"
-      # occasion_date: "11-21"
-      # occasion_type: vast-feest
-      # tone: 4
+      # gelegenheid: "Tempelgang van de Moeder Gods"
+      # gelegenheidsdatum: "11-21"
+      # gelegenheidstype: vast-feest
+      # toon: 4
       # sources:
       #   - id: liturgikon
       #     file: sources/vsa/liturgikon.vsa
@@ -466,10 +466,10 @@ bron/                                    # root van de bron-repository
       zangstuk.yaml
       # id: kondakion-tempelgang-moeder-gods
       # title: "Kondakion - Tempelgang van de Moeder Gods"
-      # occasion: "Tempelgang van de Moeder Gods"
-      # occasion_date: "11-21"
-      # occasion_type: vast-feest
-      # tone: 4
+      # gelegenheid: "Tempelgang van de Moeder Gods"
+      # gelegenheidsdatum: "11-21"
+      # gelegenheidstype: vast-feest
+      # toon: 4
       # sources:
       #   - id: liturgikon
       #     file: sources/vsa/liturgikon.vsa

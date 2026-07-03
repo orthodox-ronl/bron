@@ -32,6 +32,29 @@ scripts\test.cmd
 
 ## Commando's (fase 2)
 
+### `catalogus zoek` (API-contract fase 0)
+
+Vrije tekst + `default.*`-context → **catalogus-pad** (`lokaal:…` / `bron:…`).
+
+Normatief contract: [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md).
+
+- **`zoek`** — strict: 0 / 1 / meerdere → fout of één pad.
+- **`zoek_kandidaten`** — alle matches (review, `--lijst`).
+- Default **`bestandsextensie`**: `.vsa`.
+
+```cmd
+python -m catalogus.cli zoek "Troparion" ^
+  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --bron-root . ^
+  --default-gelegenheid geboorte-moeder-gods ^
+  --default-uitvoeringsvorm Groningen
+
+python -m catalogus.cli zoek "Troparion" --lijst --bron-root .
+```
+
+**Status:** CLI en Python-API aanwezig; **`zoek_kandidaten()`** werpt `NotImplementedError` tot fase 4.
+Exitcode **2** = nog niet geïmplementeerd; **1** = geen match (na implementatie).
+
 ### `catalogus resolve`
 
 Los alias of hoofdletter-variant op naar canoniek id.
@@ -91,7 +114,14 @@ Zie [parochie-lokaal zangstukken](../manuals/parochie-lokaal-zangstukken.md) voo
 
 ```python
 from pathlib import Path
-from catalogus import AliasIndex
+from catalogus import (
+    AliasIndex,
+    ZoekContext,
+    format_catalogus_pad,
+    zoek,
+    zoek_kandidaten,
+    zoek_met_roots,
+)
 
 index = AliasIndex.build(
     content_root=Path("content-source"),
@@ -101,21 +131,32 @@ index.resolve_uitvoeringsvorm(
     "antifoon-1-weekdagen", "liturgikon-weekdagen", "Hemelum"
 )
 # → "hemelum"
+
+# Zoek-API (contract fase 0 — zoek_kandidaten() stub tot fase 4):
+ctx = ZoekContext.from_default_mapping(
+    {"gelegenheid": "geboorte-moeder-gods", "uitvoeringsvorm": "Groningen"}
+)
+# lijst = zoek_kandidaten("Troparion", index=index, context=ctx)
+# lijst.catalogus_paden
+# result = zoek("Troparion", index=index, context=ctx)  # strict: 0/1/meerdere
 ```
+
+Zie [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) voor volledig contract.
 
 ## Relatie tot VSA
 
 - **Fase 2:** `catalogus` staat los van `vsa`; build/includes gebruikten relatieve paden.
 - **Fase 3:** VSA-tooling importeert `catalogus` bij `id:…` / `lokaal:…` / `bron:…`-includes in markdown.
-- **Fase 4 (gepland):** `:::include zoek=` in sjablonen/sessies → **`vsa resolve-catalogus`**
-  → catalogus-pad — parser en CLI in VSA-tooling; **`catalogus zoek`** in bron.
+- **Fase 4 (contract fase 0):** `:::include zoek=` / `@include-vsa zoek=` → **`catalogus.zoek`**
+  → catalogus-pad — [API-contract](../specs/catalogus-zoek-api.md); implementatie gepland.
 
 ## Geplande commando's (fase 4)
 
 | Commando | Repo | Doel |
 | -------- | ---- | ---- |
-| `catalogus zoek` | bron | Vrije tekst + `default.*` → catalogus-pad (of ambiguïteit) |
+| `catalogus zoek` | bron | **Contract fase 0** — implementatie volgt; zie [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) |
 | **`vsa resolve-catalogus`** | VSA-tooling | Markdown: alle `zoek=` → `bron:…` / `lokaal:…` |
+| **`@include-vsa`** expand | VSA-tooling | `.vsa`: `zoek=` → in-memory body-splice via `catalogus.zoek` |
 
 Tot implementatie: per stuk `catalogus resolve`, of handmatig catalogus-pad in
 `:::include` — zie [verhaal 1](../manuals/catalogus/rene-liturgie-geboorte-moeder-gods.md)

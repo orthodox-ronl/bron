@@ -29,7 +29,7 @@ groningen* en kiest **Delen → Voorstel voor bron**.
 2. **Id-check:** groen als `zangstuk-id`, `variant-id`, `uitvoeringsvorm-id`
    en `representatie-id` voldoen aan `[a-z0-9_-]+` en uniek zijn in bron.
 3. **Bestanden:** selectie welke representaties meegaan (PDF, VSA).
-4. **Metadata:** formulier voor `zangstuk.yaml` (`title`, `occasion`, copyright).
+4. **Metadata:** formulier voor `zangstuk.yaml` (`title`, `gelegenheid`, copyright).
 5. **PR-assistent:** genereert branch-naam, commit-bericht (Conventional Commits)
    en checklist voor `vsa validate` / `catalogus index validate`.
 6. **Na merge:** hint om samenstellingen van `lokaal:` naar `bron:` om te zetten

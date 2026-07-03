@@ -46,9 +46,9 @@ def _format_vsa_zangstuk(zangstuk_id: str, ident: dict) -> str:
     lines = [
         f"id: {zangstuk_id}",
         f"title: {ident['title']}",
-        f"occasion: {OCCASION}",
-        "occasion_type: zondag-cyclus",
-        f"tone: {tone}",
+        f"gelegenheid: {OCCASION}",
+        "gelegenheidstype: zondag-cyclus",
+        f"toon: {tone}",
         "sources:",
         "  - id: groningen",
         "    file: sources/vsa/groningen.vsa",
@@ -65,9 +65,9 @@ def _format_melodie_zangstuk(zangstuk_id: str, tone: int, sources: list[tuple[st
     lines = [
         f"id: {zangstuk_id}",
         f"title: Tropaarmelodie van de zondag, toon {tone}",
-        f"occasion: {OCCASION}",
-        "occasion_type: zondag-cyclus",
-        f"tone: {tone}",
+        f"gelegenheid: {OCCASION}",
+        "gelegenheidstype: zondag-cyclus",
+        f"toon: {tone}",
         "sources:",
     ]
     for sid, rel in sources:

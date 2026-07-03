@@ -1,7 +1,7 @@
 id: antifoon-3-zondag
 title: 3e antifoon (zondag) — Zaligsprekingen
-occasion: Zondag
-occasion_type: zondag-cyclus
+gelegenheid: Zondag
+gelegenheidstype: zondag-cyclus
 aliases:
   - { text: "zaligsprekingen", lang: nl }
   - { text: "3e antifoon zondag", lang: nl }

@@ -18,8 +18,9 @@ De **catalogus** zoekt het stuk op (met **`default.*`** uit de sessie) en levert
 **catalogus-pad**. **`vsa resolve-catalogus`** schrijft dat pad in het markdown-bestand;
 pas daarna mag **`vsa build-markdown`** / export draaien.
 
-VSA-build (`:::include` zonder `zoek=`) valt buiten dit document; zie
-[VSA-tooling — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
+VSA-build (`:::include` zonder `zoek=`) en **`@include-vsa`** in `.vsa`-brontekst vallen buiten dit
+document qua syntax; beide **`zoek=`**-varianten gebruiken dezelfde resolver — zie
+[catalogus-zoek-api.md](catalogus-zoek-api.md).
 
 ---
 
@@ -139,11 +140,13 @@ Tekst of aanwijzing voor het koor (vrij).
 
 ### Resolver-gedrag (`catalogus zoek`)
 
-1. Lees **`default.*`** uit frontmatter van het markdown-bestand.
+Normatief API-contract: [catalogus-zoek-api.md](catalogus-zoek-api.md).
+
+1. Lees **`default.*`** uit frontmatter van het markdown- of `.vsa`-bestand.
 2. Normaliseer `zoek=` ([§2.8](terminologie.md)).
-3. Doorzoek metadata-index binnen `bronnen`.
-4. **Eén** match → **catalogus-pad** (`bron:…` / `lokaal:…`).
-5. **Geen** / **meerdere** matches → fout of review.
+3. Doorzoek catalogusmetadata binnen `bronnen`.
+4. **Eén** match → **catalogus-pad** (`bron:…` / `lokaal:…`) en **`Path`** naar brondocument.
+5. **Geen** / **meerdere** matches → fout of review (`zoek_kandidaten` voor lijst).
 
 ---
 
@@ -231,8 +234,10 @@ Tooling: [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groninge
 | Onderdeel | Status |
 | --------- | ------ |
 | `catalogus resolve` per niveau | Geïmplementeerd (basis) |
-| `catalogus zoek` (vrije tekst + `default.*`) | **Gepland** |
+| **`catalogus zoek` API-contract** | **Normatief (fase 0)** — [catalogus-zoek-api.md](catalogus-zoek-api.md) |
+| `catalogus zoek` (implementatie) | **Gepland** (fase 4) |
 | `:::include` parameter `zoek=` | **Gepland** (VSA-tooling) |
+| `@include-vsa zoek=` | **Gepland** (VSA-tooling) |
 | `vsa resolve-catalogus` | **Gepland** (VSA-tooling) |
 | Review-UI | **Gepland** |
 | `:::include mp3-player` | **Gepland** (exporttype) |
@@ -246,3 +251,4 @@ Tooling: [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groninge
 | 2026-07 | Eerste versie; `default`; `pad` / `referentie` |
 | 2026-07 | Directive **`:::zangstuk`** i.p.v. `:::invul` |
 | 2026-07 | **`:::include zoek=`** i.p.v. `:::zangstuk`; sjabloon zonder `gelegenheid`; `vsa resolve-catalogus` |
+| 2026-07 | Verwijzing naar [catalogus-zoek-api.md](catalogus-zoek-api.md); `@include-vsa` als consument |

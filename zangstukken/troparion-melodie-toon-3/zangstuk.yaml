@@ -1,8 +1,8 @@
 id: troparion-melodie-toon-3
 title: Tropaarmelodie van de zondag, toon 3
-occasion: Zondag (opstandingscyclus)
-occasion_type: zondag-cyclus
-tone: 3
+gelegenheid: Zondag (opstandingscyclus)
+gelegenheidstype: zondag-cyclus
+toon: 3
 sources:
   - id: koormap-scan
     file: sources/scan/koormap.jpg

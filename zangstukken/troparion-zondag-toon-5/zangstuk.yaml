@@ -1,8 +1,8 @@
 id: troparion-zondag-toon-5
 title: Tropaar van de zondag, toon 5
-occasion: Zondag (opstandingscyclus)
-occasion_type: zondag-cyclus
-tone: 5
+gelegenheid: Zondag (opstandingscyclus)
+gelegenheidstype: zondag-cyclus
+toon: 5
 sources:
   - id: groningen
     file: sources/vsa/groningen.vsa

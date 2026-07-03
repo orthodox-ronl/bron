@@ -80,7 +80,7 @@ identiteit zit in `zangstuk.yaml` (`id`, `tone`, `title`).
 Minimaal per zangstuk:
 
 - `id` = mapnaam
-- `title`, `occasion_type: zondag-cyclus`, `tone: <y>`
+- `title`, `gelegenheidstype: zondag-cyclus`, `toon: <y>`
 - `sources[]` met `id: groningen` (of `koormap-scan`) + `file:` + `copyright_status: vrij`
 - `reference:` / `note:` verwijzing koormap Groningen waar zinvol
 

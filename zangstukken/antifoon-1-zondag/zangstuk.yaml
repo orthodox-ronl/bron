@@ -1,7 +1,7 @@
 id: antifoon-1-zondag
 title: 1e antifoon (zondag)
-occasion: Zondag
-occasion_type: zondag-cyclus
+gelegenheid: Zondag
+gelegenheidstype: zondag-cyclus
 aliases:
   - { text: "1e antifoon zondag", lang: nl }
   - { text: "eerste antifoon zondag", lang: nl }
