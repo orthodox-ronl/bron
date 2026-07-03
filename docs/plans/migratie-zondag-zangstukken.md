@@ -22,7 +22,7 @@ Extra scan-varianten (bestaan nu, niet allemaal in zondag-export gebruikt):
 | ---- | --------- | -------------------------------- |
 | 2 | `tropaarmelodie-toon-2a.jpg` | nee (alleen `.jpg`) |
 | 4 | `tropaarmelodie-toon-4a.jpg` | nee (alleen `.jpg`; `4a` wél in repo als tweede source) |
-| 5 | `tropaarmelodie-toon-5a.jpg` | **ja** (`scale="67%"`) |
+| 5 | `tropaarmelodie-toon-5.jpg` | **ja** (`scale="67%"`) |
 
 **Coria:** alleen `tropaar-zondag-toon-3.coria.html` → bij `troparion-zondag-toon-3`, sibling
 naast `.vsa` (conventie export coria).
@@ -64,7 +64,7 @@ zangstukken/kondak-zondag-toon-3/
 ```
 zangstukken/troparion-melodie-toon-5/
   zangstuk.yaml
-  sources/scan/koormap-5a.jpg            ← primary voor export toon 5
+  sources/scan/koormap-5.jpg            ← primary voor export toon 5
   sources/scan/koormap-5.jpg             ← optional second source id
 ```
 
@@ -120,7 +120,7 @@ Nieuw in VSA-tooling: `scripts/sync_bron_zondagen.py` (naam voorbeeld)
   naast `.md` met **vaste namen** die `zondag-toon-<y>.md` al gebruikt:
   - `tropaar-zondag-toon-<y>.vsa`
   - `kondak-zondag-toon-<y>.vsa`
-  - `tropaarmelodie-toon-<y>.jpg` / `-5a.jpg` / coria sibling
+  - `tropaarmelodie-toon-<y>.jpg` / `-5.jpg` / coria sibling
 - Mapping uit `zangstuk.yaml` + conventie `sources/vsa/groningen.vsa`
 
 `zondag-toon-<y>.md` **hoeft dan niet** meteen nieuwe syntax; alleen `.gitignore` op
@@ -149,7 +149,10 @@ Behoud alleen `.md` samenstellingen + sync-output (gitignored) of altijd sync in
 ### Fase C — Optioneel later
 
 - `:::include svg "zangstuk:troparion-zondag-toon-3"` zonder platte kopie
-- `composities/zondag-toon-<y>.yaml` in bron (nu: md in VSA-tooling volstaat)
+- Org-brede **compositie**-yaml in `bron/composities/` (toekomst)
+- Parochie-**sjablonen** (markdown, `:::include zoek=`) — zie
+  [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md);
+  vervangt niet per se yaml in de demo, wel het handmatige herhalen per toon
 
 ---
 

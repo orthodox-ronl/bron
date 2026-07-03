@@ -58,7 +58,9 @@ jobs:
             "${{ steps.target.outputs.preview }}"
 
       - name: Build MkDocs site
-        run: mkdocs build --strict --site-dir site
+        env:
+          NO_MKDOCS_2_WARNING: "1"
+        run: python -m mkdocs build --strict --site-dir site
 
       - name: Deploy to GitHub Pages (production)
         if: github.ref == 'refs/heads/main'

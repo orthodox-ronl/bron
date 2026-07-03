@@ -1,0 +1,248 @@
+# Catalogus — zangstuk-opzoeken in sjablonen en samenstellingen
+
+Status: **ontwerp** (normatief zodra geïmplementeerd).
+
+Gerelateerd: [terminologie §2.8](terminologie.md), [catalogus-architectuur](catalogus-architectuur.md),
+[samenstelling §18](terminologie.md#18-samenstelling), [exportcontracten](../reference/exportcontracten.md).
+
+---
+
+## Doel
+
+Rene werkt in **markdown-sjablonen** (geen uitgebreide yaml-bomen). Op vaste plekken
+staat **`:::include`** met exporttype (`svg`, `coria`, `mxl`, …) en parameter
+**`zoek="…"`** — nog geen catalogus-pad. Tussen de includes: gewone markdown
+(kopjes, liturgische aanwijzingen).
+
+De **catalogus** zoekt het stuk op (met **`default.*`** uit de sessie) en levert een
+**catalogus-pad**. **`vsa resolve-catalogus`** schrijft dat pad in het markdown-bestand;
+pas daarna mag **`vsa build-markdown`** / export draaien.
+
+VSA-build (`:::include` zonder `zoek=`) valt buiten dit document; zie
+[VSA-tooling — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
+
+---
+
+## Woorden: niet door elkaar halen
+
+| Term | Betekenis | Voorbeeld |
+| ---- | --------- | --------- |
+| **referentie** | **Herkomst**-metadata ([§9](terminologie.md)) | `referentie: VOK` — filter, geen pad |
+| **catalogus-pad** | Opgelost doel in de catalogus | `bron:cherubijnenhymne/kastorski/groningen` |
+| **`zoek=`** | Parameter op `:::include` — liturgische rol, nog op te zoeken | `zoek="Kondakion"` |
+| **zangstuk** (glossary §5) | Entiteit met `zangstuk-id` | In opslag; Rene typt geen id |
+
+**Niet synoniem:** **`referentie`** ≠ **catalogus-pad**.
+
+---
+
+## Sjabloon vs sessie
+
+| | **Sjabloon** (herbruikbaar) | **Sessie** (concrete liturgiemap) |
+| --- | --- | --- |
+| **Wie** | Eén keer ontwerpen | Rene per feest / dienst |
+| **`default.gelegenheid`** | **Niet** — geen individuele feesten | **Wel** — Rene vult in |
+| **`default.gelegenheidstype`** | **Wel** — `vast-feest` \| `zondag-cyclus` | Overnemen of bevestigen |
+| **`default.toon`** | Alleen in koormap-sjablonen (placeholder) | Bij zondag-cyclus invullen |
+| **`default.uitvoeringsvorm`** | Parochie-default (bijv. `Groningen`) | Meestal overnemen |
+| **Includes** | `:::include svg zoek="Troparion" …` | Zelfde regels; na resolve: `bron:…` / `lokaal:…` |
+
+Het sjabloon beschrijft **structuur** en **liturgische rol** (`Troparion`, `Kondakion`,
+`Cherubijnenhymne`). De **gelegenheid** (`geboorte-moeder-gods`, …) hoort in de
+**sessie-frontmatter**, niet in elke `zoek=`-tekst.
+
+---
+
+## Drie lagen in het markdown-bestand
+
+| Laag | Wie | Inhoud |
+| ---- | --- | ------ |
+| **Sessie** | Rene | Frontmatter: `sjabloon`, `titel`, `default`, … |
+| **Includes met `zoek=`** | Catalogus + `vsa resolve-catalogus` | `:::include <exporttype> zoek="…" …` |
+| **Vrije frontmatter** | Rene | Eigen sleutels; catalogus **negeert** |
+
+Tussen includes: gewone markdown.
+
+---
+
+## Sessie (frontmatter)
+
+| Sleutel | Verplicht | Betekenis |
+| ------- | --------- | --------- |
+| `sjabloon` | nee | Id of pad van het sjabloon-bestand |
+| `titel` | nee | Weergavetitel (concrete dienst) |
+| `default` | aanbevolen | Context voor catalogus-zoekactie |
+| `bronnen` | nee | `bron`, `lokaal`, of beide |
+
+### `default` (enkelvoud)
+
+| Sleutel onder `default` | In sjabloon | In sessie | Betekenis |
+| ----------------------- | ----------- | --------- | --------- |
+| `gelegenheidstype` | **ja** | ja | `vast-feest` \| `zondag-cyclus` |
+| `gelegenheid` | **nee** | **ja** (feest) | Canoniek gelegenheid-id |
+| `toon` | koormap: placeholder | ja (zondag) | Zondagstoonsysteem |
+| `uitvoeringsvorm` | ja | ja | Parochie-default |
+| `gelegenheidsdatum` | nee | optioneel | `"MM-DD"` |
+
+**Sjabloon** (dienst — geen individueel feest):
+
+```yaml
+---
+sjabloon: goddelijke-liturgie-groningen
+default:
+  gelegenheidstype: vast-feest
+  uitvoeringsvorm: Groningen
+---
+```
+
+**Sessie** (Rene voor 8 september):
+
+```yaml
+---
+sjabloon: goddelijke-liturgie-groningen
+titel: "Goddelijke liturgie — Geboorte Moeder Gods (8 september)"
+default:
+  gelegenheid: geboorte-moeder-gods
+  gelegenheidstype: vast-feest
+  toon: 4
+  uitvoeringsvorm: Groningen
+---
+```
+
+---
+
+## `:::include` met `zoek=` (hoofdingang)
+
+Rene specificeert per plek **welk exporttype** op de site komt — meerdere regels met
+**dezelfde** `zoek=` zijn toegestaan (svg + coria + toekomstig mp3-player).
+
+```markdown
+### Troparion
+
+:::include svg zoek="Troparion" alt="Troparion" scale="85%":::
+:::include coria zoek="Troparion" label="Oefenen Troparion" mode="auto":::
+
+Tekst of aanwijzing voor het koor (vrij).
+
+### Kondakion
+
+:::include svg zoek="Kondakion" alt="Kondakion":::
+```
+
+**Regels voor `zoek=`**
+
+- Liturgische **rol** — geen feestnaam als `default.gelegenheid` al gezet is.
+- Uitzondering: disambiguation in de zoektekst, bijv.
+  `zoek="Cherubijnenhymne (Kastorski)"`.
+- Geen `variant-id` of `uitvoeringsvorm-id` — tenzij na review handmatig
+  catalogus-pad.
+
+### Resolver-gedrag (`catalogus zoek`)
+
+1. Lees **`default.*`** uit frontmatter van het markdown-bestand.
+2. Normaliseer `zoek=` ([§2.8](terminologie.md)).
+3. Doorzoek metadata-index binnen `bronnen`.
+4. **Eén** match → **catalogus-pad** (`bron:…` / `lokaal:…`).
+5. **Geen** / **meerdere** matches → fout of review.
+
+---
+
+## Na resolve — catalogus-pad in `:::include`
+
+`vsa resolve-catalogus` vervangt `zoek="…"` door het opgeloste pad; overige parameters
+(`alt`, `label`, `scale`, …) blijven staan.
+
+```markdown
+:::include svg bron:troparion-geboorte-moeder-gods/obikhod/groningen alt="Troparion" scale="85%":::
+:::include coria bron:troparion-geboorte-moeder-gods/obikhod/groningen label="Oefenen Troparion" mode="auto":::
+```
+
+Handmatig (na review):
+
+```markdown
+:::include svg lokaal:cherubijnenhymne/kastorski/groningen alt="Cherubijnenhymne":::
+```
+
+---
+
+## Extra filters (bij ambiguïteit)
+
+Optionele yaml in een **comment-blok** of apart review-bestand — niet in de
+`:::include`-regel tenzij expliciet ondersteund:
+
+| Sleutel | Betekenis |
+| ------- | --------- |
+| `gelegenheid` | Liturgische gelegenheid (sessie-default overschrijven) |
+| `toon` | Zondagstoonsysteem |
+| `referentie` | Herkomst-filter — **niet** catalogus-pad |
+| `koormap_nummer` | Koormap/VOK-label |
+
+Expliciete ids (na review): `zangstuk`, `variant`, `uitvoeringsvorm`, `representatie`.
+
+---
+
+## Workflow
+
+1. Rene kopieert **sjabloon** → sessie-bestand; vult **`default.gelegenheid`** (en evt. `toon`).
+2. Sjabloon bevat al `:::include … zoek="…"` en vrije tekst ertussen.
+3. **`catalogus index validate`** — index in orde.
+4. **`vsa resolve-catalogus`** — alle `zoek=` → catalogus-pad; review bij ambiguïteit.
+5. **`vsa validate`** / **`vsa build-markdown`** — alleen op **opgelost** bestand.
+6. Hugo / export.
+
+```mermaid
+sequenceDiagram
+  participant Rene
+  participant VSA as vsa resolve-catalogus
+  participant Cat as catalogus zoek
+  participant Build as vsa build-markdown
+
+  Rene->>VSA: sessie.md (zoek= + default.gelegenheid)
+  VSA->>Cat: per zoek= + default.*
+  Cat-->>VSA: catalogus-pad of ambiguïteit
+  Rene->>VSA: review (optioneel)
+  VSA-->>Rene: sessie-opgelost.md
+  Rene->>Build: build (geen zoek= meer)
+  Build-->>Rene: site / export
+```
+
+**Harde regel:** `vsa build-markdown` met nog open `zoek=` → **fout** (geen stille fallback).
+
+---
+
+## Verouderd: `:::zangstuk`
+
+Eerdere ontwerpen gebruikten een aparte directive `:::zangstuk` met yaml `zoek:`.
+**Niet meer aanbevolen.** Gebruik **`:::include <exporttype> zoek="…"`** — Rene houdt
+exportkeuzes (svg, coria, …) vanaf het begin.
+
+---
+
+## Handleiding
+
+Praktisch voor Rene: [Sjabloon schrijven](../manuals/catalogus/sjabloon-schrijven.md).
+
+Tooling: [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
+
+---
+
+## Implementatiestatus
+
+| Onderdeel | Status |
+| --------- | ------ |
+| `catalogus resolve` per niveau | Geïmplementeerd (basis) |
+| `catalogus zoek` (vrije tekst + `default.*`) | **Gepland** |
+| `:::include` parameter `zoek=` | **Gepland** (VSA-tooling) |
+| `vsa resolve-catalogus` | **Gepland** (VSA-tooling) |
+| Review-UI | **Gepland** |
+| `:::include mp3-player` | **Gepland** (exporttype) |
+
+---
+
+## Wijzigingshistorie
+
+| Datum   | Wijziging |
+| ------- | --------- |
+| 2026-07 | Eerste versie; `default`; `pad` / `referentie` |
+| 2026-07 | Directive **`:::zangstuk`** i.p.v. `:::invul` |
+| 2026-07 | **`:::include zoek=`** i.p.v. `:::zangstuk`; sjabloon zonder `gelegenheid`; `vsa resolve-catalogus` |

@@ -20,6 +20,10 @@ bron/
 ├── LICENSE-CODE
 ├── mkdocs.yml                  # documentatiesite (GitHub Pages)
 ├── requirements-docs.txt
+├── pyproject.toml              # catalogus Python-pakket + CLI
+├── src/
+│   └── catalogus/              # alias-index en resolver
+├── tests/
 ├── docs/                       # → orthodox-groningen.github.io/bron/
 │   ├── specs/
 │   ├── manuals/
@@ -67,10 +71,16 @@ stabiele `id` onder `zangstukken/`.
 - **Scan/PDF:** niet splitsen; tweede zangstuk verwijst met relatief `file:` naar scan
   bij het eerste zangstuk
 
-## Composities (nog niet uitgewerkt)
+## Composities en sjablonen
 
-YAML onder `composities/` met ordered list van `{ zangstuk, source }` — zie
-[Plannen: samenvatting project](../plans/samenvatting-project.md).
+| Concept | Locatie | Status |
+| ------- | ------- | ------ |
+| **Compositie** (org) | `composities/*.yaml` in **bron** | Toekomst — geordende yaml-lijst |
+| **Sjabloon** (parochie) | markdown in parochie **content-source** | Ontwerp — `default.gelegenheidstype`, `:::include zoek=` |
+| **Samenstelling** | markdown publicatie parochie | §18 terminologie |
+
+Compositie-yaml in bron: [Plannen: samenvatting project](../plans/samenvatting-project.md).
+Sjabloon-contract: [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md).
 
 ## Nog te ontwerpen
 

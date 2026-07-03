@@ -9,3 +9,5 @@ Normatieve documentatie voor de organisatie **orthodox-groningen** (canoniek in 
 - [Inhoudslevenscyclus](inhoudslevenscyclus.md) — bron → conversie → export
 - [Repo-structuur](repo-structuur.md) — mappen, documentatie vs. inhoud
 - [Zangstuk-formaat](zangstuk-formaat.md) — schema `zangstuk.yaml`
+- [Catalogus-architectuur](catalogus-architectuur.md) — alias-index en resolver (fase 2)
+- [Catalogus — zangstuk in samenstelling-sjablonen](catalogus-samenstelling-zangstuk.md) — `zoek:`-contract voor Rene

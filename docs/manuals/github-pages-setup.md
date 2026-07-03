@@ -50,7 +50,9 @@ via `mkdocs.yml` / theme meegebouwd.
 
 ## Lokaal
 
-```bash
-python -m pip install -r requirements-docs.txt
-python -m mkdocs serve
+```cmd
+cd /d C:\Git\orthodox-groningen\bron
+scripts\docs-serve.cmd
 ```
+
+(`scripts\docs-serve.cmd` zet `NO_MKDOCS_2_WARNING=1` — onderdrukt de Material-banner over MkDocs 2.0; wij blijven op MkDocs 1.x via `requirements-docs.txt`.)

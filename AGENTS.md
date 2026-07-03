@@ -85,12 +85,12 @@ Define verifiable success criteria (`vsa validate zangstukken`, `mkdocs build --
 | ------------- | --------------------------------------- |
 | Python        | ≥ 3.12                                  |
 | Docs lokaal   | MkDocs Material (`requirements-docs.txt`) |
+| Catalogus     | `pip install -e ".[dev]"` in bron-root    |
 | VSA-validatie | `vsa` CLI uit repo VSA-tooling          |
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
-python -m pip install -r requirements-docs.txt
-mkdocs serve
+scripts\docs-serve.cmd
 ```
 
 VSA-validatie (VSA-tooling naast `bron`):
@@ -108,13 +108,25 @@ vsa validate zangstukken
 
 ## Build, lint en test
 
+### Catalogus (alias-resolver)
+
+Gebruik `python -m` (niet bare `pytest` / `catalogus`) — voorkomt Python-mismatch op Windows.
+
+Sjablonen: [sjabloon schrijven](docs/manuals/catalogus/sjabloon-schrijven.md),
+spec [catalogus-samenstelling-zangstuk.md](docs/specs/catalogus-samenstelling-zangstuk.md).
+
+```cmd
+cd /d C:\Git\orthodox-groningen\bron
+scripts\test.cmd
+python -m catalogus.cli index validate --bron-root .
+```
+
 ### Documentatie (MkDocs)
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
-python -m pip install -r requirements-docs.txt
-mkdocs build --strict --site-dir site
-mkdocs serve
+scripts\docs-build.cmd
+scripts\docs-serve.cmd
 ```
 
 ### Zangstukken valideren
@@ -207,6 +219,7 @@ gh pr create --title "docs(specs): korte beschrijving" --body "## Summary
 | Workflow                   | Trigger  | Doel                                       |
 | -------------------------- | -------- | ------------------------------------------ |
 | `validate-zangstukken.yml` | push, PR | `vsa validate zangstukken`                 |
+| `validate-catalogus.yml`   | push, PR | pytest + `catalogus index validate`        |
 | `docs-pages.yml`           | push     | MkDocs → GitHub Pages (prod of `/preview/`) |
 
 ---

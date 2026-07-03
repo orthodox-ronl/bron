@@ -17,9 +17,9 @@ Material. Preview van branches: **https://orthodox-groningen.github.io/bron/prev
 
 Lokaal:
 
-```bash
-python -m pip install -r requirements-docs.txt
-mkdocs serve
+```cmd
+cd /d C:\Git\orthodox-groningen\bron
+scripts\docs-serve.cmd
 ```
 
 ## Wat staat hier wel, en wat niet

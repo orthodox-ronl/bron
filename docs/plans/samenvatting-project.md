@@ -480,6 +480,18 @@ bron/                                    # root van de bron-repository
           liturgikon.vsa
 ```
 
+## Sjablonen vs composities (notitie 2026-07)
+
+| Concept | Waar | Normatief |
+| ------- | ---- | --------- |
+| **Compositie** | `bron/composities/*.yaml` (toekomst) | [terminologie §19](../specs/terminologie.md#19-compositie) |
+| **Sjabloon** | markdown parochie content-source | [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md) |
+| **Samenstelling** | gepubliceerde markdown + `:::include` | [terminologie §18](../specs/terminologie.md#18-samenstelling) |
+
+De hugo-demo `goddelijke-liturgie.yaml` is een **legacy** inventarisatie; nieuw
+parochiewerk: sjablonen + catalogus (handleiding
+[sjabloon schrijven](../manuals/catalogus/sjabloon-schrijven.md)).
+
 ## Hoe verder te gaan in een nieuw gesprek
 
 Plak dit document als eerste bericht, en voeg toe wat je daarna wilt doen —

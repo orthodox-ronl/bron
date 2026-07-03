@@ -1,0 +1,106 @@
+# Catalogus — architectuur (fase 2)
+
+Status: geïmplementeerd (basis).
+
+Normatief resolver-contract: [terminologie §2.8](../specs/terminologie.md).
+
+## Doel
+
+De **catalogus**-tool beantwoordt: *welk zangstuk (variant, uitvoeringsvorm, representatie)
+bedoel je?* Invoer mag gangbare namen (`Groningen`, `Касторский`); opslag blijft
+canoniek id (`groningen`, `kastorski`).
+
+## Plaatsing
+
+| Onderdeel        | Locatie                          |
+| ---------------- | -------------------------------- |
+| Python-pakket    | `src/catalogus/` in **bron**     |
+| CLI              | `catalogus` (entry point)        |
+| Documentatie     | [catalogus-cli.md](../reference/catalogus-cli.md), [gebruikersverhalen](../manuals/catalogus/index.md), [zangstuk-plaats contract](catalogus-samenstelling-zangstuk.md) |
+| Test-fixtures    | `tests/fixtures/alias-index/`    |
+
+Bron-repo workflows kunnen `catalogus` draaien **zonder** VSA-tooling.
+VSA-tooling wordt in fase 3 **consument** van de library (id-gebaseerde includes).
+
+## Datastroom
+
+```mermaid
+sequenceDiagram
+  participant User
+  participant CLI as catalogus CLI
+  participant Index as AliasIndex
+  participant Manifest as manifesten + mappad
+
+  User->>CLI: resolve uitvoeringsvorm … Groningen
+  CLI->>Index: build(roots)
+  Index->>Manifest: scan lokaal/, zangstukken/
+  CLI->>Index: resolve_uitvoeringsvorm(…)
+  Index-->>User: groningen
+```
+
+## Index vs opslag
+
+| Laag    | Wat                                                         |
+| ------- | ----------------------------------------------------------- |
+| Opslag  | Aliassen verspreid in git (manifesten, mapnamen, titels)  |
+| Runtime | `AliasIndex` in RAM — lookup per scope, conflict-detectie   |
+
+Geen gegenereerd alias-bestand in git.
+
+## Scope en uniciteit
+
+Zie terminologie §2.6. Conflicten (zelfde alias → verschillende ids binnen scope)
+worden bij index-build gerapporteerd via `catalogus index validate`.
+
+## Bekende randgevallen
+
+1. **Plat bron-model** — `zangstuk.yaml` `sources[].id` wordt geregistreerd onder
+   scope `(zangstuk-id, zangstuk-id)` tot geneste manifesten in bron (§22) bestaan.
+2. **Variant-alias als zangstuk-alias** — aliassen in `variant.yaml` worden
+   pragmatisch ook op zangstuk-niveau geïndexeerd (demo: `1e antifoon weekdagen`).
+3. **Representatie-aliassen** — minimaal; canoniek id-passthrough.
+
+## Fase 3 — id-gebaseerde includes (VSA-tooling)
+
+Status: **geïmplementeerd (basis)**.
+
+```markdown
+:::include svg id:antifoon-1-weekdagen/liturgikon-weekdagen/Hemelum:::
+:::include svg lokaal:…:::
+:::include svg bron:troparion-zondag-toon-1/groningen:::
+```
+
+VSA-tooling importeert `catalogus` en roept `AliasIndex.resolve_vsa_path()` aan in
+`markdown_include.py`. Relatieve pad-includes blijven werken.
+
+## Fase 4 — sjablonen, sessies, resolve
+
+Status: **ontwerp** — zie [zangstuk-opzoeken in sjablonen](catalogus-samenstelling-zangstuk.md).
+
+Parochie-**sjablonen** zijn markdown met:
+
+- **`default.gelegenheidstype`** (geen individuele feesten in het sjabloon);
+- **`:::include <exporttype> zoek="…"`** — liturgische rol;
+- **sessie**: Rene voegt **`default.gelegenheid`** toe;
+- uitkomst na **`vsa resolve-catalogus`**: catalogus-pad in dezelfde includes.
+
+```mermaid
+sequenceDiagram
+  participant Rene
+  participant VSA as vsa resolve-catalogus
+  participant Cat as catalogus zoek
+  participant Build as vsa build-markdown
+
+  Rene->>VSA: sessie.md (zoek= + default.gelegenheid)
+  VSA->>Cat: per zoek=
+  Cat-->>VSA: catalogus-pad of review
+  Rene->>Build: opgelost bestand
+  Build-->>Rene: site
+```
+
+Geplande CLI: **`catalogus zoek`**, **`vsa resolve-catalogus`**.
+
+## Later (fase 5+)
+
+- Zoek-UI / fuzzy match
+- Metadata-index (`gelegenheid`, `toon`, …) in AliasIndex

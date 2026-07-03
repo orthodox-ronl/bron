@@ -152,7 +152,7 @@ Meerdere matches na normalisatie → **fout** met kandidaten (canoniek id + cont
 | Yaml (invoer) | `uitvoeringsvorm-id: Hemelum`  | `hemelum`              |
 | Zoek-UI       | “eerste antifoon weekdagen”    | `antifoon-1-weekdagen` |
 
-**Implementatiestatus:** contract gedocumenteerd; resolver in tooling **nog niet** geïmplementeerd.
+**Implementatiestatus:** contract gedocumenteerd; resolver in **catalogus**-tool (bron-repo, fase 2 basis).
 
 ---
 
@@ -403,9 +403,20 @@ Meerdere manifesten in dezelfde mappenstructuur noemen wij **manifesten** (meerv
 
 ## 19. Compositie
 
-**Criterium:** C is een **compositie** dan en slechts dan als C YAML onder `composities/` in bron-repository is met geordende verwijzingen naar zangstukken (toekomst: `(zangstuk-id, variant-id, uitvoeringsvorm-id)`).
+**Criterium:** C is een **compositie** dan en slechts dan als C YAML onder `composities/` in **bron-repository** is met geordende verwijzingen naar zangstukken (toekomst: `(zangstuk-id, variant-id, uitvoeringsvorm-id)`).
 
-*(Nog niet geïmplementeerd.)*
+*(Nog niet geïmplementeerd in bron.)*
+
+**Niet verwarren met sjabloon:** een parochie-**sjabloon** is markdown in de
+content-source (dienst-, koormap- of herkomst-sjabloon) met **`:::include zoek="…"`**;
+ingevuld (opgelost pad) is een **samenstelling** (§18). Zie
+[catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md).
+
+| Term          | Waar                         | Formaat        |
+| ------------- | ---------------------------- | -------------- |
+| **Compositie** | org-brede ordered list (toekomst) | yaml in `bron/composities/` |
+| **Sjabloon**   | parochie                     | markdown + `default.gelegenheidstype` + `:::include zoek=` |
+| **Samenstelling** | parochie-publicatie      | markdown + `:::include` met catalogus-pad (§18) |
 
 ---
 
@@ -436,7 +447,10 @@ Meerdere manifesten in dezelfde mappenstructuur noemen wij **manifesten** (meerv
 | -------------------------------------------------- | ---------- |
 | Geneste yaml variant→uitvoeringsvorm→repr in bron  | Uitgesteld |
 | Manifest-term bij geneste yaml in bron (§16)       | Open       |
-| Alias-resolver in tooling                          | Open       |
+| Alias-resolver in tooling                          | Geïmplementeerd (basis) — zie [catalogus-architectuur](catalogus-architectuur.md) |
+| Sjabloon `:::include zoek=` + `vsa resolve-catalogus` | Ontwerp — zie [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md) |
+| **referentie** (herkomst) vs **catalogus-pad** in docs | Gedocumenteerd in catalogus-samenstelling-zangstuk.md |
+| Metadata-index (`gelegenheid`, `toon`, …) in catalogus | Gepland |
 | Automatische terminologie-lint (R1–R2)             | Open       |
 | `.coria.html` definitief bron vs afgeleide         | Open       |
 

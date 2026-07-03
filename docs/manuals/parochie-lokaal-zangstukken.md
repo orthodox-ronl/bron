@@ -85,9 +85,14 @@ Yaml-velden zijn **informatief** voor beheerders; de build valideert vandaag voo
 
 ## Verwijzen in samenstellingen
 
-**Nu:** relatief pad vanuit het markdown-bestand (tool-specifieke include-syntax).
+**Relatief pad** (legacy): vanuit het markdown-bestand (VSA-tooling).
 
-**Fase 2 (gepland):** `bron:<zangstuk-id>/<variant-id>/<uitvoeringsvorm-id>` en gegeneraliseerde sync.
+**Id-gebaseerd (fase 3, basis):** `bron:<zangstuk-id>/<variant-id>/<uitvoeringsvorm-id>`,
+`lokaal:…` — zie [catalogus-architectuur](../specs/catalogus-architectuur.md).
+
+**Sjabloon (fase 4, ontwerp):** markdown met `:::include zoek=` — zie
+[catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md).
+Resolve naar catalogus-pad via **`vsa resolve-catalogus`** (VSA-tooling).
 
 ---
 

@@ -28,7 +28,7 @@ def _tone_from_id(zangstuk_id: str) -> int:
 def _scan_sources(zangstuk_id: str, scan_dir: Path) -> list[tuple[str, str]]:
     tone = _tone_from_id(zangstuk_id)
     files = {p.name for p in scan_dir.glob("*.jpg")}
-    primary_name = "koormap-5a.jpg" if tone == 5 else "koormap.jpg"
+    primary_name = "koormap-5.jpg" if tone == 5 else "koormap.jpg"
 
     sources: list[tuple[str, str]] = []
     if primary_name in files:

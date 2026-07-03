@@ -46,6 +46,17 @@ Pad is **relatief aan het includerende `.md`-bestand** (niet aan de projectroot)
 :::include mxl "pad/melodie.vsa" label="Download MusicXML":::
 ```
 
+**Catalogus-zoek (sjabloon/sessie, gepland)** — pad vervangen door `zoek=` tot
+`vsa resolve-catalogus` is gedraaid:
+
+```markdown
+:::include svg zoek="Troparion" alt="Troparion" scale="85%":::
+:::include coria zoek="Troparion" label="Oefenen in Coria" mode="auto":::
+```
+
+Zie [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md),
+[VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
+
 ### Huidige vs. geplande implementatie
 
 | Syntax                                         | Status              | Opmerking                                         |
@@ -53,6 +64,7 @@ Pad is **relatief aan het includerende `.md`-bestand** (niet aan de projectroot)
 | `:::include "melodie.vsa"` (zonder exporttype) | **Geïmplementeerd** | Wrapt als `::: vsa-notatie`; SVG inline bij build |
 | `:::coria "melodie.vsa"`                       | **Geïmplementeerd** | Alias voor exporttype `coria`                     |
 | `:::include svg\|coria\|mxl "…"`               | **Gepland**         | Zie contractpagina’s; Spoor B in VSA-tooling      |
+| `:::include <type> zoek="…"`                    | **Gepland**         | Resolve via `vsa resolve-catalogus` vóór build    |
 
 Tot `:::include <exporttype>` is geïmplementeerd: gebruik platte `.vsa`-include voor
 SVG en `:::coria` voor Coria (zie [exporttype-coria](exporttype-coria.md)).

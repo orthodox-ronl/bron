@@ -7,8 +7,8 @@ waarheid voor zangstukken binnen [orthodox-groningen](https://github.com/orthodo
 
 | Sectie            | Inhoud                                                                                  |
 | ----------------- | --------------------------------------------------------------------------------------- |
-| **Specificaties** | Normatieve org-docs: terminologie, inhoudslevenscyclus, repo-structuur, `zangstuk.yaml` |
-| **Handleidingen** | Stap-voor-stap workflows (incl. parochie-lokaal zangstukken)                            |
+| **Specificaties** | Normatieve org-docs: terminologie, catalogus-sjablonen, repo-structuur, `zangstuk.yaml` |
+| **Handleidingen** | Stap-voor-stap workflows (incl. parochie-lokaal, catalogus-gebruikersverhalen)          |
 | **Referentie**    | Lookup-tabellen: conversiemechanismen, exportcontracten, brontype-validatie             |
 | **Plannen**       | Ontwikkelplannen — *niet normatief*; specs en handleidingen zijn leidend                |
 
@@ -23,9 +23,9 @@ die inhoud rechtstreeks uit de repository.
 
 ## Lokaal bekijken
 
-```bash
-python -m pip install -r requirements-docs.txt
-mkdocs serve
+```cmd
+cd /d C:\Git\orthodox-groningen\bron
+scripts\docs-serve.cmd
 ```
 
 ## Externe tools

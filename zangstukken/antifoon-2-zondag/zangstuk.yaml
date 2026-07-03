@@ -1,0 +1,13 @@
+id: antifoon-2-zondag
+title: 2e antifoon (zondag)
+occasion: Zondag
+occasion_type: zondag-cyclus
+aliases:
+  - { text: "2e antifoon zondag", lang: nl }
+  - { text: "tweede antifoon zondag", lang: nl }
+sources:
+  - id: groningen
+    file: sources/scan/koormap-005.pdf
+    author: Parochie Groningen
+    reference: "koormap 005-(4) 2e antifoon"
+    copyright_status: vrij

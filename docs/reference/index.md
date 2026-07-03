@@ -18,3 +18,4 @@ Lookup-tabellen voor conversie- en exportcontracten en brontype-validatie.
 ## Overig
 
 - [Brontypes en validatie](brontypes-validatie.md)
+- [Catalogus CLI](catalogus-cli.md) — zie ook [sjabloon-contract](../specs/catalogus-samenstelling-zangstuk.md)
