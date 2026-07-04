@@ -1780,6 +1780,152 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ideeën
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën-backlog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/alias-blokken/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: alias-blokken liturgische rollen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/tev2-terminologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: TEv2-terminologie in bron-documentatie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../plans/ci-architectuur/" class="md-nav__link">
         
@@ -2103,7 +2249,7 @@ worden bij index-build gerapporteerd via <code>catalogus index validate</code>.<
 <p>VSA-tooling importeert <code>catalogus</code> en roept <code>AliasIndex.resolve_vsa_path()</code> aan in
 <code>markdown_include.py</code>. Relatieve pad-includes blijven werken.</p>
 <h2 id="fase-4-sjablonen-sessies-resolve">Fase 4 — sjablonen, sessies, resolve<a class="headerlink" href="#fase-4-sjablonen-sessies-resolve" title="Permanent link">&para;</a></h2>
-<p>Status: <strong>API-contract (fase 0)</strong> — implementatie volgt.</p>
+<p>Status: <strong>geïmplementeerd</strong> (basis).</p>
 <p>Normatief zoek-API: <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
 <p>Parochie-<strong>sjablonen</strong> zijn markdown met:</p>
 <ul>
@@ -2123,7 +2269,8 @@ worden bij index-build gerapporteerd via <code>catalogus index validate</code>.<
   Cat--&gt;&gt;VSA: catalogus-pad of review
   Rene-&gt;&gt;Build: opgelost bestand
   Build--&gt;&gt;Rene: site</code></pre>
-<p>Geplande CLI: <strong><code>catalogus zoek</code></strong> (stub + contract), <strong><code>vsa resolve-catalogus</code></strong>.</p>
+<p>Geïmplementeerd: <strong><code>catalogus zoek</code></strong>, <strong><code>vsa resolve-catalogus</code></strong>, <strong><code>@include-vsa zoek=</code></strong>
+(zie <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>).</p>
 <p>Consument <strong><code>@include-vsa zoek=</code></strong> in <code>.vsa</code>-brontekst gebruikt dezelfde <code>catalogus.zoek</code>-API
 (in-memory expand; zie <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>).</p>
 <h2 id="later-fase-5">Later (fase 5+)<a class="headerlink" href="#later-fase-5" title="Permanent link">&para;</a></h2>

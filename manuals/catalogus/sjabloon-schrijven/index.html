@@ -1761,6 +1761,152 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ideeën
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plans/ideeen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën-backlog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plans/ideeen/alias-blokken/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: alias-blokken liturgische rollen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plans/ideeen/tev2-terminologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: TEv2-terminologie in bron-documentatie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../plans/ci-architectuur/" class="md-nav__link">
         
@@ -1988,12 +2134,6 @@
 </ul>
 <p>Als jij het sjabloon <strong>gebruikt</strong> voor een concrete dienst, maak je een <strong>sessie</strong>:
 zelfde structuur, plus <strong><code>default.gelegenheid</code></strong> (en evt. <code>toon</code>, titel, datum).</p>
-<div class="admonition todo">
-<p class="admonition-title">Resolve vóór export</p>
-<p><code>zoek=</code> en <code>vsa resolve-catalogus</code> zijn <strong>gepland</strong>. Tot die tijd: test losse
-regels met <code>catalogus resolve</code>, zet handmatig <strong><code>bron:…</code></strong> / <strong><code>lokaal:…</code></strong> in
-de include, of gebruik relatieve paden.</p>
-</div>
 <hr />
 <h2 id="drie-soorten-sjablonen">Drie soorten sjablonen<a class="headerlink" href="#drie-soorten-sjablonen" title="Permanent link">&para;</a></h2>
 <table>
@@ -2100,6 +2240,9 @@ Tekst of aanwijzing voor het koor (vrij).
    bij ambiguïteit review (GUI later, CLI interactief of handmatig).</li>
 <li><strong><code>vsa validate</code></strong> en <strong><code>vsa build-markdown</code></strong> — alleen op het <strong>opgeloste</strong> bestand.</li>
 </ol>
+<p><strong>Let op:</strong> mappen <code>samenstellingen/</code> en <code>sjablonen/</code> worden in de Hugo-demo <strong>niet</strong>
+automatisch gepubliceerd (<code>build-markdown</code> slaat ze over). Kopieer opgeloste inhoud
+naar een publishbare content-map, of pas de build-config aan.</p>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooling\examples\hugo-demo\content-source
 </code></pre></div>

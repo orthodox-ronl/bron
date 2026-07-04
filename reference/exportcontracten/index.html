@@ -1472,10 +1472,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#huidige-vs-geplande-implementatie" class="md-nav__link">
+  <a href="#huidige-implementatie" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Huidige vs. geplande implementatie
+        Huidige implementatie
       
     </span>
   </a>
@@ -1764,6 +1764,152 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ideeën
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën-backlog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/alias-blokken/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: alias-blokken liturgische rollen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/tev2-terminologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: TEv2-terminologie in bron-documentatie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../plans/ci-architectuur/" class="md-nav__link">
         
@@ -1910,10 +2056,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#huidige-vs-geplande-implementatie" class="md-nav__link">
+  <a href="#huidige-implementatie" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Huidige vs. geplande implementatie
+        Huidige implementatie
       
     </span>
   </a>
@@ -2053,14 +2199,14 @@ MXL-download).</p>
 :::include coria &quot;pad/melodie.vsa&quot; label=&quot;Oefenen in Coria&quot; mode=&quot;auto&quot;:::
 :::include mxl &quot;pad/melodie.vsa&quot; label=&quot;Download MusicXML&quot;:::
 </code></pre></div>
-<p><strong>Catalogus-zoek (sjabloon/sessie, gepland)</strong> — pad vervangen door <code>zoek=</code> tot
+<p><strong>Catalogus-zoek (sjabloon/sessie)</strong> — pad vervangen door <code>zoek=</code> tot
 <code>vsa resolve-catalogus</code> is gedraaid:</p>
 <div class="highlight"><pre><span></span><code>:::include svg zoek=&quot;Troparion&quot; alt=&quot;Troparion&quot; scale=&quot;85%&quot;:::
 :::include coria zoek=&quot;Troparion&quot; label=&quot;Oefenen in Coria&quot; mode=&quot;auto&quot;:::
 </code></pre></div>
 <p>Zie <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>,
 <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus">VSA — <code>:::include</code> met <code>zoek=</code></a>.</p>
-<h3 id="huidige-vs-geplande-implementatie">Huidige vs. geplande implementatie<a class="headerlink" href="#huidige-vs-geplande-implementatie" title="Permanent link">&para;</a></h3>
+<h3 id="huidige-implementatie">Huidige implementatie<a class="headerlink" href="#huidige-implementatie" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2082,18 +2228,23 @@ MXL-download).</p>
 </tr>
 <tr>
 <td><code>:::include svg\|coria\|mxl "…"</code></td>
-<td><strong>Gepland</strong></td>
-<td>Zie contractpagina’s; Spoor B in VSA-tooling</td>
+<td><strong>Geïmplementeerd</strong></td>
+<td>Pad of catalogus-pad</td>
 </tr>
 <tr>
 <td><code>:::include &lt;type&gt; zoek="…"</code></td>
-<td><strong>Gepland</strong></td>
+<td><strong>Geïmplementeerd</strong></td>
 <td>Resolve via <code>vsa resolve-catalogus</code> vóór build</td>
+</tr>
+<tr>
+<td><code>:::include mp3-player</code></td>
+<td><strong>Gepland</strong></td>
+<td>Exporttype nog niet in VSA-tooling</td>
 </tr>
 </tbody>
 </table>
-<p>Tot <code>:::include &lt;exporttype&gt;</code> is geïmplementeerd: gebruik platte <code>.vsa</code>-include voor
-SVG en <code>:::coria</code> voor Coria (zie <a href="../exporttype-coria/">exporttype-coria</a>).</p>
+<p>Voor open <code>zoek=</code>: <strong><code>vsa resolve-catalogus</code></strong> of handmatig <strong><code>bron:…</code></strong> / <strong><code>lokaal:…</code></strong>.
+Zie <a href="../exporttype-coria/">exporttype-coria</a> voor Coria-details.</p>
 <hr />
 <h2 id="uitgaveprofielen">Uitgaveprofielen<a class="headerlink" href="#uitgaveprofielen" title="Permanent link">&para;</a></h2>
 <p>Profielen zijn <strong>geen</strong> aparte pipelines. Eén samenstelling; export en CSS bepalen

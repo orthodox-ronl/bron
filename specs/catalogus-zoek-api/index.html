@@ -1913,6 +1913,152 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ideeën
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën-backlog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/alias-blokken/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: alias-blokken liturgische rollen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/tev2-terminologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: TEv2-terminologie in bron-documentatie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../plans/ci-architectuur/" class="md-nav__link">
         
@@ -2282,7 +2428,7 @@
 
 
 <h1 id="catalogus-zoek-api-contract">Catalogus — zoek-API (contract)<a class="headerlink" href="#catalogus-zoek-api-contract" title="Permanent link">&para;</a></h1>
-<p>Status: <strong>normatief contract</strong> (fase 0); implementatie <strong><code>catalogus.zoek</code></strong> volgt in fase 4.</p>
+<p>Status: <strong>normatief contract</strong>; <strong><code>catalogus.zoek</code></strong> <strong>geïmplementeerd</strong> (basis).</p>
 <p>Gerelateerd: <a href="../catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>,
 <a href="../catalogus-architectuur/">catalogus-architectuur.md</a>, <a href="../terminologie/">terminologie §2.8</a>,
 <a href="../zangstuk-formaat/">zangstuk-formaat.md</a>, <a href="../../reference/exportcontracten/">exportcontracten</a>.</p>
@@ -2631,9 +2777,8 @@ ambiguïteit — bedoeld voor review-UI, CLI <code>--lijst</code>, en als basis 
 <li>Consumenten met herhaalde zoekacties: bouw <strong><code>AliasIndex</code> eenmaal</strong>, roep <code>zoek</code> /
   <code>zoek_kandidaten</code> met <code>index=</code> aan (niet per call <code>*_met_roots</code>).</li>
 </ul>
-<p><strong>Status fase 0:</strong> <code>zoek_kandidaten()</code> werpt <code>NotImplementedError</code>. <code>zoek()</code> delegeert
-daarnaartoe. <code>format_catalogus_pad</code>, <code>ZoekContext</code>, <code>ZoekMatch</code>, <code>ZoekLijstResult</code> zijn
-geïmplementeerd.</p>
+<p><strong>Status:</strong> <code>zoek_kandidaten()</code>, <code>zoek()</code>, CLI <strong><code>catalogus zoek</code></strong> en VSA-consumenten
+zijn geïmplementeerd. Ranking en metadata-dekking worden verder uitgebreid per PR.</p>
 <hr />
 <h2 id="consumentenmatrix">Consumentenmatrix<a class="headerlink" href="#consumentenmatrix" title="Permanent link">&para;</a></h2>
 <table>
@@ -2736,7 +2881,7 @@ python -m catalogus.cli zoek &quot;Troparion&quot; ^
 </tr>
 </tbody>
 </table>
-<p><strong>Uitvoer (na implementatie):</strong></p>
+<p><strong>Uitvoer:</strong></p>
 <ul>
 <li>zonder <code>--lijst</code>: één regel <strong><code>catalogus_pad</code></strong>.</li>
 <li><strong><code>--verbose</code></strong>: pad + ids op stderr; bij <strong><code>ook_gevonden_in_bron</code></strong>: waarschuwing
@@ -2814,15 +2959,10 @@ winnende herkomst — geen stille keuze.</p>
 <td><code>ValueError</code></td>
 <td>—</td>
 </tr>
-<tr>
-<td>Nog niet geïmplementeerd</td>
-<td><code>NotImplementedError</code></td>
-<td>—</td>
-</tr>
 </tbody>
 </table>
 <p><code>AmbiguousError.candidates</code>: lijst <strong><code>MatchCandidate</code></strong> — minimaal <strong><code>catalogus_pad</code></strong>
-(canonical_id = pad of zangstuk-id; implementatie-PR).</p>
+(canonical_id = pad of zangstuk-id).</p>
 <hr />
 <h2 id="implementatiestatus">Implementatiestatus<a class="headerlink" href="#implementatiestatus" title="Permanent link">&para;</a></h2>
 <table>
@@ -2835,22 +2975,30 @@ winnende herkomst — geen stille keuze.</p>
 <tbody>
 <tr>
 <td>Contract + datatypes + <code>format_catalogus_pad</code></td>
-<td><strong>Fase 0</strong></td>
+<td><strong>Geïmplementeerd</strong></td>
 </tr>
 <tr>
-<td><code>zoek_kandidaten()</code> / <code>zoek()</code> body</td>
-<td><strong>Gepland</strong></td>
+<td><code>zoek_kandidaten()</code> / <code>zoek()</code></td>
+<td><strong>Geïmplementeerd</strong> (basis)</td>
 </tr>
 <tr>
-<td><code>catalogus zoek</code> CLI (functioneel)</td>
-<td><strong>Gepland</strong></td>
+<td><code>catalogus zoek</code> CLI</td>
+<td><strong>Geïmplementeerd</strong></td>
 </tr>
 <tr>
 <td>VSA <code>@include-vsa zoek=</code></td>
-<td><strong>Gepland</strong></td>
+<td><strong>Geïmplementeerd</strong></td>
 </tr>
 <tr>
 <td><code>vsa resolve-catalogus</code></td>
+<td><strong>Geïmplementeerd</strong></td>
+</tr>
+<tr>
+<td>Interactieve review (<code>--interactive</code>)</td>
+<td><strong>Gepland</strong></td>
+</tr>
+<tr>
+<td>Zoek-UI / fuzzy match</td>
 <td><strong>Gepland</strong></td>
 </tr>
 </tbody>
@@ -2876,6 +3024,10 @@ winnende herkomst — geen stille keuze.</p>
 <tr>
 <td>2026-07</td>
 <td>Parochie-context; lokaal vóór bron; <code>ook_gevonden_in_bron</code>; twee contextlagen; ambiguïteit</td>
+</tr>
+<tr>
+<td>2026-07</td>
+<td>Implementatie <code>zoek_kandidaten</code> / VSA-consumenten; doc-sync</td>
 </tr>
 </tbody>
 </table>

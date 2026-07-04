@@ -1601,10 +1601,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#catalogus-zoek-api-contract-fase-0" class="md-nav__link">
+  <a href="#catalogus-zoek" class="md-nav__link">
     <span class="md-ellipsis">
       
-        catalogus zoek (API-contract fase 0)
+        catalogus zoek
       
     </span>
   </a>
@@ -1676,17 +1676,6 @@
     <span class="md-ellipsis">
       
         Relatie tot VSA
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#geplande-commandos-fase-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Geplande commando's (fase 4)
       
     </span>
   </a>
@@ -1797,6 +1786,152 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ideeën
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ideeën-backlog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/alias-blokken/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: alias-blokken liturgische rollen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/ideeen/tev2-terminologie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idee: TEv2-terminologie in bron-documentatie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1943,10 +2078,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#catalogus-zoek-api-contract-fase-0" class="md-nav__link">
+  <a href="#catalogus-zoek" class="md-nav__link">
     <span class="md-ellipsis">
       
-        catalogus zoek (API-contract fase 0)
+        catalogus zoek
       
     </span>
   </a>
@@ -2025,17 +2160,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#geplande-commandos-fase-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Geplande commando's (fase 4)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tests" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2090,7 +2214,7 @@ python -m pip install -e &quot;.[dev]&quot;
 <div class="highlight"><pre><span></span><code>scripts\test.cmd
 </code></pre></div>
 <h2 id="commandos-fase-2">Commando's (fase 2)<a class="headerlink" href="#commandos-fase-2" title="Permanent link">&para;</a></h2>
-<h3 id="catalogus-zoek-api-contract-fase-0"><code>catalogus zoek</code> (API-contract fase 0)<a class="headerlink" href="#catalogus-zoek-api-contract-fase-0" title="Permanent link">&para;</a></h3>
+<h3 id="catalogus-zoek"><code>catalogus zoek</code><a class="headerlink" href="#catalogus-zoek" title="Permanent link">&para;</a></h3>
 <p>Vrije tekst + <code>default.*</code>-context → <strong>catalogus-pad</strong> (<code>lokaal:…</code> / <code>bron:…</code>).</p>
 <p>Normatief contract: <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
 <ul>
@@ -2106,8 +2230,8 @@ python -m pip install -e &quot;.[dev]&quot;
 
 python -m catalogus.cli zoek &quot;Troparion&quot; --lijst --bron-root .
 </code></pre></div>
-<p><strong>Status:</strong> CLI en Python-API aanwezig; <strong><code>zoek_kandidaten()</code></strong> werpt <code>NotImplementedError</code> tot fase 4.
-Exitcode <strong>2</strong> = nog niet geïmplementeerd; <strong>1</strong> = geen match (na implementatie).</p>
+<p><strong>Status:</strong> <strong>geïmplementeerd</strong> (basis). Exitcode <strong>1</strong> = geen match of ambiguïteit (strict);
+<strong>0 regels</strong> met <code>--lijst</code> = exit <strong>1</strong>.</p>
 <p><strong>Parochie-context:</strong> <code>--content-root</code> = parochie content-source (<code>lokaal/</code>); <code>--bron-root</code> =
 org-bron. <strong>Lokaal vóór bron</strong>; bij lokaal-winst kan <strong><code>ZoekResult.ook_gevonden_in_bron</code></strong>
 gevuld zijn — toon met <strong><code>--verbose</code></strong> (waarschuwing op stderr).</p>
@@ -2207,7 +2331,7 @@ python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hu
 <span class="p">)</span>
 <span class="c1"># → &quot;hemelum&quot;</span>
 
-<span class="c1"># Zoek-API (contract fase 0 — zoek_kandidaten() stub tot fase 4):</span>
+<span class="c1"># Zoek-API (geïmplementeerd, basis):</span>
 <span class="n">ctx</span> <span class="o">=</span> <span class="n">ZoekContext</span><span class="o">.</span><span class="n">from_default_mapping</span><span class="p">(</span>
     <span class="p">{</span><span class="s2">&quot;gelegenheid&quot;</span><span class="p">:</span> <span class="s2">&quot;geboorte-moeder-gods&quot;</span><span class="p">,</span> <span class="s2">&quot;uitvoeringsvorm&quot;</span><span class="p">:</span> <span class="s2">&quot;Groningen&quot;</span><span class="p">}</span>
 <span class="p">)</span>
@@ -2220,39 +2344,11 @@ python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hu
 <ul>
 <li><strong>Fase 2:</strong> <code>catalogus</code> staat los van <code>vsa</code>; build/includes gebruikten relatieve paden.</li>
 <li><strong>Fase 3:</strong> VSA-tooling importeert <code>catalogus</code> bij <code>id:…</code> / <code>lokaal:…</code> / <code>bron:…</code>-includes in markdown.</li>
-<li><strong>Fase 4 (contract fase 0):</strong> <code>:::include zoek=</code> / <code>@include-vsa zoek=</code> → <strong><code>catalogus.zoek</code></strong>
-  → catalogus-pad — <a href="../../specs/catalogus-zoek-api/">API-contract</a>; implementatie gepland.</li>
+<li><strong>Fase 4:</strong> <code>:::include zoek=</code> / <code>@include-vsa zoek=</code> → <strong><code>catalogus.zoek</code></strong>
+  → catalogus-pad — <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a> (<strong>geïmplementeerd</strong>, basis).</li>
 </ul>
-<h2 id="geplande-commandos-fase-4">Geplande commando's (fase 4)<a class="headerlink" href="#geplande-commandos-fase-4" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Commando</th>
-<th>Repo</th>
-<th>Doel</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>catalogus zoek</code></td>
-<td>bron</td>
-<td><strong>Contract fase 0</strong> — implementatie volgt; zie <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a></td>
-</tr>
-<tr>
-<td><strong><code>vsa resolve-catalogus</code></strong></td>
-<td>VSA-tooling</td>
-<td>Markdown: alle <code>zoek=</code> → <code>bron:…</code> / <code>lokaal:…</code></td>
-</tr>
-<tr>
-<td><strong><code>@include-vsa</code></strong> expand</td>
-<td>VSA-tooling</td>
-<td><code>.vsa</code>: <code>zoek=</code> → in-memory body-splice via <code>catalogus.zoek</code></td>
-</tr>
-</tbody>
-</table>
-<p>Tot implementatie: per stuk <code>catalogus resolve</code>, of handmatig catalogus-pad in
-<code>:::include</code> — zie <a href="../../manuals/catalogus/rene-liturgie-geboorte-moeder-gods/">verhaal 1</a>
-en <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#vsa-resolve-catalogus">VSA — resolve-catalogus</a>.</p>
+<p>Zie <a href="../../manuals/catalogus/rene-liturgie-geboorte-moeder-gods/">verhaal 1</a> en
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#vsa-resolve-catalogus">VSA — resolve-catalogus</a>.</p>
 <h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 scripts\test.cmd
