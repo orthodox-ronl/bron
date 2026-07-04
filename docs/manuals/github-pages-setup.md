@@ -21,8 +21,10 @@ Boven aan de pagina moet verschijnen:
 | `main`        | root (productie)   | https://orthodox-groningen.github.io/bron/         |
 | andere branch | `preview/`         | https://orthodox-groningen.github.io/bron/preview/ |
 
-Workflow: `.github/workflows/docs-pages.yml` — `keep_files: true` houdt productie
-en preview naast elkaar.
+Workflow: `.github/workflows/docs-pages.yml` — bouwt MkDocs, uploadt een artifact,
+en roept de herbruikbare deploy-workflow uit
+[`VSA-tooling/pages-deploy-reusable.yml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/.github/workflows/pages-deploy-reusable.yml)
+aan (`keep_files: true`, publicatiecheck vóór deploy).
 
 ## Veelvoorkomend probleem: je ziet README i.p.v. MkDocs
 

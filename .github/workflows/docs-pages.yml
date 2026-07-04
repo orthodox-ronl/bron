@@ -6,14 +6,16 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: docs-gh-pages
-  cancel-in-progress: true
-
 jobs:
-  deploy:
-    name: Build and deploy MkDocs
+  build:
+    name: Build MkDocs site
     runs-on: ubuntu-latest
+
+    outputs:
+      destination_dir: ${{ steps.target.outputs.destination_dir }}
+      url_prefix: ${{ steps.target.outputs.url_prefix }}
+      pages_url: ${{ steps.target.outputs.pages_url }}
+      label: ${{ steps.target.outputs.label }}
 
     steps:
       - name: Checkout repository
@@ -26,11 +28,15 @@ jobs:
           if [[ "${GITHUB_REF}" == "refs/heads/main" ]]; then
             echo "site_url=https://orthodox-groningen.github.io/bron/" >> "$GITHUB_OUTPUT"
             echo "destination_dir=" >> "$GITHUB_OUTPUT"
+            echo "url_prefix=/bron/" >> "$GITHUB_OUTPUT"
+            echo "pages_url=https://orthodox-groningen.github.io/bron/" >> "$GITHUB_OUTPUT"
             echo "preview=false" >> "$GITHUB_OUTPUT"
             echo "label=production" >> "$GITHUB_OUTPUT"
           else
             echo "site_url=https://orthodox-groningen.github.io/bron/preview/" >> "$GITHUB_OUTPUT"
             echo "destination_dir=preview" >> "$GITHUB_OUTPUT"
+            echo "url_prefix=/bron/preview/" >> "$GITHUB_OUTPUT"
+            echo "pages_url=https://orthodox-groningen.github.io/bron/preview/" >> "$GITHUB_OUTPUT"
             echo "preview=true" >> "$GITHUB_OUTPUT"
             echo "label=preview" >> "$GITHUB_OUTPUT"
           fi
@@ -40,6 +46,7 @@ jobs:
           echo "Target: ${{ steps.target.outputs.label }}"
           echo "site_url: ${{ steps.target.outputs.site_url }}"
           echo "destination_dir: ${{ steps.target.outputs.destination_dir }}"
+          echo "url_prefix: ${{ steps.target.outputs.url_prefix }}"
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -62,29 +69,22 @@ jobs:
           NO_MKDOCS_2_WARNING: "1"
         run: python -m mkdocs build --strict --site-dir site
 
-      - name: Deploy to GitHub Pages (production)
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload documentation site
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: site
-          keep_files: true
+          name: pages-docs-site
+          path: site
+          if-no-files-found: error
 
-      - name: Deploy to GitHub Pages (preview)
-        if: github.ref != 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: site
-          destination_dir: preview
-          keep_files: true
-
-      - name: Show site URL
-        run: |
-          if [[ "${{ steps.target.outputs.label }}" == "production" ]]; then
-            echo "Documentation URL: https://orthodox-groningen.github.io/bron/"
-          else
-            echo "Preview URL: https://orthodox-groningen.github.io/bron/preview/"
-          fi
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    uses: orthodox-groningen/VSA-tooling/.github/workflows/pages-deploy-reusable.yml@main
+    with:
+      artifact_name: pages-docs-site
+      publish_dir: site
+      destination_dir: ${{ needs.build.outputs.destination_dir }}
+      url_prefix: ${{ needs.build.outputs.url_prefix }}
+      pages_url: ${{ needs.build.outputs.pages_url }}
+    permissions:
+      contents: write
