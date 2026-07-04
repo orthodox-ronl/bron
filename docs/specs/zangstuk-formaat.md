@@ -81,6 +81,27 @@ identificatie:
 **Voorrangsregel:** `zangstuk.yaml` is leidend voor overlappende identificatievelden.
 Frontmatter dient voor gebruik van het `.vsa`-bestand buiten deze repository.
 
+### Parochie-samenstelling — optioneel `default:`
+
+Wanneer een `.vsa` **`@include-vsa zoek=`** bevat of in een parochie-context staat,
+mag frontmatter een **`default:`**-blok spiegelen (zelfde sleutels als markdown-sessie):
+
+```yaml
+---
+default:
+  gelegenheid: geboorte-moeder-gods
+  gelegenheidstype: vast-feest
+  uitvoeringsvorm: Groningen
+muziek:
+  do: F4
+  mode: major
+---
+```
+
+Dit is **`ZoekContext`** voor catalogus-zoekacties op *dit* bestand — niet hetzelfde
+als `gelegenheid` / `toon` op **`zangstuk.yaml`** (catalog-metadata). Zie
+[catalogus-zoek-api.md](catalogus-zoek-api.md) § twee contextlagen.
+
 ## Voorbeeld
 
 ```yaml

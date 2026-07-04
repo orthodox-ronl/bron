@@ -32,6 +32,36 @@ Default **`bestandsextensie`**: `{".vsa"}` — verplicht voor `@include-vsa` en 
 
 ---
 
+## Parochie-context (normatief)
+
+`catalogus` draait in de praktijk **in de context van een parochie-repo** (Hugo
+**content-source**, demo: `examples/hugo-demo/content-source`).
+
+| Root | Betekenis |
+| ---- | --------- |
+| **`--content-root`** | Parochie content-source; indexeert **`lokaal/`** (parochie-register) |
+| **`--bron-root`** | Org-bron-repo (`zangstukken/`); optioneel maar gebruikelijk |
+
+**Zoekscope:** standaard doorzoekt de catalogus **beide** (`context.bronnen` default
+`bron` + `lokaal`). De implementatie bouwt één index uit beide roots.
+
+**Voorrang:** bij dezelfde query en context geldt **lokaal vóór bron**:
+
+1. Kandidaten in **`lokaal/`** bepalen de uitkomst (strict: 0 / 1 / >1).
+2. Alleen als **geen** lokaal-kandidaat overblijft, valt de keuze terug op **bron**.
+3. Meerdere lokaal-kandidaten → **`AmbiguousError`** — **niet** stil overschakelen naar bron.
+
+**Cross-origin hint:** wanneer de gekozen match **`origin=lokaal`** is en dezelfde query
+(+ context + extensie) **ook** minstens één match in **bron** opleverde, vult
+**`ZoekResult.ook_gevonden_in_bron`** de bijbehorende **`catalogus_pad`**-waarden.
+Doel: auteur alert maken om te verifiëren dat de parochie-lokale versie de bedoelde is.
+Geen wijziging van de gekozen match.
+
+Consumenten tonen de hint als **waarschuwing** (stderr, validate-warning, `--verbose`),
+niet als fout.
+
+---
+
 ## Zoekgedrag (abstract)
 
 De API specificeert **niet** welke yaml-velden geïndexeerd worden. Implementatie doorzoekt
@@ -43,15 +73,37 @@ liturgische metadata kent.
    aliassen, id-slugs, optionele metadata — ranking in implementatie-PR).
 3. Pas **`ZoekContext`**-filters toe (`gelegenheid`, `toon`, `uitvoeringsvorm`, …).
 4. Pas **`bestandsextensie`** toe op `entry.path.suffix`.
-5. Uitkomst:
+5. Uitkomst (strict modus **`zoek`**, na parochie-voorrang):
    - **Geen** kandidaat → `NotFoundError` (`niveau="zoek"`).
-   - **Meerdere** kandidaten (strict modus) → `AmbiguousError` met kandidatenlijst.
-   - **Precies één** (strict modus) → `ZoekResult`.
+   - **Meerdere** kandidaten binnen de winnende herkomst → `AmbiguousError`.
+   - **Precies één** → `ZoekResult` (+ eventueel **`ook_gevonden_in_bron`**).
 
 Bij conflict tussen context en metadata: **context filtert**; geen stille fallback.
 
 **Liturgische rol** (`zoek="Troparion"`) is geen apart API-veld — het is schrijfconventie
 voor de zoekstring; zie [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md).
+
+---
+
+## Twee contextlagen (geen conflict)
+
+Zoeken gebruikt **twee** soorten context; die zijn **complementair**, geen dubbeling:
+
+| Laag | Waar | Rol |
+| ---- | ---- | --- |
+| **`ZoekContext`** | `default.*` in **markdown-sessie** of **`default:`** in **ouder-`.vsa`** | *Deze* zoekactie / *deze* samenstelling: welk feest, welke default-uitvoeringsvorm, … |
+| **Catalog-metadata** | `zangstuk.yaml`, `variant.yaml`, `uitvoeringsvorm.yaml`, titels, aliassen | Geïndexeerd materiaal; **`ZoekContext` filtert** welke kandidaten passen |
+
+**Markdown-samenstelling:** Rene zet `default.gelegenheid` in de **sessie-**frontmatter;
+`zoek="Troparion"` blijft een liturgische rol — zie
+[catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md).
+
+**Standalone / samengesteld `.vsa`:** dezelfde `ZoekContext`-sleutels onder **`default:`**
+in de **ouder-**.vsa-frontmatter (conventie: [zangstuk-formaat.md](zangstuk-formaat.md)).
+Geen verplichting om `gelegenheid` in het **included** stuk zelf te herhalen.
+
+**`zangstuk.yaml`-metadata** (`gelegenheid`, `toon`, …) beschrijft het stuk in de catalogus;
+**`ZoekContext`** beschrijft waarvoor *nu* gezocht wordt. Beide horen te bestaan.
 
 ---
 
@@ -117,8 +169,11 @@ Resultaat van **`zoek`** (strict: precies één match).
 | `query_normalized` | `str`          | Na `normalize_for_match`     |
 | `entry`            | `VsaFileEntry` | Gekozen brondocument         |
 | `catalogus_pad`    | `str`          | `lokaal:…` / `bron:…`        |
+| `ook_gevonden_in_bron` | `tuple[str, …]` | `catalogus_pad` in bron bij lokaal-winst; anders leeg |
 
 Property **`path`**: `entry.path`.
+
+Property **`has_ook_in_bron`**: `bool` — `len(ook_gevonden_in_bron) > 0`.
 
 **`catalogus_pad`** gebruikt prefix **`lokaal:`** of **`bron:`** volgens `entry.origin`
 (lokaal wint bij dubbele registratie). Prefix **`id:`** is **geen** uitkomst van zoek.
@@ -182,7 +237,9 @@ Strict wrapper om **`zoek_kandidaten`**:
 | -------------- | ------ |
 | 0              | `NotFoundError` — scope vermeldt query en filter (bijv. geen `.vsa`) |
 | 1              | `ZoekResult` |
-| >1             | `AmbiguousError` — `candidates` uit `matches` |
+| >1 (zelfde herkomst) | `AmbiguousError` — `candidates` uit die herkomst |
+
+Bij **lokaal-winst** met bron-matches: vul **`ook_gevonden_in_bron`**; geen exception.
 
 Convenience:
 
@@ -252,8 +309,28 @@ python -m catalogus.cli zoek "Troparion" ^
 
 **Uitvoer (na implementatie):**
 
-- zonder `--lijst`: één regel **`catalogus_pad`**; `--verbose` met pad + ids.
-- met `--lijst`: één **`catalogus_pad`** per regel (0 regels = exit 1).
+- zonder `--lijst`: één regel **`catalogus_pad`**.
+- **`--verbose`**: pad + ids op stderr; bij **`ook_gevonden_in_bron`**: waarschuwing
+  *«Ook gevonden in bron: …»* (één regel per pad of komma-gescheiden).
+- met `--lijst`: één **`catalogus_pad`** per regel (0 regels = exit 1); optioneel
+  `--verbose` groepeert per herkomst (`lokaal:` / `bron:`).
+
+---
+
+## Ambiguïteit en auteur-workflow
+
+**Strict `zoek`** (build, validate, expand) faalt bij **meerdere** kandidaten binnen de
+winnende herkomst — geen stille keuze.
+
+| Situatie | Aanbevolen actie auteur |
+| -------- | ------------------------ |
+| `AmbiguousError` | `catalogus zoek --lijst`; verfijn `zoek=` of `default.*`; of `@include-vsa id=` / `lokaal=` |
+| `has_ook_in_bron` | Controleren of parochie-lokaal stuk bedoeld is; anders `@include-vsa lokaal=…` / `id=…` expliciet |
+| Geen match | Manifest/index; `default.gelegenheid`; disambiguation in zoekstring |
+
+VSA-tooling (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
+**`ook_gevonden_in_bron`** → **waarschuwing** (build mag doorgaan). Zie
+[VSA — include-vsa](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/spec/include-vsa.md).
 
 ---
 
@@ -307,3 +384,4 @@ python -m catalogus.cli zoek "Troparion" ^
 | ------- | --------- |
 | 2026-07 | Fase 0: normatief API-contract; stub `zoek()`; `@include-vsa` als consument |
 | 2026-07 | Abstract zoekgedrag; `bestandsextensie`; `zoek_kandidaten` / `--lijst`; NL metadata |
+| 2026-07 | Parochie-context; lokaal vóór bron; `ook_gevonden_in_bron`; twee contextlagen; ambiguïteit |

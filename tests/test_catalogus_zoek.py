@@ -9,6 +9,7 @@ from catalogus import (
     ZoekContext,
     ZoekLijstResult,
     ZoekMatch,
+    ZoekResult,
     format_catalogus_pad,
     parse_bestandsextensie,
     zoek,
@@ -132,6 +133,27 @@ def test_zoek_from_lijst_strict_modes() -> None:
         )
     )
     assert result.catalogus_pad == pad
+    assert result.ook_gevonden_in_bron == ()
+    assert not result.has_ook_in_bron
+
+
+def test_zoek_result_ook_in_bron_property() -> None:
+    entry = VsaFileEntry(
+        zangstuk_id="a",
+        variant_id="b",
+        uitvoeringsvorm_id="c",
+        representatie_id="c",
+        path=Path("/tmp/c.vsa"),
+        origin="lokaal",
+    )
+    result = ZoekResult(
+        query="T",
+        query_normalized="t",
+        entry=entry,
+        catalogus_pad="lokaal:a/b/c",
+        ook_gevonden_in_bron=("bron:a/b/c",),
+    )
+    assert result.has_ook_in_bron
 
 
 def test_zoek_stub_raises_not_implemented(fixture_index: AliasIndex) -> None:

@@ -79,10 +79,15 @@ class ZoekResult:
     query_normalized: str
     entry: VsaFileEntry
     catalogus_pad: str
+    ook_gevonden_in_bron: tuple[str, ...] = ()
 
     @property
     def path(self) -> Path:
         return self.entry.path
+
+    @property
+    def has_ook_in_bron(self) -> bool:
+        return bool(self.ook_gevonden_in_bron)
 
 
 def format_catalogus_pad(entry: VsaFileEntry) -> str:
@@ -242,6 +247,7 @@ def _zoek_from_lijst(lijst: ZoekLijstResult) -> ZoekResult:
         query_normalized=lijst.query_normalized,
         entry=match.entry,
         catalogus_pad=match.catalogus_pad,
+        ook_gevonden_in_bron=(),
     )
 
 

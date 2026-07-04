@@ -55,6 +55,10 @@ python -m catalogus.cli zoek "Troparion" --lijst --bron-root .
 **Status:** CLI en Python-API aanwezig; **`zoek_kandidaten()`** werpt `NotImplementedError` tot fase 4.
 Exitcode **2** = nog niet geïmplementeerd; **1** = geen match (na implementatie).
 
+**Parochie-context:** `--content-root` = parochie content-source (`lokaal/`); `--bron-root` =
+org-bron. **Lokaal vóór bron**; bij lokaal-winst kan **`ZoekResult.ook_gevonden_in_bron`**
+gevuld zijn — toon met **`--verbose`** (waarschuwing op stderr).
+
 ### `catalogus resolve`
 
 Los alias of hoofdletter-variant op naar canoniek id.

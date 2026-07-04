@@ -145,6 +145,19 @@ def _cmd_zoek(args: argparse.Namespace) -> int:
     except (NotFoundError, AmbiguousError, ValueError) as exc:
         print(exc, file=sys.stderr)
         return 1
+    if args.verbose:
+        print(f"pad: {result.path}", file=sys.stderr)
+        print(
+            f"ids: {result.entry.zangstuk_id}/"
+            f"{result.entry.variant_id}/"
+            f"{result.entry.uitvoeringsvorm_id}",
+            file=sys.stderr,
+        )
+        if result.has_ook_in_bron:
+            print(
+                "Ook gevonden in bron: " + ", ".join(result.ook_gevonden_in_bron),
+                file=sys.stderr,
+            )
     print(result.catalogus_pad)
     return 0
 
@@ -239,6 +252,11 @@ def main(argv: list[str] | None = None) -> int:
         "--lijst",
         action="store_true",
         help="Alle matches (catalogus-paden), i.p.v. strict één resultaat",
+    )
+    zoek_cmd.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Pad, ids en bron-hint op stderr (strict modus)",
     )
     _add_root_args(zoek_cmd)
     zoek_cmd.set_defaults(func=_cmd_zoek)
