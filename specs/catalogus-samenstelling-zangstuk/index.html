@@ -808,6 +808,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Sjabloon vs sessie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mixed-session-bron-parochie-lokaal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixed session (bron + parochie-lokaal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2146,6 +2163,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Sjabloon vs sessie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mixed-session-bron-parochie-lokaal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixed session (bron + parochie-lokaal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2318,7 +2352,7 @@
 
 
 <h1 id="catalogus-zangstuk-opzoeken-in-sjablonen-en-samenstellingen">Catalogus — zangstuk-opzoeken in sjablonen en samenstellingen<a class="headerlink" href="#catalogus-zangstuk-opzoeken-in-sjablonen-en-samenstellingen" title="Permanent link">&para;</a></h1>
-<p>Status: <strong>ontwerp</strong> (normatief zodra geïmplementeerd).</p>
+<p>Status: <strong>normatief</strong> (geïmplementeerd, basis).</p>
 <p>Gerelateerd: <a href="../terminologie/">terminologie §2.8</a>, <a href="../catalogus-architectuur/">catalogus-architectuur</a>,
 <a href="../terminologie/#18-samenstelling">samenstelling §18</a>, <a href="../../reference/exportcontracten/">exportcontracten</a>.</p>
 <hr />
@@ -2401,7 +2435,7 @@ document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruik
 <tr>
 <td><strong><code>default.uitvoeringsvorm</code></strong></td>
 <td>Parochie-default (bijv. <code>Groningen</code>)</td>
-<td>Meestal overnemen</td>
+<td>Alleen bij <strong>homogene</strong> sessie; zie mixed session</td>
 </tr>
 <tr>
 <td><strong>Includes</strong></td>
@@ -2410,6 +2444,36 @@ document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruik
 </tr>
 </tbody>
 </table>
+<p><a id="mixed-session"></a></p>
+<h3 id="mixed-session-bron-parochie-lokaal">Mixed session (bron + parochie-lokaal)<a class="headerlink" href="#mixed-session-bron-parochie-lokaal" title="Permanent link">&para;</a></h3>
+<p>Eén dienst kan <strong>verschillende uitvoeringsvormen</strong> nodig hebben — bijv. feest-troparion uit
+<strong>bron</strong> (<code>uitvoeringsvorm-id: liturgikon</code>) naast Cherubijnenhymne <strong>lokaal</strong>
+(<code>uitvoeringsvorm-id: groningen</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Aanpak</th>
+<th>Wanneer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>default.uitvoeringsvorm</code> weglaten</strong> in de <strong>sessie</strong></td>
+<td>Bron- en lokaal-stukken in één liturgiemap</td>
+</tr>
+<tr>
+<td>Disambiguation in <code>zoek=</code></td>
+<td>Bijv. <code>Cherubijnenhymne (Kastorski)</code></td>
+</tr>
+<tr>
+<td><strong><code>default.uitvoeringsvorm: Groningen</code></strong> in sessie</td>
+<td>Alleen als <strong>alle</strong> includes die parochie-praktijk delen</td>
+</tr>
+</tbody>
+</table>
+<p>Demo: <code>geboorte-moeder-gods-2026.md</code> — geen <code>uitvoeringsvorm</code> in sessie-frontmatter;
+resolve levert <code>bron:…/liturgikon</code> voor Troparion/Kondakion en
+<code>lokaal:cherubijnenhymne/kastorski/groningen</code> voor de Cherubijnenhymne.</p>
 <p>Het sjabloon beschrijft <strong>structuur</strong> en <strong>liturgische rol</strong> (<code>Troparion</code>, <code>Kondakion</code>,
 <code>Cherubijnenhymne</code>). De <strong>gelegenheid</strong> (<code>geboorte-moeder-gods</code>, …) hoort in de
 <strong>sessie-frontmatter</strong>, niet in elke <code>zoek=</code>-tekst.</p>
@@ -2526,7 +2590,7 @@ document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruik
 <span class="w">  </span><span class="nt">uitvoeringsvorm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Groningen</span>
 <span class="nn">---</span>
 </code></pre></div>
-<p><strong>Sessie</strong> (Rene voor 8 september):</p>
+<p><strong>Sessie</strong> (Rene voor 8 september — mixed session, geen <code>uitvoeringsvorm</code>):</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">sjabloon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">goddelijke-liturgie-groningen</span>
 <span class="nt">titel</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Goddelijke</span><span class="nv"> </span><span class="s">liturgie</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">Geboorte</span><span class="nv"> </span><span class="s">Moeder</span><span class="nv"> </span><span class="s">Gods</span><span class="nv"> </span><span class="s">(8</span><span class="nv"> </span><span class="s">september)&quot;</span>
@@ -2534,7 +2598,6 @@ document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruik
 <span class="w">  </span><span class="nt">gelegenheid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geboorte-moeder-gods</span>
 <span class="w">  </span><span class="nt">gelegenheidstype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vast-feest</span>
 <span class="w">  </span><span class="nt">toon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
-<span class="w">  </span><span class="nt">uitvoeringsvorm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Groningen</span>
 <span class="nn">---</span>
 </code></pre></div>
 <hr />
@@ -2574,8 +2637,12 @@ Tekst of aanwijzing voor het koor (vrij).
 <p><code>vsa resolve-catalogus</code> vervangt <code>zoek="…"</code> door het opgeloste pad; overige parameters
 (<code>alt</code>, <code>label</code>, <code>scale</code>, …) blijven staan.</p>
 <div class="highlight"><pre><span></span><code>:::include svg bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon alt=&quot;Troparion&quot; scale=&quot;85%&quot;:::
-:::include coria bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon label=&quot;Oefenen Troparion&quot; mode=&quot;auto&quot;:::
+:::include svg bron:kondak-geboorte-moeder-gods/kondak-geboorte-moeder-gods/liturgikon alt=&quot;Kondakion&quot;:::
+:::include svg lokaal:cherubijnenhymne/kastorski/groningen alt=&quot;Cherubijnenhymne&quot;:::
 </code></pre></div>
+<p><strong>Coria op <code>bron:</code></strong> — resolve schrijft het catalogus-pad correct, maar <strong><code>:::include coria</code></strong>
+faalt bij build zolang het <code>.vsa</code> <strong>buiten</strong> <code>--content-root</code> ligt (typisch org-bron).
+<strong>SVG</strong> op <code>bron:</code> werkt wel. Zie <a href="../../reference/exporttype-coria/">exporttype-coria</a>.</p>
 <p>Handmatig (na review):</p>
 <div class="highlight"><pre><span></span><code>:::include svg lokaal:cherubijnenhymne/kastorski/groningen alt=&quot;Cherubijnenhymne&quot;:::
 </code></pre></div>
@@ -2674,6 +2741,10 @@ exportkeuzes (svg, coria, …) vanaf het begin.</p>
 <td><strong>Geïmplementeerd</strong> (VSA-tooling)</td>
 </tr>
 <tr>
+<td><code>coria</code> / <code>mxl</code> op <code>bron:</code> catalogus-pad</td>
+<td><strong>Beperkt</strong> — <code>.vsa</code> buiten content-root</td>
+</tr>
+<tr>
 <td>Review-UI / <code>--interactive</code></td>
 <td><strong>Gepland</strong></td>
 </tr>
@@ -2711,7 +2782,7 @@ exportkeuzes (svg, coria, …) vanaf het begin.</p>
 </tr>
 <tr>
 <td>2026-07</td>
-<td>Doc-sync: implementatiestatus zoek/resolve geïmplementeerd</td>
+<td>Doc-sync: mixed session, liturgikon-paden, coria-beperking op <code>bron:</code></td>
 </tr>
 </tbody>
 </table>

@@ -2479,7 +2479,7 @@ praktijk/zondagen/tropaar-zondag-toon-3.coria.html
 </tr>
 <tr>
 <td><strong>Verboden</strong></td>
-<td>Ontbrekend bestand, geen <code>.vsa</code>-extensie</td>
+<td>Ontbrekend bestand, geen <code>.vsa</code>-extensie, pad buiten content-root</td>
 </tr>
 <tr>
 <td><strong>Effect</strong></td>
@@ -2663,23 +2663,14 @@ en build moet MXL naar static kopiëren (deels gepland).</p>
 <td>pad-resolve</td>
 <td>Ja — <code>Bestand ligt buiten content-root</code></td>
 </tr>
-<tr>
-<td><code>mode=html</code> + sibling</td>
-<td>coria-resolve</td>
-<td>Ja</td>
-</tr>
-<tr>
-<td>VSA-inhoud semantisch geldig</td>
-<td>—</td>
-<td><strong>Nee</strong> in huidige coria-pass</td>
-</tr>
-<tr>
-<td>MXL bereikbaar</td>
-<td>runtime</td>
-<td>Nee bij build; wel 404 voor gebruiker</td>
-</tr>
 </tbody>
 </table>
+<p><strong>Catalogus-pad <code>bron:</code>:</strong> na <strong><code>vsa resolve-catalogus</code></strong> wijst de include naar een <code>.vsa</code> in
+org-bron (buiten parochie <code>--content-root</code>). Coria-export faalt dan bij build; <strong>svg</strong> op
+hetzelfde catalogus-pad werkt wel. Zie <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk</a>.
+| <code>mode=html</code> + sibling        | coria-resolve | Ja                                      |
+| VSA-inhoud semantisch geldig | —             | <strong>Nee</strong> in huidige coria-pass           |
+| MXL bereikbaar               | runtime       | Nee bij build; wel 404 voor gebruiker   |</p>
 <hr />
 <h2 id="build-gedrag">Build-gedrag<a class="headerlink" href="#build-gedrag" title="Permanent link">&para;</a></h2>
 <ol>

@@ -2170,7 +2170,8 @@ compositie-schema. Nieuw werk: markdown-sjablonen (hierboven) en
 Zie ook <a href="../../../plans/samenvatting-project/">samenvatting-project — sjabloon vs compositie</a>.</p>
 <hr />
 <h2 id="stap-1-frontmatter-sjabloon">Stap 1 — Frontmatter (sjabloon)<a class="headerlink" href="#stap-1-frontmatter-sjabloon" title="Permanent link">&para;</a></h2>
-<p>Minimaal <strong><code>default.gelegenheidstype</code></strong> en <strong><code>default.uitvoeringsvorm</code></strong>.</p>
+<p>Minimaal <strong><code>default.gelegenheidstype</code></strong>. <strong><code>default.uitvoeringsvorm</code></strong> alleen als het
+sjabloon bedoeld is voor <strong>homogene</strong> sessies (zelfde parochie-praktijk overal).</p>
 <p>Geen <strong><code>default.gelegenheid</code></strong> in het sjabloon — die zet Rene in de <strong>sessie</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">sjabloon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">goddelijke-liturgie-groningen</span>
@@ -2179,7 +2180,7 @@ Zie ook <a href="../../../plans/samenvatting-project/">samenvatting-project — 
 <span class="w">  </span><span class="nt">uitvoeringsvorm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Groningen</span>
 <span class="nn">---</span>
 </code></pre></div>
-<p><strong>Sessie</strong> (Rene, Geboorte Moeder Gods):</p>
+<p><strong>Sessie</strong> (Rene, Geboorte Moeder Gods — <strong>mixed session</strong>):</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">sjabloon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">goddelijke-liturgie-groningen</span>
 <span class="nt">titel</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Goddelijke</span><span class="nv"> </span><span class="s">liturgie</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">Geboorte</span><span class="nv"> </span><span class="s">Moeder</span><span class="nv"> </span><span class="s">Gods</span><span class="nv"> </span><span class="s">(8</span><span class="nv"> </span><span class="s">september)&quot;</span>
@@ -2187,9 +2188,11 @@ Zie ook <a href="../../../plans/samenvatting-project/">samenvatting-project — 
 <span class="w">  </span><span class="nt">gelegenheid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geboorte-moeder-gods</span>
 <span class="w">  </span><span class="nt">gelegenheidstype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vast-feest</span>
 <span class="w">  </span><span class="nt">toon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
-<span class="w">  </span><span class="nt">uitvoeringsvorm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Groningen</span>
 <span class="nn">---</span>
 </code></pre></div>
+<p>Feest-stukken komen uit <strong>bron</strong> (<code>liturgikon</code>); Cherubijnenhymne uit <strong>lokaal</strong>
+(<code>groningen</code>). Daarom <strong>geen</strong> <code>default.uitvoeringsvorm</code> in deze sessie — één
+parochie-default dekt beide niet. Zie <a href="../../../specs/catalogus-samenstelling-zangstuk/#mixed-session">mixed session</a>.</p>
 <p>Eigen yaml-sleutels naast <code>sjabloon</code> / <code>titel</code> / <code>default</code> / <code>bronnen</code> mag — de
 catalogus negeert ze.</p>
 <hr />
@@ -2237,12 +2240,15 @@ Tekst of aanwijzing voor het koor (vrij).
 <ol>
 <li><strong><code>catalogus index validate</code></strong> — index in orde.</li>
 <li><strong><code>vsa resolve-catalogus</code></strong> — vervangt elke <code>zoek=</code> door <code>bron:…</code> / <code>lokaal:…</code>;
-   bij ambiguïteit review (GUI later, CLI interactief of handmatig).</li>
-<li><strong><code>vsa validate</code></strong> en <strong><code>vsa build-markdown</code></strong> — alleen op het <strong>opgeloste</strong> bestand.</li>
+   bij ambiguïteit: <code>catalogus zoek --lijst</code> of verfijn <code>default.*</code> / <code>zoek=</code>.</li>
+<li><strong><code>vsa validate</code></strong> en <strong><code>vsa build-markdown</code></strong> — op het <strong>opgeloste</strong> bestand.</li>
 </ol>
 <p><strong>Let op:</strong> mappen <code>samenstellingen/</code> en <code>sjablonen/</code> worden in de Hugo-demo <strong>niet</strong>
 automatisch gepubliceerd (<code>build-markdown</code> slaat ze over). Kopieer opgeloste inhoud
 naar een publishbare content-map, of pas de build-config aan.</p>
+<p><strong>Export:</strong> <strong><code>:::include svg</code></strong> op <code>bron:</code> werkt; <strong><code>:::include coria</code></strong> op <code>bron:</code>
+faalt zolang het <code>.vsa</code> buiten <code>--content-root</code> staat (org-bron). Coria op <code>lokaal:</code>
+werkt wel.</p>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooling\examples\hugo-demo\content-source
 </code></pre></div>

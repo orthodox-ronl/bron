@@ -2259,6 +2259,11 @@ kandidaten teruggeeft (review).</p>
 <td>overnemen</td>
 </tr>
 <tr>
+<td><strong><code>default.uitvoeringsvorm</code></strong></td>
+<td>optioneel (homogene sessies)</td>
+<td><strong>weglaten</strong> bij mixed session</td>
+</tr>
+<tr>
 <td><strong><code>zoek=</code></strong></td>
 <td><code>Troparion</code>, <code>Kondakion</code>, …</td>
 <td>zelfde regels</td>
@@ -2354,10 +2359,15 @@ Tekst voor het koor (Rene).
 <span class="nn">---</span>
 </code></pre></div>
 <p>(Daarna dezelfde markdown als het sjabloon, eventueel met aangepaste tekst.)</p>
+<p><strong>Mixed session:</strong> geen <code>default.uitvoeringsvorm</code> — feest-stukken uit bron (<code>liturgikon</code>),
+Cherubijnenhymne lokaal (<code>groningen</code>).</p>
 <p>Na <strong><code>vsa resolve-catalogus</code></strong>:</p>
 <div class="highlight"><pre><span></span><code>:::include svg bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon alt=&quot;Troparion&quot; scale=&quot;85%&quot;:::
-:::include coria bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon label=&quot;Oefenen Troparion&quot; mode=&quot;auto&quot;:::
+:::include svg bron:kondak-geboorte-moeder-gods/kondak-geboorte-moeder-gods/liturgikon alt=&quot;Kondakion&quot;:::
+:::include svg lokaal:cherubijnenhymne/kastorski/groningen alt=&quot;Cherubijnenhymne&quot;:::
 </code></pre></div>
+<p><strong>Coria</strong> op <code>bron:</code>-paden faalt bij build zolang <code>.vsa</code> buiten content-root ligt;
+<strong>svg</strong> werkt wel. Coria op <code>lokaal:</code> werkt.</p>
 <hr />
 <h2 id="wat-rene-vandaag-doet-cli">Wat Rene vandaag doet (CLI)<a class="headerlink" href="#wat-rene-vandaag-doet-cli" title="Permanent link">&para;</a></h2>
 <p>Demo-sessie:
@@ -2370,10 +2380,9 @@ python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooli
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli zoek &quot;Troparion&quot; ^
   --bron-root . ^
   --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
-  --default-gelegenheid geboorte-moeder-gods ^
-  --default-uitvoeringsvorm Groningen
+  --default-gelegenheid geboorte-moeder-gods
 
-python -m catalogus.cli zoek &quot;Cherubijnenhymne (Kastorski)&quot; --lijst ^
+python -m catalogus.cli zoek &quot;Cherubijnenhymne (Kastorski)&quot; ^
   --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
   --bron-root .
 </code></pre></div>

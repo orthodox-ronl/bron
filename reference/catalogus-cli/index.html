@@ -2225,10 +2225,11 @@ python -m pip install -e &quot;.[dev]&quot;
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli zoek &quot;Troparion&quot; ^
   --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
   --bron-root . ^
-  --default-gelegenheid geboorte-moeder-gods ^
-  --default-uitvoeringsvorm Groningen
+  --default-gelegenheid geboorte-moeder-gods
 
-python -m catalogus.cli zoek &quot;Troparion&quot; --lijst --bron-root .
+python -m catalogus.cli zoek &quot;Cherubijnenhymne (Kastorski)&quot; ^
+  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --bron-root .
 </code></pre></div>
 <p><strong>Status:</strong> <strong>geïmplementeerd</strong> (basis). Exitcode <strong>1</strong> = geen match of ambiguïteit (strict);
 <strong>0 regels</strong> met <code>--lijst</code> = exit <strong>1</strong>.</p>
@@ -2333,7 +2334,7 @@ python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hu
 
 <span class="c1"># Zoek-API (geïmplementeerd, basis):</span>
 <span class="n">ctx</span> <span class="o">=</span> <span class="n">ZoekContext</span><span class="o">.</span><span class="n">from_default_mapping</span><span class="p">(</span>
-    <span class="p">{</span><span class="s2">&quot;gelegenheid&quot;</span><span class="p">:</span> <span class="s2">&quot;geboorte-moeder-gods&quot;</span><span class="p">,</span> <span class="s2">&quot;uitvoeringsvorm&quot;</span><span class="p">:</span> <span class="s2">&quot;Groningen&quot;</span><span class="p">}</span>
+    <span class="p">{</span><span class="s2">&quot;gelegenheid&quot;</span><span class="p">:</span> <span class="s2">&quot;geboorte-moeder-gods&quot;</span><span class="p">}</span>
 <span class="p">)</span>
 <span class="c1"># lijst = zoek_kandidaten(&quot;Troparion&quot;, index=index, context=ctx)</span>
 <span class="c1"># lijst.catalogus_paden</span>

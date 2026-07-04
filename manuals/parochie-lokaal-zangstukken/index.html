@@ -2276,7 +2276,7 @@
 <p><strong>Relatief pad</strong> (legacy): vanuit het markdown-bestand (VSA-tooling).</p>
 <p><strong>Id-gebaseerd (fase 3, basis):</strong> <code>bron:&lt;zangstuk-id&gt;/&lt;variant-id&gt;/&lt;uitvoeringsvorm-id&gt;</code>,
 <code>lokaal:…</code> — zie <a href="../../specs/catalogus-architectuur/">catalogus-architectuur</a>.</p>
-<p><strong>Sjabloon (fase 4, ontwerp):</strong> markdown met <code>:::include zoek=</code> — zie
+<p><strong>Sjabloon (fase 4, geïmplementeerd):</strong> markdown met <code>:::include zoek=</code> — zie
 <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.
 Resolve naar catalogus-pad via <strong><code>vsa resolve-catalogus</code></strong> (VSA-tooling).</p>
 <hr />
@@ -2302,12 +2302,16 @@ Resolve naar catalogus-pad via <strong><code>vsa resolve-catalogus</code></stron
 <td>Niet nodig — bestanden in git</td>
 </tr>
 <tr>
+<td><strong><code>vsa resolve-catalogus</code></strong></td>
+<td>Als markdown <strong><code>zoek=</code></strong> bevat (VSA-tooling)</td>
+</tr>
+<tr>
 <td>Validatie</td>
 <td>Tool valideert <code>content-source</code> recursief</td>
 </tr>
 <tr>
 <td>Site-build</td>
-<td>Includes op relatief pad</td>
+<td>Includes op relatief pad / catalogus-pad</td>
 </tr>
 <tr>
 <td>Static site generator</td>

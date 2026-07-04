@@ -2199,13 +2199,15 @@ MXL-download).</p>
 :::include coria &quot;pad/melodie.vsa&quot; label=&quot;Oefenen in Coria&quot; mode=&quot;auto&quot;:::
 :::include mxl &quot;pad/melodie.vsa&quot; label=&quot;Download MusicXML&quot;:::
 </code></pre></div>
-<p><strong>Catalogus-zoek (sjabloon/sessie)</strong> — pad vervangen door <code>zoek=</code> tot
-<code>vsa resolve-catalogus</code> is gedraaid:</p>
+<p><strong>Catalogus-zoek (sjabloon/sessie)</strong> — <code>zoek=</code> tot <strong><code>vsa resolve-catalogus</code></strong> is gedraaid;
+daarna catalogus-pad:</p>
 <div class="highlight"><pre><span></span><code>:::include svg zoek=&quot;Troparion&quot; alt=&quot;Troparion&quot; scale=&quot;85%&quot;:::
 :::include coria zoek=&quot;Troparion&quot; label=&quot;Oefenen in Coria&quot; mode=&quot;auto&quot;:::
 </code></pre></div>
 <p>Zie <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>,
 <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus">VSA — <code>:::include</code> met <code>zoek=</code></a>.</p>
+<p><strong>Beperking:</strong> <code>coria</code> / <code>mxl</code> op <strong><code>bron:</code></strong> catalogus-pad — <code>.vsa</code> ligt vaak buiten
+content-root; <strong>svg</strong> op <code>bron:</code> werkt wel.</p>
 <h3 id="huidige-implementatie">Huidige implementatie<a class="headerlink" href="#huidige-implementatie" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2235,6 +2237,11 @@ MXL-download).</p>
 <td><code>:::include &lt;type&gt; zoek="…"</code></td>
 <td><strong>Geïmplementeerd</strong></td>
 <td>Resolve via <code>vsa resolve-catalogus</code> vóór build</td>
+</tr>
+<tr>
+<td><code>coria</code> / <code>mxl</code> op <code>bron:</code> catalogus-pad</td>
+<td><strong>Beperkt</strong></td>
+<td><code>.vsa</code> buiten content-root</td>
 </tr>
 <tr>
 <td><code>:::include mp3-player</code></td>

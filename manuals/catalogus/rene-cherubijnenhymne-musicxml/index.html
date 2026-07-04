@@ -2334,15 +2334,14 @@ python -m catalogus.cli resolve representatie --zangstuk cherubijnenhymne --vari
 <div class="highlight"><pre><span></span><code>:::include svg zoek=&quot;Cherubijnenhymne (Kastorski)&quot; alt=&quot;Cherubijnenhymne&quot;:::
 :::include mxl zoek=&quot;Cherubijnenhymne (Kastorski)&quot; label=&quot;Download partituur (MusicXML)&quot;:::
 </code></pre></div>
-<p><strong>Beoogd</strong> na <strong><code>vsa resolve-catalogus</code></strong> (wanneer <code>:::include mxl</code> live is):</p>
+<p><strong>Na </strong><code>vsa resolve-catalogus</code>** (parochie-lokaal, MXL als sibling van <code>.vsa</code>):</p>
 <div class="highlight"><pre><span></span><code><span class="gu">## Cherubijnenhymne</span>
 
-:::include svg bron:cherubijnenhymne/kastorski/groningen:::
-
-:::include mxl bron:cherubijnenhymne/kastorski/groningen label=&quot;Download partituur (MusicXML)&quot;:::
+:::include svg lokaal:cherubijnenhymne/kastorski/groningen alt=&quot;Cherubijnenhymne&quot;:::
+:::include mxl lokaal:cherubijnenhymne/kastorski/groningen label=&quot;Download partituur (MusicXML)&quot;:::
 </code></pre></div>
-<p><strong>Nu:</strong> Rene zet een handmatige link naar het gepubliceerde bestand op de
-parochie-site, of wacht op implementatie van het mxl-exporttype.</p>
+<p><strong>Beperking:</strong> <code>mxl</code> / <code>coria</code> op <strong><code>bron:</code></strong> catalogus-pad — <code>.vsa</code> buiten content-root.
+Handmatig MXL in repo blijft geldig; build levert download-URL naar static.</p>
 <p>Build-time generatie blijft gescheiden: de site levert een <strong>download-URL</strong> naar
 het <strong>bron</strong>-bestand; <code>vsa musicxml</code> draait niet in de Hugo-build voor dit
 handmatige MXL.</p>
