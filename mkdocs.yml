@@ -48,6 +48,7 @@ nav:
     - specs/repo-structuur.md
     - specs/zangstuk-formaat.md
     - specs/catalogus-architectuur.md
+    - specs/catalogus-zoek-api.md
     - specs/catalogus-samenstelling-zangstuk.md
   - Handleidingen:
     - manuals/index.md

@@ -36,6 +36,20 @@ Contract: [zangstuk in samenstelling-sjablonen](../../specs/catalogus-samenstell
 Terminologie: [terminologie §2](../../specs/terminologie.md) — opslag blijft vier
 niveaus; Rene typt vooral **zoektekst**.
 
+### `Groningen`, `groningen` en `vokn` in deze verhalen
+
+| Term | Betekenis in de verhalen |
+| ---- | ------------------------ |
+| **Parochie Groningen** | Persona / plaats — geen catalogus-id |
+| **`default.uitvoeringsvorm: Groningen`** | Parochie-default bij zoeken (invoer alias) |
+| **`uitvoeringsvorm-id: groningen`** | Parochie-specifieke uitvoeringsvorm (bijv. Nana's Kastorski-bewerking) |
+| **`vokn`** | (Gepland in glossary) VOKN-standaardkoormap — **niet** hetzelfde als `groningen` |
+
+Tot de glossary-PR over **`vokn`** vastligt, gebruiken de verhalen **`Groningen`**
+/`groningen` waar het om **parochiepraktijk** gaat. Materiaal rechtstreeks uit de
+VOKN-standaardkoormap krijgt later **`uitvoeringsvorm-id: vokn`**; zie
+[samenvatting-project — legacy yaml](../../plans/samenvatting-project.md).
+
 ## Interface: GUI (beoogd) en CLI (nu)
 
 !!! todo "GUI + resolve-catalogus"
@@ -45,7 +59,8 @@ niveaus; Rene typt vooral **zoektekst**.
 
 Technische referentie: [Catalogus CLI](../../reference/catalogus-cli.md),
 [Catalogus-architectuur](../../specs/catalogus-architectuur.md),
-[zangstuk in samenstelling-sjablonen](../../specs/catalogus-samenstelling-zangstuk.md).
+[Catalogus — zoek-API](../../specs/catalogus-zoek-api.md),
+[Zangstuk in samenstelling-sjablonen](../../specs/catalogus-samenstelling-zangstuk.md).
 
 ## Verhalen
 

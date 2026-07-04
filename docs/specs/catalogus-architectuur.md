@@ -16,7 +16,7 @@ canoniek id (`groningen`, `kastorski`).
 | ---------------- | -------------------------------- |
 | Python-pakket    | `src/catalogus/` in **bron**     |
 | CLI              | `catalogus` (entry point)        |
-| Documentatie     | [catalogus-cli.md](../reference/catalogus-cli.md), [gebruikersverhalen](../manuals/catalogus/index.md), [zangstuk-plaats contract](catalogus-samenstelling-zangstuk.md) |
+| Documentatie     | [catalogus-cli.md](../reference/catalogus-cli.md), [catalogus-zoek-api.md](catalogus-zoek-api.md), [gebruikersverhalen](../manuals/catalogus/index.md), [zangstuk in sjablonen](catalogus-samenstelling-zangstuk.md) |
 | Test-fixtures    | `tests/fixtures/alias-index/`    |
 
 Bron-repo workflows kunnen `catalogus` draaien **zonder** VSA-tooling.

@@ -33,8 +33,12 @@ zelfde structuur, plus **`default.gelegenheid`** (en evt. `toon`, titel, datum).
 | **Koormap** | Zondagse stukken per toon | `gelegenheidstype: zondag-cyclus`, `uitvoeringsvorm` |
 | **Herkomst** | Verzameling uit één bron (bijv. VOK) | `referentie`, `koormap_nummer` |
 
-Oud voorbeeld (yaml, niet meer aanbevolen):
-[VSA-demo — goddelijke-liturgie.yaml](https://github.com/orthodox-groningen/VSA-tooling/blob/main/examples/hugo-demo/content-source/praktijk/goddelijke-liturgie.yaml).
+**Legacy (niet meer aanbevolen):** yaml-inventarisatie
+[goddelijke-liturgie.yaml](https://github.com/orthodox-groningen/VSA-tooling/blob/main/examples/hugo-demo/content-source/praktijk/goddelijke-liturgie.yaml)
+in de VSA-demo — ruwe VOKN-koormap-notities, **geen** geldig sjabloon- of
+compositie-schema. Nieuw werk: markdown-sjablonen (hierboven) en
+[catalogus-samenstelling-zangstuk](../../specs/catalogus-samenstelling-zangstuk.md).
+Zie ook [samenvatting-project — sjabloon vs compositie](../../plans/samenvatting-project.md).
 
 ---
 
