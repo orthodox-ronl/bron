@@ -1,6 +1,6 @@
 # Catalogus — zoek-API (contract)
 
-Status: **normatief contract** (fase 0); implementatie **`catalogus.zoek`** volgt in fase 4.
+Status: **normatief contract**; **`catalogus.zoek`** **geïmplementeerd** (basis).
 
 Gerelateerd: [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md),
 [catalogus-architectuur.md](catalogus-architectuur.md), [terminologie §2.8](terminologie.md),
@@ -263,9 +263,8 @@ def zoek_met_roots(
 - Consumenten met herhaalde zoekacties: bouw **`AliasIndex` eenmaal**, roep `zoek` /
   `zoek_kandidaten` met `index=` aan (niet per call `*_met_roots`).
 
-**Status fase 0:** `zoek_kandidaten()` werpt `NotImplementedError`. `zoek()` delegeert
-daarnaartoe. `format_catalogus_pad`, `ZoekContext`, `ZoekMatch`, `ZoekLijstResult` zijn
-geïmplementeerd.
+**Status:** `zoek_kandidaten()`, `zoek()`, CLI **`catalogus zoek`** en VSA-consumenten
+zijn geïmplementeerd. Ranking en metadata-dekking worden verder uitgebreid per PR.
 
 ---
 
@@ -307,7 +306,7 @@ python -m catalogus.cli zoek "Troparion" ^
 | `--bronnen`                  | `context.bronnen`                  |
 | `--content-root`, …          | index-roots                        |
 
-**Uitvoer (na implementatie):**
+**Uitvoer:**
 
 - zonder `--lijst`: één regel **`catalogus_pad`**.
 - **`--verbose`**: pad + ids op stderr; bij **`ook_gevonden_in_bron`**: waarschuwing
@@ -359,22 +358,23 @@ VSA-tooling (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
 | Geen match                       | `NotFoundError`        | `"zoek"` |
 | Meerdere matches (`zoek` strict) | `AmbiguousError`       | `"zoek"` |
 | Lege query                       | `ValueError`           | —        |
-| Nog niet geïmplementeerd         | `NotImplementedError`  | —        |
 
 `AmbiguousError.candidates`: lijst **`MatchCandidate`** — minimaal **`catalogus_pad`**
-(canonical_id = pad of zangstuk-id; implementatie-PR).
+(canonical_id = pad of zangstuk-id).
 
 ---
 
 ## Implementatiestatus
 
-| Onderdeel                                              | Status        |
-| ------------------------------------------------------ | ------------- |
-| Contract + datatypes + `format_catalogus_pad`          | **Fase 0**    |
-| `zoek_kandidaten()` / `zoek()` body                    | **Gepland**   |
-| `catalogus zoek` CLI (functioneel)                     | **Gepland**   |
-| VSA `@include-vsa zoek=`                               | **Gepland**   |
-| `vsa resolve-catalogus`                                | **Gepland**   |
+| Onderdeel                                              | Status                      |
+| ------------------------------------------------------ | --------------------------- |
+| Contract + datatypes + `format_catalogus_pad`          | **Geïmplementeerd**         |
+| `zoek_kandidaten()` / `zoek()`                         | **Geïmplementeerd** (basis) |
+| `catalogus zoek` CLI                                   | **Geïmplementeerd**         |
+| VSA `@include-vsa zoek=`                               | **Geïmplementeerd**         |
+| `vsa resolve-catalogus`                                | **Geïmplementeerd**         |
+| Interactieve review (`--interactive`)                  | **Gepland**                 |
+| Zoek-UI / fuzzy match                                  | **Gepland**                 |
 
 ---
 
@@ -385,3 +385,4 @@ VSA-tooling (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
 | 2026-07 | Fase 0: normatief API-contract; stub `zoek()`; `@include-vsa` als consument |
 | 2026-07 | Abstract zoekgedrag; `bestandsextensie`; `zoek_kandidaten` / `--lijst`; NL metadata |
 | 2026-07 | Parochie-context; lokaal vóór bron; `ook_gevonden_in_bron`; twee contextlagen; ambiguïteit |
+| 2026-07 | Implementatie `zoek_kandidaten` / VSA-consumenten; doc-sync |

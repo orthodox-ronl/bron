@@ -75,7 +75,7 @@ VSA-tooling importeert `catalogus` en roept `AliasIndex.resolve_vsa_path()` aan 
 
 ## Fase 4 — sjablonen, sessies, resolve
 
-Status: **API-contract (fase 0)** — implementatie volgt.
+Status: **geïmplementeerd** (basis).
 
 Normatief zoek-API: [catalogus-zoek-api.md](catalogus-zoek-api.md).
 
@@ -100,7 +100,8 @@ sequenceDiagram
   Build-->>Rene: site
 ```
 
-Geplande CLI: **`catalogus zoek`** (stub + contract), **`vsa resolve-catalogus`**.
+Geïmplementeerd: **`catalogus zoek`**, **`vsa resolve-catalogus`**, **`@include-vsa zoek=`**
+(zie [catalogus-zoek-api.md](catalogus-zoek-api.md)).
 
 Consument **`@include-vsa zoek=`** in `.vsa`-brontekst gebruikt dezelfde `catalogus.zoek`-API
 (in-memory expand; zie [catalogus-zoek-api.md](catalogus-zoek-api.md)).

@@ -38,9 +38,10 @@ Rene opent het stuk *cherubijnenhymne / kastorski / groningen* en kiest
    `:::include mxl id:cherubijnenhymne/kastorski/groningen:::` toe.
 5. **Validatie:** XML well-formed check (toekomst); `catalogus index validate`.
 
-!!! todo "GUI + mxl-include"
-    `:::include mxl` is in VSA-tooling **nog niet geïmplementeerd**; de GUI en
-    catalogus kunnen wel al het canonieke id en bestandspad vastleggen.
+!!! note "GUI + handmatige bron-MXL"
+    **`:::include mxl`** vanuit een **VSA-pad** of catalogus-pad is geïmplementeerd.
+    Nog **gepland**: GUI voor representatie toevoegen, **handmatige** `.mxl` in
+    `sources/musicxml/`, en XML-validatie in CI.
 
 ---
 

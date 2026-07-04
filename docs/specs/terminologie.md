@@ -450,7 +450,7 @@ ingevuld (opgelost pad) is een **samenstelling** (§18). Zie
 | Alias-resolver in tooling                          | Geïmplementeerd (basis) — zie [catalogus-architectuur](catalogus-architectuur.md) |
 | Sjabloon `:::include zoek=` + `vsa resolve-catalogus` | Ontwerp — zie [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md) |
 | **referentie** (herkomst) vs **catalogus-pad** in docs | Gedocumenteerd in catalogus-samenstelling-zangstuk.md |
-| Metadata-zoek (`catalogus.zoek` / `zoek_kandidaten`) | Gepland (fase 4) |
+| Metadata-zoek (`catalogus.zoek` / `zoek_kandidaten`) | **Geïmplementeerd** (basis) |
 | Automatische terminologie-lint (R1–R2)             | Open       |
 | `.coria.html` definitief bron vs afgeleide         | Open       |
 

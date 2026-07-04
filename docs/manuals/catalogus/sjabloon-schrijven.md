@@ -18,11 +18,6 @@ Een **sjabloon** is een herbruikbaar markdown-bestand in de parochie **content-s
 Als jij het sjabloon **gebruikt** voor een concrete dienst, maak je een **sessie**:
 zelfde structuur, plus **`default.gelegenheid`** (en evt. `toon`, titel, datum).
 
-!!! todo "Resolve vóór export"
-    `zoek=` en `vsa resolve-catalogus` zijn **gepland**. Tot die tijd: test losse
-    regels met `catalogus resolve`, zet handmatig **`bron:…`** / **`lokaal:…`** in
-    de include, of gebruik relatieve paden.
-
 ---
 
 ## Drie soorten sjablonen
@@ -134,6 +129,10 @@ Rene zet in de sessie **`default.toon`**. In `zoek=` geen toon herhalen:
 2. **`vsa resolve-catalogus`** — vervangt elke `zoek=` door `bron:…` / `lokaal:…`;
    bij ambiguïteit review (GUI later, CLI interactief of handmatig).
 3. **`vsa validate`** en **`vsa build-markdown`** — alleen op het **opgeloste** bestand.
+
+**Let op:** mappen `samenstellingen/` en `sjablonen/` worden in de Hugo-demo **niet**
+automatisch gepubliceerd (`build-markdown` slaat ze over). Kopieer opgeloste inhoud
+naar een publishbare content-map, of pas de build-config aan.
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron

@@ -32,7 +32,7 @@ scripts\test.cmd
 
 ## Commando's (fase 2)
 
-### `catalogus zoek` (API-contract fase 0)
+### `catalogus zoek`
 
 Vrije tekst + `default.*`-context → **catalogus-pad** (`lokaal:…` / `bron:…`).
 
@@ -52,8 +52,8 @@ python -m catalogus.cli zoek "Troparion" ^
 python -m catalogus.cli zoek "Troparion" --lijst --bron-root .
 ```
 
-**Status:** CLI en Python-API aanwezig; **`zoek_kandidaten()`** werpt `NotImplementedError` tot fase 4.
-Exitcode **2** = nog niet geïmplementeerd; **1** = geen match (na implementatie).
+**Status:** **geïmplementeerd** (basis). Exitcode **1** = geen match of ambiguïteit (strict);
+**0 regels** met `--lijst` = exit **1**.
 
 **Parochie-context:** `--content-root` = parochie content-source (`lokaal/`); `--bron-root` =
 org-bron. **Lokaal vóór bron**; bij lokaal-winst kan **`ZoekResult.ook_gevonden_in_bron`**
@@ -136,7 +136,7 @@ index.resolve_uitvoeringsvorm(
 )
 # → "hemelum"
 
-# Zoek-API (contract fase 0 — zoek_kandidaten() stub tot fase 4):
+# Zoek-API (geïmplementeerd, basis):
 ctx = ZoekContext.from_default_mapping(
     {"gelegenheid": "geboorte-moeder-gods", "uitvoeringsvorm": "Groningen"}
 )
@@ -151,20 +151,11 @@ Zie [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) voor volledig contra
 
 - **Fase 2:** `catalogus` staat los van `vsa`; build/includes gebruikten relatieve paden.
 - **Fase 3:** VSA-tooling importeert `catalogus` bij `id:…` / `lokaal:…` / `bron:…`-includes in markdown.
-- **Fase 4 (contract fase 0):** `:::include zoek=` / `@include-vsa zoek=` → **`catalogus.zoek`**
-  → catalogus-pad — [API-contract](../specs/catalogus-zoek-api.md); implementatie gepland.
+- **Fase 4:** `:::include zoek=` / `@include-vsa zoek=` → **`catalogus.zoek`**
+  → catalogus-pad — [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) (**geïmplementeerd**, basis).
 
-## Geplande commando's (fase 4)
-
-| Commando | Repo | Doel |
-| -------- | ---- | ---- |
-| `catalogus zoek` | bron | **Contract fase 0** — implementatie volgt; zie [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) |
-| **`vsa resolve-catalogus`** | VSA-tooling | Markdown: alle `zoek=` → `bron:…` / `lokaal:…` |
-| **`@include-vsa`** expand | VSA-tooling | `.vsa`: `zoek=` → in-memory body-splice via `catalogus.zoek` |
-
-Tot implementatie: per stuk `catalogus resolve`, of handmatig catalogus-pad in
-`:::include` — zie [verhaal 1](../manuals/catalogus/rene-liturgie-geboorte-moeder-gods.md)
-en [VSA — resolve-catalogus](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#vsa-resolve-catalogus).
+Zie [verhaal 1](../manuals/catalogus/rene-liturgie-geboorte-moeder-gods.md) en
+[VSA — resolve-catalogus](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#vsa-resolve-catalogus).
 
 ## Tests
 

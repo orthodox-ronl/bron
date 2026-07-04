@@ -35,8 +35,8 @@ groningen* en kiest **Delen → Voorstel voor bron**.
 6. **Na merge:** hint om samenstellingen van `lokaal:` naar `bron:` om te zetten
    (optioneel; lokaal mag blijven staan).
 
-!!! todo "GUI + promotie-workflow"
-    Automatische PR-generatie en bron-yaml is **gepland**. Rene voert de stappen
+!!! note "GUI + promotie-workflow"
+    Automatische PR-generatie en bron-yaml-assistent zijn **gepland**. Rene voert de stappen
     hieronder handmatig uit volgens bestaande handleidingen.
 
 ---

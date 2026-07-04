@@ -233,14 +233,14 @@ Tooling: [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groninge
 
 | Onderdeel | Status |
 | --------- | ------ |
-| `catalogus resolve` per niveau | Geïmplementeerd (basis) |
-| **`catalogus zoek` API-contract** | **Normatief (fase 0)** — [catalogus-zoek-api.md](catalogus-zoek-api.md) |
-| `catalogus zoek` (implementatie) | **Gepland** (fase 4) |
-| `:::include` parameter `zoek=` | **Gepland** (VSA-tooling) |
-| `@include-vsa zoek=` | **Gepland** (VSA-tooling) |
-| `vsa resolve-catalogus` | **Gepland** (VSA-tooling) |
-| Review-UI | **Gepland** |
+| `catalogus resolve` per niveau | **Geïmplementeerd** (basis) |
+| **`catalogus zoek` API** | **Geïmplementeerd** (basis) — [catalogus-zoek-api.md](catalogus-zoek-api.md) |
+| `:::include` parameter `zoek=` | **Geïmplementeerd** (VSA-tooling) |
+| `@include-vsa zoek=` | **Geïmplementeerd** (VSA-tooling) |
+| `vsa resolve-catalogus` | **Geïmplementeerd** (VSA-tooling) |
+| Review-UI / `--interactive` | **Gepland** |
 | `:::include mp3-player` | **Gepland** (exporttype) |
+| Hugo-publicatie `samenstellingen/` | **Gepland** (demo slaat map over) |
 
 ---
 
@@ -251,4 +251,4 @@ Tooling: [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groninge
 | 2026-07 | Eerste versie; `default`; `pad` / `referentie` |
 | 2026-07 | Directive **`:::zangstuk`** i.p.v. `:::invul` |
 | 2026-07 | **`:::include zoek=`** i.p.v. `:::zangstuk`; sjabloon zonder `gelegenheid`; `vsa resolve-catalogus` |
-| 2026-07 | Verwijzing naar [catalogus-zoek-api.md](catalogus-zoek-api.md); `@include-vsa` als consument |
+| 2026-07 | Doc-sync: implementatiestatus zoek/resolve geïmplementeerd |

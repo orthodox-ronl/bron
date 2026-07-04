@@ -38,9 +38,9 @@ Rene kiest in de catalogus *Materiaal toevoegen → Parochie-lokaal*.
    `uitvoeringsvorm.yaml` met `aliases:` en `representaties:`.
 6. **Validatie:** groene vinkjes; knop *Open in Verkenner* voor git commit.
 
-!!! todo "GUI + lokaal-wizard"
+!!! note "GUI + lokaal-wizard"
     De wizard is **gepland**. Rene maakt de mappen en yaml vandaag handmatig (of
-    met templates); `catalogus index validate` controleert daarna de alias-index.
+    met templates); **`catalogus index validate`** en **`catalogus zoek`** werken op CLI.
 
 ---
 

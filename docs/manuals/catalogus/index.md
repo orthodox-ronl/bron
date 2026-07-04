@@ -52,10 +52,10 @@ VOKN-standaardkoormap krijgt later **`uitvoeringsvorm-id: vokn`**; zie
 
 ## Interface: GUI (beoogd) en CLI (nu)
 
-!!! todo "GUI + resolve-catalogus"
-    De verhalen schetsen een **grafische catalogus** (sessie vullen, resolve,
-    review). Vandaag: **`catalogus resolve`**, **`catalogus index validate`**;
-    **`vsa resolve-catalogus`** en **`zoek=`** zijn gepland.
+!!! note "CLI vs GUI"
+    **`catalogus zoek`**, **`vsa resolve-catalogus`** en **`:::include zoek=`** zijn
+    **geïmplementeerd** (CLI). Een **grafische catalogus** (sessie-wizard,
+    interactieve review bij ambiguïteit) is nog **gepland**.
 
 Technische referentie: [Catalogus CLI](../../reference/catalogus-cli.md),
 [Catalogus-architectuur](../../specs/catalogus-architectuur.md),

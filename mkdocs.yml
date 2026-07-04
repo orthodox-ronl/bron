@@ -80,6 +80,10 @@ nav:
     - reference/catalogus-cli.md
   - Plannen:
     - plans/README.md
+    - Ideeën:
+      - plans/ideeen/README.md
+      - plans/ideeen/alias-blokken.md
+      - plans/ideeen/tev2-terminologie.md
     - plans/ci-architectuur.md
     - plans/migratie-zondag-zangstukken.md
     - plans/samenvatting-project.md

@@ -51,9 +51,9 @@ kandidaten teruggeeft (review).
 6. **Build** — `vsa validate` / `vsa build-markdown` op **opgelost** bestand.
 7. **Opslaan** — `content-source/samenstellingen/geboorte-moeder-gods-2026.md`.
 
-!!! todo "resolve-catalogus"
-    `zoek=`, `catalogus zoek` en `vsa resolve-catalogus` zijn **gepland**.
-    Onderstaand is het **doelbeeld**; Rene kan het markdown al schrijven.
+!!! note "GUI"
+    Stappen 1–2 en 4 zijn in een **grafische catalogus** nog **gepland**. Stappen 3,
+    5–6 werken vandaag via CLI (zie hieronder).
 
 ---
 
@@ -117,7 +117,10 @@ Na **`vsa resolve-catalogus`**:
 
 ---
 
-## Wat Rene vandaag doet (tussenstap)
+## Wat Rene vandaag doet (CLI)
+
+Demo-sessie:
+`VSA-tooling/examples/hugo-demo/content-source/samenstellingen/geboorte-moeder-gods-2026.md`.
 
 ### 1. Index valideren
 
@@ -126,16 +129,23 @@ cd /d C:\Git\orthodox-groningen\bron
 python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooling\examples\hugo-demo\content-source
 ```
 
-### 2. Losse zoekregels testen (tot `catalogus zoek` bestaat)
+### 2. Zoekregels testen
 
 ```cmd
-python -m catalogus.cli resolve zangstuk "troparion" --bron-root .
-python -m catalogus.cli resolve uitvoeringsvorm --zangstuk troparion-geboorte-moeder-gods --variant troparion-geboorte-moeder-gods Liturgikon --bron-root .
+python -m catalogus.cli zoek "Troparion" ^
+  --bron-root . ^
+  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --default-gelegenheid geboorte-moeder-gods ^
+  --default-uitvoeringsvorm Groningen
+
+python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" --lijst ^
+  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --bron-root .
 ```
 
-Bij unieke match: handmatig **`bron:…`** in de `:::include` zetten.
+Bij **`AmbiguousError`**: `--lijst` of verfijn `zoek=` / `default.*`.
 
-### 3. Resolve en publiceren (doel)
+### 3. Resolve en valideren
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\VSA-tooling
