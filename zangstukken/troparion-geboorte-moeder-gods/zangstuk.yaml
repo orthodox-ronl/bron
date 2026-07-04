@@ -1,0 +1,15 @@
+id: troparion-geboorte-moeder-gods
+title: Troparion — Geboorte Moeder Gods
+aliases:
+  - Troparion
+gelegenheid: geboorte-moeder-gods
+gelegenheidstype: vast-feest
+toon: 4
+sources:
+  - id: liturgikon
+    file: sources/vsa/liturgikon.vsa
+    aliases:
+      - Liturgikon
+    reference: Liturgikon
+    language: nl
+    copyright_status: vrij

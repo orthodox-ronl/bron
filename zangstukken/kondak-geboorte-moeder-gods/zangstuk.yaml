@@ -1,0 +1,16 @@
+id: kondak-geboorte-moeder-gods
+title: Kondakion — Geboorte Moeder Gods
+aliases:
+  - Kondakion
+  - Kondak
+gelegenheid: geboorte-moeder-gods
+gelegenheidstype: vast-feest
+toon: 4
+sources:
+  - id: liturgikon
+    file: sources/vsa/liturgikon.vsa
+    aliases:
+      - Liturgikon
+    reference: Liturgikon
+    language: nl
+    copyright_status: vrij

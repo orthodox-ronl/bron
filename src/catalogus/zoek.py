@@ -1,15 +1,16 @@
-"""Catalogus zoek-API — contract fase 0; implementatie fase 4.
+"""Catalogus zoek-API.
 
 Normatief: docs/specs/catalogus-zoek-api.md
 """
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-from catalogus.alias_index import AliasIndex, VsaFileEntry
+from catalogus.alias_index import AliasIndex, VsaFileEntry, ZoekIndexEntry
 from catalogus.errors import AmbiguousError, MatchCandidate, NotFoundError
 from catalogus.normalize import normalize_for_match
 
@@ -17,6 +18,7 @@ ZOEK_NIVEAU = "zoek"
 _DEFAULT_BESTANDSEXTENSIE: frozenset[str] = frozenset({".vsa"})
 _VALID_BRONNEN: frozenset[str] = frozenset({"bron", "lokaal"})
 _SPEC_DOC = "docs/specs/catalogus-zoek-api.md"
+_QUERY_SPLIT_RE = re.compile(r"[\s\-_/(),]+")
 
 
 @dataclass(frozen=True)
@@ -65,6 +67,7 @@ class ZoekLijstResult:
     query: str
     query_normalized: str
     matches: tuple[ZoekMatch, ...]
+    ook_gevonden_in_bron: tuple[str, ...] = ()
 
     @property
     def catalogus_paden(self) -> list[str]:
@@ -139,15 +142,49 @@ def zoek_kandidaten(
 
     Raises:
         ValueError: lege query.
-        NotImplementedError: fase 0 stub.
     """
-    _ = index
-    _ = context
-    _ = bestandsextensie
     normalized_query = _require_query(query)
-    _ = normalized_query
-    raise NotImplementedError(
-        f"catalogus.zoek_kandidaten is nog niet geïmplementeerd; zie {_SPEC_DOC}"
+    ctx = context or ZoekContext()
+    query_tokens = _query_tokens(normalized_query)
+
+    lokaal_matches: list[ZoekMatch] = []
+    bron_matches: list[ZoekMatch] = []
+
+    for zoek_entry in index.zoek_entries:
+        if zoek_entry.entry.origin not in ctx.bronnen:
+            continue
+        if not _matches_bestandsextensie(zoek_entry.entry.path, bestandsextensie):
+            continue
+        if not _matches_query(zoek_entry, query_tokens, normalized_query):
+            continue
+        if not _matches_context(zoek_entry, ctx, index):
+            continue
+        match = ZoekMatch(
+            entry=zoek_entry.entry,
+            catalogus_pad=format_catalogus_pad(zoek_entry.entry),
+        )
+        if zoek_entry.entry.origin == "lokaal":
+            lokaal_matches.append(match)
+        else:
+            bron_matches.append(match)
+
+    if lokaal_matches:
+        winning = _dedupe_matches(lokaal_matches)
+        ook_in_bron = tuple(
+            sorted({match.catalogus_pad for match in _dedupe_matches(bron_matches)})
+        )
+    elif bron_matches:
+        winning = _dedupe_matches(bron_matches)
+        ook_in_bron = ()
+    else:
+        winning = ()
+        ook_in_bron = ()
+
+    return ZoekLijstResult(
+        query=query.strip(),
+        query_normalized=normalized_query,
+        matches=winning,
+        ook_gevonden_in_bron=ook_in_bron,
     )
 
 
@@ -189,9 +226,8 @@ def zoek(
 
     Raises:
         ValueError: lege query.
-        NotFoundError: geen match (fase 4).
-        AmbiguousError: meerdere matches (fase 4).
-        NotImplementedError: fase 0 stub (via ``zoek_kandidaten``).
+        NotFoundError: geen match.
+        AmbiguousError: meerdere matches.
     """
     _require_query(query)
     lijst = zoek_kandidaten(
@@ -247,7 +283,7 @@ def _zoek_from_lijst(lijst: ZoekLijstResult) -> ZoekResult:
         query_normalized=lijst.query_normalized,
         entry=match.entry,
         catalogus_pad=match.catalogus_pad,
-        ook_gevonden_in_bron=(),
+        ook_gevonden_in_bron=lijst.ook_gevonden_in_bron,
     )
 
 
@@ -280,3 +316,111 @@ def _parse_bronnen(bronnen: Iterable[str] | str | None) -> frozenset[str]:
             f"Ongeldige bronnen {invalid!r}; verwacht subset van {sorted(_VALID_BRONNEN)}"
         )
     return frozenset(items)
+
+
+def _query_tokens(query_norm: str) -> list[str]:
+    tokens = [token for token in _QUERY_SPLIT_RE.split(query_norm) if len(token) >= 2]
+    return tokens or [query_norm]
+
+
+def _matches_query(
+    entry: ZoekIndexEntry,
+    query_tokens: list[str],
+    query_norm: str,
+) -> bool:
+    if query_norm in entry.search_terms:
+        return True
+    for token in query_tokens:
+        if not any(
+            token in term or term in token for term in entry.search_terms
+        ):
+            return False
+    return True
+
+
+def _matches_bestandsextensie(
+    path: Path,
+    bestandsextensie: frozenset[str] | None,
+) -> bool:
+    if bestandsextensie is None:
+        return True
+    return path.suffix.lower() in bestandsextensie
+
+
+def _matches_context(
+    entry: ZoekIndexEntry,
+    context: ZoekContext,
+    index: AliasIndex,
+) -> bool:
+    if context.gelegenheid:
+        if _entry_has_gelegenheid_scope(entry, context.gelegenheid) and not _matches_gelegenheid(
+            entry.gelegenheid,
+            entry.entry.zangstuk_id,
+            context.gelegenheid,
+        ):
+            return False
+    if context.gelegenheidstype and entry.gelegenheidstype and not _matches_text_field(
+        entry.gelegenheidstype, context.gelegenheidstype
+    ):
+        return False
+    if context.toon and entry.toon and not _matches_text_field(entry.toon, context.toon):
+        return False
+    if context.referentie and entry.referentie and not _matches_text_field(
+        entry.referentie, context.referentie
+    ):
+        return False
+    if context.uitvoeringsvorm:
+        try:
+            resolved_uv = index.resolve_uitvoeringsvorm(
+                entry.entry.zangstuk_id,
+                entry.entry.variant_id,
+                context.uitvoeringsvorm,
+            )
+        except NotFoundError:
+            return False
+        if entry.entry.uitvoeringsvorm_id != resolved_uv:
+            return False
+    return True
+
+
+def _matches_gelegenheid(
+    entry_gelegenheid: str | None,
+    zangstuk_id: str,
+    context_gelegenheid: str,
+) -> bool:
+    ctx = normalize_for_match(context_gelegenheid)
+    if entry_gelegenheid:
+        entry_norm = normalize_for_match(entry_gelegenheid)
+        if ctx in entry_norm or entry_norm in ctx:
+            return True
+    return ctx in normalize_for_match(zangstuk_id)
+
+
+def _entry_has_gelegenheid_scope(
+    entry: ZoekIndexEntry,
+    context_gelegenheid: str,
+) -> bool:
+    if entry.gelegenheid:
+        return True
+    ctx = normalize_for_match(context_gelegenheid)
+    zangstuk_id = normalize_for_match(entry.entry.zangstuk_id)
+    return ctx in zangstuk_id
+
+
+def _matches_text_field(entry_value: str | None, context_value: str) -> bool:
+    if not entry_value:
+        return False
+    entry_norm = normalize_for_match(entry_value)
+    ctx_norm = normalize_for_match(context_value)
+    return ctx_norm in entry_norm or entry_norm in ctx_norm
+
+
+def _dedupe_matches(matches: list[ZoekMatch]) -> tuple[ZoekMatch, ...]:
+    seen: set[str] = set()
+    unique: list[ZoekMatch] = []
+    for match in sorted(matches, key=lambda item: item.catalogus_pad):
+        if match.catalogus_pad in seen:
+            continue
+        seen.add(match.catalogus_pad)
+        unique.append(match)
+    return tuple(unique)

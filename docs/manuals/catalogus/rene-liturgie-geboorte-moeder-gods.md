@@ -103,7 +103,6 @@ default:
   gelegenheid: geboorte-moeder-gods
   gelegenheidstype: vast-feest
   toon: 4
-  uitvoeringsvorm: Groningen
 ---
 ```
 
@@ -112,8 +111,8 @@ default:
 Na **`vsa resolve-catalogus`**:
 
 ```markdown
-:::include svg bron:troparion-geboorte-moeder-gods/obikhod/groningen alt="Troparion" scale="85%":::
-:::include coria bron:troparion-geboorte-moeder-gods/obikhod/groningen label="Oefenen Troparion" mode="auto":::
+:::include svg bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon alt="Troparion" scale="85%":::
+:::include coria bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon label="Oefenen Troparion" mode="auto":::
 ```
 
 ---
@@ -131,7 +130,7 @@ python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooli
 
 ```cmd
 python -m catalogus.cli resolve zangstuk "troparion" --bron-root .
-python -m catalogus.cli resolve uitvoeringsvorm --zangstuk troparion-geboorte-moeder-gods --variant obikhod Groningen --bron-root .
+python -m catalogus.cli resolve uitvoeringsvorm --zangstuk troparion-geboorte-moeder-gods --variant troparion-geboorte-moeder-gods Liturgikon --bron-root .
 ```
 
 Bij unieke match: handmatig **`bron:…`** in de `:::include` zetten.

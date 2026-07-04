@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable, Literal
@@ -27,6 +28,19 @@ class VsaFileEntry:
     representatie_id: str
     path: Path
     origin: Origin
+
+
+@dataclass(frozen=True)
+class ZoekIndexEntry:
+    """Doorzoekbare metadata bij één brondocument (`.vsa` of ander bestand)."""
+
+    entry: VsaFileEntry
+    title: str | None = None
+    gelegenheid: str | None = None
+    gelegenheidstype: str | None = None
+    toon: str | None = None
+    referentie: str | None = None
+    search_terms: frozenset[str] = frozenset()
 
 
 @dataclass
@@ -97,6 +111,7 @@ class AliasIndex:
         default_factory=dict
     )
     vsa_files: list[VsaFileEntry] = field(default_factory=list)
+    zoek_entries: list[ZoekIndexEntry] = field(default_factory=list)
 
     @classmethod
     def build(
@@ -172,17 +187,40 @@ class AliasIndex:
         representatie_id: str,
         path: Path,
         origin: Origin,
+        title: str | None = None,
+        gelegenheid: str | None = None,
+        gelegenheidstype: str | None = None,
+        toon: str | None = None,
+        referentie: str | None = None,
+        extra_search_texts: Iterable[str] | None = None,
     ) -> None:
         if not path.is_file():
             return
-        self.vsa_files.append(
-            VsaFileEntry(
-                zangstuk_id=zangstuk_id,
-                variant_id=variant_id,
-                uitvoeringsvorm_id=uitvoeringsvorm_id,
-                representatie_id=representatie_id,
-                path=path.resolve(),
-                origin=origin,
+        entry = VsaFileEntry(
+            zangstuk_id=zangstuk_id,
+            variant_id=variant_id,
+            uitvoeringsvorm_id=uitvoeringsvorm_id,
+            representatie_id=representatie_id,
+            path=path.resolve(),
+            origin=origin,
+        )
+        self.vsa_files.append(entry)
+        self.zoek_entries.append(
+            ZoekIndexEntry(
+                entry=entry,
+                title=title,
+                gelegenheid=gelegenheid,
+                gelegenheidstype=gelegenheidstype,
+                toon=toon,
+                referentie=referentie,
+                search_terms=_build_search_terms(
+                    zangstuk_id,
+                    variant_id,
+                    uitvoeringsvorm_id,
+                    representatie_id,
+                    title,
+                    *(extra_search_texts or ()),
+                ),
             )
         )
 
@@ -202,13 +240,21 @@ class AliasIndex:
                 variant_manifest = variant_dir / "variant.yaml"
                 aliases: list[object] = [variant_id]
                 title: str | None = None
+                variant_gelegenheid: str | None = None
+                variant_gelegenheidstype: str | None = None
+                variant_toon: str | None = None
+                variant_referentie: str | None = None
                 if variant_manifest.is_file():
                     data = _load_yaml(variant_manifest)
                     yaml_z = data.get("zangstuk-id", zangstuk_id)
                     yaml_v = data.get("variant-id", variant_id)
                     _require_canonical_id(str(yaml_z), str(variant_manifest))
                     _require_canonical_id(str(yaml_v), str(variant_manifest))
-                    title = data.get("title")
+                    title = _metadata_str(data.get("title"))
+                    variant_gelegenheid = _metadata_str(data.get("gelegenheid"))
+                    variant_gelegenheidstype = _metadata_str(data.get("gelegenheidstype"))
+                    variant_toon = _metadata_str(data.get("toon"))
+                    variant_referentie = _metadata_str(data.get("referentie"))
                     aliases.extend(data.get("aliases") or [])
                     if title:
                         aliases.append(title)
@@ -266,6 +312,20 @@ class AliasIndex:
                                     representatie_id=repr_id,
                                     path=(uv_dir / str(file_rel)),
                                     origin=origin,
+                                    title=title,
+                                    gelegenheid=variant_gelegenheid,
+                                    gelegenheidstype=variant_gelegenheidstype,
+                                    toon=variant_toon,
+                                    referentie=variant_referentie,
+                                    extra_search_texts=_collect_alias_texts(
+                                        aliases,
+                                        uv_aliases,
+                                        repr_aliases,
+                                        zangstuk_id,
+                                        variant_id,
+                                        uv_id,
+                                        repr_id,
+                                    ),
                                 )
 
                     uv_table = self._uv_table(zangstuk_id, variant_id)
@@ -278,6 +338,10 @@ class AliasIndex:
             )
             yaml_path = zangstuk_dir / "zangstuk.yaml"
             aliases: list[object] = [zangstuk_id]
+            gelegenheid: str | None = None
+            gelegenheidstype: str | None = None
+            toon: str | None = None
+            title: str | None = None
             if yaml_path.is_file():
                 data = _load_yaml(yaml_path)
                 yaml_id = str(data.get("id", zangstuk_id))
@@ -287,9 +351,12 @@ class AliasIndex:
                         yaml_id,
                         f"{yaml_path}: id komt niet overeen met mapnaam '{zangstuk_id}'",
                     )
-                title = data.get("title")
+                title = _metadata_str(data.get("title"))
+                gelegenheid = _metadata_str(data.get("gelegenheid"))
+                gelegenheidstype = _metadata_str(data.get("gelegenheidstype"))
+                toon = _metadata_str(data.get("toon"))
                 if title:
-                    aliases.append(str(title))
+                    aliases.append(title)
                 aliases.extend(data.get("aliases") or [])
                 for source in data.get("sources") or []:
                     if not isinstance(source, dict):
@@ -318,6 +385,19 @@ class AliasIndex:
                             representatie_id=source_id,
                             path=(zangstuk_dir / str(file_rel)),
                             origin=origin,
+                            title=title,
+                            gelegenheid=gelegenheid,
+                            gelegenheidstype=gelegenheidstype,
+                            toon=toon,
+                            referentie=_metadata_str(source.get("reference")),
+                            extra_search_texts=_collect_alias_texts(
+                                aliases,
+                                source_aliases,
+                                zangstuk_id,
+                                source.get("description"),
+                                source.get("author"),
+                                source.get("composer"),
+                            ),
                         )
                         repr_table = self._repr_table(
                             zangstuk_id, zangstuk_id, source_id
@@ -470,3 +550,51 @@ class AliasIndex:
                 sorted({str(entry.path) for entry in matches}),
             )
         raise PathNotFoundError(f"Geen .vsa-bestand gevonden voor {reference!r}")
+
+
+def _metadata_str(value: object) -> str | None:
+    if value is None:
+        return None
+    text = str(value).strip()
+    return text or None
+
+
+def _collect_alias_texts(*values: object) -> list[str]:
+    texts: list[str] = []
+    for value in values:
+        if value is None:
+            continue
+        if isinstance(value, str):
+            if value.strip():
+                texts.append(value)
+            continue
+        if isinstance(value, dict) and "text" in value:
+            text = str(value["text"]).strip()
+            if text:
+                texts.append(text)
+            continue
+        if isinstance(value, Iterable) and not isinstance(value, (str, bytes, dict)):
+            texts.extend(_collect_alias_texts(*value))
+    return texts
+
+
+def _build_search_terms(*values: object) -> frozenset[str]:
+    terms: set[str] = set()
+    for value in values:
+        if value is None:
+            continue
+        if isinstance(value, str):
+            norm = normalize_for_match(value)
+            if not norm:
+                continue
+            terms.add(norm)
+            for token in re.split(r"[\s\-_/(),]+", norm):
+                if len(token) >= 2:
+                    terms.add(token)
+            continue
+        if isinstance(value, dict) and "text" in value:
+            terms.update(_build_search_terms(str(value["text"])))
+            continue
+        if isinstance(value, Iterable) and not isinstance(value, (str, bytes, dict)):
+            terms.update(_build_search_terms(*value))
+    return frozenset(terms)

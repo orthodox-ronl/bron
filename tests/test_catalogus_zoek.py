@@ -156,32 +156,53 @@ def test_zoek_result_ook_in_bron_property() -> None:
     assert result.has_ook_in_bron
 
 
-def test_zoek_stub_raises_not_implemented(fixture_index: AliasIndex) -> None:
-    with pytest.raises(NotImplementedError, match="catalogus-zoek-api"):
-        zoek("Troparion", index=fixture_index)
+def test_zoek_troparion_geboorte_moeder_gods_bron() -> None:
+    repo_root = Path(__file__).resolve().parents[1]
+    result = zoek_met_roots(
+        "Troparion",
+        bron_root=repo_root,
+        context=ZoekContext(gelegenheid="geboorte-moeder-gods"),
+    )
+    assert (
+        result.catalogus_pad
+        == "bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon"
+    )
 
 
-def test_zoek_kandidaten_stub_raises_not_implemented(fixture_index: AliasIndex) -> None:
-    with pytest.raises(NotImplementedError, match="catalogus-zoek-api"):
-        zoek_kandidaten("Troparion", index=fixture_index)
+def test_zoek_kondakion_geboorte_moeder_gods_bron() -> None:
+    repo_root = Path(__file__).resolve().parents[1]
+    result = zoek_met_roots(
+        "Kondakion",
+        bron_root=repo_root,
+        context=ZoekContext(gelegenheid="geboorte-moeder-gods"),
+    )
+    assert (
+        result.catalogus_pad
+        == "bron:kondak-geboorte-moeder-gods/kondak-geboorte-moeder-gods/liturgikon"
+    )
 
 
-def test_zoek_met_roots_stub_raises_not_implemented() -> None:
-    with pytest.raises(NotImplementedError, match="catalogus-zoek-api"):
-        zoek_met_roots(
-            "Troparion",
-            fixture_root=FIXTURE_ROOT,
-            context=ZoekContext(gelegenheid="geboorte-moeder-gods"),
-        )
+def test_zoek_cherubijnenhymne_lokaal_voor_bron(fixture_index: AliasIndex) -> None:
+    result = zoek(
+        "Cherubijnenhymne (Kastorski)",
+        index=fixture_index,
+        context=ZoekContext(uitvoeringsvorm="Groningen"),
+    )
+    assert (
+        result.catalogus_pad
+        == "lokaal:cherubijnenhymne/kastorski/groningen/groningen-vsa"
+    )
+    assert result.has_ook_in_bron is False
 
 
-def test_zoek_kandidaten_met_roots_stub_raises_not_implemented() -> None:
-    with pytest.raises(NotImplementedError, match="catalogus-zoek-api"):
-        zoek_kandidaten_met_roots(
-            "Troparion",
-            fixture_root=FIXTURE_ROOT,
-            context=ZoekContext(gelegenheid="geboorte-moeder-gods"),
-        )
+def test_zoek_kandidaten_lijst(fixture_index: AliasIndex) -> None:
+    lijst = zoek_kandidaten(
+        "Cherubijnenhymne",
+        index=fixture_index,
+        context=ZoekContext(uitvoeringsvorm="Groningen"),
+    )
+    assert len(lijst.matches) == 1
+    assert lijst.catalogus_paden[0].startswith("lokaal:cherubijnenhymne/")
 
 
 def test_zoek_rejects_empty_query(fixture_index: AliasIndex) -> None:

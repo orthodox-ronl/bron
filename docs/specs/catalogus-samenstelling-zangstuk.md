@@ -156,8 +156,8 @@ Normatief API-contract: [catalogus-zoek-api.md](catalogus-zoek-api.md).
 (`alt`, `label`, `scale`, …) blijven staan.
 
 ```markdown
-:::include svg bron:troparion-geboorte-moeder-gods/obikhod/groningen alt="Troparion" scale="85%":::
-:::include coria bron:troparion-geboorte-moeder-gods/obikhod/groningen label="Oefenen Troparion" mode="auto":::
+:::include svg bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon alt="Troparion" scale="85%":::
+:::include coria bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon label="Oefenen Troparion" mode="auto":::
 ```
 
 Handmatig (na review):
