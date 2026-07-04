@@ -1988,8 +1988,10 @@ gepusht. GitHub Pages moet die branch <strong>serveren</strong> — niet <code>m
 </tr>
 </tbody>
 </table>
-<p>Workflow: <code>.github/workflows/docs-pages.yml</code> — <code>keep_files: true</code> houdt productie
-en preview naast elkaar.</p>
+<p>Workflow: <code>.github/workflows/docs-pages.yml</code> — bouwt MkDocs, uploadt een artifact,
+en roept de herbruikbare deploy-workflow uit
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/.github/workflows/pages-deploy-reusable.yml"><code>VSA-tooling/pages-deploy-reusable.yml</code></a>
+aan (<code>keep_files: true</code>, publicatiecheck vóór deploy).</p>
 <h2 id="veelvoorkomend-probleem-je-ziet-readme-ipv-mkdocs">Veelvoorkomend probleem: je ziet README i.p.v. MkDocs<a class="headerlink" href="#veelvoorkomend-probleem-je-ziet-readme-ipv-mkdocs" title="Permanent link">&para;</a></h2>
 <p><strong>Symptoom:</strong> op github.io staat de tekst uit <strong><code>README.md</code></strong> (repo-root), zonder
 header-tabs, zonder Material-thema.</p>
