@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://orthodox-groningen.github.io/bron/specs/catalogus-zoek-api/">
       
       
+        <link rel="prev" href="../catalogus-architectuur/">
+      
+      
+        <link rel="next" href="../catalogus-samenstelling-zangstuk/">
       
       
         
@@ -214,10 +218,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -372,28 +378,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -411,7 +420,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -669,6 +678,313 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogus — zoek-API (contract)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogus — zoek-API (contract)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#doel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Doel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parochie-context-normatief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parochie-context (normatief)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zoekgedrag-abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoekgedrag (abstract)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twee-contextlagen-geen-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Twee contextlagen (geen conflict)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python-API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python-API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zoekcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZoekContext
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoekmatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZoekMatch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoeklijstresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZoekLijstResult
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoekresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZoekResult
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoek_kandidaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zoek_kandidaten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zoek
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consumentenmatrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consumentenmatrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-catalogus-zoek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI — catalogus zoek
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiguiteit-en-auteur-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiguïteit en auteur-workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consumentencontract-vsa-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consumentencontract (VSA-tooling)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consumentencontract (VSA-tooling)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markdown-include-zoek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Markdown — :::include zoek="…"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsa-include-vsa-zoek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VSA — @include-vsa zoek="…"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foutmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foutmodel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementatiestatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementatiestatus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wijzigingshistorie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wijzigingshistorie
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 

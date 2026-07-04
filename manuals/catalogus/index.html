@@ -687,6 +687,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../specs/catalogus-zoek-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogus — zoek-API (contract)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../specs/catalogus-samenstelling-zangstuk/" class="md-nav__link">
         
   
@@ -1082,6 +1110,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Persona&#39;s en context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groningen-groningen-en-vokn-in-deze-verhalen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Groningen, groningen en vokn in deze verhalen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1842,6 +1887,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Persona&#39;s en context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groningen-groningen-en-vokn-in-deze-verhalen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Groningen, groningen en vokn in deze verhalen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1965,6 +2027,37 @@ als basis voor latere handleidingen en GUI-ontwerp.</p>
 </table>
 <p>Terminologie: <a href="../../specs/terminologie/">terminologie §2</a> — opslag blijft vier
 niveaus; Rene typt vooral <strong>zoektekst</strong>.</p>
+<h3 id="groningen-groningen-en-vokn-in-deze-verhalen"><code>Groningen</code>, <code>groningen</code> en <code>vokn</code> in deze verhalen<a class="headerlink" href="#groningen-groningen-en-vokn-in-deze-verhalen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Betekenis in de verhalen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Parochie Groningen</strong></td>
+<td>Persona / plaats — geen catalogus-id</td>
+</tr>
+<tr>
+<td><strong><code>default.uitvoeringsvorm: Groningen</code></strong></td>
+<td>Parochie-default bij zoeken (invoer alias)</td>
+</tr>
+<tr>
+<td><strong><code>uitvoeringsvorm-id: groningen</code></strong></td>
+<td>Parochie-specifieke uitvoeringsvorm (bijv. Nana's Kastorski-bewerking)</td>
+</tr>
+<tr>
+<td><strong><code>vokn</code></strong></td>
+<td>(Gepland in glossary) VOKN-standaardkoormap — <strong>niet</strong> hetzelfde als <code>groningen</code></td>
+</tr>
+</tbody>
+</table>
+<p>Tot de glossary-PR over <strong><code>vokn</code></strong> vastligt, gebruiken de verhalen <strong><code>Groningen</code></strong>
+/<code>groningen</code> waar het om <strong>parochiepraktijk</strong> gaat. Materiaal rechtstreeks uit de
+VOKN-standaardkoormap krijgt later <strong><code>uitvoeringsvorm-id: vokn</code></strong>; zie
+<a href="../../plans/samenvatting-project/">samenvatting-project — legacy yaml</a>.</p>
 <h2 id="interface-gui-beoogd-en-cli-nu">Interface: GUI (beoogd) en CLI (nu)<a class="headerlink" href="#interface-gui-beoogd-en-cli-nu" title="Permanent link">&para;</a></h2>
 <div class="admonition todo">
 <p class="admonition-title">GUI + resolve-catalogus</p>
@@ -1974,7 +2067,8 @@ review). Vandaag: <strong><code>catalogus resolve</code></strong>, <strong><code
 </div>
 <p>Technische referentie: <a href="../../reference/catalogus-cli/">Catalogus CLI</a>,
 <a href="../../specs/catalogus-architectuur/">Catalogus-architectuur</a>,
-<a href="../../specs/catalogus-samenstelling-zangstuk/">zangstuk in samenstelling-sjablonen</a>.</p>
+<a href="../../specs/catalogus-zoek-api/">Catalogus — zoek-API</a>,
+<a href="../../specs/catalogus-samenstelling-zangstuk/">Zangstuk in samenstelling-sjablonen</a>.</p>
 <h2 id="verhalen">Verhalen<a class="headerlink" href="#verhalen" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
