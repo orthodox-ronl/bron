@@ -1,6 +1,6 @@
 # Catalogus — zangstuk-opzoeken in sjablonen en samenstellingen
 
-Status: **ontwerp** (normatief zodra geïmplementeerd).
+Status: **normatief** (geïmplementeerd, basis).
 
 Gerelateerd: [terminologie §2.8](terminologie.md), [catalogus-architectuur](catalogus-architectuur.md),
 [samenstelling §18](terminologie.md#18-samenstelling), [exportcontracten](../reference/exportcontracten.md).
@@ -45,8 +45,26 @@ document qua syntax; beide **`zoek=`**-varianten gebruiken dezelfde resolver —
 | **`default.gelegenheid`** | **Niet** — geen individuele feesten | **Wel** — Rene vult in |
 | **`default.gelegenheidstype`** | **Wel** — `vast-feest` \| `zondag-cyclus` | Overnemen of bevestigen |
 | **`default.toon`** | Alleen in koormap-sjablonen (placeholder) | Bij zondag-cyclus invullen |
-| **`default.uitvoeringsvorm`** | Parochie-default (bijv. `Groningen`) | Meestal overnemen |
+| **`default.uitvoeringsvorm`** | Parochie-default (bijv. `Groningen`) | Alleen bij **homogene** sessie; zie mixed session |
 | **Includes** | `:::include svg zoek="Troparion" …` | Zelfde regels; na resolve: `bron:…` / `lokaal:…` |
+
+<a id="mixed-session"></a>
+
+### Mixed session (bron + parochie-lokaal)
+
+Eén dienst kan **verschillende uitvoeringsvormen** nodig hebben — bijv. feest-troparion uit
+**bron** (`uitvoeringsvorm-id: liturgikon`) naast Cherubijnenhymne **lokaal**
+(`uitvoeringsvorm-id: groningen`).
+
+| Aanpak | Wanneer |
+| ------ | ------- |
+| **`default.uitvoeringsvorm` weglaten** in de **sessie** | Bron- en lokaal-stukken in één liturgiemap |
+| Disambiguation in `zoek=` | Bijv. `Cherubijnenhymne (Kastorski)` |
+| **`default.uitvoeringsvorm: Groningen`** in sessie | Alleen als **alle** includes die parochie-praktijk delen |
+
+Demo: `geboorte-moeder-gods-2026.md` — geen `uitvoeringsvorm` in sessie-frontmatter;
+resolve levert `bron:…/liturgikon` voor Troparion/Kondakion en
+`lokaal:cherubijnenhymne/kastorski/groningen` voor de Cherubijnenhymne.
 
 Het sjabloon beschrijft **structuur** en **liturgische rol** (`Troparion`, `Kondakion`,
 `Cherubijnenhymne`). De **gelegenheid** (`geboorte-moeder-gods`, …) hoort in de
@@ -96,7 +114,7 @@ default:
 ---
 ```
 
-**Sessie** (Rene voor 8 september):
+**Sessie** (Rene voor 8 september — mixed session, geen `uitvoeringsvorm`):
 
 ```yaml
 ---
@@ -106,7 +124,6 @@ default:
   gelegenheid: geboorte-moeder-gods
   gelegenheidstype: vast-feest
   toon: 4
-  uitvoeringsvorm: Groningen
 ---
 ```
 
@@ -157,8 +174,13 @@ Normatief API-contract: [catalogus-zoek-api.md](catalogus-zoek-api.md).
 
 ```markdown
 :::include svg bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon alt="Troparion" scale="85%":::
-:::include coria bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon label="Oefenen Troparion" mode="auto":::
+:::include svg bron:kondak-geboorte-moeder-gods/kondak-geboorte-moeder-gods/liturgikon alt="Kondakion":::
+:::include svg lokaal:cherubijnenhymne/kastorski/groningen alt="Cherubijnenhymne":::
 ```
+
+**Coria op `bron:`** — resolve schrijft het catalogus-pad correct, maar **`:::include coria`**
+faalt bij build zolang het `.vsa` **buiten** `--content-root` ligt (typisch org-bron).
+**SVG** op `bron:` werkt wel. Zie [exporttype-coria](../reference/exporttype-coria.md).
 
 Handmatig (na review):
 
@@ -238,6 +260,7 @@ Tooling: [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groninge
 | `:::include` parameter `zoek=` | **Geïmplementeerd** (VSA-tooling) |
 | `@include-vsa zoek=` | **Geïmplementeerd** (VSA-tooling) |
 | `vsa resolve-catalogus` | **Geïmplementeerd** (VSA-tooling) |
+| `coria` / `mxl` op `bron:` catalogus-pad | **Beperkt** — `.vsa` buiten content-root |
 | Review-UI / `--interactive` | **Gepland** |
 | `:::include mp3-player` | **Gepland** (exporttype) |
 | Hugo-publicatie `samenstellingen/` | **Gepland** (demo slaat map over) |
@@ -251,4 +274,4 @@ Tooling: [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groninge
 | 2026-07 | Eerste versie; `default`; `pad` / `referentie` |
 | 2026-07 | Directive **`:::zangstuk`** i.p.v. `:::invul` |
 | 2026-07 | **`:::include zoek=`** i.p.v. `:::zangstuk`; sjabloon zonder `gelegenheid`; `vsa resolve-catalogus` |
-| 2026-07 | Doc-sync: implementatiestatus zoek/resolve geïmplementeerd |
+| 2026-07 | Doc-sync: mixed session, liturgikon-paden, coria-beperking op `bron:` |

@@ -288,7 +288,11 @@ cd /d C:\Git\orthodox-groningen\bron
 python -m catalogus.cli zoek "Troparion" ^
   --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
   --bron-root . ^
-  --default-gelegenheid geboorte-moeder-gods ^
+  --default-gelegenheid geboorte-moeder-gods
+
+python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
+  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --bron-root . ^
   --default-uitvoeringsvorm Groningen
 ```
 
@@ -385,4 +389,4 @@ VSA-tooling (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
 | 2026-07 | Fase 0: normatief API-contract; stub `zoek()`; `@include-vsa` als consument |
 | 2026-07 | Abstract zoekgedrag; `bestandsextensie`; `zoek_kandidaten` / `--lijst`; NL metadata |
 | 2026-07 | Parochie-context; lokaal vóór bron; `ook_gevonden_in_bron`; twee contextlagen; ambiguïteit |
-| 2026-07 | Implementatie `zoek_kandidaten` / VSA-consumenten; doc-sync |
+| 2026-07 | Doc-sync: mixed session, liturgikon-voorbeelden, coria-beperking |

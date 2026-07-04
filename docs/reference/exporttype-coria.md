@@ -62,7 +62,7 @@ Exporteer `.coria.html` vanuit Coria na partijkeuze; build kopieert naar
 | **Type**               | Relatief pad naar `.vsa`                                             |
 | **Doel**               | Anker voor sibling `{stem}.coria.html` en MXL-URL-afleiding          |
 | **Toegestane waarden** | Bestaand `.vsa`-bestand onder content-root                           |
-| **Verboden**           | Ontbrekend bestand, geen `.vsa`-extensie                             |
+| **Verboden**           | Ontbrekend bestand, geen `.vsa`-extensie, pad buiten content-root   |
 | **Effect**             | Bepaalt URL-paden `/coria/…` of `/vsa/mxl/…`                         |
 | **Voorbeeld ongeldig** | `"ontbreekt.vsa"` → `CoriaDirectiveError: VSA-bestand niet gevonden` |
 
@@ -128,6 +128,10 @@ en build moet MXL naar static kopiëren (deels gepland).
 | ---------------------------- | ------------- | --------------------------------------- |
 | `.vsa` bestaat               | coria-resolve | Ja                                      |
 | `.vsa` onder content-root    | pad-resolve   | Ja — `Bestand ligt buiten content-root` |
+
+**Catalogus-pad `bron:`:** na **`vsa resolve-catalogus`** wijst de include naar een `.vsa` in
+org-bron (buiten parochie `--content-root`). Coria-export faalt dan bij build; **svg** op
+hetzelfde catalogus-pad werkt wel. Zie [catalogus-samenstelling-zangstuk](../specs/catalogus-samenstelling-zangstuk.md).
 | `mode=html` + sibling        | coria-resolve | Ja                                      |
 | VSA-inhoud semantisch geldig | —             | **Nee** in huidige coria-pass           |
 | MXL bereikbaar               | runtime       | Nee bij build; wel 404 voor gebruiker   |

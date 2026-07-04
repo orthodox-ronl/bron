@@ -103,6 +103,13 @@ sequenceDiagram
 Geïmplementeerd: **`catalogus zoek`**, **`vsa resolve-catalogus`**, **`@include-vsa zoek=`**
 (zie [catalogus-zoek-api.md](catalogus-zoek-api.md)).
 
+**Demo-end-to-end:** sjabloon
+`sjablonen/goddelijke-liturgie-groningen.md`, sessie
+`samenstellingen/geboorte-moeder-gods-2026.md` (mixed session: bron `liturgikon` +
+lokaal `groningen`).
+
+**Beperking:** `coria` / `mxl` op `bron:` catalogus-pad — `.vsa` buiten content-root.
+
 Consument **`@include-vsa zoek=`** in `.vsa`-brontekst gebruikt dezelfde `catalogus.zoek`-API
 (in-memory expand; zie [catalogus-zoek-api.md](catalogus-zoek-api.md)).
 

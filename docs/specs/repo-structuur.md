@@ -76,7 +76,7 @@ stabiele `id` onder `zangstukken/`.
 | Concept | Locatie | Status |
 | ------- | ------- | ------ |
 | **Compositie** (org) | `composities/*.yaml` in **bron** | Toekomst — geordende yaml-lijst |
-| **Sjabloon** (parochie) | markdown in parochie **content-source** | Ontwerp — `default.gelegenheidstype`, `:::include zoek=` |
+| **Sjabloon** (parochie) | markdown in parochie **content-source** | **Geïmplementeerd** — `default.gelegenheidstype`, `:::include zoek=` |
 | **Samenstelling** | markdown publicatie parochie | §18 terminologie |
 
 Compositie-yaml in bron: [Plannen: samenvatting project](../plans/samenvatting-project.md).

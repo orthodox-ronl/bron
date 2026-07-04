@@ -98,18 +98,17 @@ In het sjabloon (verhaal 1) blijven de includes met **`zoek=`**:
 :::include mxl zoek="Cherubijnenhymne (Kastorski)" label="Download partituur (MusicXML)":::
 ```
 
-**Beoogd** na **`vsa resolve-catalogus`** (wanneer `:::include mxl` live is):
+**Na **`vsa resolve-catalogus`** (parochie-lokaal, MXL als sibling van `.vsa`):
 
 ```markdown
 ## Cherubijnenhymne
 
-:::include svg bron:cherubijnenhymne/kastorski/groningen:::
-
-:::include mxl bron:cherubijnenhymne/kastorski/groningen label="Download partituur (MusicXML)":::
+:::include svg lokaal:cherubijnenhymne/kastorski/groningen alt="Cherubijnenhymne":::
+:::include mxl lokaal:cherubijnenhymne/kastorski/groningen label="Download partituur (MusicXML)":::
 ```
 
-**Nu:** Rene zet een handmatige link naar het gepubliceerde bestand op de
-parochie-site, of wacht op implementatie van het mxl-exporttype.
+**Beperking:** `mxl` / `coria` op **`bron:`** catalogus-pad — `.vsa` buiten content-root.
+Handmatig MXL in repo blijft geldig; build levert download-URL naar static.
 
 Build-time generatie blijft gescheiden: de site levert een **download-URL** naar
 het **bron**-bestand; `vsa musicxml` draait niet in de Hugo-build voor dit

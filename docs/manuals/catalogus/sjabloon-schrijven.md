@@ -39,7 +39,8 @@ Zie ook [samenvatting-project — sjabloon vs compositie](../../plans/samenvatti
 
 ## Stap 1 — Frontmatter (sjabloon)
 
-Minimaal **`default.gelegenheidstype`** en **`default.uitvoeringsvorm`**.
+Minimaal **`default.gelegenheidstype`**. **`default.uitvoeringsvorm`** alleen als het
+sjabloon bedoeld is voor **homogene** sessies (zelfde parochie-praktijk overal).
 
 Geen **`default.gelegenheid`** in het sjabloon — die zet Rene in de **sessie**.
 
@@ -52,7 +53,7 @@ default:
 ---
 ```
 
-**Sessie** (Rene, Geboorte Moeder Gods):
+**Sessie** (Rene, Geboorte Moeder Gods — **mixed session**):
 
 ```yaml
 ---
@@ -62,9 +63,12 @@ default:
   gelegenheid: geboorte-moeder-gods
   gelegenheidstype: vast-feest
   toon: 4
-  uitvoeringsvorm: Groningen
 ---
 ```
+
+Feest-stukken komen uit **bron** (`liturgikon`); Cherubijnenhymne uit **lokaal**
+(`groningen`). Daarom **geen** `default.uitvoeringsvorm` in deze sessie — één
+parochie-default dekt beide niet. Zie [mixed session](../../specs/catalogus-samenstelling-zangstuk.md#mixed-session).
 
 Eigen yaml-sleutels naast `sjabloon` / `titel` / `default` / `bronnen` mag — de
 catalogus negeert ze.
@@ -127,12 +131,16 @@ Rene zet in de sessie **`default.toon`**. In `zoek=` geen toon herhalen:
 
 1. **`catalogus index validate`** — index in orde.
 2. **`vsa resolve-catalogus`** — vervangt elke `zoek=` door `bron:…` / `lokaal:…`;
-   bij ambiguïteit review (GUI later, CLI interactief of handmatig).
-3. **`vsa validate`** en **`vsa build-markdown`** — alleen op het **opgeloste** bestand.
+   bij ambiguïteit: `catalogus zoek --lijst` of verfijn `default.*` / `zoek=`.
+3. **`vsa validate`** en **`vsa build-markdown`** — op het **opgeloste** bestand.
 
 **Let op:** mappen `samenstellingen/` en `sjablonen/` worden in de Hugo-demo **niet**
 automatisch gepubliceerd (`build-markdown` slaat ze over). Kopieer opgeloste inhoud
 naar een publishbare content-map, of pas de build-config aan.
+
+**Export:** **`:::include svg`** op `bron:` werkt; **`:::include coria`** op `bron:`
+faalt zolang het `.vsa` buiten `--content-root` staat (org-bron). Coria op `lokaal:`
+werkt wel.
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron

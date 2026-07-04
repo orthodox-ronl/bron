@@ -41,8 +41,9 @@ niveaus; Rene typt vooral **zoektekst**.
 | Term | Betekenis in de verhalen |
 | ---- | ------------------------ |
 | **Parochie Groningen** | Persona / plaats — geen catalogus-id |
-| **`default.uitvoeringsvorm: Groningen`** | Parochie-default bij zoeken (invoer alias) |
+| **`default.uitvoeringsvorm: Groningen`** | Parochie-default bij zoeken (invoer alias) — **niet** in mixed session |
 | **`uitvoeringsvorm-id: groningen`** | Parochie-specifieke uitvoeringsvorm (bijv. Nana's Kastorski-bewerking) |
+| **`uitvoeringsvorm-id: liturgikon`** | Bron-uitvoeringsvorm (Liturgikon-model; demo feest-stukken) |
 | **`vokn`** | (Gepland in glossary) VOKN-standaardkoormap — **niet** hetzelfde als `groningen` |
 
 Tot de glossary-PR over **`vokn`** vastligt, gebruiken de verhalen **`Groningen`**

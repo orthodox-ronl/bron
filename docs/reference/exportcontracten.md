@@ -46,8 +46,8 @@ Pad is **relatief aan het includerende `.md`-bestand** (niet aan de projectroot)
 :::include mxl "pad/melodie.vsa" label="Download MusicXML":::
 ```
 
-**Catalogus-zoek (sjabloon/sessie)** — pad vervangen door `zoek=` tot
-`vsa resolve-catalogus` is gedraaid:
+**Catalogus-zoek (sjabloon/sessie)** — `zoek=` tot **`vsa resolve-catalogus`** is gedraaid;
+daarna catalogus-pad:
 
 ```markdown
 :::include svg zoek="Troparion" alt="Troparion" scale="85%":::
@@ -57,6 +57,9 @@ Pad is **relatief aan het includerende `.md`-bestand** (niet aan de projectroot)
 Zie [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md),
 [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
 
+**Beperking:** `coria` / `mxl` op **`bron:`** catalogus-pad — `.vsa` ligt vaak buiten
+content-root; **svg** op `bron:` werkt wel.
+
 ### Huidige implementatie
 
 | Syntax                                         | Status              | Opmerking                                         |
@@ -65,6 +68,7 @@ Zie [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangs
 | `:::coria "melodie.vsa"`                       | **Geïmplementeerd** | Alias voor exporttype `coria`                     |
 | `:::include svg\|coria\|mxl "…"`               | **Geïmplementeerd** | Pad of catalogus-pad                              |
 | `:::include <type> zoek="…"`                    | **Geïmplementeerd** | Resolve via `vsa resolve-catalogus` vóór build    |
+| `coria` / `mxl` op `bron:` catalogus-pad         | **Beperkt**         | `.vsa` buiten content-root                        |
 | `:::include mp3-player`                         | **Gepland**         | Exporttype nog niet in VSA-tooling                |
 
 Voor open `zoek=`: **`vsa resolve-catalogus`** of handmatig **`bron:…`** / **`lokaal:…`**.

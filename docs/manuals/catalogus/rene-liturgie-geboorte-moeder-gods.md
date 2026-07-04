@@ -30,6 +30,7 @@ kandidaten teruggeeft (review).
 | --- | --- | --- |
 | **`default.gelegenheid`** | ontbreekt | `geboorte-moeder-gods` |
 | **`default.gelegenheidstype`** | `vast-feest` | overnemen |
+| **`default.uitvoeringsvorm`** | optioneel (homogene sessies) | **weglaten** bij mixed session |
 | **`zoek=`** | `Troparion`, `Kondakion`, … | zelfde regels |
 | **Tekst ertussen** | wel | wel (aanpassen mag) |
 
@@ -108,12 +109,19 @@ default:
 
 (Daarna dezelfde markdown als het sjabloon, eventueel met aangepaste tekst.)
 
+**Mixed session:** geen `default.uitvoeringsvorm` — feest-stukken uit bron (`liturgikon`),
+Cherubijnenhymne lokaal (`groningen`).
+
 Na **`vsa resolve-catalogus`**:
 
 ```markdown
 :::include svg bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon alt="Troparion" scale="85%":::
-:::include coria bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon label="Oefenen Troparion" mode="auto":::
+:::include svg bron:kondak-geboorte-moeder-gods/kondak-geboorte-moeder-gods/liturgikon alt="Kondakion":::
+:::include svg lokaal:cherubijnenhymne/kastorski/groningen alt="Cherubijnenhymne":::
 ```
+
+**Coria** op `bron:`-paden faalt bij build zolang `.vsa` buiten content-root ligt;
+**svg** werkt wel. Coria op `lokaal:` werkt.
 
 ---
 
@@ -135,10 +143,9 @@ python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooli
 python -m catalogus.cli zoek "Troparion" ^
   --bron-root . ^
   --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
-  --default-gelegenheid geboorte-moeder-gods ^
-  --default-uitvoeringsvorm Groningen
+  --default-gelegenheid geboorte-moeder-gods
 
-python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" --lijst ^
+python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
   --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
   --bron-root .
 ```

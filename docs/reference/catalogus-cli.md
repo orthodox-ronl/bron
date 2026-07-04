@@ -46,10 +46,11 @@ Normatief contract: [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md).
 python -m catalogus.cli zoek "Troparion" ^
   --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
   --bron-root . ^
-  --default-gelegenheid geboorte-moeder-gods ^
-  --default-uitvoeringsvorm Groningen
+  --default-gelegenheid geboorte-moeder-gods
 
-python -m catalogus.cli zoek "Troparion" --lijst --bron-root .
+python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
+  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --bron-root .
 ```
 
 **Status:** **geïmplementeerd** (basis). Exitcode **1** = geen match of ambiguïteit (strict);
@@ -138,7 +139,7 @@ index.resolve_uitvoeringsvorm(
 
 # Zoek-API (geïmplementeerd, basis):
 ctx = ZoekContext.from_default_mapping(
-    {"gelegenheid": "geboorte-moeder-gods", "uitvoeringsvorm": "Groningen"}
+    {"gelegenheid": "geboorte-moeder-gods"}
 )
 # lijst = zoek_kandidaten("Troparion", index=index, context=ctx)
 # lijst.catalogus_paden

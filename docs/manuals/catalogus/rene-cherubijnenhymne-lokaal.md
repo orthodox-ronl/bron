@@ -130,10 +130,16 @@ In het liturgie-sjabloon (verhaal 1):
 :::include svg zoek="Cherubijnenhymne (Kastorski)" alt="Cherubijnenhymne":::
 ```
 
-Met `default.uitvoeringsvorm: Groningen` in de sessie-frontmatter. Na
+Met `default.uitvoeringsvorm: Groningen` in de **sessie** (homogene liturgie) of
+disambiguation `Cherubijnenhymne (Kastorski)` in mixed session. Na
 **`vsa resolve-catalogus`**
-(bijv. `:::include svg lokaal:cherubijnenhymne/kastorski/groningen:::`) of tijdelijk
-handmatig **`lokaal:…`** / **`bron:…`** in de include.
+(bijv. `:::include svg lokaal:cherubijnenhymne/kastorski/groningen:::`).
+
+```cmd
+python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
+  --content-root C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source ^
+  --bron-root C:\Git\orthodox-groningen\bron
+```
 
 ---
 

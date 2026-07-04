@@ -448,7 +448,7 @@ ingevuld (opgelost pad) is een **samenstelling** (§18). Zie
 | Geneste yaml variant→uitvoeringsvorm→repr in bron  | Uitgesteld |
 | Manifest-term bij geneste yaml in bron (§16)       | Open       |
 | Alias-resolver in tooling                          | Geïmplementeerd (basis) — zie [catalogus-architectuur](catalogus-architectuur.md) |
-| Sjabloon `:::include zoek=` + `vsa resolve-catalogus` | Ontwerp — zie [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md) |
+| Sjabloon `:::include zoek=` + `vsa resolve-catalogus` | **Geïmplementeerd** (basis) — zie [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md) |
 | **referentie** (herkomst) vs **catalogus-pad** in docs | Gedocumenteerd in catalogus-samenstelling-zangstuk.md |
 | Metadata-zoek (`catalogus.zoek` / `zoek_kandidaten`) | **Geïmplementeerd** (basis) |
 | Automatische terminologie-lint (R1–R2)             | Open       |
