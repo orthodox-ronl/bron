@@ -2080,6 +2080,9 @@ python -m catalogus.cli zoek &quot;Troparion&quot; --lijst --bron-root .
 </code></pre></div>
 <p><strong>Status:</strong> CLI en Python-API aanwezig; <strong><code>zoek_kandidaten()</code></strong> werpt <code>NotImplementedError</code> tot fase 4.
 Exitcode <strong>2</strong> = nog niet geïmplementeerd; <strong>1</strong> = geen match (na implementatie).</p>
+<p><strong>Parochie-context:</strong> <code>--content-root</code> = parochie content-source (<code>lokaal/</code>); <code>--bron-root</code> =
+org-bron. <strong>Lokaal vóór bron</strong>; bij lokaal-winst kan <strong><code>ZoekResult.ook_gevonden_in_bron</code></strong>
+gevuld zijn — toon met <strong><code>--verbose</code></strong> (waarschuwing op stderr).</p>
 <h3 id="catalogus-resolve"><code>catalogus resolve</code><a class="headerlink" href="#catalogus-resolve" title="Permanent link">&para;</a></h3>
 <p>Los alias of hoofdletter-variant op naar canoniek id.</p>
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli resolve zangstuk &quot;1e antifoon weekdagen&quot; --content-root ..\VSA-tooling\examples\hugo-demo\content-source

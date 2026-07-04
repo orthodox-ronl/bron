@@ -788,6 +788,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#parochie-samenstelling-optioneel-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parochie-samenstelling — optioneel default:
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1970,6 +1981,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#parochie-samenstelling-optioneel-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parochie-samenstelling — optioneel default:
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2074,6 +2096,22 @@
 </code></pre></div>
 <p><strong>Voorrangsregel:</strong> <code>zangstuk.yaml</code> is leidend voor overlappende identificatievelden.
 Frontmatter dient voor gebruik van het <code>.vsa</code>-bestand buiten deze repository.</p>
+<h3 id="parochie-samenstelling-optioneel-default">Parochie-samenstelling — optioneel <code>default:</code><a class="headerlink" href="#parochie-samenstelling-optioneel-default" title="Permanent link">&para;</a></h3>
+<p>Wanneer een <code>.vsa</code> <strong><code>@include-vsa zoek=</code></strong> bevat of in een parochie-context staat,
+mag frontmatter een <strong><code>default:</code></strong>-blok spiegelen (zelfde sleutels als markdown-sessie):</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">default</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">gelegenheid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geboorte-moeder-gods</span>
+<span class="w">  </span><span class="nt">gelegenheidstype</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vast-feest</span>
+<span class="w">  </span><span class="nt">uitvoeringsvorm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Groningen</span>
+<span class="nt">muziek</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">do</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">F4</span>
+<span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">major</span>
+<span class="nn">---</span>
+</code></pre></div>
+<p>Dit is <strong><code>ZoekContext</code></strong> voor catalogus-zoekacties op <em>dit</em> bestand — niet hetzelfde
+als <code>gelegenheid</code> / <code>toon</code> op <strong><code>zangstuk.yaml</code></strong> (catalog-metadata). Zie
+<a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a> § twee contextlagen.</p>
 <h2 id="voorbeeld">Voorbeeld<a class="headerlink" href="#voorbeeld" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">troparion-zondag-toon-1</span>
 <span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Troparion - Zondag, toon 1</span>

@@ -1720,10 +1720,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#parochie-context-normatief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parochie-context (normatief)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#zoekgedrag-abstract" class="md-nav__link">
     <span class="md-ellipsis">
       
         Zoekgedrag (abstract)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twee-contextlagen-geen-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Twee contextlagen (geen conflict)
       
     </span>
   </a>
@@ -1829,6 +1851,17 @@
     <span class="md-ellipsis">
       
         CLI — catalogus zoek
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambiguiteit-en-auteur-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ambiguïteit en auteur-workflow
       
     </span>
   </a>
@@ -1957,6 +1990,43 @@
 <p>Default <strong><code>bestandsextensie</code></strong>: <code>{".vsa"}</code> — verplicht voor <code>@include-vsa</code> en exporttypes
 <code>svg</code> / <code>coria</code> / <code>mxl</code>. Andere extensies (bijv. <code>.pdf</code>) alleen op expliciet verzoek.</p>
 <hr />
+<h2 id="parochie-context-normatief">Parochie-context (normatief)<a class="headerlink" href="#parochie-context-normatief" title="Permanent link">&para;</a></h2>
+<p><code>catalogus</code> draait in de praktijk <strong>in de context van een parochie-repo</strong> (Hugo
+<strong>content-source</strong>, demo: <code>examples/hugo-demo/content-source</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Root</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>--content-root</code></strong></td>
+<td>Parochie content-source; indexeert <strong><code>lokaal/</code></strong> (parochie-register)</td>
+</tr>
+<tr>
+<td><strong><code>--bron-root</code></strong></td>
+<td>Org-bron-repo (<code>zangstukken/</code>); optioneel maar gebruikelijk</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Zoekscope:</strong> standaard doorzoekt de catalogus <strong>beide</strong> (<code>context.bronnen</code> default
+<code>bron</code> + <code>lokaal</code>). De implementatie bouwt één index uit beide roots.</p>
+<p><strong>Voorrang:</strong> bij dezelfde query en context geldt <strong>lokaal vóór bron</strong>:</p>
+<ol>
+<li>Kandidaten in <strong><code>lokaal/</code></strong> bepalen de uitkomst (strict: 0 / 1 / &gt;1).</li>
+<li>Alleen als <strong>geen</strong> lokaal-kandidaat overblijft, valt de keuze terug op <strong>bron</strong>.</li>
+<li>Meerdere lokaal-kandidaten → <strong><code>AmbiguousError</code></strong> — <strong>niet</strong> stil overschakelen naar bron.</li>
+</ol>
+<p><strong>Cross-origin hint:</strong> wanneer de gekozen match <strong><code>origin=lokaal</code></strong> is en dezelfde query
+(+ context + extensie) <strong>ook</strong> minstens één match in <strong>bron</strong> opleverde, vult
+<strong><code>ZoekResult.ook_gevonden_in_bron</code></strong> de bijbehorende <strong><code>catalogus_pad</code></strong>-waarden.
+Doel: auteur alert maken om te verifiëren dat de parochie-lokale versie de bedoelde is.
+Geen wijziging van de gekozen match.</p>
+<p>Consumenten tonen de hint als <strong>waarschuwing</strong> (stderr, validate-warning, <code>--verbose</code>),
+niet als fout.</p>
+<hr />
 <h2 id="zoekgedrag-abstract">Zoekgedrag (abstract)<a class="headerlink" href="#zoekgedrag-abstract" title="Permanent link">&para;</a></h2>
 <p>De API specificeert <strong>niet</strong> welke yaml-velden geïndexeerd worden. Implementatie doorzoekt
 alle teksten en velden die de catalogus uit manifesten, mapnamen, ids, aliassen en
@@ -1967,14 +2037,46 @@ liturgische metadata kent.</p>
    aliassen, id-slugs, optionele metadata — ranking in implementatie-PR).</li>
 <li>Pas <strong><code>ZoekContext</code></strong>-filters toe (<code>gelegenheid</code>, <code>toon</code>, <code>uitvoeringsvorm</code>, …).</li>
 <li>Pas <strong><code>bestandsextensie</code></strong> toe op <code>entry.path.suffix</code>.</li>
-<li>Uitkomst:</li>
+<li>Uitkomst (strict modus <strong><code>zoek</code></strong>, na parochie-voorrang):</li>
 <li><strong>Geen</strong> kandidaat → <code>NotFoundError</code> (<code>niveau="zoek"</code>).</li>
-<li><strong>Meerdere</strong> kandidaten (strict modus) → <code>AmbiguousError</code> met kandidatenlijst.</li>
-<li><strong>Precies één</strong> (strict modus) → <code>ZoekResult</code>.</li>
+<li><strong>Meerdere</strong> kandidaten binnen de winnende herkomst → <code>AmbiguousError</code>.</li>
+<li><strong>Precies één</strong> → <code>ZoekResult</code> (+ eventueel <strong><code>ook_gevonden_in_bron</code></strong>).</li>
 </ol>
 <p>Bij conflict tussen context en metadata: <strong>context filtert</strong>; geen stille fallback.</p>
 <p><strong>Liturgische rol</strong> (<code>zoek="Troparion"</code>) is geen apart API-veld — het is schrijfconventie
 voor de zoekstring; zie <a href="../catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.</p>
+<hr />
+<h2 id="twee-contextlagen-geen-conflict">Twee contextlagen (geen conflict)<a class="headerlink" href="#twee-contextlagen-geen-conflict" title="Permanent link">&para;</a></h2>
+<p>Zoeken gebruikt <strong>twee</strong> soorten context; die zijn <strong>complementair</strong>, geen dubbeling:</p>
+<table>
+<thead>
+<tr>
+<th>Laag</th>
+<th>Waar</th>
+<th>Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>ZoekContext</code></strong></td>
+<td><code>default.*</code> in <strong>markdown-sessie</strong> of <strong><code>default:</code></strong> in <strong>ouder-<code>.vsa</code></strong></td>
+<td><em>Deze</em> zoekactie / <em>deze</em> samenstelling: welk feest, welke default-uitvoeringsvorm, …</td>
+</tr>
+<tr>
+<td><strong>Catalog-metadata</strong></td>
+<td><code>zangstuk.yaml</code>, <code>variant.yaml</code>, <code>uitvoeringsvorm.yaml</code>, titels, aliassen</td>
+<td>Geïndexeerd materiaal; <strong><code>ZoekContext</code> filtert</strong> welke kandidaten passen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Markdown-samenstelling:</strong> Rene zet <code>default.gelegenheid</code> in de <strong>sessie-</strong>frontmatter;
+<code>zoek="Troparion"</code> blijft een liturgische rol — zie
+<a href="../catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.</p>
+<p><strong>Standalone / samengesteld <code>.vsa</code>:</strong> dezelfde <code>ZoekContext</code>-sleutels onder <strong><code>default:</code></strong>
+in de <strong>ouder-</strong>.vsa-frontmatter (conventie: <a href="../zangstuk-formaat/">zangstuk-formaat.md</a>).
+Geen verplichting om <code>gelegenheid</code> in het <strong>included</strong> stuk zelf te herhalen.</p>
+<p><strong><code>zangstuk.yaml</code>-metadata</strong> (<code>gelegenheid</code>, <code>toon</code>, …) beschrijft het stuk in de catalogus;
+<strong><code>ZoekContext</code></strong> beschrijft waarvoor <em>nu</em> gezocht wordt. Beide horen te bestaan.</p>
 <hr />
 <h2 id="python-api">Python-API<a class="headerlink" href="#python-api" title="Permanent link">&para;</a></h2>
 <p>Module: <code>catalogus.zoek</code> (pakket <strong>catalogus</strong> in bron-repo).</p>
@@ -2118,9 +2220,15 @@ sibling <code>bronnen:</code> (<code>bron</code> | <code>lokaal</code> | lijst).
 <td><code>str</code></td>
 <td><code>lokaal:…</code> / <code>bron:…</code></td>
 </tr>
+<tr>
+<td><code>ook_gevonden_in_bron</code></td>
+<td><code>tuple[str, …]</code></td>
+<td><code>catalogus_pad</code> in bron bij lokaal-winst; anders leeg</td>
+</tr>
 </tbody>
 </table>
 <p>Property <strong><code>path</code></strong>: <code>entry.path</code>.</p>
+<p>Property <strong><code>has_ook_in_bron</code></strong>: <code>bool</code> — <code>len(ook_gevonden_in_bron) &gt; 0</code>.</p>
 <p><strong><code>catalogus_pad</code></strong> gebruikt prefix <strong><code>lokaal:</code></strong> of <strong><code>bron:</code></strong> volgens <code>entry.origin</code>
 (lokaal wint bij dubbele registratie). Prefix <strong><code>id:</code></strong> is <strong>geen</strong> uitkomst van zoek.</p>
 <p>Helper (fase 0):</p>
@@ -2182,11 +2290,12 @@ ambiguïteit — bedoeld voor review-UI, CLI <code>--lijst</code>, en als basis 
 <td><code>ZoekResult</code></td>
 </tr>
 <tr>
-<td>&gt;1</td>
-<td><code>AmbiguousError</code> — <code>candidates</code> uit <code>matches</code></td>
+<td>&gt;1 (zelfde herkomst)</td>
+<td><code>AmbiguousError</code> — <code>candidates</code> uit die herkomst</td>
 </tr>
 </tbody>
 </table>
+<p>Bij <strong>lokaal-winst</strong> met bron-matches: vul <strong><code>ook_gevonden_in_bron</code></strong>; geen exception.</p>
 <p>Convenience:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">zoek_met_roots</span><span class="p">(</span>
     <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -2313,9 +2422,41 @@ python -m catalogus.cli zoek &quot;Troparion&quot; ^
 </table>
 <p><strong>Uitvoer (na implementatie):</strong></p>
 <ul>
-<li>zonder <code>--lijst</code>: één regel <strong><code>catalogus_pad</code></strong>; <code>--verbose</code> met pad + ids.</li>
-<li>met <code>--lijst</code>: één <strong><code>catalogus_pad</code></strong> per regel (0 regels = exit 1).</li>
+<li>zonder <code>--lijst</code>: één regel <strong><code>catalogus_pad</code></strong>.</li>
+<li><strong><code>--verbose</code></strong>: pad + ids op stderr; bij <strong><code>ook_gevonden_in_bron</code></strong>: waarschuwing
+  <em>«Ook gevonden in bron: …»</em> (één regel per pad of komma-gescheiden).</li>
+<li>met <code>--lijst</code>: één <strong><code>catalogus_pad</code></strong> per regel (0 regels = exit 1); optioneel
+  <code>--verbose</code> groepeert per herkomst (<code>lokaal:</code> / <code>bron:</code>).</li>
 </ul>
+<hr />
+<h2 id="ambiguiteit-en-auteur-workflow">Ambiguïteit en auteur-workflow<a class="headerlink" href="#ambiguiteit-en-auteur-workflow" title="Permanent link">&para;</a></h2>
+<p><strong>Strict <code>zoek</code></strong> (build, validate, expand) faalt bij <strong>meerdere</strong> kandidaten binnen de
+winnende herkomst — geen stille keuze.</p>
+<table>
+<thead>
+<tr>
+<th>Situatie</th>
+<th>Aanbevolen actie auteur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AmbiguousError</code></td>
+<td><code>catalogus zoek --lijst</code>; verfijn <code>zoek=</code> of <code>default.*</code>; of <code>@include-vsa id=</code> / <code>lokaal=</code></td>
+</tr>
+<tr>
+<td><code>has_ook_in_bron</code></td>
+<td>Controleren of parochie-lokaal stuk bedoeld is; anders <code>@include-vsa lokaal=…</code> / <code>id=…</code> expliciet</td>
+</tr>
+<tr>
+<td>Geen match</td>
+<td>Manifest/index; <code>default.gelegenheid</code>; disambiguation in zoekstring</td>
+</tr>
+</tbody>
+</table>
+<p>VSA-tooling (<code>@include-vsa</code>, <code>vsa validate</code>): <strong><code>AmbiguousError</code></strong> → <strong>fout</strong>;
+<strong><code>ook_gevonden_in_bron</code></strong> → <strong>waarschuwing</strong> (build mag doorgaan). Zie
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/spec/include-vsa.md">VSA — include-vsa</a>.</p>
 <hr />
 <h2 id="consumentencontract-vsa-tooling">Consumentencontract (VSA-tooling)<a class="headerlink" href="#consumentencontract-vsa-tooling" title="Permanent link">&para;</a></h2>
 <h3 id="markdown-include-zoek">Markdown — <code>:::include zoek="…"</code><a class="headerlink" href="#markdown-include-zoek" title="Permanent link">&para;</a></h3>
@@ -2415,6 +2556,10 @@ python -m catalogus.cli zoek &quot;Troparion&quot; ^
 <tr>
 <td>2026-07</td>
 <td>Abstract zoekgedrag; <code>bestandsextensie</code>; <code>zoek_kandidaten</code> / <code>--lijst</code>; NL metadata</td>
+</tr>
+<tr>
+<td>2026-07</td>
+<td>Parochie-context; lokaal vóór bron; <code>ook_gevonden_in_bron</code>; twee contextlagen; ambiguïteit</td>
 </tr>
 </tbody>
 </table>
