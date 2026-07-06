@@ -1,0 +1,18 @@
+scope:
+  scopetag: bron
+  scopedir: https://github.com/orthodox-groningen/bron/tree/main/docs
+  curatedir: terms
+  glossarydir: mrgs
+  defaultvsn: bron-terms
+  website: https://orthodox-groningen.github.io/bron
+  navpath: /terms
+  navid: term
+
+scopes:
+  - scopetag: tev2
+    scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs
+
+versions:
+  - vsntag: bron-terms
+    termselection:
+      - "*"

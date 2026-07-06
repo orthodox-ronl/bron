@@ -41,10 +41,16 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Glossary: glossary.md
   - Specificaties:
     - specs/index.md
     - specs/documentatie-eigendom.md
     - specs/terminologie.md
+    - Termen:
+      - terms/zangstuk.md
+      - terms/variant.md
+      - terms/uitvoeringsvorm.md
+      - terms/representatie.md
     - specs/zangstuk-identificatie.md
     - specs/schrijfconventies.md
     - specs/inhoudslevenscyclus.md

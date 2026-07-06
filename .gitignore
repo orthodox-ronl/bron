@@ -21,6 +21,7 @@ Thumbs.db
 .idea/
 
 # MkDocs build output
+generated/
 site/
 site-*/
 *.tmp
@@ -31,5 +32,6 @@ site-*/
 # conversie-/validatie-tools bijkomen
 .venv/
 __pycache__/
+.pytest_cache/
 *.egg-info/
 node_modules/
