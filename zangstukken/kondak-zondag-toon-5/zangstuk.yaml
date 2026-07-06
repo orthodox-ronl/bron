@@ -3,6 +3,11 @@ title: Kondak van de zondag, toon 5
 gelegenheid: Zondag (opstandingscyclus)
 gelegenheidstype: zondag-cyclus
 toon: 5
+aliases:
+  # gegenereerd: alias-blok kondak — niet handmatig bewerken
+  - kondaak
+  - kondakion
+  - kontakion
 sources:
   - id: groningen
     file: sources/vsa/groningen.vsa

@@ -1,8 +1,11 @@
 id: kondak-geboorte-moeder-gods
 title: Kondakion — Geboorte Moeder Gods
 aliases:
-  - Kondakion
   - Kondak
+  # gegenereerd: alias-blok kondak — niet handmatig bewerken
+  - kondaak
+  - kondakion
+  - kontakion
 gelegenheid: geboorte-moeder-gods
 gelegenheidstype: vast-feest
 toon: 4

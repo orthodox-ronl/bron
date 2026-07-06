@@ -1,7 +1,9 @@
 id: troparion-geboorte-moeder-gods
 title: Troparion — Geboorte Moeder Gods
 aliases:
-  - Troparion
+  # gegenereerd: alias-blok tropaar — niet handmatig bewerken
+  - tropaar
+  - troparion
 gelegenheid: geboorte-moeder-gods
 gelegenheidstype: vast-feest
 toon: 4

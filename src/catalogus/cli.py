@@ -4,8 +4,15 @@ import argparse
 import sys
 from pathlib import Path
 
+from catalogus.alias_blokken import (
+    default_register_path,
+    load_alias_register,
+)
 from catalogus.alias_index import AliasIndex
+from catalogus.alias_sync import load_register_for_sync, run_alias_sync
 from catalogus.errors import (
+    AliasRegisterError,
+    AliasSyncError,
     AmbiguousError,
     CatalogusError,
     IndexConflictError,
@@ -111,6 +118,74 @@ def _cmd_index_validate(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_aliases_validate(args: argparse.Namespace) -> int:
+    path = args.register
+    if path is None:
+        path = default_register_path(bron_root=args.bron_root)
+    try:
+        register = load_alias_register(path)
+    except AliasRegisterError as exc:
+        print(exc, file=sys.stderr)
+        return 1
+    print(f"OK — {len(register.blokken)} alias-blokken in {path}")
+    return 0
+
+
+def _cmd_aliases_sync(args: argparse.Namespace) -> int:
+    if args.bron_root is None and args.content_root is None:
+        args.bron_root = Path.cwd()
+
+    try:
+        register = load_register_for_sync(
+            register_path=args.register,
+            bron_root=args.bron_root,
+        )
+    except AliasRegisterError as exc:
+        print(exc, file=sys.stderr)
+        return 1
+
+    if not any((args.content_root, args.bron_root)):
+        raise SystemExit("Geef --bron-root en/of --content-root")
+
+    try:
+        results = run_alias_sync(
+            register=register,
+            bron_root=args.bron_root,
+            content_root=args.content_root,
+            dry_run=args.dry_run,
+            check=args.check,
+        )
+    except AliasSyncError as exc:
+        print(exc, file=sys.stderr)
+        return 1
+
+    changed = [r for r in results if r.changed]
+    skipped = [r for r in results if r.skipped]
+
+    for result in changed:
+        prefix = "would update" if (args.dry_run or args.check) else "updated"
+        print(f"{prefix}: {result.path} (alias-blok {result.blok_id})")
+
+    if args.check and changed:
+        print(
+            f"Drift: {len(changed)} bestand(en) niet gesynchroniseerd",
+            file=sys.stderr,
+        )
+        return 1
+
+    if args.verbose:
+        print(f"skipped: {len(skipped)}", file=sys.stderr)
+        for result in skipped:
+            print(f"  skip {result.path}: {result.reason}", file=sys.stderr)
+
+    action = "check OK" if args.check else "sync OK"
+    print(
+        f"{action} — {len(results)} manifest(en), "
+        f"{len(changed)} gewijzigd, {len(skipped)} overgeslagen"
+    )
+    return 0
+
+
 def _cmd_zoek(args: argparse.Namespace) -> int:
     context = ZoekContext(
         gelegenheid=args.default_gelegenheid,
@@ -196,6 +271,50 @@ def main(argv: list[str] | None = None) -> int:
     )
     _add_root_args(validate)
     validate.set_defaults(func=_cmd_index_validate)
+
+    aliases = sub.add_parser("aliases", help="Org-breed aliassen-register (alias-blokken)")
+    aliases_sub = aliases.add_subparsers(dest="aliases_command", required=True)
+
+    aliases_validate = aliases_sub.add_parser(
+        "validate",
+        help="Valideer catalogus/data/alias-blokken.yaml",
+    )
+    aliases_validate.add_argument(
+        "--register",
+        type=Path,
+        default=None,
+        help="Pad naar alias-blokken.yaml (default: onder --bron-root of repo-root)",
+    )
+    _add_root_args(aliases_validate)
+    aliases_validate.set_defaults(func=_cmd_aliases_validate)
+
+    aliases_sync = aliases_sub.add_parser(
+        "sync",
+        help="Schrijf gegenereerde alias-blokken naar manifesten",
+    )
+    aliases_sync.add_argument(
+        "--register",
+        type=Path,
+        default=None,
+        help="Pad naar alias-blokken.yaml (default: onder --bron-root of repo-root)",
+    )
+    aliases_sync.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Toon wijzigingen zonder te schrijven",
+    )
+    aliases_sync.add_argument(
+        "--check",
+        action="store_true",
+        help="Exit 1 bij drift (yaml wijkt af van register)",
+    )
+    aliases_sync.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Toon overgeslagen manifesten op stderr",
+    )
+    _add_root_args(aliases_sync)
+    aliases_sync.set_defaults(func=_cmd_aliases_sync)
 
     zoek_cmd = sub.add_parser(
         "zoek",

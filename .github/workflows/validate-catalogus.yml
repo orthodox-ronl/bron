@@ -26,5 +26,11 @@ jobs:
       - name: Run pytest
         run: python -m pytest
 
+      - name: Validate alias-blokken register
+        run: python -m catalogus.cli aliases validate --bron-root .
+
+      - name: Check alias-blok sync drift
+        run: python -m catalogus.cli aliases sync --check --bron-root .
+
       - name: Validate bron alias-index
         run: python -m catalogus.cli index validate --bron-root .

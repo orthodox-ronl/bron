@@ -21,7 +21,7 @@ om implementatie later niet te blokkeren.
 
 | Id                  | Titel                              | Status | Repo                  | Laatst bekeken |
 | ------------------- | ---------------------------------- | ------ | --------------------- | -------------- |
-| `alias-blokken`     | Alias-blokken liturgische rollen   | `idee` | bron                  | 2026-07-04     |
+| `alias-blokken`     | Alias-blokken liturgische rollen   | `voorbereid` | bron                  | 2026-07-04     |
 | `tev2-terminologie` | TEv2-terminologie en TermRefs      | `idee` | bron, VSA-tooling     | 2026-07-04     |
 
 ## Detail

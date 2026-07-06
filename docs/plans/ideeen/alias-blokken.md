@@ -3,9 +3,10 @@
 | Veld             | Waarde     |
 | ---------------- | ---------- |
 | **Id**           | `alias-blokken` |
-| **Status**       | `idee`     |
+| **Status**       | `voorbereid` |
 | **Repo**         | bron       |
 | **Laatst bekeken** | 2026-07-04 |
+| **Ontwerp**      | [alias-blokken-ontwerp.md](../alias-blokken-ontwerp.md) |
 
 ## Samenvatting
 
@@ -63,14 +64,8 @@ met het tropaar/troparion-blok.
 
 ## Open ontwerpvragen
 
-- Waar staat de **trigger**: VSA-frontmatter, yaml-veld (`liturgische_rol:` /
-  `alias_blok:`), of afleiding uit titel?
-- **Sync naar git:** CI / `catalogus aliases sync` schrijft yaml, of alleen runtime-expansie
-  in `AliasIndex.build()`? (Dit idee wijst naar yaml-registratie → waarschijnlijk
-  sync-CLI plus validate in CI.)
-- **Markeren afgeleide aliassen** in yaml (comment of `# gegenereerd`) om handmatige
-  edits te ontmoedigen?
-- **Conflictregels:** wat als een handmatig alias botst met een ander zangstuk binnen scope?
+Opgelost in [alias-blokken-ontwerp.md](../alias-blokken-ontwerp.md). Runtime-expansie en
+register-validatie zijn geïmplementeerd; yaml-sync en glossary volgen.
 
 ## Relatie bestaande code
 

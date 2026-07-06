@@ -3,6 +3,10 @@ title: Tropaar van de zondag, toon 6
 gelegenheid: Zondag (opstandingscyclus)
 gelegenheidstype: zondag-cyclus
 toon: 6
+aliases:
+  # gegenereerd: alias-blok tropaar — niet handmatig bewerken
+  - tropaar
+  - troparion
 sources:
   - id: groningen
     file: sources/vsa/groningen.vsa

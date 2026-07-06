@@ -97,13 +97,39 @@ python -m catalogus.cli index validate --bron-root .
 python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hugo-demo\content-source
 ```
 
+### `catalogus aliases validate`
+
+Valideer org-breed aliassen-register `catalogus/data/alias-blokken.yaml`
+(geen overlap tussen blokken, geen lege lijsten). Zie
+[alias-blokken-ontwerp](../plans/alias-blokken-ontwerp.md).
+
+```cmd
+python -m catalogus.cli aliases validate --bron-root .
+```
+
+### `catalogus aliases sync`
+
+Schrijf gegenereerde alias-blokken naar `zangstuk.yaml` / `variant.yaml`. Handmatige
+aliassen blijven boven het marker-blok; gegenereerde termen tellen alleen mee voor
+**zoek** (niet voor resolver-scope — voorkomt conflicten tussen meerdere kondak/tropaar-stukken).
+
+Trigger: `liturgische_rol:` / `alias_blok:` in yaml, anders id-prefix of term-fallback
+(bijv. `kondak-zondag-toon-1` → blok `kondak`).
+
+```cmd
+python -m catalogus.cli aliases sync --bron-root .
+python -m catalogus.cli aliases sync --check --bron-root .
+python -m catalogus.cli aliases sync --dry-run --bron-root .
+```
+
 ## Index-bronnen
 
-Er is **geen** centraal alias-bestand. De index wordt in het geheugen opgebouwd uit:
+De index wordt in het geheugen opgebouwd uit:
 
 1. **Mappad** — mapnamen onder `lokaal/<zangstuk-id>/<variant-id>/<uitvoeringsvorm-id>/`
 2. **Manifesten** — `variant.yaml`, `uitvoeringsvorm.yaml` (`aliases:` per entiteit)
 3. **Bron** — `zangstukken/<zangstuk-id>/zangstuk.yaml` (`title`, `sources[].id`)
+4. **Alias-blokken** — `catalogus/data/alias-blokken.yaml` breidt zoektermen uit (runtime)
 
 Zie [parochie-lokaal zangstukken](../manuals/parochie-lokaal-zangstukken.md) voor manifest-structuur.
 

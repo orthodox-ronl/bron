@@ -7,6 +7,8 @@ from typing import Iterable, Literal
 
 import yaml
 
+from catalogus.alias_blokken import AliasBlokRegister, try_load_alias_register
+from catalogus.alias_sync import partition_yaml_aliases
 from catalogus.errors import (
     AmbiguousPathError,
     IndexConflictError,
@@ -112,6 +114,7 @@ class AliasIndex:
     )
     vsa_files: list[VsaFileEntry] = field(default_factory=list)
     zoek_entries: list[ZoekIndexEntry] = field(default_factory=list)
+    _alias_register: AliasBlokRegister | None = field(default=None, repr=False)
 
     @classmethod
     def build(
@@ -122,6 +125,11 @@ class AliasIndex:
         fixture_root: Path | None = None,
     ) -> AliasIndex:
         index = cls()
+        index._alias_register = _load_alias_register_for_build(
+            content_root=content_root,
+            bron_root=bron_root,
+            fixture_root=fixture_root,
+        )
         if content_root is not None:
             index._scan_root(content_root.resolve(), "lokaal")
         if bron_root is not None:
@@ -220,6 +228,7 @@ class AliasIndex:
                     representatie_id,
                     title,
                     *(extra_search_texts or ()),
+                    register=self._alias_register,
                 ),
             )
         )
@@ -244,6 +253,7 @@ class AliasIndex:
                 variant_gelegenheidstype: str | None = None
                 variant_toon: str | None = None
                 variant_referentie: str | None = None
+                generated_aliases: list[str] = []
                 if variant_manifest.is_file():
                     data = _load_yaml(variant_manifest)
                     yaml_z = data.get("zangstuk-id", zangstuk_id)
@@ -255,7 +265,11 @@ class AliasIndex:
                     variant_gelegenheidstype = _metadata_str(data.get("gelegenheidstype"))
                     variant_toon = _metadata_str(data.get("toon"))
                     variant_referentie = _metadata_str(data.get("referentie"))
-                    aliases.extend(data.get("aliases") or [])
+                    raw_aliases = data.get("aliases") or []
+                    manual_aliases, generated_aliases = partition_yaml_aliases(
+                        variant_manifest, raw_aliases
+                    )
+                    aliases.extend(manual_aliases)
                     if title:
                         aliases.append(title)
 
@@ -263,7 +277,7 @@ class AliasIndex:
                 _register_aliases(variant_table, variant_id, aliases, ctx_v)
 
                 if variant_manifest.is_file():
-                    zangstuk_aliases: list[object] = list(data.get("aliases") or [])
+                    zangstuk_aliases: list[object] = list(manual_aliases)
                     if title:
                         zangstuk_aliases.append(title)
                     for alias in zangstuk_aliases:
@@ -319,6 +333,7 @@ class AliasIndex:
                                     referentie=variant_referentie,
                                     extra_search_texts=_collect_alias_texts(
                                         aliases,
+                                        generated_aliases,
                                         uv_aliases,
                                         repr_aliases,
                                         zangstuk_id,
@@ -342,6 +357,7 @@ class AliasIndex:
             gelegenheidstype: str | None = None
             toon: str | None = None
             title: str | None = None
+            generated_aliases: list[str] = []
             if yaml_path.is_file():
                 data = _load_yaml(yaml_path)
                 yaml_id = str(data.get("id", zangstuk_id))
@@ -357,7 +373,11 @@ class AliasIndex:
                 toon = _metadata_str(data.get("toon"))
                 if title:
                     aliases.append(title)
-                aliases.extend(data.get("aliases") or [])
+                raw_aliases = data.get("aliases") or []
+                manual_aliases, generated_aliases = partition_yaml_aliases(
+                    yaml_path, raw_aliases
+                )
+                aliases.extend(manual_aliases)
                 for source in data.get("sources") or []:
                     if not isinstance(source, dict):
                         continue
@@ -392,6 +412,7 @@ class AliasIndex:
                             referentie=_metadata_str(source.get("reference")),
                             extra_search_texts=_collect_alias_texts(
                                 aliases,
+                                generated_aliases,
                                 source_aliases,
                                 zangstuk_id,
                                 source.get("description"),
@@ -578,7 +599,41 @@ def _collect_alias_texts(*values: object) -> list[str]:
     return texts
 
 
-def _build_search_terms(*values: object) -> frozenset[str]:
+def _load_alias_register_for_build(
+    *,
+    content_root: Path | None,
+    bron_root: Path | None,
+    fixture_root: Path | None,
+) -> AliasBlokRegister | None:
+    for root in (bron_root, content_root, fixture_root):
+        if root is not None:
+            register = try_load_alias_register(bron_root=root.resolve())
+            if register is not None:
+                return register
+    return try_load_alias_register()
+
+
+def _expand_search_values(
+    values: tuple[object, ...], register: AliasBlokRegister | None
+) -> tuple[object, ...]:
+    if register is None:
+        return values
+    expanded: list[object] = []
+    for value in values:
+        if isinstance(value, str):
+            expanded.extend(register.expand_term(value))
+        elif isinstance(value, dict) and "text" in value:
+            expanded.extend(register.expand_term(str(value["text"])))
+            expanded.append(value)
+        else:
+            expanded.append(value)
+    return tuple(expanded)
+
+
+def _build_search_terms(
+    *values: object, register: AliasBlokRegister | None = None
+) -> frozenset[str]:
+    values = _expand_search_values(values, register)
     terms: set[str] = set()
     for value in values:
         if value is None:

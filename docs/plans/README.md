@@ -11,6 +11,7 @@ Bij tegenstrijdigheid gelden:
 4. Pas daarna: plannen in deze map
 
 - [Ideeën-backlog](ideeen/README.md) — onsamengehangende ideeën met status
+- [Alias-blokken (ontwerp)](alias-blokken-ontwerp.md) — synoniemsets voor zoek en yaml-sync
 - [CI-architectuur](ci-architectuur.md) — conversie vs. export workflows (richtlijn)
 - [Migratie zondag-zangstukken](migratie-zondag-zangstukken.md) — bron vullen + hugo-demo koppeling
 - [Samenvatting project](samenvatting-project.md)

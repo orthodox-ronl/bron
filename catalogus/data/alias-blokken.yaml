@@ -1,0 +1,234 @@
+# Org-breed aliassen-register voor liturgische rollen (alias-blokken).
+#
+# Eén term uit een blok volstaat als annotatie; sync/loader breidt uit naar alle
+# leden van het blok. Zie docs/plans/alias-blokken-ontwerp.md.
+#
+# Formaat: elk alias op een eigen regel (geen inline [a, b, c]).
+# Matching is case-insensitive (normalize-for-match / casefold).
+
+blokken:
+
+  ontvangenis van de moeder gods: # 8 december
+    aliassen:
+      - ontvangenis moeder gods
+      - ontvangenis theotokos
+      - ontvangenis van de theotokos
+
+  "Geboorte van Christus": # 25 december
+    aliassen:
+      - "Kerstmis"
+      - "Geboorte van de Heer"
+      - "Geboorte van Jezus"
+      - "Christus Geboorte"
+
+  "Geboorte van de Moeder Gods": # 8 september
+    aliassen:
+      - "Geboorte van de Theotokos"
+      - "Geboorte Moeder Gods"
+      - "Geboorte Theotokos"
+  
+  "Verheffing van het Heilig Kruis": # 14 september
+    aliassen:
+      - "Kruisverheffing"
+  
+  "Tempelgang van de Moeder Gods": # 21 november
+    aliassen:
+      - "Tempelgang van de Theotokos"
+      - "Tempelgang Moeder Gods"
+      - "Tempelgang Theotokos"
+      - "Tempelgang"
+      - "Intocht van de Theotokos"
+      - "Presentatie van de Moeder Gods"
+      - "Presentatie van de Theotokos"
+      - "Presentatie Moeder Gods"
+      - "Presentatie Theotokos"
+
+  "Theofanie": # 6 januari
+    aliassen:
+      - "Epifanie"
+      - "Doop van Christus"
+
+  "Opdracht van de Heer in de Tempel": # 2 februari
+    aliassen:
+      - "Opdracht van de Heer"
+      - "Opdracht"
+      - "Presentatie van de Heer"
+      - "Ontmoeting van de Heer"
+      - "Ontmoeting"
+
+  "Aankondiging": # 25 maart
+    aliassen:
+      - "Aankondiging van de Heer"
+      - "Verkondiging aan Maria"
+
+  "Transfiguratie": # 6 augustus
+    aliassen:
+      - "Gedaanteverandering"
+
+  "Ontslapenis van de Theotokos": # 15 augustus
+    aliassen:
+      - "Ontslapen van de Moeder Gods"
+      - "Ontslapen Moeder Gods"
+
+  "Palmzondag": # zondag voor Pasen
+    aliassen:
+      - "Intocht in Jeruzalem"
+
+  "Pasen": # zondag na de eerste volle maan in de lente
+    aliassen:
+      - "Pascha"
+      - "Opstanding van Christus"
+      - "Opstanding van de Heer"
+      - "Christus opstanding"
+
+  "Hemelvaart": # 40 dagen na Pasen
+    aliassen:
+      - "Opstijging van de Heer"
+
+  "Pinksteren": # 50 dagen na Pasen
+    aliassen:
+      - "Nederdaling van de Heilige Geest"
+
+  kleine ektinia:
+    aliassen:
+      - kleine litanie
+
+  grote ektinia:
+    aliassen:
+      - grote litanie
+  antifoon:
+    aliassen:
+      - antiphoon
+
+  eerste antifoon:
+    aliassen:
+      - 1e antifoon
+
+  1e kleine litanie:
+    aliassen:
+      - 1e kleine ektinia
+      - eerste kleine litanie
+
+  tweede antifoon:
+    aliassen:
+      - 2e antifoon
+
+  eniggeboren zoon:
+    aliassen:
+      - eengeboren zoon
+      - nu en altijd
+
+  2e kleine litanie:
+    aliassen:
+      - 2e kleine ektinia
+      - tweede kleine litanie
+      - 2e kleine ektinia
+      - malaja ektenija
+
+  derde antifoon:
+    aliassen:
+      - 3e antifoon
+      - zaligsprekingen
+
+  kleine intocht:
+    aliassen:
+      - kleine intrede
+
+  tropaar:
+    aliassen:
+      - troparion
+      - tropaar
+
+  kondak:
+    aliassen:
+      - kondaak
+      - kondakion
+      - kontakion
+
+  ustav:
+    aliassen:
+      - ustav liturgie met diaken
+      - ustav liturgie met diakon
+
+  trisagion:
+    aliassen:
+      - trishagion
+      - driemaal-heilig
+
+  prokimen:
+    aliassen:
+      - prokimenon
+
+  alleluia:
+    aliassen:
+      - alleluja
+      - allelouia
+
+  evangelie:
+    aliassen:
+      - evangelie lezing
+      - evangelielezing
+
+  dringende ektinia:
+    aliassen:
+      - dringende-litanie
+  
+  ontslapenen litanie:
+    aliassen:
+      - ontslapenenlitanie
+      - litanie voor de ontslapenen
+      - litanie voor de overledenen
+      - litanie voor de doden
+
+  catechumenenlitanie:
+    aliassen:
+      - katechumenenlitanie
+      - litanie voor de catechumenen
+      - litanie voor de katechumenen
+      - catechumenen litanie
+      - katechumenen litanie
+      - catechumenen ektinia
+      - katechumenen ektinia
+
+  gelovigenlitanie:
+    aliassen:
+      - litanie voor de gelovigen
+      - gelovigen litanie
+      - gelovigen ektinia
+  
+  cherubijnenhymne:
+    aliassen:
+      - cherubijnen hymne
+
+  vragende-ektinia:
+    aliassen:
+      - smekende ektinia
+      - vragende litanie
+      - smekende litanie
+
+  eucharistische canon:
+    aliassen:
+      - eucharistisch gebed
+      - anafora
+      - offergebed
+
+  moeder gods lied:
+    aliassen:
+      - waarlijk het is waardig
+
+  onze vader:
+    aliassen:
+      - otche nash
+
+  communie hymne:
+    aliassen:
+      - communiegezang
+
+  communievers:
+    aliassen:
+      - communielied
+
+  slotzegen:
+    aliassen:
+      - ontslag
+      - otpust

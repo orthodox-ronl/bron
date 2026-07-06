@@ -69,3 +69,17 @@ class AmbiguousPathError(CatalogusError):
     def __init__(self, message: str, candidates: list[str]) -> None:
         self.candidates = candidates
         super().__init__(message)
+
+
+class AliasRegisterError(CatalogusError):
+    """Fout in org-breed aliassen-register (alias-blokken)."""
+
+    def __init__(self, message: str) -> None:
+        super().__init__(message)
+
+
+class AliasSyncError(CatalogusError):
+    """Fout tijdens alias-blok sync naar yaml."""
+
+    def __init__(self, message: str) -> None:
+        super().__init__(message)

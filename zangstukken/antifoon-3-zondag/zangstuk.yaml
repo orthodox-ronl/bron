@@ -6,6 +6,8 @@ aliases:
   - { text: "zaligsprekingen", lang: nl }
   - { text: "3e antifoon zondag", lang: nl }
   - { text: "derde antifoon zondag", lang: nl }
+  # gegenereerd: alias-blok antifoon — niet handmatig bewerken
+  - antiphoon
 sources:
   - id: groningen
     file: sources/scan/koormap-008-zaligsprekingen.pdf

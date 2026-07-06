@@ -23,70 +23,22 @@ Licenties: [CC BY-SA 4.0](LICENSE-CONTENT) (inhoud), [MIT](LICENSE-CODE) (code/s
 
 ---
 
-## Terminologie en documentatie-eigendom
+## Terminologie
 
-Normatieve glossary: **`docs/specs/terminologie.md`**
-
-Vier niveaus: `zangstuk-id` → `variant-id` → `uitvoeringsvorm-id` → `representatie-id`
-
-| Regel | Inhoud |
-| ----- | ------ |
-| R1–R5 | Zie terminologie §0 |
-| D1    | Org-specs **alleen** in `bron/docs/`; andere repo's linken |
-| D3    | Org-spec wijzigen → PR hier; daarna stubs in VSA-tooling controleren |
-
-Zie `docs/specs/documentatie-eigendom.md`. Cursor: `.cursor/rules/orthodox-groningen-terminologie.mdc`.
+Normatieve glossary: `docs/specs/terminologie.md` · Vier niveaus: `zangstuk-id` → `variant-id` → `uitvoeringsvorm-id` → `representatie-id`
 
 **Vermijden:** `uv-id`, afkorting `uv`, **uitvoeringsalternatief**, impliciet `variant-id: standaard`.
 
 ---
 
-## LLM Coding Guidelines
-
-<!-- Gebaseerd op https://github.com/multica-ai/andrej-karpathy-skills -->
-
-Gedragsrichtlijnen om veelvoorkomende LLM-fouten te verminderen. Bij triviale taken: gebruik je oordeel.
-
-### 1. Think Before Coding
-
-**Don't assume. Don't hide confusion. Surface tradeoffs.**
-
-Before implementing:
-
-- State your assumptions explicitly. If uncertain, ask.
-- If multiple interpretations exist, present them — don't pick silently.
-- If a simpler approach exists, say so. Push back when warranted.
-- If something is unclear, stop. Name what's confusing. Ask.
-
-### 2. Simplicity First
-
-**Minimum code that solves the problem. Nothing speculative.**
-
-- No features beyond what was asked.
-- No abstractions for single-use code.
-- If you write 200 lines and it could be 50, rewrite it.
-
-### 3. Surgical Changes
-
-**Touch only what you must. Clean up only your own mess.**
-
-- Don't "improve" adjacent code, comments, or formatting.
-- Match existing style; remove orphans only from **your** changes.
-
-### 4. Goal-Driven Execution
-
-Define verifiable success criteria (`vsa validate zangstukken`, `mkdocs build --strict`) en loop tot ze slagen.
-
----
-
 ## Ontwikkelomgeving
 
-| Vereiste      | Versie / tool                           |
-| ------------- | --------------------------------------- |
-| Python        | ≥ 3.12                                  |
+| Vereiste      | Versie / tool                             |
+| ------------- | ----------------------------------------- |
+| Python        | ≥ 3.12                                    |
 | Docs lokaal   | MkDocs Material (`requirements-docs.txt`) |
 | Catalogus     | `pip install -e ".[dev]"` in bron-root    |
-| VSA-validatie | `vsa` CLI uit repo VSA-tooling          |
+| VSA-validatie | `vsa` CLI uit repo VSA-tooling            |
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
@@ -216,14 +168,8 @@ gh pr create --title "docs(specs): korte beschrijving" --body "## Summary
 
 ## CI/CD
 
-| Workflow                   | Trigger  | Doel                                       |
-| -------------------------- | -------- | ------------------------------------------ |
-| `validate-zangstukken.yml` | push, PR | `vsa validate zangstukken`                 |
-| `validate-catalogus.yml`   | push, PR | pytest + `catalogus index validate`        |
+| Workflow                   | Trigger  | Doel                                        |
+| -------------------------- | -------- | ------------------------------------------- |
+| `validate-zangstukken.yml` | push, PR | `vsa validate zangstukken`                  |
+| `validate-catalogus.yml`   | push, PR | pytest + `catalogus index validate`         |
 | `docs-pages.yml`           | push     | MkDocs → GitHub Pages (prod of `/preview/`) |
-
----
-
-## Markdown-tabellen
-
-Kolommen alignen in de bron (padding met spaties); pipes in celinhoud escapen als `\|`.
