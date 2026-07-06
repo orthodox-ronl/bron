@@ -66,13 +66,27 @@ jobs:
       - name: Install terminology tools
         run: npm install -g @tno-terminology-design/trrt @tno-terminology-design/hrgt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
 
+      - name: Configure MkDocs site URL
+        run: |
+          python scripts/set-mkdocs-site-url.py \
+            "${{ steps.target.outputs.site_url }}" \
+            "${{ steps.target.outputs.preview }}"
+
+      - name: Prepare TEV2 docs staging tree
+        run: python scripts/prepare-tev2-docs.py
+
       - name: Run terminology tools
         run: |
-          cd docs
+          cd generated/docs
           mrg-import -c tev2-config.yaml
           mrgt       -c tev2-config.yaml
           hrgt -f    -c tev2-config.yaml
           trrt -f    -c tev2-config.yaml
+
+      - name: Publish generated machine-readable glossaries
+        run: |
+          mkdir -p docs/mrgs
+          cp generated/docs/mrgs/mrg.bron*.yaml docs/mrgs/
 
       - name: Commit generated machine-readable glossaries
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -80,16 +94,10 @@ jobs:
           commit_message: Update TEV2 machine-readable glossaries
           file_pattern: docs/mrgs/mrg.bron*.yaml
 
-      - name: Configure MkDocs site URL
-        run: |
-          python scripts/set-mkdocs-site-url.py \
-            "${{ steps.target.outputs.site_url }}" \
-            "${{ steps.target.outputs.preview }}"
-
       - name: Build MkDocs site
         env:
           NO_MKDOCS_2_WARNING: "1"
-        run: python -m mkdocs build --strict --site-dir site
+        run: python -m mkdocs build --strict -f generated/mkdocs.yml --site-dir ../site
 
       - name: Upload documentation site
         uses: actions/upload-artifact@v4

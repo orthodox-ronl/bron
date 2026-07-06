@@ -40,6 +40,9 @@ if errorlevel 1 if not exist "%TRRT%" (
   exit /b 1
 )
 
+python scripts\prepare-tev2-docs.py
+if errorlevel 1 exit /b 1
+
 if "%TEV2_RUN_IMPORT%"=="1" (
   if not exist "%MRG_IMPORT%" where mrg-import >nul 2>nul
   if errorlevel 1 if not exist "%MRG_IMPORT%" (
@@ -49,7 +52,7 @@ if "%TEV2_RUN_IMPORT%"=="1" (
     exit /b 1
   )
 
-  pushd docs
+  pushd generated\docs
   call "%MRG_IMPORT%" -c tev2-config.yaml
   if errorlevel 1 (
     popd
@@ -60,7 +63,7 @@ if "%TEV2_RUN_IMPORT%"=="1" (
   echo Skipping mrg-import locally. Set TEV2_RUN_IMPORT=1 to enable it.
 )
 
-pushd docs
+pushd generated\docs
 call "%MRGT%" -c tev2-config.yaml
 if errorlevel 1 (
   popd
@@ -80,8 +83,11 @@ if errorlevel 1 (
 )
 popd
 
+if not exist docs\mrgs mkdir docs\mrgs
+copy /Y generated\docs\mrgs\mrg.bron*.yaml docs\mrgs\ >nul
+
 python -m pip install -r requirements-docs.txt
 if errorlevel 1 exit /b 1
 
-python -m mkdocs build --strict --site-dir site %*
+python -m mkdocs build --strict -f generated\mkdocs.yml --site-dir ..\site %*
 exit /b %errorlevel%

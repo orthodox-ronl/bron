@@ -21,6 +21,7 @@ Thumbs.db
 .idea/
 
 # MkDocs build output
+generated/
 site/
 site-*/
 *.tmp
