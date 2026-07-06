@@ -4,4 +4,6 @@ title: "Glossary"
 
 # Glossary
 
-{% hrg=":terms" converter="markdown-table-row" %}
+| Term | Definitie |
+| ---- | --------- |
+{% hrg="" sorter="{{noRefs glossaryTerm}}" %}

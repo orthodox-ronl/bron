@@ -8,8 +8,8 @@ mrgt:
   vsntag:
 
 hrgt:
-  converter[1]: "## [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{localize navurl}})\n\n{{#if glossaryText}}{{glossaryText}}{{else}}Geen `glossaryText` opgegeven voor deze term.{{/if}}\n\n{{#if glossaryNotes}}### Notities\n\n{{#each glossaryNotes}}- {{this}}\n{{/each}}\n{{/if}}"
-  converter[2]: "{{#if glossaryAbbr}}## [{{glossaryAbbr}}]({{localize navurl}})\n\nZie: [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{termid}}@)\n\n{{else}}{{log level='silent'}}{{/if}}"
+  converter[1]: markdown-table-row
+  converter[2]: "{{#if glossaryAbbr}}| {{glossaryAbbr}} | Zie: [{{glossaryTerm}}](@) |\n{{/if}}"
   input:
     - "*.md"
 
