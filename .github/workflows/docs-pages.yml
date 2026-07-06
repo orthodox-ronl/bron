@@ -53,10 +53,32 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Install documentation dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements-docs.txt
+
+      - name: Install terminology tools
+        run: npm install -g @tno-terminology-design/trrt @tno-terminology-design/hrgt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
+
+      - name: Run terminology tools
+        run: |
+          cd docs
+          mrg-import -c tev2-config.yaml
+          mrgt       -c tev2-config.yaml
+          hrgt -f    -c tev2-config.yaml
+          trrt -f    -c tev2-config.yaml
+
+      - name: Commit generated machine-readable glossaries
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update TEV2 machine-readable glossaries
+          file_pattern: docs/mrgs/mrg.bron*.yaml
 
       - name: Configure MkDocs site URL
         run: |
