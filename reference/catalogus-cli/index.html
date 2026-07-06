@@ -1633,6 +1633,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#catalogus-aliases-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        catalogus aliases validate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalogus-aliases-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        catalogus aliases sync
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1972,6 +1994,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../plans/alias-blokken-ontwerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alias-blokken — ontwerp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../plans/migratie-zondag-zangstukken/" class="md-nav__link">
         
   
@@ -2104,6 +2154,28 @@
     <span class="md-ellipsis">
       
         catalogus index validate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalogus-aliases-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        catalogus aliases validate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalogus-aliases-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        catalogus aliases sync
       
     </span>
   </a>
@@ -2297,12 +2369,29 @@ python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen 
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli index validate --bron-root .
 python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hugo-demo\content-source
 </code></pre></div>
+<h3 id="catalogus-aliases-validate"><code>catalogus aliases validate</code><a class="headerlink" href="#catalogus-aliases-validate" title="Permanent link">&para;</a></h3>
+<p>Valideer org-breed aliassen-register <code>catalogus/data/alias-blokken.yaml</code>
+(geen overlap tussen blokken, geen lege lijsten). Zie
+<a href="../../plans/alias-blokken-ontwerp/">alias-blokken-ontwerp</a>.</p>
+<div class="highlight"><pre><span></span><code>python -m catalogus.cli aliases validate --bron-root .
+</code></pre></div>
+<h3 id="catalogus-aliases-sync"><code>catalogus aliases sync</code><a class="headerlink" href="#catalogus-aliases-sync" title="Permanent link">&para;</a></h3>
+<p>Schrijf gegenereerde alias-blokken naar <code>zangstuk.yaml</code> / <code>variant.yaml</code>. Handmatige
+aliassen blijven boven het marker-blok; gegenereerde termen tellen alleen mee voor
+<strong>zoek</strong> (niet voor resolver-scope — voorkomt conflicten tussen meerdere kondak/tropaar-stukken).</p>
+<p>Trigger: <code>liturgische_rol:</code> / <code>alias_blok:</code> in yaml, anders id-prefix of term-fallback
+(bijv. <code>kondak-zondag-toon-1</code> → blok <code>kondak</code>).</p>
+<div class="highlight"><pre><span></span><code>python -m catalogus.cli aliases sync --bron-root .
+python -m catalogus.cli aliases sync --check --bron-root .
+python -m catalogus.cli aliases sync --dry-run --bron-root .
+</code></pre></div>
 <h2 id="index-bronnen">Index-bronnen<a class="headerlink" href="#index-bronnen" title="Permanent link">&para;</a></h2>
-<p>Er is <strong>geen</strong> centraal alias-bestand. De index wordt in het geheugen opgebouwd uit:</p>
+<p>De index wordt in het geheugen opgebouwd uit:</p>
 <ol>
 <li><strong>Mappad</strong> — mapnamen onder <code>lokaal/&lt;zangstuk-id&gt;/&lt;variant-id&gt;/&lt;uitvoeringsvorm-id&gt;/</code></li>
 <li><strong>Manifesten</strong> — <code>variant.yaml</code>, <code>uitvoeringsvorm.yaml</code> (<code>aliases:</code> per entiteit)</li>
 <li><strong>Bron</strong> — <code>zangstukken/&lt;zangstuk-id&gt;/zangstuk.yaml</code> (<code>title</code>, <code>sources[].id</code>)</li>
+<li><strong>Alias-blokken</strong> — <code>catalogus/data/alias-blokken.yaml</code> breidt zoektermen uit (runtime)</li>
 </ol>
 <p>Zie <a href="../../manuals/parochie-lokaal-zangstukken/">parochie-lokaal zangstukken</a> voor manifest-structuur.</p>
 <h2 id="resolver-contract">Resolver-contract<a class="headerlink" href="#resolver-contract" title="Permanent link">&para;</a></h2>

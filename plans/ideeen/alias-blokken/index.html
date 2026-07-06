@@ -1936,6 +1936,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../alias-blokken-ontwerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alias-blokken — ontwerp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../migratie-zondag-zangstukken/" class="md-nav__link">
         
   
@@ -2135,7 +2163,7 @@
 </tr>
 <tr>
 <td><strong>Status</strong></td>
-<td><code>idee</code></td>
+<td><code>voorbereid</code></td>
 </tr>
 <tr>
 <td><strong>Repo</strong></td>
@@ -2144,6 +2172,10 @@
 <tr>
 <td><strong>Laatst bekeken</strong></td>
 <td>2026-07-04</td>
+</tr>
+<tr>
+<td><strong>Ontwerp</strong></td>
+<td><a href="../../alias-blokken-ontwerp/">alias-blokken-ontwerp.md</a></td>
 </tr>
 </tbody>
 </table>
@@ -2209,16 +2241,8 @@ register geldt voor <strong>bron</strong> en <strong>lokaal</strong>.</p>
 <p>Eventueel later een apart blok voor <code>troparion-melodie</code> / <code>tropaarmelodie</code> — niet mengen
 met het tropaar/troparion-blok.</p>
 <h2 id="open-ontwerpvragen">Open ontwerpvragen<a class="headerlink" href="#open-ontwerpvragen" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Waar staat de <strong>trigger</strong>: VSA-frontmatter, yaml-veld (<code>liturgische_rol:</code> /
-  <code>alias_blok:</code>), of afleiding uit titel?</li>
-<li><strong>Sync naar git:</strong> CI / <code>catalogus aliases sync</code> schrijft yaml, of alleen runtime-expansie
-  in <code>AliasIndex.build()</code>? (Dit idee wijst naar yaml-registratie → waarschijnlijk
-  sync-CLI plus validate in CI.)</li>
-<li><strong>Markeren afgeleide aliassen</strong> in yaml (comment of <code># gegenereerd</code>) om handmatige
-  edits te ontmoedigen?</li>
-<li><strong>Conflictregels:</strong> wat als een handmatig alias botst met een ander zangstuk binnen scope?</li>
-</ul>
+<p>Opgelost in <a href="../../alias-blokken-ontwerp/">alias-blokken-ontwerp.md</a>. Runtime-expansie en
+register-validatie zijn geïmplementeerd; yaml-sync en glossary volgen.</p>
 <h2 id="relatie-bestaande-code">Relatie bestaande code<a class="headerlink" href="#relatie-bestaande-code" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
