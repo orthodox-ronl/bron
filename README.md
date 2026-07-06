@@ -22,6 +22,14 @@ cd /d C:\Git\orthodox-groningen\bron
 scripts\docs-serve.cmd
 ```
 
+TEV2 + MkDocs lokaal bouwen:
+
+```cmd
+cd /d C:\Git\orthodox-groningen\bron
+npm install -g @tno-terminology-design/trrt @tno-terminology-design/hrgt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
+scripts\docs-build-tev2.cmd
+```
+
 ## Wat staat hier wel, en wat niet
 
 - **Wel**: zangstukken onder `zangstukken/`, met `zangstuk.yaml` en brondocumenten
