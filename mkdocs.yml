@@ -41,11 +41,11 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Glossary: glossary.md
   - Specificaties:
     - specs/index.md
     - specs/documentatie-eigendom.md
     - specs/terminologie.md
-    - glossary.md
     - Termen:
       - terms/zangstuk.md
       - terms/variant.md
