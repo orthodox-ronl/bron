@@ -81,6 +81,7 @@ jobs:
           mrg-import -c tev2-config.yaml
           mrgt       -c tev2-config.yaml
           hrgt -f    -c tev2-config.yaml
+          python ../../scripts/sort-glossary-table.py glossary.md
           trrt -f    -c tev2-config.yaml
 
       - name: Publish generated machine-readable glossaries

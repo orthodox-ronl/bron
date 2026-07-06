@@ -76,6 +76,12 @@ if errorlevel 1 (
   exit /b 1
 )
 
+python ..\..\scripts\sort-glossary-table.py glossary.md
+if errorlevel 1 (
+  popd
+  exit /b 1
+)
+
 call "%TRRT%" -f -c tev2-config.yaml
 if errorlevel 1 (
   popd
