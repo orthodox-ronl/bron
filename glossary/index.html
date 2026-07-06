@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://orthodox-groningen.github.io/bron/plans/ci-architectuur/">
+        <link rel="canonical" href="https://orthodox-groningen.github.io/bron/glossary/">
       
       
-        <link rel="prev" href="../ideeen/tev2-terminologie/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../alias-blokken-ontwerp/">
+        <link rel="next" href="../specs/">
       
       
         
       
       
-      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="icon" href="../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>CI-architectuur (conversie vs. export) - bron — documentatie</title>
+        <title>Glossary - bron — documentatie</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -50,17 +50,17 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
   
-  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
 
   </head>
   
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ci-architectuur-conversie-vs-export" class="md-skip">
+        <a href="#glossary" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -100,7 +100,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="bron — documentatie" class="md-header__button md-logo" aria-label="bron — documentatie" data-md-component="logo">
+    <a href=".." title="bron — documentatie" class="md-header__button md-logo" aria-label="bron — documentatie" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CI-architectuur (conversie vs. export)
+              Glossary
             
           </span>
         </div>
@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -218,9 +218,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../glossary/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -241,7 +243,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../specs/" class="md-tabs__link">
+        <a href="../specs/" class="md-tabs__link">
           
   
   
@@ -261,7 +263,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../manuals/" class="md-tabs__link">
+        <a href="../manuals/" class="md-tabs__link">
           
   
   
@@ -281,7 +283,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/" class="md-tabs__link">
+        <a href="../reference/" class="md-tabs__link">
           
   
   
@@ -297,13 +299,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../plans/" class="md-tabs__link">
           
   
   
@@ -343,7 +343,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigatie" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="bron — documentatie" class="md-nav__button md-logo" aria-label="bron — documentatie" data-md-component="logo">
+    <a href=".." title="bron — documentatie" class="md-nav__button md-logo" aria-label="bron — documentatie" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -373,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -397,10 +397,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../glossary/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -416,6 +425,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -481,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/" class="md-nav__link">
+      <a href="../specs/" class="md-nav__link">
         
   
   
@@ -509,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/documentatie-eigendom/" class="md-nav__link">
+      <a href="../specs/documentatie-eigendom/" class="md-nav__link">
         
   
   
@@ -537,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/terminologie/" class="md-nav__link">
+      <a href="../specs/terminologie/" class="md-nav__link">
         
   
   
@@ -619,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terms/zangstuk/" class="md-nav__link">
+      <a href="../terms/zangstuk/" class="md-nav__link">
         
   
   
@@ -647,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terms/variant/" class="md-nav__link">
+      <a href="../terms/variant/" class="md-nav__link">
         
   
   
@@ -675,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terms/uitvoeringsvorm/" class="md-nav__link">
+      <a href="../terms/uitvoeringsvorm/" class="md-nav__link">
         
   
   
@@ -703,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terms/representatie/" class="md-nav__link">
+      <a href="../terms/representatie/" class="md-nav__link">
         
   
   
@@ -739,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/zangstuk-identificatie/" class="md-nav__link">
+      <a href="../specs/zangstuk-identificatie/" class="md-nav__link">
         
   
   
@@ -767,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/schrijfconventies/" class="md-nav__link">
+      <a href="../specs/schrijfconventies/" class="md-nav__link">
         
   
   
@@ -795,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/inhoudslevenscyclus/" class="md-nav__link">
+      <a href="../specs/inhoudslevenscyclus/" class="md-nav__link">
         
   
   
@@ -823,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/repo-structuur/" class="md-nav__link">
+      <a href="../specs/repo-structuur/" class="md-nav__link">
         
   
   
@@ -851,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/zangstuk-formaat/" class="md-nav__link">
+      <a href="../specs/zangstuk-formaat/" class="md-nav__link">
         
   
   
@@ -879,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/catalogus-architectuur/" class="md-nav__link">
+      <a href="../specs/catalogus-architectuur/" class="md-nav__link">
         
   
   
@@ -907,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/catalogus-zoek-api/" class="md-nav__link">
+      <a href="../specs/catalogus-zoek-api/" class="md-nav__link">
         
   
   
@@ -935,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specs/catalogus-samenstelling-zangstuk/" class="md-nav__link">
+      <a href="../specs/catalogus-samenstelling-zangstuk/" class="md-nav__link">
         
   
   
@@ -1024,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/" class="md-nav__link">
+      <a href="../manuals/" class="md-nav__link">
         
   
   
@@ -1052,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/github-pages-setup/" class="md-nav__link">
+      <a href="../manuals/github-pages-setup/" class="md-nav__link">
         
   
   
@@ -1080,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/zangstuk-toevoegen/" class="md-nav__link">
+      <a href="../manuals/zangstuk-toevoegen/" class="md-nav__link">
         
   
   
@@ -1108,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/bronvariant-toevoegen/" class="md-nav__link">
+      <a href="../manuals/bronvariant-toevoegen/" class="md-nav__link">
         
   
   
@@ -1136,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/copyright-access/" class="md-nav__link">
+      <a href="../manuals/copyright-access/" class="md-nav__link">
         
   
   
@@ -1164,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/parochie-lokaal-zangstukken/" class="md-nav__link">
+      <a href="../manuals/parochie-lokaal-zangstukken/" class="md-nav__link">
         
   
   
@@ -1246,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/catalogus/" class="md-nav__link">
+      <a href="../manuals/catalogus/" class="md-nav__link">
         
   
   
@@ -1274,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/catalogus/sjabloon-schrijven/" class="md-nav__link">
+      <a href="../manuals/catalogus/sjabloon-schrijven/" class="md-nav__link">
         
   
   
@@ -1302,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/catalogus/rene-liturgie-geboorte-moeder-gods/" class="md-nav__link">
+      <a href="../manuals/catalogus/rene-liturgie-geboorte-moeder-gods/" class="md-nav__link">
         
   
   
@@ -1330,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/catalogus/rene-cherubijnenhymne-lokaal/" class="md-nav__link">
+      <a href="../manuals/catalogus/rene-cherubijnenhymne-lokaal/" class="md-nav__link">
         
   
   
@@ -1358,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/catalogus/rene-cherubijnenhymne-naar-bron/" class="md-nav__link">
+      <a href="../manuals/catalogus/rene-cherubijnenhymne-naar-bron/" class="md-nav__link">
         
   
   
@@ -1386,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manuals/catalogus/rene-cherubijnenhymne-musicxml/" class="md-nav__link">
+      <a href="../manuals/catalogus/rene-cherubijnenhymne-musicxml/" class="md-nav__link">
         
   
   
@@ -1483,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/" class="md-nav__link">
+      <a href="../reference/" class="md-nav__link">
         
   
   
@@ -1511,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/conversiemechanismen/" class="md-nav__link">
+      <a href="../reference/conversiemechanismen/" class="md-nav__link">
         
   
   
@@ -1539,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/conversie-vsa-svg/" class="md-nav__link">
+      <a href="../reference/conversie-vsa-svg/" class="md-nav__link">
         
   
   
@@ -1567,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/conversie-vsa-musicxml/" class="md-nav__link">
+      <a href="../reference/conversie-vsa-musicxml/" class="md-nav__link">
         
   
   
@@ -1595,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/exportcontracten/" class="md-nav__link">
+      <a href="../reference/exportcontracten/" class="md-nav__link">
         
   
   
@@ -1623,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/exporttype-svg/" class="md-nav__link">
+      <a href="../reference/exporttype-svg/" class="md-nav__link">
         
   
   
@@ -1651,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/exporttype-coria/" class="md-nav__link">
+      <a href="../reference/exporttype-coria/" class="md-nav__link">
         
   
   
@@ -1679,7 +1689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/exporttype-mxl/" class="md-nav__link">
+      <a href="../reference/exporttype-mxl/" class="md-nav__link">
         
   
   
@@ -1707,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/brontypes-validatie/" class="md-nav__link">
+      <a href="../reference/brontypes-validatie/" class="md-nav__link">
         
   
   
@@ -1735,7 +1745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/catalogus-cli/" class="md-nav__link">
+      <a href="../reference/catalogus-cli/" class="md-nav__link">
         
   
   
@@ -1767,31 +1777,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -1809,7 +1816,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1827,7 +1834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../plans/" class="md-nav__link">
         
   
   
@@ -1861,13 +1868,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1876,7 +1880,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
         
           
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
             
   
   
@@ -1912,7 +1916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ideeen/" class="md-nav__link">
+      <a href="../plans/ideeen/" class="md-nav__link">
         
   
   
@@ -1940,7 +1944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ideeen/alias-blokken/" class="md-nav__link">
+      <a href="../plans/ideeen/alias-blokken/" class="md-nav__link">
         
   
   
@@ -1968,7 +1972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ideeen/tev2-terminologie/" class="md-nav__link">
+      <a href="../plans/ideeen/tev2-terminologie/" class="md-nav__link">
         
   
   
@@ -2001,37 +2005,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CI-architectuur (conversie vs. export)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../plans/ci-architectuur/" class="md-nav__link">
         
   
   
@@ -2047,92 +2024,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#doel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Doel
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aanbeveling-fases-niet-per-exporttype" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Aanbeveling: fases, niet per exporttype
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bron-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        bron repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vsa-tooling-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VSA-tooling repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wanneer-wel-splitsen-per-conversietype" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Wanneer wél splitsen per conversietype?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gerelateerd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Gerelateerd
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2145,7 +2036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../alias-blokken-ontwerp/" class="md-nav__link">
+      <a href="../plans/alias-blokken-ontwerp/" class="md-nav__link">
         
   
   
@@ -2173,7 +2064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../migratie-zondag-zangstukken/" class="md-nav__link">
+      <a href="../plans/migratie-zondag-zangstukken/" class="md-nav__link">
         
   
   
@@ -2201,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samenvatting-project/" class="md-nav__link">
+      <a href="../plans/samenvatting-project/" class="md-nav__link">
         
   
   
@@ -2249,80 +2140,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#doel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Doel
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aanbeveling-fases-niet-per-exporttype" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Aanbeveling: fases, niet per exporttype
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bron-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        bron repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vsa-tooling-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VSA-tooling repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wanneer-wel-splitsen-per-conversietype" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Wanneer wél splitsen per conversietype?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gerelateerd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Gerelateerd
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2338,7 +2155,7 @@
 
 
   
-    <a href="https://github.com/orthodox-groningen/bron/edit/main/docs/plans/ci-architectuur.md" title="Wijzig deze pagina" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/orthodox-groningen/bron/edit/main/docs/glossary.md" title="Wijzig deze pagina" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2346,150 +2163,42 @@
   
 
 
-<h1 id="ci-architectuur-conversie-vs-export">CI-architectuur (conversie vs. export)<a class="headerlink" href="#ci-architectuur-conversie-vs-export" title="Permanent link">&para;</a></h1>
-<p>Status: richtlijn juni 2026. Beschrijft <strong>wanneer</strong> workflows splitsen — geen
-implementatieverplichting in deze fase.</p>
-<hr />
-<h2 id="doel">Doel<a class="headerlink" href="#doel" title="Permanent link">&para;</a></h2>
-<p>Scheiding tussen:</p>
-<ol>
-<li><strong>Conversie</strong> — <code>.vsa</code> → afgeleide (<code>.svg</code>, <code>.mxl</code>)</li>
-<li><strong>Export / samenstelling</strong> — Markdown includes, Hugo, static site</li>
-<li><strong>Documentatie</strong> — MkDocs in <code>bron</code> (geen muziek-build)</li>
-</ol>
-<hr />
-<h2 id="aanbeveling-fases-niet-per-exporttype">Aanbeveling: fases, niet per exporttype<a class="headerlink" href="#aanbeveling-fases-niet-per-exporttype" title="Permanent link">&para;</a></h2>
-<p><strong>Geen</strong> aparte GitHub workflow per exporttype (<code>svg</code>, <code>coria</code>, <code>mxl</code>) of per
-conversietype. Exporttypes zijn passes in <strong>één</strong> build-markdown/Hugo-job.</p>
-<p><strong>Wel</strong> onderscheid op repository en fase:</p>
-<pre class="mermaid"><code>flowchart TB
-  subgraph bronRepo [bron repo]
-    DocsPages["docs-pages.yml\nMkDocs deploy"]
-    ValidateTBD["validate-zangstukken.yml\nTBD bij eerste content"]
-  end
-  subgraph vsaRepo [VSA-tooling repo]
-    VsaCI["vsa-ci.yml\ntests lint"]
-    DeriveTBD["derive-artifacts\nvsa svg + musicxml\nTBD expliciet"]
-    SiteBuild["site-build.yml\nnu: gecombineerd"]
-    Compose["build-markdown + Hugo"]
-  end
-  ValidateTBD --&gt; DeriveTBD
-  DeriveTBD --&gt; Compose
-  VsaCI --&gt; SiteBuild
-  SiteBuild --&gt; Compose
-  DocsPages --&gt; DocsPages</code></pre>
+<h1 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h1>
 <table>
 <thead>
 <tr>
-<th>Laag</th>
-<th>Repo</th>
-<th>Workflow (nu)</th>
-<th>Richting</th>
+<th>Term</th>
+<th>Definitie</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Documentatie</td>
-<td><code>bron</code></td>
-<td><a href="https://github.com/orthodox-groningen/bron/blob/main/.github/workflows/docs-pages.yml">docs-pages.yml</a></td>
-<td>Blijft apart</td>
+<td><a href="../terms/representatie/">Representatie</a></td>
+<td>Een notatie of brondocument waarmee een uitvoeringsvorm concreet wordt vastgelegd, zoals VSA, scan of MusicXML als bron.</td>
 </tr>
 <tr>
-<td>Kwaliteit tooling</td>
-<td>VSA-tooling</td>
-<td><code>vsa-ci.yml</code></td>
-<td>Blijft</td>
+<td><a href="../terms/uitvoeringsvorm/">Uitvoeringsvorm</a></td>
+<td>Een beschrijving van wat je hoort bij correcte uitvoering van een variant, vanuit een representatie of mondelinge overlevering.</td>
 </tr>
 <tr>
-<td>Conversie</td>
-<td>VSA-tooling / parochie</td>
-<td>Deels inline in <code>site-build</code></td>
-<td>Expliciete derive-job</td>
+<td><a href="../terms/variant/">Variant</a></td>
+<td>Een inhoudelijk andere muzikale variant onder hetzelfde zangstuk, met dezelfde liturgische functie maar wezenlijk andere muzikale inhoud.</td>
 </tr>
 <tr>
-<td>Export + site</td>
-<td>VSA-tooling / parochie</td>
-<td><code>site-build</code>, reusable <code>vsa-render</code></td>
-<td>Eén compose-job</td>
+<td><a href="../terms/zangstuk/">Zangstuk</a></td>
+<td>Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer varianten bestaan.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="bron-repository">bron repository<a class="headerlink" href="#bron-repository" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Workflow</th>
-<th>Trigger</th>
-<th>Doet</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>docs-pages.yml</code></td>
-<td>push <code>main</code> / branches</td>
-<td>MkDocs → GitHub Pages</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Toekomst</strong> (<code>validate-zangstukken.yml</code>):</p>
-<ul>
-<li><code>vsa validate</code> op <code>zangstukken/**/sources/vsa/*.vsa</code></li>
-<li>Optioneel reusable workflow uit VSA-tooling aanroepen</li>
-<li><strong>Geen</strong> Hugo, geen export</li>
-</ul>
-<hr />
-<h2 id="vsa-tooling-repository">VSA-tooling repository<a class="headerlink" href="#vsa-tooling-repository" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Workflow</th>
-<th>Rol</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>vsa-ci.yml</code></td>
-<td>Unit tests, lint — geen site</td>
-</tr>
-<tr>
-<td><code>site-build.yml</code></td>
-<td>Demo-site: content-source → markdown → SVG/MXL → Hugo</td>
-</tr>
-<tr>
-<td><code>vsa-render-reusable.yml</code></td>
-<td>Herbruikbaar voor andere repo's (input_dir, assets_dir)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Doelarchitectuur:</strong></p>
-<ol>
-<li><strong>Job derive</strong> — <code>vsa svg</code> + <code>vsa musicxml</code> over content; upload artefacts</li>
-<li><strong>Job compose</strong> — download artefacts, <code>build-markdown</code>, Hugo deploy</li>
-</ol>
-<p>Voordelen: snellere retry bij Hugo-only fouten; duidelijke conversie-log in CI.</p>
-<hr />
-<h2 id="wanneer-wel-splitsen-per-conversietype">Wanneer wél splitsen per conversietype?<a class="headerlink" href="#wanneer-wel-splitsen-per-conversietype" title="Permanent link">&para;</a></h2>
-<p>Alleen als sterk verschillend:</p>
-<ul>
-<li>Verschillende <strong>triggers</strong> (nightly PDF-batch vs. on-demand SVG)</li>
-<li>Verschillende <strong>resources</strong> (zware jobs)</li>
-<li><strong>Failure isolation</strong> vereist door organisatie</li>
-</ul>
-<p>Op huidige schaal: <strong>één derive-job</strong> met beide commando's is voldoende.</p>
-<hr />
-<h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../../specs/inhoudslevenscyclus/">Inhoudslevenscyclus</a></li>
-<li><a href="../../reference/conversiemechanismen/">Conversiemechanismen</a></li>
-<li><a href="../../reference/exportcontracten/">Exportcontracten</a></li>
-</ul>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -2560,10 +2269,10 @@ conversietype. Exporttypes zijn passes in <strong>één</strong> build-markdown/
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
