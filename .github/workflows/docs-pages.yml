@@ -20,6 +20,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set build timestamp
+        id: ts
+        run: echo "build_time=$(date -u +'%Y-%m-%d %H:%M UTC')" >> "$GITHUB_OUTPUT"
 
       - name: Determine deploy target
         id: target
@@ -70,7 +76,8 @@ jobs:
         run: |
           python scripts/set-mkdocs-site-url.py \
             "${{ steps.target.outputs.site_url }}" \
-            "${{ steps.target.outputs.preview }}"
+            "${{ steps.target.outputs.preview }}" \
+            "${{ steps.ts.outputs.build_time }}"
 
       - name: Prepare TEV2 docs staging tree
         run: python scripts/prepare-tev2-docs.py

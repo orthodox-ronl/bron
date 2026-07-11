@@ -12,3 +12,10 @@
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   {% endif %}
 {% endblock %}
+
+{% block content %}
+  {{ super() }}
+  {% if page.is_homepage and config.extra.build_time %}
+  <p class="build-time-stamp">Gegenereerd: {{ config.extra.build_time }}</p>
+  {% endif %}
+{% endblock %}

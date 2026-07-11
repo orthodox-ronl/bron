@@ -30,6 +30,10 @@ theme:
 
 plugins:
   - search
+  - git-revision-date-localized:
+      type: date
+      locale: nl
+      fallback_to_build_date: true
 
 markdown_extensions:
   - admonition
@@ -98,6 +102,7 @@ extra_css:
 
 extra:
   preview: false
+  build_time: ""
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/orthodox-groningen/bron

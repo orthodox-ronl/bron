@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Patch site_url and preview flag in mkdocs.yml for CI builds."""
+"""Patch site_url, preview flag, and build_time in mkdocs.yml for CI builds."""
 
 from __future__ import annotations
 
@@ -9,15 +9,20 @@ from pathlib import Path
 
 
 def main() -> int:
-    if len(sys.argv) != 3:
-        print(f"Usage: {sys.argv[0]} <site_url> <preview:true|false>", file=sys.stderr)
+    if len(sys.argv) not in {3, 4}:
+        print(
+            f"Usage: {sys.argv[0]} <site_url> <preview:true|false> [build_time]",
+            file=sys.stderr,
+        )
         return 2
 
     site_url = sys.argv[1].rstrip("/") + "/"
     preview = sys.argv[2].lower() in {"1", "true", "yes"}
+    build_time = sys.argv[3] if len(sys.argv) == 4 else ""
 
     path = Path("mkdocs.yml")
     text = path.read_text(encoding="utf-8")
+
     text, n_url = re.subn(
         r"^site_url:\s*.+$",
         f"site_url: {site_url}",
@@ -30,7 +35,7 @@ def main() -> int:
         return 1
 
     text, n_preview = re.subn(
-        r"^  preview:\s*.+$",
+        r"^  preview:\s*.*$",
         f"  preview: {str(preview).lower()}",
         text,
         count=1,
@@ -40,8 +45,19 @@ def main() -> int:
         print("Could not patch extra.preview in mkdocs.yml", file=sys.stderr)
         return 1
 
+    text, n_time = re.subn(
+        r'^  build_time:\s*.*$',
+        f'  build_time: "{build_time}"',
+        text,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    if n_time != 1:
+        print("Could not patch extra.build_time in mkdocs.yml", file=sys.stderr)
+        return 1
+
     path.write_text(text, encoding="utf-8")
-    print(f"site_url={site_url} preview={preview}")
+    print(f"site_url={site_url} preview={preview} build_time={build_time!r}")
     return 0
 
 
