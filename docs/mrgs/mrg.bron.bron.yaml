@@ -11,7 +11,8 @@ terminology:
   vsntag: "bron"
 scopes: []
 entries:
-  - term: "afgeleide"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "afgeleide"
     formPhrases:
       - "afgeleide"
       - "afgeleiden"
@@ -30,7 +31,8 @@ entries:
     termType: "concept"
     termid: "concept:afgeleide"
     vsntag: "bron"
-  - term: "bron-repository"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "bron-repository"
     formPhrases:
       - "bron-repository"
       - "bron-repository-s"
@@ -53,7 +55,8 @@ entries:
     termType: "concept"
     termid: "concept:bron-repository"
     vsntag: "bron"
-  - term: "bronbestand"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "bronbestand"
     formPhrases:
       - "bronbestand"
       - "bronbestanden"
@@ -80,7 +83,8 @@ entries:
     termType: "concept"
     termid: "concept:bronbestand"
     vsntag: "bron"
-  - term: "compositie"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "compositie"
     formPhrases:
       - "compositie"
       - "composities"
@@ -98,7 +102,8 @@ entries:
     termType: "concept"
     termid: "concept:compositie"
     vsntag: "bron"
-  - term: "conversiemechanisme"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "conversiemechanisme"
     formPhrases:
       - "conversiemechanisme"
       - "conversiemechanismen"
@@ -116,7 +121,8 @@ entries:
     termType: "concept"
     termid: "concept:conversiemechanisme"
     vsntag: "bron"
-  - term: "exportmechanisme"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "exportmechanisme"
     formPhrases:
       - "exportmechanisme"
       - "exportmechanismen"
@@ -131,7 +137,8 @@ entries:
     termType: "concept"
     termid: "concept:exportmechanisme"
     vsntag: "bron"
-  - term: "exporttype"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "exporttype"
     formPhrases:
       - "exporttype"
       - "exporttypen"
@@ -149,7 +156,8 @@ entries:
     termType: "concept"
     termid: "concept:exporttype"
     vsntag: "bron"
-  - term: "geregistreerde-representatie"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "geregistreerde-representatie"
     formPhrases:
       - "geregistreerde-representatie"
       - "geregistreerde-representaties"
@@ -168,7 +176,8 @@ entries:
     termType: "concept"
     termid: "concept:geregistreerde-representatie"
     vsntag: "bron"
-  - term: "herkomst"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "herkomst"
     formPhrases:
       - "herkomst"
     glossaryTerm: "Herkomst"
@@ -185,7 +194,8 @@ entries:
     termType: "concept"
     termid: "concept:herkomst"
     vsntag: "bron"
-  - term: "manifest"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "manifest"
     formPhrases:
       - "manifest"
       - "manifesten"
@@ -204,7 +214,8 @@ entries:
     termType: "concept"
     termid: "concept:manifest"
     vsntag: "bron"
-  - term: "parochie-lokale-representatie"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "parochie-lokale-representatie"
     formPhrases:
       - "parochie-lokale-representatie"
       - "parochie-lokale-representaties"
@@ -223,7 +234,8 @@ entries:
     termType: "concept"
     termid: "concept:parochie-lokale-representatie"
     vsntag: "bron"
-  - term: "promotie"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "promotie"
     formPhrases:
       - "promotie"
       - "registratie"
@@ -241,7 +253,8 @@ entries:
     termType: "concept"
     termid: "concept:promotie"
     vsntag: "bron"
-  - term: "representatie"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "representatie"
     formPhrases:
       - "representatie"
       - "representaties"
@@ -260,7 +273,8 @@ entries:
     termType: "concept"
     termid: "concept:representatie"
     vsntag: "bron"
-  - term: "samenstelling"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "samenstelling"
     formPhrases:
       - "samenstelling"
       - "samenstellingen"
@@ -279,7 +293,8 @@ entries:
     termType: "concept"
     termid: "concept:samenstelling"
     vsntag: "bron"
-  - term: "source-entry"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "source-entry"
     formPhrases:
       - "source-entry"
       - "source-entries"
@@ -298,7 +313,8 @@ entries:
     termType: "concept"
     termid: "concept:source-entry"
     vsntag: "bron"
-  - term: "uitvoeringsvorm"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "uitvoeringsvorm"
     formPhrases:
       - "uitvoeringsvorm"
       - "uitvoeringsvormen"
@@ -319,7 +335,8 @@ entries:
     termType: "concept"
     termid: "concept:uitvoeringsvorm"
     vsntag: "bron"
-  - term: "variant"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "variant"
     formPhrases:
       - "variant"
       - "varianten"
@@ -341,7 +358,8 @@ entries:
     termType: "concept"
     termid: "concept:variant"
     vsntag: "bron"
-  - term: "vsa"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "vsa"
     termType: "concept"
     glossaryTerm: "Vereenvoudigde Slavische Accentnotatie"
     glossaryAbbr: "VSA"
@@ -359,7 +377,8 @@ entries:
       - "motivatie"
     termid: "concept:vsa"
     vsntag: "bron"
-  - term: "vsa-bestand"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "vsa-bestand"
     termType: "concept"
     glossaryTerm: "vsa-bestand"
     glossaryText: "Een bestand met de extensie `.vsa` waarvan de inhoud uitsluitend syntactisch geldige [vsa-notatie](@) bevat — d.w.z. door de [vsa-tooling](@) foutloos wordt geparseerd en gevalideerd."
@@ -381,7 +400,8 @@ entries:
       - "zie-ook:"
     termid: "concept:vsa-bestand"
     vsntag: "bron"
-  - term: "vsa-notatie"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "vsa-notatie"
     termType: "concept"
     glossaryTerm: "VSA-notatie"
     glossaryText: "Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door [vsa-tooling](@)."
@@ -402,7 +422,8 @@ entries:
       - "zie-ook:"
     termid: "concept:vsa-notatie"
     vsntag: "bron"
-  - term: "vsa-tooling"
+  - git_date: 2026-07-11T00:00:00.000Z
+    term: "vsa-tooling"
     termType: "concept"
     glossaryTerm: "VSA-tooling"
     glossaryText: "De Python-toolchain (`vsa` CLI) waarmee [vsa-notatie](@)-bestanden worden geparseerd, gevalideerd en omgezet naar [afgeleiden](@) zoals SVG en MusicXML."
@@ -425,7 +446,8 @@ entries:
       - "zie-ook:"
     termid: "concept:vsa-tooling"
     vsntag: "bron"
-  - term: "zangstuk"
+  - git_date: 2026-07-06T00:00:00.000Z
+    term: "zangstuk"
     formPhrases:
       - "zangstuk"
       - "zangstukken"
