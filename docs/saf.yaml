@@ -13,6 +13,6 @@ scopes:
     scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs
 
 versions:
-  - vsntag: bron-terms
+  - vsntag: bron
     termselection:
       - "*"

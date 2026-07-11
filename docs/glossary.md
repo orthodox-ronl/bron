@@ -6,4 +6,4 @@ title: "Glossary"
 
 | Term | Definitie |
 | ---- | --------- |
-{% hrg="" %}
+{% hrg="bron" %}
