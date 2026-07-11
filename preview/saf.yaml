@@ -4,7 +4,7 @@ scope:
   curatedir: terms
   glossarydir: mrgs
   defaultvsn: bron-terms
-  website: https://orthodox-groningen.github.io/bron
+  website: https://orthodox-groningen.github.io/bron/preview
   navpath: /terms
   navid: term
 
