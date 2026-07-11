@@ -8,6 +8,9 @@ edit_uri: edit/main/docs/
 exclude_docs: |
   overrides/**
 
+not_in_nav: |
+  terms/**
+
 theme:
   name: material
   language: nl
@@ -46,11 +49,6 @@ nav:
     - specs/index.md
     - specs/documentatie-eigendom.md
     - specs/terminologie.md
-    - Termen:
-      - terms/zangstuk.md
-      - terms/variant.md
-      - terms/uitvoeringsvorm.md
-      - terms/representatie.md
     - specs/zangstuk-identificatie.md
     - specs/schrijfconventies.md
     - specs/inhoudslevenscyclus.md
