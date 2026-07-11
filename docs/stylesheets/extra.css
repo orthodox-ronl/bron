@@ -1,8 +1,14 @@
-/* Bouwtijdstempel op homepage */
+/* Bouwtijdstempel op homepage en per-pagina git-datum */
 
-.build-time-stamp {
+.build-time-stamp,
+.page-git-date {
   color: var(--md-default-fg-color--light);
   font-size: .75rem;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+.build-time-stamp {
   margin-top: -.75rem;
   margin-bottom: 1.5rem;
 }

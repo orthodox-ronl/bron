@@ -103,6 +103,7 @@ extra_css:
 extra:
   preview: false
   build_time: ""
+  branch: ""
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/orthodox-groningen/bron

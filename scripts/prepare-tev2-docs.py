@@ -5,8 +5,50 @@ from __future__ import annotations
 
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
+
+
+def _inject_git_dates(generated_docs: Path, source_docs: Path) -> None:
+    """Inject last git commit date into generated docs files as frontmatter.
+
+    The git-revision-date plugin resolves dates by file path.  Files in
+    generated/docs/ are TEV2-processed copies without git tracking, so the
+    plugin emits a WARNING per page (fatal in --strict mode).  Instead we
+    pre-compute dates from the original docs/ files here and store them as
+    ``git_date: YYYY-MM-DD`` frontmatter.  The template reads this field and
+    renders it in the page footer, bypassing the plugin entirely in CI.
+    """
+    repo_root = source_docs.parent
+    count = 0
+    for md_file in sorted(generated_docs.rglob("*.md")):
+        rel = md_file.relative_to(generated_docs)
+        orig = source_docs / rel
+        if not orig.exists():
+            continue
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%as", "--", str(orig)],
+            capture_output=True,
+            text=True,
+            cwd=str(repo_root),
+        )
+        date_iso = result.stdout.strip()
+        if not date_iso:
+            continue
+        _prepend_frontmatter_field(md_file, "git_date", date_iso)
+        count += 1
+    print(f"Injected git_date into {count} generated docs files.")
+
+
+def _prepend_frontmatter_field(path: Path, key: str, value: str) -> None:
+    """Prepend key: value to the YAML frontmatter of a markdown file."""
+    content = path.read_text(encoding="utf-8")
+    if content.startswith("---\n"):
+        content = f"---\n{key}: {value}\n" + content[4:]
+    else:
+        content = f"---\n{key}: {value}\n---\n\n" + content
+    path.write_text(content, encoding="utf-8")
 
 
 def _disable_git_plugin(mkdocs_path: Path) -> None:
@@ -89,6 +131,7 @@ def main() -> int:
 
     _patch_saf_website(generated_docs, mkdocs_dest)
     _disable_git_plugin(mkdocs_dest)
+    _inject_git_dates(generated_docs, source_docs)
 
     print(f"Prepared TEV2 docs staging tree: {generated_docs}")
     return 0

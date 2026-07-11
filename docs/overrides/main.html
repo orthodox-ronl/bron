@@ -8,7 +8,9 @@
 
 {% block announce %}
   {% if config.extra.preview %}
-  <strong>Preview</strong> — gebouwd vanaf een branch.
+  <strong>Preview</strong>
+  {% if config.extra.branch %} — branch <code>{{ config.extra.branch }}</code>{% endif %}
+  {% if config.extra.build_time %}, gebouwd {{ config.extra.build_time }}{% endif %}.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   {% endif %}
 {% endblock %}
@@ -17,5 +19,8 @@
   {{ super() }}
   {% if page.is_homepage and config.extra.build_time %}
   <p class="build-time-stamp">Gegenereerd: {{ config.extra.build_time }}</p>
+  {% endif %}
+  {% if page.meta.git_date %}
+  <p class="page-git-date">Bijgewerkt: {{ page.meta.git_date }}</p>
   {% endif %}
 {% endblock %}
