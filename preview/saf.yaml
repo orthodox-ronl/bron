@@ -3,7 +3,7 @@ scope:
   scopedir: https://github.com/orthodox-groningen/bron/tree/main/docs
   curatedir: terms
   glossarydir: mrgs
-  defaultvsn: bron-terms
+  defaultvsn: bron
   website: https://orthodox-groningen.github.io/bron/preview
   navpath: /terms
   navid: term
@@ -13,6 +13,6 @@ scopes:
     scopedir: https://github.com/tno-terminology-design/tev2-specifications/tree/master/docs
 
 versions:
-  - vsntag: bron-terms
+  - vsntag: bron
     termselection:
       - "*"
