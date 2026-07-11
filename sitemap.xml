@@ -2,194 +2,274 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://orthodox-groningen.github.io/bron/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/glossary/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/zangstuk/</loc>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/bronvariant-toevoegen/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/copyright-access/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/github-pages-setup/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/parochie-lokaal-zangstukken/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/zangstuk-toevoegen/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/catalogus/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/catalogus/rene-cherubijnenhymne-lokaal/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/catalogus/rene-cherubijnenhymne-musicxml/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/catalogus/rene-cherubijnenhymne-naar-bron/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/catalogus/rene-liturgie-geboorte-moeder-gods/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/manuals/catalogus/sjabloon-schrijven/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/plans/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/plans/alias-blokken-ontwerp/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/plans/audit-zangstuk-catalogus/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/plans/ci-architectuur/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/plans/gebruikseisen-representatievormen/</loc>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/plans/migratie-zondag-zangstukken/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/plans/samenvatting-project/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/plans/ideeen/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/plans/ideeen/alias-blokken/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/plans/ideeen/tev2-terminologie/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/brontypes-validatie/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/catalogus-cli/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/conversie-vsa-musicxml/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/conversie-vsa-svg/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/conversiemechanismen/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/exportcontracten/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/exporttype-coria/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/exporttype-mxl/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/reference/exporttype-svg/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/catalogus-architectuur/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/catalogus-samenstelling-zangstuk/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/catalogus-zoek-api/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/documentatie-eigendom/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/inhoudslevenscyclus/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/repo-structuur/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/schrijfconventies/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/terminologie/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/zangstuk-formaat/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/specs/zangstuk-identificatie/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/afgeleide/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/bron-repository/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/bronbestand/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/compositie/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/conversiemechanisme/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/exportmechanisme/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/exporttype/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/geregistreerde-representatie/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/herkomst/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/manifest/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/parochie-lokale-representatie/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/promotie/</loc>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/terms/representatie/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/samenstelling/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/source-entry/</loc>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/terms/uitvoeringsvorm/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/terms/variant/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/vsa-bestand/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/vsa-notatie/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/vsa-tooling/</loc>
+         <lastmod>2026-07-11</lastmod>
+    </url>
+    <url>
+         <loc>https://orthodox-groningen.github.io/bron/terms/vsa/</loc>
+         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
          <loc>https://orthodox-groningen.github.io/bron/terms/zangstuk/</loc>
-         <lastmod>2026-07-06</lastmod>
+         <lastmod>2026-07-11</lastmod>
     </url>
 </urlset>

@@ -1,0 +1,81 @@
+# Idee: app voor offline uitvoeren
+
+| Veld               | Waarde           |
+| ------------------ | ---------------- |
+| **Id**             | `app-offline-uitvoering` |
+| **Status**         | `idee`           |
+| **Repo**           | nog te bepalen (nieuw, of onderdeel van bron) |
+| **Laatst bekeken** | 2026-07-11       |
+
+## Samenvatting
+
+De huidige eis voor tablet/telefoon tijdens zingen/uitvoeren (zie
+[representatie-eisen.md](../representatie-eisen.md) §4.2) is: geen internetverbinding
+nodig. Dat wordt voorlopig ingevuld door altijd een verbinding met een **server** te
+vereisen die de variant-/uitvoeringsvorm-representaties levert (of genereert), waarbij
+die server **lokaal** moet draaien als er geen internet is (§3 van datzelfde document).
+
+Dit idee beschrijft het alternatief: een **native app** op tablet/telefoon met eigen
+opslag, die representaties vooraf kan downloaden/bewaren. Daarmee is tijdens een dienst
+geen enkele verbinding meer nodig — ook niet met een lokale server — omdat het apparaat
+alles al bij zich heeft.
+
+## Beoordeling
+
+**Zinvol als toekomstige stap — nog niet nu te bouwen.**
+
+- Een app lost een reëel ongemak van de server-aanpak op: zonder app moet er bij élke
+  uitvoerlocatie een lokale server aanwezig zijn (iemand moet die opzetten, meenemen,
+  aanzetten). Dat is een organisatorische last die een app wegneemt.
+- Tegelijk is dit een **grotere** ontwikkelinspanning dan de server-aanpak: een app heeft
+  eigen synchronisatie-, opslag- en updatelogica nodig (wanneer wordt materiaal
+  ververst, hoe merkt de gebruiker dat iets verouderd is, wat gebeurt er met nieuw
+  toegevoegd materiaal vlak vóór een dienst).
+- De server-aanpak (§3 van representatie-eisen.md) is bewust als eerste stap gekozen
+  omdat die ook meteen serverside-generatie van representaties (SVG, MusicXML, PDF, …)
+  mogelijk maakt — iets wat een pure app-aanpak niet vanzelf oplevert (die zou dan alsnog
+  van een server moeten "downloaden" wat er al dan niet gegenereerd is).
+- Dit idee bouwt dus voort op, en vervangt niet, de server-architectuur: een app zou
+  waarschijnlijk gewoon een cliënt zijn die van diezelfde server representaties ophaalt
+  en lokaal cachet, in plaats van een geheel eigen opslagmodel.
+
+**Afgebakend:** dit idee gaat alleen over het *offline-bruikbaar maken tijdens uitvoeren
+zonder lokale server*. Het is geen vervanging van de website/server-vorm voor thuis
+oefenen (die mag altijd een verbinding vereisen, zie representatie-eisen.md §4.2) en
+regelt niets aan de inhoud of het datamodel van representaties zelf.
+
+## Nu al organiseren
+
+1. **Geen aannames vastleggen** in specs die een app veronderstellen — de huidige
+   representatie-eisen gaan uitdrukkelijk uit van de server-aanpak; een app is een latere,
+   optionele uitbreiding.
+2. **Representaties zo genereren dat ze cachebaar zijn** (stabiele identifiers per
+   variant/uitvoeringsvorm/representatie) — dat maakt een latere app-cache eenvoudiger,
+   zonder dat de server-architectuur daarvoor al hoeft te wijzigen.
+3. **Niet vooruitlopen op sync-logica** (welke representaties download je vooraf, hoe
+   detecteer je een update) — dat hoort bij implementatie van dit idee, niet bij het
+   huidige eisendocument.
+
+## Open ontwerpvragen
+
+- Native app per platform, of een "installable" web-app (PWA) die device-opslag gebruikt
+  zonder aparte appstore-distributie?
+- Wat synchroniseert de app vooraf: alles wat in een dienst/gelegenheid zit (vergelijkbaar
+  met een sessie/sjabloon), of alles wat een koorlid ooit gebruikt?
+- Hoe merkt een koorlid dat de gecachete versie afwijkt van wat er inmiddels op de server
+  staat, en wanneer wordt dat relevant genoeg om iets te melden?
+- Blijft de oefenmodus-schakelaar (representatie-eisen.md §5.1) hetzelfde concept in een
+  app, of verandert de scope (per-sessie in plaats van globaal, nu de app toch al weet
+  welke representaties gedownload zijn)?
+- Relatie tot papier: blijft papier een volledig aparte, ongewijzigde drager naast de app
+  (zoals nu al het geval is t.o.v. de server-vorm)?
+
+## Implementatieschets (later)
+
+1. Bepalen of PWA of native de voorkeur heeft, gegeven de al bestaande server/website
+2. Cache-strategie ontwerpen: wat wordt gedownload, wanneer, en hoe wordt dat ververst
+3. Representatie-identifiers stabiel maken zodat caching en updates elkaar niet in de weg zitten
+4. Oefenmodus en non-invasieve links (representatie-eisen.md §5) opnieuw doordenken in
+   app-context: blijft dit gedrag hetzelfde als bij de server/website-vorm?
+5. Pilot met één gelegenheid/sessie, offline getest zonder enige verbinding (ook niet
+   lokaal), voordat dit breder wordt uitgerold

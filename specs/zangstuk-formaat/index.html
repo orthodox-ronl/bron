@@ -567,183 +567,6 @@
   
   
   
-    
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Termen
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Termen
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../terms/zangstuk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Zangstuk
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../terms/variant/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Variant
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../terms/uitvoeringsvorm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Uitvoeringsvorm
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../terms/representatie/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Representatie
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
       <a href="../zangstuk-identificatie/" class="md-nav__link">
         
@@ -1805,7 +1628,7 @@
   <span class="md-ellipsis">
     
   
-    Exporttype: embed SVG
+    Exporttype svg
   
 
     
@@ -2446,6 +2269,7 @@
               
               <article class="md-content__inner md-typeset">
                 
+  
                   
 
 
@@ -2500,6 +2324,7 @@
 <li>Gedeelde scan: <code>file: ../ander-zangstuk-id/sources/scan/bestand.pdf</code></li>
 </ul>
 <h2 id="vsa-bestanden">VSA-bestanden<a class="headerlink" href="#vsa-bestanden" title="Permanent link">&para;</a></h2>
+<p><a href="/bron/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">VSA-bestanden</a> bevatten <a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> en hebben de extensie <code>.vsa</code>.</p>
 <h3 id="platte-vsa">Platte VSA<a class="headerlink" href="#platte-vsa" title="Permanent link">&para;</a></h3>
 <p>Geen <code>---</code>-kop: platte notatietekst, volledig ondersteund.</p>
 <h3 id="vsa-met-yaml-frontmatter-optioneel">VSA met YAML-frontmatter (optioneel)<a class="headerlink" href="#vsa-met-yaml-frontmatter-optioneel" title="Permanent link">&para;</a></h3>
@@ -2520,7 +2345,7 @@
 <span class="nn">---</span>
 </code></pre></div>
 <p><strong>Voorrangsregel:</strong> <code>zangstuk.yaml</code> is leidend voor overlappende identificatievelden.
-Frontmatter dient voor gebruik van het <code>.vsa</code>-bestand buiten deze repository.</p>
+Frontmatter dient voor gebruik van het <a href="/bron/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a> buiten deze repository.</p>
 <h3 id="parochie-samenstelling-optioneel-default">Parochie-samenstelling — optioneel <code>default:</code><a class="headerlink" href="#parochie-samenstelling-optioneel-default" title="Permanent link">&para;</a></h3>
 <p>Wanneer een <code>.vsa</code> <strong><code>@include-vsa zoek=</code></strong> bevat of in een parochie-context staat,
 mag frontmatter een <strong><code>default:</code></strong>-blok spiegelen (zelfde sleutels als markdown-sessie):</p>
@@ -2562,12 +2387,20 @@ als <code>gelegenheid</code> / <code>toon</code> op <strong><code>zangstuk.yaml<
 
 
 
+  
+  
+
 
 
 
 
 
                 
+  
+  
+  <p class="page-git-date">Bijgewerkt: 2026-07-11</p>
+  
+
               </article>
             </div>
           

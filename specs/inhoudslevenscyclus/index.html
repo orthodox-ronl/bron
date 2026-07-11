@@ -567,183 +567,6 @@
   
   
   
-    
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Termen
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Termen
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../terms/zangstuk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Zangstuk
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../terms/variant/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Variant
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../terms/uitvoeringsvorm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Uitvoeringsvorm
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../terms/representatie/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Representatie
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
       <a href="../zangstuk-identificatie/" class="md-nav__link">
         
@@ -1827,7 +1650,7 @@
   <span class="md-ellipsis">
     
   
-    Exporttype: embed SVG
+    Exporttype svg
   
 
     
@@ -2490,6 +2313,7 @@
               
               <article class="md-content__inner md-typeset">
                 
+  
                   
 
 
@@ -2578,7 +2402,7 @@ gedeelde scans.</p>
 </thead>
 <tbody>
 <tr>
-<td>VSA-notatie</td>
+<td><a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a></td>
 <td><code>sources/vsa/</code></td>
 <td>ja</td>
 <td>Primaire tekstbron voor conversie</td>
@@ -2638,7 +2462,7 @@ gedeelde scans.</p>
 </ul>
 <p><strong>Voorrangsregel:</strong> binnen deze repository is <code>zangstuk.yaml</code> leidend voor metadata
 die ook in VSA-frontmatter kan staan (<code>title</code>, auteurschap, taal, toon). Frontmatter
-in <code>.vsa</code> is bedoeld voor gebruik <em>buiten</em> deze repo (bijv. losse export met VSA-tooling).</p>
+in <code>.vsa</code> is bedoeld voor gebruik <em>buiten</em> deze repo (bijv. losse export met <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>).</p>
 <h3 id="validatie-en-compleetheid-metadata">Validatie en compleetheid metadata<a class="headerlink" href="#validatie-en-compleetheid-metadata" title="Permanent link">&para;</a></h3>
 <p>Minimaal (handmatig of CI):</p>
 <ul>
@@ -2685,7 +2509,7 @@ bewaard; ze worden in build-workflows gegenereerd.</p>
 </ul>
 <p><strong>Trigger (doel):</strong> na merge naar <code>main</code> of bij parochie-build wanneer een zangstuk
 wordt opgenomen in een samenstelling.</p>
-<p><strong>Huidige stand:</strong> conversie draait deels inline in VSA-tooling <code>build-markdown</code>;
+<p><strong>Huidige stand:</strong> conversie draait deels inline in <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> <code>build-markdown</code>;
 expliciete vooraf-build voor alle afgeleide is gepland — zie
 <a href="../../plans/ci-architectuur/">CI-architectuur</a>.</p>
 <hr />
@@ -2699,7 +2523,7 @@ wordt ontsloten — embedden, Coria-link, download.</p>
 <li><a href="../../reference/exporttype-coria/">Exporttype coria</a></li>
 <li><a href="../../reference/exporttype-mxl/">Exporttype mxl</a></li>
 </ul>
-<p>Authoring-syntax in parochie-/samenstelling-repositories (VSA-tooling):</p>
+<p>Authoring-syntax in parochie-/samenstelling-repositories (<a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>):</p>
 <div class="highlight"><pre><span></span><code>:::include svg &quot;melodie.vsa&quot; alt=&quot;…&quot;:::
 :::include coria &quot;melodie.vsa&quot; label=&quot;Oefenen in Coria&quot;:::
 :::include mxl &quot;melodie.vsa&quot; label=&quot;Download MusicXML&quot;:::
@@ -2747,12 +2571,20 @@ wordt ontsloten — embedden, Coria-link, download.</p>
 
 
 
+  
+  
+
 
 
 
 
 
                 
+  
+  
+  <p class="page-git-date">Bijgewerkt: 2026-07-11</p>
+  
+
               </article>
             </div>
           
