@@ -1,3 +1,12 @@
+/* Bouwtijdstempel op homepage */
+
+.build-time-stamp {
+  color: var(--md-default-fg-color--light);
+  font-size: .75rem;
+  margin-top: -.75rem;
+  margin-bottom: 1.5rem;
+}
+
 /* Header-tabs: lichte balk onder de titelbalk (vergelijkbaar met VSA-tooling .site-nav) */
 
 .md-tabs {
