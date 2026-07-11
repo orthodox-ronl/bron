@@ -1,13 +1,13 @@
-# Exporttype: embed SVG
+﻿# Exporttype: embed SVG
 
-Contract voor het **svg**-exporttype: VSA-notatie als schaalbare vectorafbeelding
+Contract voor het **svg**-exporttype: [VSA-notatie](@) als schaalbare vectorafbeelding
 in een samenstelling (HTML, afdruk).
 
 ---
 
 ## Samenvatting
 
-Met exporttype **svg** toon je de muzieknotatie van een `.vsa`-bestand als SVG in
+Met exporttype **svg** toon je de muzieknotatie van een [vsa-bestand](@) als SVG in
 de pagina. De lezer ziet dezelfde glyphs en omringende tekst als in VSA, geschikt
 voor scherm en papier. De SVG wordt gegenereerd via conversie
 ([conversie-vsa-svg](conversie-vsa-svg.md)); export bepaalt alleen *hoe* die SVG
@@ -171,13 +171,13 @@ met URL onder `/vsa/…` (configureerbaar via `svg_assets_url_prefix`).
 
 ## Fouten en oplossingen
 
-| Melding (fragment)             | Oorzaak                                    | Oplossing                                       |
-| ------------------------------ | ------------------------------------------ | ----------------------------------------------- |
-| `Bestand niet gevonden`        | Pad typo of bestand niet in content-source | Pad controleren t.o.v. `.md`; bestand toevoegen |
-| `Kringverwijzing gedetecteerd` | A include B include A                      | Include-structuur herzien                       |
-| `Onbekend bestandstype`        | Include van `.csv`, `.pdf`, …              | Alleen ondersteunde extensies                   |
-| VSA-validatiefout              | Ongeldige `.vsa`-syntax                    | `vsa validate pad/melodie.vsa` lokaal           |
-| Lege of gebroken SVG           | Zeldzaam renderfout                        | Issue VSA-tooling; bron `.vsa` controleren      |
+| Melding (fragment)             | Oorzaak                                    | Oplossing                                           |
+| ------------------------------ | ------------------------------------------ | --------------------------------------------------- |
+| `Bestand niet gevonden`        | Pad typo of bestand niet in content-source | Pad controleren t.o.v. `.md`; bestand toevoegen     |
+| `Kringverwijzing gedetecteerd` | A include B include A                      | Include-structuur herzien                           |
+| `Onbekend bestandstype`        | Include van `.csv`, `.pdf`, …              | Alleen ondersteunde extensies                       |
+| VSA-validatiefout              | Ongeldige `.vsa`-syntax                    | `vsa validate pad/melodie.vsa` lokaal               |
+| Lege of gebroken SVG           | Zeldzaam renderfout                        | Issue [VSA-tooling](@); bron `.vsa` controleren     |
 
 ---
 

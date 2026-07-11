@@ -60,7 +60,7 @@ gedeelde scans.
 
 | Type               | Submap              | In git | Opmerking                                           |
 | ------------------ | ------------------- | ------ | --------------------------------------------------- |
-| VSA-notatie        | `sources/vsa/`      | ja     | Primaire tekstbron voor conversie                   |
+| [VSA-notatie](@)   | `sources/vsa/`      | ja     | Primaire tekstbron voor conversie                   |
 | Scan (PDF, raster) | `sources/scan/`     | ja     | Niet splitsen bij meerdere zangstukken op één blad  |
 | MusicXML als bron  | `sources/musicxml/` | ja     | Alleen indien niet uit VSA in deze repo gegenereerd |
 
@@ -83,7 +83,7 @@ Details: [Brontypes en validatie](../reference/brontypes-validatie.md).
 
 **Voorrangsregel:** binnen deze repository is `zangstuk.yaml` leidend voor metadata
 die ook in VSA-frontmatter kan staan (`title`, auteurschap, taal, toon). Frontmatter
-in `.vsa` is bedoeld voor gebruik *buiten* deze repo (bijv. losse export met VSA-tooling).
+in `.vsa` is bedoeld voor gebruik *buiten* deze repo (bijv. losse export met [VSA-tooling](@)).
 
 ### Validatie en compleetheid metadata
 
@@ -121,7 +121,7 @@ Geregistreerde mechanismen:
 **Trigger (doel):** na merge naar `main` of bij parochie-build wanneer een zangstuk
 wordt opgenomen in een samenstelling.
 
-**Huidige stand:** conversie draait deels inline in VSA-tooling `build-markdown`;
+**Huidige stand:** conversie draait deels inline in [VSA-tooling](@) `build-markdown`;
 expliciete vooraf-build voor alle afgeleide is gepland — zie
 [CI-architectuur](../plans/ci-architectuur.md).
 
@@ -139,7 +139,7 @@ Exportcontracten:
 - [Exporttype coria](../reference/exporttype-coria.md)
 - [Exporttype mxl](../reference/exporttype-mxl.md)
 
-Authoring-syntax in parochie-/samenstelling-repositories (VSA-tooling):
+Authoring-syntax in parochie-/samenstelling-repositories ([VSA-tooling](@)):
 
 ```markdown
 :::include svg "melodie.vsa" alt="…":::

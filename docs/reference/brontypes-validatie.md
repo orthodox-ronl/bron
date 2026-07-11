@@ -4,13 +4,15 @@ Overzicht van validatieregels per brontype in `zangstukken/`.
 
 ## `.vsa`
 
+Validatie van [vsa-bestanden](@) — bestanden met [vsa-notatie](@).
+
+Installatie: [VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling).
+
 | Check                            | Tool                     | Wanneer                          |
 | -------------------------------- | ------------------------ | -------------------------------- |
 | Parse + semantiek                | `vsa validate <pad>`     | Lokaal, CI (gepland)             |
 | Frontmatter YAML                 | handmatig / CI (gepland) | Bij aanwezigheid van `---`       |
 | Consistentie met `zangstuk.yaml` | CI (gepland)             | Geen tegenstrijdige `title`/tone |
-
-Installatie: [VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling).
 
 ## `.pdf` (scan)
 
@@ -34,7 +36,7 @@ Padconventie: `zangstukken/<id>/sources/scan/*.pdf` — zie `.gitignore` uitzond
 | --------------- | ---------------- | ------------ |
 | Well-formed XML | xmllint / parser | CI (gepland) |
 
-Alleen wanneer MusicXML **zelfstandige bron** is, niet wanneer het afgeleide van VSA is.
+Alleen wanneer MusicXML **zelfstandige bron** is, niet wanneer het afgeleide van [vsa-notatie](@) is.
 
 ## `zangstuk.yaml`
 

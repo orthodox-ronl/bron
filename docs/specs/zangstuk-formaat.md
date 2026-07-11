@@ -54,6 +54,8 @@ koormap_nummer: <string>           # bijv. "8a" — niet de scan-sorteerprefix 0
 
 ## VSA-bestanden
 
+[VSA-bestanden](@) bevatten [VSA-notatie](@) en hebben de extensie `.vsa`.
+
 ### Platte VSA
 
 Geen `---`-kop: platte notatietekst, volledig ondersteund.
@@ -79,7 +81,7 @@ identificatie:
 ```
 
 **Voorrangsregel:** `zangstuk.yaml` is leidend voor overlappende identificatievelden.
-Frontmatter dient voor gebruik van het `.vsa`-bestand buiten deze repository.
+Frontmatter dient voor gebruik van het [vsa-bestand](@) buiten deze repository.
 
 ### Parochie-samenstelling — optioneel `default:`
 
