@@ -19,10 +19,11 @@ om implementatie later niet te blokkeren.
 
 ## Index
 
-| Id                  | Titel                              | Status | Repo                  | Laatst bekeken |
-| ------------------- | ---------------------------------- | ------ | --------------------- | -------------- |
-| `alias-blokken`     | Alias-blokken liturgische rollen   | `voorbereid` | bron                  | 2026-07-04     |
-| `tev2-terminologie` | TEv2-terminologie en TermRefs      | `idee` | bron, VSA-tooling     | 2026-07-04     |
+| Id                  | Titel                              | Status          | Repo              | Laatst bekeken |
+| ------------------- | ---------------------------------- | --------------- | ----------------- | -------------- |
+| `alias-blokken`     | Alias-blokken liturgische rollen   | `in-uitvoering` | bron              | 2026-07-10     |
+| `tev2-terminologie` | TEv2-terminologie en TermRefs      | `in-uitvoering` | bron, VSA-tooling | 2026-07-10     |
+| `app`               | App voor uitvoeringen (offline!)   | `idee           | app?              | 2026-07-11     |
 
 ## Detail
 
