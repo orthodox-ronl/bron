@@ -16,7 +16,9 @@ entries:
       - "representatie"
       - "representaties"
     glossaryTerm: "Representatie"
-    glossaryText: "Een notatie of brondocument waarmee een uitvoeringsvorm concreet wordt vastgelegd, zoals VSA, scan of MusicXML als bron."
+    glossaryText: "Een bestand waarin een uitvoeringsvorm concreet is vastgelegd."
+    glossaryNotes:
+      - "Een uitvoeringsvorm kan bijvoorbeeld worden vastgelegd in VSA-notatie (VSA), als MusicXML/MXL (.MusicXML, .MXL), als een scan van een document (PDF, JPG)"
     scopetag: "bron"
     locator: "representatie.md"
     navurl: "https://orthodox-groningen.github.io/bron/terms/representatie"
