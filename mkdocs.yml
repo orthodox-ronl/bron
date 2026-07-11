@@ -8,6 +8,9 @@ edit_uri: edit/main/docs/
 exclude_docs: |
   overrides/**
 
+not_in_nav: |
+  terms/**
+
 theme:
   name: material
   language: nl
@@ -27,6 +30,10 @@ theme:
 
 plugins:
   - search
+  - git-revision-date-localized:
+      type: date
+      locale: nl
+      fallback_to_build_date: true
 
 markdown_extensions:
   - admonition
@@ -46,11 +53,6 @@ nav:
     - specs/index.md
     - specs/documentatie-eigendom.md
     - specs/terminologie.md
-    - Termen:
-      - terms/zangstuk.md
-      - terms/variant.md
-      - terms/uitvoeringsvorm.md
-      - terms/representatie.md
     - specs/zangstuk-identificatie.md
     - specs/schrijfconventies.md
     - specs/inhoudslevenscyclus.md
@@ -100,6 +102,8 @@ extra_css:
 
 extra:
   preview: false
+  build_time: ""
+  branch: ""
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/orthodox-groningen/bron

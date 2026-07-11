@@ -205,8 +205,8 @@ Leesvorm: “*gangbaar* noemen wij *precieze term*, niet verwarren met *…*.”
 
 **Criterium:** V is een **variant** onder zangstuk Z dan en slechts dan als:
 
-1. V de **zelfde liturgische functie** vervult als andere varianten onder Z (zelfde liturgische rol/plaats), **en**
-2. Bij correcte uitvoering klinken uitvoeringsvormen/representaties van V **wezenlijk anders** dan die van een andere variant onder Z — niet uitsluitend door uitvoerders (§7).
+1. V **dezelfde liturgische functie** vervult als andere varianten onder Z (zelfde liturgische rol/plaats), **en**
+2. een correcte uitvoering (middels een bijbehorende uitvoeringsvorm/representatie) van V **wezenlijk anders klinkt** dan een correcte uitvoering van een andere variant onder Z — niet uitsluitend door uitvoerders (§7).
 
 |               | Voorbeeld                                                                                                    |
 | ------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -219,9 +219,9 @@ Leesvorm: “*gangbaar* noemen wij *precieze term*, niet verwarren met *…*.”
 
 ## 7. Uitvoeringsvorm
 
-**Criterium:** U is een **uitvoeringsvorm** onder variant V dan en slechts dan als U beschrijft **wat je hoort** bij correct uitvoeren uit een representatie van U (of uit mondelinge overlevering als er 0 representaties zijn).
+**Criterium:** U is een **uitvoeringsvorm** onder variant V dan en slechts dan als er tenminste één representatie R van U bestaat die beschrijft **wat je hoort** bij correct uitvoeren van V.
 
-**Operationele test:** Kan één koor twee uitvoeringsvormen onder **dezelfde variant** tegelijk als **één** versie uitvoeren zonder keuze tussen conflicterende paden? → **Nee** ⇒ verschillende uitvoeringsvormen.
+**Operationele test:** Twee representaties R en R' betreffen dezelfde uitvoeringsvorm U als ze dezelfde melodielijn en tekst beschrijven (een verschil tussen de 'do context' of tempo is hierbij niet van belang). Als R en R' dus in hetzelfde tempo en met dezelfde do-context worden gehoord, klinkt dat goed. Als ze grotendeels hetzelfde klinken, maar er zitten kleine verschillen (bijvoorbeeld in loopjes, het net even anders plaatsen van lettergrepen onder noten, of het omhoog-omlaag gaan aan het eind vs. het omlaag-omhoog gaan aan het eind), dan betreffen R en R' verschillende uitvoeringsvormen.
 
 **Toelichting (didactisch, niet-normatief voor liturgie):** een **cover** (zelfde compositie, andere invulling) of een lichter **arrangement** met herkenbare muzieklijn kan analoog zijn aan verschillende uitvoeringsvormen onder dezelfde variant — classificatie is niet altijd eenduidig; documenteer via `based_on` en herkomst.
 
@@ -237,7 +237,7 @@ Leesvorm: “*gangbaar* noemen wij *precieze term*, niet verwarren met *…*.”
 
 **Criterium:** R is een **representatie** onder uitvoeringsvorm U dan en slechts dan als:
 
-1. R is notatie of brondocument waarmee U concreet wordt vastgelegd (VSA, scan, MusicXML als bron), **en**
+1. R is een bestand waarmee uitvoeringsvorm U concreet is vastgelegd (VSA, scan, MusicXML), **en**
 2. R is onderscheidbaar van andere representaties onder **dezelfde** U (`representatie-id`, herkomst).
 
 **Toelichting:** Representatie specificeert U; U hoort bij variant V en zangstuk Z. Twee representaties onder **dezelfde** U documenteren **dezelfde** uitvoeringsvorm (bijv. scan + transcriptie). Verschillende muziek onder dezelfde U → classificatiefout of extra uitvoeringsvorm (§7).

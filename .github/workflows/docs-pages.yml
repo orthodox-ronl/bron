@@ -20,11 +20,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set build timestamp
+        id: ts
+        run: echo "build_time=$(date -u +'%Y-%m-%d %H:%M UTC')" >> "$GITHUB_OUTPUT"
 
       - name: Determine deploy target
         id: target
         shell: bash
         run: |
+          branch="${GITHUB_REF#refs/heads/}"
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
           if [[ "${GITHUB_REF}" == "refs/heads/main" ]]; then
             echo "site_url=https://orthodox-groningen.github.io/bron/" >> "$GITHUB_OUTPUT"
             echo "destination_dir=" >> "$GITHUB_OUTPUT"
@@ -70,7 +78,9 @@ jobs:
         run: |
           python scripts/set-mkdocs-site-url.py \
             "${{ steps.target.outputs.site_url }}" \
-            "${{ steps.target.outputs.preview }}"
+            "${{ steps.target.outputs.preview }}" \
+            "${{ steps.ts.outputs.build_time }}" \
+            "${{ steps.target.outputs.branch }}"
 
       - name: Prepare TEV2 docs staging tree
         run: python scripts/prepare-tev2-docs.py

@@ -6,4 +6,4 @@ title: "Glossary"
 
 | Term | Definitie |
 | ---- | --------- |
-{% hrg="" sorter="{{noRefs glossaryTerm}}" %}
+{% hrg="bron" %}

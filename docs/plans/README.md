@@ -10,8 +10,9 @@ Bij tegenstrijdigheid gelden:
 3. **Referentie** (`docs/reference/`)
 4. Pas daarna: plannen in deze map
 
-- [Ideeën-backlog](ideeen/README.md) — onsamengehangende ideeën met status
+- [Samenvatting project](samenvatting-project.md)
 - [Alias-blokken (ontwerp)](alias-blokken-ontwerp.md) — synoniemsets voor zoek en yaml-sync
 - [CI-architectuur](ci-architectuur.md) — conversie vs. export workflows (richtlijn)
 - [Migratie zondag-zangstukken](migratie-zondag-zangstukken.md) — bron vullen + hugo-demo koppeling
-- [Samenvatting project](samenvatting-project.md)
+- [Gebruikseisen representatievormen](gebruikseisen-representatievormen.md) — representaties op papier, tablet/telefoon
+- [Ideeën-backlog](ideeen/README.md) — onsamengehangende ideeën met status
