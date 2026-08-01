@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -88,7 +88,7 @@
   
   <strong>Preview</strong>
    — branch <code>feature/tev2</code>
-  , gebouwd 2026-07-11 22:05 UTC.
+  , gebouwd 2026-08-01 07:15 UTC.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2104,6 +2104,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../plans/audit-zangstuk-catalogus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit zangstuk-catalogus (fase 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plans/gebruikseisen-representatievormen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gebruikseisen representatievormen (papier / tablet / telefoon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../plans/samenvatting-project/" class="md-nav__link">
         
   
@@ -2431,11 +2487,11 @@ met templates); <strong><code>catalogus index validate</code></strong> en <stron
 parochie-repo.</p>
 <h3 id="4-index-valideren">4. Index valideren<a class="headerlink" href="#4-index-valideren" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --content-root C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
 </code></pre></div>
 <p>Geen conflicten → aliassen “Groningen” en “Kastorski” zijn uniek binnen scope.</p>
 <h3 id="5-resolve-testen">5. Resolve testen<a class="headerlink" href="#5-resolve-testen" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>python -m catalogus.cli resolve uitvoeringsvorm --zangstuk cherubijnenhymne --variant kastorski Groningen --content-root C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source
+<div class="highlight"><pre><span></span><code>python -m catalogus.cli resolve uitvoeringsvorm --zangstuk cherubijnenhymne --variant kastorski Groningen --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
 </code></pre></div>
 <p>Uitvoer: <code>groningen</code>.</p>
 <h3 id="6-gebruik-in-een-sjabloon-of-samenstelling">6. Gebruik in een sjabloon of samenstelling<a class="headerlink" href="#6-gebruik-in-een-sjabloon-of-samenstelling" title="Permanent link">&para;</a></h3>
@@ -2447,7 +2503,7 @@ disambiguation <code>Cherubijnenhymne (Kastorski)</code> in mixed session. Na
 <strong><code>vsa resolve-catalogus</code></strong>
 (bijv. <code>:::include svg lokaal:cherubijnenhymne/kastorski/groningen:::</code>).</p>
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli zoek &quot;Cherubijnenhymne (Kastorski)&quot; ^
-  --content-root C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root C:\Git\orthodox-groningen\VSA-demo\content-source ^
   --bron-root C:\Git\orthodox-groningen\bron
 </code></pre></div>
 <hr />
@@ -2488,7 +2544,7 @@ disambiguation <code>Cherubijnenhymne (Kastorski)</code> in mixed session. Na
                 
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-07-04</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
   
 
               </article>
@@ -2557,7 +2613,7 @@ disambiguation <code>Cherubijnenhymne (Kastorski)</code> in mixed session. Na
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

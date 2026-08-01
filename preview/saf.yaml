@@ -16,3 +16,4 @@ versions:
   - vsntag: bron
     termselection:
       - "*"
+      - "-excludeFromMRG[yes]"
