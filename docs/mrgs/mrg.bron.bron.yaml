@@ -358,7 +358,7 @@ entries:
     termType: "concept"
     termid: "concept:variant"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-01T00:00:00.000Z
     term: "vsa"
     termType: "concept"
     glossaryTerm: "Vereenvoudigde Slavische Accentnotatie"
@@ -377,7 +377,7 @@ entries:
       - "motivatie"
     termid: "concept:vsa"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-01T00:00:00.000Z
     term: "vsa-bestand"
     termType: "concept"
     glossaryTerm: "vsa-bestand"
@@ -400,7 +400,7 @@ entries:
       - "zie-ook:"
     termid: "concept:vsa-bestand"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-01T00:00:00.000Z
     term: "vsa-notatie"
     termType: "concept"
     glossaryTerm: "VSA-notatie"
@@ -422,7 +422,7 @@ entries:
       - "zie-ook:"
     termid: "concept:vsa-notatie"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-01T00:00:00.000Z
     term: "vsa-tooling"
     termType: "concept"
     glossaryTerm: "VSA-tooling"
