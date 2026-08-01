@@ -13,13 +13,17 @@
         <link rel="canonical" href="https://orthodox-groningen.github.io/bron/plans/audit-zangstuk-catalogus/">
       
       
+        <link rel="prev" href="../migratie-zondag-zangstukken/">
+      
+      
+        <link rel="next" href="../gebruikseisen-representatievormen/">
       
       
         
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -293,10 +297,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -1587,28 +1593,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1626,7 +1635,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1678,10 +1687,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1690,7 +1702,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
         
           
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
             
   
   
@@ -1881,7 +1893,282 @@
   <span class="md-ellipsis">
     
   
-    Migratieplan: zondag-zangstukken naar bron + hugo-demo
+    Migratieplan: zondag-zangstukken naar bron + VSA-demo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit zangstuk-catalogus (fase 1)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit zangstuk-catalogus (fase 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bronnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bronnen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validatie-automatisch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validatie (automatisch)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validatie (automatisch)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#catalogus-index-validate-ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        catalogus index validate — OK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vsa-validate-zangstukken-ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vsa validate zangstukken — OK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_zangstuk_yaml_vsapy-fout-yaml-vsa-frontmatter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        check_zangstuk_yaml_vsa.py — FOUT (yaml ↔ VSA-frontmatter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zoek-proef-rene-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoek-proef (Rene-workflow)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zoek-proef (Rene-workflow)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zoek-lijst-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoek --lijst detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventaris-bron-zangstukken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventaris bron (zangstukken/)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventaris-lokaal-content-sourcelokaal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventaris lokaal (content-source/lokaal/)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-checklist-handmatig-met-rene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review-checklist (handmatig met Rene)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review-checklist (handmatig met Rene)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#belangrijkste-bevindingen-voor-de-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Belangrijkste bevindingen voor de review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alle-flags-compact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alle flags (compact)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legenda-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legenda flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herhaalbaar-maken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herhaalbaar maken
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gebruikseisen-representatievormen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gebruikseisen dragers (stub)
   
 
     
@@ -2160,7 +2447,7 @@
 <h2 id="bronnen">Bronnen<a class="headerlink" href="#bronnen" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Bron-repo:</strong> <code>C:\Git\orthodox-groningen\bron</code></li>
-<li><strong>Content-root (lokaal):</strong> <code>C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source</code></li>
+<li><strong>Content-root (lokaal):</strong> <code>C:\Git\orthodox-groningen\VSA-demo\content-source</code></li>
 </ul>
 <hr />
 <h2 id="validatie-automatisch">Validatie (automatisch)<a class="headerlink" href="#validatie-automatisch" title="Permanent link">&para;</a></h2>
@@ -2610,7 +2897,7 @@ kondak-zondag-toon-3: reference mismatch
 <h2 id="herhaalbaar-maken">Herhaalbaar maken<a class="headerlink" href="#herhaalbaar-maken" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 python -m pip install -e &quot;.[dev]&quot;
-python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
 vsa validate zangstukken
 python scripts\check_zangstuk_yaml_vsa.py
 </code></pre></div>
@@ -2633,7 +2920,7 @@ python scripts\check_zangstuk_yaml_vsa.py
                 
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-07-06</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
   
 
               </article>
@@ -2702,7 +2989,7 @@ python scripts\check_zangstuk_yaml_vsa.py
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

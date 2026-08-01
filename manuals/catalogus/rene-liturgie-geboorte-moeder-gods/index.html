@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -2067,7 +2067,63 @@
   <span class="md-ellipsis">
     
   
-    Migratieplan: zondag-zangstukken naar bron + hugo-demo
+    Migratieplan: zondag-zangstukken naar bron + VSA-demo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plans/audit-zangstuk-catalogus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit zangstuk-catalogus (fase 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plans/gebruikseisen-representatievormen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gebruikseisen dragers (stub)
   
 
     
@@ -2446,26 +2502,26 @@ Cherubijnenhymne lokaal (<code>groningen</code>).</p>
 <hr />
 <h2 id="wat-rene-vandaag-doet-cli">Wat Rene vandaag doet (CLI)<a class="headerlink" href="#wat-rene-vandaag-doet-cli" title="Permanent link">&para;</a></h2>
 <p>Demo-sessie:
-<code>VSA-tooling/examples/hugo-demo/content-source/samenstellingen/geboorte-moeder-gods-2026.md</code>.</p>
+<code>VSA-demo/content-source/praktijk/samenstellingen/geboorte-moeder-gods-2026.md</code>.</p>
 <h3 id="1-index-valideren">1. Index valideren<a class="headerlink" href="#1-index-valideren" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
 </code></pre></div>
 <h3 id="2-zoekregels-testen">2. Zoekregels testen<a class="headerlink" href="#2-zoekregels-testen" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli zoek &quot;Troparion&quot; ^
   --bron-root . ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --default-gelegenheid geboorte-moeder-gods
 
 python -m catalogus.cli zoek &quot;Cherubijnenhymne (Kastorski)&quot; ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --bron-root .
 </code></pre></div>
 <p>Bij <strong><code>AmbiguousError</code></strong>: <code>--lijst</code> of verfijn <code>zoek=</code> / <code>default.*</code>.</p>
 <h3 id="3-resolve-en-valideren">3. Resolve en valideren<a class="headerlink" href="#3-resolve-en-valideren" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\VSA-tooling
-vsa resolve-catalogus examples\hugo-demo\content-source\samenstellingen\geboorte-moeder-gods-2026.md --content-root examples\hugo-demo\content-source --bron-root ..\bron
-vsa validate examples\hugo-demo\content-source
+<div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\VSA-demo
+vsa resolve-catalogus content-source\praktijk\samenstellingen\geboorte-moeder-gods-2026.md --content-root content-source --bron-root ..\bron
+vsa validate content-source
 </code></pre></div>
 <hr />
 <h2 id="wat-rene-bereikt">Wat Rene bereikt<a class="headerlink" href="#wat-rene-bereikt" title="Permanent link">&para;</a></h2>
@@ -2478,7 +2534,7 @@ vsa validate examples\hugo-demo\content-source
 <ul>
 <li><a href="../sjabloon-schrijven/">Sjabloon schrijven</a></li>
 <li><a href="../../../specs/catalogus-samenstelling-zangstuk/">Zangstuk-opzoeken in sjablonen</a></li>
-<li><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus">VSA — <code>:::include</code> met <code>zoek=</code></a></li>
+<li><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus">VSA — <code>:::include</code> met <code>zoek=</code></a></li>
 <li><a href="../rene-cherubijnenhymne-lokaal/">Verhaal 2 — Cherubijnenhymne lokaal opnemen</a></li>
 </ul>
 
@@ -2499,7 +2555,7 @@ vsa validate examples\hugo-demo\content-source
                 
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-07-04</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
   
 
               </article>
@@ -2568,7 +2624,7 @@ vsa validate examples\hugo-demo\content-source
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

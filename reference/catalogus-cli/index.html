@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -2075,7 +2075,63 @@
   <span class="md-ellipsis">
     
   
-    Migratieplan: zondag-zangstukken naar bron + hugo-demo
+    Migratieplan: zondag-zangstukken naar bron + VSA-demo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/audit-zangstuk-catalogus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit zangstuk-catalogus (fase 1)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/gebruikseisen-representatievormen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gebruikseisen dragers (stub)
   
 
     
@@ -2342,12 +2398,12 @@ python -m pip install -e &quot;.[dev]&quot;
 <li>Default <strong><code>bestandsextensie</code></strong>: <code>.vsa</code>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli zoek &quot;Troparion&quot; ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --bron-root . ^
   --default-gelegenheid geboorte-moeder-gods
 
 python -m catalogus.cli zoek &quot;Cherubijnenhymne (Kastorski)&quot; ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --bron-root .
 </code></pre></div>
 <p><strong>Status:</strong> <strong>geïmplementeerd</strong> (basis). Exitcode <strong>1</strong> = geen match of ambiguïteit (strict);
@@ -2357,8 +2413,8 @@ org-bron. <strong>Lokaal vóór bron</strong>; bij lokaal-winst kan <strong><cod
 gevuld zijn — toon met <strong><code>--verbose</code></strong> (waarschuwing op stderr).</p>
 <h3 id="catalogus-resolve"><code>catalogus resolve</code><a class="headerlink" href="#catalogus-resolve" title="Permanent link">&para;</a></h3>
 <p>Los alias of hoofdletter-variant op naar canoniek id.</p>
-<div class="highlight"><pre><span></span><code>python -m catalogus.cli resolve zangstuk &quot;1e antifoon weekdagen&quot; --content-root ..\VSA-tooling\examples\hugo-demo\content-source
-python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen --variant liturgikon-weekdagen Hemelum --content-root ..\VSA-tooling\examples\hugo-demo\content-source
+<div class="highlight"><pre><span></span><code>python -m catalogus.cli resolve zangstuk &quot;1e antifoon weekdagen&quot; --content-root ..\VSA-demo\content-source
+python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen --variant liturgikon-weekdagen Hemelum --content-root ..\VSA-demo\content-source
 </code></pre></div>
 <p>Niveaus: <code>zangstuk</code>, <code>variant</code>, <code>uitvoeringsvorm</code>, <code>representatie</code>.</p>
 <p>Scope-flags:</p>
@@ -2414,7 +2470,7 @@ python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen 
 <h3 id="catalogus-index-validate"><code>catalogus index validate</code><a class="headerlink" href="#catalogus-index-validate" title="Permanent link">&para;</a></h3>
 <p>Controleer manifesten op ongeldige ids en alias-conflicten binnen scope.</p>
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli index validate --bron-root .
-python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --content-root ..\VSA-demo\content-source
 </code></pre></div>
 <h3 id="catalogus-aliases-validate"><code>catalogus aliases validate</code><a class="headerlink" href="#catalogus-aliases-validate" title="Permanent link">&para;</a></h3>
 <p>Valideer org-breed aliassen-register <code>catalogus/data/alias-blokken.yaml</code>
@@ -2485,7 +2541,7 @@ python -m catalogus.cli aliases sync --dry-run --bron-root .
   → catalogus-pad — <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a> (<strong>geïmplementeerd</strong>, basis).</li>
 </ul>
 <p>Zie <a href="../../manuals/catalogus/rene-liturgie-geboorte-moeder-gods/">verhaal 1</a> en
-<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#vsa-resolve-catalogus">VSA — resolve-catalogus</a>.</p>
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#vsa-resolve-catalogus">VSA — resolve-catalogus</a>.</p>
 <h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 scripts\test.cmd
@@ -2512,7 +2568,7 @@ python -m pytest
                 
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-07-06</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
   
 
               </article>
@@ -2581,7 +2637,7 @@ python -m pytest
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
