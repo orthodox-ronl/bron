@@ -111,5 +111,5 @@ extra:
       link: https://github.com/orthodox-groningen/bron
       name: bron op GitHub
     - icon: fontawesome/solid/code
-      link: https://orthodox-groningen.github.io/VSA-tooling/
-      name: VSA-tooling demosite
+      link: https://orthodox-groningen.github.io/VSA-demo/
+      name: VSA-demo

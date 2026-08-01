@@ -53,5 +53,5 @@ De tooling ondersteunt ook CI: in de [bron-repository](@) valideert `vsa validat
 
 ## Zie ook:
 
-- [VSA-tooling demosite](https://orthodox-groningen.github.io/VSA-tooling/)
+- [VSA-demo](https://orthodox-groningen.github.io/VSA-demo/)
 - [GitHub orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)

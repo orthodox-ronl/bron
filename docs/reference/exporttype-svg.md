@@ -97,7 +97,7 @@ gelijk aan exporttype svg zodra de kanaal-alias is geïmplementeerd.
 | **Voorbeeld**          | `scale="85%"` op tropaar/kondak in zondags-pagina’s                              |
 
 !!! note "Typische waarden in demo"
-    Zondags-pagina’s in VSA-tooling hugo-demo gebruiken vaak `scale="85%"` voor
+    Zondags-pagina’s in VSA-demo gebruiken vaak `scale="85%"` voor
     `.vsa` en `scale="100%"` voor JPG-scan van tropaarmelodie.
 
 ---

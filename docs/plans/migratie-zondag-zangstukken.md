@@ -11,7 +11,7 @@ github.io voor assets).
 | --------------- | --------------------------------------------------------------------------- |
 | **bron**        | Canonieke `.vsa` / scans + `zangstuk.yaml`                                  |
 | **VSA-demo**    | Samenstellingen (`zondag-toon-*.md`), sync, Hugo-site                       |
-| **VSA-tooling** | `vsa` CLI, sync-script-spiegel, eventueel regressie in `examples/hugo-demo` |
+| **VSA-tooling** | `vsa` CLI; regressiefixtures; presentatie in VSA-demo |
 
 ---
 
@@ -125,7 +125,7 @@ flowchart LR
 ### Fase B1 — Sync-script (minimale code)
 
 Canonieke sync in **VSA-demo:** `scripts/sync_bron_zondagen.py`  
-(spiegel in VSA-tooling voor regressie/`hugo-demo` waar nog van toepassing).
+(spiegel in VSA-demo / tooling-fixtures waar nog van toepassing).
 
 - Input: pad naar bron-checkout (`--bron-root`)
 - Output: `content-source/praktijk/zondagen/` met **vaste namen** die

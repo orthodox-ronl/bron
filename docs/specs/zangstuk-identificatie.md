@@ -10,4 +10,4 @@
 
 **Kern (samenvatting):** vier niveaus — zangstuk → variant → uitvoeringsvorm → representatie (0..n). Id-velden: `zangstuk-id`, `variant-id`, `uitvoeringsvorm-id`, `representatie-id`. Parochie-lokaal metadata: **manifest** (§16 in terminologie).
 
-**Demo-site (VSA-tooling hugo-demo):** [zangstuk-identificatie](https://github.com/orthodox-groningen/VSA-tooling/tree/main/examples/hugo-demo/content-source/zangstuk-identificatie).
+**Demo-site (VSA-demo):** [VSA-demo](https://github.com/orthodox-groningen/VSA-demo).

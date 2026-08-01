@@ -65,5 +65,5 @@ Het begrip *vsa-bestand* maakt duidelijk dat niet elk bestand met de extensie `.
 
 ## Zie ook:
 
-- [VSA-tooling demosite](https://orthodox-groningen.github.io/VSA-tooling/)
+- [VSA-demo](https://orthodox-groningen.github.io/VSA-demo/)
 - [GitHub orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)
