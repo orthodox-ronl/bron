@@ -247,7 +247,7 @@ exportkeuzes (svg, coria, …) vanaf het begin.
 
 Praktisch voor Rene: [Sjabloon schrijven](../manuals/catalogus/sjabloon-schrijven.md).
 
-Tooling: [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
+Tooling: [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
 
 ---
 

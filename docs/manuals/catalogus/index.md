@@ -31,7 +31,7 @@ Contract: [zangstuk in samenstelling-sjablonen](../../specs/catalogus-samenstell
 | Repo              | Pad (voorbeeld)                                              | Inhoud                                      |
 | ----------------- | ------------------------------------------------------------ | ------------------------------------------- |
 | **bron**          | `C:\Git\orthodox-groningen\bron`                             | Org-brede zangstukken (`zangstukken/`)      |
-| **parochie-site** | `C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source` | Sjablonen, samenstellingen, `lokaal/` (demo) |
+| **parochie-site** | `C:\Git\orthodox-groningen\VSA-demo\content-source` | Sjablonen, samenstellingen, `lokaal/` (demo) |
 
 Terminologie: [terminologie §2](../../specs/terminologie.md) — opslag blijft vier
 niveaus; Rene typt vooral **zoektekst**.

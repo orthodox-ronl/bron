@@ -59,7 +59,7 @@ vsa musicxml content-source\praktijk output\mxl
 Eén `.mxl` per `.vsa` in de map.
 
 Uitgebreide gebruikersdoc:
-[MusicXML-export (VSA-tooling)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/user/musicxml-export.md).
+[MusicXML-export (VSA-tooling)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md).
 
 ---
 

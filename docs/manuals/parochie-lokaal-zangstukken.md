@@ -33,7 +33,7 @@ content-source/
 
 **Canonieke ids:** `^[a-z0-9_-]+$` — zie [terminologie](../specs/terminologie.md).
 
-**Referentie-implementatie (VSA-demo):** [VSA-tooling — hugo-demo/lokaal](https://github.com/orthodox-groningen/VSA-tooling/tree/main/examples/hugo-demo/content-source/lokaal).
+**Referentie-implementatie (VSA-demo):** [VSA-demo — content-source/lokaal](https://github.com/orthodox-groningen/VSA-demo/tree/main/content-source/lokaal).
 
 ---
 
@@ -116,4 +116,4 @@ Parochie-lokaal mag als kopie blijven staan; **canonical** is bron na sync.
 | Site-build            | Includes op relatief pad / catalogus-pad  |
 | Static site generator | Ongewijzigd t.o.v. bron-materiaal         |
 
-**VSA-tooling:** concrete commando's en Hugo-demo — [VSA-tooling/docs/parochie-lokaal-vsa.md](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md).
+**VSA-tooling:** concrete commando's — [docs/guides/parochie-lokaal-vsa.md](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md).

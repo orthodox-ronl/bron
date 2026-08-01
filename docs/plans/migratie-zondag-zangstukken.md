@@ -35,7 +35,7 @@ naast `.vsa` (conventie export coria).
 
 ### Blijft in VSA-tooling (samenstelling / export)
 
-- `examples/hugo-demo/content-source/praktijk/zondagen/zondag-toon-<y>.md` (8 stuks)
+- `VSA-demo/content-source/praktijk/zondagen/zondag-toon-<y>.md` (8 stuks)
 - `_index.md`, `export-demo.md` (evalueren na migratie)
 
 ---
@@ -116,7 +116,7 @@ flowchart LR
 Nieuw in VSA-tooling: `scripts/sync_bron_zondagen.py` (naam voorbeeld)
 
 - Input: pad naar bron-checkout (`--bron-root`)
-- Output: `examples/hugo-demo/content-source/praktijk/zondagen/_from-bron/` of direct
+- Output: `VSA-demo/content-source/praktijk/zondagen/_from-bron/` of direct
   naast `.md` met **vaste namen** die `zondag-toon-<y>.md` al gebruikt:
   - `tropaar-zondag-toon-<y>.vsa`
   - `kondak-zondag-toon-<y>.vsa`
@@ -197,4 +197,4 @@ Behoud alleen `.md` samenstellingen + sync-output (gitignored) of altijd sync in
 - [Repo-structuur](../specs/repo-structuur.md)
 - [Zangstuk-formaat](../specs/zangstuk-formaat.md)
 - [Zangstuk toevoegen](../manuals/zangstuk-toevoegen.md)
-- VSA-tooling: `docs/plan-samenstelling-uitgaveprofielen.md`, Spoor B exporttypes
+- VSA-tooling: `docs/plans/uitgaveprofielen.md`, Spoor B exporttypes

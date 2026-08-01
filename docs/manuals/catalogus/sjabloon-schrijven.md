@@ -29,7 +29,7 @@ zelfde structuur, plus **`default.gelegenheid`** (en evt. `toon`, titel, datum).
 | **Herkomst** | Verzameling uit één bron (bijv. VOK) | `referentie`, `koormap_nummer` |
 
 **Legacy (niet meer aanbevolen):** yaml-inventarisatie
-[goddelijke-liturgie.yaml](https://github.com/orthodox-groningen/VSA-tooling/blob/main/examples/hugo-demo/content-source/praktijk/goddelijke-liturgie.yaml)
+[goddelijke-liturgie.yaml](https://github.com/orthodox-groningen/VSA-demo/blob/main/content-source/praktijk/goddelijke-liturgie.yaml)
 in de VSA-demo — ruwe VOKN-koormap-notities, **geen** geldig sjabloon- of
 compositie-schema. Nieuw werk: markdown-sjablonen (hierboven) en
 [catalogus-samenstelling-zangstuk](../../specs/catalogus-samenstelling-zangstuk.md).
@@ -144,16 +144,16 @@ werkt wel.
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
 ```
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\VSA-tooling
-vsa resolve-catalogus examples\hugo-demo\content-source\samenstellingen\geboorte-moeder-gods-2026.md --content-root examples\hugo-demo\content-source --bron-root ..\bron
-vsa validate examples\hugo-demo\content-source
+cd /d C:\Git\orthodox-groningen\VSA-demo
+vsa resolve-catalogus content-source\praktijk\samenstellingen\geboorte-moeder-gods-2026.md --content-root content-source --bron-root ..\bron
+vsa validate content-source
 ```
 
-Zie [VSA-tooling — resolve-catalogus](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#vsa-resolve-catalogus).
+Zie [VSA-tooling — resolve-catalogus](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#vsa-resolve-catalogus).
 
 ---
 

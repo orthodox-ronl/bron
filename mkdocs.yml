@@ -95,6 +95,8 @@ nav:
     - plans/ci-architectuur.md
     - plans/alias-blokken-ontwerp.md
     - plans/migratie-zondag-zangstukken.md
+    - plans/audit-zangstuk-catalogus.md
+    - plans/gebruikseisen-representatievormen.md
     - plans/samenvatting-project.md
 
 extra_css:

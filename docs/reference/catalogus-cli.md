@@ -44,12 +44,12 @@ Normatief contract: [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md).
 
 ```cmd
 python -m catalogus.cli zoek "Troparion" ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --bron-root . ^
   --default-gelegenheid geboorte-moeder-gods
 
 python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --bron-root .
 ```
 
@@ -65,8 +65,8 @@ gevuld zijn — toon met **`--verbose`** (waarschuwing op stderr).
 Los alias of hoofdletter-variant op naar canoniek id.
 
 ```cmd
-python -m catalogus.cli resolve zangstuk "1e antifoon weekdagen" --content-root ..\VSA-tooling\examples\hugo-demo\content-source
-python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen --variant liturgikon-weekdagen Hemelum --content-root ..\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli resolve zangstuk "1e antifoon weekdagen" --content-root ..\VSA-demo\content-source
+python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen --variant liturgikon-weekdagen Hemelum --content-root ..\VSA-demo\content-source
 ```
 
 Niveaus: `zangstuk`, `variant`, `uitvoeringsvorm`, `representatie`.
@@ -94,7 +94,7 @@ Controleer manifesten op ongeldige ids en alias-conflicten binnen scope.
 
 ```cmd
 python -m catalogus.cli index validate --bron-root .
-python -m catalogus.cli index validate --content-root ..\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --content-root ..\VSA-demo\content-source
 ```
 
 ### `catalogus aliases validate`
@@ -182,7 +182,7 @@ Zie [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) voor volledig contra
   → catalogus-pad — [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) (**geïmplementeerd**, basis).
 
 Zie [verhaal 1](../manuals/catalogus/rene-liturgie-geboorte-moeder-gods.md) en
-[VSA — resolve-catalogus](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#vsa-resolve-catalogus).
+[VSA — resolve-catalogus](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#vsa-resolve-catalogus).
 
 ## Tests
 

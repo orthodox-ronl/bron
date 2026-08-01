@@ -199,4 +199,4 @@ Verberg op afdruk: CSS class `.coria-play` of plaats directive in `:::web-only`.
 
 - [Conversie vsa musicxml](conversie-vsa-musicxml.md)
 - [Exporttype mxl](exporttype-mxl.md)
-- [MusicXML-export (VSA-tooling)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/user/musicxml-export.md)
+- [MusicXML-export (VSA-tooling)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)
