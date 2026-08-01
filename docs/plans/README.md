@@ -13,6 +13,6 @@ Bij tegenstrijdigheid gelden:
 - [Samenvatting project](samenvatting-project.md)
 - [Alias-blokken (ontwerp)](alias-blokken-ontwerp.md) — synoniemsets voor zoek en yaml-sync
 - [CI-architectuur](ci-architectuur.md) — conversie vs. export workflows (richtlijn)
-- [Migratie zondag-zangstukken](migratie-zondag-zangstukken.md) — bron vullen + hugo-demo koppeling
-- [Gebruikseisen representatievormen](gebruikseisen-representatievormen.md) — representaties op papier, tablet/telefoon
+- [Migratie zondag-zangstukken](migratie-zondag-zangstukken.md) — bron vullen + VSA-demo sync
+- [Gebruikseisen dragers](gebruikseisen-representatievormen.md) — stub → VSA-tooling (papier/tablet/telefoon)
 - [Ideeën-backlog](ideeen/README.md) — onsamengehangende ideeën met status

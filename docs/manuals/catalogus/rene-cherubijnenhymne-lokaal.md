@@ -109,7 +109,7 @@ parochie-repo.
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --content-root C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
 ```
 
 Geen conflicten → aliassen “Groningen” en “Kastorski” zijn uniek binnen scope.
@@ -117,7 +117,7 @@ Geen conflicten → aliassen “Groningen” en “Kastorski” zijn uniek binne
 ### 5. Resolve testen
 
 ```cmd
-python -m catalogus.cli resolve uitvoeringsvorm --zangstuk cherubijnenhymne --variant kastorski Groningen --content-root C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli resolve uitvoeringsvorm --zangstuk cherubijnenhymne --variant kastorski Groningen --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
 ```
 
 Uitvoer: `groningen`.
@@ -137,7 +137,7 @@ disambiguation `Cherubijnenhymne (Kastorski)` in mixed session. Na
 
 ```cmd
 python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
-  --content-root C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root C:\Git\orthodox-groningen\VSA-demo\content-source ^
   --bron-root C:\Git\orthodox-groningen\bron
 ```
 

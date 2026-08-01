@@ -128,13 +128,13 @@ Na **`vsa resolve-catalogus`**:
 ## Wat Rene vandaag doet (CLI)
 
 Demo-sessie:
-`VSA-tooling/examples/hugo-demo/content-source/samenstellingen/geboorte-moeder-gods-2026.md`.
+`VSA-demo/content-source/praktijk/samenstellingen/geboorte-moeder-gods-2026.md`.
 
 ### 1. Index valideren
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
 ```
 
 ### 2. Zoekregels testen
@@ -142,11 +142,11 @@ python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooli
 ```cmd
 python -m catalogus.cli zoek "Troparion" ^
   --bron-root . ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --default-gelegenheid geboorte-moeder-gods
 
 python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --bron-root .
 ```
 
@@ -155,9 +155,9 @@ Bij **`AmbiguousError`**: `--lijst` of verfijn `zoek=` / `default.*`.
 ### 3. Resolve en valideren
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\VSA-tooling
-vsa resolve-catalogus examples\hugo-demo\content-source\samenstellingen\geboorte-moeder-gods-2026.md --content-root examples\hugo-demo\content-source --bron-root ..\bron
-vsa validate examples\hugo-demo\content-source
+cd /d C:\Git\orthodox-groningen\VSA-demo
+vsa resolve-catalogus content-source\praktijk\samenstellingen\geboorte-moeder-gods-2026.md --content-root content-source --bron-root ..\bron
+vsa validate content-source
 ```
 
 ---
@@ -172,5 +172,5 @@ vsa validate examples\hugo-demo\content-source
 
 - [Sjabloon schrijven](sjabloon-schrijven.md)
 - [Zangstuk-opzoeken in sjablonen](../../specs/catalogus-samenstelling-zangstuk.md)
-- [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus)
+- [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus)
 - [Verhaal 2 — Cherubijnenhymne lokaal opnemen](rene-cherubijnenhymne-lokaal.md)

@@ -165,4 +165,4 @@ Profielen zijn geen aparte pipelines: één samenstelling, conditionele export e
 
 - [Repo-structuur](repo-structuur.md)
 - [Zangstuk-formaat](zangstuk-formaat.md)
-- [VSA-tooling — document samenstellen](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/spec-vsa-document-samenstellen.md)
+- [VSA-tooling — document samenstellen](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md)

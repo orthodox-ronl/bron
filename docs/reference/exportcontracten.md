@@ -9,7 +9,7 @@ Export is **geen** conversie: export verwijst naar reeds gegenereerde afgeleide
 [Conversiemechanismen](conversiemechanismen.md).
 
 Authoring-syntax wordt geïmplementeerd in
-[VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/spec-vsa-document-samenstellen.md);
+[VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md);
 **normatieve contracten** staan op deze pagina’s.
 
 ---
@@ -55,7 +55,7 @@ daarna catalogus-pad:
 ```
 
 Zie [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md),
-[VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
+[VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
 
 **Beperking:** `coria` / `mxl` op **`bron:`** catalogus-pad — `.vsa` ligt vaak buiten
 content-root; **svg** op `bron:` werkt wel.
@@ -105,4 +105,4 @@ In de bron-repo primair VSA + scans; Coria-HTML kan in parochie-build content vo
 
 - [Conversiemechanismen](conversiemechanismen.md)
 - [Schrijfconventies](../specs/schrijfconventies.md)
-- [VSA — document samenstellen](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/spec-vsa-document-samenstellen.md)
+- [VSA — document samenstellen](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md)

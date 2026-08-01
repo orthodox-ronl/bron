@@ -35,7 +35,7 @@ Default **`bestandsextensie`**: `{".vsa"}` — verplicht voor `@include-vsa` en 
 ## Parochie-context (normatief)
 
 `catalogus` draait in de praktijk **in de context van een parochie-repo** (Hugo
-**content-source**, demo: `examples/hugo-demo/content-source`).
+**content-source**, demo: `VSA-demo/content-source`).
 
 | Root | Betekenis |
 | ---- | --------- |
@@ -286,12 +286,12 @@ zijn geïmplementeerd. Ranking en metadata-dekking worden verder uitgebreid per 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
 python -m catalogus.cli zoek "Troparion" ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --bron-root . ^
   --default-gelegenheid geboorte-moeder-gods
 
 python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
-  --content-root ..\VSA-tooling\examples\hugo-demo\content-source ^
+  --content-root ..\VSA-demo\content-source ^
   --bron-root . ^
   --default-uitvoeringsvorm Groningen
 ```
@@ -333,7 +333,7 @@ winnende herkomst — geen stille keuze.
 
 VSA-tooling (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
 **`ook_gevonden_in_bron`** → **waarschuwing** (build mag doorgaan). Zie
-[VSA — include-vsa](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/spec/include-vsa.md).
+[VSA — include-vsa](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/include-vsa.md).
 
 ---
 

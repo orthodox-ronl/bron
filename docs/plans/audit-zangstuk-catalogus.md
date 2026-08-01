@@ -6,7 +6,7 @@
 ## Bronnen
 
 - **Bron-repo:** `C:\Git\orthodox-groningen\bron`
-- **Content-root (lokaal):** `C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source`
+- **Content-root (lokaal):** `C:\Git\orthodox-groningen\VSA-demo\content-source`
 
 ---
 
@@ -155,7 +155,7 @@ Per rij met flags:
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
 python -m pip install -e ".[dev]"
-python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
 vsa validate zangstukken
 python scripts\check_zangstuk_yaml_vsa.py
 ```

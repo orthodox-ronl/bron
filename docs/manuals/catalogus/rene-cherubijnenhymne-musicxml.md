@@ -84,7 +84,7 @@ Als Rene “mxl” of “MusicXML Groningen” als alias wil gebruiken:
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli resolve representatie --zangstuk cherubijnenhymne --variant kastorski --uitvoeringsvorm groningen groningen-mxl --content-root C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli resolve representatie --zangstuk cherubijnenhymne --variant kastorski --uitvoeringsvorm groningen groningen-mxl --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
 ```
 
 (Canoniek id-passthrough als alias nog niet geregistreerd.)
@@ -125,7 +125,7 @@ handmatige MXL.
 ### 6. Validatie
 
 ```cmd
-python -m catalogus.cli index validate --bron-root C:\Git\orthodox-groningen\bron --content-root C:\Git\orthodox-groningen\VSA-tooling\examples\hugo-demo\content-source
+python -m catalogus.cli index validate --bron-root C:\Git\orthodox-groningen\bron --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
 ```
 
 ---
