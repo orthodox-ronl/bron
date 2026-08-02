@@ -88,7 +88,7 @@
   
   <strong>Preview</strong>
    — branch <code>bron-dunner-maken</code>
-  , gebouwd 2026-08-02 08:12 CEST.
+  , gebouwd 2026-08-02 08:42 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -1254,52 +1254,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#wat-rene-vandaag-doet-cli" class="md-nav__link">
+  <a href="#wat-rene-vandaag-doet-stap-voor-stap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Wat Rene vandaag doet (CLI)
+        Wat Rene vandaag doet (stap voor stap)
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Wat Rene vandaag doet (CLI)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-index-valideren" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Index valideren
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-zoekregels-testen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Zoekregels testen
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-resolve-en-valideren" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Resolve en valideren
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2259,52 +2220,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#wat-rene-vandaag-doet-cli" class="md-nav__link">
+  <a href="#wat-rene-vandaag-doet-stap-voor-stap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Wat Rene vandaag doet (CLI)
+        Wat Rene vandaag doet (stap voor stap)
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Wat Rene vandaag doet (CLI)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-index-valideren" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Index valideren
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-zoekregels-testen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Zoekregels testen
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-resolve-en-valideren" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Resolve en valideren
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2442,16 +2364,16 @@ kandidaten teruggeeft (review).</p>
 <ol>
 <li><strong>Sjabloon kiezen</strong> — <em>Goddelijke liturgie — parochie Groningen</em>.</li>
 <li><strong>Sessie aanmaken</strong> — Rene vult <strong><code>default.gelegenheid</code></strong>, <code>toon</code>, titel.</li>
-<li><strong><code>vsa resolve-catalogus</code></strong> — elke <code>zoek=</code> + <code>default.*</code> → catalogus-pad.</li>
+<li><strong>Zoekopdrachten oplossen</strong> — elke <code>zoek=</code> + <code>default.*</code> → catalogus-pad.</li>
 <li><strong>Review</strong> — alleen bij ambiguïteit.</li>
 <li><strong>Tekst aanpassen</strong> — markdown tussen includes blijft van Rene.</li>
-<li><strong>Build</strong> — <code>vsa validate</code> / <code>vsa build-markdown</code> op <strong>opgelost</strong> bestand.</li>
-<li><strong>Opslaan</strong> — <code>content-source/samenstellingen/geboorte-moeder-gods-2026.md</code>.</li>
+<li><strong>Build</strong> — opgelost bestand valideren en publiceren.</li>
+<li><strong>Opslaan</strong> — bijv. onder <code>samenstellingen/</code> in de parochie-content.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">GUI</p>
-<p>Stappen 1–2 en 4 zijn in een <strong>grafische catalogus</strong> nog <strong>gepland</strong>. Stappen 3,
-5–6 werken vandaag via CLI (zie hieronder).</p>
+<p>Stappen 1–2 en 4 zijn in een <strong>grafische catalogus</strong> nog <strong>gepland</strong>. Stappen 3
+en 5–6 werken vandaag via CLI (links hieronder).</p>
 </div>
 <hr />
 <h2 id="sjabloon-doelbeeld-zonder-gelegenheid">Sjabloon (doelbeeld — zonder gelegenheid)<a class="headerlink" href="#sjabloon-doelbeeld-zonder-gelegenheid" title="Permanent link">&para;</a></h2>
@@ -2505,29 +2427,23 @@ Cherubijnenhymne lokaal (<code>groningen</code>).</p>
 <p><strong>Coria</strong> op <code>bron:</code>-paden faalt bij build zolang <code>.vsa</code> buiten content-root ligt;
 <strong>svg</strong> werkt wel. Coria op <code>lokaal:</code> werkt.</p>
 <hr />
-<h2 id="wat-rene-vandaag-doet-cli">Wat Rene vandaag doet (CLI)<a class="headerlink" href="#wat-rene-vandaag-doet-cli" title="Permanent link">&para;</a></h2>
-<p>Demo-sessie:
-<code>VSA-demo/content-source/praktijk/samenstellingen/geboorte-moeder-gods-2026.md</code>.</p>
-<h3 id="1-index-valideren">1. Index valideren<a class="headerlink" href="#1-index-valideren" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
-</code></pre></div>
-<h3 id="2-zoekregels-testen">2. Zoekregels testen<a class="headerlink" href="#2-zoekregels-testen" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>python -m catalogus.cli zoek &quot;Troparion&quot; ^
-  --bron-root . ^
-  --content-root ..\VSA-demo\content-source ^
-  --default-gelegenheid geboorte-moeder-gods
-
-python -m catalogus.cli zoek &quot;Cherubijnenhymne (Kastorski)&quot; ^
-  --content-root ..\VSA-demo\content-source ^
-  --bron-root .
-</code></pre></div>
-<p>Bij <strong><code>AmbiguousError</code></strong>: <code>--lijst</code> of verfijn <code>zoek=</code> / <code>default.*</code>.</p>
-<h3 id="3-resolve-en-valideren">3. Resolve en valideren<a class="headerlink" href="#3-resolve-en-valideren" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\VSA-demo
-vsa resolve-catalogus content-source\praktijk\samenstellingen\geboorte-moeder-gods-2026.md --content-root content-source --bron-root ..\bron
-vsa validate content-source
-</code></pre></div>
+<h2 id="wat-rene-vandaag-doet-stap-voor-stap">Wat Rene vandaag doet (stap voor stap)<a class="headerlink" href="#wat-rene-vandaag-doet-stap-voor-stap" title="Permanent link">&para;</a></h2>
+<p>Voorbeeld-sessie in de demo: <code>praktijk/samenstellingen/geboorte-moeder-gods-2026.md</code>
+onder de VSA-demo content-source.</p>
+<ol>
+<li><strong>Index controleren</strong> — zodat bron én lokaal in de catalogus staan.
+   Exacte aanroep: <a href="../../../reference/catalogus-cli/">Catalogus CLI</a>.</li>
+<li><strong>Zoekregels proberen</strong> — bijv. <code>Troparion</code> met
+   <code>default.gelegenheid: geboorte-moeder-gods</code>, en
+   <code>Cherubijnenhymne (Kastorski)</code>. Bij meerdere treffers: lijst bekijken of
+   <code>zoek=</code> / <code>default.*</code> aanscherpen (<a href="../../../reference/catalogus-cli/">Catalogus CLI — zoek</a>).</li>
+<li><strong>Includes oplossen</strong> — <code>zoek=</code> → <code>bron:…</code> / <code>lokaal:…</code>
+   (<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md"><code>vsa resolve-catalogus</code></a>).</li>
+<li><strong>Valideren</strong> van de content-source
+   (<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md"><code>vsa validate</code></a>).</li>
+</ol>
+<p>Workflow-overzicht:
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md">parochie-lokaal VSA</a>.</p>
 <hr />
 <h2 id="wat-rene-bereikt">Wat Rene bereikt<a class="headerlink" href="#wat-rene-bereikt" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2561,7 +2477,7 @@ vsa validate content-source
   
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-02</p>
   
   
 

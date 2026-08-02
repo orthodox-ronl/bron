@@ -88,7 +88,7 @@
   
   <strong>Preview</strong>
    — branch <code>bron-dunner-maken</code>
-  , gebouwd 2026-08-02 08:12 CEST.
+  , gebouwd 2026-08-02 08:42 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -1684,10 +1684,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validatie-voor-export" class="md-nav__link">
+  <a href="#validatie-bedoeling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validatie vóór export
+        Validatie (bedoeling)
       
     </span>
   </a>
@@ -1695,21 +1695,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-gedrag" class="md-nav__link">
+  <a href="#wat-de-eindgebruiker-ziet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Build-gedrag
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Output
+        Wat de eindgebruiker ziet
       
     </span>
   </a>
@@ -1728,10 +1717,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fouten-en-oplossingen" class="md-nav__link">
+  <a href="#veelvoorkomende-problemen-betekenis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fouten en oplossingen
+        Veelvoorkomende problemen (betekenis)
       
     </span>
   </a>
@@ -2373,10 +2362,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#validatie-voor-export" class="md-nav__link">
+  <a href="#validatie-bedoeling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validatie vóór export
+        Validatie (bedoeling)
       
     </span>
   </a>
@@ -2384,21 +2373,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-gedrag" class="md-nav__link">
+  <a href="#wat-de-eindgebruiker-ziet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Build-gedrag
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Output
+        Wat de eindgebruiker ziet
       
     </span>
   </a>
@@ -2417,10 +2395,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fouten-en-oplossingen" class="md-nav__link">
+  <a href="#veelvoorkomende-problemen-betekenis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fouten en oplossingen
+        Veelvoorkomende problemen (betekenis)
       
     </span>
   </a>
@@ -2478,18 +2456,21 @@
 <h1 id="exporttype-mxl-download">Exporttype: MXL-download<a class="headerlink" href="#exporttype-mxl-download" title="Permanent link">&para;</a></h1>
 <p>Contract voor het <strong>mxl</strong>-exporttype: downloadlink naar MusicXML (<code>.mxl</code>) voor
 bewerking in MuseScore of als fallback voor Coria.</p>
+<p>Technische resolver- en shortcode-details: zie
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md">MusicXML exporteren</a>
+en <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md">CLI <code>vsa musicxml</code></a>.</p>
 <hr />
 <h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">&para;</a></h2>
 <p>Exporttype <strong>mxl</strong> plaatst een link in de samenstelling waarmee de lezer een
 <code>.mxl</code>-bestand kan downloaden. Het bestand moet vooraf zijn gegenereerd via
 <a href="../conversie-vsa-musicxml/">conversie-vsa-musicxml</a> en bereikbaar op de
-gepubliceerde site staan. De build <strong>genereert geen</strong> MXL tijdens export-resolve.</p>
+gepubliceerde site staan. De exportstap <strong>genereert geen</strong> MXL zelf.</p>
 <hr />
 <h2 id="beoogde-doelen">Beoogde doelen<a class="headerlink" href="#beoogde-doelen" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Bewerking</strong> in MuseScore of andere MusicXML-editor</li>
+<li><strong>Bewerking</strong> in MuseScore of een andere MusicXML-editor</li>
 <li>Archief / uitwisseling met musici</li>
-<li>Optionele download naast Coria (online profiel)</li>
+<li>Optionele download naast Coria (online)</li>
 <li><strong>Niet:</strong> inline notatie op papier (→ <a href="../exporttype-svg/">svg</a>)</li>
 </ul>
 <hr />
@@ -2498,9 +2479,9 @@ gepubliceerde site staan. De build <strong>genereert geen</strong> MXL tijdens e
 <div class="highlight"><pre><span></span><code>:::include mxl &quot;praktijk/zondagen/tropaar-zondag-toon-3.vsa&quot; label=&quot;Download MusicXML&quot;:::
 </code></pre></div>
 <h3 id="huidige-stand">Huidige stand<a class="headerlink" href="#huidige-stand" title="Permanent link">&para;</a></h3>
-<p><code>:::include mxl</code> is <strong>nog niet geïmplementeerd</strong> in <code>markdown_include.py</code>.
-URL-afleiding bestaat wel in <code>content_assets.resolve_asset(…, channel="mxl")</code>.
-Tot implementatie: handmatige link naar gepubliceerde MXL of wachten op Spoor B.</p>
+<p><code>:::include mxl</code> is <strong>nog niet overal geïmplementeerd</strong>. URL-afleiding bestaat
+al in de tooling; tot volledige implementatie: handmatige link naar gepubliceerde
+MXL of wachten op afronding in VSA-tooling.</p>
 <hr />
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <h3 id="pad-eerste-argument"><code>pad</code> (eerste argument)<a class="headerlink" href="#pad-eerste-argument" title="Permanent link">&para;</a></h3>
@@ -2522,11 +2503,11 @@ Tot implementatie: handmatige link naar gepubliceerde MXL of wachten op Spoor B.
 </tr>
 <tr>
 <td><strong>Doel</strong></td>
-<td>Afleiden public URL <code>{prefix}/{relatief-pad-met-.mxl}</code></td>
+<td>Afleiden van de publicatie-URL van het bijbehorende <code>.mxl</code></td>
 </tr>
 <tr>
 <td><strong>Toegestane waarden</strong></td>
-<td>Bestaand <code>.vsa</code> onder content-root</td>
+<td>Bestaand <code>.vsa</code> onder de content-root</td>
 </tr>
 <tr>
 <td><strong>Verboden</strong></td>
@@ -2534,11 +2515,11 @@ Tot implementatie: handmatige link naar gepubliceerde MXL of wachten op Spoor B.
 </tr>
 <tr>
 <td><strong>Effect</strong></td>
-<td>Link wijst naar <code>/vsa/mxl/…/melodie.mxl</code> (default prefix)</td>
+<td>Link wijst naar het MXL-pad (typisch <code>/vsa/mxl/…</code>)</td>
 </tr>
 <tr>
 <td><strong>Voorbeeld</strong></td>
-<td><code>"praktijk/melodie.vsa"</code> → <code>/vsa/mxl/praktijk/melodie.mxl</code></td>
+<td><code>"praktijk/melodie.vsa"</code> → URL eindigend op <code>melodie.mxl</code></td>
 </tr>
 </tbody>
 </table>
@@ -2565,15 +2546,11 @@ Tot implementatie: handmatige link naar gepubliceerde MXL of wachten op Spoor B.
 </tr>
 <tr>
 <td><strong>Doel</strong></td>
-<td>Linktekst voor download</td>
+<td>Linktekst voor de download</td>
 </tr>
 <tr>
 <td><strong>Toegestane waarden</strong></td>
 <td>Willekeurige tekst</td>
-</tr>
-<tr>
-<td><strong>Effect</strong></td>
-<td><code>&lt;a download&gt;</code> of Hugo shortcode (implementatiedetail)</td>
 </tr>
 </tbody>
 </table>
@@ -2596,65 +2573,57 @@ Tot implementatie: handmatige link naar gepubliceerde MXL of wachten op Spoor B.
 <tr>
 <td><code>.mxl</code> afgeleide</td>
 <td>Ja (runtime)</td>
-<td>Moet fysiek op static staan; build kopieert nog niet overal automatisch</td>
+<td>Moet op de site staan; niet overal automatisch gekopieerd</td>
 </tr>
 </tbody>
 </table>
-<p>Sibling-conventie: <code>melodie.mxl</code> hoort bij <code>melodie.vsa</code> (zelfde stem, andere extensie).</p>
+<p>Sibling-conventie: <code>melodie.mxl</code> hoort bij <code>melodie.vsa</code> (zelfde stam, andere
+extensie).</p>
 <hr />
-<h2 id="validatie-voor-export">Validatie vóór export<a class="headerlink" href="#validatie-voor-export" title="Permanent link">&para;</a></h2>
+<h2 id="validatie-bedoeling">Validatie (bedoeling)<a class="headerlink" href="#validatie-bedoeling" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>Check</th>
-<th>Moment</th>
-<th>Blokkeert?</th>
+<th>Blokkeert build?</th>
+<th>Toelichting</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>.vsa</code> bestaat</td>
-<td>resolve</td>
 <td>Ja</td>
+<td>Pad moet kloppen</td>
 </tr>
 <tr>
 <td>Pad onder content-root</td>
-<td>resolve</td>
 <td>Ja</td>
+<td></td>
 </tr>
 <tr>
-<td><code>.mxl</code> bestaat op schijf</td>
-<td>—</td>
-<td><strong>Nee</strong> (huidige resolver)</td>
+<td><code>.mxl</code> op schijf</td>
+<td>Nee (huidig)</td>
+<td>Build kan slagen terwijl download 404 geeft</td>
 </tr>
 <tr>
 <td>MXL well-formed</td>
-<td>—</td>
-<td><strong>Nee</strong> bij export</td>
+<td>Nee bij export</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Runtime vs. build</p>
-<p>Build kan slagen terwijl download 404 geeft als MXL niet is gegenereerd en
-gekopieerd. CI moet conversie + static deploy afdwingen (TBD).</p>
+<p>De build kan slagen terwijl de download 404 geeft als MXL niet is
+gegenereerd en gepubliceerd. CI moet conversie + static afdwingen (TBD).</p>
 </div>
 <hr />
-<h2 id="build-gedrag">Build-gedrag<a class="headerlink" href="#build-gedrag" title="Permanent link">&para;</a></h2>
-<p><strong>Gepland:</strong> zelfde fase als <code>:::coria</code> — na includes, vóór VSA-SVG-render.</p>
-<p>Resolver (<code>resolve_asset</code>, channel <code>mxl</code>):</p>
-<ul>
-<li>Berekent public URL; <strong>kopieert geen</strong> bestand (anders dan coria-html)</li>
-<li>Emitteert Hugo shortcode (TBD: <code>{{&lt; mxl-download &gt;}}</code> of generieke link)</li>
-</ul>
-<p>MXL-generatie: altijd via <code>vsa musicxml</code>, niet via export-pass.</p>
-<hr />
-<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
+<h2 id="wat-de-eindgebruiker-ziet">Wat de eindgebruiker ziet<a class="headerlink" href="#wat-de-eindgebruiker-ziet" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>Profiel</th>
-<th>Eindgebruiker</th>
+<th>Resultaat</th>
 </tr>
 </thead>
 <tbody>
@@ -2689,51 +2658,47 @@ gekopieerd. CI moet conversie + static deploy afdwingen (TBD).</p>
 </tbody>
 </table>
 <hr />
-<h2 id="fouten-en-oplossingen">Fouten en oplossingen<a class="headerlink" href="#fouten-en-oplossingen" title="Permanent link">&para;</a></h2>
+<h2 id="veelvoorkomende-problemen-betekenis">Veelvoorkomende problemen (betekenis)<a class="headerlink" href="#veelvoorkomende-problemen-betekenis" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Probleem</th>
-<th>Oorzaak</th>
-<th>Oplossing</th>
+<th>Situatie</th>
+<th>Typische oorzaak</th>
+<th>Richting oplossing</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>404 op download</td>
 <td>MXL niet in static</td>
-<td><code>vsa musicxml</code> draaien; CI kopieerstap</td>
+<td><code>vsa musicxml</code> + publiceren (zie CLI)</td>
 </tr>
 <tr>
 <td>Verkeerde toonsoort in MXL</td>
-<td>Verkeerd exportprofiel conversie</td>
-<td><code>--profile</code> bij musicxml (zie conversiedoc)</td>
+<td>Verkeerd conversieprofiel</td>
+<td>Zie <a href="../conversie-vsa-musicxml/">conversie musicxml</a></td>
 </tr>
 <tr>
-<td><code>Verwacht een .vsa-bestand</code></td>
+<td>Verwacht een <code>.vsa</code>-bestand</td>
 <td>Pad naar <code>.mxl</code> i.p.v. <code>.vsa</code></td>
 <td>Eerste argument moet <code>.vsa</code> zijn</td>
-</tr>
-<tr>
-<td>Link werkt lokaal niet</td>
-<td>Hugo <code>baseURL</code></td>
-<td>Preview via <code>hugo server</code> met juiste static</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="open-punten-tbd">Open punten (TBD)<a class="headerlink" href="#open-punten-tbd" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Implementatie <code>:::include mxl</code> + Hugo shortcode</li>
-<li>Build-kopie <code>.mxl</code> → <code>static/vsa/mxl/…</code></li>
+<li>Volledige implementatie <code>:::include mxl</code> + Hugo-shortcode</li>
+<li>Build-kopie <code>.mxl</code> → static</li>
 <li>Validatie dat MXL bestaat vóór build (fail fast)</li>
-<li><code>label</code>-default en toegankelijkheid (bestandsgrootte, icoon)</li>
+<li><code>label</code>-default en toegankelijkheid</li>
 </ul>
 <hr />
 <h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../conversie-vsa-musicxml/">Conversie vsa musicxml</a></li>
 <li><a href="../exporttype-coria/">Exporttype coria</a> (deelt MXL-URL)</li>
+<li><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md">CLI: <code>vsa musicxml</code></a></li>
 </ul>
 
 
@@ -2754,7 +2719,7 @@ gekopieerd. CI moet conversie + static deploy afdwingen (TBD).</p>
   
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-06-27</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-02</p>
   
   
 

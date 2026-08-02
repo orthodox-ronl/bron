@@ -88,7 +88,7 @@
   
   <strong>Preview</strong>
    — branch <code>bron-dunner-maken</code>
-  , gebouwd 2026-08-02 08:12 CEST.
+  , gebouwd 2026-08-02 08:42 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2374,25 +2374,23 @@ Tekst of aanwijzing voor het koor (vrij).
 <hr />
 <h2 id="stap-4-resolve-en-publiceren">Stap 4 — Resolve en publiceren<a class="headerlink" href="#stap-4-resolve-en-publiceren" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong><code>catalogus index validate</code></strong> — index in orde.</li>
-<li><strong><code>vsa resolve-catalogus</code></strong> — vervangt elke <code>zoek=</code> door <code>bron:…</code> / <code>lokaal:…</code>;
-   bij ambiguïteit: <code>catalogus zoek --lijst</code> of verfijn <code>default.*</code> / <code>zoek=</code>.</li>
-<li><strong><code>vsa validate</code></strong> en <strong><code>vsa build-markdown</code></strong> — op het <strong>opgeloste</strong> bestand.</li>
+<li>Controleer dat de catalogus-index in orde is
+   (<a href="../../../reference/catalogus-cli/">Catalogus CLI</a>).</li>
+<li>Los elke <code>zoek=</code> op tot <code>bron:…</code> / <code>lokaal:…</code>
+   (<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md"><code>vsa resolve-catalogus</code></a>).
+   Bij meerdere treffers: lijst bekijken of <code>default.*</code> / <code>zoek=</code> verfijnen
+   (<a href="../../../reference/catalogus-cli/"><code>catalogus zoek</code></a>).</li>
+<li>Valideer en bouw het <strong>opgeloste</strong> bestand
+   (<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md"><code>vsa validate</code></a>,
+   <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/build-markdown.md"><code>vsa build-markdown</code></a>).</li>
 </ol>
-<p><strong>Let op:</strong> mappen <code>samenstellingen/</code> en <code>sjablonen/</code> worden in de Hugo-demo <strong>niet</strong>
-automatisch gepubliceerd (<code>build-markdown</code> slaat ze over). Kopieer opgeloste inhoud
-naar een publishbare content-map, of pas de build-config aan.</p>
-<p><strong>Export:</strong> <strong><code>:::include svg</code></strong> op <code>bron:</code> werkt; <strong><code>:::include coria</code></strong> op <code>bron:</code>
-faalt zolang het <code>.vsa</code> buiten <code>--content-root</code> staat (org-bron). Coria op <code>lokaal:</code>
-werkt wel.</p>
-<div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\VSA-demo
-vsa resolve-catalogus content-source\praktijk\samenstellingen\geboorte-moeder-gods-2026.md --content-root content-source --bron-root ..\bron
-vsa validate content-source
-</code></pre></div>
-<p>Zie <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#vsa-resolve-catalogus">VSA-tooling — resolve-catalogus</a>.</p>
+<p><strong>Let op (demo):</strong> mappen <code>samenstellingen/</code> en <code>sjablonen/</code> worden in de
+Hugo-demo niet automatisch gepubliceerd. Kopieer opgeloste inhoud naar een
+publishbare content-map, of pas de build-config aan — zie
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md">parochie-lokaal VSA</a>.</p>
+<p><strong>Export:</strong> <strong><code>:::include svg</code></strong> op <code>bron:</code> werkt; <strong><code>:::include coria</code></strong> op
+<code>bron:</code> faalt zolang het <code>.vsa</code> buiten de content-root staat (org-bron). Coria
+op <code>lokaal:</code> werkt wel.</p>
 <hr />
 <h2 id="verder-lezen">Verder lezen<a class="headerlink" href="#verder-lezen" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2419,7 +2417,7 @@ vsa validate content-source
   
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-02</p>
   
   
 

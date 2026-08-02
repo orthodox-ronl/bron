@@ -88,7 +88,7 @@
   
   <strong>Preview</strong>
    — branch <code>bron-dunner-maken</code>
-  , gebouwd 2026-08-02 08:12 CEST.
+  , gebouwd 2026-08-02 08:42 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2382,8 +2382,9 @@ worden bij index-build gerapporteerd via <code>catalogus index validate</code>.<
 :::include svg lokaal:…:::
 :::include svg bron:troparion-zondag-toon-1/groningen:::
 </code></pre></div>
-<p>VSA-tooling importeert <code>catalogus</code> en roept <code>AliasIndex.resolve_vsa_path()</code> aan in
-<code>markdown_include.py</code>. Relatieve pad-includes blijven werken.</p>
+<p>VSA-tooling importeert <code>catalogus</code> en lost catalogus-paden op tijdens de
+markdown-include-stap. Relatieve pad-includes blijven werken. Zie
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md">directives</a>.</p>
 <h2 id="fase-4-sjablonen-sessies-resolve">Fase 4 — sjablonen, sessies, resolve<a class="headerlink" href="#fase-4-sjablonen-sessies-resolve" title="Permanent link">&para;</a></h2>
 <p>Status: <strong>geïmplementeerd</strong> (basis).</p>
 <p>Normatief zoek-API: <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
@@ -2437,7 +2438,7 @@ lokaal <code>groningen</code>).</p>
   
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-07-04</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-02</p>
   
   
 
