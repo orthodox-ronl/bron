@@ -4,7 +4,7 @@ termType: concept
 glossaryTerm: "VSA-tooling"
 glossaryText: "De Python-toolchain (`vsa` CLI) waarmee [vsa-notatie](@)-bestanden worden geparseerd, gevalideerd en omgezet naar [afgeleiden](@) zoals SVG en MusicXML."
 glossaryNotes:
-  - "De `vsa`-CLI biedt subcommando's voor validatie (`vsa validate`), rendering (`vsa svg`) en export (`vsa musicxml`)."
+  - "De `vsa`-CLI biedt subcommando's voor validatie, rendering en export; zie de [CLI-referentie](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)."
   - "VSA-tooling genereert [afgeleiden](@) uit [bronbestanden](@); de [afgeleiden](@) zelf worden niet in de [bron-repository](@) opgeslagen."
   - "De tooling bevindt zich in de repo [orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)."
 formPhrases:
@@ -15,43 +15,55 @@ formPhrases:
 
 # VSA-tooling
 
-**VSA-tooling** is de Python-toolchain voor het verwerken van [VSA-notatie](@)-bestanden. De kern is de `vsa` CLI, die subcommando's biedt voor parseren, valideren en omzetten naar publicatievormen.
+**VSA-tooling** is de Python-toolchain voor het verwerken van
+[VSA-notatie](@)-bestanden. De kern is de `vsa` CLI: die parseert, valideert en
+zet [vsa-bestanden](@) om naar [afgeleiden](@) (bijv. `.svg`, `.mxl`). Die
+afgeleiden worden **niet** in de [bron-repository](@) bewaard, maar bij de build
+opnieuw gemaakt.
 
-## Subcommando's
+Volledige commando’s, opties en voorbeelden:
+[CLI-referentie (`vsa`)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md).
 
-| Commando             | Wat het doet                                                            |
-| -------------------- | ----------------------------------------------------------------------- |
-| `vsa validate`       | Valideert een [vsa-bestand](@) of map op syntaxfouten                   |
-| `vsa svg`            | Genereert een SVG-[afgeleide](@) (notenbalken) uit een [vsa-bestand](@) |
-| `vsa musicxml`       | Genereert een MusicXML-[afgeleide](@) (`.mxl`) uit een [vsa-bestand](@) |
-| `vsa parse`          | Toont de parse-tree van een [vsa-bestand](@)                            |
-| `vsa blocks`         | Toont de blokstructuur van een [vsa-bestand](@)                         |
-| `vsa process`        | Verwerkt VSA-directives in markdown                                     |
-| `vsa build-markdown` | Bouwt markdown met ingebedde VSA naar publicatievorm                    |
+## Wat je ermee doet
 
-VSA-tooling is een [conversiemechanisme](@): het zet [vsa-bestanden](@) om naar [afgeleiden](@) (`.svg`, `.mxl`). Die [afgeleiden](@) worden niet opgeslagen in de [bron-repository](@) maar gegenereerd tijdens de build.
+| Doel                         | Typisch subcommando   |
+| ---------------------------- | --------------------- |
+| Controleren of VSA klopt     | `validate`            |
+| Notatie als plaatje (SVG)    | `svg`                 |
+| MusicXML voor MuseScore/Coria| `musicxml`            |
+| Documenten voor de site bouwen | `build-markdown`    |
+| `zoek=` in markdown oplossen | `resolve-catalogus`   |
 
-## Installatie
+VSA-tooling is een [conversiemechanisme](@): het zet bronbestanden om naar
+afgeleiden. Org-contracten (wat/wanneer):
+[conversiemechanismen](../reference/conversiemechanismen.md).
+
+## Installatie (kort)
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\VSA-tooling
 scripts\bootstrap.cmd
 ```
 
-Na installatie is de `vsa`-CLI beschikbaar. Valideer zangstukken in de [bron-repository](@):
+Daarna kun je in de [bron-repository](@) valideren:
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
 vsa validate zangstukken
 ```
 
+Details: [CLI-overzicht](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md).
+
 ## Motivatie
 
-[VSA-notatie](@)-bestanden zijn tekstbestanden die door mensen worden geschreven. Zonder tooling zijn er geen garanties dat bestanden syntactisch correct zijn, en is het omzetten naar weergaveformaten (SVG, MusicXML) handmatig en foutgevoelig. VSA-tooling maakt dat proces automatisch en reproduceerbaar: elke build genereert de [afgeleiden](@) opnieuw uit de getrackte [bronbestanden](@), zodat de gepubliceerde site altijd consistent is met de bronrepository.
+[VSA-notatie](@)-bestanden zijn tekst die mensen schrijven. Zonder tooling is er
+geen garantie dat ze syntactisch kloppen, en is omzetten naar SVG of MusicXML
+handmatig en foutgevoelig. VSA-tooling maakt dat automatisch en
+reproduceerbaar — elke build genereert afgeleiden opnieuw uit de getrackte
+bronbestanden. In CI valideert `vsa validate zangstukken` bij push of PR.
 
-De tooling ondersteunt ook CI: in de [bron-repository](@) valideert `vsa validate zangstukken` bij elke push of PR alle zangstukken automatisch.
+## Zie ook
 
-## Zie ook:
-
+- [CLI-referentie](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)
 - [VSA-demo](https://orthodox-groningen.github.io/VSA-demo/)
 - [GitHub orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)

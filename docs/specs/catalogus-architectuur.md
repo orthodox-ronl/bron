@@ -70,8 +70,9 @@ Status: **geïmplementeerd (basis)**.
 :::include svg bron:troparion-zondag-toon-1/groningen:::
 ```
 
-VSA-tooling importeert `catalogus` en roept `AliasIndex.resolve_vsa_path()` aan in
-`markdown_include.py`. Relatieve pad-includes blijven werken.
+VSA-tooling importeert `catalogus` en lost catalogus-paden op tijdens de
+markdown-include-stap. Relatieve pad-includes blijven werken. Zie
+[directives](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md).
 
 ## Fase 4 — sjablonen, sessies, resolve
 

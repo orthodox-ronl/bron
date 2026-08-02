@@ -3,6 +3,10 @@
 Contract voor het **mxl**-exporttype: downloadlink naar MusicXML (`.mxl`) voor
 bewerking in MuseScore of als fallback voor Coria.
 
+Technische resolver- en shortcode-details: zie
+[MusicXML exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)
+en [CLI `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md).
+
 ---
 
 ## Samenvatting
@@ -10,15 +14,15 @@ bewerking in MuseScore of als fallback voor Coria.
 Exporttype **mxl** plaatst een link in de samenstelling waarmee de lezer een
 `.mxl`-bestand kan downloaden. Het bestand moet vooraf zijn gegenereerd via
 [conversie-vsa-musicxml](conversie-vsa-musicxml.md) en bereikbaar op de
-gepubliceerde site staan. De build **genereert geen** MXL tijdens export-resolve.
+gepubliceerde site staan. De exportstap **genereert geen** MXL zelf.
 
 ---
 
 ## Beoogde doelen
 
-- **Bewerking** in MuseScore of andere MusicXML-editor
+- **Bewerking** in MuseScore of een andere MusicXML-editor
 - Archief / uitwisseling met musici
-- Optionele download naast Coria (online profiel)
+- Optionele download naast Coria (online)
 - **Niet:** inline notatie op papier (→ [svg](exporttype-svg.md))
 
 ---
@@ -33,9 +37,9 @@ gepubliceerde site staan. De build **genereert geen** MXL tijdens export-resolve
 
 ### Huidige stand
 
-`:::include mxl` is **nog niet geïmplementeerd** in `markdown_include.py`.
-URL-afleiding bestaat wel in `content_assets.resolve_asset(…, channel="mxl")`.
-Tot implementatie: handmatige link naar gepubliceerde MXL of wachten op Spoor B.
+`:::include mxl` is **nog niet overal geïmplementeerd**. URL-afleiding bestaat
+al in de tooling; tot volledige implementatie: handmatige link naar gepubliceerde
+MXL of wachten op afronding in VSA-tooling.
 
 ---
 
@@ -43,15 +47,15 @@ Tot implementatie: handmatige link naar gepubliceerde MXL of wachten op Spoor B.
 
 ### `pad` (eerste argument)
 
-| Veld                   | Waarde                                                     |
-| ---------------------- | ---------------------------------------------------------- |
-| **Verplicht?**         | Ja                                                         |
-| **Type**               | Relatief pad naar `.vsa`                                   |
-| **Doel**               | Afleiden public URL `{prefix}/{relatief-pad-met-.mxl}`     |
-| **Toegestane waarden** | Bestaand `.vsa` onder content-root                         |
-| **Verboden**           | Ontbrekend `.vsa`, pad buiten content-root                 |
-| **Effect**             | Link wijst naar `/vsa/mxl/…/melodie.mxl` (default prefix)  |
-| **Voorbeeld**          | `"praktijk/melodie.vsa"` → `/vsa/mxl/praktijk/melodie.mxl` |
+| Veld                   | Waarde                                                    |
+| ---------------------- | --------------------------------------------------------- |
+| **Verplicht?**         | Ja                                                        |
+| **Type**               | Relatief pad naar `.vsa`                                  |
+| **Doel**               | Afleiden van de publicatie-URL van het bijbehorende `.mxl`|
+| **Toegestane waarden** | Bestaand `.vsa` onder de content-root                     |
+| **Verboden**           | Ontbrekend `.vsa`, pad buiten content-root                |
+| **Effect**             | Link wijst naar het MXL-pad (typisch `/vsa/mxl/…`)        |
+| **Voorbeeld**          | `"praktijk/melodie.vsa"` → URL eindigend op `melodie.mxl` |
 
 ### `label`
 
@@ -60,57 +64,44 @@ Tot implementatie: handmatige link naar gepubliceerde MXL of wachten op Spoor B.
 | **Verplicht?**         | Nee                                                     |
 | **Type**               | String: `label="…"`                                     |
 | **Standaard**          | TBD bij implementatie (voorstel: `"Download MusicXML"`) |
-| **Doel**               | Linktekst voor download                                 |
+| **Doel**               | Linktekst voor de download                              |
 | **Toegestane waarden** | Willekeurige tekst                                      |
-| **Effect**             | `<a download>` of Hugo shortcode (implementatiedetail)  |
 
 ---
 
 ## Inputs
 
-| Input            | Vereist?     | Opmerking                                                               |
-| ---------------- | ------------ | ----------------------------------------------------------------------- |
-| `.vsa`           | Ja           | Anker voor URL-afleiding                                                |
-| `.mxl` afgeleide | Ja (runtime) | Moet fysiek op static staan; build kopieert nog niet overal automatisch |
+| Input            | Vereist?     | Opmerking                                              |
+| ---------------- | ------------ | ------------------------------------------------------ |
+| `.vsa`           | Ja           | Anker voor URL-afleiding                               |
+| `.mxl` afgeleide | Ja (runtime) | Moet op de site staan; niet overal automatisch gekopieerd |
 
-Sibling-conventie: `melodie.mxl` hoort bij `melodie.vsa` (zelfde stem, andere extensie).
+Sibling-conventie: `melodie.mxl` hoort bij `melodie.vsa` (zelfde stam, andere
+extensie).
 
 ---
 
-## Validatie vóór export
+## Validatie (bedoeling)
 
-| Check                    | Moment  | Blokkeert?                 |
-| ------------------------ | ------- | -------------------------- |
-| `.vsa` bestaat           | resolve | Ja                         |
-| Pad onder content-root   | resolve | Ja                         |
-| `.mxl` bestaat op schijf | —       | **Nee** (huidige resolver) |
-| MXL well-formed          | —       | **Nee** bij export         |
+| Check                  | Blokkeert build? | Toelichting                                      |
+| ---------------------- | ---------------- | ------------------------------------------------ |
+| `.vsa` bestaat         | Ja               | Pad moet kloppen                                 |
+| Pad onder content-root | Ja               |                                                  |
+| `.mxl` op schijf       | Nee (huidig)     | Build kan slagen terwijl download 404 geeft      |
+| MXL well-formed        | Nee bij export   |                                                  |
 
 !!! warning "Runtime vs. build"
-    Build kan slagen terwijl download 404 geeft als MXL niet is gegenereerd en
-    gekopieerd. CI moet conversie + static deploy afdwingen (TBD).
+    De build kan slagen terwijl de download 404 geeft als MXL niet is
+    gegenereerd en gepubliceerd. CI moet conversie + static afdwingen (TBD).
 
 ---
 
-## Build-gedrag
+## Wat de eindgebruiker ziet
 
-**Gepland:** zelfde fase als `:::coria` — na includes, vóór VSA-SVG-render.
-
-Resolver (`resolve_asset`, channel `mxl`):
-
-- Berekent public URL; **kopieert geen** bestand (anders dan coria-html)
-- Emitteert Hugo shortcode (TBD: `{{< mxl-download >}}` of generieke link)
-
-MXL-generatie: altijd via `vsa musicxml`, niet via export-pass.
-
----
-
-## Output
-
-| Profiel   | Eindgebruiker                        |
-| --------- | ------------------------------------ |
-| Bewerking | Download `.mxl`, open in MuseScore   |
-| Online    | Optionele extra link naast svg/coria |
+| Profiel   | Resultaat                              |
+| --------- | -------------------------------------- |
+| Bewerking | Download `.mxl`, open in MuseScore     |
+| Online    | Optionele extra link naast svg/coria   |
 
 ---
 
@@ -123,23 +114,22 @@ MXL-generatie: altijd via `vsa musicxml`, niet via export-pass.
 
 ---
 
-## Fouten en oplossingen
+## Veelvoorkomende problemen (betekenis)
 
-| Probleem                    | Oorzaak                          | Oplossing                                   |
-| --------------------------- | -------------------------------- | ------------------------------------------- |
-| 404 op download             | MXL niet in static               | `vsa musicxml` draaien; CI kopieerstap      |
-| Verkeerde toonsoort in MXL  | Verkeerd exportprofiel conversie | `--profile` bij musicxml (zie conversiedoc) |
-| `Verwacht een .vsa-bestand` | Pad naar `.mxl` i.p.v. `.vsa`    | Eerste argument moet `.vsa` zijn            |
-| Link werkt lokaal niet      | Hugo `baseURL`                   | Preview via `hugo server` met juiste static |
+| Situatie                   | Typische oorzaak               | Richting oplossing                          |
+| -------------------------- | ------------------------------ | ------------------------------------------- |
+| 404 op download            | MXL niet in static             | `vsa musicxml` + publiceren (zie CLI)       |
+| Verkeerde toonsoort in MXL | Verkeerd conversieprofiel      | Zie [conversie musicxml](conversie-vsa-musicxml.md) |
+| Verwacht een `.vsa`-bestand | Pad naar `.mxl` i.p.v. `.vsa` | Eerste argument moet `.vsa` zijn            |
 
 ---
 
 ## Open punten (TBD)
 
-- Implementatie `:::include mxl` + Hugo shortcode
-- Build-kopie `.mxl` → `static/vsa/mxl/…`
+- Volledige implementatie `:::include mxl` + Hugo-shortcode
+- Build-kopie `.mxl` → static
 - Validatie dat MXL bestaat vóór build (fail fast)
-- `label`-default en toegankelijkheid (bestandsgrootte, icoon)
+- `label`-default en toegankelijkheid
 
 ---
 
@@ -147,3 +137,4 @@ MXL-generatie: altijd via `vsa musicxml`, niet via export-pass.
 
 - [Conversie vsa musicxml](conversie-vsa-musicxml.md)
 - [Exporttype coria](exporttype-coria.md) (deelt MXL-URL)
+- [CLI: `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md)

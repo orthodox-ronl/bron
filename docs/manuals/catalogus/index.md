@@ -14,10 +14,16 @@ als basis voor latere handleidingen en GUI-ontwerp.
    individuele **`default.gelegenheid`**.
 2. Hij maakt een **sessie** en vult **`default.gelegenheid`** (en evt. `toon`) in.
 3. Op vaste plekken staat **`:::include`** met **`zoek="…"`** — liturgische rol.
-4. **`vsa resolve-catalogus`** → catalogus-pad; **review** alleen bij ambiguïteit.
-5. **`vsa build-markdown`** op het opgeloste bestand → site / export.
+4. Hij **lost de zoekopdrachten op** tot catalogus-paden; **review** alleen bij
+   ambiguïteit.
+5. Hij **bouwt** het opgeloste bestand naar de site / export.
 
 Contract: [zangstuk in samenstelling-sjablonen](../../specs/catalogus-samenstelling-zangstuk.md).
+
+Commando’s (wanneer je CLI gebruikt):
+[Catalogus CLI](../../reference/catalogus-cli.md),
+[`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md),
+[`vsa build-markdown`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/build-markdown.md).
 
 ## Persona's en context
 

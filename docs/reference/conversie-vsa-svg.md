@@ -1,123 +1,98 @@
 # Conversie: vsa svg
 
-Contract voor het conversiemechanisme **`vsa svg`**: VSA-bron (`.vsa`) naar
-scalable vector graphics (`.svg`).
+Contract voor het conversiemechanisme **`vsa svg`**: een [vsa-bestand](@)
+omzetten naar een schaalbare vectorafbeelding (`.svg`).
+
+Dit document beschrijft **wat** de conversie doet en **wanneer** je die gebruikt.
+Hoe je het commando precies aanroept (syntax, opties, voorbeelden): zie de
+[CLI man-page `vsa svg`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/svg.md)
+en de workflow-guide
+[SVG exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/svg-export.md).
 
 ---
 
 ## Samenvatting
 
-`vsa svg` leest een gevalideerd [vsa-bestand](@) en schrijft een SVG met VSA-glyphs,
-omringende tekst en layout volgens [VSA-tooling](@) rendering. De SVG is input voor
-exporttype [embed svg](exporttype-svg.md) en voor static assets op de site.
+De conversie leest een [vsa-bestand](@) en schrijft een SVG met VSA-glyphs,
+omringende tekst en layout volgens de rendering van [VSA-tooling](@). Die SVG is
+een [afgeleide](@): die hoort **niet** in de [bron-repository](@). Je gebruikt
+hem daarna via exporttype [embed svg](exporttype-svg.md) of als static asset op
+een parochiesite.
 
 ---
 
 ## Wanneer gebruiken
 
-| Scenario            | Aanroep                                                                     |
-| ------------------- | --------------------------------------------------------------------------- |
-| Lokaal preview      | Handmatig na wijziging `.vsa`                                               |
-| CI / parochie-build | Batch over content-source (doel: expliciete job vóór Hugo)                  |
-| Inline (huidig)     | Automatisch tijdens `build-markdown` bij `::: vsa-notatie` / `.vsa` include |
+| Situatie                         | Wat je wilt                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| Notatie bekijken of afdrukken    | SVG als plaatje in de pagina of op papier            |
+| Site-build / CI                  | SVG’s klaarzetten vóór of tijdens publicatie         |
+| Inline tijdens document-build    | Zelfde resultaat via `build-markdown` (zie tooling)  |
+
+Gebruik **niet** deze conversie als je wilt bewerken in MuseScore of oefenen in
+Coria — daarvoor is [vsa musicxml](conversie-vsa-musicxml.md).
 
 ---
 
-## Commando en aanroep
+## Eisen aan de invoer
 
-### Enkel bestand
-
-```cmd
-vsa svg pad\naar\melodie.vsa pad\naar\melodie.svg
-```
-
-### Typische mapstructuur (lokaal)
-
-```text
-content-source/praktijk/melodie.vsa  →  derived/praktijk/melodie.svg
-```
-
-Output-locatie in parochie-build: `static/vsa/` of CI-artefact; URL-prefix `/vsa`.
+| Eis              | Toelichting                                                              |
+| ---------------- | ------------------------------------------------------------------------ |
+| Bestand          | `.vsa`, UTF-8 — een geldig [vsa-bestand](@)                              |
+| Validatie        | Moet slagen met `vsa validate` vóór een betrouwbare SVG                  |
+| Frontmatter      | Optioneel; metadata kan de weergave beïnvloeden                          |
+| Omringende tekst | Maakt deel uit van de body van het [vsa-bestand](@)                      |
 
 ---
 
-## Invoer
+## Wat er uit komt
 
-| Veld             | Vereiste                                           |
-| ---------------- | -------------------------------------------------- |
-| Bestand          | `.vsa`, UTF-8                                      |
-| Validatie        | Moet slagen op `vsa validate` vóór betrouwbare SVG |
-| Frontmatter      | Optioneel; metadata kan rendering beïnvloeden      |
-| Omringende tekst | Onderdeel van `.vsa`-body                          |
-
----
-
-## Opties / flags
-
-De CLI `vsa svg` accepteert primair input- en outputpad. Rendering-opties
-(max line width, fonts) worden via [VSA-tooling](@) config / build-markdown parameters
-gezet in site-build — niet alle flags zijn op CLI-niveau per bestand.
-
-| Parameter (build)       | Doel                      | Typische waarde            |
-| ----------------------- | ------------------------- | -------------------------- |
-| `max_line_width`        | SVG-breedte wrapping      | `800` (site-build default) |
-| `svg_assets_dir`        | Waar SVG wordt gekopieerd | `generated/vsa/static/vsa` |
-| `svg_assets_url_prefix` | URL in HTML               | `/vsa`                     |
-
-!!! note "CLI vs. build"
-    Gedetailleerde flag-lijst staat in [VSA-tooling](@) `--help` en architecture docs;
-    dit contract beschrijft gedrag relevant voor bronbeheerders.
+| Veld         | Waarde                                                    |
+| ------------ | --------------------------------------------------------- |
+| Formaat      | SVG met `width` / `viewBox` zodat schalen mogelijk is     |
+| Inhoud       | [VSA-notatie](@) + tekst; geen geluid                     |
+| Bestandsnaam | Meestal `{stem}.svg` bij `{stem}.vsa`                     |
+| Bewaarplaats | Afgeleide map of site-static — **niet** in `bron`         |
 
 ---
 
 ## Validatie vóór conversie
 
-| Check              | Tool           | Blokkeert?         |
-| ------------------ | -------------- | ------------------ |
-| Parse              | `vsa validate` | Ja                 |
-| Semantiek VSA      | Zelfde         | Ja                 |
-| Ontbrekend bestand | CLI            | Ja — exit code ≠ 0 |
+| Check              | Blokkeert betrouwbare SVG? |
+| ------------------ | -------------------------- |
+| Parse / semantiek  | Ja — eerst `vsa validate`  |
+| Ontbrekend bestand | Ja                         |
 
-Bij `build-markdown` faalt de hele build bij invalid `.vsa`.
-
----
-
-## Uitvoer
-
-| Veld         | Waarde                                                       |
-| ------------ | ------------------------------------------------------------ |
-| Formaat      | SVG 1.x, `width`/`viewBox` voor schaling                    |
-| Inhoud       | [VSA-notatie](@) + tekst; geen audio                        |
-| Bestandsnaam | Meestal `{stem}.svg` naast `{stem}.vsa`                     |
-| Versie       | Gekoppeld aan [VSA-tooling](@) release / git ref in CI      |
+Bij document-build faalt de hele build als een `.vsa` ongeldig is.
 
 ---
 
-## Downstream (export)
+## Na de conversie (export)
 
-| Exporttype               | Gebruik                           |
-| ------------------------ | --------------------------------- |
-| [svg](exporttype-svg.md) | Embed in samenstelling            |
-| Direct `.svg` include    | Kopie naar static zonder VSA-blok |
+| Exporttype               | Gebruik                                |
+| ------------------------ | -------------------------------------- |
+| [svg](exporttype-svg.md) | Notatie inbedden in een samenstelling  |
+| Directe `.svg`-include   | Kopie naar static zonder VSA-blok      |
 
 ---
 
-## Fouten en oplossingen
+## Veelvoorkomende problemen (betekenis)
 
-| Probleem          | Oorzaak          | Oplossing                                        |
-| ----------------- | ---------------- | ------------------------------------------------ |
-| Validatiefout     | Syntax in `.vsa` | `vsa validate`; [vsa-notatie](@) spec raadplegen |
-| Lege SVG          | Lege body        | Inhoud toevoegen                                 |
-| Verkeerde glyphs  | Font/config      | [VSA-tooling](@) versie alignen met CI           |
-| Breedte op afdruk | Te brede SVG     | `scale` in export of `max_line_width`            |
+| Probleem         | Typische oorzaak        | Richting oplossing                                      |
+| ---------------- | ----------------------- | ------------------------------------------------------- |
+| Validatiefout    | Syntax in `.vsa`        | Valideren; [vsa-notatie](@) raadplegen                  |
+| Lege SVG         | Lege body               | Inhoud toevoegen                                        |
+| Verkeerde glyphs | Font of toolversie      | [VSA-tooling](@) gelijk trekken met CI                  |
+| Te breed op A4   | Brede layout            | `scale` bij export of regelbreedte in tooling           |
+
+Concrete foutteksten en commandovoorbeelden: CLI man-page `vsa svg` / `vsa validate`.
 
 ---
 
 ## Open punten (TBD)
 
-- Expliciete CI-job alleen conversie (los van Hugo)
+- Expliciete CI-job alleen voor conversie (los van Hugo)
 - Cache: alleen opnieuw converteren bij gewijzigde `.vsa`
-- Documentatie alle CLI-flags in dit contract
 
 ---
 
@@ -125,3 +100,5 @@ Bij `build-markdown` faalt de hele build bij invalid `.vsa`.
 
 - [Exporttype svg](exporttype-svg.md)
 - [Conversiemechanismen — overzicht](conversiemechanismen.md)
+- [CLI: `vsa svg`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/svg.md)
+- [Guide: SVG exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/svg-export.md)

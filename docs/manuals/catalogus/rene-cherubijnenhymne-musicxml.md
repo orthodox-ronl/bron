@@ -80,14 +80,9 @@ sources:
 
 ### 3. Catalogus — representatie-id
 
-Als Rene “mxl” of “MusicXML Groningen” als alias wil gebruiken:
-
-```cmd
-cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli resolve representatie --zangstuk cherubijnenhymne --variant kastorski --uitvoeringsvorm groningen groningen-mxl --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
-```
-
-(Canoniek id-passthrough als alias nog niet geregistreerd.)
+Als Rene “mxl” of “MusicXML Groningen” als alias wil gebruiken, lost hij die
+op via de catalogus
+([Catalogus CLI — resolve representatie](../../reference/catalogus-cli.md)).
 
 ### 4. Opnemen in sjabloon / samenstelling
 
@@ -98,7 +93,7 @@ In het sjabloon (verhaal 1) blijven de includes met **`zoek=`**:
 :::include mxl zoek="Cherubijnenhymne (Kastorski)" label="Download partituur (MusicXML)":::
 ```
 
-**Na **`vsa resolve-catalogus`** (parochie-lokaal, MXL als sibling van `.vsa`):
+**Na oplossen** (parochie-lokaal, MXL als sibling van `.vsa`):
 
 ```markdown
 ## Cherubijnenhymne
@@ -107,12 +102,17 @@ In het sjabloon (verhaal 1) blijven de includes met **`zoek=`**:
 :::include mxl lokaal:cherubijnenhymne/kastorski/groningen label="Download partituur (MusicXML)":::
 ```
 
-**Beperking:** `mxl` / `coria` op **`bron:`** catalogus-pad — `.vsa` buiten content-root.
-Handmatig MXL in repo blijft geldig; build levert download-URL naar static.
+Resolve:
+[`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md).
+
+**Beperking:** `mxl` / `coria` op **`bron:`** catalogus-pad — `.vsa` buiten
+content-root. Handmatig MXL in repo blijft geldig; de build levert een
+download-URL naar static.
 
 Build-time generatie blijft gescheiden: de site levert een **download-URL** naar
-het **bron**-bestand; `vsa musicxml` draait niet in de Hugo-build voor dit
-handmatige MXL.
+het **bron**-bestand; automatische MXL uit VSA
+([conversie vsa musicxml](../../reference/conversie-vsa-musicxml.md)) is iets
+anders dan Nana's handmatige export.
 
 ### 5. Delen met koorleden
 
@@ -124,9 +124,8 @@ handmatige MXL.
 
 ### 6. Validatie
 
-```cmd
-python -m catalogus.cli index validate --bron-root C:\Git\orthodox-groningen\bron --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
-```
+Index controleren:
+[Catalogus CLI](../../reference/catalogus-cli.md).
 
 ---
 
