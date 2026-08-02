@@ -25,7 +25,7 @@ jobs:
 
       - name: Set build timestamp
         id: ts
-        run: echo "build_time=$(date -u +'%Y-%m-%d %H:%M UTC')" >> "$GITHUB_OUTPUT"
+        run: echo "build_time=$(TZ=Europe/Amsterdam date +'%Y-%m-%d %H:%M %Z')" >> "$GITHUB_OUTPUT"
 
       - name: Determine deploy target
         id: target

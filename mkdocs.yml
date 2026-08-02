@@ -33,6 +33,7 @@ plugins:
   - git-revision-date-localized:
       type: date
       locale: nl
+      timezone: Europe/Amsterdam
       fallback_to_build_date: true
 
 markdown_extensions:

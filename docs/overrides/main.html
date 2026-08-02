@@ -17,10 +17,12 @@
 
 {% block content %}
   {{ super() }}
+  {# Per pagina: laatste commit. Plugin zet git_revision_date_localized; CI injecteert git_date. #}
+  {% set page_git = page.meta.git_date or page.meta.git_revision_date_localized %}
+  {% if page_git %}
+  <p class="page-git-date">Bijgewerkt: {{ page_git }}</p>
+  {% endif %}
   {% if page.is_homepage and config.extra.build_time %}
   <p class="build-time-stamp">Gegenereerd: {{ config.extra.build_time }}</p>
-  {% endif %}
-  {% if page.meta.git_date %}
-  <p class="page-git-date">Bijgewerkt: {{ page.meta.git_date }}</p>
   {% endif %}
 {% endblock %}
