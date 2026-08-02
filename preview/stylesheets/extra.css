@@ -4,12 +4,18 @@
 .page-git-date {
   color: var(--md-default-fg-color--light);
   font-size: .75rem;
-  margin-top: 2rem;
+  margin-top: 3.5rem;
   margin-bottom: .5rem;
 }
 
-.build-time-stamp {
-  margin-top: -.75rem;
+/* Tweede stempel dichter op de eerste (niet opnieuw 3.5rem vanaf content). */
+.build-time-stamp + .page-git-date,
+.page-git-date + .build-time-stamp {
+  margin-top: .25rem;
+}
+
+.build-time-stamp:last-child,
+.page-git-date:last-child {
   margin-bottom: 1.5rem;
 }
 
