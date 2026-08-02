@@ -38,7 +38,8 @@ in bron-referentie** — link naar de man-page.
 
 - Schrijf in begrijpelijk Nederlands; vermijd onnodig jargon.
 - Gebruik alleen termen die in de glossary staan
-  ([terminologie.md](terminologie.md) / [docs/terms/](../terms/)).
+  ([terminologie.md](terminologie.md), [glossary](../glossary.md), curated texts in
+  `docs/terms/`).
 - Bij elke gedefinieerde term: **TermRef** `[term](@)` zodat de definitie op de
   site zichtbaar is.
 - Geen synoniemen die verwarring geven (R1–R5).
