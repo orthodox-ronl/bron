@@ -4,7 +4,7 @@ terminology:
   curatedir: "terms"
   glossarydir: "mrgs"
   defaultvsn: "bron"
-  website: "https://orthodox-groningen.github.io/bron/preview"
+  website: "https://orthodox-groningen.github.io/bron"
   navpath: "/terms"
   navid: "term"
   defaulttype: "concept"
@@ -24,7 +24,7 @@ entries:
       - "[Afgeleiden](@) worden niet getrackt in de [bron-repository](@); ze worden gegenereerd tijdens de build."
     scopetag: "bron"
     locator: "afgeleide.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/afgeleide"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/afgeleide"
     headingids:
       - "afgeleide"
       - "motivatie"
@@ -48,7 +48,7 @@ entries:
       - "Repositories voor de [VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling/), of parochie-specifieke zaken en vendor-checkouts zijn geen bron-repository."
     scopetag: "bron"
     locator: "bron-repository.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/bron-repository"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/bron-repository"
     headingids:
       - "bron-repository"
       - "motivatie"
@@ -76,7 +76,7 @@ entries:
           - "HTML bestanden zoals die zijn gegenereerd uit geautomatiseerde workflows."
     scopetag: "bron"
     locator: "bronbestand.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/bronbestand"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/bronbestand"
     headingids:
       - "bronbestand"
       - "motivatie"
@@ -95,7 +95,7 @@ entries:
       - "Niet verwarren met [samenstelling](@) (parochie-markdown met `:::include`) of sjabloon (markdown met `:::include zoek=`)."
     scopetag: "bron"
     locator: "compositie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/compositie"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/compositie"
     headingids:
       - "compositie"
       - "motivatie"
@@ -114,7 +114,7 @@ entries:
       - "Het bestaan van een conversiemechanisme is het criterium waarmee onderscheid wordt gemaakt tussen [bronbestand](@) en [afgeleide](@)."
     scopetag: "bron"
     locator: "conversiemechanisme.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/conversiemechanisme"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/conversiemechanisme"
     headingids:
       - "conversiemechanisme"
       - "motivatie"
@@ -130,7 +130,7 @@ entries:
     glossaryText: "De manier waarop een [samenstelling](@) een [bronbestand](@) of [afgeleide](@) ontsluit voor een lezersdoel, via een `:::include`-directive met een [exporttype](@)."
     scopetag: "bron"
     locator: "exportmechanisme.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/exportmechanisme"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/exportmechanisme"
     headingids:
       - "exportmechanisme"
       - "motivatie"
@@ -149,7 +149,7 @@ entries:
       - "Huidige exporttypen: `svg`, `coria`, `mxl`."
     scopetag: "bron"
     locator: "exporttype.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/exporttype"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/exporttype"
     headingids:
       - "exporttype"
       - "motivatie"
@@ -169,7 +169,7 @@ entries:
       - "Registratie vindt plaats via [promotie](@): een PR naar de [bron-repository](@) met [source-entry](@) en [bronbestand](@)."
     scopetag: "bron"
     locator: "geregistreerde-representatie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/geregistreerde-representatie"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/geregistreerde-representatie"
     headingids:
       - "geregistreerde-representatie"
       - "motivatie"
@@ -187,7 +187,7 @@ entries:
       - "Herkomst is geen bestand; het is metadata (zoals `reference:` in `zangstuk.yaml`)."
     scopetag: "bron"
     locator: "herkomst.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/herkomst"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/herkomst"
     headingids:
       - "herkomst"
       - "motivatie"
@@ -207,7 +207,7 @@ entries:
       - "Een manifest is zelf geen [representatie](@), [bronbestand](@) of [samenstelling](@)."
     scopetag: "bron"
     locator: "manifest.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/manifest"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/manifest"
     headingids:
       - "manifest"
       - "motivatie"
@@ -227,7 +227,7 @@ entries:
       - "Parochie-lokale representaties staan onder `content-source/lokaal/<zangstuk-id>/<variant-id>/…`."
     scopetag: "bron"
     locator: "parochie-lokale-representatie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/parochie-lokale-representatie"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/parochie-lokale-representatie"
     headingids:
       - "parochie-lokale-representatie"
       - "motivatie"
@@ -246,7 +246,7 @@ entries:
       - "Promotie vereist een PR op de [bron-repository](@) met [source-entry](@) én [bronbestand](@)."
     scopetag: "bron"
     locator: "promotie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/promotie"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/promotie"
     headingids:
       - "promotie"
       - "motivatie"
@@ -266,7 +266,7 @@ entries:
       - "Om een representatie van een [uitvoeringsvorm](@) te onderscheiden kun je de vraag stellen of het een bestand betref of niet."
     scopetag: "bron"
     locator: "representatie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/representatie"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/representatie"
     headingids:
       - "representatie"
       - "motivatie"
@@ -286,7 +286,7 @@ entries:
       - "Niet verwarren met [compositie](@) (org-brede ordered list van [zangstukken](@) in yaml) of sjabloon (markdown met `:::include zoek=`)."
     scopetag: "bron"
     locator: "samenstelling.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/samenstelling"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/samenstelling"
     headingids:
       - "samenstelling"
       - "motivatie"
@@ -305,7 +305,7 @@ entries:
       - "Meerdere [source-entries](@) kunnen meerdere [representaties](@) registreren, of (legacy) nog niet onderscheiden [variant](@)/[uitvoeringsvorm](@)-structuur bevatten — bij nieuw werk gebruik het vier-niveaumodel."
     scopetag: "bron"
     locator: "source-entry.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/source-entry"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/source-entry"
     headingids:
       - "source-entry"
       - "voorbeelden-van-source-entries"
@@ -328,7 +328,7 @@ entries:
           - "de verdeling van lettergrepen over de noten"
     scopetag: "bron"
     locator: "uitvoeringsvorm.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/uitvoeringsvorm"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/uitvoeringsvorm"
     headingids:
       - "uitvoeringsvorm"
       - "motivatie"
@@ -351,7 +351,7 @@ entries:
       - "Vergelijkbare begrippen die buiten de scope van deze terminologie ook wel worden gehanteerd zijn `bewerking`, `versie`, `setting`, `compositievariant`."
     scopetag: "bron"
     locator: "variant.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/variant"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/variant"
     headingids:
       - "variant"
       - "motivatie"
@@ -371,7 +371,7 @@ entries:
       - "vsa"
     scopetag: "bron"
     locator: "vsa.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/vsa"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/vsa"
     headingids:
       - "vsa-—-vereenvoudigde-slavische-accentnotatie"
       - "motivatie"
@@ -391,7 +391,7 @@ entries:
       - "vsa-bestanden"
     scopetag: "bron"
     locator: "vsa-bestand.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/vsa-bestand"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/vsa-bestand"
     headingids:
       - "vsa-bestand"
       - "structuur"
@@ -414,7 +414,7 @@ entries:
       - "vsa-notaties"
     scopetag: "bron"
     locator: "vsa-notatie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/vsa-notatie"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/vsa-notatie"
     headingids:
       - "vsa-notatie"
       - "kernprincipes"
@@ -437,7 +437,7 @@ entries:
       - "vsa-tools"
     scopetag: "bron"
     locator: "vsa-tooling.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/vsa-tooling"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/vsa-tooling"
     headingids:
       - "vsa-tooling"
       - "wat-je-ermee-doet"
@@ -455,7 +455,7 @@ entries:
     glossaryText: "Een liturgisch-muzikaal geheel met een stabiele `zangstuk-id`, waaronder nul of meer varianten bestaan."
     scopetag: "bron"
     locator: "zangstuk.md"
-    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/zangstuk"
+    navurl: "https://orthodox-groningen.github.io/bron/terms/zangstuk"
     headingids:
       - "zangstuk"
     termType: "concept"
