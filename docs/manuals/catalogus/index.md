@@ -1,12 +1,12 @@
-# Catalogus — gebruikersverhalen
+# Overzicht
 
-Deze verhalen beschrijven hoe **Rene** (liturgiecoördinator in de parochie
-Groningen) en **Nana** (parochie-componist) de **catalogus**-tool gebruiken om
-zangmateriaal te vinden, lokaal toe te voegen, **sjablonen** te vullen tot
-**samenstellingen**, en materiaal te delen via **bron**.
+Deze pagina verzamelt **gebruikersverhalen** over de catalogus-tool. Ze
+beschrijven hoe **Rene** (liturgiecoördinator in de parochie Groningen) en
+**Nana** (parochie-componist) zangmateriaal vinden, lokaal toevoegen,
+**sjablonen** vullen tot **samenstellingen**, en materiaal delen via **bron**.
 
-Ze zijn bedoeld als **userdocumentatie**: leesbaar voor vrijwilligers, bruikbaar
-als basis voor latere handleidingen en GUI-ontwerp.
+De verhalen zijn **voorbeelden** (parochie Groningen), bedoeld als
+userdocumentatie voor vrijwilligers en als basis voor latere handleidingen.
 
 ## Kernworkflow (doelbeeld)
 

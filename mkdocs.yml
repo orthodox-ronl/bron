@@ -49,9 +49,12 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Glossary: glossary.md
+  - Starten:
+    - Overzicht: getting-started/index.md
+  - Terminologie:
+    - Overzicht: glossary.md
   - Specificaties:
-    - specs/index.md
+    - Overzicht: specs/index.md
     - specs/documentatie-eigendom.md
     - specs/terminologie.md
     - specs/zangstuk-identificatie.md
@@ -63,21 +66,21 @@ nav:
     - specs/catalogus-zoek-api.md
     - specs/catalogus-samenstelling-zangstuk.md
   - Handleidingen:
-    - manuals/index.md
+    - Overzicht: manuals/index.md
     - manuals/github-pages-setup.md
     - manuals/zangstuk-toevoegen.md
     - manuals/bronvariant-toevoegen.md
     - manuals/copyright-access.md
     - manuals/parochie-lokaal-zangstukken.md
     - Catalogus:
-      - manuals/catalogus/index.md
+      - Overzicht: manuals/catalogus/index.md
       - manuals/catalogus/sjabloon-schrijven.md
       - manuals/catalogus/rene-liturgie-geboorte-moeder-gods.md
       - manuals/catalogus/rene-cherubijnenhymne-lokaal.md
       - manuals/catalogus/rene-cherubijnenhymne-naar-bron.md
       - manuals/catalogus/rene-cherubijnenhymne-musicxml.md
   - Referentie:
-    - reference/index.md
+    - Overzicht: reference/index.md
     - reference/conversiemechanismen.md
     - reference/conversie-vsa-svg.md
     - reference/conversie-vsa-musicxml.md
@@ -88,9 +91,9 @@ nav:
     - reference/brontypes-validatie.md
     - reference/catalogus-cli.md
   - Plannen:
-    - plans/README.md
+    - Overzicht: plans/README.md
     - Ideeën:
-      - plans/ideeen/README.md
+      - Overzicht: plans/ideeen/README.md
       - plans/ideeen/alias-blokken.md
       - plans/ideeen/tev2-terminologie.md
     - plans/ci-architectuur.md
@@ -111,6 +114,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/orthodox-groningen/bron
       name: bron op GitHub
-    - icon: fontawesome/solid/code
+    - icon: fontawesome/solid/book
+      link: https://orthodox-groningen.github.io/VSA-tooling/
+      name: VSA-tooling — documentatie
+    - icon: fontawesome/solid/globe
       link: https://orthodox-groningen.github.io/VSA-demo/
       name: VSA-demo

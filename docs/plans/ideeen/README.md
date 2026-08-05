@@ -1,4 +1,4 @@
-# Ideeën-backlog
+# Overzicht
 
 Deze map bevat **onsamenhangende ontwikkelideeën** — kort beschreven, met status, als
 basis voor latere realisatie. Net als [andere plannen](../README.md) **niet normatief**.
