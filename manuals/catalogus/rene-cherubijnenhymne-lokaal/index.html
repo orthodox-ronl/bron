@@ -2481,26 +2481,23 @@ met templates); <strong><code>catalogus index validate</code></strong> en <stron
 <p>Rene kopieert Nana's bestand naar <code>repr/nana-partituur.pdf</code> en commit in de
 parochie-repo.</p>
 <h3 id="4-index-valideren">4. Index valideren<a class="headerlink" href="#4-index-valideren" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
-</code></pre></div>
-<p>Geen conflicten → aliassen “Groningen” en “Kastorski” zijn uniek binnen scope.</p>
+<p>Controleer dat er geen conflicterende aliassen zijn
+(<a href="../../../reference/catalogus-cli/">Catalogus CLI</a>).</p>
 <h3 id="5-resolve-testen">5. Resolve testen<a class="headerlink" href="#5-resolve-testen" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>python -m catalogus.cli resolve uitvoeringsvorm --zangstuk cherubijnenhymne --variant kastorski Groningen --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
-</code></pre></div>
-<p>Uitvoer: <code>groningen</code>.</p>
+<p>Los de uitvoeringsvorm-alias “Groningen” op binnen
+<code>cherubijnenhymne</code> / <code>kastorski</code> — verwacht canonieke id <code>groningen</code>
+(<a href="../../../reference/catalogus-cli/">Catalogus CLI — resolve</a>).</p>
 <h3 id="6-gebruik-in-een-sjabloon-of-samenstelling">6. Gebruik in een sjabloon of samenstelling<a class="headerlink" href="#6-gebruik-in-een-sjabloon-of-samenstelling" title="Permanent link">&para;</a></h3>
 <p>In het liturgie-sjabloon (verhaal 1):</p>
 <div class="highlight"><pre><span></span><code>:::include svg zoek=&quot;Cherubijnenhymne (Kastorski)&quot; alt=&quot;Cherubijnenhymne&quot;:::
 </code></pre></div>
 <p>Met <code>default.uitvoeringsvorm: Groningen</code> in de <strong>sessie</strong> (homogene liturgie) of
-disambiguation <code>Cherubijnenhymne (Kastorski)</code> in mixed session. Na
-<strong><code>vsa resolve-catalogus</code></strong>
-(bijv. <code>:::include svg lokaal:cherubijnenhymne/kastorski/groningen:::</code>).</p>
-<div class="highlight"><pre><span></span><code>python -m catalogus.cli zoek &quot;Cherubijnenhymne (Kastorski)&quot; ^
-  --content-root C:\Git\orthodox-groningen\VSA-demo\content-source ^
-  --bron-root C:\Git\orthodox-groningen\bron
-</code></pre></div>
+disambiguation <code>Cherubijnenhymne (Kastorski)</code> in mixed session. Na oplossen van
+<code>zoek=</code> (bijv. <code>:::include svg lokaal:cherubijnenhymne/kastorski/groningen:::</code>) —
+zie
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md"><code>vsa resolve-catalogus</code></a>.</p>
+<p>Zoektest:
+<a href="../../../reference/catalogus-cli/">Catalogus CLI — zoek</a>.</p>
 <hr />
 <h2 id="afspraken-met-nana">Afspraken met Nana<a class="headerlink" href="#afspraken-met-nana" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2540,7 +2537,7 @@ disambiguation <code>Cherubijnenhymne (Kastorski)</code> in mixed session. Na
   
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-02</p>
   
   
 

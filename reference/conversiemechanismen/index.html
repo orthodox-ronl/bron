@@ -2205,13 +2205,13 @@
 
 
 <h1 id="conversiemechanismen">Conversiemechanismen<a class="headerlink" href="#conversiemechanismen" title="Permanent link">&para;</a></h1>
-<p>Referentie voor <strong>conversiemechanismen</strong>: geautomatiseerde tools die brondocumenten
-omzetten naar <strong>afgeleide</strong> bestanden (<code>.svg</code>, <code>.mxl</code>, …).</p>
+<p>Referentie voor <strong>conversiemechanismen</strong>: geautomatiseerde stappen die
+brondocumenten omzetten naar <strong>afgeleide</strong> bestanden (<code>.svg</code>, <code>.mxl</code>, …).</p>
 <p>Conversie is <strong>geen</strong> export: conversie verandert het formaat; export bepaalt hoe
-afgeleide in een samenstelling verschijnen (<a href="../exportcontracten/">Exportcontracten</a>).</p>
-<p>Implementatie:
-<a href="https://github.com/orthodox-groningen/VSA-tooling">VSA-tooling</a>.</p>
-<p>Afgeleide output hoort <strong>niet</strong> in de <code>bron</code>-repository (zie <code>.gitignore</code>).</p>
+afgeleiden in een samenstelling verschijnen (<a href="../exportcontracten/">Exportcontracten</a>).</p>
+<p>Uitvoering gebeurt met <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>
+(<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md">CLI-overzicht</a>).
+Afgeleide output hoort <strong>niet</strong> in de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>.</p>
 <hr />
 <h2 id="conversie-vs-export">Conversie vs. export<a class="headerlink" href="#conversie-vs-export" title="Permanent link">&para;</a></h2>
 <table>
@@ -2226,7 +2226,7 @@ afgeleide in een samenstelling verschijnen (<a href="../exportcontracten/">Expor
 <tr>
 <td>Conversie</td>
 <td>Wat is de afgeleide en hoe maak ik die?</td>
-<td><code>vsa svg lied.vsa lied.svg</code></td>
+<td><code>.vsa</code> → <code>.svg</code> of <code>.mxl</code></td>
 </tr>
 <tr>
 <td>Export</td>
@@ -2243,6 +2243,7 @@ afgeleide in een samenstelling verschijnen (<a href="../exportcontracten/">Expor
 <th>Mechanisme</th>
 <th>Contract</th>
 <th>Output</th>
+<th>CLI</th>
 </tr>
 </thead>
 <tbody>
@@ -2250,11 +2251,13 @@ afgeleide in een samenstelling verschijnen (<a href="../exportcontracten/">Expor
 <td><strong>vsa svg</strong></td>
 <td><a href="../conversie-vsa-svg/">conversie-vsa-svg</a></td>
 <td><code>.svg</code></td>
+<td><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/svg.md">man-page</a></td>
 </tr>
 <tr>
 <td><strong>vsa musicxml</strong></td>
 <td><a href="../conversie-vsa-musicxml/">conversie-vsa-musicxml</a></td>
 <td><code>.mxl</code> / <code>.musicxml</code></td>
+<td><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md">man-page</a></td>
 </tr>
 </tbody>
 </table>
@@ -2266,14 +2269,14 @@ afgeleide in een samenstelling verschijnen (<a href="../exportcontracten/">Expor
   ConvMxl["vsa musicxml"]
   SVG[".svg"]
   MXL[".mxl"]
-  Build["build-markdown / Hugo"]
+  Site["samenstelling / site"]
   VSA --&gt; ConvSvg --&gt; SVG
   VSA --&gt; ConvMxl --&gt; MXL
-  SVG --&gt; Build
-  MXL --&gt; Build</code></pre>
-<p><strong>Huidige stand:</strong> SVG-conversie draait deels <strong>inline</strong> tijdens <code>build-markdown</code>;
-MXL wordt handmatig of in site-build gegenereerd. Expliciete conversiestap vóór
-export is gepland — zie <a href="../../plans/ci-architectuur/">CI-architectuur</a>.</p>
+  SVG --&gt; Site
+  MXL --&gt; Site</code></pre>
+<p><strong>Huidige stand:</strong> SVG-conversie draait deels inline tijdens document-build;
+MXL wordt handmatig of in de site-build gegenereerd. Een expliciete conversiestap
+vóór export is gepland — zie <a href="../../plans/ci-architectuur/">CI-architectuur</a>.</p>
 <hr />
 <h2 id="toekomstige-conversies">Toekomstige conversies<a class="headerlink" href="#toekomstige-conversies" title="Permanent link">&para;</a></h2>
 <table>
@@ -2300,14 +2303,14 @@ export is gepland — zie <a href="../../plans/ci-architectuur/">CI-architectuur
 </tr>
 </tbody>
 </table>
-<p>Nieuwe mechanismen krijgen een volledig contract (zelfde diepte als bestaande)
-<strong>vóór</strong> opname in CI.</p>
+<p>Nieuwe mechanismen krijgen een volledig org-contract <strong>vóór</strong> opname in CI.</p>
 <hr />
 <h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../exportcontracten/">Exportcontracten</a></li>
 <li><a href="../../specs/inhoudslevenscyclus/">Inhoudslevenscyclus</a> Deel 2</li>
 <li><a href="../../specs/schrijfconventies/">Schrijfconventies</a></li>
+<li><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md">VSA CLI-overzicht</a></li>
 </ul>
 
 
@@ -2328,7 +2331,7 @@ export is gepland — zie <a href="../../plans/ci-architectuur/">CI-architectuur
   
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-06-27</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-02</p>
   
   
 

@@ -1518,10 +1518,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#huidige-implementatie" class="md-nav__link">
+  <a href="#status-van-de-syntax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Huidige implementatie
+        Status van de syntax
       
     </span>
   </a>
@@ -2186,10 +2186,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#huidige-implementatie" class="md-nav__link">
+  <a href="#status-van-de-syntax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Huidige implementatie
+        Status van de syntax
       
     </span>
   </a>
@@ -2261,15 +2261,14 @@
 
 
 <h1 id="exportcontracten">Exportcontracten<a class="headerlink" href="#exportcontracten" title="Permanent link">&para;</a></h1>
-<p>Referentie voor <strong>exportmechanismen</strong>: hoe afgeleide (of handmatige siblings) in een
-<strong>samenstelling</strong> (Markdown-bundel voor parochie-uitgave) worden ontsloten.</p>
-<p>Export is <strong>geen</strong> conversie: export verwijst naar reeds gegenereerde afgeleide
+<p>Referentie voor <strong>exportmechanismen</strong>: hoe afgeleiden (of handmatige siblings) in
+een <strong>samenstelling</strong> (Markdown-bundel voor parochie-uitgave) worden ontsloten.</p>
+<p>Export is <strong>geen</strong> conversie: export verwijst naar reeds gemaakte afgeleiden
 (bijv. <code>.svg</code>, <code>.mxl</code>) of naar handmatige siblings (<code>.coria.html</code>). Conversie
-(<code>vsa svg</code>, <code>vsa musicxml</code>) staat beschreven in
-<a href="../conversiemechanismen/">Conversiemechanismen</a>.</p>
-<p>Authoring-syntax wordt geïmplementeerd in
+staat in <a href="../conversiemechanismen/">Conversiemechanismen</a>.</p>
+<p>Authoring-directives worden uitgevoerd door
 <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md">VSA-tooling</a>;
-<strong>normatieve contracten</strong> staan op deze pagina’s.</p>
+<strong>normatieve contracten</strong> (wat/wanneer) staan op deze pagina’s.</p>
 <hr />
 <h2 id="export-vs-conversie">Export vs. conversie<a class="headerlink" href="#export-vs-conversie" title="Permanent link">&para;</a></h2>
 <table>
@@ -2284,7 +2283,7 @@
 <tr>
 <td><strong>Conversie</strong></td>
 <td>Hoe maak ik afgeleide uit <code>.vsa</code>?</td>
-<td><code>vsa svg lied.vsa lied.svg</code></td>
+<td>Zie <a href="../conversiemechanismen/">conversiemechanismen</a></td>
 </tr>
 <tr>
 <td><strong>Export</strong></td>
@@ -2293,8 +2292,8 @@
 </tr>
 </tbody>
 </table>
-<p>Eén <code>.vsa</code>-bron kan meerdere exporttypes tegelijk hebben (SVG embed + Coria-link +
-MXL-download).</p>
+<p>Eén <code>.vsa</code>-bron kan meerdere exporttypes tegelijk hebben (SVG embed + Coria-link
++ MXL-download).</p>
 <hr />
 <h2 id="geregistreerde-exporttypes">Geregistreerde exporttypes<a class="headerlink" href="#geregistreerde-exporttypes" title="Permanent link">&para;</a></h2>
 <table>
@@ -2330,16 +2329,19 @@ MXL-download).</p>
 :::include coria &quot;pad/melodie.vsa&quot; label=&quot;Oefenen in Coria&quot; mode=&quot;auto&quot;:::
 :::include mxl &quot;pad/melodie.vsa&quot; label=&quot;Download MusicXML&quot;:::
 </code></pre></div>
-<p><strong>Catalogus-zoek (sjabloon/sessie)</strong> — <code>zoek=</code> tot <strong><code>vsa resolve-catalogus</code></strong> is gedraaid;
-daarna catalogus-pad:</p>
+<p><strong>Catalogus-zoek (sjabloon/sessie)</strong> — <code>zoek=</code> tot resolve is gedraaid; daarna
+catalogus-pad:</p>
 <div class="highlight"><pre><span></span><code>:::include svg zoek=&quot;Troparion&quot; alt=&quot;Troparion&quot; scale=&quot;85%&quot;:::
 :::include coria zoek=&quot;Troparion&quot; label=&quot;Oefenen in Coria&quot; mode=&quot;auto&quot;:::
 </code></pre></div>
-<p>Zie <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>,
-<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus">VSA — <code>:::include</code> met <code>zoek=</code></a>.</p>
-<p><strong>Beperking:</strong> <code>coria</code> / <code>mxl</code> op <strong><code>bron:</code></strong> catalogus-pad — <code>.vsa</code> ligt vaak buiten
-content-root; <strong>svg</strong> op <code>bron:</code> werkt wel.</p>
-<h3 id="huidige-implementatie">Huidige implementatie<a class="headerlink" href="#huidige-implementatie" title="Permanent link">&para;</a></h3>
+<p>Zie <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>
+en
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus">parochie-lokaal VSA (<code>zoek=</code>)</a>.
+Resolve-commando:
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md">CLI <code>vsa resolve-catalogus</code></a>.</p>
+<p><strong>Beperking:</strong> <code>coria</code> / <code>mxl</code> op een <strong><code>bron:</code></strong> catalogus-pad — het <code>.vsa</code> ligt
+vaak buiten de content-root; <strong>svg</strong> op <code>bron:</code> werkt wel.</p>
+<h3 id="status-van-de-syntax">Status van de syntax<a class="headerlink" href="#status-van-de-syntax" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2352,7 +2354,7 @@ content-root; <strong>svg</strong> op <code>bron:</code> werkt wel.</p>
 <tr>
 <td><code>:::include "melodie.vsa"</code> (zonder exporttype)</td>
 <td><strong>Geïmplementeerd</strong></td>
-<td>Wrapt als <code>::: vsa-notatie</code>; SVG inline bij build</td>
+<td>Wordt als VSA-blok naar SVG gerenderd</td>
 </tr>
 <tr>
 <td><code>:::coria "melodie.vsa"</code></td>
@@ -2367,7 +2369,7 @@ content-root; <strong>svg</strong> op <code>bron:</code> werkt wel.</p>
 <tr>
 <td><code>:::include &lt;type&gt; zoek="…"</code></td>
 <td><strong>Geïmplementeerd</strong></td>
-<td>Resolve via <code>vsa resolve-catalogus</code> vóór build</td>
+<td>Resolve vóór build</td>
 </tr>
 <tr>
 <td><code>coria</code> / <code>mxl</code> op <code>bron:</code> catalogus-pad</td>
@@ -2381,12 +2383,10 @@ content-root; <strong>svg</strong> op <code>bron:</code> werkt wel.</p>
 </tr>
 </tbody>
 </table>
-<p>Voor open <code>zoek=</code>: <strong><code>vsa resolve-catalogus</code></strong> of handmatig <strong><code>bron:…</code></strong> / <strong><code>lokaal:…</code></strong>.
-Zie <a href="../exporttype-coria/">exporttype-coria</a> voor Coria-details.</p>
 <hr />
 <h2 id="uitgaveprofielen">Uitgaveprofielen<a class="headerlink" href="#uitgaveprofielen" title="Permanent link">&para;</a></h2>
-<p>Profielen zijn <strong>geen</strong> aparte pipelines. Eén samenstelling; export en CSS bepalen
-wat zichtbaar is.</p>
+<p>Profielen zijn <strong>geen</strong> aparte pipelines. Eén samenstelling; export en CSS
+bepalen wat zichtbaar is.</p>
 <table>
 <thead>
 <tr>
@@ -2399,17 +2399,17 @@ wat zichtbaar is.</p>
 <tr>
 <td><strong>Afdruk</strong></td>
 <td>svg, <code>keep-together</code>, <code>@media print</code></td>
-<td><code>vsa svg</code></td>
+<td>svg</td>
 </tr>
 <tr>
 <td><strong>Online</strong></td>
 <td>svg, coria, <code>web-only</code></td>
-<td><code>vsa svg</code>, evt. <code>vsa musicxml</code></td>
+<td>svg, eventueel musicxml</td>
 </tr>
 <tr>
 <td><strong>Bewerking</strong></td>
 <td>mxl-download</td>
-<td><code>vsa musicxml</code></td>
+<td>musicxml</td>
 </tr>
 </tbody>
 </table>
@@ -2430,13 +2430,14 @@ wat zichtbaar is.</p>
 </tr>
 </tbody>
 </table>
-<p>In de bron-repo primair VSA + scans; Coria-HTML kan in parochie-build content voorkomen.</p>
+<p>In de bron-repo primair VSA + scans; Coria-HTML kan in parochie-content voorkomen.</p>
 <hr />
 <h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../conversiemechanismen/">Conversiemechanismen</a></li>
 <li><a href="../../specs/schrijfconventies/">Schrijfconventies</a></li>
-<li><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md">VSA — document samenstellen</a></li>
+<li><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md">VSA — directives</a></li>
+<li><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md">VSA CLI-overzicht</a></li>
 </ul>
 
 
@@ -2457,7 +2458,7 @@ wat zichtbaar is.</p>
   
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-02</p>
   
   
 

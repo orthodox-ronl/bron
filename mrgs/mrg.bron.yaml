@@ -422,13 +422,13 @@ entries:
       - "zie-ook:"
     termid: "concept:vsa-notatie"
     vsntag: "bron"
-  - git_date: 2026-08-01T00:00:00.000Z
+  - git_date: 2026-08-02T00:00:00.000Z
     term: "vsa-tooling"
     termType: "concept"
     glossaryTerm: "VSA-tooling"
     glossaryText: "De Python-toolchain (`vsa` CLI) waarmee [vsa-notatie](@)-bestanden worden geparseerd, gevalideerd en omgezet naar [afgeleiden](@) zoals SVG en MusicXML."
     glossaryNotes:
-      - "De `vsa`-CLI biedt subcommando's voor validatie (`vsa validate`), rendering (`vsa svg`) en export (`vsa musicxml`)."
+      - "De `vsa`-CLI biedt subcommando's voor validatie, rendering en export; zie de [CLI-referentie](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)."
       - "VSA-tooling genereert [afgeleiden](@) uit [bronbestanden](@); de [afgeleiden](@) zelf worden niet in de [bron-repository](@) opgeslagen."
       - "De tooling bevindt zich in de repo [orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)."
     formPhrases:
@@ -440,10 +440,10 @@ entries:
     navurl: "https://orthodox-groningen.github.io/bron/terms/vsa-tooling"
     headingids:
       - "vsa-tooling"
-      - "subcommando's"
-      - "installatie"
+      - "wat-je-ermee-doet"
+      - "installatie-(kort)"
       - "motivatie"
-      - "zie-ook:"
+      - "zie-ook"
     termid: "concept:vsa-tooling"
     vsntag: "bron"
   - git_date: 2026-07-06T00:00:00.000Z

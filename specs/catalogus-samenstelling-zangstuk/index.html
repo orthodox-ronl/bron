@@ -2813,10 +2813,13 @@ faalt bij build zolang het <code>.vsa</code> <strong>buiten</strong> <code>--con
 <ol>
 <li>Rene kopieert <strong>sjabloon</strong> → sessie-bestand; vult <strong><code>default.gelegenheid</code></strong> (en evt. <code>toon</code>).</li>
 <li>Sjabloon bevat al <code>:::include … zoek="…"</code> en vrije tekst ertussen.</li>
-<li><strong><code>catalogus index validate</code></strong> — index in orde.</li>
-<li><strong><code>vsa resolve-catalogus</code></strong> — alle <code>zoek=</code> → catalogus-pad; review bij ambiguïteit.</li>
-<li><strong><code>vsa validate</code></strong> / <strong><code>vsa build-markdown</code></strong> — alleen op <strong>opgelost</strong> bestand.</li>
-<li>Hugo / export.</li>
+<li>Catalogus-index controleren (<a href="../../reference/catalogus-cli/">Catalogus CLI</a>).</li>
+<li>Alle <code>zoek=</code> oplossen tot catalogus-pad; review bij ambiguïteit
+   (<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md"><code>vsa resolve-catalogus</code></a>).</li>
+<li>Valideren / bouwen — alleen op <strong>opgelost</strong> bestand
+   (<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md"><code>vsa validate</code></a>,
+   <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/build-markdown.md"><code>vsa build-markdown</code></a>).</li>
+<li>Site / export.</li>
 </ol>
 <pre class="mermaid"><code>sequenceDiagram
   participant Rene
@@ -2831,7 +2834,8 @@ faalt bij build zolang het <code>.vsa</code> <strong>buiten</strong> <code>--con
   VSA--&gt;&gt;Rene: sessie-opgelost.md
   Rene-&gt;&gt;Build: build (geen zoek= meer)
   Build--&gt;&gt;Rene: site / export</code></pre>
-<p><strong>Harde regel:</strong> <code>vsa build-markdown</code> met nog open <code>zoek=</code> → <strong>fout</strong> (geen stille fallback).</p>
+<p><strong>Harde regel:</strong> document-build (<code>vsa build-markdown</code>) met nog open <code>zoek=</code> → <strong>fout</strong>
+(geen stille fallback).</p>
 <hr />
 <h2 id="verouderd-zangstuk">Verouderd: <code>:::zangstuk</code><a class="headerlink" href="#verouderd-zangstuk" title="Permanent link">&para;</a></h2>
 <p>Eerdere ontwerpen gebruikten een aparte directive <code>:::zangstuk</code> met yaml <code>zoek:</code>.
@@ -2936,7 +2940,7 @@ exportkeuzes (svg, coria, …) vanaf het begin.</p>
   
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-02</p>
   
   
 

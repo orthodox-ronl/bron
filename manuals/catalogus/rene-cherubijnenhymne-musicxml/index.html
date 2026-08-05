@@ -2455,27 +2455,29 @@ Nog <strong>gepland</strong>: GUI voor representatie toevoegen, <strong>handmati
 <p><strong>Niet</strong> committen: MXL gegenereerd met <code>vsa musicxml</code> — die hoort bij build-time
 (<a href="../../../reference/conversie-vsa-musicxml/">conversie vsa musicxml</a>).</p>
 <h3 id="3-catalogus-representatie-id">3. Catalogus — representatie-id<a class="headerlink" href="#3-catalogus-representatie-id" title="Permanent link">&para;</a></h3>
-<p>Als Rene “mxl” of “MusicXML Groningen” als alias wil gebruiken:</p>
-<div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli resolve representatie --zangstuk cherubijnenhymne --variant kastorski --uitvoeringsvorm groningen groningen-mxl --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
-</code></pre></div>
-<p>(Canoniek id-passthrough als alias nog niet geregistreerd.)</p>
+<p>Als Rene “mxl” of “MusicXML Groningen” als alias wil gebruiken, lost hij die
+op via de catalogus
+(<a href="../../../reference/catalogus-cli/">Catalogus CLI — resolve representatie</a>).</p>
 <h3 id="4-opnemen-in-sjabloon-samenstelling">4. Opnemen in sjabloon / samenstelling<a class="headerlink" href="#4-opnemen-in-sjabloon-samenstelling" title="Permanent link">&para;</a></h3>
 <p>In het sjabloon (verhaal 1) blijven de includes met <strong><code>zoek=</code></strong>:</p>
 <div class="highlight"><pre><span></span><code>:::include svg zoek=&quot;Cherubijnenhymne (Kastorski)&quot; alt=&quot;Cherubijnenhymne&quot;:::
 :::include mxl zoek=&quot;Cherubijnenhymne (Kastorski)&quot; label=&quot;Download partituur (MusicXML)&quot;:::
 </code></pre></div>
-<p><strong>Na </strong><code>vsa resolve-catalogus</code>** (parochie-lokaal, MXL als sibling van <code>.vsa</code>):</p>
+<p><strong>Na oplossen</strong> (parochie-lokaal, MXL als sibling van <code>.vsa</code>):</p>
 <div class="highlight"><pre><span></span><code><span class="gu">## Cherubijnenhymne</span>
 
 :::include svg lokaal:cherubijnenhymne/kastorski/groningen alt=&quot;Cherubijnenhymne&quot;:::
 :::include mxl lokaal:cherubijnenhymne/kastorski/groningen label=&quot;Download partituur (MusicXML)&quot;:::
 </code></pre></div>
-<p><strong>Beperking:</strong> <code>mxl</code> / <code>coria</code> op <strong><code>bron:</code></strong> catalogus-pad — <code>.vsa</code> buiten content-root.
-Handmatig MXL in repo blijft geldig; build levert download-URL naar static.</p>
+<p>Resolve:
+<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md"><code>vsa resolve-catalogus</code></a>.</p>
+<p><strong>Beperking:</strong> <code>mxl</code> / <code>coria</code> op <strong><code>bron:</code></strong> catalogus-pad — <code>.vsa</code> buiten
+content-root. Handmatig MXL in repo blijft geldig; de build levert een
+download-URL naar static.</p>
 <p>Build-time generatie blijft gescheiden: de site levert een <strong>download-URL</strong> naar
-het <strong>bron</strong>-bestand; <code>vsa musicxml</code> draait niet in de Hugo-build voor dit
-handmatige MXL.</p>
+het <strong>bron</strong>-bestand; automatische MXL uit VSA
+(<a href="../../../reference/conversie-vsa-musicxml/">conversie vsa musicxml</a>) is iets
+anders dan Nana's handmatige export.</p>
 <h3 id="5-delen-met-koorleden">5. Delen met koorleden<a class="headerlink" href="#5-delen-met-koorleden" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2500,8 +2502,8 @@ handmatige MXL.</p>
 </tbody>
 </table>
 <h3 id="6-validatie">6. Validatie<a class="headerlink" href="#6-validatie" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>python -m catalogus.cli index validate --bron-root C:\Git\orthodox-groningen\bron --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
-</code></pre></div>
+<p>Index controleren:
+<a href="../../../reference/catalogus-cli/">Catalogus CLI</a>.</p>
 <hr />
 <h2 id="verschil-met-vsa-afgeleide-mxl">Verschil met VSA-afgeleide MXL<a class="headerlink" href="#verschil-met-vsa-afgeleide-mxl" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>flowchart LR
@@ -2548,7 +2550,7 @@ representaties, één uitvoeringsvorm.</p>
   
   
   
-  <p class="page-git-date">Bijgewerkt: 2026-08-01</p>
+  <p class="page-git-date">Bijgewerkt: 2026-08-02</p>
   
   
 
