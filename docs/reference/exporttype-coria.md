@@ -3,13 +3,17 @@
 Contract voor het **coria**-exporttype: link of ingebedde speler naar
 [Coria](https://coria.nl) voor online oefenen.
 
+Technische build-details (shortcodes, static-mappen): zie
+[MusicXML exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)
+(sectie Coria) en de directives-specificatie in VSA-tooling.
+
 ---
 
 ## Samenvatting
 
 Exporttype **coria** voegt een knop of link toe waarmee de lezer de melodie in
-Coria kan openen — met vooraf gekozen partij (Coria-HTML sibling) of via MusicXML
-deep-link (`play_from_url`). De `.vsa`-bron moet bestaan; MXL of HTML moet
+Coria kan openen — met vooraf gekozen partij (Coria-HTML sibling) of via een
+MusicXML deep-link. Het [vsa-bestand](@) moet bestaan; MXL of HTML moet
 bereikbaar zijn op de gepubliceerde site.
 
 ---
@@ -19,26 +23,25 @@ bereikbaar zijn op de gepubliceerde site.
 - **Online oefenen** tijdens repetitie of thuis
 - Partij al vastgelegd in Coria-export (HTML-modus)
 - Fallback naar MXL wanneer geen handmatige Coria-HTML beschikbaar is
-- **Niet:** afdrukken (verberg via CSS `.coria-play` of `web-only`)
+- **Niet:** afdrukken (verberg via CSS of `web-only`)
 
 ---
 
 ## Authoring
 
-### Doelsyntax (gepland)
+### Doelsyntax
 
 ```markdown
 :::include coria "praktijk/zondagen/tropaar-zondag-toon-3.vsa" label="Oefenen in Coria" mode="auto":::
 ```
 
-### Huidige equivalent (geïmplementeerd)
+### Huidige equivalent
 
 ```markdown
 :::coria "praktijk/zondagen/tropaar-zondag-toon-3.vsa" label="Oefenen in Coria" mode="auto":::
 ```
 
-`:::coria` en `:::include coria` zijn functioneel gelijk zodra de alias is
-geïmplementeerd.
+`:::coria` en `:::include coria` zijn functioneel gelijk.
 
 ### Handmatige sibling (optioneel)
 
@@ -47,8 +50,8 @@ praktijk/zondagen/tropaar-zondag-toon-3.vsa
 praktijk/zondagen/tropaar-zondag-toon-3.coria.html
 ```
 
-Exporteer `.coria.html` vanuit Coria na partijkeuze; build kopieert naar
-`static/coria/…/tropaar-zondag-toon-3.html`.
+Exporteer `.coria.html` vanuit Coria na partijkeuze. De site-build plaatst die
+naast de gepubliceerde assets (details in tooling).
 
 ---
 
@@ -56,36 +59,35 @@ Exporteer `.coria.html` vanuit Coria na partijkeuze; build kopieert naar
 
 ### `pad` (eerste argument)
 
-| Veld                   | Waarde                                                               |
-| ---------------------- | -------------------------------------------------------------------- |
-| **Verplicht?**         | Ja                                                                   |
-| **Type**               | Relatief pad naar `.vsa`                                             |
-| **Doel**               | Anker voor sibling `{stem}.coria.html` en MXL-URL-afleiding          |
-| **Toegestane waarden** | Bestaand `.vsa`-bestand onder content-root                           |
-| **Verboden**           | Ontbrekend bestand, geen `.vsa`-extensie, pad buiten content-root   |
-| **Effect**             | Bepaalt URL-paden `/coria/…` of `/vsa/mxl/…`                         |
-| **Voorbeeld ongeldig** | `"ontbreekt.vsa"` → `CoriaDirectiveError: VSA-bestand niet gevonden` |
+| Veld                   | Waarde                                                      |
+| ---------------------- | ----------------------------------------------------------- |
+| **Verplicht?**         | Ja                                                          |
+| **Type**               | Relatief pad naar `.vsa`                                    |
+| **Doel**               | Anker voor sibling `{stem}.coria.html` en MXL-URL-afleiding |
+| **Toegestane waarden** | Bestaand `.vsa` onder de content-root                       |
+| **Verboden**           | Ontbrekend bestand, geen `.vsa`-extensie, pad buiten root   |
+| **Effect**             | Bepaalt welke Coria- of MXL-URL wordt gebruikt              |
+| **Voorbeeld ongeldig** | `"ontbreekt.vsa"` → VSA-bestand niet gevonden               |
 
 ### `label`
 
-| Veld                   | Waarde                                                |
-| ---------------------- | ----------------------------------------------------- |
-| **Verplicht?**         | Nee                                                   |
-| **Type**               | String: `label="…"`                                   |
-| **Standaard**          | `"Oefenen in Coria"`                                  |
-| **Doel**               | Zichtbare linktekst op de pagina                      |
-| **Toegestane waarden** | Willekeurige tekst                                    |
-| **Effect**             | Doorgegeven aan Hugo shortcode `coria` / `coria-html` |
-| **Voorbeeld**          | `label="Tropaar oefenen (Toon 3)"`                    |
+| Veld                   | Waarde                             |
+| ---------------------- | ---------------------------------- |
+| **Verplicht?**         | Nee                                |
+| **Type**               | String: `label="…"`                |
+| **Standaard**          | `"Oefenen in Coria"`               |
+| **Doel**               | Zichtbare linktekst op de pagina   |
+| **Toegestane waarden** | Willekeurige tekst                 |
+| **Voorbeeld**          | `label="Tropaar oefenen (Toon 3)"` |
 
 ### `mode`
 
-| Veld           | Waarde                                            |
-| -------------- | ------------------------------------------------- |
-| **Verplicht?** | Nee                                               |
-| **Type**       | Enum: `auto`, `html`, `mxl`                       |
-| **Standaard**  | `auto`                                            |
-| **Doel**       | Kiezen tussen Coria-HTML sibling en MXL deep-link |
+| Veld           | Waarde                      |
+| -------------- | --------------------------- |
+| **Verplicht?** | Nee                         |
+| **Type**       | Enum: `auto`, `html`, `mxl` |
+| **Standaard**  | `auto`                      |
+| **Doel**       | Coria-HTML sibling of MXL   |
 
 #### Waarden `mode`
 
@@ -93,75 +95,54 @@ Exporteer `.coria.html` vanuit Coria na partijkeuze; build kopieert naar
 | ------ | ------------------------------------------------ | ------------------------------------------------- |
 | `auto` | HTML als `{stem}.coria.html` bestaat, anders MXL | Standaard; minste configuratie                    |
 | `html` | Alleen Coria-HTML                                | Partij moet vast staan; geen MXL-fallback gewenst |
-| `mxl`  | Alleen MXL-URL via Coria `play_from_url`         | Geen HTML-sibling; MXL gepubliceerd               |
+| `mxl`  | Alleen MXL via Coria `play_from_url`             | Geen HTML-sibling; MXL is gepubliceerd            |
 
-| Waarde     | Verboden / fout                                             |
-| ---------- | ----------------------------------------------------------- |
-| `html`     | Geen sibling → `ContentAssetError: Geen Coria-HTML naast …` |
-| `mxl`      | MXL niet op site → 404 in Coria (runtime)                   |
-| `onbekend` | `CoriaDirectiveError: Onbekende coria mode`                 |
-
-**Effect in HTML:**
-
-- HTML-modus → shortcode `{{< coria-html src="/coria/…" >}}`
-- MXL-modus → shortcode `{{< coria src="/vsa/mxl/…" >}}`
+| Waarde     | Verboden / fout                                    |
+| ---------- | -------------------------------------------------- |
+| `html`     | Geen sibling → fout: geen Coria-HTML naast het VSA |
+| `mxl`      | MXL niet op site → 404 in Coria (runtime)          |
+| `onbekend` | Onbekende mode                                     |
 
 ---
 
 ## Inputs
 
-| Input                       | Vereist?     | Opmerking                                                      |
-| --------------------------- | ------------ | -------------------------------------------------------------- |
-| `.vsa`                      | Ja           | Moet bestaan; wordt **niet** opnieuw gevalideerd in coria-pass |
-| `{stem}.coria.html`         | Conditioneel | Voor `mode=html` of `auto` met sibling                         |
-| `.mxl` op gepubliceerde URL | Conditioneel | Voor `mode=mxl` of `auto` zonder sibling                       |
+| Input                       | Vereist?     | Opmerking                                                    |
+| --------------------------- | ------------ | ------------------------------------------------------------ |
+| `.vsa`                      | Ja           | Wordt in de coria-pass niet opnieuw semantisch gevalideerd   |
+| `{stem}.coria.html`         | Conditioneel | Voor `mode=html` of `auto` met sibling                       |
+| `.mxl` op gepubliceerde URL | Conditioneel | Voor `mode=mxl` of `auto` zonder sibling                     |
 
-MXL wordt **niet** tijdens coria-resolve gegenereerd; conversie
-([conversie-vsa-musicxml](conversie-vsa-musicxml.md)) moet eerder gedraaid hebben
-en build moet MXL naar static kopiëren (deels gepland).
+MXL wordt **niet** tijdens coria-export gegenereerd; conversie
+([conversie-vsa-musicxml](conversie-vsa-musicxml.md)) moet eerder gedraaid hebben.
 
----
-
-## Validatie vóór export
-
-| Check                        | Moment        | Blokkeert?                              |
-| ---------------------------- | ------------- | --------------------------------------- |
-| `.vsa` bestaat               | coria-resolve | Ja                                      |
-| `.vsa` onder content-root    | pad-resolve   | Ja — `Bestand ligt buiten content-root` |
-
-**Catalogus-pad `bron:`:** na **`vsa resolve-catalogus`** wijst de include naar een `.vsa` in
-org-bron (buiten parochie `--content-root`). Coria-export faalt dan bij build; **svg** op
-hetzelfde catalogus-pad werkt wel. Zie [catalogus-samenstelling-zangstuk](../specs/catalogus-samenstelling-zangstuk.md).
-| `mode=html` + sibling        | coria-resolve | Ja                                      |
-| VSA-inhoud semantisch geldig | —             | **Nee** in huidige coria-pass           |
-| MXL bereikbaar               | runtime       | Nee bij build; wel 404 voor gebruiker   |
+**Catalogus-pad `bron:`:** na resolve wijst de include naar een `.vsa` in
+org-bron (vaak buiten de parochie-content-root). Coria-export faalt dan bij
+build; **svg** op hetzelfde catalogus-pad werkt wel. Zie
+[catalogus-samenstelling-zangstuk](../specs/catalogus-samenstelling-zangstuk.md).
 
 ---
 
-## Build-gedrag
+## Validatie (bedoeling)
 
-1. **Include-resolutie** (vóór coria)
-2. **Coria-resolve** — `resolve_coria_directives` → Hugo shortcode
-3. Bij HTML: kopieer `.coria.html` naar `static/coria/…`
-4. Hugo rendert shortcode naar Coria-link/speler
-
-URL-prefixen (defaults):
-
-| Asset      | Default prefix |
-| ---------- | -------------- |
-| MXL        | `/vsa/mxl`     |
-| Coria HTML | `/coria`       |
+| Check                     | Blokkeert build? | Toelichting                |
+| ------------------------- | ---------------- | -------------------------- |
+| `.vsa` bestaat            | Ja               | Pad moet kloppen           |
+| `.vsa` onder content-root | Ja (parochie)    | Beperking bij `bron:`-pad  |
+| `mode=html` + sibling     | Ja               | Sibling verplicht          |
+| VSA semantisch geldig     | Nee (huidig)     | Niet opnieuw in coria-pass |
+| MXL bereikbaar            | Nee bij build    | Wel 404 voor de gebruiker  |
 
 ---
 
-## Output
+## Wat de eindgebruiker ziet
 
-| Modus | Eindgebruiker                               |
-| ----- | ------------------------------------------- |
-| HTML  | Opent statische Coria-export (partij vast)  |
-| MXL   | Opent Coria met `play_from_url` naar `.mxl` |
+| Modus | Resultaat                                      |
+| ----- | ---------------------------------------------- |
+| HTML  | Opent statische Coria-export (partij vast)     |
+| MXL   | Opent Coria met deep-link naar `.mxl`          |
 
-Verberg op afdruk: CSS class `.coria-play` of plaats directive in `:::web-only`.
+Verberg op afdruk: CSS class `.coria-play` of plaats de directive in `:::web-only`.
 
 ---
 
@@ -174,23 +155,21 @@ Verberg op afdruk: CSS class `.coria-play` of plaats directive in `:::web-only`.
 
 ---
 
-## Fouten en oplossingen
+## Veelvoorkomende problemen (betekenis)
 
-| Melding                     | Oorzaak                             | Oplossing                                  |
-| --------------------------- | ----------------------------------- | ------------------------------------------ |
-| `VSA-bestand niet gevonden` | Pad typo                            | Pad t.o.v. `.md` corrigeren                |
-| `Geen Coria-HTML naast …`   | `mode=html` zonder sibling          | Sibling toevoegen of `mode=auto`/`mxl`     |
-| `Onbekende coria mode`      | Typo in mode                        | `auto`, `html`, of `mxl`                   |
-| Coria 404 op MXL            | MXL niet gepubliceerd               | `vsa musicxml` + static deploy             |
-| Lege speler                 | Verkeerde URL-prefix in site-config | Hugo `baseURL` en static-paden controleren |
+| Situatie                  | Typische oorzaak                    | Richting oplossing                           |
+| ------------------------- | ----------------------------------- | -------------------------------------------- |
+| VSA-bestand niet gevonden | Pad-typo                            | Pad t.o.v. `.md` corrigeren                  |
+| Geen Coria-HTML naast …   | `mode=html` zonder sibling          | Sibling toevoegen of `mode=auto` / `mxl`     |
+| Onbekende mode            | Typo                                | `auto`, `html`, of `mxl`                     |
+| Coria 404 op MXL          | MXL niet gepubliceerd               | `vsa musicxml` + static deploy (zie CLI)     |
 
 ---
 
 ## Open punten (TBD)
 
-- `:::include coria` alias in `markdown_include.py`
 - Automatisch MXL kopiëren naar static in alle builds
-- VSA re-validatie optioneel vóór Coria-export
+- Optionele VSA re-validatie vóór Coria-export
 - Documentatie Coria-licentie / parochie-instellingen
 
 ---
@@ -199,4 +178,5 @@ Verberg op afdruk: CSS class `.coria-play` of plaats directive in `:::web-only`.
 
 - [Conversie vsa musicxml](conversie-vsa-musicxml.md)
 - [Exporttype mxl](exporttype-mxl.md)
-- [MusicXML-export (VSA-tooling)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)
+- [Guide: MusicXML / Coria](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)
+- [CLI: `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md)

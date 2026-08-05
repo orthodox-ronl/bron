@@ -46,15 +46,15 @@ kandidaten teruggeeft (review).
 
 1. **Sjabloon kiezen** — *Goddelijke liturgie — parochie Groningen*.
 2. **Sessie aanmaken** — Rene vult **`default.gelegenheid`**, `toon`, titel.
-3. **`vsa resolve-catalogus`** — elke `zoek=` + `default.*` → catalogus-pad.
+3. **Zoekopdrachten oplossen** — elke `zoek=` + `default.*` → catalogus-pad.
 4. **Review** — alleen bij ambiguïteit.
 5. **Tekst aanpassen** — markdown tussen includes blijft van Rene.
-6. **Build** — `vsa validate` / `vsa build-markdown` op **opgelost** bestand.
-7. **Opslaan** — `content-source/samenstellingen/geboorte-moeder-gods-2026.md`.
+6. **Build** — opgelost bestand valideren en publiceren.
+7. **Opslaan** — bijv. onder `samenstellingen/` in de parochie-content.
 
 !!! note "GUI"
-    Stappen 1–2 en 4 zijn in een **grafische catalogus** nog **gepland**. Stappen 3,
-    5–6 werken vandaag via CLI (zie hieronder).
+    Stappen 1–2 en 4 zijn in een **grafische catalogus** nog **gepland**. Stappen 3
+    en 5–6 werken vandaag via CLI (links hieronder).
 
 ---
 
@@ -125,40 +125,24 @@ Na **`vsa resolve-catalogus`**:
 
 ---
 
-## Wat Rene vandaag doet (CLI)
+## Wat Rene vandaag doet (stap voor stap)
 
-Demo-sessie:
-`VSA-demo/content-source/praktijk/samenstellingen/geboorte-moeder-gods-2026.md`.
+Voorbeeld-sessie in de demo: `praktijk/samenstellingen/geboorte-moeder-gods-2026.md`
+onder de VSA-demo content-source.
 
-### 1. Index valideren
+1. **Index controleren** — zodat bron én lokaal in de catalogus staan.
+   Exacte aanroep: [Catalogus CLI](../../reference/catalogus-cli.md).
+2. **Zoekregels proberen** — bijv. `Troparion` met
+   `default.gelegenheid: geboorte-moeder-gods`, en
+   `Cherubijnenhymne (Kastorski)`. Bij meerdere treffers: lijst bekijken of
+   `zoek=` / `default.*` aanscherpen ([Catalogus CLI — zoek](../../reference/catalogus-cli.md)).
+3. **Includes oplossen** — `zoek=` → `bron:…` / `lokaal:…`
+   ([`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md)).
+4. **Valideren** van de content-source
+   ([`vsa validate`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md)).
 
-```cmd
-cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
-```
-
-### 2. Zoekregels testen
-
-```cmd
-python -m catalogus.cli zoek "Troparion" ^
-  --bron-root . ^
-  --content-root ..\VSA-demo\content-source ^
-  --default-gelegenheid geboorte-moeder-gods
-
-python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
-  --content-root ..\VSA-demo\content-source ^
-  --bron-root .
-```
-
-Bij **`AmbiguousError`**: `--lijst` of verfijn `zoek=` / `default.*`.
-
-### 3. Resolve en valideren
-
-```cmd
-cd /d C:\Git\orthodox-groningen\VSA-demo
-vsa resolve-catalogus content-source\praktijk\samenstellingen\geboorte-moeder-gods-2026.md --content-root content-source --bron-root ..\bron
-vsa validate content-source
-```
+Workflow-overzicht:
+[parochie-lokaal VSA](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md).
 
 ---
 

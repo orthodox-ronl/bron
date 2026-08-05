@@ -1,16 +1,15 @@
 # Exportcontracten
 
-Referentie voor **exportmechanismen**: hoe afgeleide (of handmatige siblings) in een
-**samenstelling** (Markdown-bundel voor parochie-uitgave) worden ontsloten.
+Referentie voor **exportmechanismen**: hoe afgeleiden (of handmatige siblings) in
+een **samenstelling** (Markdown-bundel voor parochie-uitgave) worden ontsloten.
 
-Export is **geen** conversie: export verwijst naar reeds gegenereerde afgeleide
+Export is **geen** conversie: export verwijst naar reeds gemaakte afgeleiden
 (bijv. `.svg`, `.mxl`) of naar handmatige siblings (`.coria.html`). Conversie
-(`vsa svg`, `vsa musicxml`) staat beschreven in
-[Conversiemechanismen](conversiemechanismen.md).
+staat in [Conversiemechanismen](conversiemechanismen.md).
 
-Authoring-syntax wordt geïmplementeerd in
+Authoring-directives worden uitgevoerd door
 [VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md);
-**normatieve contracten** staan op deze pagina’s.
+**normatieve contracten** (wat/wanneer) staan op deze pagina’s.
 
 ---
 
@@ -18,11 +17,11 @@ Authoring-syntax wordt geïmplementeerd in
 
 | Begrip        | Vraag die het beantwoordt                     | Voorbeeld                              |
 | ------------- | --------------------------------------------- | -------------------------------------- |
-| **Conversie** | Hoe maak ik afgeleide uit `.vsa`?             | `vsa svg lied.vsa lied.svg`            |
+| **Conversie** | Hoe maak ik afgeleide uit `.vsa`?             | Zie [conversiemechanismen](conversiemechanismen.md) |
 | **Export**    | Hoe verschijnt afgeleide in de samenstelling? | `:::include svg "lied.vsa" alt="…":::` |
 
-Eén `.vsa`-bron kan meerdere exporttypes tegelijk hebben (SVG embed + Coria-link +
-MXL-download).
+Eén `.vsa`-bron kan meerdere exporttypes tegelijk hebben (SVG embed + Coria-link
++ MXL-download).
 
 ---
 
@@ -46,46 +45,46 @@ Pad is **relatief aan het includerende `.md`-bestand** (niet aan de projectroot)
 :::include mxl "pad/melodie.vsa" label="Download MusicXML":::
 ```
 
-**Catalogus-zoek (sjabloon/sessie)** — `zoek=` tot **`vsa resolve-catalogus`** is gedraaid;
-daarna catalogus-pad:
+**Catalogus-zoek (sjabloon/sessie)** — `zoek=` tot resolve is gedraaid; daarna
+catalogus-pad:
 
 ```markdown
 :::include svg zoek="Troparion" alt="Troparion" scale="85%":::
 :::include coria zoek="Troparion" label="Oefenen in Coria" mode="auto":::
 ```
 
-Zie [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md),
-[VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
+Zie [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md)
+en
+[parochie-lokaal VSA (`zoek=`)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
+Resolve-commando:
+[CLI `vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md).
 
-**Beperking:** `coria` / `mxl` op **`bron:`** catalogus-pad — `.vsa` ligt vaak buiten
-content-root; **svg** op `bron:` werkt wel.
+**Beperking:** `coria` / `mxl` op een **`bron:`** catalogus-pad — het `.vsa` ligt
+vaak buiten de content-root; **svg** op `bron:` werkt wel.
 
-### Huidige implementatie
+### Status van de syntax
 
-| Syntax                                         | Status              | Opmerking                                         |
-| ---------------------------------------------- | ------------------- | ------------------------------------------------- |
-| `:::include "melodie.vsa"` (zonder exporttype) | **Geïmplementeerd** | Wrapt als `::: vsa-notatie`; SVG inline bij build |
-| `:::coria "melodie.vsa"`                       | **Geïmplementeerd** | Alias voor exporttype `coria`                     |
-| `:::include svg\|coria\|mxl "…"`               | **Geïmplementeerd** | Pad of catalogus-pad                              |
-| `:::include <type> zoek="…"`                    | **Geïmplementeerd** | Resolve via `vsa resolve-catalogus` vóór build    |
-| `coria` / `mxl` op `bron:` catalogus-pad         | **Beperkt**         | `.vsa` buiten content-root                        |
-| `:::include mp3-player`                         | **Gepland**         | Exporttype nog niet in VSA-tooling                |
-
-Voor open `zoek=`: **`vsa resolve-catalogus`** of handmatig **`bron:…`** / **`lokaal:…`**.
-Zie [exporttype-coria](exporttype-coria.md) voor Coria-details.
+| Syntax                                          | Status              | Opmerking                                      |
+| ----------------------------------------------- | ------------------- | ---------------------------------------------- |
+| `:::include "melodie.vsa"` (zonder exporttype)  | **Geïmplementeerd** | Wordt als VSA-blok naar SVG gerenderd          |
+| `:::coria "melodie.vsa"`                        | **Geïmplementeerd** | Alias voor exporttype `coria`                  |
+| `:::include svg\|coria\|mxl "…"`                | **Geïmplementeerd** | Pad of catalogus-pad                           |
+| `:::include <type> zoek="…"`                    | **Geïmplementeerd** | Resolve vóór build                             |
+| `coria` / `mxl` op `bron:` catalogus-pad        | **Beperkt**         | `.vsa` buiten content-root                     |
+| `:::include mp3-player`                         | **Gepland**         | Exporttype nog niet in VSA-tooling             |
 
 ---
 
 ## Uitgaveprofielen
 
-Profielen zijn **geen** aparte pipelines. Eén samenstelling; export en CSS bepalen
-wat zichtbaar is.
+Profielen zijn **geen** aparte pipelines. Eén samenstelling; export en CSS
+bepalen wat zichtbaar is.
 
-| Profiel       | Typische exporttypes                 | Conversie nodig                |
-| ------------- | ------------------------------------ | ------------------------------ |
-| **Afdruk**    | svg, `keep-together`, `@media print` | `vsa svg`                      |
-| **Online**    | svg, coria, `web-only`               | `vsa svg`, evt. `vsa musicxml` |
-| **Bewerking** | mxl-download                         | `vsa musicxml`                 |
+| Profiel       | Typische exporttypes                 | Conversie nodig         |
+| ------------- | ------------------------------------ | ----------------------- |
+| **Afdruk**    | svg, `keep-together`, `@media print` | svg                     |
+| **Online**    | svg, coria, `web-only`               | svg, eventueel musicxml |
+| **Bewerking** | mxl-download                         | musicxml                |
 
 Zie [Inhoudslevenscyclus](../specs/inhoudslevenscyclus.md) Deel 3.
 
@@ -97,7 +96,7 @@ Zie [Inhoudslevenscyclus](../specs/inhoudslevenscyclus.md) Deel 3.
 | ------------------- | ---------------------------------------------------------------------------- |
 | `{stem}.coria.html` | Coria-export met vooraf gekozen partij; naast `{stem}.vsa` in content-source |
 
-In de bron-repo primair VSA + scans; Coria-HTML kan in parochie-build content voorkomen.
+In de bron-repo primair VSA + scans; Coria-HTML kan in parochie-content voorkomen.
 
 ---
 
@@ -105,4 +104,5 @@ In de bron-repo primair VSA + scans; Coria-HTML kan in parochie-build content vo
 
 - [Conversiemechanismen](conversiemechanismen.md)
 - [Schrijfconventies](../specs/schrijfconventies.md)
-- [VSA — document samenstellen](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md)
+- [VSA — directives](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md)
+- [VSA CLI-overzicht](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)

@@ -129,31 +129,24 @@ Rene zet in de sessie **`default.toon`**. In `zoek=` geen toon herhalen:
 
 ## Stap 4 — Resolve en publiceren
 
-1. **`catalogus index validate`** — index in orde.
-2. **`vsa resolve-catalogus`** — vervangt elke `zoek=` door `bron:…` / `lokaal:…`;
-   bij ambiguïteit: `catalogus zoek --lijst` of verfijn `default.*` / `zoek=`.
-3. **`vsa validate`** en **`vsa build-markdown`** — op het **opgeloste** bestand.
+1. Controleer dat de catalogus-index in orde is
+   ([Catalogus CLI](../../reference/catalogus-cli.md)).
+2. Los elke `zoek=` op tot `bron:…` / `lokaal:…`
+   ([`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md)).
+   Bij meerdere treffers: lijst bekijken of `default.*` / `zoek=` verfijnen
+   ([`catalogus zoek`](../../reference/catalogus-cli.md)).
+3. Valideer en bouw het **opgeloste** bestand
+   ([`vsa validate`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md),
+   [`vsa build-markdown`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/build-markdown.md)).
 
-**Let op:** mappen `samenstellingen/` en `sjablonen/` worden in de Hugo-demo **niet**
-automatisch gepubliceerd (`build-markdown` slaat ze over). Kopieer opgeloste inhoud
-naar een publishbare content-map, of pas de build-config aan.
+**Let op (demo):** mappen `samenstellingen/` en `sjablonen/` worden in de
+Hugo-demo niet automatisch gepubliceerd. Kopieer opgeloste inhoud naar een
+publishbare content-map, of pas de build-config aan — zie
+[parochie-lokaal VSA](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md).
 
-**Export:** **`:::include svg`** op `bron:` werkt; **`:::include coria`** op `bron:`
-faalt zolang het `.vsa` buiten `--content-root` staat (org-bron). Coria op `lokaal:`
-werkt wel.
-
-```cmd
-cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
-```
-
-```cmd
-cd /d C:\Git\orthodox-groningen\VSA-demo
-vsa resolve-catalogus content-source\praktijk\samenstellingen\geboorte-moeder-gods-2026.md --content-root content-source --bron-root ..\bron
-vsa validate content-source
-```
-
-Zie [VSA-tooling — resolve-catalogus](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#vsa-resolve-catalogus).
+**Export:** **`:::include svg`** op `bron:` werkt; **`:::include coria`** op
+`bron:` faalt zolang het `.vsa` buiten de content-root staat (org-bron). Coria
+op `lokaal:` werkt wel.
 
 ---
 

@@ -210,10 +210,13 @@ Expliciete ids (na review): `zangstuk`, `variant`, `uitvoeringsvorm`, `represent
 
 1. Rene kopieert **sjabloon** → sessie-bestand; vult **`default.gelegenheid`** (en evt. `toon`).
 2. Sjabloon bevat al `:::include … zoek="…"` en vrije tekst ertussen.
-3. **`catalogus index validate`** — index in orde.
-4. **`vsa resolve-catalogus`** — alle `zoek=` → catalogus-pad; review bij ambiguïteit.
-5. **`vsa validate`** / **`vsa build-markdown`** — alleen op **opgelost** bestand.
-6. Hugo / export.
+3. Catalogus-index controleren ([Catalogus CLI](../reference/catalogus-cli.md)).
+4. Alle `zoek=` oplossen tot catalogus-pad; review bij ambiguïteit
+   ([`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md)).
+5. Valideren / bouwen — alleen op **opgelost** bestand
+   ([`vsa validate`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md),
+   [`vsa build-markdown`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/build-markdown.md)).
+6. Site / export.
 
 ```mermaid
 sequenceDiagram
@@ -231,7 +234,8 @@ sequenceDiagram
   Build-->>Rene: site / export
 ```
 
-**Harde regel:** `vsa build-markdown` met nog open `zoek=` → **fout** (geen stille fallback).
+**Harde regel:** document-build (`vsa build-markdown`) met nog open `zoek=` → **fout**
+(geen stille fallback).
 
 ---
 

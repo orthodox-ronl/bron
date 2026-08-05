@@ -1,143 +1,108 @@
 # Conversie: vsa musicxml
 
-Contract voor het conversiemechanisme **`vsa musicxml`**: VSA-bron (`.vsa`) naar
-MusicXML (`.mxl` of `.musicxml`).
+Contract voor het conversiemechanisme **`vsa musicxml`**: een [vsa-bestand](@)
+omzetten naar MusicXML (`.mxl` of `.musicxml`).
+
+Dit document beschrijft **wat** de conversie doet en **wanneer** je die gebruikt.
+Hoe je het commando aanroept: zie de
+[CLI man-page `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md)
+en de workflow-guide
+[MusicXML exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md).
 
 ---
 
 ## Samenvatting
 
-`vsa musicxml` zet VSA-notatie om naar MusicXML voor MuseScore, Coria
-(`play_from_url`) en exporttype [mxl-download](exporttype-mxl.md) /
-[coria](exporttype-coria.md) (MXL-modus). Muziek-metadata in VSA-frontmatter
-wordt aanbevolen voor titel, toonsoort en tempo.
+De conversie zet [VSA-notatie](@) om naar MusicXML voor MuseScore, Coria
+(`play_from_url`) en de exporttypes [mxl-download](exporttype-mxl.md) en
+[coria](exporttype-coria.md) (MXL-modus). De uitvoer is een [afgeleide](@) en
+hoort **niet** in de [bron-repository](@).
+
+Muziek-metadata in de frontmatter van het [vsa-bestand](@) (titel, toonsoort,
+tempo) wordt aanbevolen zodat de MXL bruikbaar is in spelers en editors.
 
 ---
 
 ## Wanneer gebruiken
 
-| Scenario                  | Aanroep                                              |
-| ------------------------- | ---------------------------------------------------- |
-| MuseScore bewerken        | Handmatig `.mxl` genereren                           |
-| Coria zonder HTML-sibling | MXL publiceren + `:::coria` met `mode=auto` of `mxl` |
-| CI                        | Batch over `content-source` (deels in site-build)    |
+| Situatie                         | Wat je wilt                                      |
+| -------------------------------- | ------------------------------------------------ |
+| Bewerken in MuseScore            | `.mxl` of `.musicxml` genereren                  |
+| Oefenen in Coria zonder HTML     | MXL publiceren + Coria in MXL- of auto-modus     |
+| Download voor musici             | Bestand klaarzetten voor exporttype [mxl](exporttype-mxl.md) |
+
+Gebruik **niet** deze conversie als enige weg naar leesbare notatie op papier —
+daarvoor is [vsa svg](conversie-vsa-svg.md).
 
 ---
 
-## Commando en aanroep
+## Eisen aan de invoer
 
-### Enkel bestand (default `.mxl`)
-
-```cmd
-vsa musicxml mijn-lied.vsa mijn-lied.mxl
-```
-
-Zonder extensie op output → `.mxl`:
-
-```cmd
-vsa musicxml mijn-lied.vsa output\mijn-lied
-```
-
-### Platte MusicXML
-
-```cmd
-vsa musicxml mijn-lied.vsa mijn-lied.musicxml
-```
-
-of:
-
-```cmd
-vsa musicxml mijn-lied.vsa mijn-lied --format musicxml
-```
-
-### Map-batch
-
-```cmd
-vsa musicxml content-source\praktijk output\mxl
-```
-
-Eén `.mxl` per `.vsa` in de map.
-
-Uitgebreide gebruikersdoc:
-[MusicXML-export (VSA-tooling)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md).
+| Eis            | Toelichting                                                              |
+| -------------- | ------------------------------------------------------------------------ |
+| Bestand        | `.vsa`, UTF-8                                                            |
+| Validatie      | `vsa validate` aanbevolen vóór conversie                                 |
+| Frontmatter    | Aanbevolen: titel, toon, tempo                                           |
+| Notatie-inhoud | Moet structuren bevatten die naar MusicXML te exporteren zijn            |
 
 ---
 
-## Invoer
+## Uitvoerformaten (betekenis)
 
-| Veld           | Vereiste                                          |
-| -------------- | ------------------------------------------------- |
-| Bestand        | `.vsa`, UTF-8                                     |
-| Validatie      | `vsa validate` aanbevolen vóór conversie          |
-| Frontmatter    | Aanbevolen: titel, toon, tempo voor bruikbare MXL |
-| Notatie-inhoud | Moet musicXML-exporteerbare structuren bevatten   |
+| Formaat     | Betekenis                                              | Typisch gebruik                |
+| ----------- | ------------------------------------------------------ | ------------------------------ |
+| `.mxl`      | Gecomprimeerd MusicXML (standaard voor distributie)    | Coria, download, archief       |
+| `.musicxml` | Platte XML                                             | Debugging, sommige editors     |
+
+### Exportprofielen (betekenis)
+
+| Profiel     | Bedoeling                         | Wanneer                                      |
+| ----------- | --------------------------------- | -------------------------------------------- |
+| `playback`  | Afspelen en oefenen               | Coria, online (standaard in tooling)         |
+| `engraving` | Notatie-layout / typografie       | Bewerken in MuseScore wanneer ondersteund    |
+
+Welke vlag je daarvoor zet: zie de CLI man-page.
 
 ---
 
-## Opties / flags
+## Wat er uit komt
 
-### `--format`
-
-| Veld           | Waarde                                                        |
-| -------------- | ------------------------------------------------------------- |
-| **Verplicht?** | Nee                                                           |
-| **Standaard**  | `mxl` (gecomprimeerd)                                         |
-| **Waarden**    | `mxl`, `musicxml`                                             |
-| **Doel**       | `.mxl` voor distributie; `.musicxml` voor debugging/MuseScore |
-| **Effect**     | Output-extensie en compressie                                 |
-
-### Exportprofiel (playback vs. engraving)
-
-Standaardprofiel in tooling: **`playback`** (geschikt voor Coria).
-
-| Profiel     | Doel              | Wanneer                                  |
-| ----------- | ----------------- | ---------------------------------------- |
-| `playback`  | Afspelen, oefenen | Coria, online                            |
-| `engraving` | Notatie-layout    | MuseScore bewerking (indien ondersteund) |
-
-Raadpleeg `vsa musicxml --help` voor actuele profiel-flag (`--profile`).
+| Veld     | Waarde                                      |
+| -------- | ------------------------------------------- |
+| Default  | `.mxl`                                      |
+| Locatie  | Door jou gekozen map of site-static         |
+| Op site  | Typisch onder een URL-prefix zoals `/vsa/mxl/…` (tooling/site-config) |
 
 ---
 
 ## Validatie vóór conversie
 
-| Check                   | Blokkeert?                                           |
-| ----------------------- | ---------------------------------------------------- |
-| `vsa validate`          | Aanbevolen; invalid `.vsa` geeft slechte of geen MXL |
-| Ontbrekend inputbestand | Ja — CLI error                                       |
+| Check                   | Blokkeert?                                              |
+| ----------------------- | ------------------------------------------------------- |
+| `vsa validate`          | Aanbevolen; ongeldige `.vsa` geeft slechte of geen MXL  |
+| Ontbrekend inputbestand | Ja                                                      |
 
-Export-resolve valideert MXL-inhoud **niet** op build-time.
-
----
-
-## Uitvoer
-
-| Veld              | Waarde                               |
-| ----------------- | ------------------------------------ |
-| Default           | `.mxl` (ZIP met MusicXML)            |
-| Alternatief       | `.musicxml` plat XML                 |
-| Locatie lokaal    | `derived/` of door gebruiker gekozen |
-| Public URL (site) | `/vsa/mxl/{relatief-pad}.mxl`        |
+Export-resolve controleert de MXL-inhoud **niet** opnieuw op build-time.
 
 ---
 
-## Downstream (export)
+## Na de conversie (export)
 
-| Exporttype                   | Gebruik                                   |
-| ---------------------------- | ----------------------------------------- |
-| [mxl](exporttype-mxl.md)     | Downloadlink                              |
-| [coria](exporttype-coria.md) | `mode=mxl` of `auto` zonder `.coria.html` |
+| Exporttype                   | Gebruik                                          |
+| ---------------------------- | ------------------------------------------------ |
+| [mxl](exporttype-mxl.md)     | Downloadlink in de samenstelling                 |
+| [coria](exporttype-coria.md) | `mode=mxl` of `auto` zonder `.coria.html`-sibling |
 
 ---
 
-## Fouten en oplossingen
+## Veelvoorkomende problemen (betekenis)
 
-| Probleem                 | Oorzaak                 | Oplossing                       |
-| ------------------------ | ----------------------- | ------------------------------- |
-| Lege of minimale MXL     | Weinig muziek in `.vsa` | Notatie uitbreiden              |
-| Verkeerde toon in speler | Metadata ontbreekt      | Frontmatter / `zangstuk.yaml`   |
-| MuseScore layout vreemd  | playback-profiel        | `--profile engraving` proberen  |
-| Coria laadt niet         | MXL niet op server      | Static deploy + URL controleren |
+| Probleem                 | Typische oorzaak            | Richting oplossing                    |
+| ------------------------ | --------------------------- | ------------------------------------- |
+| Lege of minimale MXL     | Weinig muziek in `.vsa`     | Notatie uitbreiden                    |
+| Verkeerde toon in speler | Metadata ontbreekt          | Frontmatter / `zangstuk.yaml`         |
+| Layout in MuseScore vreemd | playback-profiel          | engraving-profiel proberen (CLI)      |
+| Coria laadt niet         | MXL niet op de server       | Genereren + static publiceren         |
 
 ---
 
@@ -145,7 +110,6 @@ Export-resolve valideert MXL-inhoud **niet** op build-time.
 
 - Automatisch MXL kopiëren in alle parochie-builds
 - Validatie well-formed XML in CI
-- Volledige profiel-matrix in dit contract
 
 ---
 
@@ -154,3 +118,5 @@ Export-resolve valideert MXL-inhoud **niet** op build-time.
 - [Exporttype mxl](exporttype-mxl.md)
 - [Exporttype coria](exporttype-coria.md)
 - [Conversiemechanismen — overzicht](conversiemechanismen.md)
+- [CLI: `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md)
+- [Guide: MusicXML exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)

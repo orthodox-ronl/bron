@@ -331,13 +331,13 @@ winnende herkomst — geen stille keuze.
 | `has_ook_in_bron` | Controleren of parochie-lokaal stuk bedoeld is; anders `@include-vsa lokaal=…` / `id=…` expliciet |
 | Geen match | Manifest/index; `default.gelegenheid`; disambiguation in zoekstring |
 
-VSA-tooling (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
-**`ook_gevonden_in_bron`** → **waarschuwing** (build mag doorgaan). Zie
-[VSA — include-vsa](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/include-vsa.md).
-
 ---
 
 ## Consumentencontract (VSA-tooling)
+
+Normatieve stappen hieronder; concrete CLI-aanroep:
+[`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md)
+en [parochie-lokaal VSA](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md).
 
 ### Markdown — `:::include zoek="…"`
 
@@ -352,6 +352,11 @@ VSA-tooling (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
 3. Expand leest `result.path`, strip frontmatter doel, splice body in-memory.
 
 **Gedeelde stap:** `zoek` / `zoek_kandidaten`; geen aparte zoekimplementatie in VSA-tooling.
+
+VSA-tooling (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
+**`ook_gevonden_in_bron`** → **waarschuwing** (build mag doorgaan). Zie
+[VSA — include-vsa](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/include-vsa.md)
+en [`vsa validate`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md).
 
 ---
 

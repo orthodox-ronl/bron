@@ -31,7 +31,9 @@ groningen* en kiest **Delen → Voorstel voor bron**.
 3. **Bestanden:** selectie welke representaties meegaan (PDF, VSA).
 4. **Metadata:** formulier voor `zangstuk.yaml` (`title`, `gelegenheid`, copyright).
 5. **PR-assistent:** genereert branch-naam, commit-bericht (Conventional Commits)
-   en checklist voor `vsa validate` / `catalogus index validate`.
+   en checklist voor validatie
+   ([`vsa validate`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md),
+   [Catalogus CLI](../../reference/catalogus-cli.md)).
 6. **Na merge:** hint om samenstellingen van `lokaal:` naar `bron:` om te zetten
    (optioneel; lokaal mag blijven staan).
 

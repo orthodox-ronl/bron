@@ -107,20 +107,14 @@ parochie-repo.
 
 ### 4. Index valideren
 
-```cmd
-cd /d C:\Git\orthodox-groningen\bron
-python -m catalogus.cli index validate --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
-```
-
-Geen conflicten → aliassen “Groningen” en “Kastorski” zijn uniek binnen scope.
+Controleer dat er geen conflicterende aliassen zijn
+([Catalogus CLI](../../reference/catalogus-cli.md)).
 
 ### 5. Resolve testen
 
-```cmd
-python -m catalogus.cli resolve uitvoeringsvorm --zangstuk cherubijnenhymne --variant kastorski Groningen --content-root C:\Git\orthodox-groningen\VSA-demo\content-source
-```
-
-Uitvoer: `groningen`.
+Los de uitvoeringsvorm-alias “Groningen” op binnen
+`cherubijnenhymne` / `kastorski` — verwacht canonieke id `groningen`
+([Catalogus CLI — resolve](../../reference/catalogus-cli.md)).
 
 ### 6. Gebruik in een sjabloon of samenstelling
 
@@ -131,15 +125,13 @@ In het liturgie-sjabloon (verhaal 1):
 ```
 
 Met `default.uitvoeringsvorm: Groningen` in de **sessie** (homogene liturgie) of
-disambiguation `Cherubijnenhymne (Kastorski)` in mixed session. Na
-**`vsa resolve-catalogus`**
-(bijv. `:::include svg lokaal:cherubijnenhymne/kastorski/groningen:::`).
+disambiguation `Cherubijnenhymne (Kastorski)` in mixed session. Na oplossen van
+`zoek=` (bijv. `:::include svg lokaal:cherubijnenhymne/kastorski/groningen:::`) —
+zie
+[`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md).
 
-```cmd
-python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
-  --content-root C:\Git\orthodox-groningen\VSA-demo\content-source ^
-  --bron-root C:\Git\orthodox-groningen\bron
-```
+Zoektest:
+[Catalogus CLI — zoek](../../reference/catalogus-cli.md).
 
 ---
 
