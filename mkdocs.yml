@@ -104,6 +104,7 @@ nav:
       - Overzicht: plans/ideeen/README.md
       - plans/ideeen/alias-blokken.md
       - plans/ideeen/tev2-terminologie.md
+    - plans/tev2-h4-eenvoudige-termrefs.md
     - plans/ci-architectuur.md
     - plans/alias-blokken-ontwerp.md
     - plans/migratie-zondag-zangstukken.md

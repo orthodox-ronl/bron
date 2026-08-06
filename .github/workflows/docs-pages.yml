@@ -94,6 +94,9 @@ jobs:
           python ../../scripts/sort-glossary-table.py glossary.md
           trrt -f    -c tev2-config.yaml
 
+      - name: Verify TermRefs resolved
+        run: python scripts/check-tev2-termrefs.py generated/docs
+
       - name: Publish generated machine-readable glossaries
         run: |
           mkdir -p docs/mrgs

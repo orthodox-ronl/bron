@@ -1,7 +1,7 @@
 # Documentatie — bron repository
 
 Welkom bij de documentatie van de **bron**-repository: de centrale bron van
-waarheid voor zangstukken binnen [orthodox-groningen](https://github.com/orthodox-groningen).
+waarheid voor [zangstukken](@) binnen [orthodox-groningen](https://github.com/orthodox-groningen).
 
 ## Wat vind je hier
 
@@ -23,15 +23,15 @@ waarheid voor zangstukken binnen [orthodox-groningen](https://github.com/orthodo
 | Hoe werkt de VSA-CLI (validate, svg, MusicXML)?    | [VSA-tooling — documentatie](https://orthodox-groningen.github.io/VSA-tooling/)                 |
 
 Zie ook [Documentatie-eigendom](specs/documentatie-eigendom.md): normatieve
-org-specs horen alleen in bron; tool-docs horen in VSA-tooling.
+org-specs horen alleen in bron; tool-docs horen in [VSA-tooling](@).
 
 ## Wat staat *niet* op deze site
 
-De **zangstukken zelf** (`zangstukken/`, `composities/`) staan in git maar worden
+De [zangstukken](@) zelf (`zangstukken/`, `composities/`) staan in git maar worden
 niet als webpagina's gepubliceerd. Parochie-sites en build-pipelines consumeren
 die inhoud rechtstreeks uit de repository.
 
-Afgeleide bestanden (SVG, MXL, …) horen niet in git; zie
+[Afgeleide](@) bestanden (SVG, MXL, …) horen niet in git; zie
 [Inhoudslevenscyclus](specs/inhoudslevenscyclus.md).
 
 ## Lokaal bekijken
@@ -43,6 +43,7 @@ scripts\docs-serve.cmd
 
 ## Externe tools
 
-Conversie en validatie van VSA-bestanden gebeurt met
-[VSA-tooling](https://orthodox-groningen.github.io/VSA-tooling/)
+Conversie en validatie van [vsa-bestanden](@) gebeurt met
+[VSA-tooling](@)
+([documentatiesite](https://orthodox-groningen.github.io/VSA-tooling/))
 (`vsa validate`, `vsa svg`, `vsa musicxml`).

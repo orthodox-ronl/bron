@@ -3,13 +3,15 @@
 Deze sectie bevat **contractpagina’s ter naslag**: wat conversie en export
 betekenen voor auteurs en tooling, en hoe brontypes worden gevalideerd. Het zijn
 geen stap-voor-stap handleidingen; die staan onder
-[Handleidingen](../manuals/index.md). CLI-details van `vsa` staan in
-[VSA-tooling](https://orthodox-groningen.github.io/VSA-tooling/).
+[Handleidingen](../manuals/index.md). CLI-details van `vsa` staan in de
+[VSA-tooling](@)-documentatie
+([site](https://orthodox-groningen.github.io/VSA-tooling/)).
 
 ## Conversie
 
-Conversie is de vaste toolstap van bronbestand naar afgeleide (bijvoorbeeld VSA
-naar SVG).
+Conversie is de vaste toolstap van [bronbestand](@) naar [afgeleide](@)
+(bijvoorbeeld [VSA-notatie](@) naar SVG). Zie ook
+[conversiemechanismen](@).
 
 | Pagina                                                      | Wat je er vindt                                      |
 | ----------------------------------------------------------- | ---------------------------------------------------- |
@@ -19,8 +21,9 @@ naar SVG).
 
 ## Export
 
-Export beschrijft hoe een afgeleide of bron in een samenstelling verschijnt
-(bijvoorbeeld via `:::include`).
+Export beschrijft hoe een [afgeleide](@) of bron in een [samenstelling](@)
+verschijnt (bijvoorbeeld via `:::include`). Elk [exporttype](@) heeft een eigen
+contractpagina.
 
 | Pagina                                              | Wat je er vindt                         |
 | --------------------------------------------------- | --------------------------------------- |

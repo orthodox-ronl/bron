@@ -89,6 +89,9 @@ if errorlevel 1 (
 )
 popd
 
+python scripts\check-tev2-termrefs.py generated\docs
+if errorlevel 1 exit /b 1
+
 if not exist docs\mrgs mkdir docs\mrgs
 copy /Y generated\docs\mrgs\mrg.bron*.yaml docs\mrgs\ >nul
 

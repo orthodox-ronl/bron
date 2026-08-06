@@ -13,6 +13,7 @@ Bij tegenstrijdigheid gelden, in deze volgorde:
 | Document                                                         | Onderwerp                                                              |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | [Samenvatting project](samenvatting-project.md)                  | Korte stand van het project.                                           |
+| [TEv2 H4 — eenvoudige TermRefs](tev2-h4-eenvoudige-termrefs.md)  | Inventaris enkelvoudige terms + TermRef-golf (H4).                     |
 | [Alias-blokken (ontwerp)](alias-blokken-ontwerp.md)              | Synoniemsets voor zoek en yaml-sync.                                   |
 | [CI-architectuur](ci-architectuur.md)                            | Richtlijn voor conversie- versus export-workflows.                     |
 | [Migratie zondag-zangstukken](migratie-zondag-zangstukken.md)    | Bron vullen en sync met VSA-demo.                                      |
