@@ -1,30 +1,117 @@
-/* Bouwtijdstempel op homepage en per-pagina git-datum */
+/*
+  orthodox-groningen docs — gedeelde look & feel (bron ↔ VSA-tooling).
+  Spiegel dit bestand in beide repo's bij themawijzigingen.
+*/
 
-.build-time-stamp,
-.page-git-date {
-  color: var(--md-default-fg-color--light);
-  font-size: .75rem;
-  margin-top: 3.5rem;
-  margin-bottom: .5rem;
+:root {
+  /* Inktblauw — header/primary (geen default Material purple) */
+  --og-primary: #1e3a4c;
+  --og-primary-light: #2d5368;
+  --og-primary-dark: #142936;
+  /* Gedempt groen — accent/links hover */
+  --og-accent: #3d6b5a;
+  --og-accent-light: #4f8571;
+  /* Tabs: lichte balk met donkere tekst (niet witte letters op grijs) */
+  --og-tabs-bar: #e8eef1;
+  --og-tabs-fg: #1a1a1a;
+  --og-tabs-fg-muted: #3d4a52;
+
+  --md-primary-fg-color: var(--og-primary);
+  --md-primary-fg-color--light: var(--og-primary-light);
+  --md-primary-fg-color--dark: var(--og-primary-dark);
+  --md-accent-fg-color: var(--og-accent);
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--og-accent) 10%, transparent);
+  --md-typeset-a-color: var(--og-accent);
 }
 
-/* Tweede stempel dichter op de eerste (niet opnieuw 3.5rem vanaf content). */
-.build-time-stamp + .page-git-date,
-.page-git-date + .build-time-stamp {
-  margin-top: .25rem;
+/* Logo in header: favicon-formaat */
+.md-header__button.md-logo img {
+  height: 1.6rem;
+  width: auto;
 }
 
-.build-time-stamp:last-child,
-.page-git-date:last-child {
-  margin-bottom: 1.5rem;
+/* Sister-site iconen rechtsboven (i.p.v. GitHub stars/forks) */
+.md-header__social {
+  display: flex;
+  align-items: center;
+  margin-left: .2rem;
+  padding-right: .2rem;
 }
 
-/* Header-tabs: lichte balk onder de titelbalk (vergelijkbaar met VSA-tooling .site-nav) */
+.md-header__social .md-social {
+  display: flex;
+  align-items: center;
+  gap: .15rem;
+  padding: 0;
+  margin: 0;
+}
 
+.md-header__social .md-social__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  color: var(--md-primary-bg-color);
+  opacity: .85;
+}
+
+.md-header__social .md-social__link:hover,
+.md-header__social .md-social__link:focus {
+  opacity: 1;
+  color: var(--md-primary-bg-color);
+}
+
+.md-header__social .md-social__link svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
+
+/* Footer: één regel datumstempels (Amsterdamse tijdzone via CI/plugin) */
+.og-footer-stamps {
+  margin: 0;
+  padding: .4rem 0;
+  font-size: .7rem;
+  color: var(--md-footer-fg-color--lighter, rgba(255, 255, 255, .6));
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 44.984375em) {
+  .og-footer-stamps {
+    text-align: left;
+    white-space: normal;
+  }
+}
+
+/* Header-tabs: leesbaar contrast (donkere tekst op lichte balk) */
+.md-header--lifted > .md-tabs,
 .md-tabs {
-  background-color: var(--md-default-fg-color--lightest);
+  background-color: var(--og-tabs-bar);
+  color: var(--og-tabs-fg);
 }
 
+.md-header--lifted .md-tabs__link,
 .md-tabs__link {
   font-weight: 500;
+  color: var(--og-tabs-fg-muted);
+  opacity: 1;
+}
+
+.md-header--lifted .md-tabs__link--active,
+.md-header--lifted .md-tabs__item--active > .md-tabs__link,
+.md-tabs__link--active,
+.md-tabs__item--active > .md-tabs__link {
+  color: var(--og-primary);
+  font-weight: 600;
+  opacity: 1;
+}
+
+.md-header--lifted .md-tabs__link:focus,
+.md-header--lifted .md-tabs__link:hover,
+.md-tabs__link:focus,
+.md-tabs__link:hover {
+  color: var(--og-primary);
+  opacity: 1;
 }
