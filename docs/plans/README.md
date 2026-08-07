@@ -1,18 +1,22 @@
-# Plannen
+# Overzicht
 
-Deze map bevat **ontwikkelplannen en projectnotities**. Ze worden via dezelfde
-documentatiesite gepubliceerd voor transparantie, maar zijn **niet normatief**.
+Deze map bevat **ontwikkelplannen en projectnotities**. Ze staan op de
+documentatiesite voor transparantie, maar zijn **niet normatief**.
 
-Bij tegenstrijdigheid gelden:
+Bij tegenstrijdigheid gelden, in deze volgorde:
 
-1. **Specificaties** (`docs/specs/`)
-2. **Handleidingen** (`docs/manuals/`)
-3. **Referentie** (`docs/reference/`)
+1. [Specificaties](../specs/index.md)
+2. [Handleidingen](../manuals/index.md)
+3. [Referentie](../reference/index.md)
 4. Pas daarna: plannen in deze map
 
-- [Samenvatting project](samenvatting-project.md)
-- [Alias-blokken (ontwerp)](alias-blokken-ontwerp.md) — synoniemsets voor zoek en yaml-sync
-- [CI-architectuur](ci-architectuur.md) — conversie vs. export workflows (richtlijn)
-- [Migratie zondag-zangstukken](migratie-zondag-zangstukken.md) — bron vullen + VSA-demo sync
-- [Gebruikseisen dragers](gebruikseisen-representatievormen.md) — stub → VSA-tooling (papier/tablet/telefoon)
-- [Ideeën-backlog](ideeen/README.md) — onsamengehangende ideeën met status
+| Document                                                         | Onderwerp                                                              |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [Samenvatting project](samenvatting-project.md)                  | Korte stand van het project.                                           |
+| [TEv2 H4 — eenvoudige TermRefs](tev2-h4-eenvoudige-termrefs.md)  | Inventaris enkelvoudige terms + TermRef-golf (H4).                     |
+| [Alias-blokken (ontwerp)](alias-blokken-ontwerp.md)              | Synoniemsets voor zoek en yaml-sync.                                   |
+| [CI-architectuur](ci-architectuur.md)                            | Richtlijn voor conversie- versus export-workflows.                     |
+| [Migratie zondag-zangstukken](migratie-zondag-zangstukken.md)    | Bron vullen en sync met VSA-demo.                                      |
+| [Gebruikseisen dragers](gebruikseisen-representatievormen.md)    | Stub; uitgewerkte eisen staan in VSA-tooling (papier/tablet/telefoon). |
+| [Audit zangstuk-catalogus](audit-zangstuk-catalogus.md)          | Audit van catalogus/zangstuk-samenhang.                                |
+| [Ideeën-backlog](ideeen/README.md)                               | Losse ideeën met status; nog geen vast ontwerp.                        |
