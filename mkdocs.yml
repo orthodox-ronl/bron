@@ -118,8 +118,8 @@ extra_css:
 extra:
   generator: false
   preview: false
-  build_time: "2026-08-06 19:32 CEST"
-  branch: "local"
+  build_time: ""
+  branch: ""
   social:
     - icon: fontawesome/solid/book-bible
       link: https://orthodox-groningen.github.io/bron/
