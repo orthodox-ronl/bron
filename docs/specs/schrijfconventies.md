@@ -40,15 +40,19 @@ in bron-referentie** — link naar de man-page.
 - Gebruik alleen termen die in de glossary staan
   ([terminologie.md](terminologie.md), [glossary](../glossary.md), curated texts in
   `docs/terms/`).
-- Bij elke gedefinieerde term: **TermRef** `[term](@)` zodat de definitie op de
-  site zichtbaar is.
+- Bij elke gedefinieerde term: **TermRef** `[term](@)` (in tool-docs voor
+  org-termen: `[term](@bron)`) zodat de definitie op de site zichtbaar is.
 - Geen synoniemen die verwarring geven (R1–R5).
+- **Compact via TermRefs:** als een term in de glossary staat, herhaal de
+  definitie niet in de lopende tekst; één TermRef volstaat voor de lezer
+  (hover / termpagina).
 
-| Term          | Gebruik                                                                      |
-| ------------- | ---------------------------------------------------------------------------- |
-| **Conversie** | Tool met vaste I/O (`vsa svg`, `vsa musicxml`)                               |
-| **Export**    | Hoe een afgeleide in een samenstelling verschijnt (`:::include svg\|coria\|mxl`) |
-| **Kanaal**    | Verouderd — gebruik *conversie* of *exporttype*                              |
+| Term / frase              | Gebruik                                                                 |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Conversie**             | Tool met vaste I/O (`vsa svg`, `vsa musicxml`)                          |
+| **Export**                | Hoe een afgeleide in een samenstelling verschijnt (`:::include …`)      |
+| **Kanaal**                | Verouderd — gebruik *conversie* of *exporttype*                         |
+| **geldige VSA-notatie**   | Voorkeur boven “VSA klopt” / “kloppende VSA” (tool-docs, VSA-tooling)   |
 
 ---
 
@@ -141,15 +145,15 @@ Cursor-agents: `.cursor/rules/markdown-table-layout.mdc`. Bulk:
 
 ## Algemene checklist (per concept)
 
-| Vraag                 | Wat de lezer moet kunnen vinden                     |
-| --------------------- | --------------------------------------------------- |
-| Waarvoor?             | Doel, gebruikersscenario, uitgaveprofiel            |
-| Wat gebeurt er?       | Op de juiste rolpagina: contract, stappen of CLI    |
-| Effect van waarden    | Wat verandert bij keuze A vs. B                     |
-| Toegestaan / verboden | Lijsten, voorbeelden fout vs. goed                  |
-| Standaard             | Gedrag als een parameter ontbreekt                  |
-| Fouten                | Concrete melding, oorzaak, oplossing (op CLI-pagina)|
-| TBD                   | Open punten expliciet — geen stilzwijgende aannames |
+| Vraag                 | Wat de lezer moet kunnen vinden                      |
+| --------------------- | ---------------------------------------------------- |
+| Waarvoor?             | Doel, gebruikersscenario, uitgaveprofiel             |
+| Wat gebeurt er?       | Op de juiste rolpagina: contract, stappen of CLI     |
+| Effect van waarden    | Wat verandert bij keuze A vs. B                      |
+| Toegestaan / verboden | Lijsten, voorbeelden fout vs. goed                   |
+| Standaard             | Gedrag als een parameter ontbreekt                   |
+| Fouten                | Concrete melding, oorzaak, oplossing (op CLI-pagina) |
+| TBD                   | Open punten expliciet — geen stilzwijgende aannames  |
 
 Korte alinea’s; genummerde stappen in workflows; admonitions (`!!! note`,
 `!!! warning`) voor uitzonderingen.
