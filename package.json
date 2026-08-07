@@ -1,0 +1,10 @@
+{
+  "name": "bron-docs",
+  "private": true,
+  "devDependencies": {
+    "@tno-terminology-design/hrgt": "1.2.0",
+    "@tno-terminology-design/mrg-import": "1.2.0",
+    "@tno-terminology-design/mrgt": "1.2.0",
+    "@tno-terminology-design/trrt": "1.2.0"
+  }
+}

@@ -2,6 +2,11 @@ name: Deploy documentation
 
 on:
   push:
+  workflow_dispatch:
+
+concurrency:
+  group: docs-pages-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -16,6 +21,7 @@ jobs:
       url_prefix: ${{ steps.target.outputs.url_prefix }}
       pages_url: ${{ steps.target.outputs.pages_url }}
       label: ${{ steps.target.outputs.label }}
+      keep_files: ${{ steps.target.outputs.keep_files }}
 
     steps:
       - name: Checkout repository
@@ -40,6 +46,7 @@ jobs:
             echo "pages_url=https://orthodox-groningen.github.io/bron/" >> "$GITHUB_OUTPUT"
             echo "preview=false" >> "$GITHUB_OUTPUT"
             echo "label=production" >> "$GITHUB_OUTPUT"
+            echo "keep_files=true" >> "$GITHUB_OUTPUT"
           else
             echo "site_url=https://orthodox-groningen.github.io/bron/preview/" >> "$GITHUB_OUTPUT"
             echo "destination_dir=preview" >> "$GITHUB_OUTPUT"
@@ -47,6 +54,8 @@ jobs:
             echo "pages_url=https://orthodox-groningen.github.io/bron/preview/" >> "$GITHUB_OUTPUT"
             echo "preview=true" >> "$GITHUB_OUTPUT"
             echo "label=preview" >> "$GITHUB_OUTPUT"
+            # false: vervang /preview/ volledig (geen weesbestanden van eerdere builds).
+            echo "keep_files=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Show deploy target
@@ -55,16 +64,20 @@ jobs:
           echo "site_url: ${{ steps.target.outputs.site_url }}"
           echo "destination_dir: ${{ steps.target.outputs.destination_dir }}"
           echo "url_prefix: ${{ steps.target.outputs.url_prefix }}"
+          echo "keep_files: ${{ steps.target.outputs.keep_files }}"
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-docs.txt
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
+          cache: npm
 
       - name: Install documentation dependencies
         run: |
@@ -72,7 +85,7 @@ jobs:
           python -m pip install -r requirements-docs.txt
 
       - name: Install terminology tools
-        run: npm install -g @tno-terminology-design/trrt @tno-terminology-design/hrgt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
+        run: npm ci
 
       - name: Configure MkDocs site URL
         run: |
@@ -87,6 +100,7 @@ jobs:
 
       - name: Run terminology tools
         run: |
+          export PATH="$PWD/node_modules/.bin:$PATH"
           cd generated/docs
           mrg-import -c tev2-config.yaml
           mrgt       -c tev2-config.yaml
@@ -105,7 +119,8 @@ jobs:
       - name: Commit generated machine-readable glossaries
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Update TEV2 machine-readable glossaries
+          # [skip ci]: voorkom cascade (nieuwe push → opnieuw docs-pages + validate).
+          commit_message: "chore(docs): update TEv2 machine-readable glossaries [skip ci]"
           file_pattern: docs/mrgs/mrg.bron*.yaml
 
       - name: Build MkDocs site
@@ -123,6 +138,11 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
+    # Los van reusable-groep: annuleer verouderde caller-deploys (ook vóór
+    # VSA-tooling@main de cancel-in-progress-fix heeft).
+    concurrency:
+      group: docs-pages-deploy-${{ github.repository }}
+      cancel-in-progress: true
     uses: orthodox-groningen/VSA-tooling/.github/workflows/pages-deploy-reusable.yml@main
     with:
       artifact_name: pages-docs-site
@@ -130,5 +150,6 @@ jobs:
       destination_dir: ${{ needs.build.outputs.destination_dir }}
       url_prefix: ${{ needs.build.outputs.url_prefix }}
       pages_url: ${{ needs.build.outputs.pages_url }}
+      keep_files: ${{ needs.build.outputs.keep_files == 'true' }}
     permissions:
       contents: write
