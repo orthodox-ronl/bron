@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/professionalisering-fase-1</code>
-  , gebouwd 2026-08-06 20:02 CEST.
+  , gebouwd 2026-08-07 09:01 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2134,6 +2134,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../plans/tev2-h4-eenvoudige-termrefs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TEv2 H4 — eenvoudige TermRefs (inventaris)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../plans/ci-architectuur/" class="md-nav__link">
         
   
@@ -2398,8 +2426,9 @@
 
 
 <h1 id="overzicht">Overzicht<a class="headerlink" href="#overzicht" title="Permanent link">&para;</a></h1>
-<p>Deze pagina helpt je om de bron-repository en de documentatie lokaal bruikbaar te
-maken. Uitgebreide procedures staan onder <a href="../manuals/">Handleidingen</a>.</p>
+<p>Deze pagina helpt je om de <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> en de documentatie lokaal
+bruikbaar te maken. Uitgebreide procedures staan onder
+<a href="../manuals/">Handleidingen</a>.</p>
 <h2 id="1-repository-openen">1. Repository openen<a class="headerlink" href="#1-repository-openen" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 </code></pre></div>
@@ -2411,8 +2440,9 @@ scripts\docs-serve.cmd
 (glossary en TermRefs) gebruik je later <code>scripts\docs-build-tev2.cmd</code>; dat hoort
 niet bij deze eerste stappen.</p>
 <h2 id="3-zangstukken-valideren">3. Zangstukken valideren<a class="headerlink" href="#3-zangstukken-valideren" title="Permanent link">&para;</a></h2>
-<p>Validatie van VSA in deze repo gebeurt met de CLI uit
-<a href="https://orthodox-groningen.github.io/VSA-tooling/">VSA-tooling</a>:</p>
+<p>Validatie van <a href="/bron/preview/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> in deze repo gebeurt met de CLI uit
+<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>
+(<a href="https://orthodox-groningen.github.io/VSA-tooling/">documentatiesite</a>):</p>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\VSA-tooling
 scripts\bootstrap.cmd
 cd /d C:\Git\orthodox-groningen\bron
@@ -2428,7 +2458,7 @@ vsa validate zangstukken
 </thead>
 <tbody>
 <tr>
-<td>Nieuw zangstuk toevoegen</td>
+<td>Nieuw <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer varianten bestaan.">zangstuk</a> toevoegen</td>
 <td><a href="../manuals/zangstuk-toevoegen/">Zangstuk toevoegen</a></td>
 </tr>
 <tr>
@@ -2481,7 +2511,7 @@ vsa validate zangstukken
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-08-05
+        Bijgewerkt: 2026-08-06
         
       </p>
       

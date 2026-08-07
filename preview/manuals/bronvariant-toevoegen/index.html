@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/professionalisering-fase-1</code>
-  , gebouwd 2026-08-06 20:02 CEST.
+  , gebouwd 2026-08-07 09:01 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2126,6 +2126,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../plans/tev2-h4-eenvoudige-termrefs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TEv2 H4 — eenvoudige TermRefs (inventaris)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../plans/ci-architectuur/" class="md-nav__link">
         
   
@@ -2379,17 +2407,18 @@
 
 
 <h1 id="bronvariant-toevoegen">Bronvariant toevoegen<a class="headerlink" href="#bronvariant-toevoegen" title="Permanent link">&para;</a></h1>
-<p>Procedure voor een nieuwe source binnen een <strong>bestaand</strong> zangstuk (workflow 9.2).</p>
+<p>Procedure voor een nieuwe source binnen een <strong>bestaand</strong> <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer varianten bestaan.">zangstuk</a>
+(workflow 9.2).</p>
 <h2 id="stappen">Stappen<a class="headerlink" href="#stappen" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Controleer dat het om een <strong>variant</strong> van hetzelfde zangstuk gaat, niet een nieuw zangstuk.</li>
-<li>Plaats het bronbestand in <code>sources/&lt;formaat&gt;/</code> van het bestaande zangstuk.</li>
-<li>Voeg een source-entry toe aan <code>zangstuk.yaml</code> met unieke <code>id:</code>.</li>
+<li>Controleer dat het om een <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> van hetzelfde zangstuk gaat, niet een nieuw zangstuk.</li>
+<li>Plaats het <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> in <code>sources/&lt;formaat&gt;/</code> van het bestaande zangstuk.</li>
+<li>Voeg een <a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> toe aan <code>zangstuk.yaml</code> met unieke <code>id:</code>.</li>
 <li>Zet <code>based_on:</code> naar de oorspronkelijke source indien van toepassing.</li>
 <li>Valideer <code>.vsa</code> indien van toepassing; commit en push.</li>
 </ol>
 <h2 id="scan-vsa-definitievere-bron">Scan → VSA (definitievere bron)<a class="headerlink" href="#scan-vsa-definitievere-bron" title="Permanent link">&para;</a></h2>
-<p>Voeg VSA toe als <strong>nieuwe</strong> source-entry; verwijder de scan-source niet automatisch.
+<p>Voeg <a href="/bron/preview/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> toe als <strong>nieuwe</strong> source-entry; verwijder de scan-source niet automatisch.
 Gebruik <code>based_on</code> en eventueel <code>note:</code> over status van de scan.</p>
 <h2 id="bron-vervangen">Bron vervangen<a class="headerlink" href="#bron-vervangen" title="Permanent link">&para;</a></h2>
 <p>Oudere sources blijven behouden tenzij expliciet opgeruimd — zie
@@ -2430,7 +2459,7 @@ Gebruik <code>based_on</code> en eventueel <code>note:</code> over status van de
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-06-27
+        Bijgewerkt: 2026-08-06
         
       </p>
       

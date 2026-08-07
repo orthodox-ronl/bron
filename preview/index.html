@@ -96,7 +96,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/professionalisering-fase-1</code>
-  , gebouwd 2026-08-06 20:02 CEST.
+  , gebouwd 2026-08-07 09:01 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2140,6 +2140,34 @@
   
   
     <li class="md-nav__item">
+      <a href="plans/tev2-h4-eenvoudige-termrefs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TEv2 H4 — eenvoudige TermRefs (inventaris)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="plans/ci-architectuur/" class="md-nav__link">
         
   
@@ -2416,7 +2444,7 @@
 
 <h1 id="documentatie-bron-repository">Documentatie — bron repository<a class="headerlink" href="#documentatie-bron-repository" title="Permanent link">&para;</a></h1>
 <p>Welkom bij de documentatie van de <strong>bron</strong>-repository: de centrale bron van
-waarheid voor zangstukken binnen <a href="https://github.com/orthodox-groningen">orthodox-groningen</a>.</p>
+waarheid voor <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer varianten bestaan.">zangstukken</a> binnen <a href="https://github.com/orthodox-groningen">orthodox-groningen</a>.</p>
 <h2 id="wat-vind-je-hier">Wat vind je hier<a class="headerlink" href="#wat-vind-je-hier" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2476,20 +2504,21 @@ waarheid voor zangstukken binnen <a href="https://github.com/orthodox-groningen"
 </tbody>
 </table>
 <p>Zie ook <a href="specs/documentatie-eigendom/">Documentatie-eigendom</a>: normatieve
-org-specs horen alleen in bron; tool-docs horen in VSA-tooling.</p>
+org-specs horen alleen in bron; tool-docs horen in <a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>.</p>
 <h2 id="wat-staat-niet-op-deze-site">Wat staat <em>niet</em> op deze site<a class="headerlink" href="#wat-staat-niet-op-deze-site" title="Permanent link">&para;</a></h2>
-<p>De <strong>zangstukken zelf</strong> (<code>zangstukken/</code>, <code>composities/</code>) staan in git maar worden
+<p>De <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer varianten bestaan.">zangstukken</a> zelf (<code>zangstukken/</code>, <code>composities/</code>) staan in git maar worden
 niet als webpagina's gepubliceerd. Parochie-sites en build-pipelines consumeren
 die inhoud rechtstreeks uit de repository.</p>
-<p>Afgeleide bestanden (SVG, MXL, …) horen niet in git; zie
+<p><a href="/bron/preview/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">Afgeleide</a> bestanden (SVG, MXL, …) horen niet in git; zie
 <a href="specs/inhoudslevenscyclus/">Inhoudslevenscyclus</a>.</p>
 <h2 id="lokaal-bekijken">Lokaal bekijken<a class="headerlink" href="#lokaal-bekijken" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 scripts\docs-serve.cmd
 </code></pre></div>
 <h2 id="externe-tools">Externe tools<a class="headerlink" href="#externe-tools" title="Permanent link">&para;</a></h2>
-<p>Conversie en validatie van VSA-bestanden gebeurt met
-<a href="https://orthodox-groningen.github.io/VSA-tooling/">VSA-tooling</a>
+<p>Conversie en validatie van <a href="/bron/preview/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestanden</a> gebeurt met
+<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>
+(<a href="https://orthodox-groningen.github.io/VSA-tooling/">documentatiesite</a>)
 (<code>vsa validate</code>, <code>vsa svg</code>, <code>vsa musicxml</code>).</p>
 
 
@@ -2527,9 +2556,9 @@ scripts\docs-serve.cmd
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-08-05
+        Bijgewerkt: 2026-08-06
         
-           · Gegenereerd: 2026-08-06 20:02 CEST
+           · Gegenereerd: 2026-08-07 09:01 CEST
         
       </p>
       
