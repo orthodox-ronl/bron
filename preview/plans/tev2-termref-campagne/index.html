@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 19:57 CEST.
+  , gebouwd 2026-08-08 20:24 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2279,6 +2279,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tweede-golf-gedaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tweede golf — gedaan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#backlog-later" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2572,6 +2583,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tweede-golf-gedaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tweede golf — gedaan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#backlog-later" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2629,7 +2651,7 @@
 <tbody>
 <tr>
 <td><strong>Status</strong></td>
-<td>eerste golf gedaan (fase E.2); rest backlog</td>
+<td>tweede golf gedaan; rest backlog</td>
 </tr>
 <tr>
 <td><strong>Repo</strong></td>
@@ -2637,7 +2659,7 @@
 </tr>
 <tr>
 <td><strong>Scope</strong></td>
-<td>Follow-up na H4–H6 en contentplan fasen A–D</td>
+<td>Follow-up na H4–H6 en contentplan fasen A–E</td>
 </tr>
 </tbody>
 </table>
@@ -2668,7 +2690,11 @@ history — zodat gedefinieerde begrippen consequent hoverbaar zijn.</p>
 </tr>
 <tr>
 <td>E.2</td>
-<td>Steekproef: 1× spec, 1× reference, 1× task guide, 1× hub (onder)</td>
+<td>Steekproef: 1× spec, 1× reference, 1× task guide, 1× hub</td>
+</tr>
+<tr>
+<td>E.2b</td>
+<td>Tweede golf: specs + exporttypes + eigendom (onder)</td>
 </tr>
 </tbody>
 </table>
@@ -2705,20 +2731,68 @@ history — zodat gedefinieerde begrippen consequent hoverbaar zijn.</p>
 </tr>
 </tbody>
 </table>
-<p>Geen nieuwe glossary-termen in deze golf (sjabloon, content-source, frontmatter
-blijven uncured jargon tot eigen PR).</p>
+<h2 id="tweede-golf-gedaan">Tweede golf — gedaan<a class="headerlink" href="#tweede-golf-gedaan" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Pad</th>
+<th>Notitie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec</td>
+<td><code>docs/specs/repo-structuur.md</code></td>
+<td>bron vs afgeleide, compositie, samenstelling</td>
+</tr>
+<tr>
+<td>Spec</td>
+<td><code>docs/specs/zangstuk-identificatie.md</code></td>
+<td>vier niveaus + manifest</td>
+</tr>
+<tr>
+<td>Spec</td>
+<td><code>docs/specs/catalogus-samenstelling-zangstuk.md</code></td>
+<td>intro + mixed session</td>
+</tr>
+<tr>
+<td>Spec</td>
+<td><code>docs/specs/documentatie-eigendom.md</code></td>
+<td>VSA-tooling, export/conversie</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td><code>docs/reference/conversiemechanismen.md</code></td>
+<td>densify conversie/export</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td><code>docs/reference/exporttype-mxl.md</code></td>
+<td>was 0 TermRefs</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td><code>docs/reference/exporttype-coria.md</code></td>
+<td>exporttype + samenstelling</td>
+</tr>
+</tbody>
+</table>
+<p>Geen nieuwe glossary-termen in deze golven (sjabloon, content-source, frontmatter,
+catalogus-pad blijven uncured jargon tot eigen PR).</p>
 <h2 id="backlog-later">Backlog (later)<a class="headerlink" href="#backlog-later" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Inventaris: overige specs/reference met bare termen die al in <code>terms/</code> staan</li>
-<li>Dunne manuals / long catalogus-API / <code>rene-*</code> stories (selectief)</li>
-<li>TermRefs plaatsen (bron <code>@</code>, tool-docs <code>@</code> / <code>@bron</code> volgens eigendom)</li>
+<li><code>catalogus-architectuur.md</code>, <code>catalogus-zoek-api.md</code>, <code>catalogus-cli.md</code> (selectief)</li>
+<li><code>zangstuk-formaat.md</code> / overige reference densify</li>
+<li>Dunne manuals / <code>rene-*</code> stories (selectief)</li>
+<li>VSA-tooling tool-docs waar org-termen bare blijven (<code>@bron</code>)</li>
 <li>Alleen inkorten waar hover de definitie al dekt (schrijfconventies)</li>
 <li><code>docs-build-tev2</code> / TermRef-check groen houden</li>
 <li>Geen normatieve betekenis wijzigen zonder glossary-PR</li>
 </ol>
 <h2 id="niet-in-scope">Niet in scope<a class="headerlink" href="#niet-in-scope" title="Permanent link">&para;</a></h2>
 <p>Nieuwe termen bedenken zonder glossary-PR; synoniembeleid opnieuw openbreken;
-dark mode / IA.</p>
+dark mode / IA; volledige <code>terminologie.md</code>-herhaling (is zelf de glossary).</p>
 <p>Eigen PR(s); niet mengen met ongerelateerde docs-wijzigingen.</p>
 
 

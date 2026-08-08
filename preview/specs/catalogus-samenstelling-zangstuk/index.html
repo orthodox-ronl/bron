@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 19:57 CEST.
+  , gebouwd 2026-08-08 20:24 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2896,15 +2896,17 @@
 <h1 id="catalogus-zangstuk-opzoeken-in-sjablonen-en-samenstellingen">Catalogus — zangstuk-opzoeken in sjablonen en samenstellingen<a class="headerlink" href="#catalogus-zangstuk-opzoeken-in-sjablonen-en-samenstellingen" title="Permanent link">&para;</a></h1>
 <p>Status: <strong>normatief</strong> (geïmplementeerd, basis).</p>
 <p>Gerelateerd: <a href="../terminologie/">terminologie §2.8</a>, <a href="../catalogus-architectuur/">catalogus-architectuur</a>,
-<a href="../terminologie/#18-samenstelling">samenstelling §18</a>, <a href="../../reference/exportcontracten/">exportcontracten</a>.</p>
+<a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> (<a href="../terminologie/#18-samenstelling">§18</a>),
+<a href="../../reference/exportcontracten/">exportcontracten</a>.</p>
 <hr />
 <h2 id="doel">Doel<a class="headerlink" href="#doel" title="Permanent link">&para;</a></h2>
 <p>Rene werkt in <strong>markdown-sjablonen</strong> (geen uitgebreide yaml-bomen). Op vaste plekken
-staat <strong><code>:::include</code></strong> met exporttype (<code>svg</code>, <code>coria</code>, <code>mxl</code>, …) en parameter
+staat <strong><code>:::include</code></strong> met <a href="/bron/preview/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a> (<code>svg</code>, <code>coria</code>, <code>mxl</code>, …) en parameter
 <strong><code>zoek="…"</code></strong> — nog geen catalogus-pad. Tussen de includes: gewone markdown
 (kopjes, liturgische aanwijzingen).</p>
-<p>De <strong>catalogus</strong> zoekt het stuk op (met <strong><code>default.*</code></strong> uit de sessie) en levert een
-<strong>catalogus-pad</strong>. <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a> schrijft dat pad in het markdown-bestand;
+<p>De <strong>catalogus</strong> zoekt het <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> op (met <strong><code>default.*</code></strong> uit de sessie) en levert een
+<strong>catalogus-pad</strong>. <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a>
+(<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>) schrijft dat pad in het markdown-bestand;
 pas daarna mag <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/"><code>vsa build-markdown</code></a> / export draaien.</p>
 <p>VSA-build (<code>:::include</code> zonder <code>zoek=</code>) en <strong><code>@include-vsa</code></strong> in <code>.vsa</code>-brontekst vallen buiten dit
 document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruiken dezelfde resolver — zie
@@ -2922,7 +2924,7 @@ document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruik
 <tbody>
 <tr>
 <td><strong>referentie</strong></td>
-<td><strong>Herkomst</strong>-metadata (<a href="../terminologie/">§9</a>)</td>
+<td><strong><a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">Herkomst</a></strong>-metadata (<a href="../terminologie/">§9</a>)</td>
 <td><code>referentie: VOK</code> — filter, geen pad</td>
 </tr>
 <tr>
@@ -2936,7 +2938,7 @@ document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruik
 <td><code>zoek="Kondakion"</code></td>
 </tr>
 <tr>
-<td><strong>zangstuk</strong> (glossary §5)</td>
+<td><strong><a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a></strong> (glossary §5)</td>
 <td>Entiteit met <code>zangstuk-id</code></td>
 <td>In opslag; Rene typt geen id</td>
 </tr>
@@ -2988,9 +2990,9 @@ document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruik
 </table>
 <p><a id="mixed-session"></a></p>
 <h3 id="mixed-session-bron-parochie-lokaal">Mixed session (bron + parochie-lokaal)<a class="headerlink" href="#mixed-session-bron-parochie-lokaal" title="Permanent link">&para;</a></h3>
-<p>Eén dienst kan <strong>verschillende uitvoeringsvormen</strong> nodig hebben — bijv. feest-troparion uit
-<strong>bron</strong> (<code>uitvoeringsvorm-id: liturgikon</code>) naast Cherubijnenhymne <strong>lokaal</strong>
-(<code>uitvoeringsvorm-id: groningen</code>).</p>
+<p>Eén dienst kan <strong>verschillende <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvormen</a></strong> nodig hebben — bijv. feest-troparion uit
+de <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> (<code>uitvoeringsvorm-id: liturgikon</code>) naast Cherubijnenhymne
+<strong><a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">parochie-lokaal</a></strong> (<code>uitvoeringsvorm-id: groningen</code>).</p>
 <table>
 <thead>
 <tr>
