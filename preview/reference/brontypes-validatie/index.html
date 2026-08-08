@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 21:24 CEST.
+  , gebouwd 2026-08-08 21:30 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2616,10 +2616,12 @@
 
 
 <h1 id="brontypes-en-validatie">Brontypes en validatie<a class="headerlink" href="#brontypes-en-validatie" title="Permanent link">&para;</a></h1>
-<p>Overzicht van validatieregels per brontype in <code>zangstukken/</code>.</p>
+<p>Overzicht van validatieregels per type <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> in <code>zangstukken/</code>
+(<a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>).</p>
 <h2 id="vsa"><code>.vsa</code><a class="headerlink" href="#vsa" title="Permanent link">&para;</a></h2>
 <p>Validatie van <a href="/bron/preview/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestanden</a> — bestanden met <a href="/bron/preview/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">vsa-notatie</a>.</p>
-<p>Installatie: <a href="https://github.com/orthodox-groningen/VSA-tooling">VSA-tooling</a>.</p>
+<p>Installatie: <a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>
+(<a href="https://github.com/orthodox-groningen/VSA-tooling">GitHub</a>).</p>
 <table>
 <thead>
 <tr>
@@ -2708,7 +2710,8 @@
 </tr>
 </tbody>
 </table>
-<p>Alleen wanneer MusicXML <strong>zelfstandige bron</strong> is, niet wanneer het afgeleide van <a href="/bron/preview/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">vsa-notatie</a> is.</p>
+<p>Alleen wanneer MusicXML <strong>zelfstandig <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a></strong> is, niet wanneer het
+<a href="/bron/preview/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> van <a href="/bron/preview/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">vsa-notatie</a> is.</p>
 <h2 id="zangstukyaml"><code>zangstuk.yaml</code><a class="headerlink" href="#zangstukyaml" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2730,7 +2733,7 @@
 <td>CI (gepland)</td>
 </tr>
 <tr>
-<td>Eén status per source</td>
+<td>Eén status per <a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a></td>
 <td>script</td>
 <td>CI (gepland)</td>
 </tr>

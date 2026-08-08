@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 21:24 CEST.
+  , gebouwd 2026-08-08 21:30 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2904,18 +2904,18 @@
 
 
 <h1 id="exporttype-embed-svg">Exporttype: embed SVG<a class="headerlink" href="#exporttype-embed-svg" title="Permanent link">&para;</a></h1>
-<p>Contract voor het <strong>svg</strong>-exporttype: <a href="/bron/preview/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> als schaalbare
-vectorafbeelding in een samenstelling (HTML, afdruk).</p>
+<p>Contract voor het <strong>svg</strong>-<a href="/bron/preview/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a>: <a href="/bron/preview/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> als schaalbare
+vectorafbeelding in een <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> (HTML, afdruk).</p>
 <p>Technische build-stappen (shortcodes, asset-mappen): zie
 <a href="https://orthodox-groningen.github.io/VSA-tooling/guides/svg-export/">SVG exporteren</a>
 en <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/">CLI <code>vsa build-markdown</code></a>.</p>
 <hr />
 <h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">&para;</a></h2>
-<p>Met exporttype <strong>svg</strong> toon je de muzieknotatie van een <a href="/bron/preview/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a> als SVG
+<p>Met <a href="/bron/preview/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a> <strong>svg</strong> toon je de muzieknotatie van een <a href="/bron/preview/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a> als SVG
 in de pagina. De lezer ziet dezelfde glyphs en omringende tekst als in VSA,
-geschikt voor scherm en papier. De SVG ontstaat via conversie
+geschikt voor scherm en papier. De SVG ontstaat via een <a href="/bron/preview/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanisme</a>
 (<a href="../conversie-vsa-svg/">conversie-vsa-svg</a>); export bepaalt alleen <em>hoe</em> die SVG
-in de samenstelling wordt ingebed.</p>
+in de <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> wordt ingebed.</p>
 <hr />
 <h2 id="beoogde-doelen">Beoogde doelen<a class="headerlink" href="#beoogde-doelen" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2943,7 +2943,7 @@ Zie <a href="../../manuals/catalogus/sjabloon-schrijven/">Sjabloon schrijven</a>
 <div class="highlight"><pre><span></span><code>:::include &quot;praktijk/zondagen/tropaar-zondag-toon-3.vsa&quot; alt=&quot;Tropaar van de zondag, Toon 3&quot; scale=&quot;85%&quot;:::
 </code></pre></div>
 <p>Zonder het woord <code>svg</code> wordt een <code>.vsa</code>-include als VSA-blok behandeld en bij
-document-build naar SVG gerenderd. Functioneel komt dat overeen met exporttype
+document-build naar SVG gerenderd. Functioneel komt dat overeen met <a href="/bron/preview/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a>
 svg.</p>
 <h3 id="pad-naar-de-bron">Pad naar de bron<a class="headerlink" href="#pad-naar-de-bron" title="Permanent link">&para;</a></h3>
 <table>
@@ -3133,7 +3133,7 @@ een JPG-scan.</p>
 <td>content-source of gekopieerd uit <code>bron/zangstukken/</code></td>
 </tr>
 <tr>
-<td><code>.svg</code> afgeleide</td>
+<td><code>.svg</code> <a href="/bron/preview/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a></td>
 <td>Impliciet</td>
 <td>Wordt bij build of via <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/"><code>vsa svg</code></a> gegenereerd</td>
 </tr>
