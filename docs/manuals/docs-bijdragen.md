@@ -61,10 +61,16 @@ Zie [TEv2 in tool-docs](https://orthodox-groningen.github.io/VSA-tooling/guides/
 ## Checklist vóór PR
 
 - [ ] `scripts\docs-build-tev2.cmd` groen (of CI `docs-pages` / docs-build)
+- [ ] **Type + publiek** benoemd (of evident uit hub/pad): zie
+      [schrijfconventies](../specs/schrijfconventies.md) — paginatypen / persona’s
+- [ ] **Lezerstest** voor dat type: kan de beoogde lezer in één scan antwoorden op
+      *voor wie / wanneer / wat moet ik doen of weten?* (hub = route; task =
+      stappen + voorbeeld; term = waartoe; CLI = SYNOPSIS-achtig + foutpad)
 - [ ] Nieuwe/gewijzigde termen: curated text + TermRefs waar de term voorkomt
       ([term-sjabloon](../specs/term-entry-sjabloon.md); jargon alleen via glossary)
+- [ ] Jargon op de pagina → TermRef of expliciet “niet in glossary” (geen ad-hoc term)
 - [ ] Pagina voldoet aan [schrijfconventies](../specs/schrijfconventies.md):
-      type/publiek, kopnorm (voor wie / wanneer / antwoord eerst), toon
-      welwillende volwassene tenzij P5/P6; task/CLI/workflow hebben foutpad
+      kopnorm (voor wie / wanneer / antwoord eerst), toon welwillende volwassene
+      tenzij P5/P6; task/CLI/workflow hebben **foutpad**
 - [ ] Tabellen uitgelijnd
 - [ ] Geen afgeleide SVG/MXL in bron committen

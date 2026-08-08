@@ -337,11 +337,11 @@ waartoe/foutpad-norm toetsen — niet allemaal in deze fase.
 ### Fase E — Cross-cutting (na of parallel met TermRef-campagne)
 
 
-| #   | Taak                                                                                                          | Acceptatie                                            |
-| --- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| E.1 | Review-checklist in docs-bijdragen: type, publiek, lezerstest, jargon→TermRef/curated, foutpad waar verplicht | Contributors weten waarop te toetsen                  |
-| E.2 | TermRef-campagne op specs/reference/dunne manuals; bij ontbrekend jargon: term eerst curaten                  | Zie [tev2-termref-campagne](tev2-termref-campagne.md) |
-| E.3 | Optioneel: `catalogus-cli` splitsen gebruikers-CLI vs library                                                 | Schrijfconventies man-page-vorm                       |
+| #   | Taak                                                                                                          | Acceptatie                                            | Status                           |
+| --- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | -------------------------------- |
+| E.1 | Review-checklist in docs-bijdragen: type, publiek, lezerstest, jargon→TermRef/curated, foutpad waar verplicht | Contributors weten waarop te toetsen                  | gedaan (lezerstest aangescherpt) |
+| E.2 | TermRef-campagne op specs/reference/dunne manuals; bij ontbrekend jargon: term eerst curaten                  | Zie [tev2-termref-campagne](tev2-termref-campagne.md) | eerste golf gedaan; rest backlog |
+| E.3 | Optioneel: `catalogus-cli` splitsen gebruikers-CLI vs library                                                 | Schrijfconventies man-page-vorm                       | uitgesteld (optioneel, groot)    |
 
 
 
@@ -371,8 +371,9 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 - [x] Kern-task-guides P2 hebben voorbeeld + checklist + “wanneer” + foutpad.
 - [x] Home (bron + VSA) routeren op persona en benoemen P7-niet-hier.
 - [x] Geen tweede docs-hub in VSA-guides-README.
-- [ ] Steekproef (min. 1 pagina per type) doorstaat de lezerstest voor dat type.
-- [ ] Landingsmatrix §5a: alle “moet in A”-rijen geland of expliciet uitgesteld;
+- [x] Steekproef (min. 1 pagina per type) doorstaat de lezerstest voor dat type
+      (checklist + E.2-golf; verdere TermRef-campagne = backlog).
+- [x] Landingsmatrix §5a: alle “moet in A”-rijen geland of expliciet uitgesteld;
       latere fasen toetsen tegen schrijfconventies, niet alleen tegen dit plan.
 
 ---
@@ -406,5 +407,6 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 | 2026-08-08 | Fase B gedaan: `representatie`/`zangstuk`/`exportmechanisme`; VSA curated steekproef + tev2-note                                   |
 | 2026-08-08 | Fase C gedaan: P2 task guides + Home/Starten persona-router + pad/`zoek=`-brug                                                     |
 | 2026-08-08 | Fase D gedaan (VSA): hubs, user-guide tour, validation, overview, NL-nav, CLI validate/svg; Home persona-router                    |
+| 2026-08-08 | Fase E: E.1 lezerstest in checklist; E.2 TermRef-steekproef (4 pagina’s); E.3 uitgesteld                                           |
 
 
