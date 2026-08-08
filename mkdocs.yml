@@ -80,6 +80,7 @@ nav:
     - specs/terminologie.md
     - specs/zangstuk-identificatie.md
     - specs/schrijfconventies.md
+    - specs/term-entry-sjabloon.md
     - specs/inhoudslevenscyclus.md
     - specs/repo-structuur.md
     - specs/zangstuk-formaat.md

@@ -202,7 +202,7 @@ Zonder landingsbewijs blijft de eis open — ook als hij al in dit plan staat.
 | Jargon → curated text + TermRef                             | idem (+ korte vermelding in `documentatie-eigendom` of terms-index indien nodig)            | **A.1**                       | Diff schrijfconventies                          | gedaan        |
 | Foutpad-eis (task / CLI / workflow)                         | `schrijfconventies.md` (rollen CLI/workflow/handleiding)                                    | **A.1**                       | Diff                                            | gedaan        |
 | Pagina-kopnorm (voor wie / wanneer / antwoord eerst)        | `schrijfconventies.md`                                                                      | **A.1**                       | Diff; dekt §5 van dit plan                      | gedaan        |
-| Term-entry-sjabloon (waartoe / gerelateerd / verder lezen)  | `schrijfconventies.md` **of** `bron/docs/terms/README.md` (nieuw)                           | **A.2**                       | Bestand bestaat + link vanuit schrijfconventies | gedaan        |
+| Term-entry-sjabloon (waartoe / gerelateerd / verder lezen)  | `bron/docs/specs/term-entry-sjabloon.md`                                                    | **A.2**                       | Bestand bestaat + link vanuit schrijfconventies | gedaan        |
 | Review-checklist voor contributors                          | `bron/docs/manuals/docs-bijdragen.md` (+ VSA `guides/tev2-docs.md` of manuals indien nodig) | **E.1** (mag met A meeliften) | Checklist-sectie in diff                        | gedaan (bron) |
 | Nav “Begrippenlijst” (indien akkoord §8.1)                  | `bron/mkdocs.yml` + `glossary.md` shell                                                     | **A.3**                       | Diff                                            | uitgesteld    |
 | Agent/contributor-reminder (niet normatief)                 | Korte pointer in `bron/AGENTS.md` en/of VSA `AGENTS.md` → schrijfconventies                 | **A** of **E.1**              | Diff; geen tweede normtekst                     | gedaan (bron) |
@@ -253,13 +253,13 @@ bij svg/parse/musicxml en als **faalvoorbeeld** in `reference/cli/validate.md`.
 | #   | Taak                                                                                                                                                                               | Acceptatie                                                                                 | Status                          |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------- |
 | A.1 | Schrijfconventies: persona’s P1–P7 + paginatypen-tabel + belofte “welwillende volwassenen” per type; jargon→curated+TermRef; foutpad-eis voor task/CLI/workflow; pagina-kopnorm §5 | Diff `schrijfconventies.md`; PR-body `Landing:`-regels voor matrix-rijen A.1; D1–D4 intact | gedaan                          |
-| A.2 | Term-entry-sjabloon: glossaryText / Notes / Ja-Nee / Motivatie (**waartoe**) / gerelateerd / verder lezen / §-link                                                                 | Bestand of sectie bestaat; link vanuit schrijfconventies; `Landing: A.2`                   | gedaan (`docs/terms/README.md`) |
+| A.2 | Term-entry-sjabloon: glossaryText / Notes / Ja-Nee / Motivatie (**waartoe**) / gerelateerd / verder lezen / §-link                                                                 | Bestand of sectie bestaat; link vanuit schrijfconventies; `Landing: A.2`                   | gedaan (`docs/specs/term-entry-sjabloon.md`) |
 | A.3 | Nav-label glossary: bijv. “Begrippenlijst” i.p.v. tweede “Terminologie” (alleen na akkoord §8.1)                                                                                   | mkdocs.yml + glossary-shelltekst; of rij `uitgesteld`                                      | **uitgesteld** (wacht §8.1)     |
 
 **Landing (fase A):**
 
 - `Landing: docs/specs/schrijfconventies.md` ← persona’s, paginatypen, toon, jargon, foutpad, kopnorm
-- `Landing: docs/terms/README.md` ← term-entry-sjabloon (+ link vanuit schrijfconventies)
+- `Landing: docs/specs/term-entry-sjabloon.md` ← term-entry-sjabloon (+ link vanuit schrijfconventies)
 - `Landing: docs/manuals/docs-bijdragen.md` ← review-checklist (E.1 meegelift)
 - `Landing: AGENTS.md` ← pointer (geen tweede normtekst)
 - A.3: uitgesteld tot akkoord open vraag §8.1
@@ -267,15 +267,15 @@ bij svg/parse/musicxml en als **faalvoorbeeld** in `reference/cli/validate.md`.
 
 
 
-### Fase B — Term entries (bron, daarna VSA-lokaal)
+### Fase B — Term entries (bron, daarna VSA-lokaal) — **gedaan** (2026-08-08)
 
 
-| #   | Taak                                                                                                                           | Acceptatie                                                                 |
-| --- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| B.1 | Herschrijf `representatie.md` naar sjabloon (incl. waartoe / gerelateerd / verder lezen); align `terminologie` §8; fix typo    | Geen drift glossaryText ↔ §8 ↔ body; A.2-sjabloon compleet                 |
-| B.2 | Verrijk `zangstuk.md` (Ja/Nee + Notes + waartoe/gerelateerd)                                                                   | Zelfde structuur als `afgeleide.md` / A.2                                  |
-| B.3 | Steekproef overige `docs/terms/*`: body herdefinieert niet; Notes zonder self-TermRef; ontbrekend “waartoe” aanvullen waar dun | Checklist in PR                                                            |
-| B.4 | VSA curated: dunne bodies + 1 voorbeeld + “verder lezen”; expliciet `@bron` waar org-term bedoeld is                           | tev2-docs / contributor-note                                               |
+| #   | Taak                                                                                                                           | Acceptatie                                                                 | Status                                                         |
+| --- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| B.1 | Herschrijf `representatie.md` naar sjabloon (incl. waartoe / gerelateerd / verder lezen); align `terminologie` §8; fix typo    | Geen drift glossaryText ↔ §8 ↔ body; A.2-sjabloon compleet                 | gedaan                                                         |
+| B.2 | Verrijk `zangstuk.md` (Ja/Nee + Notes + waartoe/gerelateerd)                                                                   | Zelfde structuur als `afgeleide.md` / A.2                                  | gedaan                                                         |
+| B.3 | Steekproef overige `docs/terms/*`: body herdefinieert niet; Notes zonder self-TermRef; ontbrekend “waartoe” aanvullen waar dun | Checklist in PR                                                            | gedaan (`exportmechanisme`; herkomst/exporttype al voldoende)  |
+| B.4 | VSA curated: dunne bodies + 1 voorbeeld + “verder lezen”; expliciet `@bron` waar org-term bedoeld is                           | tev2-docs / contributor-note                                               | gedaan (include-vsa, pitch-marker, vsa-scope + tev2-docs note) |
 
 
 
@@ -341,7 +341,7 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
       expertpagina’s mogen dichter met duidelijk “voor wie”.
 - [x] Jargon-regel staat in schrijfconventies: nodig jargon → curated text + TermRef.
 - [x] P0-demo-bug in VSA is weg.
-- [ ] `representatie` en `zangstuk` term-entries volgen sjabloon (incl. waartoe /
+- [x] `representatie` en `zangstuk` term-entries volgen sjabloon (incl. waartoe /
       gerelateerd / verder lezen) en matchen de spec.
 - [ ] Kern-task-guides P2 hebben voorbeeld + checklist + “wanneer” + foutpad.
 - [ ] Home (bron + VSA) routeren op persona en benoemen P7-niet-hier.
@@ -378,5 +378,6 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 | 2026-08-08 | §5a Landingsgarantie: matrix plan→canonieke plek + PR DoD `Landing:`                                                               |
 | 2026-08-08 | Fase 0 gedaan (VSA): succes-`validate` → `001_plain_text.vsa`                                                                      |
 | 2026-08-08 | Fase A gedaan: schrijfconventies + `terms/README.md` + checklist/AGENTS; A.3 uitgesteld (§8.1)                                     |
+| 2026-08-08 | Fase B gedaan: `representatie`/`zangstuk`/`exportmechanisme`; VSA curated steekproef + tev2-note                                   |
 
 

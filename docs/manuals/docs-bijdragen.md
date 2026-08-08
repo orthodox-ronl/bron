@@ -62,7 +62,7 @@ Zie [TEv2 in tool-docs](https://orthodox-groningen.github.io/VSA-tooling/guides/
 
 - [ ] `scripts\docs-build-tev2.cmd` groen (of CI `docs-pages` / docs-build)
 - [ ] Nieuwe/gewijzigde termen: curated text + TermRefs waar de term voorkomt
-      ([term-sjabloon](../terms/README.md); jargon alleen via glossary)
+      ([term-sjabloon](../specs/term-entry-sjabloon.md); jargon alleen via glossary)
 - [ ] Pagina voldoet aan [schrijfconventies](../specs/schrijfconventies.md):
       type/publiek, kopnorm (voor wie / wanneer / antwoord eerst), toon
       welwillende volwassene tenzij P5/P6; task/CLI/workflow hebben foutpad

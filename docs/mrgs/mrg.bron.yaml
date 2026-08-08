@@ -11,7 +11,7 @@ terminology:
   vsntag: "bron"
 scopes: []
 entries:
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "afgeleide"
     formPhrases:
       - "afgeleide"
@@ -128,12 +128,16 @@ entries:
       - "exportmechanismen"
     glossaryTerm: "Exportmechanisme"
     glossaryText: "De manier waarop een [samenstelling](@) een [bronbestand](@) of [afgeleide](@) ontsluit voor een lezersdoel, via een `:::include`-directive met een [exporttype](@)."
+    glossaryNotes:
+      - "Niet verwarren met [conversiemechanisme](@) (bestand → afgeleide in de toolketen)."
+      - "Voorbeeld: `:::include svg zoek=\"…\" :::` kiest exporttype `svg`."
     scopetag: "bron"
     locator: "exportmechanisme.md"
     navurl: "https://orthodox-groningen.github.io/bron/terms/exportmechanisme"
     headingids:
       - "exportmechanisme"
       - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:exportmechanisme"
     vsntag: "bron"
@@ -259,17 +263,18 @@ entries:
       - "representatie"
       - "representaties"
     glossaryTerm: "Representatie"
-    glossaryText: "Een bestand waarin een uitvoeringsvorm concreet is vastgelegd."
+    glossaryText: "Een bestand waarin een [uitvoeringsvorm](@) concreet is vastgelegd."
     glossaryNotes:
-      - "Er zijn verschillende *vormen* waarin dit kan worden vastgelegd, zoals [VSA](@), MusicXML of MXL, audio, een scan van een partituur, enz."
-      - "Er zijn verschillende *bestandsformaten* (extensies) die daarbij kunnen worden gebruikt, zoals `.vsa`, `.MusicXML`, `.MXL`, `.mp3`, `.pdf`, `.svg`, `.jpg`, etc."
-      - "Om een representatie van een [uitvoeringsvorm](@) te onderscheiden kun je de vraag stellen of het een bestand betref of niet."
+      - "Vormen: [vsa-notatie](@), scan van een partituur, MusicXML/MXL als bron, audio, e.d."
+      - "Onderscheid van [afgeleide](@): `.svg` of `.mxl` die een tool volledig uit een [bronbestand](@) herhaalt, is een [afgeleide](@), geen representatie."
+      - "Onder dezelfde [uitvoeringsvorm](@) mogen meerdere representaties bestaan (bijv. scan + getrouwe [vsa-bestand](@))."
     scopetag: "bron"
     locator: "representatie.md"
     navurl: "https://orthodox-groningen.github.io/bron/terms/representatie"
     headingids:
       - "representatie"
       - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:representatie"
     vsntag: "bron"
@@ -293,7 +298,7 @@ entries:
     termType: "concept"
     termid: "concept:samenstelling"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "source-entry"
     formPhrases:
       - "source-entry"
@@ -452,12 +457,17 @@ entries:
       - "zangstuk"
       - "zangstukken"
     glossaryTerm: "Zangstuk"
-    glossaryText: "Een liturgisch-muzikaal geheel met een stabiele `zangstuk-id`, waaronder nul of meer varianten bestaan."
+    glossaryText: "Een liturgisch-muzikaal geheel met een stabiele `zangstuk-id`, waaronder nul of meer [varianten](@) bestaan."
+    glossaryNotes:
+      - "Beantwoordt de vraag: *welk stuk in de liturgie?* (bijv. Cherubijnenhymne, 1e antifoon weekdagen)."
+      - "Een `.vsa`-bestand of een samenstelling is geen zangstuk — dat zijn [representatie](@) / [samenstelling](@)."
     scopetag: "bron"
     locator: "zangstuk.md"
     navurl: "https://orthodox-groningen.github.io/bron/terms/zangstuk"
     headingids:
       - "zangstuk"
+      - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:zangstuk"
     vsntag: "bron"

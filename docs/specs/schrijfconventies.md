@@ -46,7 +46,7 @@ expliciet markeren.
 | **Org-contract**             | Wat/wanneer mag deze export/conversie?           | Waartoe → wel/niet → parameters → problemen → CLI-brug                                                | `reference/exporttype-*`, `conversie-*`             |
 | **CLI man-page**             | Waartoe dient het commando, en wat doet het?     | Precies; synopsis; I/O; exit; goed+**fout** voorbeeld                                                 | VSA `reference/cli/`; bron `catalogus-cli`          |
 | **Workflow-guide**           | Waartoe de workflow? Hoe hangt de keten samen?   | Wanneer wel/niet; 2–3 paden; diagnose; **geen** flag-catalogus (link man-pages)                       | VSA guides (bijv. svg-export)                       |
-| **Term entry (curated)**     | Wat betekent dit? Waartoe? Gerelateerd? Verder?  | Zie [Term-entry-sjabloon](../terms/README.md)                                                         | `docs/terms/`, VSA `terminologie/`                  |
+| **Term entry (curated)**     | Wat betekent dit? Waartoe? Gerelateerd? Verder?  | Zie [Term-entry-sjabloon](term-entry-sjabloon.md)                                                         | `docs/terms/`, VSA `terminologie/`                  |
 | **Generated glossary**       | Overzicht + hover                                | Shelltekst; verschil glossary / termpagina / terminologie-spec                                        | `glossary.md`                                       |
 | **Integratie / ownership**   | Waar hoort welke repo?                           | Rollen, minimale keten                                                                                | documentatie-eigendom; consumer-site                |
 | **Non-normative plan**       | Wat overwegen we?                                | Statusbanner; wijkt nooit af van specs                                                                | `docs/plans/`                                       |
@@ -101,7 +101,7 @@ Per sectie (en bij PR-review):
 - Geen synoniemen die verwarring geven (R1–R5).
 - **Compact via TermRefs:** als een term in de glossary staat, herhaal de
   definitie niet in de lopende tekst; één TermRef volstaat (hover / termpagina).
-- Termpagina’s volgen het [Term-entry-sjabloon](../terms/README.md).
+- Termpagina’s volgen het [Term-entry-sjabloon](term-entry-sjabloon.md).
 
 | Term / frase            | Gebruik                                                                                                                                                                                           |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
