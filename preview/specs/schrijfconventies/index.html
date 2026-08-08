@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 21:49 CEST.
+  , gebouwd 2026-08-08 22:03 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -1277,6 +1277,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Publieken (persona’s)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personas-in-lezerstekst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona’s in lezerstekst
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2694,6 +2711,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Publieken (persona’s)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personas-in-lezerstekst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona’s in lezerstekst
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2981,7 +3015,18 @@ bij conflict geldt dit document boven plannen.</p>
 </tr>
 </tbody>
 </table>
-<p>Op Home/Starten: hard zeggen dat P7 hier niet bediend wordt (doorverwijzen).</p>
+<p>Op Home/Starten: hard zeggen dat <strong>koor / liturgie</strong> hier niet bediend wordt
+(doorverwijzen).</p>
+<h3 id="personas-in-lezerstekst">Persona’s in lezerstekst<a class="headerlink" href="#personas-in-lezerstekst" title="Permanent link">&para;</a></h3>
+<p>Ids <code>P1</code>–<code>P7</code> zijn <strong>interne labels</strong> (frontmatter, plannen, review). Op
+pagina’s die lezers zien (hubs, “Voor wie”, route-tabellen, admonitions):</p>
+<ul>
+<li>Gebruik de <strong>persona-naam</strong> (<code>Notatie-auteur</code>, <code>Bron-contentbeheerder</code>, …).</li>
+<li><strong>Niet</strong> alleen <code>P3</code>, <code>P4</code>, … — dat zegt een lezer niets.</li>
+<li>Optioneel in contributor-docs: <code>Notatie-auteur (P3)</code> of frontmatter
+  <code>P3 — Notatie-auteur</code>.</li>
+<li>Kolomkop op route-tabellen: <strong>Voor wie</strong> (niet “Persona” met alleen een code).</li>
+</ul>
 <hr />
 <h2 id="paginatypen">Paginatypen<a class="headerlink" href="#paginatypen" title="Permanent link">&para;</a></h2>
 <p>Mappen (<code>manuals/</code>, <code>specs/</code>, …) volgen <a href="../documentatie-eigendom/">documentatie-eigendom</a>.
@@ -3080,12 +3125,13 @@ in bron-referentie</strong> — link naar de man-page.</p>
 <h2 id="pagina-kopnorm">Pagina-kopnorm<a class="headerlink" href="#pagina-kopnorm" title="Permanent link">&para;</a></h2>
 <p>Elke gepubliceerde pagina (behalve puur gegenereerde shelltekst) begint met:</p>
 <ol>
-<li><strong>Voor wie</strong> (één zin of admonition; persona-id mag).</li>
+<li><strong>Voor wie</strong> (één zin of admonition; <strong>persona-naam</strong>, geen kale <code>P</code>-code).</li>
 <li><strong>Wanneer lees je dit</strong> (en wanneer <em>niet</em> — link naar het juiste type).</li>
 <li><strong>Antwoord eerst</strong> (1–3 zinnen), daarna diepte.</li>
 <li>Onderaan: <strong>Zie ook</strong> (how-to ↔ spec ↔ CLI ↔ term).</li>
 </ol>
-<p>Expertpagina’s (P5/P6) mogen dichter zijn, mits 1–2 duidelijk zijn.</p>
+<p>Expertpagina’s (docs-/tool-contributor, spec-/PR-reviewer) mogen dichter zijn,
+mits 1–2 duidelijk zijn.</p>
 <h3 id="frontmatter-doc_type-audience">Frontmatter <code>doc_type</code> / <code>audience</code><a class="headerlink" href="#frontmatter-doc_type-audience" title="Permanent link">&para;</a></h3>
 <p>Gebruik YAML-frontmatter op gepubliceerde pagina’s (behalve puur gegenereerde
 HRG-cellen). Niet verplicht voor MkDocs-nav; wél voor review en later tooling.</p>
@@ -3115,13 +3161,20 @@ HRG-cellen). Niet verplicht voor MkDocs-nav; wél voor review en later tooling.<
 </code></pre></div>
 <hr />
 <h2 id="lezerstest">Lezerstest<a class="headerlink" href="#lezerstest" title="Permanent link">&para;</a></h2>
+<p><strong>Staande regel:</strong> na schrijven of herschrijven <strong>nalezen alsof je de bedoelde
+lezer bent</strong>. Begrijp je zonder voorkennis van dit project wat de schrijver
+bedoelde? Zo nee: herschrijf tot dat wel zo is. Codes, afkortingen en
+interne ids (<code>P3</code>, <code>E.3</code>, …) horen niet in lezerstekst tenzij de pagina
+expliciet uitlegt wat ze betekenen.</p>
 <p>Per sectie (en bij PR-review):</p>
 <ol>
 <li>Welke vraag beantwoordt dit?</li>
 <li>Staat het antwoord eerst in gewone taal, daarna pas formele tabellen?</li>
 <li>Past de toon bij het paginatype en de primaire persona (welwillende volwassene
-   tenzij P5/P6)?</li>
+   tenzij docs-/tool-contributor of spec-/PR-reviewer)?</li>
 <li>Bij task guide / CLI / workflow: is er een <strong>foutpad</strong> (melding → oorzaak → fix)?</li>
+<li>Zou een lezer zonder dit document te kennen de labels en tabellen begrijpen
+   (geen kale <code>P3</code> / jargon zonder TermRef of uitleg)?</li>
 </ol>
 <hr />
 <h2 id="taal-en-terminologie">Taal en terminologie<a class="headerlink" href="#taal-en-terminologie" title="Permanent link">&para;</a></h2>
