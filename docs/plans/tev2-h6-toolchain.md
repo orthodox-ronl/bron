@@ -2,7 +2,7 @@
 
 | Veld        | Waarde                                      |
 | ----------- | ------------------------------------------- |
-| **Status**  | in-uitvoering                               |
+| **Status**  | afgerond                                    |
 | **Repo**    | bron + VSA-tooling                          |
 | **Scope**   | Hoofdonderwerp 6 (toolchain-parity)         |
 
@@ -27,3 +27,7 @@ contributor-docs gelijk tussen bron en VSA-tooling; versie-pins vastgelegd.
 - Contributor weet welk script voor snelle vs CI-parity preview
 - `docs-serve-tev2` toont glossary-hover zoals op Pages
 - Scriptmatrix in AGENTS/handleidingen synchroon
+
+## Vervolg (niet H6)
+
+Bredere TermRef-campagne: [tev2-termref-campagne.md](tev2-termref-campagne.md).

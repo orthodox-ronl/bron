@@ -1,10 +1,10 @@
 # TEv2 H4 — eenvoudige TermRefs (inventaris)
 
-| Veld               | Waarde                |
-| ------------------ | --------------------- |
-| **Status**         | gerealiseerd (H4); vervolg H5 |
-| **Repo**           | bron + VSA-tooling    |
-| **Scope**          | Hoofdonderwerp 4      |
+| Veld               | Waarde                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| **Status**         | afgerond (H4); vervolg H5 gedaan; daarna [bredere campagne](tev2-termref-campagne.md) |
+| **Repo**           | bron + VSA-tooling                                                                    |
+| **Scope**          | Hoofdonderwerp 4                                                                      |
 
 ## Doel
 

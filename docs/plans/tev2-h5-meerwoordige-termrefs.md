@@ -1,10 +1,10 @@
 # TEv2 H5 — meerwoordige terms + vereenvoudiging
 
-| Veld        | Waarde                                   |
-| ----------- | ---------------------------------------- |
-| **Status**  | in-uitvoering                            |
-| **Repo**    | VSA-tooling (primair); bron (conventies) |
-| **Scope**   | Hoofdonderwerp 5                         |
+| Veld        | Waarde                                                                            |
+| ----------- | --------------------------------------------------------------------------------- |
+| **Status**  | afgerond (H5-golf); vervolg: [bredere TermRef-campagne](tev2-termref-campagne.md) |
+| **Repo**    | VSA-tooling (primair); bron (conventies)                                          |
+| **Scope**   | Hoofdonderwerp 5                                                                  |
 
 ## Doel
 
@@ -27,5 +27,7 @@ de betekenis dragen; synoniembeleid (o.a. “klopt” → “geldig”).
 
 ## Niet in deze golf
 
-Volledige TermRef-campagne op alle history/spec-pagina’s.
-Toolchain: [tev2-h6-toolchain.md](tev2-h6-toolchain.md).
+Volledige TermRef-campagne op alle history/spec-pagina’s — gepland later:
+[tev2-termref-campagne.md](tev2-termref-campagne.md).
+
+Toolchain (afgerond): [tev2-h6-toolchain.md](tev2-h6-toolchain.md).
