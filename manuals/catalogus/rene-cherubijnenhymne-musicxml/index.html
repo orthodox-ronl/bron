@@ -1858,7 +1858,7 @@
   <span class="md-ellipsis">
     
   
-    Exporttype svg
+    Exporttype: embed SVG
   
 
     
@@ -2234,6 +2234,34 @@
     
   
     TEv2 H4 — eenvoudige TermRefs (inventaris)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plans/tev2-h5-meerwoordige-termrefs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TEv2 H5 — meerwoordige terms + vereenvoudiging
   
 
     
@@ -2661,7 +2689,7 @@ automatisch gegenereerd uit VSA hoort <strong>niet</strong> in git
 <li>bron: <code>sources/musicxml/groningen.mxl</code> + entry in yaml.</li>
 <li><strong>Samenstelling:</strong> vinkje “Downloadlink op liturgiepagina” → voegt
    <code>:::include mxl id:cherubijnenhymne/kastorski/groningen:::</code> toe.</li>
-<li><strong>Validatie:</strong> XML well-formed check (toekomst); <code>catalogus index validate</code>.</li>
+<li><strong>Validatie:</strong> XML well-formed check (toekomst); <a href="../../../reference/catalogus-cli/#catalogus-index-validate"><code>catalogus index validate</code></a>.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">GUI + handmatige bron-MXL</p>
@@ -2690,7 +2718,7 @@ Nog <strong>gepland</strong>: GUI voor representatie toevoegen, <strong>handmati
 <span class="w">    </span><span class="nt">copyright_status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vrij</span>
 <span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Handmatig</span><span class="nv"> </span><span class="s">geëxporteerd</span><span class="nv"> </span><span class="s">MusicXML;</span><span class="nv"> </span><span class="s">geen</span><span class="nv"> </span><span class="s">vsa</span><span class="nv"> </span><span class="s">musicxml-afgeleide&quot;</span>
 </code></pre></div>
-<p><strong>Niet</strong> committen: MXL gegenereerd met <code>vsa musicxml</code> — die hoort bij build-time
+<p><strong>Niet</strong> committen: MXL gegenereerd met <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/"><code>vsa musicxml</code></a> — die hoort bij build-time
 (<a href="../../../reference/conversie-vsa-musicxml/">conversie vsa musicxml</a>).</p>
 <h3 id="3-catalogus-representatie-id">3. Catalogus — representatie-id<a class="headerlink" href="#3-catalogus-representatie-id" title="Permanent link">&para;</a></h3>
 <p>Als Rene “mxl” of “MusicXML Groningen” als alias wil gebruiken, lost hij die
@@ -2708,7 +2736,7 @@ op via de catalogus
 :::include mxl lokaal:cherubijnenhymne/kastorski/groningen label=&quot;Download partituur (MusicXML)&quot;:::
 </code></pre></div>
 <p>Resolve:
-<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md"><code>vsa resolve-catalogus</code></a>.</p>
+<a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a>.</p>
 <p><strong>Beperking:</strong> <code>mxl</code> / <code>coria</code> op <strong><code>bron:</code></strong> catalogus-pad — <code>.vsa</code> buiten
 content-root. Handmatig MXL in repo blijft geldig; de build levert een
 download-URL naar static.</p>
@@ -2805,7 +2833,7 @@ representaties, één uitvoeringsvorm.</p>
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-08-02
+        Bijgewerkt: 2026-08-08
         
       </p>
       

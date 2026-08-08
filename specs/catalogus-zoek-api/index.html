@@ -1949,7 +1949,7 @@
   <span class="md-ellipsis">
     
   
-    Exporttype svg
+    Exporttype: embed SVG
   
 
     
@@ -2325,6 +2325,34 @@
     
   
     TEv2 H4 — eenvoudige TermRefs (inventaris)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/tev2-h5-meerwoordige-termrefs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TEv2 H5 — meerwoordige terms + vereenvoudiging
   
 
     
@@ -3146,7 +3174,8 @@ ambiguïteit — bedoeld voor review-UI, CLI <code>--lijst</code>, en als basis 
 <li>Consumenten met herhaalde zoekacties: bouw <strong><code>AliasIndex</code> eenmaal</strong>, roep <code>zoek</code> /
   <code>zoek_kandidaten</code> met <code>index=</code> aan (niet per call <code>*_met_roots</code>).</li>
 </ul>
-<p><strong>Status:</strong> <code>zoek_kandidaten()</code>, <code>zoek()</code>, CLI <strong><code>catalogus zoek</code></strong> en VSA-consumenten
+<p><strong>Status:</strong> <code>zoek_kandidaten()</code>, <code>zoek()</code>, CLI
+<a href="../../reference/catalogus-cli/#catalogus-zoek"><code>catalogus zoek</code></a> en VSA-consumenten
 zijn geïmplementeerd. Ranking en metadata-dekking worden verder uitgebreid per PR.</p>
 <hr />
 <h2 id="consumentenmatrix">Consumentenmatrix<a class="headerlink" href="#consumentenmatrix" title="Permanent link">&para;</a></h2>
@@ -3167,13 +3196,13 @@ zijn geïmplementeerd. Ranking en metadata-dekking worden verder uitgebreid per 
 <td><code>result.path</code></td>
 </tr>
 <tr>
-<td><code>vsa resolve-catalogus</code></td>
+<td><a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a></td>
 <td>markdown <code>default</code></td>
 <td><code>.vsa</code> (default)</td>
 <td><code>result.catalogus_pad</code></td>
 </tr>
 <tr>
-<td><code>catalogus zoek</code> CLI</td>
+<td><a href="../../reference/catalogus-cli/#catalogus-zoek"><code>catalogus zoek</code></a> CLI</td>
 <td>flags</td>
 <td><code>.vsa</code> (default)</td>
 <td>stdout <code>catalogus_pad</code></td>
@@ -3188,7 +3217,7 @@ zijn geïmplementeerd. Ranking en metadata-dekking worden verder uitgebreid per 
 </table>
 <p><code>result.path</code> is <strong>leidend</strong>; geen verplichte <code>resolve_vsa_path</code>-verificatie daarna.</p>
 <hr />
-<h2 id="cli-catalogus-zoek">CLI — <code>catalogus zoek</code><a class="headerlink" href="#cli-catalogus-zoek" title="Permanent link">&para;</a></h2>
+<h2 id="cli-catalogus-zoek">CLI — <a href="../../reference/catalogus-cli/#catalogus-zoek"><code>catalogus zoek</code></a><a class="headerlink" href="#cli-catalogus-zoek" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 python -m catalogus.cli zoek &quot;Troparion&quot; ^
   --content-root ..\VSA-demo\content-source ^
@@ -3291,8 +3320,8 @@ winnende herkomst — geen stille keuze.</p>
 <hr />
 <h2 id="consumentencontract-vsa-tooling">Consumentencontract (VSA-tooling)<a class="headerlink" href="#consumentencontract-vsa-tooling" title="Permanent link">&para;</a></h2>
 <p>Normatieve stappen hieronder; concrete CLI-aanroep:
-<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md"><code>vsa resolve-catalogus</code></a>
-en <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md">parochie-lokaal VSA</a>.</p>
+<a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a>
+en <a href="https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/">parochie-lokaal VSA</a>.</p>
 <h3 id="markdown-include-zoek">Markdown — <code>:::include zoek="…"</code><a class="headerlink" href="#markdown-include-zoek" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Lees <code>default</code> (+ <code>bronnen</code>) uit markdown-frontmatter → <code>ZoekContext</code>.</li>
@@ -3309,7 +3338,7 @@ en <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/gui
 <p>VSA-tooling (<code>@include-vsa</code>, <code>vsa validate</code>): <strong><code>AmbiguousError</code></strong> → <strong>fout</strong>;
 <strong><code>ook_gevonden_in_bron</code></strong> → <strong>waarschuwing</strong> (build mag doorgaan). Zie
 <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/include-vsa.md">VSA — include-vsa</a>
-en <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md"><code>vsa validate</code></a>.</p>
+en <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/"><code>vsa validate</code></a>.</p>
 <hr />
 <h2 id="foutmodel">Foutmodel<a class="headerlink" href="#foutmodel" title="Permanent link">&para;</a></h2>
 <table>
@@ -3359,7 +3388,7 @@ en <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/ref
 <td><strong>Geïmplementeerd</strong> (basis)</td>
 </tr>
 <tr>
-<td><code>catalogus zoek</code> CLI</td>
+<td><a href="../../reference/catalogus-cli/#catalogus-zoek"><code>catalogus zoek</code></a> CLI</td>
 <td><strong>Geïmplementeerd</strong></td>
 </tr>
 <tr>
@@ -3367,7 +3396,7 @@ en <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/ref
 <td><strong>Geïmplementeerd</strong></td>
 </tr>
 <tr>
-<td><code>vsa resolve-catalogus</code></td>
+<td><a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a></td>
 <td><strong>Geïmplementeerd</strong></td>
 </tr>
 <tr>
@@ -3444,7 +3473,7 @@ en <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/ref
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-08-02
+        Bijgewerkt: 2026-08-08
         
       </p>
       
