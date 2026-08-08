@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 21:22 CEST.
+  , gebouwd 2026-08-08 21:24 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -1598,15 +1598,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consumentencontract-vsa-tooling" class="md-nav__link">
+  <a href="#consumentencontract-vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Consumentencontract (VSA-tooling)
+        Consumentencontract (vsa CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Consumentencontract (VSA-tooling)">
+    <nav class="md-nav" aria-label="Consumentencontract (vsa CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.&#34;&gt;VSA-tooling)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2873,15 +2873,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consumentencontract-vsa-tooling" class="md-nav__link">
+  <a href="#consumentencontract-vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Consumentencontract (VSA-tooling)
+        Consumentencontract (vsa CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Consumentencontract (VSA-tooling)">
+    <nav class="md-nav" aria-label="Consumentencontract (vsa CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.&#34;&gt;VSA-tooling)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2983,15 +2983,15 @@
 <hr />
 <h2 id="doel">Doel<a class="headerlink" href="#doel" title="Permanent link">&para;</a></h2>
 <p>Gegeven een <strong>vrije zoekstring</strong>, optionele <strong>liturgische context</strong> (<code>default.*</code>) en optioneel
-<strong>bestandsextensie-filter</strong> levert de catalogus <strong>exact één</strong> brondocument, uitgedrukt als:</p>
+<strong>bestandsextensie-filter</strong> levert de catalogus <strong>exact één</strong> <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a>, uitgedrukt als:</p>
 <ol>
-<li><strong><code>Path</code></strong> — absoluut pad naar het brondocument op schijf;</li>
+<li><strong><code>Path</code></strong> — absoluut pad naar het <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> op schijf;</li>
 <li><strong><code>catalogus_pad</code></strong> — logische referentie <code>lokaal:…</code> of <code>bron:…</code> (niet <code>id:</code>);</li>
 <li><strong><code>VsaFileEntry</code></strong> — <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke ids</a> + <a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a> (ook bij niet-<code>.vsa</code>-bestanden).</li>
 </ol>
-<p><strong>Geen</strong> relatieve paden in het contract. Lokale registratie loopt via manifesten onder
+<p><strong>Geen</strong> relatieve paden in het contract. Lokale registratie loopt via <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifesten</a> onder
 <code>content-root/lokaal/</code>.</p>
-<p>Default <strong><code>bestandsextensie</code></strong>: <code>{".vsa"}</code> — verplicht voor <code>@include-vsa</code> en exporttypes
+<p>Default <strong><code>bestandsextensie</code></strong>: <code>{".vsa"}</code> — verplicht voor <code>@include-vsa</code> en <a href="/bron/preview/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttypen</a>
 <code>svg</code> / <code>coria</code> / <code>mxl</code>. Andere extensies (bijv. <code>.pdf</code>) alleen op expliciet verzoek.</p>
 <hr />
 <h2 id="parochie-context-normatief">Parochie-context (normatief)<a class="headerlink" href="#parochie-context-normatief" title="Permanent link">&para;</a></h2>
@@ -3026,7 +3026,7 @@
 <p><strong>Cross-origin hint:</strong> wanneer de gekozen match <strong><code>origin=lokaal</code></strong> is en dezelfde query
 (+ context + extensie) <strong>ook</strong> minstens één match in <strong>bron</strong> opleverde, vult
 <strong><code>ZoekResult.ook_gevonden_in_bron</code></strong> de bijbehorende <strong><code>catalogus_pad</code></strong>-waarden.
-Doel: auteur alert maken om te verifiëren dat de parochie-lokale versie de bedoelde is.
+Doel: auteur alert maken om te verifiëren dat de <a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">parochie-lokale representatie</a> de bedoelde is.
 Geen wijziging van de gekozen match.</p>
 <p>Consumenten tonen de hint als <strong>waarschuwing</strong> (stderr, validate-warning, <code>--verbose</code>),
 niet als fout.</p>
@@ -3064,7 +3064,7 @@ voor de zoekstring; zie <a href="../catalogus-samenstelling-zangstuk/">catalogus
 <tr>
 <td><strong><code>ZoekContext</code></strong></td>
 <td><code>default.*</code> in <strong>markdown-sessie</strong> of <strong><code>default:</code></strong> in <strong>ouder-<code>.vsa</code></strong></td>
-<td><em>Deze</em> zoekactie / <em>deze</em> samenstelling: welk feest, welke default-uitvoeringsvorm, …</td>
+<td><em>Deze</em> zoekactie / <em>deze</em> <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>: welk feest, welke default-<a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>, …</td>
 </tr>
 <tr>
 <td><strong>Catalog-metadata</strong></td>
@@ -3073,7 +3073,7 @@ voor de zoekstring; zie <a href="../catalogus-samenstelling-zangstuk/">catalogus
 </tr>
 </tbody>
 </table>
-<p><strong>Markdown-samenstelling:</strong> Rene zet <code>default.gelegenheid</code> in de <strong>sessie-</strong>frontmatter;
+<p><strong>Markdown-<a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>:</strong> Rene zet <code>default.gelegenheid</code> in de <strong>sessie-</strong>frontmatter;
 <code>zoek="Troparion"</code> blijft een liturgische rol — zie
 <a href="../catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.</p>
 <p><strong>Standalone / samengesteld <code>.vsa</code>:</strong> dezelfde <code>ZoekContext</code>-sleutels onder <strong><code>default:</code></strong>
@@ -3113,7 +3113,7 @@ Geen verplichting om <code>gelegenheid</code> in het <strong>included</strong> s
 <tr>
 <td><code>uitvoeringsvorm</code></td>
 <td><code>str \| None</code></td>
-<td>Default uitvoeringsvorm (<a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> toegestaan op invoer)</td>
+<td>Default <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> (<a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> toegestaan op invoer)</td>
 </tr>
 <tr>
 <td><code>gelegenheidsdatum</code></td>
@@ -3123,7 +3123,7 @@ Geen verplichting om <code>gelegenheid</code> in het <strong>included</strong> s
 <tr>
 <td><code>referentie</code></td>
 <td><code>str \| None</code></td>
-<td>Herkomst-filter (<a href="../terminologie/">§9</a>); geen pad</td>
+<td><a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">Herkomst</a>-filter (<a href="../terminologie/">§9</a>); geen pad</td>
 </tr>
 <tr>
 <td><code>bronnen</code></td>
@@ -3217,7 +3217,7 @@ sibling <code>bronnen:</code> (<code>bron</code> | <code>lokaal</code> | lijst).
 <tr>
 <td><code>entry</code></td>
 <td><code>VsaFileEntry</code></td>
-<td>Gekozen brondocument</td>
+<td>Gekozen <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a></td>
 </tr>
 <tr>
 <td><code>catalogus_pad</code></td>
@@ -3294,8 +3294,8 @@ ambiguïteit — bedoeld voor review-UI, CLI <code>--lijst</code>, en als basis 
 <td><code>ZoekResult</code></td>
 </tr>
 <tr>
-<td>&gt;1 (zelfde herkomst)</td>
-<td><code>AmbiguousError</code> — <code>candidates</code> uit die herkomst</td>
+<td>&gt;1 (zelfde <a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a>)</td>
+<td><code>AmbiguousError</code> — <code>candidates</code> uit die <a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a></td>
 </tr>
 </tbody>
 </table>
@@ -3454,16 +3454,16 @@ winnende herkomst — geen stille keuze.</p>
 </tr>
 <tr>
 <td><code>has_ook_in_bron</code></td>
-<td>Controleren of parochie-lokaal stuk bedoeld is; anders <code>@include-vsa lokaal=…</code> / <code>id=…</code> expliciet</td>
+<td>Controleren of <a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">parochie-lokaal</a> stuk bedoeld is; anders <code>@include-vsa lokaal=…</code> / <code>id=…</code> expliciet</td>
 </tr>
 <tr>
 <td>Geen match</td>
-<td>Manifest/index; <code>default.gelegenheid</code>; disambiguation in zoekstring</td>
+<td><a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">Manifest</a>/index; <code>default.gelegenheid</code>; disambiguation in zoekstring</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="consumentencontract-vsa-tooling">Consumentencontract (VSA-tooling)<a class="headerlink" href="#consumentencontract-vsa-tooling" title="Permanent link">&para;</a></h2>
+<h2 id="consumentencontract-vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling">Consumentencontract (<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>)<a class="headerlink" href="#consumentencontract-vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling" title="Permanent link">&para;</a></h2>
 <p>Normatieve stappen hieronder; concrete CLI-aanroep:
 <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a>
 en <a href="https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/">parochie-lokaal VSA</a>.</p>
@@ -3479,8 +3479,8 @@ en <a href="https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lok
 <li><code>result = zoek_met_roots(…, bestandsextensie=frozenset({".vsa"}))</code>.</li>
 <li>Expand leest <code>result.path</code>, strip frontmatter doel, splice body in-memory.</li>
 </ol>
-<p><strong>Gedeelde stap:</strong> <code>zoek</code> / <code>zoek_kandidaten</code>; geen aparte zoekimplementatie in VSA-tooling.</p>
-<p>VSA-tooling (<code>@include-vsa</code>, <code>vsa validate</code>): <strong><code>AmbiguousError</code></strong> → <strong>fout</strong>;
+<p><strong>Gedeelde stap:</strong> <code>zoek</code> / <code>zoek_kandidaten</code>; geen aparte zoekimplementatie in <a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>.</p>
+<p><a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> (<code>@include-vsa</code>, <code>vsa validate</code>): <strong><code>AmbiguousError</code></strong> → <strong>fout</strong>;
 <strong><code>ook_gevonden_in_bron</code></strong> → <strong>waarschuwing</strong> (build mag doorgaan). Zie
 <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/include-vsa.md">VSA — include-vsa</a>
 en <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/"><code>vsa validate</code></a>.</p>

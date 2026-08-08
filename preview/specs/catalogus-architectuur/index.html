@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 21:22 CEST.
+  , gebouwd 2026-08-08 21:24 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -1476,10 +1476,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fase-3-id-gebaseerde-includes-vsa-tooling" class="md-nav__link">
+  <a href="#fase-3-id-gebaseerde-includes-vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fase 3 — id-gebaseerde includes (VSA-tooling)
+        Fase 3 — id-gebaseerde includes (vsa CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling)
       
     </span>
   </a>
@@ -2646,10 +2646,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fase-3-id-gebaseerde-includes-vsa-tooling" class="md-nav__link">
+  <a href="#fase-3-id-gebaseerde-includes-vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fase 3 — id-gebaseerde includes (VSA-tooling)
+        Fase 3 — id-gebaseerde includes (vsa CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling)
       
     </span>
   </a>
@@ -2707,9 +2707,9 @@
 <p>Status: geïmplementeerd (basis).</p>
 <p>Normatief resolver-contract: <a href="../terminologie/">terminologie §2.8</a>.</p>
 <h2 id="doel">Doel<a class="headerlink" href="#doel" title="Permanent link">&para;</a></h2>
-<p>De <strong>catalogus</strong>-tool beantwoordt: <em>welk zangstuk (variant, uitvoeringsvorm, representatie)
-bedoel je?</em> Invoer mag gangbare namen (<code>Groningen</code>, <code>Касторский</code>); opslag blijft
-<a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> (<code>groningen</code>, <code>kastorski</code>).</p>
+<p>De <strong>catalogus</strong>-tool beantwoordt: <em>welk <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> (<a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>, <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>,
+<a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a>) bedoel je?</em> Invoer mag gangbare namen (<code>Groningen</code>, <code>Касторский</code>);
+opslag blijft <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> (<code>groningen</code>, <code>kastorski</code>).</p>
 <h2 id="plaatsing">Plaatsing<a class="headerlink" href="#plaatsing" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2737,8 +2737,8 @@ bedoel je?</em> Invoer mag gangbare namen (<code>Groningen</code>, <code>Кас�
 </tr>
 </tbody>
 </table>
-<p>Bron-repo workflows kunnen <code>catalogus</code> draaien <strong>zonder</strong> VSA-tooling.
-VSA-tooling wordt in fase 3 <strong>consument</strong> van de library (id-gebaseerde includes).</p>
+<p><a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">Bron-repository</a>-workflows kunnen <code>catalogus</code> draaien <strong>zonder</strong> <a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>.
+<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> wordt in fase 3 <strong>consument</strong> van de library (id-gebaseerde includes).</p>
 <h2 id="datastroom">Datastroom<a class="headerlink" href="#datastroom" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>sequenceDiagram
   participant User
@@ -2782,13 +2782,13 @@ worden bij index-build gerapporteerd via <a href="../../reference/catalogus-cli/
    pragmatisch ook op zangstuk-niveau geïndexeerd (demo: <code>1e antifoon weekdagen</code>).</li>
 <li><strong><a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">Aliassen</a> op <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></strong> — minimaal; <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a>-passthrough.</li>
 </ol>
-<h2 id="fase-3-id-gebaseerde-includes-vsa-tooling">Fase 3 — id-gebaseerde includes (VSA-tooling)<a class="headerlink" href="#fase-3-id-gebaseerde-includes-vsa-tooling" title="Permanent link">&para;</a></h2>
+<h2 id="fase-3-id-gebaseerde-includes-vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling">Fase 3 — id-gebaseerde includes (<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>)<a class="headerlink" href="#fase-3-id-gebaseerde-includes-vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling" title="Permanent link">&para;</a></h2>
 <p>Status: <strong>geïmplementeerd (basis)</strong>.</p>
 <div class="highlight"><pre><span></span><code>:::include svg id:antifoon-1-weekdagen/liturgikon-weekdagen/Hemelum:::
 :::include svg lokaal:…:::
 :::include svg bron:troparion-zondag-toon-1/groningen:::
 </code></pre></div>
-<p>VSA-tooling importeert <code>catalogus</code> en lost catalogus-paden op tijdens de
+<p><a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> importeert <code>catalogus</code> en lost catalogus-paden op tijdens de
 markdown-include-stap. Relatieve pad-includes blijven werken. Zie
 <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md">directives</a>.</p>
 <h2 id="fase-4-sjablonen-sessies-resolve">Fase 4 — sjablonen, sessies, resolve<a class="headerlink" href="#fase-4-sjablonen-sessies-resolve" title="Permanent link">&para;</a></h2>
@@ -2797,7 +2797,7 @@ markdown-include-stap. Relatieve pad-includes blijven werken. Zie
 <p>Parochie-<strong>sjablonen</strong> zijn markdown met:</p>
 <ul>
 <li><strong><code>default.gelegenheidstype</code></strong> (geen individuele feesten in het sjabloon);</li>
-<li><strong><code>:::include &lt;exporttype&gt; zoek="…"</code></strong> — liturgische rol;</li>
+<li><strong><code>:::include</code></strong> met een <a href="/bron/preview/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a> en <code>zoek="…"</code> — liturgische rol;</li>
 <li><strong>sessie</strong>: Rene voegt <strong><code>default.gelegenheid</code></strong> toe;</li>
 <li>uitkomst na <strong><code>vsa resolve-catalogus</code></strong>: catalogus-pad in dezelfde includes.</li>
 </ul>
@@ -2820,7 +2820,7 @@ markdown-include-stap. Relatieve pad-includes blijven werken. Zie
 <code>sjablonen/goddelijke-liturgie-groningen.md</code>, sessie
 <code>samenstellingen/geboorte-moeder-gods-2026.md</code> (mixed session: bron <code>liturgikon</code> +
 lokaal <code>groningen</code>).</p>
-<p><strong>Beperking:</strong> <code>coria</code> / <code>mxl</code> op <code>bron:</code> catalogus-pad — <code>.vsa</code> buiten content-root.</p>
+<p><strong>Beperking:</strong> <a href="/bron/preview/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttypen</a> <code>coria</code> / <code>mxl</code> op <code>bron:</code> catalogus-pad — <code>.vsa</code> buiten content-root.</p>
 <p>Consument <strong><code>@include-vsa zoek=</code></strong> in <code>.vsa</code>-brontekst gebruikt dezelfde <code>catalogus.zoek</code>-API
 (in-memory expand; zie <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>).</p>
 <h2 id="later-fase-5">Later (fase 5+)<a class="headerlink" href="#later-fase-5" title="Permanent link">&para;</a></h2>

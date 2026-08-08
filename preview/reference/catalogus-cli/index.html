@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 21:22 CEST.
+  , gebouwd 2026-08-08 21:24 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2857,7 +2857,7 @@ gevuld zijn — toon met <strong><code>--verbose</code></strong> (waarschuwing o
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli resolve zangstuk &quot;1e antifoon weekdagen&quot; --content-root ..\VSA-demo\content-source
 python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen --variant liturgikon-weekdagen Hemelum --content-root ..\VSA-demo\content-source
 </code></pre></div>
-<p>Niveaus: <code>zangstuk</code>, <code>variant</code>, <code>uitvoeringsvorm</code>, <code>representatie</code>.</p>
+<p>Niveaus: <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>, <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>, <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>, <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a>.</p>
 <p>Scope-flags:</p>
 <table>
 <thead>
@@ -2868,19 +2868,19 @@ python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen 
 </thead>
 <tbody>
 <tr>
-<td>zangstuk</td>
+<td><a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a></td>
 <td>—</td>
 </tr>
 <tr>
-<td>variant</td>
+<td><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a></td>
 <td><code>--zangstuk</code></td>
 </tr>
 <tr>
-<td>uitvoeringsvorm</td>
+<td><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a></td>
 <td><code>--zangstuk</code>, <code>--variant</code></td>
 </tr>
 <tr>
-<td>representatie</td>
+<td><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></td>
 <td><code>--zangstuk</code>, <code>--variant</code>, <code>--uitvoeringsvorm</code></td>
 </tr>
 </tbody>
@@ -2900,7 +2900,7 @@ python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen 
 </tr>
 <tr>
 <td><code>--bron-root</code></td>
-<td>Bron-repository (met <code>zangstukken/</code>)</td>
+<td><a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">Bron-repository</a> (met <code>zangstukken/</code>)</td>
 </tr>
 <tr>
 <td><code>--fixture-root</code></td>
@@ -2933,11 +2933,12 @@ python -m catalogus.cli aliases sync --dry-run --bron-root .
 <p>De index wordt in het geheugen opgebouwd uit:</p>
 <ol>
 <li><strong>Mappad</strong> — mapnamen onder <code>lokaal/&lt;zangstuk-id&gt;/&lt;variant-id&gt;/&lt;uitvoeringsvorm-id&gt;/</code></li>
-<li><strong>Manifesten</strong> — <code>variant.yaml</code>, <code>uitvoeringsvorm.yaml</code> (<code>aliases:</code> per entiteit)</li>
+<li><strong><a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">Manifesten</a></strong> — <code>variant.yaml</code>, <code>uitvoeringsvorm.yaml</code> (<code>aliases:</code> per entiteit)</li>
 <li><strong>Bron</strong> — <code>zangstukken/&lt;zangstuk-id&gt;/zangstuk.yaml</code> (<code>title</code>, <code>sources[].id</code>)</li>
 <li><strong>Alias-blokken</strong> — <code>catalogus/data/alias-blokken.yaml</code> breidt zoektermen uit (runtime)</li>
 </ol>
-<p>Zie <a href="../../manuals/parochie-lokaal-zangstukken/">parochie-lokaal zangstukken</a> voor manifest-structuur.</p>
+<p>Zie <a href="../../manuals/parochie-lokaal-zangstukken/">parochie-lokaal zangstukken</a> voor
+<a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifest</a>-structuur.</p>
 <h2 id="resolver-contract">Resolver-contract<a class="headerlink" href="#resolver-contract" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Normaliseer invoer: <code>strip()</code> + Unicode <code>casefold()</code></li>
@@ -2977,7 +2978,7 @@ python -m catalogus.cli aliases sync --dry-run --bron-root .
 <h2 id="relatie-tot-vsa">Relatie tot VSA<a class="headerlink" href="#relatie-tot-vsa" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Fase 2:</strong> <code>catalogus</code> staat los van <code>vsa</code>; build/includes gebruikten relatieve paden.</li>
-<li><strong>Fase 3:</strong> VSA-tooling importeert <code>catalogus</code> bij <code>id:…</code> / <code>lokaal:…</code> / <code>bron:…</code>-includes in markdown.</li>
+<li><strong>Fase 3:</strong> <a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> importeert <code>catalogus</code> bij <code>id:…</code> / <code>lokaal:…</code> / <code>bron:…</code>-includes in markdown.</li>
 <li><strong>Fase 4:</strong> <code>:::include zoek=</code> / <code>@include-vsa zoek=</code> → <strong><code>catalogus.zoek</code></strong>
   → catalogus-pad — <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a> (<strong>geïmplementeerd</strong>, basis).</li>
 </ul>
