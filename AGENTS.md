@@ -29,6 +29,10 @@ Normatieve glossary: `docs/specs/terminologie.md` · Vier niveaus: `zangstuk-id`
 
 **Vermijden:** `uv-id`, afkorting `uv`, **uitvoeringsalternatief**, impliciet `variant-id: standaard`.
 
+Docs-prose (persona’s, paginatypen, jargon→TermRef, foutpaden, term-sjabloon):
+[schrijfconventies](docs/specs/schrijfconventies.md) en
+[term-entry-sjabloon](docs/terms/README.md).
+
 ---
 
 ## Ontwikkelomgeving
@@ -116,6 +120,8 @@ docs/                 # MkDocs → GitHub Pages
 | Document              | Pad                                   |
 | --------------------- | ------------------------------------- |
 | Terminologie          | `docs/specs/terminologie.md`          |
+| Schrijfconventies     | `docs/specs/schrijfconventies.md`     |
+| Term-entry-sjabloon   | `docs/terms/README.md`                |
 | Zangstuk-formaat      | `docs/specs/zangstuk-formaat.md`      |
 | Repo-structuur        | `docs/specs/repo-structuur.md`        |
 | Inhoudslevenscyclus   | `docs/specs/inhoudslevenscyclus.md`   |
