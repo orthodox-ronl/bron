@@ -1,3 +1,8 @@
+---
+doc_type: normative-spec
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
+
 # Schrijfconventies
 
 Richtlijnen voor documentatie in de `bron`-repository en verwante tool-repo's
@@ -46,7 +51,7 @@ expliciet markeren.
 | **Org-contract**             | Wat/wanneer mag deze export/conversie?           | Waartoe → wel/niet → parameters → problemen → CLI-brug                                                | `reference/exporttype-*`, `conversie-*`             |
 | **CLI man-page**             | Waartoe dient het commando, en wat doet het?     | Precies; synopsis; I/O; exit; goed+**fout** voorbeeld                                                 | VSA `reference/cli/`; bron `catalogus-cli`          |
 | **Workflow-guide**           | Waartoe de workflow? Hoe hangt de keten samen?   | Wanneer wel/niet; 2–3 paden; diagnose; **geen** flag-catalogus (link man-pages)                       | VSA guides (bijv. svg-export)                       |
-| **Term entry (curated)**     | Wat betekent dit? Waartoe? Gerelateerd? Verder?  | Zie [Term-entry-sjabloon](term-entry-sjabloon.md)                                                         | `docs/terms/`, VSA `terminologie/`                  |
+| **Term entry (curated)**     | Wat betekent dit? Waartoe? Gerelateerd? Verder?  | Zie [Term-entry-sjabloon](term-entry-sjabloon.md)                                                     | `docs/terms/`, VSA `terminologie/`                  |
 | **Generated glossary**       | Overzicht + hover                                | Shelltekst; verschil glossary / termpagina / terminologie-spec                                        | `glossary.md`                                       |
 | **Integratie / ownership**   | Waar hoort welke repo?                           | Rollen, minimale keten                                                                                | documentatie-eigendom; consumer-site                |
 | **Non-normative plan**       | Wat overwegen we?                                | Statusbanner; wijkt nooit af van specs                                                                | `docs/plans/`                                       |
@@ -71,8 +76,24 @@ Elke gepubliceerde pagina (behalve puur gegenereerde shelltekst) begint met:
 
 Expertpagina’s (P5/P6) mogen dichter zijn, mits 1–2 duidelijk zijn.
 
-Optioneel later: YAML-frontmatter `doc_type` / `audience` (niet verplicht voor
-MkDocs-nav).
+### Frontmatter `doc_type` / `audience`
+
+Gebruik YAML-frontmatter op gepubliceerde pagina’s (behalve puur gegenereerde
+HRG-cellen). Niet verplicht voor MkDocs-nav; wél voor review en later tooling.
+
+| Veld        | Waarde                                                                                                                                                                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `doc_type`  | Paginatype uit de tabel hierboven, kebab-case: `task-guide`, `normative-spec`, `wayfinding-hub`, `cli-man-page`, `org-contract`, `workflow-guide`, `user-story`, `onboarding`, `term-entry`, `generated-glossary`, `integratie`, `plan` |
+| `audience`  | Primaire lezer(s) als **herkenbare tekst**: `P3 — Notatie-auteur` (niet alleen `P3`). Meerdere: scheiden met `; `                                                                                                                       |
+
+Voorbeeld:
+
+```yaml
+---
+doc_type: task-guide
+audience: "P2 — Bron-contentbeheerder"
+---
+```
 
 ---
 

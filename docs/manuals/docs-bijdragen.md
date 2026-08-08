@@ -72,5 +72,7 @@ Zie [TEv2 in tool-docs](https://orthodox-groningen.github.io/VSA-tooling/guides/
 - [ ] Pagina voldoet aan [schrijfconventies](../specs/schrijfconventies.md):
       kopnorm (voor wie / wanneer / antwoord eerst), toon welwillende volwassene
       tenzij P5/P6; task/CLI/workflow hebben **foutpad**
+- [ ] Frontmatter waar van toepassing: `doc_type` + `audience` als
+      `P3 — Notatie-auteur` (niet alleen `P3`)
 - [ ] Tabellen uitgelijnd
 - [ ] Geen afgeleide SVG/MXL in bron committen

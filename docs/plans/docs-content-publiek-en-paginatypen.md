@@ -196,25 +196,25 @@ Zonder landingsbewijs blijft de eis open — ook als hij al in dit plan staat.
 ### Landingsmatrix
 
 
-| Eis (uit dit plan)                                          | Canonieke bestemming                                                                        | Landt in fase                 | Bewijs in PR                                    | Status        |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------- | ------------- |
-| Persona’s P1–P7 + paginatypen + toon welwillende volwassene | `bron/docs/specs/schrijfconventies.md`                                                      | **A.1**                       | Diff + sectiekop in schrijfconventies           | gedaan        |
-| Jargon → curated text + TermRef                             | idem (+ korte vermelding in `documentatie-eigendom` of terms-index indien nodig)            | **A.1**                       | Diff schrijfconventies                          | gedaan        |
-| Foutpad-eis (task / CLI / workflow)                         | `schrijfconventies.md` (rollen CLI/workflow/handleiding)                                    | **A.1**                       | Diff                                            | gedaan        |
-| Pagina-kopnorm (voor wie / wanneer / antwoord eerst)        | `schrijfconventies.md`                                                                      | **A.1**                       | Diff; dekt §5 van dit plan                      | gedaan        |
-| Term-entry-sjabloon (waartoe / gerelateerd / verder lezen)  | `bron/docs/specs/term-entry-sjabloon.md`                                                    | **A.2**                       | Bestand bestaat + link vanuit schrijfconventies | gedaan        |
-| Review-checklist voor contributors                          | `bron/docs/manuals/docs-bijdragen.md` (+ VSA `guides/tev2-docs.md` of manuals indien nodig) | **E.1** (mag met A meeliften) | Checklist-sectie in diff                        | gedaan (bron) |
-| Nav “Begrippenlijst” (indien akkoord §8.1)                  | `bron/mkdocs.yml` + `glossary.md` shell                                                     | **A.3**                       | Diff                                            | uitgesteld    |
-| Agent/contributor-reminder (niet normatief)                 | Korte pointer in `bron/AGENTS.md` en/of VSA `AGENTS.md` → schrijfconventies                 | **A** of **E.1**              | Diff; geen tweede normtekst                     | gedaan (bron) |
-| VSA-specifieke uitvoering                                   | Bestanden in VSA-tooling (fase 0 / D / B.4); pointer-plan blijft stub                       | **0 / D / B.4**               | PR in VSA-repo                                  | 0 gedaan      |
+| Eis (uit dit plan)                                                    | Canonieke bestemming                                                                        | Landt in fase                 | Bewijs in PR                                    | Status        |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------- | ------------- |
+| Persona’s P1–P7 + paginatypen + toon welwillende volwassene           | `bron/docs/specs/schrijfconventies.md`                                                      | **A.1**                       | Diff + sectiekop in schrijfconventies           | gedaan        |
+| Jargon → curated text + TermRef                                       | idem (+ korte vermelding in `documentatie-eigendom` of terms-index indien nodig)            | **A.1**                       | Diff schrijfconventies                          | gedaan        |
+| Foutpad-eis (task / CLI / workflow)                                   | `schrijfconventies.md` (rollen CLI/workflow/handleiding)                                    | **A.1**                       | Diff                                            | gedaan        |
+| Pagina-kopnorm (voor wie / wanneer / antwoord eerst)                  | `schrijfconventies.md`                                                                      | **A.1**                       | Diff; dekt §5 van dit plan                      | gedaan        |
+| Term-entry-sjabloon (waartoe / gerelateerd / verder lezen)            | `bron/docs/specs/term-entry-sjabloon.md`                                                    | **A.2**                       | Bestand bestaat + link vanuit schrijfconventies | gedaan        |
+| Review-checklist voor contributors                                    | `bron/docs/manuals/docs-bijdragen.md` (+ VSA `guides/tev2-docs.md` of manuals indien nodig) | **E.1** (mag met A meeliften) | Checklist-sectie in diff                        | gedaan (bron) |
+| Nav “Begrippenlijst” (HRG) + rol `terminologie.md` als samenhang-spec | `bron/mkdocs.yml` + `glossary.md` + titel `terminologie.md`                                 | **A.3**                       | Diff                                            | gedaan        |
+| Agent/contributor-reminder (niet normatief)                           | Korte pointer in `bron/AGENTS.md` en/of VSA `AGENTS.md` → schrijfconventies                 | **A** of **E.1**              | Diff; geen tweede normtekst                     | gedaan (bron) |
+| VSA-specifieke uitvoering                                             | Bestanden in VSA-tooling (fase 0 / D / B.4); pointer-plan blijft stub                       | **0 / D / B.4**               | PR in VSA-repo                                  | 0 gedaan      |
 
 Nieuwe eisen die tijdens uitvoering opduiken: **eerst** rij toevoegen aan deze
 matrix (of direct in schrijfconventies landen), **daarna** content wijzigen.
 
 ### Definition of Done per fase-PR
 
-- [x] Landingsmatrix-rijen voor fase A: gedaan of uitgesteld (A.3 wacht §8.1).
-- [x] Geen “alleen in het plan”-norm meer die al in A had moeten landen (behalve A.3).
+- [x] Landingsmatrix-rijen voor fase A: allemaal gedaan (incl. A.3 Begrippenlijst/Zangstukmodel).
+- [x] Geen “alleen in het plan”-norm meer die al in A had moeten landen.
 - [ ] Content-PR’s na A citeren schrijfconventies (of term-sjabloon), niet dit plan,
       als acceptatiebron.
 
@@ -247,14 +247,14 @@ bij svg/parse/musicxml en als **faalvoorbeeld** in `reference/cli/validate.md`.
 
 
 
-### Fase A — Kaders aanscherpen (bron) — **gedaan** (2026-08-08), A.3 uitgesteld
+### Fase A — Kaders aanscherpen (bron) — **gedaan** (2026-08-08)
 
 
-| #   | Taak                                                                                                                                                                               | Acceptatie                                                                                 | Status                                       |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------- |
-| A.1 | Schrijfconventies: persona’s P1–P7 + paginatypen-tabel + belofte “welwillende volwassenen” per type; jargon→curated+TermRef; foutpad-eis voor task/CLI/workflow; pagina-kopnorm §5 | Diff `schrijfconventies.md`; PR-body `Landing:`-regels voor matrix-rijen A.1; D1–D4 intact | gedaan                                       |
-| A.2 | Term-entry-sjabloon: glossaryText / Notes / Ja-Nee / Motivatie (**waartoe**) / gerelateerd / verder lezen / §-link                                                                 | Bestand of sectie bestaat; link vanuit schrijfconventies; `Landing: A.2`                   | gedaan (`docs/specs/term-entry-sjabloon.md`) |
-| A.3 | Nav-label glossary: bijv. “Begrippenlijst” i.p.v. tweede “Terminologie” (alleen na akkoord §8.1)                                                                                   | mkdocs.yml + glossary-shelltekst; of rij `uitgesteld`                                      | **uitgesteld** (wacht §8.1)                  |
+| #   | Taak                                                                                                                                                                               | Acceptatie                                                                                 | Status                                                     |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| A.1 | Schrijfconventies: persona’s P1–P7 + paginatypen-tabel + belofte “welwillende volwassenen” per type; jargon→curated+TermRef; foutpad-eis voor task/CLI/workflow; pagina-kopnorm §5 | Diff `schrijfconventies.md`; PR-body `Landing:`-regels voor matrix-rijen A.1; D1–D4 intact | gedaan                                                     |
+| A.2 | Term-entry-sjabloon: glossaryText / Notes / Ja-Nee / Motivatie (**waartoe**) / gerelateerd / verder lezen / §-link                                                                 | Bestand of sectie bestaat; link vanuit schrijfconventies; `Landing: A.2`                   | gedaan (`docs/specs/term-entry-sjabloon.md`)               |
+| A.3 | Nav HRG: “Begrippenlijst”; `terminologie.md` = Zangstukmodel; terms in `docs/terms/` + TermRefs                                                                                    | mkdocs.yml + glossary + titel + TermRefs in terminologie                                   | **gedaan**                                                 |
 
 **Landing (fase A):**
 
@@ -262,7 +262,7 @@ bij svg/parse/musicxml en als **faalvoorbeeld** in `reference/cli/validate.md`.
 - `Landing: docs/specs/term-entry-sjabloon.md` ← term-entry-sjabloon (+ link vanuit schrijfconventies)
 - `Landing: docs/manuals/docs-bijdragen.md` ← review-checklist (E.1 meegelift)
 - `Landing: AGENTS.md` ← pointer (geen tweede normtekst)
-- A.3: uitgesteld tot akkoord open vraag §8.1
+- A.3: Begrippenlijst-nav + Zangstukmodel-titel + TermRefs in terminologie
 
 
 
@@ -383,12 +383,19 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 ## 8. Open vragen voor akkoord
 
 1. **Nav-hernoaming** glossary → “Begrippenlijst”: akkoord, of liever “Glossary” houden?
+   → **Beslist:** HRG-nav = **Begrippenlijst**. Spec `terminologie.md` blijft
+   (mag hernoemd); beschrijft **samenhang** van begrippen. Definities +
+   term-eigen samenhang → curated texts in `docs/terms/` + TermRefs.
 2. **Schrijfconventies aanscherpen** (fase A) vóór pagina-rewrites, of parallel met B1?
    → **Beslist door uitvoering:** A eerst (nu gedaan); B volgt.
 3. **User-guide VSA**: inkorten (D.2) of tijdelijk `not_in_nav` / archief?
+   → **Beslist:** voorlopig **houden** in nav (tour zoals D.2).
 4. **Frontmatter `doc_type` / `audience`**: nu meenemen, of alleen checklist in prose?
+   → **Beslist:** **meenemen**. `audience` als herkenbare tekst, bijv.
+   `P3 — Notatie-auteur` (niet alleen `P3`).
 5. Scope **alleen bron** eerst, of bron+VSA in één programma met gescheiden PR’s
   (aanbevolen: gescheiden PR’s, één programmaplan = dit document)?
+   → **Beslist door uitvoering:** gescheiden PR’s, één plan in bron.
 
 ---
 
@@ -408,6 +415,7 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 | 2026-08-08 | Fase C gedaan: P2 task guides + Home/Starten persona-router + pad/`zoek=`-brug                                                     |
 | 2026-08-08 | Fase D gedaan (VSA): hubs, user-guide tour, validation, overview, NL-nav, CLI validate/svg; Home persona-router                    |
 | 2026-08-08 | Fase E: E.1 lezerstest in checklist; E.2 TermRef-steekproef (4 pagina’s); E.3 uitgesteld                                           |
-| 2026-08-08 | TermRef-campagne tweede golf: repo-structuur, identificatie, catalogus-sjabloon, conversie/exporttypes                            |
+| 2026-08-08 | TermRef-campagne tweede golf: repo-structuur, identificatie, catalogus-sjabloon, conversie/exporttypes                             |
+| 2026-08-08 | §8 beslist: Begrippenlijst-nav; user-guide houden; frontmatter `doc_type`/`audience` met persona-naam; terminologie=samenhang      |
 
 

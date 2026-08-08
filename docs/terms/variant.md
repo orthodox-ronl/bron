@@ -22,9 +22,17 @@ van hetzelfde zangstuk.
 
 ## Motivatie
 
-Omdat een [zangstuk](@) een vaste plaats heeft in de liturgie, en we afhankelijk van de gelegenheid 
+Omdat een [zangstuk](@) een vaste plaats heeft in de liturgie, en we afhankelijk van de gelegenheid
 (zon- of weekdag, feestdag, ...) verschillende melodien willen gebruiken, is het nodig om die te onderscheiden.
 Zo kunnen we dan spreken over Troparen voor zondagen op toon X, weekdagen, en voor verschillende feest- of gedenkdagen.
-Ook willen we bij gelegenheid kunnen kiezen tussen de Cherubijnenhymne van Fatajev, 
+Ook willen we bij gelegenheid kunnen kiezen tussen de Cherubijnenhymne van Fatajev,
 Kastorski, Bortnjanski, Lvovsky Tchikhinashvili, Rachmaninov en vele anderen.
 Of de varianten van het Trisagion voor al dan niet bisschoppelijke diensten.
+
+## Gerelateerd
+
+- [zangstuk](@) — liturgische identiteit waaronder deze [variant](@) valt
+- [uitvoeringsvorm](@), [representatie](@) — lagere niveaus
+- [herkomst](@) — traditie / componist
+- [Zangstukmodel, paragraaf 6](../specs/terminologie.md#6-variant)
+- Disambiguatie: [§21](../specs/terminologie.md#21-disambiguatie-variant)

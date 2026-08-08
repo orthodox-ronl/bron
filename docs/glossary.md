@@ -1,16 +1,19 @@
 ---
-title: "Overzicht"
+title: "Begrippenlijst"
+doc_type: generated-glossary
+audience: "P6 — Spec-/PR-reviewer; P5 — Docs-/tool-contributor"
 ---
 
-# Overzicht
+# Begrippenlijst
 
-Deze pagina toont de **mensleesbare glossary** van org-brede begrippen. De
-tabel wordt gevuld door de TEv2-pipeline (`hrgt`) vanuit de curated terms in
+Deze pagina toont de **mensleesbare begrippenlijst** (HRG) van org-brede termen.
+De tabel wordt gevuld door de TEv2-pipeline (`hrgt`) vanuit de curated texts in
 `docs/terms/`. Zonder die build kan de tabel leeg of onvolledig lijken; lokaal:
 `scripts\docs-build-tev2.cmd`.
 
-Normatieve uitleg en gebruiksregels staan in
-[Terminologie (specificatie)](specs/terminologie.md).
+**Samenhang en criteria** (vier niveaus, R1–R5): zie
+[Zangstukmodel](specs/terminologie.md). Per term: hover (TermRef) of de
+term-entry onder `docs/terms/`.
 
 | Term | Definitie |
 | ---- | --------- |

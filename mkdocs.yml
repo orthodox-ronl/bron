@@ -77,7 +77,7 @@ nav:
   - Specificaties:
     - Overzicht: specs/index.md
     - specs/documentatie-eigendom.md
-    - specs/terminologie.md
+    - Zangstukmodel: specs/terminologie.md
     - specs/zangstuk-identificatie.md
     - specs/schrijfconventies.md
     - specs/term-entry-sjabloon.md
@@ -98,7 +98,7 @@ nav:
     - reference/exporttype-mxl.md
     - reference/brontypes-validatie.md
     - reference/catalogus-cli.md
-  - Terminologie:
+  - Begrippenlijst:
     - Overzicht: glossary.md
   - Plannen:
     - Overzicht: plans/README.md

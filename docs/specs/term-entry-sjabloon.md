@@ -36,8 +36,11 @@ over waar nodig.
 2. **Ja/Nee-tabel** (of gelijkwaardige afbakening): wat telt wel / niet.
 3. **Motivatie (`## Motivatie`)** — beantwoordt *waartoe bestaat dit begrip?*
    (wat kun je ermee wat je zonder niet kunt?).
-4. **Gerelateerd / verder lezen** — TermRefs naar verwante terms + link naar de
-   canonieke paragraaf in `terminologie.md` (bijv. `Zie ook: … §N`).
+4. **Gerelateerd / verder lezen** — verplicht: TermRefs naar verwante terms **vanuit
+   het gezichtspunt van deze term** (wat hangt eraan vast? wat is het niet?), plus
+   link naar de canonieke paragraaf in [terminologie.md](terminologie.md) /
+   Zangstukmodel (bijv. `Zie ook: … §N`). De termpagina vertelt de samenhang lokaal;
+   het Zangstukmodel geeft het overzicht over alle niveaus.
 
 ### 3. Wat niet
 
