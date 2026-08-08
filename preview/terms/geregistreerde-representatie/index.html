@@ -93,8 +93,8 @@
             
   
   <strong>Preview</strong>
-   — branch <code>docs/professionalisering-vervolg</code>
-  , gebouwd 2026-08-08 08:35 CEST.
+   — branch <code>docs/hrg-termrefs-en-contentplan</code>
+  , gebouwd 2026-08-08 14:47 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -520,7 +520,7 @@
   <span class="md-ellipsis">
     
   
-    Overzicht
+    Lokaal ontwikkelen
   
 
     
@@ -1209,6 +1209,34 @@
     
   
     Schrijfconventies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specs/term-entry-sjabloon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Term-entry-sjabloon (curated texts)
   
 
     
@@ -2146,6 +2174,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../plans/tev2-termref-campagne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TEv2 — bredere TermRef-campagne (later)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/docs-content-publiek-en-paginatypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs-content: publiek, paginatypen en werkplan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../plans/ci-architectuur/" class="md-nav__link">
         
   
@@ -2377,7 +2461,7 @@
 
 
 <h1 id="geregistreerde-representatie">Geregistreerde representatie<a class="headerlink" href="#geregistreerde-representatie" title="Permanent link">&para;</a></h1>
-<p>Een <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een uitvoeringsvorm concreet is vastgelegd.">representatie</a> is <strong>geregistreerd</strong> als er een <a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> in de <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> bestaat die haar koppelt via <code>file:</code>, <code>access:</code> of <code>status:</code>.</p>
+<p>Een <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> is <strong>geregistreerd</strong> als er een <a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> in de <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> bestaat die haar koppelt via <code>file:</code>, <code>access:</code> of <code>status:</code>.</p>
 <table>
 <thead>
 <tr>
@@ -2402,7 +2486,7 @@
 </table>
 <p>Het tegenovergestelde is een <a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">parochie-lokale representatie</a>. De overgang van parochie-lokaal naar geregistreerd noemen we <a href="/bron/preview/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">promotie</a>.</p>
 <h2 id="motivatie">Motivatie<a class="headerlink" href="#motivatie" title="Permanent link">&para;</a></h2>
-<p>Parochies kunnen lokaal materiaal ontwikkelen zonder het direct in de <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> te plaatsen. Door het onderscheid geregistreerd/niet-geregistreerd formeel te maken, weten parochies op welk materiaal ze kunnen bouwen: geregistreerde <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een uitvoeringsvorm concreet is vastgelegd.">representaties</a> zijn stabiel, vindbaar via de catalogus en beschikbaar voor alle parochies. <a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">Parochie-lokale representaties</a> zijn dat niet.</p>
+<p>Parochies kunnen lokaal materiaal ontwikkelen zonder het direct in de <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> te plaatsen. Door het onderscheid geregistreerd/niet-geregistreerd formeel te maken, weten parochies op welk materiaal ze kunnen bouwen: geregistreerde <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a> zijn stabiel, vindbaar via de catalogus en beschikbaar voor alle parochies. <a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">Parochie-lokale representaties</a> zijn dat niet.</p>
 <p>Het onderscheid maakt ook duidelijk <em>wanneer</em> lokaal werk klaar is om te delen: op het moment van <a href="/bron/preview/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">promotie</a> wordt het geregistreerd en daarmee deel van de gemeenschappelijke basis.</p>
 <p>Zie ook: <a href="../../specs/terminologie/#14-geregistreerde-representatie">Terminologie, paragraaf 14</a>.</p>
 
