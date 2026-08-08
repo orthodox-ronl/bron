@@ -1,3 +1,7 @@
+---
+doc_type: normative-spec
+audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
+---
 # Inhoudslevenscyclus
 
 Status: specificatie v1 (juni 2026). Beschrijft de keten van brondocumenten via

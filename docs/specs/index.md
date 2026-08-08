@@ -1,3 +1,7 @@
+---
+doc_type: wayfinding-hub
+audience: "P6 — Spec-/PR-reviewer; P5 — Docs-/tool-contributor"
+---
 # Overzicht
 
 Hier staan de **normatieve** organisatiedocumenten van orthodox-groningen. Ze
@@ -8,7 +12,7 @@ van ze te kopiëren.
 | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | [Documentatie-eigendom](documentatie-eigendom.md)                                                | Waar org-specs mogen staan, hoe stubs werken, en waarom je geen tweede volledige kopie in een tool-repo zet.         |
 | [Zangstukmodel](terminologie.md)                                                                 | Vier niveaus, criteria en **samenhang**; gebruiksregels R1–R5. Definities ook in `docs/terms/`.                      |
-| [Zangstuk-identificatie](zangstuk-identificatie.md)                                              | Beknopte index naar ids/aliassen; aanvulling op het Zangstukmodel.                                                   |
+| [Zangstuk-identificatie](zangstuk-identificatie.md)                                              | Beknopte index naar ids/[aliassen](@); aanvulling op het Zangstukmodel.                                              |
 | [Begrippenlijst](../glossary.md)                                                                 | HRG-tabel (hoverdefinities) uit curated texts.                                                                       |
 | [Schrijfconventies](schrijfconventies.md)                                                        | Schrijfstijl, persona’s/paginatypen, jargon/TermRefs en opbouw van contractpagina’s.                                 |
 | [Term-entry-sjabloon](term-entry-sjabloon.md)                                                    | Structuur voor curated texts in `docs/terms/` (waartoe, Ja/Nee, gerelateerd).                                        |

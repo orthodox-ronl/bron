@@ -1,3 +1,7 @@
+---
+doc_type: onboarding
+audience: "P2 — Bron-contentbeheerder; P5 — Docs-/tool-contributor"
+---
 # Starten — lokaal ontwikkelen
 
 Deze pagina helpt je om de [bron-repository](@) en de documentatie **lokaal**

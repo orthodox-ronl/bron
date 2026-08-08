@@ -1,3 +1,7 @@
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # Docs-content: publiek, paginatypen en werkplan
 
 

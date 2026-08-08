@@ -1,3 +1,7 @@
+---
+doc_type: org-contract
+audience: "P6 — Spec-/PR-reviewer; P2 — Bron-contentbeheerder"
+---
 # Brontypes en validatie
 
 Overzicht van validatieregels per brontype in `zangstukken/`.

@@ -1,3 +1,7 @@
+---
+doc_type: wayfinding-hub
+audience: "P1 — Parochie-docs-maintainer; P2 — Bron-contentbeheerder; P5 — Docs-/tool-contributor"
+---
 # Documentatie — bron repository
 
 Welkom bij de documentatie van de **bron**-repository: de centrale bron van

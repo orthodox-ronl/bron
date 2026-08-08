@@ -1,3 +1,7 @@
+---
+doc_type: org-contract
+audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
+---
 # Conversie: vsa musicxml
 
 Contract voor het conversiemechanisme

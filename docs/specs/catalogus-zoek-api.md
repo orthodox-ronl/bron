@@ -1,3 +1,7 @@
+---
+doc_type: normative-spec
+audience: "P5 — Docs-/tool-contributor"
+---
 # Catalogus — zoek-API (contract)
 
 Status: **normatief contract**; **`catalogus.zoek`** **geïmplementeerd** (basis).
@@ -22,7 +26,7 @@ Gegeven een **vrije zoekstring**, optionele **liturgische context** (`default.*`
 
 1. **`Path`** — absoluut pad naar het brondocument op schijf;
 2. **`catalogus_pad`** — logische referentie `lokaal:…` of `bron:…` (niet `id:`);
-3. **`VsaFileEntry`** — canonieke ids + herkomst (ook bij niet-`.vsa`-bestanden).
+3. **`VsaFileEntry`** — [canonieke ids](@) + [herkomst](@) (ook bij niet-`.vsa`-bestanden).
 
 **Geen** relatieve paden in het contract. Lokale registratie loopt via manifesten onder
 `content-root/lokaal/`.
@@ -65,12 +69,12 @@ niet als fout.
 ## Zoekgedrag (abstract)
 
 De API specificeert **niet** welke yaml-velden geïndexeerd worden. Implementatie doorzoekt
-alle teksten en velden die de catalogus uit manifesten, mapnamen, ids, aliassen en
+alle teksten en velden die de catalogus uit [manifesten](@), mapnamen, ids, [aliassen](@) en
 liturgische metadata kent.
 
 1. Normaliseer `query` ([§2.8](terminologie.md)).
 2. Verzamel kandidaten waar genormaliseerde query matcht op doorzoekbare tekst (titels,
-   aliassen, id-slugs, optionele metadata — ranking in implementatie-PR).
+   [aliassen](@), id-slugs, optionele metadata — ranking in implementatie-PR).
 3. Pas **`ZoekContext`**-filters toe (`gelegenheid`, `toon`, `uitvoeringsvorm`, …).
 4. Pas **`bestandsextensie`** toe op `entry.path.suffix`.
 5. Uitkomst (strict modus **`zoek`**, na parochie-voorrang):
@@ -89,10 +93,10 @@ voor de zoekstring; zie [catalogus-samenstelling-zangstuk.md](catalogus-samenste
 
 Zoeken gebruikt **twee** soorten context; die zijn **complementair**, geen dubbeling:
 
-| Laag                 | Waar                                                                      | Rol                                                                                   |
-| -------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| **`ZoekContext`**    | `default.*` in **markdown-sessie** of **`default:`** in **ouder-`.vsa`**  | *Deze* zoekactie / *deze* samenstelling: welk feest, welke default-uitvoeringsvorm, … |
-| **Catalog-metadata** | `zangstuk.yaml`, `variant.yaml`, `uitvoeringsvorm.yaml`, titels, aliassen | Geïndexeerd materiaal; **`ZoekContext` filtert** welke kandidaten passen              |
+| Laag                 | Waar                                                                           | Rol                                                                                   |
+| -------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| **`ZoekContext`**    | `default.*` in **markdown-sessie** of **`default:`** in **ouder-`.vsa`**       | *Deze* zoekactie / *deze* samenstelling: welk feest, welke default-uitvoeringsvorm, … |
+| **Catalog-metadata** | `zangstuk.yaml`, `variant.yaml`, `uitvoeringsvorm.yaml`, titels, [aliassen](@) | Geïndexeerd materiaal; **`ZoekContext` filtert** welke kandidaten passen              |
 
 **Markdown-samenstelling:** Rene zet `default.gelegenheid` in de **sessie-**frontmatter;
 `zoek="Troparion"` blijft een liturgische rol — zie
@@ -115,15 +119,15 @@ Module: `catalogus.zoek` (pakket **catalogus** in bron-repo).
 
 Liturgische context; spiegelt `default.*` uit markdown- of `.vsa`-frontmatter.
 
-| Veld                | Type              | Betekenis                                              |
-| ------------------- | ----------------- | ------------------------------------------------------ |
-| `gelegenheid`       | `str \| None`     | Canoniek gelegenheid-id (sessie)                       |
-| `gelegenheidstype`  | `str \| None`     | `vast-feest` \| `zondag-cyclus`                        |
-| `toon`              | `str \| None`     | Zondagstoonsysteem (canoniek of invoer)                |
-| `uitvoeringsvorm`   | `str \| None`     | Default uitvoeringsvorm (alias toegestaan op invoer)   |
-| `gelegenheidsdatum` | `str \| None`     | `"MM-DD"`                                              |
-| `referentie`        | `str \| None`     | Herkomst-filter ([§9](terminologie.md)); geen pad      |
-| `bronnen`           | `frozenset[str]`  | `"bron"`, `"lokaal"` — default beide                   |
+| Veld                | Type              | Betekenis                                                 |
+| ------------------- | ----------------- | --------------------------------------------------------- |
+| `gelegenheid`       | `str \| None`     | Canoniek gelegenheid-id (sessie)                          |
+| `gelegenheidstype`  | `str \| None`     | `vast-feest` \| `zondag-cyclus`                           |
+| `toon`              | `str \| None`     | Zondagstoonsysteem (canoniek of invoer)                   |
+| `uitvoeringsvorm`   | `str \| None`     | Default uitvoeringsvorm ([alias](@) toegestaan op invoer) |
+| `gelegenheidsdatum` | `str \| None`     | `"MM-DD"`                                                 |
+| `referentie`        | `str \| None`     | Herkomst-filter ([§9](terminologie.md)); geen pad         |
+| `bronnen`           | `frozenset[str]`  | `"bron"`, `"lokaal"` — default beide                      |
 
 Factory:
 
@@ -142,10 +146,10 @@ sibling `bronnen:` (`bron` \| `lokaal` \| lijst).
 
 Één kandidaat na query-, context- en bestandsextensie-filter.
 
-| Veld            | Type           | Betekenis                          |
-| --------------- | -------------- | ---------------------------------- |
-| `entry`         | `VsaFileEntry` | Canonieke ids + pad + `origin`     |
-| `catalogus_pad` | `str`          | `lokaal:…` / `bron:…`              |
+| Veld            | Type           | Betekenis                           |
+| --------------- | -------------- | ----------------------------------- |
+| `entry`         | `VsaFileEntry` | [Canonieke ids](@) + pad + `origin` |
+| `catalogus_pad` | `str`          | `lokaal:…` / `bron:…`               |
 
 ### `ZoekLijstResult`
 

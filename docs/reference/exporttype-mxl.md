@@ -1,3 +1,7 @@
+---
+doc_type: org-contract
+audience: "P4 — Consumer-site builder; P1 — Parochie-docs-maintainer"
+---
 # Exporttype: MXL-download
 
 Contract voor het **mxl**-[exporttype](@): downloadlink naar MusicXML (`.mxl`) voor

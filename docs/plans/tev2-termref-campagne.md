@@ -1,3 +1,7 @@
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # TEv2 — bredere TermRef-campagne
 
 | Veld        | Waarde                                                         |
@@ -59,14 +63,15 @@ catalogus-pad blijven uncured jargon tot eigen PR).
 
 ## Backlog (later)
 
-1. `catalogus-architectuur.md`, `catalogus-zoek-api.md`, `catalogus-cli.md` (selectief)
-2. `zangstuk-formaat.md` / overige reference densify
-3. Dunne manuals / `rene-*` stories (selectief)
-4. VSA-tooling tool-docs waar org-termen bare blijven (`@bron`)
-5. Frontmatter `doc_type`/`audience` roll-out op bestaande pagina’s
+1. ~~Frontmatter `doc_type`/`audience` roll-out op bestaande pagina’s~~ **gedaan** (alle MkDocs-nav)
+2. `catalogus-architectuur.md`, `catalogus-zoek-api.md`, `catalogus-cli.md` (selectief TermRefs)
+3. `zangstuk-formaat.md` / overige reference densify (TermRefs)
+4. Dunne manuals / `rene-*` stories (selectief TermRefs)
+5. VSA-tooling tool-docs waar org-termen bare blijven (`@bron`)
 6. Alleen inkorten waar hover de definitie al dekt (schrijfconventies)
 7. `docs-build-tev2` / TermRef-check groen houden
 8. Geen normatieve betekenis wijzigen zonder glossary-PR
+9. E.3 optioneel: `catalogus-cli` splitsen (groot)
 
 ## Niet in scope
 

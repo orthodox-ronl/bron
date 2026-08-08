@@ -1,19 +1,23 @@
+---
+doc_type: user-story
+audience: "P1 — Parochie-docs-maintainer"
+---
 # Verhaal 3 — Rene en Nana maken de Cherubijnenhymne org-breed beschikbaar
 
 *Het lokale stuk uit [verhaal 2](rene-cherubijnenhymne-lokaal.md) bevalt;
 andere parochies zouden het ook moeten kunnen gebruiken. Rene en Nana besluiten
-een **pull request** op **bron** te openen — met dezelfde canonieke ids als
+een **pull request** op **bron** te openen — met dezelfde [canonieke ids](@) als
 lokaal, zodat bestaande samenstellingen blijven werken.*
 
 ---
 
 ## Situatie
 
-| Lokaal (parochie)                              | Doel in bron                                      |
-| ---------------------------------------------- | ------------------------------------------------- |
-| `lokaal/cherubijnenhymne/kastorski/groningen/` | `zangstukken/cherubijnenhymne/` + nested manifest |
-| PDF (+ later VSA) onder `repr/`                | `sources/scan/` en `sources/vsa/`                 |
-| Aliassen in yaml                               | Zelfde aliassen in org-brede manifesten           |
+| Lokaal (parochie)                              | Doel in bron                                          |
+| ---------------------------------------------- | ----------------------------------------------------- |
+| `lokaal/cherubijnenhymne/kastorski/groningen/` | `zangstukken/cherubijnenhymne/` + nested manifest     |
+| PDF (+ later VSA) onder `repr/`                | `sources/scan/` en `sources/vsa/`                     |
+| [Aliassen](@) in yaml                          | Zelfde [aliassen](@) in org-brede [manifesten](@)     |
 
 Promotie-procedure:
 [parochie-lokaal § Promotie](../parochie-lokaal-zangstukken.md#promotie-naar-bron-repository).

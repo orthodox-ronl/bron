@@ -1,3 +1,7 @@
+---
+doc_type: task-guide
+audience: "P2 — Bron-contentbeheerder"
+---
 # Bronvariant toevoegen
 
 !!! note "Voor wie / wanneer"

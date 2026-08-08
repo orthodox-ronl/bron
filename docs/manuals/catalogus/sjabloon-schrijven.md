@@ -1,3 +1,7 @@
+---
+doc_type: task-guide
+audience: "P1 — Parochie-docs-maintainer"
+---
 # Sjabloon schrijven (catalogus)
 
 Praktische handleiding voor **Rene** en andere parochie-beheerders. Normatief contract:

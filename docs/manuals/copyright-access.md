@@ -1,3 +1,7 @@
+---
+doc_type: task-guide
+audience: "P2 — Bron-contentbeheerder"
+---
 # Copyright en access
 
 !!! note "Voor wie / wanneer"

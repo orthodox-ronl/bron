@@ -1,3 +1,7 @@
+---
+doc_type: task-guide
+audience: "P1 — Parochie-docs-maintainer; P2 — Bron-contentbeheerder"
+---
 # Parochie-lokaal zangstukken
 
 Handleiding voor [parochie-lokale representaties](@) in een Hugo/content-source-repo,
@@ -34,7 +38,7 @@ content-source/
                     └── <representatie-id>.<ext>
 ```
 
-**Canonieke ids:** `^[a-z0-9_-]+$` — zie [terminologie](../specs/terminologie.md)
+**[Canonieke ids](@):** `^[a-z0-9_-]+$` — zie [terminologie](../specs/terminologie.md)
 (`zangstuk-id` → `variant-id` → `uitvoeringsvorm-id` → `representatie-id`).
 
 **Referentie-implementatie ([VSA-tooling](@) / demo):**
@@ -108,7 +112,7 @@ Resolve naar catalogus-pad via
 
 ## Promotie naar bron-repository
 
-1. Behoud **canonieke ids** (`variant-id`, `uitvoeringsvorm-id`, `representatie-id`).
+1. Behoud **[canonieke ids](@)** (`variant-id`, `uitvoeringsvorm-id`, `representatie-id`).
 2. Open PR naar `orthodox-groningen/bron` met [bronbestand](@) + metadata (zie
    [zangstuk toevoegen](zangstuk-toevoegen.md) /
    [bronvariant toevoegen](bronvariant-toevoegen.md)).

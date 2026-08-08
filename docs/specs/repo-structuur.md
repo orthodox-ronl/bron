@@ -1,3 +1,7 @@
+---
+doc_type: normative-spec
+audience: "P2 — Bron-contentbeheerder; P6 — Spec-/PR-reviewer"
+---
 # Repo-structuur
 
 Status: specificatie (juni 2026).

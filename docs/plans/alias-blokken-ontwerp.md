@@ -1,3 +1,7 @@
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # Alias-blokken — ontwerp
 
 Status: **ontwerp + basis-implementatie** (juli 2026).

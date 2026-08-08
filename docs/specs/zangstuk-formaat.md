@@ -1,3 +1,7 @@
+---
+doc_type: normative-spec
+audience: "P2 — Bron-contentbeheerder; P6 — Spec-/PR-reviewer"
+---
 # Zangstuk-formaat
 
 Status: specificatie (juni 2026). Schema van `zangstuk.yaml` en VSA-frontmatter.

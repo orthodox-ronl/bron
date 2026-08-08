@@ -1,3 +1,7 @@
+---
+doc_type: wayfinding-hub
+audience: "P1 — Parochie-docs-maintainer; P2 — Bron-contentbeheerder"
+---
 # Overzicht
 
 Hier staan **stap-voor-stap procedures** voor wie de [bron-repository](@)

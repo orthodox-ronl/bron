@@ -1,3 +1,7 @@
+---
+doc_type: normative-spec
+audience: "P1 — Parochie-docs-maintainer; P5 — Docs-/tool-contributor"
+---
 # Catalogus — zangstuk-opzoeken in sjablonen en samenstellingen
 
 Status: **normatief** (geïmplementeerd, basis).

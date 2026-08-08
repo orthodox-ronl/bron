@@ -1,3 +1,7 @@
+---
+doc_type: normative-spec
+audience: "P6 — Spec-/PR-reviewer; P2 — Bron-contentbeheerder"
+---
 # Zangstuk-identificatie — index
 
 **Status:** goedgekeurd; normatieve inhoud staat in de glossary.

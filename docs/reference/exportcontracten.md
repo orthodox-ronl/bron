@@ -1,3 +1,7 @@
+---
+doc_type: org-contract
+audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
+---
 # Exportcontracten
 
 Referentie voor **[exportmechanismen](@)**: hoe [afgeleiden](@) (of handmatige

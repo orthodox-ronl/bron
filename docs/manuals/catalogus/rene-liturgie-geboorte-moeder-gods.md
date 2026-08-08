@@ -1,3 +1,7 @@
+---
+doc_type: user-story
+audience: "P1 — Parochie-docs-maintainer"
+---
 # Verhaal 1 — Rene stelt een liturgiemap samen voor het feest van de Geboorte van de Moeder Gods
 
 *Rene bereidt de zang voor de liturgie op **8 september** (Geboorte van de

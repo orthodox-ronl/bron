@@ -1,3 +1,7 @@
+---
+doc_type: org-contract
+audience: "P4 — Consumer-site builder; P1 — Parochie-docs-maintainer"
+---
 # Exporttype: embed SVG
 
 Contract voor het **svg**-exporttype: [VSA-notatie](@) als schaalbare

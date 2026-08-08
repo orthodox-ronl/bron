@@ -1,3 +1,7 @@
+---
+doc_type: wayfinding-hub
+audience: "P1 — Parochie-docs-maintainer"
+---
 # Overzicht
 
 Deze pagina verzamelt **gebruikersverhalen** over de catalogus-tool. Ze
@@ -59,7 +63,7 @@ Rene typt vooral **zoektekst**.
 | Term                                     | Betekenis in de verhalen                                                         |
 | ---------------------------------------- | -------------------------------------------------------------------------------- |
 | **Parochie Groningen**                   | Persona / plaats — geen catalogus-id                                             |
-| **`default.uitvoeringsvorm: Groningen`** | Parochie-default bij zoeken (invoer alias) — **niet** in mixed session           |
+| **`default.uitvoeringsvorm: Groningen`** | Parochie-default bij zoeken (invoer [alias](@)) — **niet** in mixed session      |
 | **`uitvoeringsvorm-id: groningen`**      | Parochie-specifieke [uitvoeringsvorm](@) (bijv. Nana's Kastorski-bewerking)      |
 | **`uitvoeringsvorm-id: liturgikon`**     | Bron-[uitvoeringsvorm](@) (Liturgikon-model; demo feest-stukken)                 |
 | **`vokn`**                               | (Gepland in glossary) VOKN-standaardkoormap — **niet** hetzelfde als `groningen` |

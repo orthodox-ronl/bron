@@ -1,3 +1,7 @@
+---
+doc_type: org-contract
+audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
+---
 # Conversie: vsa svg
 
 Contract voor het conversiemechanisme

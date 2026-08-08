@@ -30,7 +30,7 @@ Deze glossary is **bindend** voor documentatie, metadata, code-commentaar, issue
 | **R2 — concept met term**              | Bedoel je inhoudelijk iets waarvoor deze glossary een term heeft, dan **moet** je die term gebruiken (niet een gangbaar synoniem dat verwarring geeft — zie § gangbare taal). |
 | **R3 — geen nieuwe termen ad hoc**     | Nieuwe precieze termen of gewijzigde definities **alleen** via wijziging van dit document (PR op `bron`, daarna spiegels bijwerken).                                          |
 | **R4 — gangbare taal expliciet maken** | In user-facing tekst mag gangbaar Nederlands, mits de **eerste** keer of in een gloss-link de precieze term genoemd wordt waar misverstand dreigt.                            |
-| **R5 — ids canoniek**                  | In opslag, paden en machine-leesbare referenties: canonieke ids (`§ canonieke id’s`); aliassen alleen op de invoergrens.                                                      |
+| **R5 — ids canoniek**                  | In opslag, paden en machine-leesbare referenties: [canonieke ids](@) (`§ canonieke id’s`); [aliassen](@) alleen op de invoergrens.                                            |
 
 **Review:** bij PR's die metadata, zangstuk-structuur of docs raken: controleer R1–R2. **Implementatie** van automatische terminologie-lint: open (fase 2).
 
@@ -88,10 +88,10 @@ zangstuk: antifoon-1-weekdagen
 
 ### 2.1 Canonieke id-vorm
 
-Elk canoniek id voldoet aan: `^[a-z0-9_-]+$` (lowercase ASCII, cijfers, `-`, `_`).
+Elk [canoniek id](@) voldoet aan: `^[a-z0-9_-]+$` (lowercase ASCII, cijfers, `-`, `_`).
 
-- Geen spaties, hoofdletters, diacritica of Cyrillisch in het **opgeslagen** canonieke id.
-- Meertalige of gemixte spelling → **aliassen**, niet in het canonieke id.
+- Geen spaties, hoofdletters, diacritica of Cyrillisch in het **opgeslagen** [canonieke id](@).
+- Meertalige of gemixte spelling → **[aliassen](@)**, niet in het [canonieke id](@).
 - Resolver normaliseert invoer naar lowercase; ongeldige tekens → **fout** (geen stille transliteratie tenzij later expliciet gespecificeerd).
 
 ### 2.2 Aliassen
@@ -105,18 +105,18 @@ Elk canoniek id voldoet aan: `^[a-z0-9_-]+$` (lowercase ASCII, cijfers, `-`, `_`
 
 ### 2.3 Twee lagen: opslag vs invoer
 
-| Laag                   | Regel                                                                                         |
-| ---------------------- | --------------------------------------------------------------------------------------------- |
-| **Opslag / techniek**  | Paden, yaml, git, `bron:…`-referenties, build-artefacten: **altijd canoniek id** (lowercase). |
-| **Invoer / gebruiker** | Zoeken, specs, UI, CLI: **alias toegestaan** → resolver zet om vóór validate/build/opslag.    |
+| Laag                   | Regel                                                                                              |
+| ---------------------- | -------------------------------------------------------------------------------------------------- |
+| **Opslag / techniek**  | Paden, yaml, git, `bron:…`-referenties, build-artefacten: **altijd [canoniek id](@)** (lowercase). |
+| **Invoer / gebruiker** | Zoeken, specs, UI, CLI: **[alias](@) toegestaan** → resolver zet om vóór validate/build/opslag.    |
 
-Gebruikers hoeven het canonieke id **niet** te kennen als hun alias geregistreerd en binnen scope **eenduidig** is.
+Gebruikers hoeven het [canonieke id](@) **niet** te kennen als hun [alias](@) geregistreerd en binnen scope **eenduidig** is.
 
 ### 2.4 Case-insensitive matching
 
-- Vergelijking invoer ↔ canoniek id en invoer ↔ alias: **case-insensitive** (Unicode case-folding).
+- Vergelijking invoer ↔ [canoniek id](@) en invoer ↔ [alias](@): **case-insensitive** (Unicode case-folding).
 - Voorbeeld: `Groningen`, `groningen`, `GRONINGEN` → `uitvoeringsvorm-id` `groningen`.
-- Aliassen mogen willekeurige casing hebben; **canoniek id in opslag** blijft `[a-z0-9_-]+`.
+- [Aliassen](@) mogen willekeurige casing hebben; **[canoniek id](@) in opslag** blijft `[a-z0-9_-]+`.
 
 ### 2.5 Meertalige aliassen
 
@@ -143,24 +143,24 @@ aliases:
 | [Uitvoeringsvorm](@) | één `(zangstuk-id, variant-id)`                     |
 | [Representatie](@)   | één `(zangstuk-id, variant-id, uitvoeringsvorm-id)` |
 
-Een alias mag **niet** binnen dezelfde scope op twee verschillende entiteiten wijzen.
+Een [alias](@) mag **niet** binnen dezelfde scope op twee verschillende entiteiten wijzen.
 
 ### 2.7 Ambiguïteit
 
-Meerdere matches na normalisatie → **fout** met kandidaten (canoniek id + context). Geen stille disambiguatie.
+Meerdere matches na normalisatie → **fout** met kandidaten ([canoniek id](@) + context). Geen stille disambiguatie.
 
 ### 2.8 Alias-resolver (contract)
 
 1. Normaliseer invoer (trim; case-fold voor matching).
-2. Match canoniek id of alias binnen scope → **canoniek id** (lowercase `[a-z0-9_-]+`).
+2. Match [canoniek id](@) of [alias](@) binnen scope → **[canoniek id](@)** (lowercase `[a-z0-9_-]+`).
 3. Geen match → fout; meerdere matches → ambiguïteitsfout.
 
-| Context       | Voorbeeld invoer               | Na resolutie (opslag)  |
-| ------------- | ------------------------------ | ---------------------- |
-| CLI           | `--uitvoeringsvorm Groningen`  | `groningen`            |
-| CLI           | `--variant касторский` (alias) | `kastorski`            |
-| Yaml (invoer) | `uitvoeringsvorm-id: Hemelum`  | `hemelum`              |
-| Zoek-UI       | “eerste antifoon weekdagen”    | `antifoon-1-weekdagen` |
+| Context       | Voorbeeld invoer                    | Na resolutie (opslag)  |
+| ------------- | ----------------------------------- | ---------------------- |
+| CLI           | `--uitvoeringsvorm Groningen`       | `groningen`            |
+| CLI           | `--variant касторский` ([alias](@)) | `kastorski`            |
+| Yaml (invoer) | `uitvoeringsvorm-id: Hemelum`       | `hemelum`              |
+| Zoek-UI       | “eerste antifoon weekdagen”         | `antifoon-1-weekdagen` |
 
 **Implementatiestatus:** contract gedocumenteerd; resolver in **catalogus**-tool (bron-repo, fase 2 basis).
 
@@ -175,11 +175,11 @@ Leesvorm: “*gangbaar* noemen wij *precieze term*, niet verwarren met *…*.”
 | “Cherubijnenhymne” (verschillende melodieën) | **[variant](@)**                               | [uitvoeringsvorm](@), [representatie](@)               |
 | “cover” / parochiepraktijk                   | **[uitvoeringsvorm](@)**                       | [variant](@), [representatie](@)                       |
 | scan, `.vsa`, notatie                        | **[representatie](@)**                         | [uitvoeringsvorm](@), [variant](@)                     |
-| werknaam in invoer                           | **[alias](@)** → resolver                      | canoniek id in opslag                                  |
+| werknaam in invoer                           | **[alias](@)** → resolver                      | [canoniek id](@) in opslag                             |
 | “bron van …” (waar vandaan)                  | **[herkomst](@)**                              | [bronbestand](@), [bron-repository](@)                 |
 | “bron” (bestand)                             | **[bronbestand](@)**                           | [bron-repository](@)                                   |
 | “bron” (repo)                                | **[bron-repository](@)**                       | [bronbestand](@)                                       |
-| “bronvariant” (informeel)                    | **[source](@)-entry** / **[representatie](@)** | [uitvoeringsvorm](@)                                   |
+| “bronvariant” (informeel)                    | **[source-entry](@)** / **[representatie](@)** | [uitvoeringsvorm](@)                                   |
 | “metadata-yaml”, “config” in zangstuk-map    | **[manifest](@)**                              | npm-/package-manifest, build-manifest, `zangstuk.yaml` |
 
 ---
@@ -358,7 +358,7 @@ Zie [parochie-lokaal zangstukken](../manuals/parochie-lokaal-zangstukken.md).
 
 1. M is een YAML-bestand met **vaste bestandsnaam** op één van de twee niveaus [variant](@) (§6) of [uitvoeringsvorm](@) (§7) binnen het vier-niveaumodel (§1), **en**
 2. M registreert precies **één** entiteit op dat niveau via het bijbehorende id-veld (`variant-id` of `uitvoeringsvorm-id`), **en**
-3. M beschrijft uitsluitend **metadata** over die entiteit (titels, aliassen, [herkomst](@), `based_on`, verwijzingen naar [representaties](@)) — M is zelf **geen** [representatie](@) (§8), [bronbestand](@) (§10) of [samenstelling](@) (§18).
+3. M beschrijft uitsluitend **metadata** over die entiteit (titels, [aliassen](@), [herkomst](@), `based_on`, verwijzingen naar [representaties](@)) — M is zelf **geen** [representatie](@) (§8), [bronbestand](@) (§10) of [samenstelling](@) (§18).
 
 **Vaste bestandsnamen (canoniek):**
 
@@ -391,7 +391,7 @@ Meerdere [manifesten](@) in dezelfde mappenstructuur noemen wij **manifesten** (
 
 ## 17. Promotie (registratie)
 
-**Criterium:** [Promotie](@) is overgang [parochie-lokaal](@) → [geregistreerd](geregistreerde-representatie@) door [source-entry](@) (+ [bronbestand](@)) in [bron-repository](@), met behoud van canonieke ids.
+**Criterium:** [Promotie](@) is overgang [parochie-lokaal](@) → [geregistreerd](geregistreerde-representatie@) door [source-entry](@) (+ [bronbestand](@)) in [bron-repository](@), met behoud van [canonieke ids](@).
 
 |         | Voorbeeld                                                                                 |
 | ------- | ----------------------------------------------------------------------------------------- |

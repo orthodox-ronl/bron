@@ -1,3 +1,7 @@
+---
+doc_type: org-contract
+audience: "P4 — Consumer-site builder; P1 — Parochie-docs-maintainer"
+---
 # Exporttype: Coria
 
 Contract voor het **coria**-[exporttype](@): link of ingebedde speler naar

@@ -1,3 +1,7 @@
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # Samenvatting: Orthodoxe kerkmuziek-repository project
 
 Status per 25 juni 2026. Bedoeld als startpunt voor een vervolggesprek met

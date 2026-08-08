@@ -1,3 +1,7 @@
+---
+doc_type: user-story
+audience: "P1 — Parochie-docs-maintainer"
+---
 # Verhaal 2 — Rene neemt Nana's Cherubijnenhymne op in de parochie-repo
 
 *Nana stuurt Rene een **PDF** met een Cherubijnenhymne die zij heeft gezet in de
@@ -31,7 +35,7 @@ Rene kiest in de catalogus *Materiaal toevoegen → Parochie-lokaal*.
    Ja → koppelen aan bestaand `zangstuk-id`. Nee → nieuw id voorstellen (hier:
    bestaand).
 2. **Stap 2 — Variant:** “Kastorski” / `Касторский` → `kastorski`.
-3. **Stap 3 — Uitvoeringsvorm:** naam “Groningen”, alias registreren.
+3. **Stap 3 — Uitvoeringsvorm:** naam “Groningen”, [alias](@) registreren.
 4. **Stap 4 — Representatie:** PDF slepen naar `repr/`; optioneel later VSA
    toevoegen als Nana transcribeert.
 5. **Stap 5 — Manifesten:** tool genereert `variant.yaml` en
@@ -107,13 +111,13 @@ parochie-repo.
 
 ### 4. Index valideren
 
-Controleer dat er geen conflicterende aliassen zijn
+Controleer dat er geen conflicterende [aliassen](@) zijn
 ([Catalogus CLI](../../reference/catalogus-cli.md)).
 
 ### 5. Resolve testen
 
-Los de uitvoeringsvorm-alias “Groningen” op binnen
-`cherubijnenhymne` / `kastorski` — verwacht canonieke id `groningen`
+Los de [alias](@) “Groningen” voor de [uitvoeringsvorm](@) op binnen
+`cherubijnenhymne` / `kastorski` — verwacht [canoniek id](@) `groningen`
 ([Catalogus CLI — resolve](../../reference/catalogus-cli.md)).
 
 ### 6. Gebruik in een sjabloon of samenstelling
@@ -146,7 +150,7 @@ Zoektest:
 
 ## Wat Rene bereikt
 
-- Het stuk is **vindbaar** via aliassen (“Cherubijnenhymne Kastorski Groningen”).
+- Het stuk is **vindbaar** via [aliassen](@) (“Cherubijnenhymne Kastorski Groningen”).
 - Samenstellingen verwijzen stabiel met `lokaal:…/…/…`.
 - Klaar voor **promotie naar bron** (verhaal 3) zonder ids te wijzigen.
 

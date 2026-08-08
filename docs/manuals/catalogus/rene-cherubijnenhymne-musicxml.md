@@ -1,3 +1,7 @@
+---
+doc_type: user-story
+audience: "P1 — Parochie-docs-maintainer"
+---
 # Verhaal 4 — Rene deelt en gebruikt Nana's MusicXML
 
 *Nana exporteert naast de PDF ook een **MusicXML**-bestand (`.mxl`) van de
@@ -80,7 +84,7 @@ sources:
 
 ### 3. Catalogus — representatie-id
 
-Als Rene “mxl” of “MusicXML Groningen” als alias wil gebruiken, lost hij die
+Als Rene “mxl” of “MusicXML Groningen” als [alias](@) wil gebruiken, lost hij die
 op via de catalogus
 ([Catalogus CLI — resolve representatie](../../reference/catalogus-cli.md)).
 

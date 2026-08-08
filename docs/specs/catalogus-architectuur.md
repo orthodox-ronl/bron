@@ -1,3 +1,7 @@
+---
+doc_type: normative-spec
+audience: "P5 — Docs-/tool-contributor; P1 — Parochie-docs-maintainer"
+---
 # Catalogus — architectuur (fase 2)
 
 Status: geïmplementeerd (basis).
@@ -8,7 +12,7 @@ Normatief resolver-contract: [terminologie §2.8](../specs/terminologie.md).
 
 De **catalogus**-tool beantwoordt: *welk zangstuk (variant, uitvoeringsvorm, representatie)
 bedoel je?* Invoer mag gangbare namen (`Groningen`, `Касторский`); opslag blijft
-canoniek id (`groningen`, `kastorski`).
+[canoniek id](@) (`groningen`, `kastorski`).
 
 ## Plaatsing
 
@@ -40,25 +44,25 @@ sequenceDiagram
 
 ## Index vs opslag
 
-| Laag    | Wat                                                         |
-| ------- | ----------------------------------------------------------- |
-| Opslag  | Aliassen verspreid in git (manifesten, mapnamen, titels)    |
-| Runtime | `AliasIndex` in RAM — lookup per scope, conflict-detectie   |
+| Laag    | Wat                                                                |
+| ------- | ------------------------------------------------------------------ |
+| Opslag  | [Aliassen](@) verspreid in git ([manifesten](@), mapnamen, titels) |
+| Runtime | `AliasIndex` in RAM — lookup per scope, conflict-detectie          |
 
 Geen gegenereerd alias-bestand in git.
 
 ## Scope en uniciteit
 
-Zie terminologie §2.6. Conflicten (zelfde alias → verschillende ids binnen scope)
+Zie terminologie §2.6. Conflicten (zelfde [alias](@) → verschillende ids binnen scope)
 worden bij index-build gerapporteerd via [`catalogus index validate`](../reference/catalogus-cli.md#catalogus-index-validate).
 
 ## Bekende randgevallen
 
 1. **Plat bron-model** — `zangstuk.yaml` `sources[].id` wordt geregistreerd onder
-   scope `(zangstuk-id, zangstuk-id)` tot geneste manifesten in bron (§22) bestaan.
-2. **Variant-alias als zangstuk-alias** — aliassen in `variant.yaml` worden
+   scope `(zangstuk-id, zangstuk-id)` tot geneste [manifesten](@) in bron (§22) bestaan.
+2. **[Alias](@) van [variant](@) ook als zangstuk-alias** — [aliassen](@) in `variant.yaml` worden
    pragmatisch ook op zangstuk-niveau geïndexeerd (demo: `1e antifoon weekdagen`).
-3. **Representatie-aliassen** — minimaal; canoniek id-passthrough.
+3. **[Aliassen](@) op [representatie](@)** — minimaal; [canoniek id](@)-passthrough.
 
 ## Fase 3 — id-gebaseerde includes (VSA-tooling)
 

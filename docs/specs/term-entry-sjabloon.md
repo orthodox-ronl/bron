@@ -1,3 +1,7 @@
+---
+doc_type: normative-spec
+audience: "P5 — Docs-/tool-contributor"
+---
 # Term-entry-sjabloon (curated texts)
 
 Canonieke structuur voor bestanden in `docs/terms/` (en spiegel in tool-repo’s

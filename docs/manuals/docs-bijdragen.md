@@ -1,3 +1,7 @@
+---
+doc_type: task-guide
+audience: "P5 — Docs-/tool-contributor"
+---
 # Documentatie bijdragen
 
 Handleiding voor wie **docs** in bron (of parallel in VSA-tooling) wijzigt:

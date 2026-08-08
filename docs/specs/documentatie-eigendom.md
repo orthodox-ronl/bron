@@ -1,3 +1,7 @@
+---
+doc_type: integratie
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # Documentatie-eigendom (orthodox-groningen)
 
 **Status:** normatief (juni 2026).
