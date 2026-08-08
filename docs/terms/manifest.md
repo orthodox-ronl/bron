@@ -27,7 +27,7 @@ Op [uitvoeringsvorm](@)-niveau mag een manifest [representaties](@) **verwijzen*
 | Ja        | `lokaal/…/liturgikon-weekdagen/variant.yaml`                                                     |
 | Ja        | `lokaal/…/hemelum/uitvoeringsvorm.yaml` met `representaties: [{ representatie-id: hemelum, … }]` |
 | Nee       | `hemelum.vsa` ([bronbestand](@) / [representatie](@))                                            |
-| Nee       | `zangstuk.yaml` in [bron-repository](@) ([source-entry](@)-model)                               |
+| Nee       | `zangstuk.yaml` in [bron-repository](@) ([source-entry](@)-model)                                |
 | Nee       | `antifonen-hemelum.md` ([samenstelling](@))                                                      |
 | Nee       | npm `package.json`, PWA manifest, CI build-manifest                                              |
 | Randgeval | Manifest zonder representatie-verwijzing — [uitvoeringsvorm](@) met 0 [representaties](@)        |

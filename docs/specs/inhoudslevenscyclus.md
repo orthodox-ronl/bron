@@ -66,12 +66,12 @@ gedeelde scans.
 
 ### Validatie brondocumenten
 
-| Brontype                    | Check                           | Tool / moment                           |
-| --------------------------- | ------------------------------- | --------------------------------------- |
-| `.vsa`                      | Parse + semantische validatie   | `vsa validate` (CI, lokaal vóór commit) |
-| `.pdf`                      | Geldig PDF, minstens één pagina | CI-script (toekomst); visuele controle  |
-| `.png`/`.jpg`               | Geldig raster                   | CI-script (toekomst)                    |
-| `.musicxml`/`.mxl` als bron | Well-formed XML                 | toekomst                                |
+| Brontype                    | Check                           | Tool / moment                                                                                                       |
+| --------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `.vsa`                      | Parse + semantische validatie   | [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) (CI, lokaal vóór commit) |
+| `.pdf`                      | Geldig PDF, minstens één pagina | CI-script (toekomst); visuele controle                                                                              |
+| `.png`/`.jpg`               | Geldig raster                   | CI-script (toekomst)                                                                                                |
+| `.musicxml`/`.mxl` als bron | Well-formed XML                 | toekomst                                                                                                            |
 
 Details: [Brontypes en validatie](../reference/brontypes-validatie.md).
 
@@ -151,11 +151,11 @@ Dat zijn **exporttypes**, geen conversie-commando's.
 
 ### Uitgaveprofielen
 
-| Profiel           | Conversie nodig                | Export / layout                            |
-| ----------------- | ------------------------------ | ------------------------------------------ |
-| Afdruk / download | `vsa svg`                      | embed svg, `keep-together`, `@media print` |
-| Online            | `vsa svg`, evt. `vsa musicxml` | embed svg, Coria, `web-only`               |
-| Bewerking         | `vsa musicxml`                 | mxl-download                               |
+| Profiel           | Conversie nodig                                                                                                                                                                   | Export / layout                            |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| Afdruk / download | [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/)                                                                                                  | embed svg, `keep-together`, `@media print` |
+| Online            | [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/), evt. [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) | embed svg, Coria, `web-only`               |
+| Bewerking         | [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)                                                                                        | mxl-download                               |
 
 Profielen zijn geen aparte pipelines: één samenstelling, conditionele export en CSS.
 

@@ -1,13 +1,14 @@
 # Conversie: vsa musicxml
 
-Contract voor het conversiemechanisme **`vsa musicxml`**: een [vsa-bestand](@)
-omzetten naar MusicXML (`.mxl` of `.musicxml`).
+Contract voor het conversiemechanisme
+[`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/):
+een [vsa-bestand](@) omzetten naar MusicXML (`.mxl` of `.musicxml`).
 
 Dit document beschrijft **wat** de conversie doet en **wanneer** je die gebruikt.
 Hoe je het commando aanroept: zie de
-[CLI man-page `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md)
+[CLI man-page `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)
 en de workflow-guide
-[MusicXML exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md).
+[MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/).
 
 ---
 
@@ -25,10 +26,10 @@ tempo) wordt aanbevolen zodat de MXL bruikbaar is in spelers en editors.
 
 ## Wanneer gebruiken
 
-| Situatie                         | Wat je wilt                                      |
-| -------------------------------- | ------------------------------------------------ |
-| Bewerken in MuseScore            | `.mxl` of `.musicxml` genereren                  |
-| Oefenen in Coria zonder HTML     | MXL publiceren + Coria in MXL- of auto-modus     |
+| Situatie                         | Wat je wilt                                                  |
+| -------------------------------- | ------------------------------------------------------------ |
+| Bewerken in MuseScore            | `.mxl` of `.musicxml` genereren                              |
+| Oefenen in Coria zonder HTML     | MXL publiceren + Coria in MXL- of auto-modus                 |
 | Download voor musici             | Bestand klaarzetten voor exporttype [mxl](exporttype-mxl.md) |
 
 Gebruik **niet** deze conversie als enige weg naar leesbare notatie op papier —
@@ -38,12 +39,12 @@ daarvoor is [vsa svg](conversie-vsa-svg.md).
 
 ## Eisen aan de invoer
 
-| Eis            | Toelichting                                                              |
-| -------------- | ------------------------------------------------------------------------ |
-| Bestand        | `.vsa`, UTF-8                                                            |
-| Validatie      | `vsa validate` aanbevolen vóór conversie                                 |
-| Frontmatter    | Aanbevolen: titel, toon, tempo                                           |
-| Notatie-inhoud | Moet structuren bevatten die naar MusicXML te exporteren zijn            |
+| Eis            | Toelichting                                                                                                          |
+| -------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Bestand        | `.vsa`, UTF-8                                                                                                        |
+| Validatie      | [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) aanbevolen vóór conversie |
+| Frontmatter    | Aanbevolen: titel, toon, tempo                                                                                       |
+| Notatie-inhoud | Moet structuren bevatten die naar MusicXML te exporteren zijn                                                        |
 
 ---
 
@@ -67,20 +68,20 @@ Welke vlag je daarvoor zet: zie de CLI man-page.
 
 ## Wat er uit komt
 
-| Veld     | Waarde                                      |
-| -------- | ------------------------------------------- |
-| Default  | `.mxl`                                      |
-| Locatie  | Door jou gekozen map of site-static         |
+| Veld     | Waarde                                                                |
+| -------- | --------------------------------------------------------------------- |
+| Default  | `.mxl`                                                                |
+| Locatie  | Door jou gekozen map of site-static                                   |
 | Op site  | Typisch onder een URL-prefix zoals `/vsa/mxl/…` (tooling/site-config) |
 
 ---
 
 ## Validatie vóór conversie
 
-| Check                   | Blokkeert?                                              |
-| ----------------------- | ------------------------------------------------------- |
-| `vsa validate`          | Aanbevolen; ongeldige `.vsa` geeft slechte of geen MXL  |
-| Ontbrekend inputbestand | Ja                                                      |
+| Check                                                                                      | Blokkeert?                                              |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) | Aanbevolen; ongeldige `.vsa` geeft slechte of geen MXL  |
+| Ontbrekend inputbestand                                                                    | Ja                                                      |
 
 Export-resolve controleert de MXL-inhoud **niet** opnieuw op build-time.
 
@@ -88,21 +89,21 @@ Export-resolve controleert de MXL-inhoud **niet** opnieuw op build-time.
 
 ## Na de conversie (export)
 
-| Exporttype                   | Gebruik                                          |
-| ---------------------------- | ------------------------------------------------ |
-| [mxl](exporttype-mxl.md)     | Downloadlink in de samenstelling                 |
+| Exporttype                   | Gebruik                                           |
+| ---------------------------- | ------------------------------------------------- |
+| [mxl](exporttype-mxl.md)     | Downloadlink in de samenstelling                  |
 | [coria](exporttype-coria.md) | `mode=mxl` of `auto` zonder `.coria.html`-sibling |
 
 ---
 
 ## Veelvoorkomende problemen (betekenis)
 
-| Probleem                 | Typische oorzaak            | Richting oplossing                    |
-| ------------------------ | --------------------------- | ------------------------------------- |
-| Lege of minimale MXL     | Weinig muziek in `.vsa`     | Notatie uitbreiden                    |
-| Verkeerde toon in speler | Metadata ontbreekt          | Frontmatter / `zangstuk.yaml`         |
-| Layout in MuseScore vreemd | playback-profiel          | engraving-profiel proberen (CLI)      |
-| Coria laadt niet         | MXL niet op de server       | Genereren + static publiceren         |
+| Probleem                   | Typische oorzaak            | Richting oplossing                    |
+| -------------------------- | --------------------------- | ------------------------------------- |
+| Lege of minimale MXL       | Weinig muziek in `.vsa`     | Notatie uitbreiden                    |
+| Verkeerde toon in speler   | Metadata ontbreekt          | Frontmatter / `zangstuk.yaml`         |
+| Layout in MuseScore vreemd | playback-profiel            | engraving-profiel proberen (CLI)      |
+| Coria laadt niet           | MXL niet op de server       | Genereren + static publiceren         |
 
 ---
 
@@ -118,5 +119,5 @@ Export-resolve controleert de MXL-inhoud **niet** opnieuw op build-time.
 - [Exporttype mxl](exporttype-mxl.md)
 - [Exporttype coria](exporttype-coria.md)
 - [Conversiemechanismen — overzicht](conversiemechanismen.md)
-- [CLI: `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md)
-- [Guide: MusicXML exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)
+- [CLI: `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)
+- [Guide: MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/)

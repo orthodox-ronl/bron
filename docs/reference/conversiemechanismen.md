@@ -7,7 +7,7 @@ Conversie is **geen** export: conversie verandert het formaat; export bepaalt ho
 afgeleiden in een samenstelling verschijnen ([Exportcontracten](exportcontracten.md)).
 
 Uitvoering gebeurt met [VSA-tooling](@)
-([CLI-overzicht](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)).
+([CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)).
 Afgeleide output hoort **niet** in de [bron-repository](@).
 
 ---
@@ -23,10 +23,10 @@ Afgeleide output hoort **niet** in de [bron-repository](@).
 
 ## Geregistreerde mechanismen
 
-| Mechanisme       | Contract                                            | Output               | CLI                                                                      |
-| ---------------- | --------------------------------------------------- | -------------------- | ------------------------------------------------------------------------ |
-| **vsa svg**      | [conversie-vsa-svg](conversie-vsa-svg.md)           | `.svg`               | [man-page](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/svg.md) |
-| **vsa musicxml** | [conversie-vsa-musicxml](conversie-vsa-musicxml.md) | `.mxl` / `.musicxml` | [man-page](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md) |
+| Mechanisme                                                                                 | Contract                                            | Output               | CLI                                                                                  |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------ |
+| [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/)           | [conversie-vsa-svg](conversie-vsa-svg.md)           | `.svg`               | [man-page](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/)      |
+| [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) | [conversie-vsa-musicxml](conversie-vsa-musicxml.md) | `.mxl` / `.musicxml` | [man-page](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) |
 
 ---
 
@@ -68,4 +68,4 @@ Nieuwe mechanismen krijgen een volledig org-contract **vóór** opname in CI.
 - [Exportcontracten](exportcontracten.md)
 - [Inhoudslevenscyclus](../specs/inhoudslevenscyclus.md) Deel 2
 - [Schrijfconventies](../specs/schrijfconventies.md)
-- [VSA CLI-overzicht](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)
+- [VSA CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)

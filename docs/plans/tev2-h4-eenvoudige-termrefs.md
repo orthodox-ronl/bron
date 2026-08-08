@@ -2,7 +2,7 @@
 
 | Veld               | Waarde                |
 | ------------------ | --------------------- |
-| **Status**         | in-uitvoering         |
+| **Status**         | gerealiseerd (H4); vervolg H5 |
 | **Repo**           | bron + VSA-tooling    |
 | **Scope**          | Hoofdonderwerp 4      |
 
@@ -33,9 +33,10 @@ Tool-set:
 Org-termen in tool-docs: via `@bron` (bijv. `[zangstuk](@bron)`,
 `[VSA-notatie](@bron)`, `[vsa-bestand](@bron)`).
 
-## Parkeren tot H5
+## Parkeren tot H5 — gedaan in H5
 
-`VSA-tekst`, `VSA-blok`, *geldige VSA(-notatie)*, synoniem “klopt” → “geldig”.
+Zie [tev2-h5-meerwoordige-termrefs.md](tev2-h5-meerwoordige-termrefs.md):
+`VSA-tekst`, `VSA-blok`, *geldige VSA-notatie*, synoniem “klopt” → “geldig”.
 
 ## Prioritaire pagina’s (deze golf)
 

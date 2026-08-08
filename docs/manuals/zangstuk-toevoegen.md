@@ -11,7 +11,9 @@ de [bron-repository](@).
 4. **Schrijf `zangstuk.yaml`:** minimaal `id`, `title`, één source met `file:`, `access:` of
    `status: nog-niet-getranscribeerd`.
 5. **Liturgische metadata** invullen waar van toepassing.
-6. **Valideer** `.vsa` met `vsa validate` ([VSA-tooling](@)).
+6. **Valideer** `.vsa` met
+   [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/)
+   ([VSA-tooling](@)).
 7. **Commit en push** — documentatie-deploy draait via GitHub Actions.
 
 ## Meerdere zangstukken in één bronbestand

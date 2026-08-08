@@ -46,4 +46,6 @@ scripts\docs-serve.cmd
 Conversie en validatie van [vsa-bestanden](@) gebeurt met
 [VSA-tooling](@)
 ([documentatiesite](https://orthodox-groningen.github.io/VSA-tooling/))
-(`vsa validate`, `vsa svg`, `vsa musicxml`).
+([`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/),
+[`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/),
+[`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)).

@@ -1,13 +1,14 @@
 # Conversie: vsa svg
 
-Contract voor het conversiemechanisme **`vsa svg`**: een [vsa-bestand](@)
-omzetten naar een schaalbare vectorafbeelding (`.svg`).
+Contract voor het conversiemechanisme
+[`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/):
+een [vsa-bestand](@) omzetten naar een schaalbare vectorafbeelding (`.svg`).
 
 Dit document beschrijft **wat** de conversie doet en **wanneer** je die gebruikt.
 Hoe je het commando precies aanroept (syntax, opties, voorbeelden): zie de
-[CLI man-page `vsa svg`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/svg.md)
+[CLI man-page `vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/)
 en de workflow-guide
-[SVG exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/svg-export.md).
+[SVG exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/svg-export/).
 
 ---
 
@@ -23,11 +24,11 @@ een parochiesite.
 
 ## Wanneer gebruiken
 
-| Situatie                         | Wat je wilt                                          |
-| -------------------------------- | ---------------------------------------------------- |
-| Notatie bekijken of afdrukken    | SVG als plaatje in de pagina of op papier            |
-| Site-build / CI                  | SVG’s klaarzetten vóór of tijdens publicatie         |
-| Inline tijdens document-build    | Zelfde resultaat via `build-markdown` (zie tooling)  |
+| Situatie                         | Wat je wilt                                                                                                                 |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Notatie bekijken of afdrukken    | SVG als plaatje in de pagina of op papier                                                                                   |
+| Site-build / CI                  | SVG’s klaarzetten vóór of tijdens publicatie                                                                                |
+| Inline tijdens document-build    | Zelfde resultaat via [`vsa build-markdown`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/) |
 
 Gebruik **niet** deze conversie als je wilt bewerken in MuseScore of oefenen in
 Coria — daarvoor is [vsa musicxml](conversie-vsa-musicxml.md).
@@ -36,12 +37,12 @@ Coria — daarvoor is [vsa musicxml](conversie-vsa-musicxml.md).
 
 ## Eisen aan de invoer
 
-| Eis              | Toelichting                                                              |
-| ---------------- | ------------------------------------------------------------------------ |
-| Bestand          | `.vsa`, UTF-8 — een geldig [vsa-bestand](@)                              |
-| Validatie        | Moet slagen met `vsa validate` vóór een betrouwbare SVG                  |
-| Frontmatter      | Optioneel; metadata kan de weergave beïnvloeden                          |
-| Omringende tekst | Maakt deel uit van de body van het [vsa-bestand](@)                      |
+| Eis              | Toelichting                                                                                                                         |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Bestand          | `.vsa`, UTF-8 — een geldig [vsa-bestand](@)                                                                                         |
+| Validatie        | Moet slagen met [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) vóór een betrouwbare SVG |
+| Frontmatter      | Optioneel; metadata kan de weergave beïnvloeden                                                                                     |
+| Omringende tekst | Maakt deel uit van de body van het [vsa-bestand](@)                                                                                 |
 
 ---
 
@@ -58,10 +59,10 @@ Coria — daarvoor is [vsa musicxml](conversie-vsa-musicxml.md).
 
 ## Validatie vóór conversie
 
-| Check              | Blokkeert betrouwbare SVG? |
-| ------------------ | -------------------------- |
-| Parse / semantiek  | Ja — eerst `vsa validate`  |
-| Ontbrekend bestand | Ja                         |
+| Check              | Blokkeert betrouwbare SVG?                                                                            |
+| ------------------ | ----------------------------------------------------------------------------------------------------- |
+| Parse / semantiek  | Ja — eerst [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) |
+| Ontbrekend bestand | Ja                                                                                                    |
 
 Bij document-build faalt de hele build als een `.vsa` ongeldig is.
 
@@ -85,7 +86,9 @@ Bij document-build faalt de hele build als een `.vsa` ongeldig is.
 | Verkeerde glyphs | Font of toolversie      | [VSA-tooling](@) gelijk trekken met CI                  |
 | Te breed op A4   | Brede layout            | `scale` bij export of regelbreedte in tooling           |
 
-Concrete foutteksten en commandovoorbeelden: CLI man-page `vsa svg` / `vsa validate`.
+Concrete foutteksten en commandovoorbeelden: CLI man-pages
+[`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/) /
+[`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/).
 
 ---
 
@@ -100,5 +103,5 @@ Concrete foutteksten en commandovoorbeelden: CLI man-page `vsa svg` / `vsa valid
 
 - [Exporttype svg](exporttype-svg.md)
 - [Conversiemechanismen — overzicht](conversiemechanismen.md)
-- [CLI: `vsa svg`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/svg.md)
-- [Guide: SVG exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/svg-export.md)
+- [CLI: `vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/)
+- [Guide: SVG exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/svg-export/)

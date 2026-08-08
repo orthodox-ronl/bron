@@ -5,7 +5,7 @@ invoer op naar **canoniek id** volgens [terminologie §2.8](../specs/terminologi
 
 **Gebruikersverhalen** (workflows, beoogde GUI): [Catalogus — handleidingen](../manuals/catalogus/index.md).
 
-**Sjablonen** (`:::include zoek=`, `default`, `vsa resolve-catalogus`): [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md).
+**Sjablonen** (`:::include zoek=`, `default`, [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)): [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md).
 
 ## Installatie
 
@@ -31,6 +31,14 @@ scripts\test.cmd
 ```
 
 ## Commando's (fase 2)
+
+| Commando                                                      | Doel                                              |
+| ------------------------------------------------------------- | ------------------------------------------------- |
+| [`catalogus zoek`](#catalogus-zoek)                           | Vrije tekst + context → catalogus-pad             |
+| [`catalogus resolve`](#catalogus-resolve)                     | Alias → canoniek id (per niveau)                  |
+| [`catalogus index validate`](#catalogus-index-validate)       | Manifesten en alias-conflicten controleren        |
+| [`catalogus aliases validate`](#catalogus-aliases-validate)   | Org-breed alias-blokkenregister valideren         |
+| [`catalogus aliases sync`](#catalogus-aliases-sync)           | Gegenereerde alias-blokken naar yaml schrijven    |
 
 ### `catalogus zoek`
 
@@ -182,7 +190,7 @@ Zie [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) voor volledig contra
   → catalogus-pad — [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) (**geïmplementeerd**, basis).
 
 Zie [verhaal 1](../manuals/catalogus/rene-liturgie-geboorte-moeder-gods.md) en
-[VSA — resolve-catalogus](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#vsa-resolve-catalogus).
+[VSA — resolve-catalogus](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#vsa-resolve-catalogus).
 
 ## Tests
 

@@ -4,7 +4,7 @@ Contract voor het **coria**-exporttype: link of ingebedde speler naar
 [Coria](https://coria.nl) voor online oefenen.
 
 Technische build-details (shortcodes, static-mappen): zie
-[MusicXML exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)
+[MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/)
 (sectie Coria) en de directives-specificatie in VSA-tooling.
 
 ---
@@ -157,12 +157,12 @@ Verberg op afdruk: CSS class `.coria-play` of plaats de directive in `:::web-onl
 
 ## Veelvoorkomende problemen (betekenis)
 
-| Situatie                  | Typische oorzaak                    | Richting oplossing                           |
-| ------------------------- | ----------------------------------- | -------------------------------------------- |
-| VSA-bestand niet gevonden | Pad-typo                            | Pad t.o.v. `.md` corrigeren                  |
-| Geen Coria-HTML naast …   | `mode=html` zonder sibling          | Sibling toevoegen of `mode=auto` / `mxl`     |
-| Onbekende mode            | Typo                                | `auto`, `html`, of `mxl`                     |
-| Coria 404 op MXL          | MXL niet gepubliceerd               | `vsa musicxml` + static deploy (zie CLI)     |
+| Situatie                  | Typische oorzaak                    | Richting oplossing                                                                                         |
+| ------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| VSA-bestand niet gevonden | Pad-typo                            | Pad t.o.v. `.md` corrigeren                                                                                |
+| Geen Coria-HTML naast …   | `mode=html` zonder sibling          | Sibling toevoegen of `mode=auto` / `mxl`                                                                   |
+| Onbekende mode            | Typo                                | `auto`, `html`, of `mxl`                                                                                   |
+| Coria 404 op MXL          | MXL niet gepubliceerd               | [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) + static deploy |
 
 ---
 
@@ -178,5 +178,5 @@ Verberg op afdruk: CSS class `.coria-play` of plaats de directive in `:::web-onl
 
 - [Conversie vsa musicxml](conversie-vsa-musicxml.md)
 - [Exporttype mxl](exporttype-mxl.md)
-- [Guide: MusicXML / Coria](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)
-- [CLI: `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md)
+- [Guide: MusicXML / Coria](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/)
+- [CLI: `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)

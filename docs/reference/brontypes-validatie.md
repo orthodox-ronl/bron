@@ -8,11 +8,11 @@ Validatie van [vsa-bestanden](@) — bestanden met [vsa-notatie](@).
 
 Installatie: [VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling).
 
-| Check                            | Tool                     | Wanneer                          |
-| -------------------------------- | ------------------------ | -------------------------------- |
-| Parse + semantiek                | `vsa validate <pad>`     | Lokaal, CI (gepland)             |
-| Frontmatter YAML                 | handmatig / CI (gepland) | Bij aanwezigheid van `---`       |
-| Consistentie met `zangstuk.yaml` | CI (gepland)             | Geen tegenstrijdige `title`/tone |
+| Check                            | Tool                                                                                             | Wanneer                          |
+| -------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------- |
+| Parse + semantiek                | [`vsa validate <pad>`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) | Lokaal, CI (gepland)             |
+| Frontmatter YAML                 | handmatig / CI (gepland)                                                                         | Bij aanwezigheid van `---`       |
+| Consistentie met `zangstuk.yaml` | CI (gepland)                                                                                     | Geen tegenstrijdige `title`/tone |
 
 ## `.pdf` (scan)
 

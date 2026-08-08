@@ -4,8 +4,8 @@ Contract voor het **mxl**-exporttype: downloadlink naar MusicXML (`.mxl`) voor
 bewerking in MuseScore of als fallback voor Coria.
 
 Technische resolver- en shortcode-details: zie
-[MusicXML exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/musicxml-export.md)
-en [CLI `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md).
+[MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/)
+en [CLI `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/).
 
 ---
 
@@ -47,15 +47,15 @@ MXL of wachten op afronding in VSA-tooling.
 
 ### `pad` (eerste argument)
 
-| Veld                   | Waarde                                                    |
-| ---------------------- | --------------------------------------------------------- |
-| **Verplicht?**         | Ja                                                        |
-| **Type**               | Relatief pad naar `.vsa`                                  |
-| **Doel**               | Afleiden van de publicatie-URL van het bijbehorende `.mxl`|
-| **Toegestane waarden** | Bestaand `.vsa` onder de content-root                     |
-| **Verboden**           | Ontbrekend `.vsa`, pad buiten content-root                |
-| **Effect**             | Link wijst naar het MXL-pad (typisch `/vsa/mxl/…`)        |
-| **Voorbeeld**          | `"praktijk/melodie.vsa"` → URL eindigend op `melodie.mxl` |
+| Veld                   | Waarde                                                     |
+| ---------------------- | ---------------------------------------------------------- |
+| **Verplicht?**         | Ja                                                         |
+| **Type**               | Relatief pad naar `.vsa`                                   |
+| **Doel**               | Afleiden van de publicatie-URL van het bijbehorende `.mxl` |
+| **Toegestane waarden** | Bestaand `.vsa` onder de content-root                      |
+| **Verboden**           | Ontbrekend `.vsa`, pad buiten content-root                 |
+| **Effect**             | Link wijst naar het MXL-pad (typisch `/vsa/mxl/…`)         |
+| **Voorbeeld**          | `"praktijk/melodie.vsa"` → URL eindigend op `melodie.mxl`  |
 
 ### `label`
 
@@ -71,9 +71,9 @@ MXL of wachten op afronding in VSA-tooling.
 
 ## Inputs
 
-| Input            | Vereist?     | Opmerking                                              |
-| ---------------- | ------------ | ------------------------------------------------------ |
-| `.vsa`           | Ja           | Anker voor URL-afleiding                               |
+| Input            | Vereist?     | Opmerking                                                 |
+| ---------------- | ------------ | --------------------------------------------------------- |
+| `.vsa`           | Ja           | Anker voor URL-afleiding                                  |
 | `.mxl` afgeleide | Ja (runtime) | Moet op de site staan; niet overal automatisch gekopieerd |
 
 Sibling-conventie: `melodie.mxl` hoort bij `melodie.vsa` (zelfde stam, andere
@@ -116,11 +116,11 @@ extensie).
 
 ## Veelvoorkomende problemen (betekenis)
 
-| Situatie                   | Typische oorzaak               | Richting oplossing                          |
-| -------------------------- | ------------------------------ | ------------------------------------------- |
-| 404 op download            | MXL niet in static             | `vsa musicxml` + publiceren (zie CLI)       |
-| Verkeerde toonsoort in MXL | Verkeerd conversieprofiel      | Zie [conversie musicxml](conversie-vsa-musicxml.md) |
-| Verwacht een `.vsa`-bestand | Pad naar `.mxl` i.p.v. `.vsa` | Eerste argument moet `.vsa` zijn            |
+| Situatie                    | Typische oorzaak               | Richting oplossing                                                                                      |
+| --------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| 404 op download             | MXL niet in static             | [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) + publiceren |
+| Verkeerde toonsoort in MXL  | Verkeerd conversieprofiel      | Zie [conversie musicxml](conversie-vsa-musicxml.md)                                                     |
+| Verwacht een `.vsa`-bestand | Pad naar `.mxl` i.p.v. `.vsa`  | Eerste argument moet `.vsa` zijn                                                                        |
 
 ---
 
@@ -137,4 +137,4 @@ extensie).
 
 - [Conversie vsa musicxml](conversie-vsa-musicxml.md)
 - [Exporttype coria](exporttype-coria.md) (deelt MXL-URL)
-- [CLI: `vsa musicxml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/musicxml.md)
+- [CLI: `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)

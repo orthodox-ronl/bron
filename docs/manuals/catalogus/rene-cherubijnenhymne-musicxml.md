@@ -9,11 +9,11 @@ het te verwarren met **afgeleide** MXL uit VSA-conversie.*
 
 ## Situatie
 
-| Bestand              | Herkomst                         | Bron vs afgeleid                                      |
-| -------------------- | -------------------------------- | ----------------------------------------------------- |
-| `nana-partituur.pdf` | Scan / export van Nana           | **Bron** (parochie-lokaal → bron, verhaal 2–3)        |
-| `groningen.vsa`      | Transcriptie (later)             | **Bron**                                              |
-| `groningen.mxl`      | Rechtstreeks uit MuseScore (Nana)| **Bron** — niet `vsa musicxml`-output in git          |
+| Bestand              | Herkomst                          | Bron vs afgeleid                                      |
+| -------------------- | --------------------------------- | ----------------------------------------------------- |
+| `nana-partituur.pdf` | Scan / export van Nana            | **Bron** (parochie-lokaal → bron, verhaal 2–3)        |
+| `groningen.vsa`      | Transcriptie (later)              | **Bron**                                              |
+| `groningen.mxl`      | Rechtstreeks uit MuseScore (Nana) | **Bron** — niet `vsa musicxml`-output in git          |
 
 Regel: handmatig aangeleverde MusicXML in `sources/musicxml/` is bron; MXL
 automatisch gegenereerd uit VSA hoort **niet** in git
@@ -36,7 +36,7 @@ Rene opent het stuk *cherubijnenhymne / kastorski / groningen* en kiest
    - bron: `sources/musicxml/groningen.mxl` + entry in yaml.
 4. **Samenstelling:** vinkje “Downloadlink op liturgiepagina” → voegt
    `:::include mxl id:cherubijnenhymne/kastorski/groningen:::` toe.
-5. **Validatie:** XML well-formed check (toekomst); `catalogus index validate`.
+5. **Validatie:** XML well-formed check (toekomst); [`catalogus index validate`](../../reference/catalogus-cli.md#catalogus-index-validate).
 
 !!! note "GUI + handmatige bron-MXL"
     **`:::include mxl`** vanuit een **VSA-pad** of catalogus-pad is geïmplementeerd.
@@ -75,7 +75,7 @@ sources:
     note: "Handmatig geëxporteerd MusicXML; geen vsa musicxml-afgeleide"
 ```
 
-**Niet** committen: MXL gegenereerd met `vsa musicxml` — die hoort bij build-time
+**Niet** committen: MXL gegenereerd met [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) — die hoort bij build-time
 ([conversie vsa musicxml](../../reference/conversie-vsa-musicxml.md)).
 
 ### 3. Catalogus — representatie-id
@@ -103,7 +103,7 @@ In het sjabloon (verhaal 1) blijven de includes met **`zoek=`**:
 ```
 
 Resolve:
-[`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md).
+[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/).
 
 **Beperking:** `mxl` / `coria` op **`bron:`** catalogus-pad — `.vsa` buiten
 content-root. Handmatig MXL in repo blijft geldig; de build levert een
@@ -119,7 +119,7 @@ anders dan Nana's handmatige export.
 | Kanaal              | Wat Rene doet                                                |
 | ------------------- | ------------------------------------------------------------ |
 | Parochie-site       | Samenstelling met svg + (later) mxl-download                 |
-| E-mail / chat       | Link naar pagina, niet los MXL in mail (één canonical bron) |
+| E-mail / chat       | Link naar pagina, niet los MXL in mail (één canonical bron)  |
 | Andere parochies    | Na merge bron: zij sync'en `zangstukken/cherubijnenhymne/`   |
 
 ### 6. Validatie

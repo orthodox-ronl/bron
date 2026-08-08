@@ -4,7 +4,7 @@ termType: concept
 glossaryTerm: "VSA-tooling"
 glossaryText: "De Python-toolchain (`vsa` CLI) waarmee [vsa-notatie](@)-bestanden worden geparseerd, gevalideerd en omgezet naar [afgeleiden](@) zoals SVG en MusicXML."
 glossaryNotes:
-  - "De `vsa`-CLI biedt subcommando's voor validatie, rendering en export; zie de [CLI-referentie](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)."
+  - "De `vsa`-CLI biedt subcommando's voor validatie, rendering en export; zie de [CLI-referentie](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)."
   - "VSA-tooling genereert [afgeleiden](@) uit [bronbestanden](@); de [afgeleiden](@) zelf worden niet in de [bron-repository](@) opgeslagen."
   - "De tooling bevindt zich in de repo [orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)."
 formPhrases:
@@ -22,17 +22,17 @@ afgeleiden worden **niet** in de [bron-repository](@) bewaard, maar bij de build
 opnieuw gemaakt.
 
 Volledige commando’s, opties en voorbeelden:
-[CLI-referentie (`vsa`)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md).
+[CLI-referentie (`vsa`)](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/).
 
 ## Wat je ermee doet
 
-| Doel                         | Typisch subcommando   |
-| ---------------------------- | --------------------- |
-| Controleren of VSA klopt     | `validate`            |
-| Notatie als plaatje (SVG)    | `svg`                 |
-| MusicXML voor MuseScore/Coria| `musicxml`            |
-| Documenten voor de site bouwen | `build-markdown`    |
-| `zoek=` in markdown oplossen | `resolve-catalogus`   |
+| Doel                           | Typisch subcommando   |
+| ------------------------------ | --------------------- |
+| Controleren of VSA klopt       | `validate`            |
+| Notatie als plaatje (SVG)      | `svg`                 |
+| MusicXML voor MuseScore/Coria  | `musicxml`            |
+| Documenten voor de site bouwen | `build-markdown`      |
+| `zoek=` in markdown oplossen   | `resolve-catalogus`   |
 
 VSA-tooling is een [conversiemechanisme](@): het zet bronbestanden om naar
 afgeleiden. Org-contracten (wat/wanneer):
@@ -52,7 +52,7 @@ cd /d C:\Git\orthodox-groningen\bron
 vsa validate zangstukken
 ```
 
-Details: [CLI-overzicht](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md).
+Details: [CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/).
 
 ## Motivatie
 
@@ -64,6 +64,6 @@ bronbestanden. In CI valideert `vsa validate zangstukken` bij push of PR.
 
 ## Zie ook
 
-- [CLI-referentie](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)
+- [CLI-referentie](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)
 - [VSA-demo](https://orthodox-groningen.github.io/VSA-demo/)
 - [GitHub orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)

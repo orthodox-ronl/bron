@@ -17,11 +17,11 @@ Een **samenstelling** is een markdown-document met VSA-directives (`:::include`)
 
 Een samenstelling is het ingevulde resultaat van een **sjabloon** — nadat `:::include zoek="…"`-directives zijn opgelost naar een catalogus-pad.
 
-| Status | Voorbeeld                                   |
-| ------ | ------------------------------------------- |
-| Ja     | `zondag-toon-1.md`, `antifonen-hemelum.md`  |
+| Status | Voorbeeld                                               |
+| ------ | ------------------------------------------------------- |
+| Ja     | `zondag-toon-1.md`, `antifonen-hemelum.md`              |
 | Nee    | `groningen.vsa` ([representatie](@) / [bronbestand](@)) |
-| Nee    | `zangstuk.yaml` ([source-entry](@)-model)   |
+| Nee    | `zangstuk.yaml` ([source-entry](@)-model)               |
 
 Niet verwarren met [compositie](@) (org-brede YAML-lijst van [zangstukken](@)) of sjabloon (markdown met `default.gelegenheidstype` en `:::include zoek=`).
 

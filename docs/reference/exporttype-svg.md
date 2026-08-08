@@ -1,11 +1,11 @@
-﻿# Exporttype: embed SVG
+# Exporttype: embed SVG
 
 Contract voor het **svg**-exporttype: [VSA-notatie](@) als schaalbare
 vectorafbeelding in een samenstelling (HTML, afdruk).
 
 Technische build-stappen (shortcodes, asset-mappen): zie
-[SVG exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/svg-export.md)
-en [CLI `vsa build-markdown`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/build-markdown.md).
+[SVG exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/svg-export/)
+en [CLI `vsa build-markdown`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/).
 
 ---
 
@@ -109,11 +109,11 @@ svg.
 
 ## Inputs
 
-| Input                      | Vereist?    | Bron                                                         |
-| -------------------------- | ----------- | ------------------------------------------------------------ |
-| `.vsa`-bestand             | Ja          | content-source of gekopieerd uit `bron/zangstukken/`         |
-| `.svg` afgeleide           | Impliciet   | Wordt bij build of via `vsa svg` gegenereerd                 |
-| Vooraf gegenereerde `.svg` | Alternatief | `:::include "bestand.svg"` — geen VSA-validatie op dat moment |
+| Input                      | Vereist?    | Bron                                                                                                                |
+| -------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------- |
+| `.vsa`-bestand             | Ja          | content-source of gekopieerd uit `bron/zangstukken/`                                                                |
+| `.svg` afgeleide           | Impliciet   | Wordt bij build of via [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/) gegenereerd |
+| Vooraf gegenereerde `.svg` | Alternatief | `:::include "bestand.svg"` — geen VSA-validatie op dat moment                                                       |
 
 Sibling-conventie: `{stem}.svg` hoort bij `{stem}.vsa`.
 
@@ -121,13 +121,13 @@ Sibling-conventie: `{stem}.svg` hoort bij `{stem}.vsa`.
 
 ## Validatie (bedoeling)
 
-| Check                  | Blokkeert publicatie? | Toelichting                          |
-| ---------------------- | --------------------- | ------------------------------------ |
-| `.vsa` parseerbaar     | Ja                    | Kwaliteit van de bron                |
-| Semantische VSA-regels | Ja                    | Idem                                 |
-| Include-pad bestaat    | Ja                    | Geen gebroken verwijzing             |
-| Geen kring-include     | Ja                    | A → B → A is verboden                |
-| Directe `.svg`-include | Alleen bestand bestaat | Geen VSA-validate op dat moment     |
+| Check                  | Blokkeert publicatie?  | Toelichting                          |
+| ---------------------- | ---------------------- | ------------------------------------ |
+| `.vsa` parseerbaar     | Ja                     | Kwaliteit van de bron                |
+| Semantische VSA-regels | Ja                     | Idem                                 |
+| Include-pad bestaat    | Ja                     | Geen gebroken verwijzing             |
+| Geen kring-include     | Ja                     | A → B → A is verboden                |
+| Directe `.svg`-include | Alleen bestand bestaat | Geen VSA-validate op dat moment      |
 
 ---
 
@@ -153,13 +153,13 @@ Sibling-conventie: `{stem}.svg` hoort bij `{stem}.vsa`.
 
 ## Veelvoorkomende problemen (betekenis)
 
-| Situatie                | Typische oorzaak              | Richting oplossing                    |
-| ----------------------- | ----------------------------- | ------------------------------------- |
-| Bestand niet gevonden   | Pad-typo of ontbrekend bestand | Pad t.o.v. `.md` controleren         |
-| Kringverwijzing         | A include B include A         | Include-structuur herzien             |
-| Onbekend bestandstype   | Verkeerde extensie            | Alleen ondersteunde types             |
-| VSA-validatiefout       | Ongeldige syntax              | `vsa validate` (zie CLI)              |
-| Lege of gebroken SVG    | Renderfout                    | Bron `.vsa` en [VSA-tooling](@) check |
+| Situatie                | Typische oorzaak               | Richting oplossing                                                                         |
+| ----------------------- | ------------------------------ | ------------------------------------------------------------------------------------------ |
+| Bestand niet gevonden   | Pad-typo of ontbrekend bestand | Pad t.o.v. `.md` controleren                                                               |
+| Kringverwijzing         | A include B include A          | Include-structuur herzien                                                                  |
+| Onbekend bestandstype   | Verkeerde extensie             | Alleen ondersteunde types                                                                  |
+| VSA-validatiefout       | Ongeldige syntax               | [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) |
+| Lege of gebroken SVG    | Renderfout                     | Bron `.vsa` en [VSA-tooling](@) check                                                      |
 
 ---
 
@@ -175,4 +175,4 @@ Sibling-conventie: `{stem}.svg` hoort bij `{stem}.vsa`.
 
 - [Conversie vsa svg](conversie-vsa-svg.md)
 - [Exportcontracten — overzicht](exportcontracten.md)
-- [Guide: SVG exporteren](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/svg-export.md)
+- [Guide: SVG exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/svg-export/)
