@@ -408,5 +408,6 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 | 2026-08-08 | Fase C gedaan: P2 task guides + Home/Starten persona-router + pad/`zoek=`-brug                                                     |
 | 2026-08-08 | Fase D gedaan (VSA): hubs, user-guide tour, validation, overview, NL-nav, CLI validate/svg; Home persona-router                    |
 | 2026-08-08 | Fase E: E.1 lezerstest in checklist; E.2 TermRef-steekproef (4 pagina’s); E.3 uitgesteld                                           |
+| 2026-08-08 | TermRef-campagne tweede golf: repo-structuur, identificatie, catalogus-sjabloon, conversie/exporttypes                            |
 
 

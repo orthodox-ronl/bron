@@ -2,9 +2,9 @@
 
 | Veld        | Waarde                                                         |
 | ----------- | -------------------------------------------------------------- |
-| **Status**  | eerste golf gedaan (fase E.2); rest backlog                    |
+| **Status**  | tweede golf gedaan; rest backlog                               |
 | **Repo**    | bron (+ VSA-tooling later waar nodig)                          |
-| **Scope**   | Follow-up na H4–H6 en contentplan fasen A–D                    |
+| **Scope**   | Follow-up na H4–H6 en contentplan fasen A–E                    |
 
 ## Doel
 
@@ -19,7 +19,8 @@ history — zodat gedefinieerde begrippen consequent hoverbaar zijn.
 | H4   | [Eenvoudige TermRefs](tev2-h4-eenvoudige-termrefs.md)             |
 | H5   | [Meerwoordige terms + inkorten](tev2-h5-meerwoordige-termrefs.md) |
 | H6   | [Toolchain](tev2-h6-toolchain.md) (serve≈CI, checks, pins)        |
-| E.2  | Steekproef: 1× spec, 1× reference, 1× task guide, 1× hub (onder)  |
+| E.2  | Steekproef: 1× spec, 1× reference, 1× task guide, 1× hub          |
+| E.2b | Tweede golf: specs + exporttypes + eigendom (onder)               |
 
 H5 parkeerde expliciet: *geen* volledige campagne op alle history/spec-pagina’s.
 
@@ -32,21 +33,34 @@ H5 parkeerde expliciet: *geen* volledige campagne op alle history/spec-pagina’
 | Task guide  | `docs/manuals/parochie-lokaal-zangstukken.md`            | parochie-lokaal, promotie, bron-repository     |
 | Hub         | `docs/manuals/catalogus/index.md`                        | samenstelling, bron, promotie, uitvoeringsvorm |
 
-Geen nieuwe glossary-termen in deze golf (sjabloon, content-source, frontmatter
-blijven uncured jargon tot eigen PR).
+## Tweede golf — gedaan
+
+| Type        | Pad                                                         | Notitie                                      |
+| ----------- | ----------------------------------------------------------- | -------------------------------------------- |
+| Spec        | `docs/specs/repo-structuur.md`                              | bron vs afgeleide, compositie, samenstelling |
+| Spec        | `docs/specs/zangstuk-identificatie.md`                      | vier niveaus + manifest                      |
+| Spec        | `docs/specs/catalogus-samenstelling-zangstuk.md`            | intro + mixed session                        |
+| Spec        | `docs/specs/documentatie-eigendom.md`                       | VSA-tooling, export/conversie                |
+| Reference   | `docs/reference/conversiemechanismen.md`                    | densify conversie/export                     |
+| Reference   | `docs/reference/exporttype-mxl.md`                          | was 0 TermRefs                               |
+| Reference   | `docs/reference/exporttype-coria.md`                        | exporttype + samenstelling                   |
+
+Geen nieuwe glossary-termen in deze golven (sjabloon, content-source, frontmatter,
+catalogus-pad blijven uncured jargon tot eigen PR).
 
 ## Backlog (later)
 
-1. Inventaris: overige specs/reference met bare termen die al in `terms/` staan
-2. Dunne manuals / long catalogus-API / `rene-*` stories (selectief)
-3. TermRefs plaatsen (bron `@`, tool-docs `@` / `@bron` volgens eigendom)
-4. Alleen inkorten waar hover de definitie al dekt (schrijfconventies)
-5. `docs-build-tev2` / TermRef-check groen houden
-6. Geen normatieve betekenis wijzigen zonder glossary-PR
+1. `catalogus-architectuur.md`, `catalogus-zoek-api.md`, `catalogus-cli.md` (selectief)
+2. `zangstuk-formaat.md` / overige reference densify
+3. Dunne manuals / `rene-*` stories (selectief)
+4. VSA-tooling tool-docs waar org-termen bare blijven (`@bron`)
+5. Alleen inkorten waar hover de definitie al dekt (schrijfconventies)
+6. `docs-build-tev2` / TermRef-check groen houden
+7. Geen normatieve betekenis wijzigen zonder glossary-PR
 
 ## Niet in scope
 
 Nieuwe termen bedenken zonder glossary-PR; synoniembeleid opnieuw openbreken;
-dark mode / IA.
+dark mode / IA; volledige `terminologie.md`-herhaling (is zelf de glossary).
 
 Eigen PR(s); niet mengen met ongerelateerde docs-wijzigingen.

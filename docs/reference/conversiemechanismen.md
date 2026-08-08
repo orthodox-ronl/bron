@@ -1,10 +1,11 @@
 # Conversiemechanismen
 
-Referentie voor **conversiemechanismen**: geautomatiseerde stappen die
-brondocumenten omzetten naar **afgeleide** bestanden (`.svg`, `.mxl`, …).
+Referentie voor **[conversiemechanismen](@)**: geautomatiseerde stappen die
+[bronbestanden](@) omzetten naar **[afgeleide](@)** bestanden (`.svg`, `.mxl`, …).
 
 Conversie is **geen** export: conversie verandert het formaat; export bepaalt hoe
-afgeleiden in een samenstelling verschijnen ([Exportcontracten](exportcontracten.md)).
+[afgeleiden](@) in een [samenstelling](@) verschijnen
+([Exportcontracten](exportcontracten.md) — [exportmechanismen](@)).
 
 Uitvoering gebeurt met [VSA-tooling](@)
 ([CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)).
@@ -14,10 +15,10 @@ Afgeleide output hoort **niet** in de [bron-repository](@).
 
 ## Conversie vs. export
 
-| Laag      | Vraag                                   | Voorbeeld                         |
-| --------- | --------------------------------------- | --------------------------------- |
-| Conversie | Wat is de afgeleide en hoe maak ik die? | `.vsa` → `.svg` of `.mxl`         |
-| Export    | Hoe toon ik die in een samenstelling?   | `:::include svg "lied.vsa"`       |
+| Laag                         | Vraag                                          | Voorbeeld                         |
+| ---------------------------- | ---------------------------------------------- | --------------------------------- |
+| [Conversiemechanisme](@)     | Wat is de [afgeleide](@) en hoe maak ik die?   | `.vsa` → `.svg` of `.mxl`         |
+| [Exportmechanisme](@)        | Hoe toon ik die in een [samenstelling](@)?     | `:::include svg "lied.vsa"`       |
 
 ---
 
@@ -59,7 +60,7 @@ vóór export is gepland — zie [CI-architectuur](../plans/ci-architectuur.md).
 | Scan → VSA | PDF/png | `.vsa` | Niet geautomatiseerd; handmatige transcriptie |
 | Audio      | —       | —      | Nog niet gedefinieerd                         |
 
-Nieuwe mechanismen krijgen een volledig org-contract **vóór** opname in CI.
+Nieuwe [conversiemechanismen](@) krijgen een volledig org-contract **vóór** opname in CI.
 
 ---
 

@@ -1,20 +1,21 @@
 # Exporttype: Coria
 
-Contract voor het **coria**-exporttype: link of ingebedde speler naar
+Contract voor het **coria**-[exporttype](@): link of ingebedde speler naar
 [Coria](https://coria.nl) voor online oefenen.
 
 Technische build-details (shortcodes, static-mappen): zie
 [MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/)
-(sectie Coria) en de directives-specificatie in VSA-tooling.
+(sectie Coria) en de directives-specificatie in [VSA-tooling](@).
 
 ---
 
 ## Samenvatting
 
-Exporttype **coria** voegt een knop of link toe waarmee de lezer de melodie in
+[Exporttype](@) **coria** voegt een knop of link toe waarmee de lezer de melodie in
 Coria kan openen — met vooraf gekozen partij (Coria-HTML sibling) of via een
 MusicXML deep-link. Het [vsa-bestand](@) moet bestaan; MXL of HTML moet
-bereikbaar zijn op de gepubliceerde site.
+bereikbaar zijn op de gepubliceerde site. De link verschijnt in een
+[samenstelling](@).
 
 ---
 
