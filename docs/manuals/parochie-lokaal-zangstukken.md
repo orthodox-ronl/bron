@@ -38,7 +38,7 @@ content-source/
                     └── <representatie-id>.<ext>
 ```
 
-**[Canonieke ids](@):** `^[a-z0-9_-]+$` — zie [terminologie](../specs/terminologie.md)
+**[Canonieke ids](@)** — zie [terminologie](../specs/terminologie.md)
 (`zangstuk-id` → `variant-id` → `uitvoeringsvorm-id` → `representatie-id`).
 
 **Referentie-implementatie ([VSA-tooling](@) / demo):**
@@ -112,15 +112,13 @@ Resolve naar catalogus-pad via
 
 ## Promotie naar bron-repository
 
-1. Behoud **[canonieke ids](@)** (`variant-id`, `uitvoeringsvorm-id`, `representatie-id`).
+1. Behoud **[canonieke ids](@)**.
 2. Open PR naar `orthodox-groningen/bron` met [bronbestand](@) + metadata (zie
    [zangstuk toevoegen](zangstuk-toevoegen.md) /
    [bronvariant toevoegen](bronvariant-toevoegen.md)).
 3. Na merge: [samenstelling](@) kan bron-referentie gebruiken i.p.v. `lokaal/`-pad.
 
 [Parochie-lokaal](parochie-lokale-representatie@) mag als kopie blijven staan; **canonical** is bron na sync.
-[Promotie](@) is de overgang van parochie-lokaal naar geregistreerd in de
-[bron-repository](@).
 
 ---
 

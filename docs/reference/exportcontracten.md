@@ -4,9 +4,8 @@ audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
 ---
 # Exportcontracten
 
-Referentie voor **[exportmechanismen](@)**: hoe [afgeleiden](@) (of handmatige
-siblings) in een **[samenstelling](@)** (Markdown-bundel voor parochie-uitgave)
-worden ontsloten.
+Referentie voor **[exportmechanismen](@)** (incl. handmatige siblings) in een
+**[samenstelling](@)**.
 
 Export is **geen** [conversie](conversiemechanismen.md): export verwijst naar
 reeds gemaakte [afgeleiden](@) (bijv. `.svg`, `.mxl`) of naar handmatige siblings

@@ -60,8 +60,8 @@ koormap_nummer: <string>           # bijv. "8a" — niet de scan-sorteerprefix 0
 
 ## VSA-bestanden
 
-[VSA-bestanden](@) bevatten [VSA-notatie](@) en hebben de extensie `.vsa`. Ze zijn
-tegelijk [bronbestanden](@) en [representaties](@) van een [uitvoeringsvorm](@).
+[VSA-bestanden](@) zijn tegelijk [bronbestanden](@) en [representaties](@) van een
+[uitvoeringsvorm](@) (extensie `.vsa`).
 
 ### Platte VSA
 

@@ -13,9 +13,7 @@ geen stap-voor-stap handleidingen; die staan onder
 
 ## Conversie
 
-Conversie is de vaste toolstap van [bronbestand](@) naar [afgeleide](@)
-(bijvoorbeeld [VSA-notatie](@) naar SVG). Zie ook
-[conversiemechanismen](@).
+Zie [conversiemechanismen](@) (bijv. [VSA-notatie](@) → SVG).
 
 | Pagina                                                      | Wat je er vindt                                                |
 | ----------------------------------------------------------- | -------------------------------------------------------------- |
@@ -25,8 +23,7 @@ Conversie is de vaste toolstap van [bronbestand](@) naar [afgeleide](@)
 
 ## Export
 
-Export beschrijft hoe een [afgeleide](@) of bron in een [samenstelling](@)
-verschijnt (bijvoorbeeld via `:::include`). Elk [exporttype](@) heeft een eigen
+Zie [exportcontracten](exportcontracten.md); elk [exporttype](@) heeft een eigen
 contractpagina.
 
 | Pagina                                              | Wat je er vindt                           |

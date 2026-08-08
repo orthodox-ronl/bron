@@ -150,7 +150,7 @@ Zie [parochie-lokaal zangstukken](../manuals/parochie-lokaal-zangstukken.md) voo
 
 1. Normaliseer invoer: `strip()` + Unicode `casefold()`
 2. Match [canoniek id](@) of geregistreerde [alias](@) binnen scope
-3. Resultaat: [canoniek id](@) `[a-z0-9_-]+`, of fout (`NotFoundError`, `AmbiguousError`)
+3. Resultaat: [canoniek id](@), of fout (`NotFoundError`, `AmbiguousError`)
 
 `lang` in alias-yaml is metadata; matching negeert taal (casefold op `text`).
 

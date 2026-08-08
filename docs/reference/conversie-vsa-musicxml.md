@@ -20,8 +20,7 @@ en de workflow-guide
 
 De conversie zet [VSA-notatie](@) om naar MusicXML voor MuseScore, Coria
 (`play_from_url`) en de [exporttypen](@) [mxl-download](exporttype-mxl.md) en
-[coria](exporttype-coria.md) (MXL-modus). De uitvoer is een [afgeleide](@) en
-hoort **niet** in de [bron-repository](@).
+[coria](exporttype-coria.md) (MXL-modus). De uitvoer is een [afgeleide](@).
 
 Muziek-metadata in de frontmatter van het [vsa-bestand](@) (titel, toonsoort,
 tempo) wordt aanbevolen zodat de MXL bruikbaar is in spelers en editors.

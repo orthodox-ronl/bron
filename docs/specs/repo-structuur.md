@@ -8,9 +8,8 @@ Status: specificatie (juni 2026).
 
 ## Doel en scope
 
-De [bron-repository](@) is de centrale bron van waarheid voor muzikale inhoud binnen
-`orthodox-groningen`. Parochie-sites consumeren deze repository; ze bewerken hem
-niet rechtstreeks.
+De [bron-repository](@) bevat de muzikale inhoud voor `orthodox-groningen`.
+Parochie-sites consumeren deze repository; ze bewerken hem niet rechtstreeks.
 
 De repository bevat **bronnen** en metadata. Geen [afgeleide](@) bestanden (SVG, MXL
 uit [VSA](vsa@)) in git, en geen parochie-specifiek gebruik.
@@ -52,8 +51,7 @@ bron/
 
 ### Definitie
 
-Een [zangstuk](@) is de eenheid waarvoor één of meer bronnen bestaan. Mapnaam =
-stabiele `id` onder `zangstukken/`.
+Mapnaam van een [zangstuk](@) = stabiele `id` onder `zangstukken/`.
 
 ### Bron versus afgeleid
 

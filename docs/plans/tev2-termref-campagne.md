@@ -6,7 +6,7 @@ audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
 
 | Veld        | Waarde                                                         |
 | ----------- | -------------------------------------------------------------- |
-| **Status**  | punt 4 rene/manuals densify; rest backlog                      |
+| **Status**  | punt 6 inkorten via TermRef-hover; rest backlog                |
 | **Repo**    | bron (+ VSA-tooling later waar nodig)                          |
 | **Scope**   | Follow-up na H4–H6 en contentplan fasen A–E                    |
 
@@ -31,6 +31,7 @@ history — zodat gedefinieerde begrippen consequent hoverbaar zijn.
 | E.2f | `zangstuk-formaat` + reference densify                                |
 | E.2g | VSA-tooling: org-termen als `[term](@bron)` (selectief)               |
 | E.2h | Dunne manuals / `rene-*` stories (selectief TermRefs)                 |
+| E.2i | Inkorten waar hover de definitie al dekt (schrijfconventies)          |
 
 H5 parkeerde expliciet: *geen* volledige campagne op alle history/spec-pagina’s.
 
@@ -73,7 +74,7 @@ catalogus-pad blijven uncured jargon tot eigen PR).
 3. ~~`zangstuk-formaat.md` / overige reference densify (TermRefs)~~ **gedaan**
 4. ~~Dunne manuals / `rene-*` stories (selectief TermRefs)~~ **gedaan**
 5. ~~VSA-tooling tool-docs waar org-termen bare blijven (`@bron`)~~ **gedaan** (selectief)
-6. Alleen inkorten waar hover de definitie al dekt (schrijfconventies)
+6. ~~Alleen inkorten waar hover de definitie al dekt (schrijfconventies)~~ **gedaan** (selectief)
 7. `docs-build-tev2` / TermRef-check groen houden
 8. Geen normatieve betekenis wijzigen zonder glossary-PR
 9. E.3 optioneel: `catalogus-cli` splitsen (groot)

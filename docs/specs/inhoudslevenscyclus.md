@@ -115,8 +115,7 @@ Minimaal (handmatig of CI):
 ## Deel 2 — Conversiemechanismen
 
 [Conversie](../reference/conversiemechanismen.md) verandert **formaat**
-([bronbestand](@) → [afgeleide](@)). [Afgeleiden](@) worden **niet** in git
-bewaard; ze worden in build-workflows gegenereerd.
+([bronbestand](@) → [afgeleide](@)). [Afgeleiden](@) ontstaan in de build.
 
 Geregistreerde [conversiemechanismen](@):
 
@@ -136,8 +135,7 @@ zie [CI-architectuur](../plans/ci-architectuur.md).
 ## Deel 3 — Exportmechanismen
 
 [Export](../reference/exportcontracten.md) bepaalt **hoe** een [afgeleide](@)
-(of handmatige sibling) in een [samenstelling](@) wordt ontsloten — embedden,
-Coria-link, download.
+(of handmatige sibling) in een [samenstelling](@) verschijnt.
 
 Exportcontracten:
 

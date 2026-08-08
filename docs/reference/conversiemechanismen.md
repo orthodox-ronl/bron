@@ -4,8 +4,7 @@ audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
 ---
 # Conversiemechanismen
 
-Referentie voor **[conversiemechanismen](@)**: geautomatiseerde stappen die
-[bronbestanden](@) omzetten naar **[afgeleide](@)** bestanden (`.svg`, `.mxl`, …).
+Referentie voor **[conversiemechanismen](@)** (bijv. `.vsa` → `.svg` / `.mxl`).
 
 Conversie is **geen** export: conversie verandert het formaat; export bepaalt hoe
 [afgeleiden](@) in een [samenstelling](@) verschijnen
@@ -13,7 +12,7 @@ Conversie is **geen** export: conversie verandert het formaat; export bepaalt ho
 
 Uitvoering gebeurt met [VSA-tooling](@)
 ([CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)).
-Afgeleide output hoort **niet** in de [bron-repository](@).
+[Afgeleide](@) output hoort **niet** in de [bron-repository](@).
 
 ---
 

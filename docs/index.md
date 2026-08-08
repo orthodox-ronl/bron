@@ -52,7 +52,7 @@ De [zangstukken](@) zelf (`zangstukken/`, `composities/`) staan in git maar word
 niet als webpagina's gepubliceerd. Parochie-sites en build-pipelines consumeren
 die inhoud rechtstreeks uit de repository.
 
-[Afgeleide](@) bestanden (SVG, MXL, …) horen niet in git; zie
+[Afgeleide](@) bestanden (SVG, MXL, …) — zie
 [Inhoudslevenscyclus](specs/inhoudslevenscyclus.md).
 
 ## Lokaal bekijken
