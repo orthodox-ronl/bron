@@ -1,3 +1,7 @@
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # Overzicht
 
 Deze map bevat **onsamenhangende ontwikkelideeën** — kort beschreven, met status, als

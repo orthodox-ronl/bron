@@ -1,7 +1,11 @@
+---
+doc_type: task-guide
+audience: "P5 — Docs-/tool-contributor"
+---
 # Documentatie bijdragen
 
-Handleiding voor wie **docs** in bron (of parallel in VSA-tooling) wijzigt:
-TermRefs, tabellen, lokale builds en wat CI controleert.
+Handleiding voor wie **docs** in de [bron-repository](@) (of parallel in
+[VSA-tooling](@)) wijzigt: TermRefs, tabellen, lokale builds en wat CI controleert.
 
 ## Scripts (bron)
 
@@ -26,7 +30,7 @@ gebruik `*-tev2` als je hover of glossary wilt controleren.
 
 ## TermRefs
 
-- Org-termen: `[zangstuk](@)` in bron; in VSA-tooling bij voorkeur `[zangstuk](@bron)`
+- Org-termen: `[zangstuk](@)` in bron; in [VSA-tooling](@) bij voorkeur `[zangstuk](@bron)`
   tenzij de tool-repo een bewuste lokale herdefinitie heeft.
 - Na TRRT mogen geen `[…](@…)`-vormen meer in `generated/docs` staan —
   CI draait `python scripts/check-tev2-termrefs.py generated/docs`.
@@ -51,9 +55,9 @@ Cursor-regel: `.cursor/rules/markdown-table-layout.mdc`.
 | git-revision-date plugin               | `>=1.2`                  | `requirements-docs.txt` |
 | TEv2 CLI’s (trrt/hrgt/mrgt/mrg-import) | `1.2.0`                  | `package.json`          |
 
-Houd pins gelijk tussen bron en VSA-tooling tenzij er een bewuste drift-PR is.
+Houd pins gelijk tussen bron en [VSA-tooling](@) tenzij er een bewuste drift-PR is.
 
-## VSA-tooling
+## [VSA-tooling](@)
 
 Zelfde scriptnamen; mrg-import is daar standaard (bron-MRG voor `*@bron`).
 Zie [TEv2 in tool-docs](https://orthodox-groningen.github.io/VSA-tooling/guides/tev2-docs/).
@@ -61,6 +65,20 @@ Zie [TEv2 in tool-docs](https://orthodox-groningen.github.io/VSA-tooling/guides/
 ## Checklist vóór PR
 
 - [ ] `scripts\docs-build-tev2.cmd` groen (of CI `docs-pages` / docs-build)
+- [ ] **Type + publiek** benoemd (of evident uit hub/pad): zie
+      [schrijfconventies](../specs/schrijfconventies.md) — paginatypen / persona’s
+- [ ] **Lezerstest** voor dat type: kan de beoogde lezer in één scan antwoorden op
+      *voor wie / wanneer / wat moet ik doen of weten?* (hub = route; task =
+      stappen + voorbeeld; term = waartoe; CLI = SYNOPSIS-achtig + foutpad)
 - [ ] Nieuwe/gewijzigde termen: curated text + TermRefs waar de term voorkomt
-- [ ] Tabellen uitgelijnd
-- [ ] Geen afgeleide SVG/MXL in bron committen
+      ([term-sjabloon](../specs/term-entry-sjabloon.md); jargon alleen via glossary)
+- [ ] Jargon op de pagina → TermRef of expliciet “niet in glossary” (geen ad-hoc term)
+- [ ] Pagina voldoet aan [schrijfconventies](../specs/schrijfconventies.md):
+      kopnorm (voor wie / wanneer / antwoord eerst), toon welwillende volwassene
+      tenzij docs-/tool-contributor of spec-/PR-reviewer; task/CLI/workflow hebben
+      **foutpad**; lezerstekst gebruikt persona-**namen** (geen kale `P3`)
+- [ ] Frontmatter waar van toepassing: `doc_type` + `audience` als
+      `P3 — Notatie-auteur` (niet alleen `P3`)
+- [ ] Nagelezen als de bedoelde lezer: zou iemand zonder voorkennis begrijpen
+      wat je bedoelde?- [ ] Tabellen uitgelijnd
+- [ ] Geen [afgeleide](@) SVG/MXL in bron committen

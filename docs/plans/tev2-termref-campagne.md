@@ -1,10 +1,14 @@
-# TEv2 — bredere TermRef-campagne (later)
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
+# TEv2 — bredere TermRef-campagne
 
 | Veld        | Waarde                                                         |
 | ----------- | -------------------------------------------------------------- |
-| **Status**  | gepland (niet nu)                                              |
-| **Repo**    | bron + VSA-tooling                                             |
-| **Scope**   | Follow-up na H4–H6 docs-professionalisering                    |
+| **Status**  | TermRef-campagne backlog 1–7 gedaan; rest optioneel            |
+| **Repo**    | bron (+ VSA-tooling later waar nodig)                          |
+| **Scope**   | Follow-up na H4–H6 en contentplan fasen A–E                    |
 
 ## Doel
 
@@ -14,24 +18,72 @@ history — zodat gedefinieerde begrippen consequent hoverbaar zijn.
 
 ## Context
 
-| Golf | Wat al gedaan is                                                  |
-| ---- | ----------------------------------------------------------------- |
-| H4   | [Eenvoudige TermRefs](tev2-h4-eenvoudige-termrefs.md)             |
-| H5   | [Meerwoordige terms + inkorten](tev2-h5-meerwoordige-termrefs.md) |
-| H6   | [Toolchain](tev2-h6-toolchain.md) (serve≈CI, checks, pins)        |
+| Golf | Wat al gedaan is                                                      |
+| ---- | --------------------------------------------------------------------- |
+| H4   | [Eenvoudige TermRefs](tev2-h4-eenvoudige-termrefs.md)                 |
+| H5   | [Meerwoordige terms + inkorten](tev2-h5-meerwoordige-termrefs.md)     |
+| H6   | [Toolchain](tev2-h6-toolchain.md) (serve≈CI, checks, pins)            |
+| E.2  | Steekproef: 1× spec, 1× reference, 1× task guide, 1× hub              |
+| E.2b | Tweede golf: specs + exporttypes + eigendom                           |
+| E.2c | Zangstukmodel (`terminologie.md`): TermRefs op criteria/samenhang     |
+| E.2d | Terms `alias` / `canoniek-id` + frontmatter roll-out                  |
+| E.2e | Selectief: catalogus-architectuur / zoek-api / catalogus-cli          |
+| E.2f | `zangstuk-formaat` + reference densify                                |
+| E.2g | VSA-tooling: org-termen als `[term](@bron)` (selectief)               |
+| E.2h | Dunne manuals / `rene-*` stories (selectief TermRefs)                 |
+| E.2i | Inkorten waar hover de definitie al dekt (schrijfconventies)          |
+| E.2j | `docs-build-tev2` + TermRef-check lokaal groen (bron + VSA)           |
 
 H5 parkeerde expliciet: *geen* volledige campagne op alle history/spec-pagina’s.
 
-## Later oppakken
+## Eerste golf (fase E.2) — gedaan
 
-1. Inventaris: pagina’s met bare termen die al in glossary/`terms/` staan
-2. TermRefs plaatsen (bron `@`, tool-docs `@` / `@bron` volgens eigendom)
-3. Alleen inkorten waar hover de definitie al dekt (schrijfconventies)
-4. `docs-build-tev2` / TermRef-check groen houden
-5. Geen normatieve betekenis wijzigen zonder glossary-PR
+| Type        | Pad                                                      | Notitie                                        |
+| ----------- | -------------------------------------------------------- | ---------------------------------------------- |
+| Spec        | `docs/specs/inhoudslevenscyclus.md`                      | TermRefs op lagen + workflow                   |
+| Reference   | `docs/reference/exportcontracten.md`                     | Was 0 TermRefs; nu export/conversie-keten      |
+| Task guide  | `docs/manuals/parochie-lokaal-zangstukken.md`            | parochie-lokaal, promotie, bron-repository     |
+| Hub         | `docs/manuals/catalogus/index.md`                        | samenstelling, bron, promotie, uitvoeringsvorm |
 
-## Niet in scope van deze notitie
+## Tweede golf — gedaan
 
-Nieuwe termen bedenken; synoniembeleid opnieuw openbreken; dark mode / IA.
+| Type        | Pad                                              | Notitie                                      |
+| ----------- | ------------------------------------------------ | -------------------------------------------- |
+| Spec        | `docs/specs/repo-structuur.md`                   | bron vs afgeleide, compositie, samenstelling |
+| Spec        | `docs/specs/zangstuk-identificatie.md`           | vier niveaus + manifest                      |
+| Spec        | `docs/specs/catalogus-samenstelling-zangstuk.md` | intro + mixed session                        |
+| Spec        | `docs/specs/documentatie-eigendom.md`            | VSA-tooling, export/conversie                |
+| Reference   | `docs/reference/conversiemechanismen.md`         | densify conversie/export                     |
+| Reference   | `docs/reference/exporttype-mxl.md`               | was 0 TermRefs                               |
+| Reference   | `docs/reference/exporttype-coria.md`             | exporttype + samenstelling                   |
 
-Wanneer starten: eigen PR(s), niet mengen met ongerelateerde docs-wijzigingen.
+## Zangstukmodel-TermRefs — gedaan
+
+| Type | Pad                                          | Notitie                              |
+| ---- | -------------------------------------------- | ------------------------------------ |
+| Spec | `docs/specs/terminologie.md` (Zangstukmodel) | TermRefs op niveaus + §5–§21 (~145)  |
+
+Ook: nav **Begrippenlijst**; Gerelateerd aangevuld op `variant` / `uitvoeringsvorm`.
+
+Geen nieuwe glossary-termen in deze golven (sjabloon, content-source, frontmatter,
+catalogus-pad blijven uncured jargon tot eigen PR).
+
+## Backlog (later)
+
+1. ~~Frontmatter `doc_type`/`audience` roll-out op bestaande pagina’s~~ **gedaan** (alle MkDocs-nav)
+2. ~~`catalogus-architectuur.md`, `catalogus-zoek-api.md`, `catalogus-cli.md` (selectief TermRefs)~~ **gedaan**
+3. ~~`zangstuk-formaat.md` / overige reference densify (TermRefs)~~ **gedaan**
+4. ~~Dunne manuals / `rene-*` stories (selectief TermRefs)~~ **gedaan**
+5. ~~VSA-tooling tool-docs waar org-termen bare blijven (`@bron`)~~ **gedaan** (selectief)
+6. ~~Alleen inkorten waar hover de definitie al dekt (schrijfconventies)~~ **gedaan** (selectief)
+7. ~~`docs-build-tev2` / TermRef-check groen houden~~ **gedaan** (lokaal groen; MRG bijgewerkt)
+8. Geen normatieve betekenis wijzigen zonder glossary-PR
+9. E.3 optioneel: `catalogus-cli` splitsen (groot) — contentplan E.3; als GitHub-issue
+   vastleggen en hier linken
+
+## Niet in scope
+
+Nieuwe termen bedenken zonder glossary-PR; synoniembeleid opnieuw openbreken;
+dark mode / IA.
+
+Eigen PR(s); niet mengen met ongerelateerde docs-wijzigingen.

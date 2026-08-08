@@ -106,6 +106,7 @@ jobs:
           mrgt       -c tev2-config.yaml
           hrgt -f    -c tev2-config.yaml
           python ../../scripts/sort-glossary-table.py glossary.md
+          python ../../scripts/inject-glossary-termrefs.py glossary.md
           trrt -f    -c tev2-config.yaml
 
       - name: Verify TermRefs resolved

@@ -58,7 +58,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Starten:
-    - Overzicht: getting-started/index.md
+    - Lokaal ontwikkelen: getting-started/index.md
   - Handleidingen:
     - Overzicht: manuals/index.md
     - manuals/github-pages-setup.md
@@ -77,9 +77,10 @@ nav:
   - Specificaties:
     - Overzicht: specs/index.md
     - specs/documentatie-eigendom.md
-    - specs/terminologie.md
+    - Zangstukmodel: specs/terminologie.md
     - specs/zangstuk-identificatie.md
     - specs/schrijfconventies.md
+    - specs/term-entry-sjabloon.md
     - specs/inhoudslevenscyclus.md
     - specs/repo-structuur.md
     - specs/zangstuk-formaat.md
@@ -97,7 +98,7 @@ nav:
     - reference/exporttype-mxl.md
     - reference/brontypes-validatie.md
     - reference/catalogus-cli.md
-  - Terminologie:
+  - Begrippenlijst:
     - Overzicht: glossary.md
   - Plannen:
     - Overzicht: plans/README.md
@@ -109,6 +110,7 @@ nav:
     - plans/tev2-h5-meerwoordige-termrefs.md
     - plans/tev2-h6-toolchain.md
     - plans/tev2-termref-campagne.md
+    - plans/docs-content-publiek-en-paginatypen.md
     - plans/ci-architectuur.md
     - plans/alias-blokken-ontwerp.md
     - plans/migratie-zondag-zangstukken.md

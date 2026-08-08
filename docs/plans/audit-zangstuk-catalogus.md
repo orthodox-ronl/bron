@@ -1,3 +1,7 @@
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # Audit zangstuk-catalogus (fase 1)
 
 **Datum:** 2026-07-04  

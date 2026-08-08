@@ -1,3 +1,7 @@
+---
+doc_type: workflow-guide
+audience: "P5 — Docs-/tool-contributor"
+---
 # GitHub Pages — instelling
 
 De MkDocs-site wordt door GitHub Actions gebouwd en naar de branch **`gh-pages`**

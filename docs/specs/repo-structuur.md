@@ -1,15 +1,18 @@
+---
+doc_type: normative-spec
+audience: "P2 — Bron-contentbeheerder; P6 — Spec-/PR-reviewer"
+---
 # Repo-structuur
 
 Status: specificatie (juni 2026).
 
 ## Doel en scope
 
-De `bron`-repository is de centrale bron van waarheid voor muzikale inhoud binnen
-`orthodox-groningen`. Parochie-sites consumeren deze repository; ze bewerken hem
-niet rechtstreeks.
+De [bron-repository](@) bevat de muzikale inhoud voor `orthodox-groningen`.
+Parochie-sites consumeren deze repository; ze bewerken hem niet rechtstreeks.
 
-De repository bevat **bronnen** en metadata. Geen afgeleide bestanden (SVG, MXL
-uit VSA) in git, en geen parochie-specifiek gebruik.
+De repository bevat **bronnen** en metadata. Geen [afgeleide](@) bestanden (SVG, MXL
+uit [VSA](vsa@)) in git, en geen parochie-specifiek gebruik.
 
 ## Top-level structuur
 
@@ -48,14 +51,13 @@ bron/
 
 ### Definitie
 
-Een **zangstuk** is de eenheid waarvoor één of meer bronnen bestaan. Mapnaam =
-stabiele `id` onder `zangstukken/`.
+Mapnaam van een [zangstuk](@) = stabiele `id` onder `zangstukken/`.
 
 ### Bron versus afgeleid
 
 - **Bron:** geen geautomatiseerd generatiepad vanuit een ander bestand *in deze repo*
-  (VSA, scan, MusicXML uit MuseScore, …).
-- **Afgeleid:** geautomatiseerd uit bron (SVG/MXL via VSA-tooling). Niet in git.
+  ([VSA-notatie](@), scan, MusicXML uit MuseScore, …) — een [bronbestand](@).
+- **[Afgeleide](@):** geautomatiseerd uit bron (SVG/MXL via [VSA-tooling](@)). Niet in git.
 
 ### Naamgeving `zangstuk-id`
 
@@ -67,24 +69,24 @@ stabiele `id` onder `zangstukken/`.
 
 ## Eén bronbestand, meerdere zangstukken
 
-- **VSA/tekst:** splitsen — één `.vsa` per zangstuk in de juiste map
-- **Scan/PDF:** niet splitsen; tweede zangstuk verwijst met relatief `file:` naar scan
+- **VSA/tekst:** splitsen — één `.vsa` per [zangstuk](@) in de juiste map
+- **Scan/PDF:** niet splitsen; tweede [zangstuk](@) verwijst met relatief `file:` naar scan
   bij het eerste zangstuk
 
 ## Composities en sjablonen
 
-| Concept                 | Locatie                                 | Status                                                               |
-| ----------------------- | --------------------------------------- | -------------------------------------------------------------------- |
-| **Compositie** (org)    | `composities/*.yaml` in **bron**        | Toekomst — geordende yaml-lijst                                      |
-| **Sjabloon** (parochie) | markdown in parochie **content-source** | **Geïmplementeerd** — `default.gelegenheidstype`, `:::include zoek=` |
-| **Samenstelling**       | markdown publicatie parochie            | §18 terminologie                                                     |
+| Concept                   | Locatie                                 | Status                                                               |
+| ------------------------- | --------------------------------------- | -------------------------------------------------------------------- |
+| **[Compositie](@)** (org) | `composities/*.yaml` in **bron**        | Toekomst — geordende yaml-lijst                                      |
+| **Sjabloon** (parochie)   | markdown in parochie **content-source** | **Geïmplementeerd** — `default.gelegenheidstype`, `:::include zoek=` |
+| **[Samenstelling](@)**    | markdown publicatie parochie            | §18 terminologie                                                     |
 
 Compositie-yaml in bron: [Plannen: samenvatting project](../plans/samenvatting-project.md).
 Sjabloon-contract: [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md).
 
 ## Nog te ontwerpen
 
-- Build-stap voor afgeleide + publieke index (JSON) voor parochie-builds
+- Build-stap voor [afgeleide](@) + publieke index (JSON) voor parochie-builds
 - Filter: `file:` wel meenemen, `access:` niet in gepubliceerde index
 
 Zie [Inhoudslevenscyclus](inhoudslevenscyclus.md).

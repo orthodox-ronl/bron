@@ -8,7 +8,7 @@ glossaryTerm: Afgeleide
 glossaryText: "Een bestand dat volledig en herhaalbaar door een [conversiemechanisme](@) uit een [bronbestand](@) wordt gegenereerd, en dat (dus) niet als [bronbestand](@) in de [bron-repository](@) staat."
 glossaryNotes:
   - "Voorbeelden: `.svg` via `vsa svg`; `.mxl` via `vsa musicxml`."
-  - "[Afgeleiden](@) worden niet getrackt in de [bron-repository](@); ze worden gegenereerd tijdens de build."
+  - "Afgeleiden worden niet getrackt in de [bron-repository](@); ze worden gegenereerd tijdens de build."
 ---
 
 # Afgeleide

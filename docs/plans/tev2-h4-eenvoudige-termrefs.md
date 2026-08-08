@@ -1,3 +1,7 @@
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # TEv2 H4 — eenvoudige TermRefs (inventaris)
 
 | Veld               | Waarde                                                                                |

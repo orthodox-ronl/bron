@@ -1,3 +1,7 @@
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # CI-architectuur (conversie vs. export)
 
 Status: richtlijn juni 2026. Beschrijft **wanneer** workflows splitsen — geen

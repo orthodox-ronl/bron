@@ -1,8 +1,26 @@
-# Overzicht
+---
+doc_type: onboarding
+audience: "P2 — Bron-contentbeheerder; P5 — Docs-/tool-contributor"
+---
+# Starten — lokaal ontwikkelen
 
-Deze pagina helpt je om de [bron-repository](@) en de documentatie lokaal
-bruikbaar te maken. Uitgebreide procedures staan onder
-[Handleidingen](../manuals/index.md).
+Deze pagina helpt je om de [bron-repository](@) en de documentatie **lokaal**
+bruikbaar te maken (repo openen, docs bekijken, valideren). Uitgebreide
+procedures staan onder [Handleidingen](../manuals/index.md).
+
+!!! note "Voor wie"
+    Voor beheerders en bijdragers die de bron-repo of docs op hun machine
+    willen draaien — niet voor koorzangers die een dienst willen oefenen
+    (dat is de parochie-site; zie [Home](../index.md)).
+
+## Wie ben je? (kort)
+
+| Ik wil …                         | Ga naar                                                                         |
+| -------------------------------- | ------------------------------------------------------------------------------- |
+| Alleen lokaal opstarten          | Stappen 1–3 hieronder                                                           |
+| Nieuw zangstuk / copyright       | [Handleidingen](../manuals/index.md)                                            |
+| Catalogus / sjablonen            | [Catalogus](../manuals/catalogus/index.md)                                      |
+| VSA schrijven of CLI             | [VSA-tooling](https://orthodox-groningen.github.io/VSA-tooling/)                |
 
 ## 1. Repository openen
 

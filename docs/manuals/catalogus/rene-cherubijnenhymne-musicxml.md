@@ -1,25 +1,30 @@
+---
+doc_type: user-story
+audience: "P1 — Parochie-docs-maintainer"
+---
 # Verhaal 4 — Rene deelt en gebruikt Nana's MusicXML
 
 *Nana exporteert naast de PDF ook een **MusicXML**-bestand (`.mxl`) van de
 Cherubijnenhymne — handig voor koorleden in MuseScore. Rene wil dat bestand
-**delen** via de parochie-site en het opnemen in de org-brede **bron**, zonder
-het te verwarren met **afgeleide** MXL uit VSA-conversie.*
+**delen** via de parochie-site en het opnemen in de org-brede **[bron-repository](@)**, zonder
+het te verwarren met **[afgeleide](@)** MXL uit VSA-conversie.*
 
 ---
 
 ## Situatie
 
-| Bestand              | Herkomst                          | Bron vs afgeleid                                      |
-| -------------------- | --------------------------------- | ----------------------------------------------------- |
-| `nana-partituur.pdf` | Scan / export van Nana            | **Bron** (parochie-lokaal → bron, verhaal 2–3)        |
-| `groningen.vsa`      | Transcriptie (later)              | **Bron**                                              |
-| `groningen.mxl`      | Rechtstreeks uit MuseScore (Nana) | **Bron** — niet `vsa musicxml`-output in git          |
+| Bestand              | [Herkomst](@)                     | Bron vs afgeleid                                                |
+| -------------------- | --------------------------------- | --------------------------------------------------------------- |
+| `nana-partituur.pdf` | Scan / export van Nana            | **[Bronbestand](@)** ([parochie-lokaal](@) → bron, verhaal 2–3) |
+| `groningen.vsa`      | Transcriptie (later)              | **[Bronbestand](@)**                                            |
+| `groningen.mxl`      | Rechtstreeks uit MuseScore (Nana) | **[Bronbestand](@)** — niet `vsa musicxml`-output in git        |
 
-Regel: handmatig aangeleverde MusicXML in `sources/musicxml/` is bron; MXL
+Regel: handmatig aangeleverde MusicXML in `sources/musicxml/` is [bronbestand](@); MXL
 automatisch gegenereerd uit VSA hoort **niet** in git
 ([inhoudslevenscyclus §2.2](../../specs/inhoudslevenscyclus.md)).
 
-Export op de site: [exporttype mxl](../../reference/exporttype-mxl.md).
+Export op de site: [exporttype mxl](../../reference/exporttype-mxl.md)
+([exporttype](@) `mxl`).
 
 ---
 
@@ -32,15 +37,15 @@ Rene opent het stuk *cherubijnenhymne / kastorski / groningen* en kiest
 2. **Type:** de tool vraagt “Handmatige bron (MuseScore)” vs “Genereer uit VSA”
    — Rene kiest handmatige bron.
 3. **Plaatsing:** voorstel
-   - lokaal: `repr/groningen.mxl` in manifest, of
+   - lokaal: `repr/groningen.mxl` in [manifest](@), of
    - bron: `sources/musicxml/groningen.mxl` + entry in yaml.
-4. **Samenstelling:** vinkje “Downloadlink op liturgiepagina” → voegt
+4. **[Samenstelling](@):** vinkje “Downloadlink op liturgiepagina” → voegt
    `:::include mxl id:cherubijnenhymne/kastorski/groningen:::` toe.
 5. **Validatie:** XML well-formed check (toekomst); [`catalogus index validate`](../../reference/catalogus-cli.md#catalogus-index-validate).
 
 !!! note "GUI + handmatige bron-MXL"
     **`:::include mxl`** vanuit een **VSA-pad** of catalogus-pad is geïmplementeerd.
-    Nog **gepland**: GUI voor representatie toevoegen, **handmatige** `.mxl` in
+    Nog **gepland**: GUI voor [representatie](@) toevoegen, **handmatige** `.mxl` in
     `sources/musicxml/`, en XML-validatie in CI.
 
 ---
@@ -49,7 +54,7 @@ Rene opent het stuk *cherubijnenhymne / kastorski / groningen* en kiest
 
 ### 1. Representatie registreren (lokaal)
 
-Rene voegt in `uitvoeringsvorm.yaml` een representatie toe:
+Rene voegt in `uitvoeringsvorm.yaml` een [representatie](@) toe:
 
 ```yaml
 representaties:
@@ -61,9 +66,9 @@ representaties:
 
 Hij plaatst Nana's `.mxl` in `repr/groningen.mxl`.
 
-### 2. Na promotie naar bron
+### 2. Na [promotie](@) naar [bron-repository](@)
 
-In `zangstuk.yaml` of genest manifest:
+In `zangstuk.yaml` of genest [manifest](@):
 
 ```yaml
 sources:
@@ -76,15 +81,15 @@ sources:
 ```
 
 **Niet** committen: MXL gegenereerd met [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) — die hoort bij build-time
-([conversie vsa musicxml](../../reference/conversie-vsa-musicxml.md)).
+([conversie vsa musicxml](../../reference/conversie-vsa-musicxml.md)) als [afgeleide](@).
 
 ### 3. Catalogus — representatie-id
 
-Als Rene “mxl” of “MusicXML Groningen” als alias wil gebruiken, lost hij die
+Als Rene “mxl” of “MusicXML Groningen” als [alias](@) wil gebruiken, lost hij die
 op via de catalogus
 ([Catalogus CLI — resolve representatie](../../reference/catalogus-cli.md)).
 
-### 4. Opnemen in sjabloon / samenstelling
+### 4. Opnemen in sjabloon / [samenstelling](@)
 
 In het sjabloon (verhaal 1) blijven de includes met **`zoek=`**:
 
@@ -93,7 +98,7 @@ In het sjabloon (verhaal 1) blijven de includes met **`zoek=`**:
 :::include mxl zoek="Cherubijnenhymne (Kastorski)" label="Download partituur (MusicXML)":::
 ```
 
-**Na oplossen** (parochie-lokaal, MXL als sibling van `.vsa`):
+**Na oplossen** ([parochie-lokaal](@), MXL als sibling van `.vsa`):
 
 ```markdown
 ## Cherubijnenhymne
@@ -129,7 +134,7 @@ Index controleren:
 
 ---
 
-## Verschil met VSA-afgeleide MXL
+## Verschil met VSA-[afgeleide](@) MXL
 
 ```mermaid
 flowchart LR
@@ -146,15 +151,15 @@ flowchart LR
 
 Rene legt Nana uit: zodra er een goede VSA-transcriptie is, kan de site **ook**
 automatische MXL uit VSA aanbieden naast Nana's originele export — twee
-representaties, één uitvoeringsvorm.
+[representaties](@), één [uitvoeringsvorm](@).
 
 ---
 
 ## Wat Rene bereikt
 
 - Koorleden downloaden MusicXML vanaf dezelfde pagina als de liturgienotatie.
-- Bron vs afgeleid blijft helder voor CI en toekomstige sync.
-- Canonieke ids blijven gelijk over PDF, VSA en MXL heen.
+- [Bronbestand](@) vs [afgeleide](@) blijft helder voor CI en toekomstige sync.
+- [Canonieke ids](@) blijven gelijk over PDF, VSA en MXL heen.
 
 ## Terug naar overzicht
 

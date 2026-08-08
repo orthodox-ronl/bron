@@ -1,3 +1,7 @@
+---
+doc_type: plan
+audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
+---
 # Migratieplan: zondag-zangstukken naar bron + VSA-demo
 
 Status: plan (juni 2026; paden bijgewerkt augustus 2026).  

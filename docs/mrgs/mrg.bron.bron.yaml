@@ -4,14 +4,14 @@ terminology:
   curatedir: "terms"
   glossarydir: "mrgs"
   defaultvsn: "bron"
-  website: "https://orthodox-groningen.github.io/bron"
+  website: "https://orthodox-groningen.github.io/bron/preview"
   navpath: "/terms"
   navid: "term"
   defaulttype: "concept"
   vsntag: "bron"
 scopes: []
 entries:
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "afgeleide"
     formPhrases:
       - "afgeleide"
@@ -21,15 +21,36 @@ entries:
     glossaryText: "Een bestand dat volledig en herhaalbaar door een [conversiemechanisme](@) uit een [bronbestand](@) wordt gegenereerd, en dat (dus) niet als [bronbestand](@) in de [bron-repository](@) staat."
     glossaryNotes:
       - "Voorbeelden: `.svg` via `vsa svg`; `.mxl` via `vsa musicxml`."
-      - "[Afgeleiden](@) worden niet getrackt in de [bron-repository](@); ze worden gegenereerd tijdens de build."
+      - "Afgeleiden worden niet getrackt in de [bron-repository](@); ze worden gegenereerd tijdens de build."
     scopetag: "bron"
     locator: "afgeleide.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/afgeleide"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/afgeleide"
     headingids:
       - "afgeleide"
       - "motivatie"
     termType: "concept"
     termid: "concept:afgeleide"
+    vsntag: "bron"
+  - git_date: 2026-08-08T00:00:00.000Z
+    term: "alias"
+    formPhrases:
+      - "alias"
+      - "aliassen"
+    glossaryTerm: "Alias"
+    glossaryText: "Een voor mensen leesbare naam of werknaam voor een entiteit ([zangstuk](@), [variant](@), [uitvoeringsvorm](@) of [representatie](@)), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het [canonieke id](@) in opslag."
+    glossaryNotes:
+      - "Aliassen mogen spaties, hoofdletters, diacritica en andere talen bevatten; het [canonieke id](@) blijft `^[a-z0-9_-]+$`."
+      - "Binnen één scope mag een alias niet op twee verschillende entiteiten wijzen; bij meerdere matches is er een ambiguïteitsfout."
+      - "Niet verwarren met het [canonieke id](@) zelf, noch met [herkomst](@) (waar iets vandaan komt)."
+    scopetag: "bron"
+    locator: "alias.md"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/alias"
+    headingids:
+      - "alias"
+      - "motivatie"
+      - "gerelateerd"
+    termType: "concept"
+    termid: "concept:alias"
     vsntag: "bron"
   - git_date: 2026-08-08T00:00:00.000Z
     term: "bron-repository"
@@ -48,7 +69,7 @@ entries:
       - "Repositories voor de [VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling/), of parochie-specifieke zaken en vendor-checkouts zijn geen bron-repository."
     scopetag: "bron"
     locator: "bron-repository.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/bron-repository"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/bron-repository"
     headingids:
       - "bron-repository"
       - "motivatie"
@@ -76,12 +97,36 @@ entries:
           - "HTML bestanden zoals die zijn gegenereerd uit geautomatiseerde workflows."
     scopetag: "bron"
     locator: "bronbestand.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/bronbestand"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/bronbestand"
     headingids:
       - "bronbestand"
       - "motivatie"
     termType: "concept"
     termid: "concept:bronbestand"
+    vsntag: "bron"
+  - git_date: 2026-08-08T00:00:00.000Z
+    term: "canoniek-id"
+    formPhrases:
+      - "canoniek-id"
+      - "canonieke-id"
+      - "canonieke-ids"
+      - "canoniek-ids"
+      - "canonieke-id-s"
+    glossaryTerm: "Canonieke id"
+    glossaryText: "De stabiele, machine-leesbare identifier van een entiteit ([zangstuk](@), [variant](@), [uitvoeringsvorm](@) of [representatie](@)) in opslag: lowercase ASCII volgens `^[a-z0-9_-]+$`, zonder spaties, diacritica of Cyrillisch."
+    glossaryNotes:
+      - "Voorbeelden: `zangstuk-id` `antifoon-1-weekdagen`, `uitvoeringsvorm-id` `groningen`."
+      - "Op de invoergrens mag een [alias](@) gebruikt worden; de resolver levert altijd het [canonieke id](@) voor paden, yaml, git en `bron:…`-referenties."
+      - "Niet verwarren met [alias](@) (menselijke werknaam) of met [herkomst](@) (waar iets vandaan komt)."
+    scopetag: "bron"
+    locator: "canoniek-id.md"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/canoniek-id"
+    headingids:
+      - "canonieke-id"
+      - "motivatie"
+      - "gerelateerd"
+    termType: "concept"
+    termid: "concept:canoniek-id"
     vsntag: "bron"
   - git_date: 2026-07-11T00:00:00.000Z
     term: "compositie"
@@ -95,7 +140,7 @@ entries:
       - "Niet verwarren met [samenstelling](@) (parochie-markdown met `:::include`) of sjabloon (markdown met `:::include zoek=`)."
     scopetag: "bron"
     locator: "compositie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/compositie"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/compositie"
     headingids:
       - "compositie"
       - "motivatie"
@@ -114,26 +159,30 @@ entries:
       - "Het bestaan van een conversiemechanisme is het criterium waarmee onderscheid wordt gemaakt tussen [bronbestand](@) en [afgeleide](@)."
     scopetag: "bron"
     locator: "conversiemechanisme.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/conversiemechanisme"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/conversiemechanisme"
     headingids:
       - "conversiemechanisme"
       - "motivatie"
     termType: "concept"
     termid: "concept:conversiemechanisme"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "exportmechanisme"
     formPhrases:
       - "exportmechanisme"
       - "exportmechanismen"
     glossaryTerm: "Exportmechanisme"
     glossaryText: "De manier waarop een [samenstelling](@) een [bronbestand](@) of [afgeleide](@) ontsluit voor een lezersdoel, via een `:::include`-directive met een [exporttype](@)."
+    glossaryNotes:
+      - "Niet verwarren met [conversiemechanisme](@) (bestand → afgeleide in de toolketen)."
+      - "Voorbeeld: `:::include svg zoek=\"…\" :::` kiest exporttype `svg`."
     scopetag: "bron"
     locator: "exportmechanisme.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/exportmechanisme"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/exportmechanisme"
     headingids:
       - "exportmechanisme"
       - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:exportmechanisme"
     vsntag: "bron"
@@ -149,7 +198,7 @@ entries:
       - "Huidige exporttypen: `svg`, `coria`, `mxl`."
     scopetag: "bron"
     locator: "exporttype.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/exporttype"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/exporttype"
     headingids:
       - "exporttype"
       - "motivatie"
@@ -169,7 +218,7 @@ entries:
       - "Registratie vindt plaats via [promotie](@): een PR naar de [bron-repository](@) met [source-entry](@) en [bronbestand](@)."
     scopetag: "bron"
     locator: "geregistreerde-representatie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/geregistreerde-representatie"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/geregistreerde-representatie"
     headingids:
       - "geregistreerde-representatie"
       - "motivatie"
@@ -187,7 +236,7 @@ entries:
       - "Herkomst is geen bestand; het is metadata (zoals `reference:` in `zangstuk.yaml`)."
     scopetag: "bron"
     locator: "herkomst.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/herkomst"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/herkomst"
     headingids:
       - "herkomst"
       - "motivatie"
@@ -207,7 +256,7 @@ entries:
       - "Een manifest is zelf geen [representatie](@), [bronbestand](@) of [samenstelling](@)."
     scopetag: "bron"
     locator: "manifest.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/manifest"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/manifest"
     headingids:
       - "manifest"
       - "motivatie"
@@ -227,7 +276,7 @@ entries:
       - "Parochie-lokale representaties staan onder `content-source/lokaal/<zangstuk-id>/<variant-id>/…`."
     scopetag: "bron"
     locator: "parochie-lokale-representatie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/parochie-lokale-representatie"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/parochie-lokale-representatie"
     headingids:
       - "parochie-lokale-representatie"
       - "motivatie"
@@ -242,34 +291,35 @@ entries:
     glossaryTerm: "Promotie (registratie)"
     glossaryText: "De overgang van een [parochie-lokale representatie](@) naar een [geregistreerde representatie](@), door het toevoegen van een [source-entry](@) en bijbehorend [bronbestand](@) in de [bron-repository](@) via een PR."
     glossaryNotes:
-      - "Bij promotie blijven de canonieke ids behouden."
+      - "Bij promotie blijven de [canonieke ids](@) behouden."
       - "Promotie vereist een PR op de [bron-repository](@) met [source-entry](@) én [bronbestand](@)."
     scopetag: "bron"
     locator: "promotie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/promotie"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/promotie"
     headingids:
       - "promotie"
       - "motivatie"
     termType: "concept"
     termid: "concept:promotie"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "representatie"
     formPhrases:
       - "representatie"
       - "representaties"
     glossaryTerm: "Representatie"
-    glossaryText: "Een bestand waarin een uitvoeringsvorm concreet is vastgelegd."
+    glossaryText: "Een bestand waarin een [uitvoeringsvorm](@) concreet is vastgelegd."
     glossaryNotes:
-      - "Er zijn verschillende *vormen* waarin dit kan worden vastgelegd, zoals [VSA](@), MusicXML of MXL, audio, een scan van een partituur, enz."
-      - "Er zijn verschillende *bestandsformaten* (extensies) die daarbij kunnen worden gebruikt, zoals `.vsa`, `.MusicXML`, `.MXL`, `.mp3`, `.pdf`, `.svg`, `.jpg`, etc."
-      - "Om een representatie van een [uitvoeringsvorm](@) te onderscheiden kun je de vraag stellen of het een bestand betref of niet."
+      - "Vormen: [vsa-notatie](@), scan van een partituur, MusicXML/MXL als bron, audio, e.d."
+      - "Onderscheid van [afgeleide](@): `.svg` of `.mxl` die een tool volledig uit een [bronbestand](@) herhaalt, is een [afgeleide](@), geen representatie."
+      - "Onder dezelfde [uitvoeringsvorm](@) mogen meerdere representaties bestaan (bijv. scan + getrouwe [vsa-bestand](@))."
     scopetag: "bron"
     locator: "representatie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/representatie"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/representatie"
     headingids:
       - "representatie"
       - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:representatie"
     vsntag: "bron"
@@ -286,14 +336,14 @@ entries:
       - "Niet verwarren met [compositie](@) (org-brede ordered list van [zangstukken](@) in yaml) of sjabloon (markdown met `:::include zoek=`)."
     scopetag: "bron"
     locator: "samenstelling.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/samenstelling"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/samenstelling"
     headingids:
       - "samenstelling"
       - "motivatie"
     termType: "concept"
     termid: "concept:samenstelling"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "source-entry"
     formPhrases:
       - "source-entry"
@@ -302,10 +352,10 @@ entries:
     glossaryText: "Een element in de `sources:`-lijst van `zangstuk.yaml` in de [bron-repository](@), met een uniek `id` binnen dat [zangstuk](@); registreert een [representatie](@) of placeholder op het huidige platte model."
     glossaryNotes:
       - "Het `id`-veld van een source-entry correspondeert met het `representatie-id`."
-      - "Meerdere [source-entries](@) kunnen meerdere [representaties](@) registreren, of (legacy) nog niet onderscheiden [variant](@)/[uitvoeringsvorm](@)-structuur bevatten — bij nieuw werk gebruik het vier-niveaumodel."
+      - "Meerdere source-entries kunnen meerdere [representaties](@) registreren, of (legacy) nog niet onderscheiden [variant](@)/[uitvoeringsvorm](@)-structuur bevatten — bij nieuw werk gebruik het vier-niveaumodel."
     scopetag: "bron"
     locator: "source-entry.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/source-entry"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/source-entry"
     headingids:
       - "source-entry"
       - "voorbeelden-van-source-entries"
@@ -313,7 +363,7 @@ entries:
     termType: "concept"
     termid: "concept:source-entry"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "uitvoeringsvorm"
     formPhrases:
       - "uitvoeringsvorm"
@@ -328,14 +378,15 @@ entries:
           - "de verdeling van lettergrepen over de noten"
     scopetag: "bron"
     locator: "uitvoeringsvorm.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/uitvoeringsvorm"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/uitvoeringsvorm"
     headingids:
       - "uitvoeringsvorm"
       - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:uitvoeringsvorm"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "variant"
     formPhrases:
       - "variant"
@@ -351,10 +402,11 @@ entries:
       - "Vergelijkbare begrippen die buiten de scope van deze terminologie ook wel worden gehanteerd zijn `bewerking`, `versie`, `setting`, `compositievariant`."
     scopetag: "bron"
     locator: "variant.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/variant"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/variant"
     headingids:
       - "variant"
       - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:variant"
     vsntag: "bron"
@@ -371,7 +423,7 @@ entries:
       - "vsa"
     scopetag: "bron"
     locator: "vsa.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/vsa"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/vsa"
     headingids:
       - "vsa-—-vereenvoudigde-slavische-accentnotatie"
       - "motivatie"
@@ -391,7 +443,7 @@ entries:
       - "vsa-bestanden"
     scopetag: "bron"
     locator: "vsa-bestand.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/vsa-bestand"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/vsa-bestand"
     headingids:
       - "vsa-bestand"
       - "structuur"
@@ -414,7 +466,7 @@ entries:
       - "vsa-notaties"
     scopetag: "bron"
     locator: "vsa-notatie.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/vsa-notatie"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/vsa-notatie"
     headingids:
       - "vsa-notatie"
       - "kernprincipes"
@@ -437,7 +489,7 @@ entries:
       - "vsa-tools"
     scopetag: "bron"
     locator: "vsa-tooling.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/vsa-tooling"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/vsa-tooling"
     headingids:
       - "vsa-tooling"
       - "wat-je-ermee-doet"
@@ -446,18 +498,23 @@ entries:
       - "zie-ook"
     termid: "concept:vsa-tooling"
     vsntag: "bron"
-  - git_date: 2026-07-06T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "zangstuk"
     formPhrases:
       - "zangstuk"
       - "zangstukken"
     glossaryTerm: "Zangstuk"
-    glossaryText: "Een liturgisch-muzikaal geheel met een stabiele `zangstuk-id`, waaronder nul of meer varianten bestaan."
+    glossaryText: "Een liturgisch-muzikaal geheel met een stabiele `zangstuk-id`, waaronder nul of meer [varianten](@) bestaan."
+    glossaryNotes:
+      - "Beantwoordt de vraag: *welk stuk in de liturgie?* (bijv. Cherubijnenhymne, 1e antifoon weekdagen)."
+      - "Een `.vsa`-bestand of een samenstelling is geen zangstuk — dat zijn [representatie](@) / [samenstelling](@)."
     scopetag: "bron"
     locator: "zangstuk.md"
-    navurl: "https://orthodox-groningen.github.io/bron/terms/zangstuk"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/zangstuk"
     headingids:
       - "zangstuk"
+      - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:zangstuk"
     vsntag: "bron"

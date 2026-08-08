@@ -1,6 +1,10 @@
+---
+doc_type: org-contract
+audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
+---
 # Conversie: vsa musicxml
 
-Contract voor het conversiemechanisme
+Contract voor het [conversiemechanisme](@)
 [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/):
 een [vsa-bestand](@) omzetten naar MusicXML (`.mxl` of `.musicxml`).
 
@@ -15,9 +19,8 @@ en de workflow-guide
 ## Samenvatting
 
 De conversie zet [VSA-notatie](@) om naar MusicXML voor MuseScore, Coria
-(`play_from_url`) en de exporttypes [mxl-download](exporttype-mxl.md) en
-[coria](exporttype-coria.md) (MXL-modus). De uitvoer is een [afgeleide](@) en
-hoort **niet** in de [bron-repository](@).
+(`play_from_url`) en de [exporttypen](@) [mxl-download](exporttype-mxl.md) en
+[coria](exporttype-coria.md) (MXL-modus). De uitvoer is een [afgeleide](@).
 
 Muziek-metadata in de frontmatter van het [vsa-bestand](@) (titel, toonsoort,
 tempo) wordt aanbevolen zodat de MXL bruikbaar is in spelers en editors.
@@ -26,11 +29,11 @@ tempo) wordt aanbevolen zodat de MXL bruikbaar is in spelers en editors.
 
 ## Wanneer gebruiken
 
-| Situatie                         | Wat je wilt                                                  |
-| -------------------------------- | ------------------------------------------------------------ |
-| Bewerken in MuseScore            | `.mxl` of `.musicxml` genereren                              |
-| Oefenen in Coria zonder HTML     | MXL publiceren + Coria in MXL- of auto-modus                 |
-| Download voor musici             | Bestand klaarzetten voor exporttype [mxl](exporttype-mxl.md) |
+| Situatie                         | Wat je wilt                                                       |
+| -------------------------------- | ----------------------------------------------------------------- |
+| Bewerken in MuseScore            | `.mxl` of `.musicxml` genereren                                   |
+| Oefenen in Coria zonder HTML     | MXL publiceren + Coria in MXL- of auto-modus                      |
+| Download voor musici             | Bestand klaarzetten voor [exporttype](@) [mxl](exporttype-mxl.md) |
 
 Gebruik **niet** deze conversie als enige weg naar leesbare notatie op papier —
 daarvoor is [vsa svg](conversie-vsa-svg.md).
@@ -89,10 +92,10 @@ Export-resolve controleert de MXL-inhoud **niet** opnieuw op build-time.
 
 ## Na de conversie (export)
 
-| Exporttype                   | Gebruik                                           |
-| ---------------------------- | ------------------------------------------------- |
-| [mxl](exporttype-mxl.md)     | Downloadlink in de samenstelling                  |
-| [coria](exporttype-coria.md) | `mode=mxl` of `auto` zonder `.coria.html`-sibling |
+| [Exporttype](@)                  | Gebruik                                           |
+| -------------------------------- | ------------------------------------------------- |
+| [mxl](exporttype-mxl.md)         | Downloadlink in de [samenstelling](@)             |
+| [coria](exporttype-coria.md)     | `mode=mxl` of `auto` zonder `.coria.html`-sibling |
 
 ---
 

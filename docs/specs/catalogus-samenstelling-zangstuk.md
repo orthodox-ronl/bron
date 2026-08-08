@@ -1,21 +1,27 @@
+---
+doc_type: normative-spec
+audience: "P1 — Parochie-docs-maintainer; P5 — Docs-/tool-contributor"
+---
 # Catalogus — zangstuk-opzoeken in sjablonen en samenstellingen
 
 Status: **normatief** (geïmplementeerd, basis).
 
 Gerelateerd: [terminologie §2.8](terminologie.md), [catalogus-architectuur](catalogus-architectuur.md),
-[samenstelling §18](terminologie.md#18-samenstelling), [exportcontracten](../reference/exportcontracten.md).
+[samenstelling](@) ([§18](terminologie.md#18-samenstelling)),
+[exportcontracten](../reference/exportcontracten.md).
 
 ---
 
 ## Doel
 
 Rene werkt in **markdown-sjablonen** (geen uitgebreide yaml-bomen). Op vaste plekken
-staat **`:::include`** met exporttype (`svg`, `coria`, `mxl`, …) en parameter
+staat **`:::include`** met [exporttype](@) (`svg`, `coria`, `mxl`, …) en parameter
 **`zoek="…"`** — nog geen catalogus-pad. Tussen de includes: gewone markdown
 (kopjes, liturgische aanwijzingen).
 
-De **catalogus** zoekt het stuk op (met **`default.*`** uit de sessie) en levert een
-**catalogus-pad**. [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) schrijft dat pad in het markdown-bestand;
+De **catalogus** zoekt het [zangstuk](@) op (met **`default.*`** uit de sessie) en levert een
+**catalogus-pad**. [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)
+([VSA-tooling](@)) schrijft dat pad in het markdown-bestand;
 pas daarna mag [`vsa build-markdown`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/) / export draaien.
 
 VSA-build (`:::include` zonder `zoek=`) en **`@include-vsa`** in `.vsa`-brontekst vallen buiten dit
@@ -26,12 +32,12 @@ document qua syntax; beide **`zoek=`**-varianten gebruiken dezelfde resolver —
 
 ## Woorden: niet door elkaar halen
 
-| Term                       | Betekenis                                                     | Voorbeeld                                   |
-| -------------------------- | ------------------------------------------------------------- | ------------------------------------------- |
-| **referentie**             | **Herkomst**-metadata ([§9](terminologie.md))                 | `referentie: VOK` — filter, geen pad        |
-| **catalogus-pad**          | Opgelost doel in de catalogus                                 | `bron:cherubijnenhymne/kastorski/groningen` |
-| **`zoek=`**                | Parameter op `:::include` — liturgische rol, nog op te zoeken | `zoek="Kondakion"`                          |
-| **zangstuk** (glossary §5) | Entiteit met `zangstuk-id`                                    | In opslag; Rene typt geen id                |
+| Term                            | Betekenis                                                     | Voorbeeld                                   |
+| ------------------------------- | ------------------------------------------------------------- | ------------------------------------------- |
+| **referentie**                  | **[Herkomst](@)**-metadata ([§9](terminologie.md))            | `referentie: VOK` — filter, geen pad        |
+| **catalogus-pad**               | Opgelost doel in de catalogus                                 | `bron:cherubijnenhymne/kastorski/groningen` |
+| **`zoek=`**                     | Parameter op `:::include` — liturgische rol, nog op te zoeken | `zoek="Kondakion"`                          |
+| **[zangstuk](@)** (glossary §5) | Entiteit met `zangstuk-id`                                    | In opslag; Rene typt geen id                |
 
 **Niet synoniem:** **`referentie`** ≠ **catalogus-pad**.
 
@@ -52,9 +58,9 @@ document qua syntax; beide **`zoek=`**-varianten gebruiken dezelfde resolver —
 
 ### Mixed session (bron + parochie-lokaal)
 
-Eén dienst kan **verschillende uitvoeringsvormen** nodig hebben — bijv. feest-troparion uit
-**bron** (`uitvoeringsvorm-id: liturgikon`) naast Cherubijnenhymne **lokaal**
-(`uitvoeringsvorm-id: groningen`).
+Eén dienst kan **verschillende [uitvoeringsvormen](@)** nodig hebben — bijv. feest-troparion uit
+de [bron-repository](@) (`uitvoeringsvorm-id: liturgikon`) naast Cherubijnenhymne
+**[parochie-lokaal](@)** (`uitvoeringsvorm-id: groningen`).
 
 | Aanpak                                                  | Wanneer                                                  |
 | ------------------------------------------------------- | -------------------------------------------------------- |

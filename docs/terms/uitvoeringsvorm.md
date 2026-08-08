@@ -29,3 +29,10 @@ Zo komen we in het Liturgikon verschillende troparen tegen (in toon 4) waarbij o
 de melodie even omhoog en dan omlaag gaat, terwijl meerdere koren dat precies andersom doen.
 Dat is dan een klein verschil in de manier van uitvoeren dat we niet als een [variant](@) 
 willen zien, maar als verschillende [uitvoeringsvorm](@) is dat prima.
+
+## Gerelateerd
+
+- [variant](@), [zangstuk](@) — hogere niveaus
+- [representatie](@) — hoe de uitvoeringsvorm is vastgelegd (0..n)
+- [herkomst](@), `based_on` — waar de praktijk vandaan komt
+- [Zangstukmodel, paragraaf 7](../specs/terminologie.md#7-uitvoeringsvorm)

@@ -1,20 +1,25 @@
+---
+doc_type: org-contract
+audience: "P4 — Consumer-site builder; P1 — Parochie-docs-maintainer"
+---
 # Exporttype: Coria
 
-Contract voor het **coria**-exporttype: link of ingebedde speler naar
+Contract voor het **coria**-[exporttype](@): link of ingebedde speler naar
 [Coria](https://coria.nl) voor online oefenen.
 
 Technische build-details (shortcodes, static-mappen): zie
 [MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/)
-(sectie Coria) en de directives-specificatie in VSA-tooling.
+(sectie Coria) en de directives-specificatie in [VSA-tooling](@).
 
 ---
 
 ## Samenvatting
 
-Exporttype **coria** voegt een knop of link toe waarmee de lezer de melodie in
+[Exporttype](@) **coria** voegt een knop of link toe waarmee de lezer de melodie in
 Coria kan openen — met vooraf gekozen partij (Coria-HTML sibling) of via een
 MusicXML deep-link. Het [vsa-bestand](@) moet bestaan; MXL of HTML moet
-bereikbaar zijn op de gepubliceerde site.
+bereikbaar zijn op de gepubliceerde site. De link verschijnt in een
+[samenstelling](@).
 
 ---
 
@@ -113,7 +118,7 @@ naast de gepubliceerde assets (details in tooling).
 | `{stem}.coria.html`         | Conditioneel | Voor `mode=html` of `auto` met sibling                       |
 | `.mxl` op gepubliceerde URL | Conditioneel | Voor `mode=mxl` of `auto` zonder sibling                     |
 
-MXL wordt **niet** tijdens coria-export gegenereerd; conversie
+MXL wordt **niet** tijdens coria-export gegenereerd; het [conversiemechanisme](@)
 ([conversie-vsa-musicxml](conversie-vsa-musicxml.md)) moet eerder gedraaid hebben.
 
 **Catalogus-pad `bron:`:** na resolve wijst de include naar een `.vsa` in

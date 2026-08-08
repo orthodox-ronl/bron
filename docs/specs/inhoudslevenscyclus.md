@@ -1,7 +1,12 @@
+---
+doc_type: normative-spec
+audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
+---
 # Inhoudslevenscyclus
 
 Status: specificatie v1 (juni 2026). Beschrijft de keten van brondocumenten via
-conversie naar export in samenstellingen.
+[conversie](../reference/conversiemechanismen.md) naar [export](../reference/exportcontracten.md)
+in [samenstellingen](@).
 
 ---
 
@@ -9,11 +14,11 @@ conversie naar export in samenstellingen.
 
 Drie lagen — **niet** door elkaar halen:
 
-| Laag                | Wat                                      | Waar gedocumenteerd                                                  |
-| ------------------- | ---------------------------------------- | -------------------------------------------------------------------- |
-| **Bron + metadata** | Bestanden in git + `zangstuk.yaml`       | Deel 1; [Zangstuk-formaat](zangstuk-formaat.md)                      |
-| **Conversie**       | Tools met vaste input/output → afgeleide | Deel 2; [Conversiemechanismen](../reference/conversiemechanismen.md) |
-| **Export**          | Hoe afgeleide in een uitgave verschijnen | Deel 3; [Exportcontracten](../reference/exportcontracten.md)         |
+| Laag                | Wat                                                         | Waar gedocumenteerd                                                  |
+| ------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Bron + metadata** | Bestanden in git + `zangstuk.yaml`                          | Deel 1; [Zangstuk-formaat](zangstuk-formaat.md)                      |
+| **Conversie**       | Tools met vaste input/output → [afgeleide](@)               | Deel 2; [Conversiemechanismen](../reference/conversiemechanismen.md) |
+| **Export**          | Hoe [afgeleide](@) in een uitgave verschijnen               | Deel 3; [Exportcontracten](../reference/exportcontracten.md)         |
 
 ```mermaid
 flowchart LR
@@ -58,11 +63,11 @@ gedeelde scans.
 
 ### Brontypes
 
-| Type               | Submap              | In git | Opmerking                                           |
-| ------------------ | ------------------- | ------ | --------------------------------------------------- |
-| [VSA-notatie](@)   | `sources/vsa/`      | ja     | Primaire tekstbron voor conversie                   |
-| Scan (PDF, raster) | `sources/scan/`     | ja     | Niet splitsen bij meerdere zangstukken op één blad  |
-| MusicXML als bron  | `sources/musicxml/` | ja     | Alleen indien niet uit VSA in deze repo gegenereerd |
+| Type               | Submap              | In git | Opmerking                                               |
+| ------------------ | ------------------- | ------ | ------------------------------------------------------- |
+| [VSA-notatie](@)   | `sources/vsa/`      | ja     | Primaire tekstbron voor conversie                       |
+| Scan (PDF, raster) | `sources/scan/`     | ja     | Niet splitsen bij meerdere [zangstukken](@) op één blad |
+| MusicXML als bron  | `sources/musicxml/` | ja     | Alleen indien niet uit VSA in deze repo gegenereerd     |
 
 ### Validatie brondocumenten
 
@@ -90,47 +95,47 @@ in `.vsa` is bedoeld voor gebruik *buiten* deze repo (bijv. losse export met [VS
 Minimaal (handmatig of CI):
 
 - `id` gelijk aan mapnaam; `title` aanwezig
-- Minstens één `sources`-entry
+- Minstens één `sources`-entry ([source-entry](@))
 - Per source: **exact één** van `file:` / `access:` / `status: nog-niet-getranscribeerd`
-- Elk `file:`-pad bestaat relatief aan de zangstuk-map
-- `based_on` verwijst naar bestaande source-id binnen hetzelfde zangstuk
+- Elk `file:`-pad bestaat relatief aan de [zangstuk](@)-map
+- `based_on` verwijst naar bestaande source-id binnen hetzelfde [zangstuk](@)
 - Liturgische velden waar van toepassing (`gelegenheidstype`, `toon`, …)
 - `copyright_status: copyrighted` ⇒ geen `file:`; wel `access:`
 
 ### Workflow invoeren / updaten
 
-| Actie              | Handleiding                                                  |
-| ------------------ | ------------------------------------------------------------ |
-| Nieuw zangstuk     | [Zangstuk toevoegen](../manuals/zangstuk-toevoegen.md)       |
-| Nieuwe bronvariant | [Bronvariant toevoegen](../manuals/bronvariant-toevoegen.md) |
-| Copyright / access | [Copyright en access](../manuals/copyright-access.md)        |
+| Actie               | Handleiding                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| Nieuw [zangstuk](@) | [Zangstuk toevoegen](../manuals/zangstuk-toevoegen.md)       |
+| Nieuwe bronvariant  | [Bronvariant toevoegen](../manuals/bronvariant-toevoegen.md) |
+| Copyright / access  | [Copyright en access](../manuals/copyright-access.md)        |
 
 ---
 
 ## Deel 2 — Conversiemechanismen
 
-Conversie verandert **formaat** (bron → afgeleide). Afgeleide worden **niet** in git
-bewaard; ze worden in build-workflows gegenereerd.
+[Conversie](../reference/conversiemechanismen.md) verandert **formaat**
+([bronbestand](@) → [afgeleide](@)). [Afgeleiden](@) ontstaan in de build.
 
-Geregistreerde mechanismen:
+Geregistreerde [conversiemechanismen](@):
 
 - [Conversiemechanismen — overzicht](../reference/conversiemechanismen.md)
 - [Conversie vsa svg](../reference/conversie-vsa-svg.md)
 - [Conversie vsa musicxml](../reference/conversie-vsa-musicxml.md)
 
-**Trigger (doel):** na merge naar `main` of bij parochie-build wanneer een zangstuk
-wordt opgenomen in een samenstelling.
+**Trigger (doel):** na merge naar `main` of bij parochie-build wanneer een
+[zangstuk](@) wordt opgenomen in een [samenstelling](@).
 
-**Huidige stand:** conversie draait deels inline in [VSA-tooling](@) `build-markdown`;
-expliciete vooraf-build voor alle afgeleide is gepland — zie
-[CI-architectuur](../plans/ci-architectuur.md).
+**Huidige stand:** conversie draait deels inline in [VSA-tooling](@)
+`build-markdown`; expliciete vooraf-build voor alle [afgeleiden](@) is gepland —
+zie [CI-architectuur](../plans/ci-architectuur.md).
 
 ---
 
 ## Deel 3 — Exportmechanismen
 
-Export bepaalt **hoe** een afgeleide (of handmatige sibling) in een samenstelling
-wordt ontsloten — embedden, Coria-link, download.
+[Export](../reference/exportcontracten.md) bepaalt **hoe** een [afgeleide](@)
+(of handmatige sibling) in een [samenstelling](@) verschijnt.
 
 Exportcontracten:
 
@@ -139,7 +144,7 @@ Exportcontracten:
 - [Exporttype coria](../reference/exporttype-coria.md)
 - [Exporttype mxl](../reference/exporttype-mxl.md)
 
-Authoring-syntax in parochie-/samenstelling-repositories ([VSA-tooling](@)):
+Authoring-syntax in parochie-/[samenstelling](@)-repositories ([VSA-tooling](@)):
 
 ```markdown
 :::include svg "melodie.vsa" alt="…":::
@@ -147,7 +152,7 @@ Authoring-syntax in parochie-/samenstelling-repositories ([VSA-tooling](@)):
 :::include mxl "melodie.vsa" label="Download MusicXML":::
 ```
 
-Dat zijn **exporttypes**, geen conversie-commando's.
+Dat zijn **[exporttypes](@)**, geen conversie-commando's.
 
 ### Uitgaveprofielen
 
@@ -157,7 +162,8 @@ Dat zijn **exporttypes**, geen conversie-commando's.
 | Online            | [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/), evt. [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) | embed svg, Coria, `web-only`               |
 | Bewerking         | [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)                                                                                        | mxl-download                               |
 
-Profielen zijn geen aparte pipelines: één samenstelling, conditionele export en CSS.
+Profielen zijn geen aparte pipelines: één [samenstelling](@), conditionele
+export en CSS.
 
 ---
 

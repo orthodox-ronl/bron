@@ -1,7 +1,11 @@
+---
+doc_type: org-contract
+audience: "P4 — Consumer-site builder; P1 — Parochie-docs-maintainer"
+---
 # Exporttype: embed SVG
 
-Contract voor het **svg**-exporttype: [VSA-notatie](@) als schaalbare
-vectorafbeelding in een samenstelling (HTML, afdruk).
+Contract voor het **svg**-[exporttype](@): [VSA-notatie](@) als schaalbare
+vectorafbeelding in een [samenstelling](@) (HTML, afdruk).
 
 Technische build-stappen (shortcodes, asset-mappen): zie
 [SVG exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/svg-export/)
@@ -11,11 +15,11 @@ en [CLI `vsa build-markdown`](https://orthodox-groningen.github.io/VSA-tooling/r
 
 ## Samenvatting
 
-Met exporttype **svg** toon je de muzieknotatie van een [vsa-bestand](@) als SVG
+Met [exporttype](@) **svg** toon je de muzieknotatie van een [vsa-bestand](@) als SVG
 in de pagina. De lezer ziet dezelfde glyphs en omringende tekst als in VSA,
-geschikt voor scherm en papier. De SVG ontstaat via conversie
+geschikt voor scherm en papier. De SVG ontstaat via een [conversiemechanisme](@)
 ([conversie-vsa-svg](conversie-vsa-svg.md)); export bepaalt alleen *hoe* die SVG
-in de samenstelling wordt ingebed.
+in de [samenstelling](@) wordt ingebed.
 
 ---
 
@@ -31,7 +35,16 @@ in de samenstelling wordt ingebed.
 
 ## Authoring
 
-### Doelsyntax
+!!! tip "Twee manieren om een `.vsa` te kiezen"
+    Deze pagina beschrijft **pad-`:::include`**: je noemt een bestaand relatief
+    pad naar een `.vsa` (vaste bron in de consumer- of demo-repo).
+
+    In **catalogus-sjablonen** kies je vaak nog geen pad, maar een liturgische
+    rol via **`zoek=`**; resolve zet dat later om naar `bron:` / `lokaal:`-paden.
+    Zie [Sjabloon schrijven](../manuals/catalogus/sjabloon-schrijven.md) en
+    [Catalogus-handleidingen](../manuals/catalogus/index.md).
+
+### Doelsyntax (pad)
 
 ```markdown
 :::include svg "praktijk/zondagen/tropaar-zondag-toon-3.vsa" alt="Tropaar van de zondag, Toon 3" scale="85%":::
@@ -44,7 +57,7 @@ in de samenstelling wordt ingebed.
 ```
 
 Zonder het woord `svg` wordt een `.vsa`-include als VSA-blok behandeld en bij
-document-build naar SVG gerenderd. Functioneel komt dat overeen met exporttype
+document-build naar SVG gerenderd. Functioneel komt dat overeen met [exporttype](@)
 svg.
 
 ### Pad naar de bron
@@ -112,7 +125,7 @@ svg.
 | Input                      | Vereist?    | Bron                                                                                                                |
 | -------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------- |
 | `.vsa`-bestand             | Ja          | content-source of gekopieerd uit `bron/zangstukken/`                                                                |
-| `.svg` afgeleide           | Impliciet   | Wordt bij build of via [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/) gegenereerd |
+| `.svg` [afgeleide](@)      | Impliciet   | Wordt bij build of via [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/) gegenereerd |
 | Vooraf gegenereerde `.svg` | Alternatief | `:::include "bestand.svg"` — geen VSA-validatie op dat moment                                                       |
 
 Sibling-conventie: `{stem}.svg` hoort bij `{stem}.vsa`.

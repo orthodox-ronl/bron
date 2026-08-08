@@ -1,20 +1,26 @@
+---
+doc_type: org-contract
+audience: "P4 — Consumer-site builder; P1 — Parochie-docs-maintainer"
+---
 # Exporttype: MXL-download
 
-Contract voor het **mxl**-exporttype: downloadlink naar MusicXML (`.mxl`) voor
+Contract voor het **mxl**-[exporttype](@): downloadlink naar MusicXML (`.mxl`) voor
 bewerking in MuseScore of als fallback voor Coria.
 
 Technische resolver- en shortcode-details: zie
 [MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/)
-en [CLI `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/).
+en [CLI `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)
+([VSA-tooling](@)).
 
 ---
 
 ## Samenvatting
 
-Exporttype **mxl** plaatst een link in de samenstelling waarmee de lezer een
+[Exporttype](@) **mxl** plaatst een link in de [samenstelling](@) waarmee de lezer een
 `.mxl`-bestand kan downloaden. Het bestand moet vooraf zijn gegenereerd via
-[conversie-vsa-musicxml](conversie-vsa-musicxml.md) en bereikbaar op de
-gepubliceerde site staan. De exportstap **genereert geen** MXL zelf.
+[conversie-vsa-musicxml](conversie-vsa-musicxml.md) ([conversiemechanisme](@)) en
+bereikbaar op de gepubliceerde site staan. De exportstap **genereert geen** MXL zelf
+— dat is een [afgeleide](@).
 
 ---
 
@@ -39,7 +45,7 @@ gepubliceerde site staan. De exportstap **genereert geen** MXL zelf.
 
 `:::include mxl` is **nog niet overal geïmplementeerd**. URL-afleiding bestaat
 al in de tooling; tot volledige implementatie: handmatige link naar gepubliceerde
-MXL of wachten op afronding in VSA-tooling.
+MXL of wachten op afronding in [VSA-tooling](@).
 
 ---
 
@@ -71,10 +77,10 @@ MXL of wachten op afronding in VSA-tooling.
 
 ## Inputs
 
-| Input            | Vereist?     | Opmerking                                                 |
-| ---------------- | ------------ | --------------------------------------------------------- |
-| `.vsa`           | Ja           | Anker voor URL-afleiding                                  |
-| `.mxl` afgeleide | Ja (runtime) | Moet op de site staan; niet overal automatisch gekopieerd |
+| Input                 | Vereist?     | Opmerking                                                 |
+| --------------------- | ------------ | --------------------------------------------------------- |
+| `.vsa`                | Ja           | Anker voor URL-afleiding                                  |
+| `.mxl` [afgeleide](@) | Ja (runtime) | Moet op de site staan; niet overal automatisch gekopieerd |
 
 Sibling-conventie: `melodie.mxl` hoort bij `melodie.vsa` (zelfde stam, andere
 extensie).
