@@ -1,0 +1,239 @@
+# Docs-content: publiek, paginatypen en werkplan
+
+| Veld       | Waarde                                                                 |
+| ---------- | ---------------------------------------------------------------------- |
+| **Status** | voorstel (uitvoering na akkoord)                                       |
+| **Repo**   | bron (canoniek) + parallelle taken in VSA-tooling                      |
+| **Scope**  | Inhoudelijke geschiktheid van documentatie per publiek en paginatype   |
+| **Niet**   | Dark mode, grote IA-herbouw, nieuwe glossary-termen (tenzij drift-fix) |
+
+Dit plan volgt op de docs-professionalisering (H4–H6) en de HRG-TermRef-verbeteringen
+op dezelfde feature branch. Het is **niet normatief**. Bij conflict gelden
+[schrijfconventies](../specs/schrijfconventies.md), [documentatie-eigendom](../specs/documentatie-eigendom.md)
+en de overige specs.
+
+Gerelateerd: [TEv2 TermRef-campagne](tev2-termref-campagne.md) (mechanisch hoverbaar
+maken) — dit plan gaat over **wat er geschreven moet staan** en **voor wie**.
+
+---
+
+## 1. Doel
+
+Voor **elke** gepubliceerde pagina (en voor term-entries die via glossary/TermRef
+bereikbaar zijn) expliciet maken:
+
+1. **Welk paginatype** het is (niet alleen in welke map het staat).
+2. **Welk publiek** primair komt kijken.
+3. Welke **taal**, **diepte** en **bouwstenen** (voorbeelden, checklists, links) dat
+   publiek nodig heeft.
+4. Wat er **nu** schort, en in welke **werkpakketten** we dat verbeteren.
+
+Succes: na uitvoering voldoet een steekproef pagina’s aan de lezerstest uit
+schrijfconventies **per type**, zonder de belofte “iedereen zonder technische
+scholing” te pretenderen voor contributor-only pagina’s.
+
+---
+
+## 2. Publieken (persona’s)
+
+De sites zijn **geen** koormap of oefensite voor zangers. Dat hard uitspreken
+voorkomt teleurstelling op Home/Starten.
+
+| Id     | Persona                         | Typische vraag                                              | Primaire site / sectie                          | Taalbehoefte                                      |
+| ------ | ------------------------------- | ----------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------- |
+| **P1** | Parochie-docs-maintainer        | Hoe schrijf ik een sjabloon / `zoek=` / build?              | bron catalogus-handleidingen; VSA consumer/CLI  | Volwassen NL, gecontroleerd jargon + TermRefs     |
+| **P2** | Bron-contentbeheerder           | Hoe voeg ik een zangstuk / variant / `access:` toe?         | bron manuals                                    | Stappen + yaml-voorbeeld; weinig aannames         |
+| **P3** | Notatie-auteur                  | Hoe schrijf/valideer ik VSA? Wat betekent deze marker?      | VSA Starten, guides, syntax, lokale terms       | Concrete voorbeelden; foutpaden                   |
+| **P4** | Consumer-site builder           | Hoe hang ik Hugo + SVG/CI aan VSA-tooling?                  | VSA reuse, svg-export, CLI build-markdown       | Workflow + links naar man-pages; geen flag-dump   |
+| **P5** | Docs-/tool-contributor          | Hoe draait TEv2? Wat is normatief waar?                     | docs-bijdragen, tev2-docs, specs                | Expert OK; “alleen voor bijdragers”-label         |
+| **P6** | Spec-/PR-reviewer               | Wat mag wel/niet? Wanneer is iets een afgeleide?            | bron specs + terms + glossary                   | Formeel waar nodig; snelle entry via glossary     |
+| **P7** | Eindgebruiker koor / liturgie   | Partituur oefenen, dienst volgen                            | **Niet** deze docs (parochie-site / VSA-demo)   | Doorverwijzen, niet bedienen                      |
+
+Catalogus-verhalen (Rene/Nana) dekken P1/P2 al relatief goed. P2-how-to’s buiten
+catalogus en P3’s eerste uur in VSA zijn de zwakste plekken.
+
+---
+
+## 3. Paginatypen (taxonomy)
+
+Mappen (`manuals/`, `specs/`, …) volgen **eigendom en nav**. Onderstaande typen
+sturen **toon en inhoud**. Eén bestand = één type; mengvormen expliciet markeren.
+
+| Type                         | Lezersvraag                            | Taal                            | Jargon                         | Diepte / bouwstenen                                                                 | Voorbeelden van plekken                                        |
+| ---------------------------- | -------------------------------------- | ------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Wayfinding hub**           | Waar moet ik zijn?                     | Kort, volwassen                 | TermRefs spaarzaam             | Persona-routes; “wanneer”; wat *niet* hier staat                                    | `index.md`, sectie-indexen                                     |
+| **Onboarding**               | Hoe begin ik *hier*?                   | Volwassen; minimale jargonbrug  | Uitleg bij eerste jargon       | Genummerde stappen; succescriterium; “klaar als…”                                   | `getting-started/`                                             |
+| **Task guide**               | Hoe doe ik taak X?                     | Stappen-NL                      | TermRefs i.p.v. herdefiniëren  | Voorbeeldinput; verwacht resultaat; checklist; link naar norm                       | `zangstuk-toevoegen`, copyright, bronvariant                   |
+| **User story / walkthrough** | Hoe doet persona Y dit end-to-end?     | Narratief, volwassen            | Gecontroleerd                  | Doelbeeld vs “werkt nu”; concrete ids/paden; statusbadge                            | `manuals/catalogus/*`                                          |
+| **Normative spec**           | Wat is de regel?                       | Formeel mag                     | Canonieke termen               | Criteria; R-regels; optioneel “snelle uitleg”-box bovenaan                          | `specs/terminologie.md`, `zangstuk-formaat.md`                 |
+| **Org-contract**             | Wat/wanneer mag deze export/conversie? | Volwassen + tabellen            | TermRefs                       | Waartoe → wel/niet → parameters → problemen → CLI-brug (schrijfconventies)          | `reference/exporttype-*`, `conversie-*`                        |
+| **CLI man-page**             | Wat doet dit commando precies?         | Precies, beknopt                | Tooljargon OK                  | Synopsis, I/O, exit, goed+fout voorbeeld (schrijfconventies)                        | VSA `reference/cli/*`; bron `catalogus-cli` (splitsbaar)       |
+| **Workflow-guide**           | Hoe hangt een keten samen?             | Volwassen                       | Links, geen flag-catalogus     | Wanneer wel/niet; 2–3 commandopaden; diagnose; zie man-pages + org-contract         | VSA `svg-export.md` (sjabloon); validation inkorten/verbeteren |
+| **Term entry (curated)**     | Wat betekent dit begrip?               | Definitie kort; body motiverend | Alleen glossary-termen         | `glossaryText` + Notes + Ja/Nee + Motivatie + link §N; **geen herdefinitie**        | `docs/terms/*`, VSA `terminologie/*`                           |
+| **Generated glossary**       | Overzicht + hover                      | Shelltekst volwassen            | —                              | Verschil glossary / termpagina / terminologie-spec uitleggen                        | `glossary.md`                                                  |
+| **Integratie / ownership**   | Waar hoort welke repo?                 | Volwassen                       | Licht                          | Rollen, minimale keten, geen tweede handleiding                                     | `consumer-site`, documentatie-eigendom                         |
+| **Non-normative plan**       | Wat overwegen we?                      | Vrij                            | —                              | Statusbanner; geen conflict met specs                                               | `docs/plans/*`                                                 |
+
+### Taalrichtlijnen per type (samenvatting)
+
+- **Geen Jip-en-Janneke** op specs/CLI — wel op hubs en task guides: eerst de vraag in
+  gewone taal, daarna formele details.
+- **Jargon**: alleen glossary-termen; altijd TermRef waar de term al bestaat.
+- **Expertpagina’s (P5/P6)**: mogen dicht zijn, mits bovenaan staat *voor wie* en
+  *wanneer niet lezen*.
+
+---
+
+## 4. Evaluatie huidige documentatie (kernbevindingen)
+
+Gebaseerd op een steekproef van volledige pagina’s in bron en VSA-tooling (augustus 2026).
+
+### Wat al goed werkt
+
+- **Catalogus-verhalen** (P1): persona’s, “wanneer”, eerlijk over GUI vs CLI.
+- **Org-contracten** export/conversie: volgen schrijfconventies-opbouw.
+- **VSA CLI man-pages** en **svg-export**-guide: referentiekwaliteit; geen flag-dump.
+- **Indexen** met “wanneer”-kolom (bron manuals): herbruikbaar patroon.
+- **Scheiding bron ↔ tool** op Home’s grotendeels helder.
+
+### Spanningsveld
+
+`schrijfconventies` belooft een lezer **zonder technische scholing**. De sites zijn
+in de praktijk vooral **bijdragers-/beheerdersdocumentatie**. Oplossing: belofte
+**per type/publiek** aanscherpen in schrijfconventies (fase A), niet alles
+infantiliseren.
+
+### Prioritaire inhoudelijke gaten
+
+| Prio | Bevinding                                                                                                   | Publiek | Type                |
+| ---- | ----------------------------------------------------------------------------------------------------------- | ------- | ------------------- |
+| P0   | VSA: `050_svg_demo.vsa` als **succes**-voorbeeld voor `vsa validate` terwijl validate faalt                 | P3      | Onboarding / guides |
+| P1   | `terms/representatie.md`: spreektaal, typo, spanning met `terminologie` §8 (SVG als representatie?)         | P6/P2   | Term entry          |
+| P1   | Korte how-to’s (`zangstuk-toevoegen`, `copyright-access`) te cryptisch: geen yaml-voorbeeld, “workflow 9.1” | P2      | Task guide          |
+| P1   | Home/Starten: geen persona-router; geen “geen koorzanger-site”                                              | allen   | Hub / onboarding    |
+| P2   | Nav-verwarring “Terminologie” (glossary) vs “Terminologie” (spec)                                           | allen   | Hub                 |
+| P2   | Driedubbele definities terms / glossary / `terminologie.md` → drift-risico                                  | P6      | Term + spec         |
+| P2   | Twee authoring-werelden (`:::include` pad vs `zoek=`) zonder brug                                           | P1/P4   | Hub / contract      |
+| P2   | VSA: duale hubs (`manuals/index` vs `guides/README` vs brede user-guide)                                    | P3/P4   | Hub                 |
+| P2   | Spec-overview VSA: eigen termtabel naast glossary; “Export”-woordgebruik                                    | P5      | Spec hub            |
+| P3   | Dunne term-bodies (`zangstuk.md`); contributor-pages zonder “minimaal pad”                                  | P2/P5   | Term / task         |
+| P3   | TermRef-dekking op specs/reference (zie apart plan)                                                         | allen   | Cross-cutting       |
+
+### Illustratie toonprobleem
+
+Slechte entry (`representatie.md`): lange MuseScore/Coria-monoloog zonder Ja/Nee-tabel,
+terwijl glossaryText kort en formeel is — lezer krijgt twee werelden.
+
+Goede entry (`afgeleide.md` / exportcontracten): korte definitie, Notes, Ja/Nee,
+Motivatie, link naar canonieke § — dat is het sjabloon.
+
+---
+
+## 5. Norm: wat elke pagina bovenaan moet hebben
+
+Voorstel (fase A vastleggen in schrijfconventies; daarna pagina’s bijwerken):
+
+1. **Voor wie** (één zin of admonition).
+2. **Wanneer lees je dit** (en wanneer *niet* — link naar het juiste type).
+3. **Antwoord eerst** (1–3 zinnen), daarna diepte.
+4. **Zie ook** onderaan (gerelateerde types: how-to ↔ spec ↔ CLI ↔ term).
+
+Optioneel later: YAML-frontmatter `doc_type` / `audience` voor review-checklists
+(niet verplicht voor MkDocs-nav).
+
+---
+
+## 6. Werkplan (uitvoering na akkoord)
+
+### Fase 0 — Juistheid (VSA-tooling, snel)
+
+| #   | Taak                                                                                                     | Acceptatie                                      |
+| --- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| 0.1 | Vervang succes-`validate` op Home/Starten/validation/cli-taken/user-guide door bestand dat echt OK geeft | Geen pad claimt succes op `050_svg_demo`        |
+| 0.2 | Houd `050_svg_demo` alleen bij svg/parse met bestaande waarschuwing                                      | validate.md en svg.md blijven consistent        |
+
+### Fase A — Kaders aanscherpen (bron)
+
+| #   | Taak                                                                                 | Acceptatie                                          |
+| --- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
+| A.1 | Schrijfconventies: persona’s P1–P7 + paginatypen-tabel + “belofte per type”          | PR op bron; geen tegenstrijdigheid met D1–D4        |
+| A.2 | Documenteer term-entry-sjabloon (glossaryText / Notes / Ja-Nee / Motivatie / §-link) | Verwijzing vanuit schrijfconventies of terms-README |
+| A.3 | Nav-label glossary: bijv. “Begrippenlijst” i.p.v. tweede “Terminologie”              | mkdocs.yml + glossary-shelltekst                    |
+
+### Fase B — Term entries (bron, daarna VSA-lokaal)
+
+| #   | Taak                                                                                  | Acceptatie                                      |
+| --- | ------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| B.1 | Herschrijf `representatie.md` naar sjabloon; align `terminologie` §8; fix typo        | Geen drift glossaryText ↔ §8 ↔ body             |
+| B.2 | Verrijk `zangstuk.md` (Ja/Nee + Notes)                                                | Zelfde structuur als `afgeleide.md`             |
+| B.3 | Steekproef overige `docs/terms/*`: body herdefinieert niet; Notes zonder self-TermRef | Checklist in PR                                 |
+| B.4 | VSA curated: dunne bodies + 1 voorbeeld; expliciet `@bron` waar org-term bedoeld is   | tev2-docs / contributor-note                    |
+
+### Fase C — Task guides & hubs (bron)
+
+| #   | Taak                                                                                           | Acceptatie                                      |
+| --- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| C.1 | `zangstuk-toevoegen`: yaml-voorbeeld, mapboom, “wanneer”, verwacht resultaat; “9.1” weg/uitleg | P2 kan zonder spec-diepte starten               |
+| C.2 | `copyright-access` + `bronvariant-toevoegen`: yaml-voorbeeld + checklist                       | Idem                                            |
+| C.3 | Home + Starten: persona-router; “geen P7”; subtitel Starten = lokaal ontwikkelen               | Eerste scherm beantwoordt “wie ben ik?”         |
+| C.4 | Brugtekst pad-`:::include` vs catalogus-`zoek=` op exporttype-svg én catalogus-index           | Beide werelden genoemd met links                |
+
+### Fase D — VSA leesbaarheid & hubs
+
+| #   | Taak                                                                                   | Acceptatie                                      |
+| --- | -------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| D.1 | Eén hub: `manuals/index`; `guides/README` → stub/exclude                               | Geen tweede startpunt                           |
+| D.2 | User-guide inkorten tot tour + links (geen tweede CLI)                                 | Flags alleen in `reference/cli/`                |
+| D.3 | Validatie-guide naar niveau svg-export (wanneer, validate≠svg)                         | Zelfde sectiestructuur                          |
+| D.4 | Spec `overview.md`: termtabel → glossary; Export/conversie-woordgebruik; sectienummers | Geen parallelle glossary                        |
+| D.5 | Consumer-site: “pointer-only” of minimale end-to-end                                   | Titel dekt lading                               |
+| D.6 | Nav-titels NL waar nu Engels (`Conformance`, …)                                        | Consistente NL-nav                              |
+
+### Fase E — Cross-cutting (na of parallel met TermRef-campagne)
+
+| #   | Taak                                                                 | Acceptatie                                            |
+| --- | -------------------------------------------------------------------- | ----------------------------------------------------- |
+| E.1 | Review-checklist (lezerstest + type + publiek) in docs-bijdragen     | Contributors weten waarop te toetsen                  |
+| E.2 | TermRef-campagne op specs/reference/dunne manuals                    | Zie [tev2-termref-campagne](tev2-termref-campagne.md) |
+| E.3 | Optioneel: `catalogus-cli` splitsen gebruikers-CLI vs library        | Schrijfconventies man-page-vorm                       |
+
+### Voorgestelde volgorde
+
+```text
+0 (VSA juistheid) → A (kaders) → B1–B2 (representatie/zangstuk)
+  → C (how-to’s + hubs bron) → D (VSA hubs) → B3–B4 + E
+```
+
+Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
+
+---
+
+## 7. Acceptatiecriteria (programma)
+
+- [ ] Schrijfconventies noemen persona’s en paginatypen; belofte “non-technisch” is
+      beperkt tot hubs/task guides/walkthroughs.
+- [ ] P0-demo-bug in VSA is weg.
+- [ ] `representatie` en `zangstuk` term-entries volgen sjabloon en matchen de spec.
+- [ ] Kern-task-guides P2 hebben voorbeeld + checklist + “wanneer”.
+- [ ] Home (bron + VSA) routeren op persona en benoemen P7-niet-hier.
+- [ ] Geen tweede docs-hub in VSA-guides-README.
+- [ ] Steekproef (min. 1 pagina per type) doorstaat de lezerstest voor dat type.
+
+---
+
+## 8. Open vragen voor akkoord
+
+1. **Nav-hernoaming** glossary → “Begrippenlijst”: akkoord, of liever “Glossary” houden?
+2. **Schrijfconventies aanscherpen** (fase A) vóór pagina-rewrites, of parallel met B1?
+3. **User-guide VSA**: inkorten (D.2) of tijdelijk `not_in_nav` / archief?
+4. **Frontmatter `doc_type`/`audience`**: nu meenemen, of alleen checklist in prose?
+5. Scope **alleen bron** eerst, of bron+VSA in één programma met gescheiden PR’s
+   (aanbevolen: gescheiden PR’s, één programmaplan = dit document)?
+
+---
+
+## 9. Wijzigingslog
+
+| Datum        | Wijziging                                      |
+| ------------ | ---------------------------------------------- |
+| 2026-08-08   | Eerste voorstel na content-audit bron + VSA    |

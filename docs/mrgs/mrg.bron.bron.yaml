@@ -21,7 +21,7 @@ entries:
     glossaryText: "Een bestand dat volledig en herhaalbaar door een [conversiemechanisme](@) uit een [bronbestand](@) wordt gegenereerd, en dat (dus) niet als [bronbestand](@) in de [bron-repository](@) staat."
     glossaryNotes:
       - "Voorbeelden: `.svg` via `vsa svg`; `.mxl` via `vsa musicxml`."
-      - "[Afgeleiden](@) worden niet getrackt in de [bron-repository](@); ze worden gegenereerd tijdens de build."
+      - "Afgeleiden worden niet getrackt in de [bron-repository](@); ze worden gegenereerd tijdens de build."
     scopetag: "bron"
     locator: "afgeleide.md"
     navurl: "https://orthodox-groningen.github.io/bron/terms/afgeleide"
@@ -302,7 +302,7 @@ entries:
     glossaryText: "Een element in de `sources:`-lijst van `zangstuk.yaml` in de [bron-repository](@), met een uniek `id` binnen dat [zangstuk](@); registreert een [representatie](@) of placeholder op het huidige platte model."
     glossaryNotes:
       - "Het `id`-veld van een source-entry correspondeert met het `representatie-id`."
-      - "Meerdere [source-entries](@) kunnen meerdere [representaties](@) registreren, of (legacy) nog niet onderscheiden [variant](@)/[uitvoeringsvorm](@)-structuur bevatten — bij nieuw werk gebruik het vier-niveaumodel."
+      - "Meerdere source-entries kunnen meerdere [representaties](@) registreren, of (legacy) nog niet onderscheiden [variant](@)/[uitvoeringsvorm](@)-structuur bevatten — bij nieuw werk gebruik het vier-niveaumodel."
     scopetag: "bron"
     locator: "source-entry.md"
     navurl: "https://orthodox-groningen.github.io/bron/terms/source-entry"

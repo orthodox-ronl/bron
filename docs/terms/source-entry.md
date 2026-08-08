@@ -7,7 +7,7 @@ glossaryTerm: Source-entry
 glossaryText: "Een element in de `sources:`-lijst van `zangstuk.yaml` in de [bron-repository](@), met een uniek `id` binnen dat [zangstuk](@); registreert een [representatie](@) of placeholder op het huidige platte model."
 glossaryNotes:
   - "Het `id`-veld van een source-entry correspondeert met het `representatie-id`."
-  - "Meerdere [source-entries](@) kunnen meerdere [representaties](@) registreren, of (legacy) nog niet onderscheiden [variant](@)/[uitvoeringsvorm](@)-structuur bevatten — bij nieuw werk gebruik het vier-niveaumodel."
+  - "Meerdere source-entries kunnen meerdere [representaties](@) registreren, of (legacy) nog niet onderscheiden [variant](@)/[uitvoeringsvorm](@)-structuur bevatten — bij nieuw werk gebruik het vier-niveaumodel."
 ---
 
 # Source-entry
