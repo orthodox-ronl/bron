@@ -301,18 +301,35 @@ PR-body bij landings:
 
 
 
-### Fase D — VSA leesbaarheid & hubs
+### Fase D — VSA leesbaarheid & hubs — **gedaan** (2026-08-08)
 
 
-| #   | Taak                                                                                           | Acceptatie                                                                 |
-| --- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| D.1 | Eén hub: `manuals/index`; `guides/README` → stub/exclude                                       | Geen tweede startpunt                                                      |
-| D.2 | User-guide inkorten tot tour + links (geen tweede CLI); eenvoudige taal waar P3 meekijkt       | Flags alleen in `reference/cli/`                                           |
-| D.3 | Validatie-guide naar niveau svg-export: waartoe/wanneer, validate≠svg, diagnose + fix          | Zelfde sectiestructuur; foutpad concreet                                   |
-| D.4 | Spec `overview.md`: termtabel → glossary; Export/conversie-woordgebruik; sectienummers         | Geen parallelle glossary                                                   |
-| D.5 | Consumer-site: “pointer-only” of minimale end-to-end                                           | Titel dekt lading                                                          |
-| D.6 | Nav-titels NL waar nu Engels (`Conformance`, …)                                                | Consistente NL-nav                                                         |
-| D.7 | CLI man-pages steekproef: “waartoe” bovenaan + foutvoorbeeld met oplossing (schrijfconventies) | Min. validate + svg voldoen; overige in backlog noteren                    |
+| #   | Taak                                                                                           | Acceptatie                                                                 | Status |
+| --- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------ |
+| D.0 | Home + Starten persona-router (VSA; §7 restant van C.3)                                        | Eerste scherm beantwoordt “wie ben ik?”; P7-niet-hier                      | gedaan |
+| D.1 | Eén hub: `manuals/index`; `guides/README` → stub/exclude                                       | Geen tweede startpunt                                                      | gedaan |
+| D.2 | User-guide inkorten tot tour + links (geen tweede CLI); eenvoudige taal waar P3 meekijkt       | Flags alleen in `reference/cli/`                                           | gedaan |
+| D.3 | Validatie-guide naar niveau svg-export: waartoe/wanneer, validate≠svg, diagnose + fix          | Zelfde sectiestructuur; foutpad concreet                                   | gedaan |
+| D.4 | Spec `overview.md`: termtabel → glossary; Export/conversie-woordgebruik; sectienummers         | Geen parallelle glossary                                                   | gedaan |
+| D.5 | Consumer-site: “pointer-only” of minimale end-to-end                                           | Titel dekt lading                                                          | gedaan |
+| D.6 | Nav-titels NL waar nu Engels (`Conformance`, …)                                                | Consistente NL-nav                                                         | gedaan |
+| D.7 | CLI man-pages steekproef: “waartoe” bovenaan + foutvoorbeeld met oplossing (schrijfconventies) | Min. validate + svg voldoen; overige in backlog noteren                    | gedaan |
+
+PR-body bij landings (VSA-repo):
+
+- `Landing: docs/index.md` + `docs/getting-started/README.md` ← D.0
+- `Landing: docs/manuals/index.md` + `docs/guides/README.md` ← D.1
+- `Landing: docs/guides/user-guide.md` ← D.2
+- `Landing: docs/guides/validation.md` ← D.3
+- `Landing: docs/specification/overview.md` ← D.4
+- `Landing: docs/manuals/consumer-site.md` ← D.5
+- `Landing: mkdocs.yml` (+ H1s conformance/error-handling/versioning/…) ← D.6
+- `Landing: docs/reference/cli/validate.md` + `svg.md` ← D.7
+
+**Backlog D.7 (later):** overige CLI man-pages (`parse`, `blocks`, `process`,
+`build-markdown`, `musicxml`, `resolve-catalogus`) op dezelfde
+waartoe/foutpad-norm toetsen — niet allemaal in deze fase.
+
 
 
 
@@ -352,9 +369,8 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 - [x] `representatie` en `zangstuk` term-entries volgen sjabloon (incl. waartoe /
       gerelateerd / verder lezen) en matchen de spec.
 - [x] Kern-task-guides P2 hebben voorbeeld + checklist + “wanneer” + foutpad.
-- [ ] Home (bron + VSA) routeren op persona en benoemen P7-niet-hier.
-      (bron gedaan in C.3; VSA volgt in fase D)
-- [ ] Geen tweede docs-hub in VSA-guides-README.
+- [x] Home (bron + VSA) routeren op persona en benoemen P7-niet-hier.
+- [x] Geen tweede docs-hub in VSA-guides-README.
 - [ ] Steekproef (min. 1 pagina per type) doorstaat de lezerstest voor dat type.
 - [ ] Landingsmatrix §5a: alle “moet in A”-rijen geland of expliciet uitgesteld;
       latere fasen toetsen tegen schrijfconventies, niet alleen tegen dit plan.
@@ -389,5 +405,6 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 | 2026-08-08 | Fase A gedaan: schrijfconventies + `terms/README.md` + checklist/AGENTS; A.3 uitgesteld (§8.1)                                     |
 | 2026-08-08 | Fase B gedaan: `representatie`/`zangstuk`/`exportmechanisme`; VSA curated steekproef + tev2-note                                   |
 | 2026-08-08 | Fase C gedaan: P2 task guides + Home/Starten persona-router + pad/`zoek=`-brug                                                     |
+| 2026-08-08 | Fase D gedaan (VSA): hubs, user-guide tour, validation, overview, NL-nav, CLI validate/svg; Home persona-router                    |
 
 
