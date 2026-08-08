@@ -31,7 +31,7 @@ entries:
     termType: "concept"
     termid: "concept:afgeleide"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "bron-repository"
     formPhrases:
       - "bron-repository"
@@ -137,7 +137,7 @@ entries:
     termType: "concept"
     termid: "concept:exportmechanisme"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "exporttype"
     formPhrases:
       - "exporttype"
@@ -194,7 +194,7 @@ entries:
     termType: "concept"
     termid: "concept:herkomst"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "manifest"
     formPhrases:
       - "manifest"
@@ -234,7 +234,7 @@ entries:
     termType: "concept"
     termid: "concept:parochie-lokale-representatie"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "promotie"
     formPhrases:
       - "promotie"
@@ -273,7 +273,7 @@ entries:
     termType: "concept"
     termid: "concept:representatie"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "samenstelling"
     formPhrases:
       - "samenstelling"
@@ -358,7 +358,7 @@ entries:
     termType: "concept"
     termid: "concept:variant"
     vsntag: "bron"
-  - git_date: 2026-08-01T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "vsa"
     termType: "concept"
     glossaryTerm: "Vereenvoudigde Slavische Accentnotatie"
@@ -377,7 +377,7 @@ entries:
       - "motivatie"
     termid: "concept:vsa"
     vsntag: "bron"
-  - git_date: 2026-08-01T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "vsa-bestand"
     termType: "concept"
     glossaryTerm: "vsa-bestand"
@@ -422,7 +422,7 @@ entries:
       - "zie-ook:"
     termid: "concept:vsa-notatie"
     vsntag: "bron"
-  - git_date: 2026-08-02T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "vsa-tooling"
     termType: "concept"
     glossaryTerm: "VSA-tooling"
