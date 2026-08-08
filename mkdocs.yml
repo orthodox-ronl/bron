@@ -62,6 +62,7 @@ nav:
   - Handleidingen:
     - Overzicht: manuals/index.md
     - manuals/github-pages-setup.md
+    - manuals/docs-bijdragen.md
     - manuals/zangstuk-toevoegen.md
     - manuals/bronvariant-toevoegen.md
     - manuals/copyright-access.md
@@ -106,6 +107,7 @@ nav:
       - plans/ideeen/tev2-terminologie.md
     - plans/tev2-h4-eenvoudige-termrefs.md
     - plans/tev2-h5-meerwoordige-termrefs.md
+    - plans/tev2-h6-toolchain.md
     - plans/ci-architectuur.md
     - plans/alias-blokken-ontwerp.md
     - plans/migratie-zondag-zangstukken.md

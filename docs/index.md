@@ -41,6 +41,8 @@ cd /d C:\Git\orthodox-groningen\bron
 scripts\docs-serve.cmd
 ```
 
+Met TermRefs (na `npm install`): `scripts\docs-serve-tev2.cmd`.
+
 ## Externe tools
 
 Conversie en validatie van [vsa-bestanden](@) gebeurt met

@@ -17,9 +17,9 @@ cd /d C:\Git\orthodox-groningen\bron
 scripts\docs-serve.cmd
 ```
 
-De site opent typisch op `http://127.0.0.1:8000/`. Voor de volledige TEv2-pipeline
-(glossary en TermRefs) gebruik je later `scripts\docs-build-tev2.cmd`; dat hoort
-niet bij deze eerste stappen.
+De site opent typisch op `http://127.0.0.1:8000/`. Voor glossary en TermRef-hover
+(zoals in CI): `scripts\docs-serve-tev2.cmd` (eerst `npm install`). Zie
+[Documentatie bijdragen](../manuals/docs-bijdragen.md).
 
 ## 3. Zangstukken valideren
 

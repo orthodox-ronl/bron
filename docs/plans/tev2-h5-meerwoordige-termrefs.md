@@ -27,4 +27,5 @@ de betekenis dragen; synoniembeleid (o.a. “klopt” → “geldig”).
 
 ## Niet in deze golf
 
-Volledige TermRef-campagne op alle history/spec-pagina’s; H6 toolchain.
+Volledige TermRef-campagne op alle history/spec-pagina’s.
+Toolchain: [tev2-h6-toolchain.md](tev2-h6-toolchain.md).
