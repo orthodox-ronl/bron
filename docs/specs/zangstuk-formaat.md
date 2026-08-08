@@ -4,7 +4,8 @@ audience: "P2 — Bron-contentbeheerder; P6 — Spec-/PR-reviewer"
 ---
 # Zangstuk-formaat
 
-Status: specificatie (juni 2026). Schema van `zangstuk.yaml` en VSA-frontmatter.
+Status: specificatie (juni 2026). Schema van `zangstuk.yaml` en VSA-frontmatter
+voor [zangstukken](@) in de [bron-repository](@).
 
 ## `zangstuk.yaml`
 
@@ -36,7 +37,7 @@ toon: <integer>
 koormap_nummer: <string>           # bijv. "8a" — niet de scan-sorteerprefix 010-
 ```
 
-### Source-entry — optionele velden
+### [Source-entry](@) — optionele velden
 
 ```yaml
     based_on: <source-id>       # binnen hetzelfde zangstuk
@@ -52,13 +53,15 @@ koormap_nummer: <string>           # bijv. "8a" — niet de scan-sorteerprefix 0
 
 ### Regels
 
-- Exact één van `file:` / `access:` / `status: nog-niet-getranscribeerd` per source
-- `based_on` verwijst naar een andere source **binnen hetzelfde zangstuk**
+- Exact één van `file:` / `access:` / `status: nog-niet-getranscribeerd` per
+  [source-entry](@)
+- `based_on` verwijst naar een andere source **binnen hetzelfde [zangstuk](@)**
 - Gedeelde scan: `file: ../ander-zangstuk-id/sources/scan/bestand.pdf`
 
 ## VSA-bestanden
 
-[VSA-bestanden](@) bevatten [VSA-notatie](@) en hebben de extensie `.vsa`.
+[VSA-bestanden](@) bevatten [VSA-notatie](@) en hebben de extensie `.vsa`. Ze zijn
+tegelijk [bronbestanden](@) en [representaties](@) van een [uitvoeringsvorm](@).
 
 ### Platte VSA
 
@@ -85,12 +88,14 @@ identificatie:
 ```
 
 **Voorrangsregel:** `zangstuk.yaml` is leidend voor overlappende identificatievelden.
-Frontmatter dient voor gebruik van het [vsa-bestand](@) buiten deze repository.
+Frontmatter dient voor gebruik van het [vsa-bestand](@) buiten deze
+[bron-repository](@).
 
-### Parochie-samenstelling — optioneel `default:`
+### Optioneel `default:` ([samenstelling](@) / [parochie-lokaal](@))
 
-Wanneer een `.vsa` **`@include-vsa zoek=`** bevat of in een parochie-context staat,
-mag frontmatter een **`default:`**-blok spiegelen (zelfde sleutels als markdown-sessie):
+Wanneer een `.vsa` **`@include-vsa zoek=`** bevat of onder `lokaal/`
+([parochie-lokaal](@)) staat, mag frontmatter een **`default:`**-blok spiegelen
+(zelfde sleutels als markdown-sessie):
 
 ```yaml
 ---
@@ -105,7 +110,8 @@ muziek:
 ```
 
 Dit is **`ZoekContext`** voor catalogus-zoekacties op *dit* bestand — niet hetzelfde
-als `gelegenheid` / `toon` op **`zangstuk.yaml`** (catalog-metadata). Zie
+als `gelegenheid` / `toon` op **`zangstuk.yaml`** (catalog-metadata). Het veld
+`uitvoeringsvorm` mag een [alias](@) zijn; zie
 [catalogus-zoek-api.md](catalogus-zoek-api.md) § twee contextlagen.
 
 ## Voorbeeld

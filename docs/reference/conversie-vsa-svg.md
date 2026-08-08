@@ -4,7 +4,7 @@ audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
 ---
 # Conversie: vsa svg
 
-Contract voor het conversiemechanisme
+Contract voor het [conversiemechanisme](@)
 [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/):
 een [vsa-bestand](@) omzetten naar een schaalbare vectorafbeelding (`.svg`).
 
@@ -21,7 +21,7 @@ en de workflow-guide
 De conversie leest een [vsa-bestand](@) en schrijft een SVG met VSA-glyphs,
 omringende tekst en layout volgens de rendering van [VSA-tooling](@). Die SVG is
 een [afgeleide](@): die hoort **niet** in de [bron-repository](@). Je gebruikt
-hem daarna via exporttype [embed svg](exporttype-svg.md) of als static asset op
+hem daarna via [exporttype](@) [embed svg](exporttype-svg.md) of als static asset op
 een parochiesite.
 
 ---

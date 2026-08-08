@@ -4,13 +4,15 @@ audience: "P6 — Spec-/PR-reviewer; P2 — Bron-contentbeheerder"
 ---
 # Brontypes en validatie
 
-Overzicht van validatieregels per brontype in `zangstukken/`.
+Overzicht van validatieregels per type [bronbestand](@) in `zangstukken/`
+([bron-repository](@)).
 
 ## `.vsa`
 
 Validatie van [vsa-bestanden](@) — bestanden met [vsa-notatie](@).
 
-Installatie: [VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling).
+Installatie: [VSA-tooling](@)
+([GitHub](https://github.com/orthodox-groningen/VSA-tooling)).
 
 | Check                            | Tool                                                                                             | Wanneer                          |
 | -------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------- |
@@ -40,15 +42,16 @@ Padconventie: `zangstukken/<id>/sources/scan/*.pdf` — zie `.gitignore` uitzond
 | --------------- | ---------------- | ------------ |
 | Well-formed XML | xmllint / parser | CI (gepland) |
 
-Alleen wanneer MusicXML **zelfstandige bron** is, niet wanneer het afgeleide van [vsa-notatie](@) is.
+Alleen wanneer MusicXML **zelfstandig [bronbestand](@)** is, niet wanneer het
+[afgeleide](@) van [vsa-notatie](@) is.
 
 ## `zangstuk.yaml`
 
-| Check                      | Tool                          | Wanneer        |
-| -------------------------- | ----------------------------- | -------------- |
-| Schema / verplichte velden | handmatig; yamllint (gepland) | Elke wijziging |
-| `file:` bestaat            | script                        | CI (gepland)   |
-| Eén status per source      | script                        | CI (gepland)   |
-| `based_on` geldig          | script                        | CI (gepland)   |
+| Check                            | Tool                          | Wanneer        |
+| -------------------------------- | ----------------------------- | -------------- |
+| Schema / verplichte velden       | handmatig; yamllint (gepland) | Elke wijziging |
+| `file:` bestaat                  | script                        | CI (gepland)   |
+| Eén status per [source-entry](@) | script                        | CI (gepland)   |
+| `based_on` geldig                | script                        | CI (gepland)   |
 
 Validatie-workflow in `.github/workflows/` volgt in een later increment.

@@ -118,7 +118,7 @@ naast de gepubliceerde assets (details in tooling).
 | `{stem}.coria.html`         | Conditioneel | Voor `mode=html` of `auto` met sibling                       |
 | `.mxl` op gepubliceerde URL | Conditioneel | Voor `mode=mxl` of `auto` zonder sibling                     |
 
-MXL wordt **niet** tijdens coria-export gegenereerd; conversie
+MXL wordt **niet** tijdens coria-export gegenereerd; het [conversiemechanisme](@)
 ([conversie-vsa-musicxml](conversie-vsa-musicxml.md)) moet eerder gedraaid hebben.
 
 **Catalogus-pad `bron:`:** na resolve wijst de include naar een `.vsa` in

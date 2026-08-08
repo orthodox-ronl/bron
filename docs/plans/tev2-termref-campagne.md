@@ -6,7 +6,7 @@ audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
 
 | Veld        | Waarde                                                         |
 | ----------- | -------------------------------------------------------------- |
-| **Status**  | punt 2 catalogus-TermRefs; rest backlog                        |
+| **Status**  | punt 3 formaat/reference densify; rest backlog                 |
 | **Repo**    | bron (+ VSA-tooling later waar nodig)                          |
 | **Scope**   | Follow-up na H4–H6 en contentplan fasen A–E                    |
 
@@ -28,6 +28,7 @@ history — zodat gedefinieerde begrippen consequent hoverbaar zijn.
 | E.2c | Zangstukmodel (`terminologie.md`): TermRefs op criteria/samenhang     |
 | E.2d | Terms `alias` / `canoniek-id` + frontmatter roll-out                  |
 | E.2e | Selectief: catalogus-architectuur / zoek-api / catalogus-cli          |
+| E.2f | `zangstuk-formaat` + reference densify                                |
 
 H5 parkeerde expliciet: *geen* volledige campagne op alle history/spec-pagina’s.
 
@@ -67,7 +68,7 @@ catalogus-pad blijven uncured jargon tot eigen PR).
 
 1. ~~Frontmatter `doc_type`/`audience` roll-out op bestaande pagina’s~~ **gedaan** (alle MkDocs-nav)
 2. ~~`catalogus-architectuur.md`, `catalogus-zoek-api.md`, `catalogus-cli.md` (selectief TermRefs)~~ **gedaan**
-3. `zangstuk-formaat.md` / overige reference densify (TermRefs)
+3. ~~`zangstuk-formaat.md` / overige reference densify (TermRefs)~~ **gedaan**
 4. Dunne manuals / `rene-*` stories (selectief TermRefs)
 5. VSA-tooling tool-docs waar org-termen bare blijven (`@bron`)
 6. Alleen inkorten waar hover de definitie al dekt (schrijfconventies)
