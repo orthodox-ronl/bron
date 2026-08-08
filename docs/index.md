@@ -8,18 +8,18 @@ waarheid voor [zangstukken](@) binnen [orthodox-groningen](https://github.com/or
 | Sectie                                         | Wat je er vindt                                                                                          |
 | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | [Starten](getting-started/index.md)            | Eerste stappen: repo openen, docs lokaal bekijken, zangstukken valideren.                                |
-| [Terminologie](glossary.md)                    | Gegenereerde glossary van org-brede begrippen (na TEv2-build).                                           |
-| [Specificaties](specs/index.md)                | Normatieve regels: terminologie, repo-structuur, `zangstuk.yaml`, catalogus-contracten.                  |
 | [Handleidingen](manuals/index.md)              | Stap-voor-stap procedures voor beheerders (zangstuk toevoegen, copyright, catalogus-voorbeelden).        |
+| [Specificaties](specs/index.md)                | Normatieve regels: terminologie, repo-structuur, `zangstuk.yaml`, catalogus-contracten.                  |
 | [Referentie](reference/index.md)               | Contractpagina’s voor conversie, exporttypes en brontype-validatie — ter naslag naast de specificaties.  |
+| [Terminologie](glossary.md)                    | Gegenereerde glossary van org-brede begrippen (na TEv2-build).                                           |
 | [Plannen](plans/README.md)                     | Ontwikkelplannen en ideeën. Die zijn niet normatief; bij twijfel gelden specificaties en handleidingen.  |
 
 ## Waar hoort wat?
 
 | Vraag                                              | Ga naar                                                                                         |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Wat betekent een term, en wat mag wel/niet?        | [Specificaties](specs/index.md) en [Terminologie](glossary.md) in **deze** site                 |
 | Hoe voer ik een taak uit in de bron-repo?          | [Handleidingen](manuals/index.md)                                                               |
+| Wat betekent een term, en wat mag wel/niet?        | [Specificaties](specs/index.md) en [Terminologie](glossary.md) in **deze** site                 |
 | Hoe werkt de VSA-CLI (validate, svg, MusicXML)?    | [VSA-tooling — documentatie](https://orthodox-groningen.github.io/VSA-tooling/)                 |
 
 Zie ook [Documentatie-eigendom](specs/documentatie-eigendom.md): normatieve

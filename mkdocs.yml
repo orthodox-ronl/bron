@@ -59,20 +59,6 @@ nav:
   - Home: index.md
   - Starten:
     - Overzicht: getting-started/index.md
-  - Terminologie:
-    - Overzicht: glossary.md
-  - Specificaties:
-    - Overzicht: specs/index.md
-    - specs/documentatie-eigendom.md
-    - specs/terminologie.md
-    - specs/zangstuk-identificatie.md
-    - specs/schrijfconventies.md
-    - specs/inhoudslevenscyclus.md
-    - specs/repo-structuur.md
-    - specs/zangstuk-formaat.md
-    - specs/catalogus-architectuur.md
-    - specs/catalogus-zoek-api.md
-    - specs/catalogus-samenstelling-zangstuk.md
   - Handleidingen:
     - Overzicht: manuals/index.md
     - manuals/github-pages-setup.md
@@ -87,6 +73,18 @@ nav:
       - manuals/catalogus/rene-cherubijnenhymne-lokaal.md
       - manuals/catalogus/rene-cherubijnenhymne-naar-bron.md
       - manuals/catalogus/rene-cherubijnenhymne-musicxml.md
+  - Specificaties:
+    - Overzicht: specs/index.md
+    - specs/documentatie-eigendom.md
+    - specs/terminologie.md
+    - specs/zangstuk-identificatie.md
+    - specs/schrijfconventies.md
+    - specs/inhoudslevenscyclus.md
+    - specs/repo-structuur.md
+    - specs/zangstuk-formaat.md
+    - specs/catalogus-architectuur.md
+    - specs/catalogus-zoek-api.md
+    - specs/catalogus-samenstelling-zangstuk.md
   - Referentie:
     - Overzicht: reference/index.md
     - reference/conversiemechanismen.md
@@ -98,6 +96,8 @@ nav:
     - reference/exporttype-mxl.md
     - reference/brontypes-validatie.md
     - reference/catalogus-cli.md
+  - Terminologie:
+    - Overzicht: glossary.md
   - Plannen:
     - Overzicht: plans/README.md
     - Ideeën:
