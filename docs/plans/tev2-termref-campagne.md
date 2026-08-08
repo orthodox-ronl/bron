@@ -6,7 +6,7 @@ audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
 
 | Veld        | Waarde                                                         |
 | ----------- | -------------------------------------------------------------- |
-| **Status**  | tweede golf + Zangstukmodel-TermRefs; rest backlog             |
+| **Status**  | punt 2 catalogus-TermRefs; rest backlog                        |
 | **Repo**    | bron (+ VSA-tooling later waar nodig)                          |
 | **Scope**   | Follow-up na H4–H6 en contentplan fasen A–E                    |
 
@@ -26,6 +26,8 @@ history — zodat gedefinieerde begrippen consequent hoverbaar zijn.
 | E.2  | Steekproef: 1× spec, 1× reference, 1× task guide, 1× hub              |
 | E.2b | Tweede golf: specs + exporttypes + eigendom                           |
 | E.2c | Zangstukmodel (`terminologie.md`): TermRefs op criteria/samenhang     |
+| E.2d | Terms `alias` / `canoniek-id` + frontmatter roll-out                  |
+| E.2e | Selectief: catalogus-architectuur / zoek-api / catalogus-cli          |
 
 H5 parkeerde expliciet: *geen* volledige campagne op alle history/spec-pagina’s.
 
@@ -64,7 +66,7 @@ catalogus-pad blijven uncured jargon tot eigen PR).
 ## Backlog (later)
 
 1. ~~Frontmatter `doc_type`/`audience` roll-out op bestaande pagina’s~~ **gedaan** (alle MkDocs-nav)
-2. `catalogus-architectuur.md`, `catalogus-zoek-api.md`, `catalogus-cli.md` (selectief TermRefs)
+2. ~~`catalogus-architectuur.md`, `catalogus-zoek-api.md`, `catalogus-cli.md` (selectief TermRefs)~~ **gedaan**
 3. `zangstuk-formaat.md` / overige reference densify (TermRefs)
 4. Dunne manuals / `rene-*` stories (selectief TermRefs)
 5. VSA-tooling tool-docs waar org-termen bare blijven (`@bron`)

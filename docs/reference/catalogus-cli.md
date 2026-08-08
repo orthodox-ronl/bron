@@ -81,24 +81,24 @@ python -m catalogus.cli resolve zangstuk "1e antifoon weekdagen" --content-root 
 python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen --variant liturgikon-weekdagen Hemelum --content-root ..\VSA-demo\content-source
 ```
 
-Niveaus: `zangstuk`, `variant`, `uitvoeringsvorm`, `representatie`.
+Niveaus: [zangstuk](@), [variant](@), [uitvoeringsvorm](@), [representatie](@).
 
 Scope-flags:
 
-| Niveau          | Verplichte flags                                      |
-| --------------- | ----------------------------------------------------- |
-| zangstuk        | —                                                     |
-| variant         | `--zangstuk`                                          |
-| uitvoeringsvorm | `--zangstuk`, `--variant`                             |
-| representatie   | `--zangstuk`, `--variant`, `--uitvoeringsvorm`        |
+| Niveau               | Verplichte flags                               |
+| -------------------- | ---------------------------------------------- |
+| [zangstuk](@)        | —                                              |
+| [variant](@)         | `--zangstuk`                                   |
+| [uitvoeringsvorm](@) | `--zangstuk`, `--variant`                      |
+| [representatie](@)   | `--zangstuk`, `--variant`, `--uitvoeringsvorm` |
 
 Index-bronnen (minstens één verplicht):
 
-| Flag              | Inhoud                                              |
-| ----------------- | --------------------------------------------------- |
-| `--content-root`  | Parochie content-source (met `lokaal/`)             |
-| `--bron-root`     | Bron-repository (met `zangstukken/`)                |
-| `--fixture-root`  | Extra root (tests, offline fixtures)                |
+| Flag             | Inhoud                                                   |
+| ---------------- | -------------------------------------------------------- |
+| `--content-root` | Parochie content-source (met `lokaal/`)                  |
+| `--bron-root`    | [Bron-repository](@) (met `zangstukken/`)                |
+| `--fixture-root` | Extra root (tests, offline fixtures)                     |
 
 ### `catalogus index validate`
 
@@ -139,11 +139,12 @@ python -m catalogus.cli aliases sync --dry-run --bron-root .
 De index wordt in het geheugen opgebouwd uit:
 
 1. **Mappad** — mapnamen onder `lokaal/<zangstuk-id>/<variant-id>/<uitvoeringsvorm-id>/`
-2. **Manifesten** — `variant.yaml`, `uitvoeringsvorm.yaml` (`aliases:` per entiteit)
+2. **[Manifesten](@)** — `variant.yaml`, `uitvoeringsvorm.yaml` (`aliases:` per entiteit)
 3. **Bron** — `zangstukken/<zangstuk-id>/zangstuk.yaml` (`title`, `sources[].id`)
 4. **Alias-blokken** — `catalogus/data/alias-blokken.yaml` breidt zoektermen uit (runtime)
 
-Zie [parochie-lokaal zangstukken](../manuals/parochie-lokaal-zangstukken.md) voor manifest-structuur.
+Zie [parochie-lokaal zangstukken](../manuals/parochie-lokaal-zangstukken.md) voor
+[manifest](@)-structuur.
 
 ## Resolver-contract
 
@@ -189,7 +190,7 @@ Zie [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) voor volledig contra
 ## Relatie tot VSA
 
 - **Fase 2:** `catalogus` staat los van `vsa`; build/includes gebruikten relatieve paden.
-- **Fase 3:** VSA-tooling importeert `catalogus` bij `id:…` / `lokaal:…` / `bron:…`-includes in markdown.
+- **Fase 3:** [VSA-tooling](@) importeert `catalogus` bij `id:…` / `lokaal:…` / `bron:…`-includes in markdown.
 - **Fase 4:** `:::include zoek=` / `@include-vsa zoek=` → **`catalogus.zoek`**
   → catalogus-pad — [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) (**geïmplementeerd**, basis).
 
