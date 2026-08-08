@@ -129,3 +129,23 @@ def test_process_glossary_row(inj):
     assert "[afgeleide](afgeleide@)" not in row
     assert "[Afgeleide](afgeleide@)" not in row
     assert "[afgeleiden](afgeleide@)" not in row
+
+
+def test_load_mrg_entries_ignores_foreign_scope_files(inj, tmp_path):
+    """Imported mrg.tev2.yaml must not feed phrase inject (CI mrg-import)."""
+    (tmp_path / "mrg.bron.yaml").write_text(
+        "terminology:\n  scopetag: bron\nentries:\n"
+        "  - term: zangstuk\n    scopetag: bron\n    formPhrases: [zangstuk]\n",
+        encoding="utf-8",
+    )
+    (tmp_path / "mrg.tev2.yaml").write_text(
+        "terminology:\n  scopetag: tev2\nentries:\n"
+        "  - term: scope\n    scopetag: tev2\n    formPhrases: [scope]\n",
+        encoding="utf-8",
+    )
+    paths = inj.mrg_paths_for_scope(tmp_path, "bron")
+    assert [p.name for p in paths] == ["mrg.bron.yaml"]
+    entries = inj.load_mrg_entries(tmp_path, "bron")
+    assert [e["term"] for e in entries] == ["zangstuk"]
+    phrases = inj.build_phrase_index(entries, "bron")
+    assert all(term == "zangstuk" for _ph, term, _suf in phrases)

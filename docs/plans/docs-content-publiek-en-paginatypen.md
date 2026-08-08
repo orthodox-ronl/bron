@@ -250,11 +250,11 @@ bij svg/parse/musicxml en als **faalvoorbeeld** in `reference/cli/validate.md`.
 ### Fase A — Kaders aanscherpen (bron) — **gedaan** (2026-08-08), A.3 uitgesteld
 
 
-| #   | Taak                                                                                                                                                                               | Acceptatie                                                                                 | Status                          |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------- |
-| A.1 | Schrijfconventies: persona’s P1–P7 + paginatypen-tabel + belofte “welwillende volwassenen” per type; jargon→curated+TermRef; foutpad-eis voor task/CLI/workflow; pagina-kopnorm §5 | Diff `schrijfconventies.md`; PR-body `Landing:`-regels voor matrix-rijen A.1; D1–D4 intact | gedaan                          |
+| #   | Taak                                                                                                                                                                               | Acceptatie                                                                                 | Status                                       |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------- |
+| A.1 | Schrijfconventies: persona’s P1–P7 + paginatypen-tabel + belofte “welwillende volwassenen” per type; jargon→curated+TermRef; foutpad-eis voor task/CLI/workflow; pagina-kopnorm §5 | Diff `schrijfconventies.md`; PR-body `Landing:`-regels voor matrix-rijen A.1; D1–D4 intact | gedaan                                       |
 | A.2 | Term-entry-sjabloon: glossaryText / Notes / Ja-Nee / Motivatie (**waartoe**) / gerelateerd / verder lezen / §-link                                                                 | Bestand of sectie bestaat; link vanuit schrijfconventies; `Landing: A.2`                   | gedaan (`docs/specs/term-entry-sjabloon.md`) |
-| A.3 | Nav-label glossary: bijv. “Begrippenlijst” i.p.v. tweede “Terminologie” (alleen na akkoord §8.1)                                                                                   | mkdocs.yml + glossary-shelltekst; of rij `uitgesteld`                                      | **uitgesteld** (wacht §8.1)     |
+| A.3 | Nav-label glossary: bijv. “Begrippenlijst” i.p.v. tweede “Terminologie” (alleen na akkoord §8.1)                                                                                   | mkdocs.yml + glossary-shelltekst; of rij `uitgesteld`                                      | **uitgesteld** (wacht §8.1)                  |
 
 **Landing (fase A):**
 
@@ -280,15 +280,23 @@ bij svg/parse/musicxml en als **faalvoorbeeld** in `reference/cli/validate.md`.
 
 
 
-### Fase C — Task guides & hubs (bron)
+### Fase C — Task guides & hubs (bron) — **gedaan** (2026-08-08)
 
 
-| #   | Taak                                                                                                                  | Acceptatie                                                         |
-| --- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| C.1 | `zangstuk-toevoegen`: yaml-voorbeeld, mapboom, “wanneer”, verwacht resultaat; “9.1” weg/uitleg; typische fouten + fix | P2 kan zonder spec-diepte starten; foutpad aanwezig                |
-| C.2 | `copyright-access` + `bronvariant-toevoegen`: yaml-voorbeeld + checklist + foutpad                                    | Idem                                                               |
-| C.3 | Home + Starten: persona-router; “geen P7”; subtitel Starten = lokaal ontwikkelen; toon welwillende volwassene         | Eerste scherm beantwoordt “wie ben ik?”                            |
-| C.4 | Brugtekst pad-`:::include` vs catalogus-`zoek=` op exporttype-svg én catalogus-index                                  | Beide werelden genoemd met links                                   |
+| #   | Taak                                                                                                                  | Acceptatie                                                         | Status |
+| --- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ------ |
+| C.1 | `zangstuk-toevoegen`: yaml-voorbeeld, mapboom, “wanneer”, verwacht resultaat; “9.1” weg/uitleg; typische fouten + fix | P2 kan zonder spec-diepte starten; foutpad aanwezig                | gedaan |
+| C.2 | `copyright-access` + `bronvariant-toevoegen`: yaml-voorbeeld + checklist + foutpad                                    | Idem                                                               | gedaan |
+| C.3 | Home + Starten: persona-router; “geen P7”; subtitel Starten = lokaal ontwikkelen; toon welwillende volwassene         | Eerste scherm beantwoordt “wie ben ik?”                            | gedaan |
+| C.4 | Brugtekst pad-`:::include` vs catalogus-`zoek=` op exporttype-svg én catalogus-index                                  | Beide werelden genoemd met links                                   | gedaan |
+
+PR-body bij landings:
+
+- `Landing: docs/manuals/zangstuk-toevoegen.md` ← C.1
+- `Landing: docs/manuals/copyright-access.md` ← C.2
+- `Landing: docs/manuals/bronvariant-toevoegen.md` ← C.2
+- `Landing: docs/index.md` + `docs/getting-started/index.md` ← C.3
+- `Landing: docs/reference/exporttype-svg.md` + `docs/manuals/catalogus/index.md` ← C.4
 
 
 
@@ -343,8 +351,9 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 - [x] P0-demo-bug in VSA is weg.
 - [x] `representatie` en `zangstuk` term-entries volgen sjabloon (incl. waartoe /
       gerelateerd / verder lezen) en matchen de spec.
-- [ ] Kern-task-guides P2 hebben voorbeeld + checklist + “wanneer” + foutpad.
+- [x] Kern-task-guides P2 hebben voorbeeld + checklist + “wanneer” + foutpad.
 - [ ] Home (bron + VSA) routeren op persona en benoemen P7-niet-hier.
+      (bron gedaan in C.3; VSA volgt in fase D)
 - [ ] Geen tweede docs-hub in VSA-guides-README.
 - [ ] Steekproef (min. 1 pagina per type) doorstaat de lezerstest voor dat type.
 - [ ] Landingsmatrix §5a: alle “moet in A”-rijen geland of expliciet uitgesteld;
@@ -379,5 +388,6 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 | 2026-08-08 | Fase 0 gedaan (VSA): succes-`validate` → `001_plain_text.vsa`                                                                      |
 | 2026-08-08 | Fase A gedaan: schrijfconventies + `terms/README.md` + checklist/AGENTS; A.3 uitgesteld (§8.1)                                     |
 | 2026-08-08 | Fase B gedaan: `representatie`/`zangstuk`/`exportmechanisme`; VSA curated steekproef + tev2-note                                   |
+| 2026-08-08 | Fase C gedaan: P2 task guides + Home/Starten persona-router + pad/`zoek=`-brug                                                     |
 
 

@@ -67,15 +67,37 @@ def join_markdown_table_row(cells: list[str]) -> str:
     return "| " + " | ".join(cells) + " |"
 
 
-def load_mrg_entries(mrgs_dir: Path) -> list[dict]:
-    entries: list[dict] = []
+def mrg_paths_for_scope(mrgs_dir: Path, default_scope: str) -> list[Path]:
+    """MRG files for the local glossary scope only (not mrg-import foreign scopes).
+
+    CI copies imported scopes (e.g. ``mrg.tev2.yaml``) into the same ``mrgs/``
+    directory. Phrase inject must not wrap those foreign formPhrases into the
+    local HRG glossary.
+    """
     if not mrgs_dir.is_dir():
-        return entries
-    for path in sorted(mrgs_dir.glob("mrg.*.yaml")):
+        return []
+    all_paths = sorted(mrgs_dir.glob("mrg.*.yaml"))
+    if not default_scope:
+        return all_paths
+    scoped = sorted(mrgs_dir.glob(f"mrg.{default_scope}.yaml")) + sorted(
+        mrgs_dir.glob(f"mrg.{default_scope}.*.yaml")
+    )
+    # Preserve order, drop duplicates (mrg.bron.yaml matches both patterns).
+    scoped_unique = list(dict.fromkeys(scoped))
+    return scoped_unique or all_paths
+
+
+def load_mrg_entries(mrgs_dir: Path, default_scope: str = "") -> list[dict]:
+    entries: list[dict] = []
+    for path in mrg_paths_for_scope(mrgs_dir, default_scope):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         for entry in data.get("entries") or []:
-            if isinstance(entry, dict) and entry.get("term"):
-                entries.append(entry)
+            if not isinstance(entry, dict) or not entry.get("term"):
+                continue
+            entry_scope = str(entry.get("scopetag") or default_scope or "")
+            if default_scope and entry_scope and entry_scope != default_scope:
+                continue
+            entries.append(entry)
     return entries
 
 
@@ -292,14 +314,14 @@ def main() -> int:
     mrgs_dir = args.mrgs_dir or (glossary_path.parent / "mrgs")
     saf_path = args.saf or (glossary_path.parent / "saf.yaml")
 
-    entries = load_mrg_entries(mrgs_dir)
+    default_scope = default_scopetag(
+        mrgs_dir, saf_path if saf_path.is_file() else None
+    )
+    entries = load_mrg_entries(mrgs_dir, default_scope)
     if not entries:
         print(f"WARNING: no MRG entries in {mrgs_dir}; skipping TermRef inject")
         return 0
 
-    default_scope = default_scopetag(
-        mrgs_dir, saf_path if saf_path.is_file() else None
-    )
     phrases = build_phrase_index(entries, default_scope)
     original = glossary_path.read_text(encoding="utf-8")
     updated = process_glossary(original, phrases, entries)

@@ -31,7 +31,16 @@ in de samenstelling wordt ingebed.
 
 ## Authoring
 
-### Doelsyntax
+!!! tip "Twee manieren om een `.vsa` te kiezen"
+    Deze pagina beschrijft **pad-`:::include`**: je noemt een bestaand relatief
+    pad naar een `.vsa` (vaste bron in de consumer- of demo-repo).
+
+    In **catalogus-sjablonen** kies je vaak nog geen pad, maar een liturgische
+    rol via **`zoek=`**; resolve zet dat later om naar `bron:` / `lokaal:`-paden.
+    Zie [Sjabloon schrijven](../manuals/catalogus/sjabloon-schrijven.md) en
+    [Catalogus-handleidingen](../manuals/catalogus/index.md).
+
+### Doelsyntax (pad)
 
 ```markdown
 :::include svg "praktijk/zondagen/tropaar-zondag-toon-3.vsa" alt="Tropaar van de zondag, Toon 3" scale="85%":::

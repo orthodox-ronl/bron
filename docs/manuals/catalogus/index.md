@@ -20,6 +20,15 @@ userdocumentatie voor vrijwilligers en als basis voor latere handleidingen.
 
 Contract: [zangstuk in samenstelling-sjablonen](../../specs/catalogus-samenstelling-zangstuk.md).
 
+!!! tip "Pad-`:::include` vs catalogus-`zoek=`"
+    **`zoek=`** (deze handleidingen): liturgische rol in het sjabloon; resolve
+    kiest later het concrete `.vsa`-pad. Geschikt voor diensten die per
+    gelegenheid wisselen.
+
+    **Pad-`:::include`**: vast relatief pad naar een `.vsa` — zie
+    [Exporttype SVG](../../reference/exporttype-svg.md). Geschikt wanneer de
+    bron al bekend is (demo, vaste pagina, na resolve).
+
 Commando’s (wanneer je CLI gebruikt):
 [Catalogus CLI](../../reference/catalogus-cli.md),
 [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/),

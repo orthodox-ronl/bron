@@ -58,7 +58,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Starten:
-    - Overzicht: getting-started/index.md
+    - Lokaal ontwikkelen: getting-started/index.md
   - Handleidingen:
     - Overzicht: manuals/index.md
     - manuals/github-pages-setup.md
