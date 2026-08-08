@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 15:24 CEST.
+  , gebouwd 2026-08-08 19:57 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2345,7 +2345,7 @@
   <span class="md-ellipsis">
     
   
-    TEv2 — bredere TermRef-campagne (later)
+    TEv2 — bredere TermRef-campagne
   
 
     
@@ -2719,8 +2719,11 @@
 
 
 <h1 id="parochie-lokaal-zangstukken">Parochie-lokaal zangstukken<a class="headerlink" href="#parochie-lokaal-zangstukken" title="Permanent link">&para;</a></h1>
-<p>Handleiding voor parochie-specifiek zangmateriaal in een Hugo/content-source-repo, naast materiaal uit <a href="https://github.com/orthodox-groningen/bron">orthodox-groningen/bron</a>.</p>
-<p>Terminologie: <a href="../../specs/terminologie/">specs/terminologie.md</a>, <a href="../../specs/zangstuk-identificatie/">specs/zangstuk-identificatie.md</a>.</p>
+<p>Handleiding voor <a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">parochie-lokale representaties</a> in een Hugo/content-source-repo,
+naast materiaal uit de <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>
+(<a href="https://github.com/orthodox-groningen/bron">orthodox-groningen/bron</a>).</p>
+<p>Terminologie: <a href="../../specs/terminologie/">specs/terminologie.md</a>,
+<a href="../../specs/zangstuk-identificatie/">specs/zangstuk-identificatie.md</a>.</p>
 <hr />
 <h2 id="wanneer-parochie-lokaal">Wanneer parochie-lokaal?<a class="headerlink" href="#wanneer-parochie-lokaal" title="Permanent link">&para;</a></h2>
 <table>
@@ -2732,8 +2735,8 @@
 </thead>
 <tbody>
 <tr>
-<td>Zangstuk staat (deels) in bron</td>
-<td>Bron-sync + eventueel parochie-lokaal uitvoeringsvorm</td>
+<td><a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">Zangstuk</a> staat (deels) in bron</td>
+<td>Bron-sync + eventueel parochie-lokale <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a></td>
 </tr>
 <tr>
 <td>Parochie-bewerking, nog niet gedeeld</td>
@@ -2741,11 +2744,11 @@
 </tr>
 <tr>
 <td>Eenmalig concept, kort fragment</td>
-<td>Inline notatie-directive (tool-specifiek; zie VSA-tooling)</td>
+<td>Inline notatie-directive (tool-specifiek; zie <a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>)</td>
 </tr>
 <tr>
 <td>Export, diff t.o.v. bron, hergebruik</td>
-<td>Losse bronbestand onder <code>lokaal/…/repr/</code></td>
+<td>Los <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> onder <code>lokaal/…/repr/</code></td>
 </tr>
 </tbody>
 </table>
@@ -2761,11 +2764,15 @@
                 └── repr/
                     └── &lt;representatie-id&gt;.&lt;ext&gt;
 </code></pre></div>
-<p><strong>Canonieke ids:</strong> <code>^[a-z0-9_-]+$</code> — zie <a href="../../specs/terminologie/">terminologie</a>.</p>
-<p><strong>Referentie-implementatie (VSA-demo):</strong> <a href="https://github.com/orthodox-groningen/VSA-demo/tree/main/content-source/lokaal">VSA-demo — content-source/lokaal</a>.</p>
+<p><strong>Canonieke ids:</strong> <code>^[a-z0-9_-]+$</code> — zie <a href="../../specs/terminologie/">terminologie</a>
+(<code>zangstuk-id</code> → <code>variant-id</code> → <code>uitvoeringsvorm-id</code> → <code>representatie-id</code>).</p>
+<p><strong>Referentie-implementatie (<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> / demo):</strong>
+<a href="https://github.com/orthodox-groningen/VSA-demo/tree/main/content-source/lokaal">VSA-demo — content-source/lokaal</a>.</p>
 <hr />
 <h2 id="manifest">Manifest<a class="headerlink" href="#manifest" title="Permanent link">&para;</a></h2>
-<p>Zie <a href="../../specs/terminologie/#16-manifest">terminologie §16</a>.</p>
+<p>Zie <a href="../../specs/terminologie/#16-manifest">terminologie §16</a> —
+parochie-lokaal gebruikt <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifest</a>-yaml (<code>variant.yaml</code>,
+<code>uitvoeringsvorm.yaml</code>), niet <code>zangstuk.yaml</code> uit de <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>.</p>
 <h3 id="variantyaml"><code>variant.yaml</code><a class="headerlink" href="#variantyaml" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nt">zangstuk-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">antifoon-1-weekdagen</span>
 <span class="nt">variant-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">liturgikon-weekdagen</span>
@@ -2788,7 +2795,8 @@
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">representatie-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hemelum</span>
 <span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">repr/hemelum.vsa</span>
 </code></pre></div>
-<p>Yaml-velden zijn <strong>informatief</strong> voor beheerders; de build valideert vandaag vooral bronbestanden en markdown-includes (tool-specifiek).</p>
+<p>Yaml-velden zijn <strong>informatief</strong> voor beheerders; de build valideert vandaag vooral
+<a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestanden</a> en markdown-includes (tool-specifiek).</p>
 <hr />
 <h2 id="inline-vs-los-bestand">Inline vs los bestand<a class="headerlink" href="#inline-vs-los-bestand" title="Permanent link">&para;</a></h2>
 <table>
@@ -2815,22 +2823,26 @@
 </table>
 <hr />
 <h2 id="verwijzen-in-samenstellingen">Verwijzen in samenstellingen<a class="headerlink" href="#verwijzen-in-samenstellingen" title="Permanent link">&para;</a></h2>
-<p><strong>Relatief pad</strong> (legacy): vanuit het markdown-bestand (VSA-tooling).</p>
+<p><strong>Relatief pad</strong> (legacy): vanuit het markdown-bestand (<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>).</p>
 <p><strong>Id-gebaseerd (fase 3, basis):</strong> <code>bron:&lt;zangstuk-id&gt;/&lt;variant-id&gt;/&lt;uitvoeringsvorm-id&gt;</code>,
 <code>lokaal:…</code> — zie <a href="../../specs/catalogus-architectuur/">catalogus-architectuur</a>.</p>
 <p><strong>Sjabloon (fase 4, geïmplementeerd):</strong> markdown met <code>:::include zoek=</code> — zie
 <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.
 Resolve naar catalogus-pad via
 <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a>
-(VSA-tooling).</p>
+(<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>).</p>
 <hr />
 <h2 id="promotie-naar-bron-repository">Promotie naar bron-repository<a class="headerlink" href="#promotie-naar-bron-repository" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Behoud <strong>canonieke ids</strong> (<code>variant-id</code>, <code>uitvoeringsvorm-id</code>, <code>representatie-id</code>).</li>
-<li>Open PR naar <code>orthodox-groningen/bron</code> met bronbestand + metadata (zie <a href="../zangstuk-toevoegen/">zangstuk toevoegen</a> / <a href="../bronvariant-toevoegen/">bronvariant toevoegen</a>).</li>
-<li>Na merge: samenstelling kan bron-referentie gebruiken i.p.v. <code>lokaal/</code>-pad.</li>
+<li>Open PR naar <code>orthodox-groningen/bron</code> met <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> + metadata (zie
+   <a href="../zangstuk-toevoegen/">zangstuk toevoegen</a> /
+   <a href="../bronvariant-toevoegen/">bronvariant toevoegen</a>).</li>
+<li>Na merge: <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> kan bron-referentie gebruiken i.p.v. <code>lokaal/</code>-pad.</li>
 </ol>
-<p>Parochie-lokaal mag als kopie blijven staan; <strong>canonical</strong> is bron na sync.</p>
+<p><a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">Parochie-lokaal</a> mag als kopie blijven staan; <strong>canonical</strong> is bron na sync.
+<a href="/bron/preview/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">Promotie</a> is de overgang van parochie-lokaal naar geregistreerd in de
+<a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>.</p>
 <hr />
 <h2 id="build-pipeline-algemeen">Build-pipeline (algemeen)<a class="headerlink" href="#build-pipeline-algemeen" title="Permanent link">&para;</a></h2>
 <table>
@@ -2847,7 +2859,7 @@ Resolve naar catalogus-pad via
 </tr>
 <tr>
 <td><a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a></td>
-<td>Als markdown <strong><code>zoek=</code></strong> bevat (VSA-tooling)</td>
+<td>Als markdown <strong><code>zoek=</code></strong> bevat (<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>)</td>
 </tr>
 <tr>
 <td>Validatie</td>
@@ -2863,7 +2875,8 @@ Resolve naar catalogus-pad via
 </tr>
 </tbody>
 </table>
-<p><strong>VSA-tooling:</strong> concrete commando's — <a href="https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/">docs/guides/parochie-lokaal-vsa.md</a>.</p>
+<p><strong><a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>:</strong> concrete commando's —
+<a href="https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/">docs/guides/parochie-lokaal-vsa.md</a>.</p>
 
 
 
