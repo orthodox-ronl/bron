@@ -32,6 +32,27 @@ entries:
     termid: "concept:afgeleide"
     vsntag: "bron"
   - git_date: 2026-08-08T00:00:00.000Z
+    term: "alias"
+    formPhrases:
+      - "alias"
+      - "aliassen"
+    glossaryTerm: "Alias"
+    glossaryText: "Een voor mensen leesbare naam of werknaam voor een entiteit ([zangstuk](@), [variant](@), [uitvoeringsvorm](@) of [representatie](@)), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het [canonieke id](@) in opslag."
+    glossaryNotes:
+      - "Aliassen mogen spaties, hoofdletters, diacritica en andere talen bevatten; het [canonieke id](@) blijft `^[a-z0-9_-]+$`."
+      - "Binnen één scope mag een alias niet op twee verschillende entiteiten wijzen; bij meerdere matches is er een ambiguïteitsfout."
+      - "Niet verwarren met het [canonieke id](@) zelf, noch met [herkomst](@) (waar iets vandaan komt)."
+    scopetag: "bron"
+    locator: "alias.md"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/alias"
+    headingids:
+      - "alias"
+      - "motivatie"
+      - "gerelateerd"
+    termType: "concept"
+    termid: "concept:alias"
+    vsntag: "bron"
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "bron-repository"
     formPhrases:
       - "bron-repository"
@@ -82,6 +103,30 @@ entries:
       - "motivatie"
     termType: "concept"
     termid: "concept:bronbestand"
+    vsntag: "bron"
+  - git_date: 2026-08-08T00:00:00.000Z
+    term: "canoniek-id"
+    formPhrases:
+      - "canoniek-id"
+      - "canonieke-id"
+      - "canonieke-ids"
+      - "canoniek-ids"
+      - "canonieke-id-s"
+    glossaryTerm: "Canonieke id"
+    glossaryText: "De stabiele, machine-leesbare identifier van een entiteit ([zangstuk](@), [variant](@), [uitvoeringsvorm](@) of [representatie](@)) in opslag: lowercase ASCII volgens `^[a-z0-9_-]+$`, zonder spaties, diacritica of Cyrillisch."
+    glossaryNotes:
+      - "Voorbeelden: `zangstuk-id` `antifoon-1-weekdagen`, `uitvoeringsvorm-id` `groningen`."
+      - "Op de invoergrens mag een [alias](@) gebruikt worden; de resolver levert altijd het [canonieke id](@) voor paden, yaml, git en `bron:…`-referenties."
+      - "Niet verwarren met [alias](@) (menselijke werknaam) of met [herkomst](@) (waar iets vandaan komt)."
+    scopetag: "bron"
+    locator: "canoniek-id.md"
+    navurl: "https://orthodox-groningen.github.io/bron/preview/terms/canoniek-id"
+    headingids:
+      - "canonieke-id"
+      - "motivatie"
+      - "gerelateerd"
+    termType: "concept"
+    termid: "concept:canoniek-id"
     vsntag: "bron"
   - git_date: 2026-07-11T00:00:00.000Z
     term: "compositie"
@@ -246,7 +291,7 @@ entries:
     glossaryTerm: "Promotie (registratie)"
     glossaryText: "De overgang van een [parochie-lokale representatie](@) naar een [geregistreerde representatie](@), door het toevoegen van een [source-entry](@) en bijbehorend [bronbestand](@) in de [bron-repository](@) via een PR."
     glossaryNotes:
-      - "Bij promotie blijven de canonieke ids behouden."
+      - "Bij promotie blijven de [canonieke ids](@) behouden."
       - "Promotie vereist een PR op de [bron-repository](@) met [source-entry](@) én [bronbestand](@)."
     scopetag: "bron"
     locator: "promotie.md"
@@ -318,7 +363,7 @@ entries:
     termType: "concept"
     termid: "concept:source-entry"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "uitvoeringsvorm"
     formPhrases:
       - "uitvoeringsvorm"
@@ -337,10 +382,11 @@ entries:
     headingids:
       - "uitvoeringsvorm"
       - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:uitvoeringsvorm"
     vsntag: "bron"
-  - git_date: 2026-07-11T00:00:00.000Z
+  - git_date: 2026-08-08T00:00:00.000Z
     term: "variant"
     formPhrases:
       - "variant"
@@ -360,6 +406,7 @@ entries:
     headingids:
       - "variant"
       - "motivatie"
+      - "gerelateerd"
     termType: "concept"
     termid: "concept:variant"
     vsntag: "bron"

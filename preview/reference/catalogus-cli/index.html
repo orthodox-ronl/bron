@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 20:24 CEST.
+  , gebouwd 2026-08-08 21:22 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -353,7 +353,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -1158,7 +1158,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1992,7 +1992,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -2008,7 +2008,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2782,8 +2782,8 @@
 
 
 <h1 id="catalogus-tool">Catalogus-tool<a class="headerlink" href="#catalogus-tool" title="Permanent link">&para;</a></h1>
-<p>De <strong>catalogus</strong>-CLI bouwt een alias-index uit manifesten en mappad, en lost
-invoer op naar <strong>canoniek id</strong> volgens <a href="../../specs/terminologie/">terminologie §2.8</a>.</p>
+<p>De <strong>catalogus</strong>-CLI bouwt een <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a>-index uit <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifesten</a> en mappad, en lost
+invoer op naar <strong><a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a></strong> volgens <a href="../../specs/terminologie/">terminologie §2.8</a>.</p>
 <p><strong>Gebruikersverhalen</strong> (workflows, beoogde GUI): <a href="../../manuals/catalogus/">Catalogus — handleidingen</a>.</p>
 <p><strong>Sjablonen</strong> (<code>:::include zoek=</code>, <code>default</code>, <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a>): <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.</p>
 <h2 id="installatie">Installatie<a class="headerlink" href="#installatie" title="Permanent link">&para;</a></h2>
@@ -2814,11 +2814,11 @@ python -m pip install -e &quot;.[dev]&quot;
 </tr>
 <tr>
 <td><a href="#catalogus-resolve"><code>catalogus resolve</code></a></td>
-<td>Alias → canoniek id (per niveau)</td>
+<td><a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">Alias</a> → <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> (per niveau)</td>
 </tr>
 <tr>
 <td><a href="#catalogus-index-validate"><code>catalogus index validate</code></a></td>
-<td>Manifesten en alias-conflicten controleren</td>
+<td><a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">Manifesten</a> en <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a>-conflicten controleren</td>
 </tr>
 <tr>
 <td><a href="#catalogus-aliases-validate"><code>catalogus aliases validate</code></a></td>
@@ -2853,7 +2853,7 @@ python -m catalogus.cli zoek &quot;Cherubijnenhymne (Kastorski)&quot; ^
 org-bron. <strong>Lokaal vóór bron</strong>; bij lokaal-winst kan <strong><code>ZoekResult.ook_gevonden_in_bron</code></strong>
 gevuld zijn — toon met <strong><code>--verbose</code></strong> (waarschuwing op stderr).</p>
 <h3 id="catalogus-resolve"><code>catalogus resolve</code><a class="headerlink" href="#catalogus-resolve" title="Permanent link">&para;</a></h3>
-<p>Los alias of hoofdletter-variant op naar canoniek id.</p>
+<p>Los <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> of hoofdletter-variant op naar <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a>.</p>
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli resolve zangstuk &quot;1e antifoon weekdagen&quot; --content-root ..\VSA-demo\content-source
 python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen --variant liturgikon-weekdagen Hemelum --content-root ..\VSA-demo\content-source
 </code></pre></div>
@@ -2909,7 +2909,7 @@ python -m catalogus.cli resolve uitvoeringsvorm --zangstuk antifoon-1-weekdagen 
 </tbody>
 </table>
 <h3 id="catalogus-index-validate"><code>catalogus index validate</code><a class="headerlink" href="#catalogus-index-validate" title="Permanent link">&para;</a></h3>
-<p>Controleer manifesten op ongeldige ids en alias-conflicten binnen scope.</p>
+<p>Controleer <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifesten</a> op ongeldige ids en <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a>-conflicten binnen scope.</p>
 <div class="highlight"><pre><span></span><code>python -m catalogus.cli index validate --bron-root .
 python -m catalogus.cli index validate --content-root ..\VSA-demo\content-source
 </code></pre></div>
@@ -2921,7 +2921,7 @@ python -m catalogus.cli index validate --content-root ..\VSA-demo\content-source
 </code></pre></div>
 <h3 id="catalogus-aliases-sync"><code>catalogus aliases sync</code><a class="headerlink" href="#catalogus-aliases-sync" title="Permanent link">&para;</a></h3>
 <p>Schrijf gegenereerde alias-blokken naar <code>zangstuk.yaml</code> / <code>variant.yaml</code>. Handmatige
-aliassen blijven boven het marker-blok; gegenereerde termen tellen alleen mee voor
+<a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a> blijven boven het marker-blok; gegenereerde termen tellen alleen mee voor
 <strong>zoek</strong> (niet voor resolver-scope — voorkomt conflicten tussen meerdere kondak/tropaar-stukken).</p>
 <p>Trigger: <code>liturgische_rol:</code> / <code>alias_blok:</code> in yaml, anders id-prefix of term-fallback
 (bijv. <code>kondak-zondag-toon-1</code> → blok <code>kondak</code>).</p>
@@ -2941,8 +2941,8 @@ python -m catalogus.cli aliases sync --dry-run --bron-root .
 <h2 id="resolver-contract">Resolver-contract<a class="headerlink" href="#resolver-contract" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Normaliseer invoer: <code>strip()</code> + Unicode <code>casefold()</code></li>
-<li>Match canoniek id of geregistreerde alias binnen scope</li>
-<li>Resultaat: canoniek id <code>[a-z0-9_-]+</code>, of fout (<code>NotFoundError</code>, <code>AmbiguousError</code>)</li>
+<li>Match <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> of geregistreerde <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> binnen scope</li>
+<li>Resultaat: <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> <code>[a-z0-9_-]+</code>, of fout (<code>NotFoundError</code>, <code>AmbiguousError</code>)</li>
 </ol>
 <p><code>lang</code> in alias-yaml is metadata; matching negeert taal (casefold op <code>text</code>).</p>
 <h2 id="python-library">Python-library<a class="headerlink" href="#python-library" title="Permanent link">&para;</a></h2>

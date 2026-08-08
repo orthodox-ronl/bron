@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 20:24 CEST.
+  , gebouwd 2026-08-08 21:22 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -353,7 +353,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -1161,7 +1161,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -2086,7 +2086,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -2102,7 +2102,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2987,7 +2987,7 @@
 <ol>
 <li><strong><code>Path</code></strong> — absoluut pad naar het brondocument op schijf;</li>
 <li><strong><code>catalogus_pad</code></strong> — logische referentie <code>lokaal:…</code> of <code>bron:…</code> (niet <code>id:</code>);</li>
-<li><strong><code>VsaFileEntry</code></strong> — canonieke ids + herkomst (ook bij niet-<code>.vsa</code>-bestanden).</li>
+<li><strong><code>VsaFileEntry</code></strong> — <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke ids</a> + <a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a> (ook bij niet-<code>.vsa</code>-bestanden).</li>
 </ol>
 <p><strong>Geen</strong> relatieve paden in het contract. Lokale registratie loopt via manifesten onder
 <code>content-root/lokaal/</code>.</p>
@@ -3033,12 +3033,12 @@ niet als fout.</p>
 <hr />
 <h2 id="zoekgedrag-abstract">Zoekgedrag (abstract)<a class="headerlink" href="#zoekgedrag-abstract" title="Permanent link">&para;</a></h2>
 <p>De API specificeert <strong>niet</strong> welke yaml-velden geïndexeerd worden. Implementatie doorzoekt
-alle teksten en velden die de catalogus uit manifesten, mapnamen, ids, aliassen en
+alle teksten en velden die de catalogus uit <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifesten</a>, mapnamen, ids, <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a> en
 liturgische metadata kent.</p>
 <ol>
 <li>Normaliseer <code>query</code> (<a href="../terminologie/">§2.8</a>).</li>
 <li>Verzamel kandidaten waar genormaliseerde query matcht op doorzoekbare tekst (titels,
-   aliassen, id-slugs, optionele metadata — ranking in implementatie-PR).</li>
+   <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a>, id-slugs, optionele metadata — ranking in implementatie-PR).</li>
 <li>Pas <strong><code>ZoekContext</code></strong>-filters toe (<code>gelegenheid</code>, <code>toon</code>, <code>uitvoeringsvorm</code>, …).</li>
 <li>Pas <strong><code>bestandsextensie</code></strong> toe op <code>entry.path.suffix</code>.</li>
 <li>Uitkomst (strict modus <strong><code>zoek</code></strong>, na parochie-voorrang):</li>
@@ -3068,7 +3068,7 @@ voor de zoekstring; zie <a href="../catalogus-samenstelling-zangstuk/">catalogus
 </tr>
 <tr>
 <td><strong>Catalog-metadata</strong></td>
-<td><code>zangstuk.yaml</code>, <code>variant.yaml</code>, <code>uitvoeringsvorm.yaml</code>, titels, aliassen</td>
+<td><code>zangstuk.yaml</code>, <code>variant.yaml</code>, <code>uitvoeringsvorm.yaml</code>, titels, <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a></td>
 <td>Geïndexeerd materiaal; <strong><code>ZoekContext</code> filtert</strong> welke kandidaten passen</td>
 </tr>
 </tbody>
@@ -3113,7 +3113,7 @@ Geen verplichting om <code>gelegenheid</code> in het <strong>included</strong> s
 <tr>
 <td><code>uitvoeringsvorm</code></td>
 <td><code>str \| None</code></td>
-<td>Default uitvoeringsvorm (alias toegestaan op invoer)</td>
+<td>Default uitvoeringsvorm (<a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> toegestaan op invoer)</td>
 </tr>
 <tr>
 <td><code>gelegenheidsdatum</code></td>
@@ -3155,7 +3155,7 @@ sibling <code>bronnen:</code> (<code>bron</code> | <code>lokaal</code> | lijst).
 <tr>
 <td><code>entry</code></td>
 <td><code>VsaFileEntry</code></td>
-<td>Canonieke ids + pad + <code>origin</code></td>
+<td><a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">Canonieke ids</a> + pad + <code>origin</code></td>
 </tr>
 <tr>
 <td><code>catalogus_pad</code></td>

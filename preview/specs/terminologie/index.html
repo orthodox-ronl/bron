@@ -27,7 +27,7 @@
     
     
       
-        <title>Terminologie — zangstukken, bronnen en publicatie - bron — documentatie</title>
+        <title>Zangstukmodel - bron — documentatie</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#terminologie-zangstukken-bronnen-en-publicatie" class="md-skip">
+        <a href="#zangstukmodel-niveaus-criteria-en-samenhang" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 20:24 CEST.
+  , gebouwd 2026-08-08 21:22 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -134,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Terminologie — zangstukken, bronnen en publicatie
+              Zangstukmodel
             
           </span>
         </div>
@@ -353,7 +353,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -1170,7 +1170,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1188,7 +1188,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -2229,7 +2229,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -2245,7 +2245,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -3255,9 +3255,13 @@
   
 
 
-<h1 id="terminologie-zangstukken-bronnen-en-publicatie">Terminologie — zangstukken, bronnen en publicatie<a class="headerlink" href="#terminologie-zangstukken-bronnen-en-publicatie" title="Permanent link">&para;</a></h1>
+<h1 id="zangstukmodel-niveaus-criteria-en-samenhang">Zangstukmodel — niveaus, criteria en samenhang<a class="headerlink" href="#zangstukmodel-niveaus-criteria-en-samenhang" title="Permanent link">&para;</a></h1>
 <p><strong>Status:</strong> normatief, goedgekeurd (juni 2026).</p>
 <p><strong>Canonieke locatie:</strong> dit bestand (<code>bron/docs/specs/terminologie.md</code>). <strong>Niet dupliceren</strong> in andere repo's — link ernaar (zie <a href="../documentatie-eigendom/">documentatie-eigendom.md</a>).</p>
+<p><strong>Rol:</strong> dit document beschrijft het <strong>vier-niveaumodel</strong> en de <strong>samenhang</strong> tussen
+begrippen (criteria, verboden paden, disambiguatie). De korte definitie per term,
+plus samenhang <em>vanuit die term</em>, staat in curated texts onder <code>docs/terms/</code>
+(mensleesbaar overzicht: <a href="../../glossary/">Begrippenlijst</a>).</p>
 <p>Gerelateerd: <a href="../../manuals/parochie-lokaal-zangstukken/">parochie-lokaal zangstukken</a>, <a href="../zangstuk-identificatie/">zangstuk-identificatie.md</a> (beknopte index).</p>
 <p><strong>Id-velden:</strong> <code>zangstuk-id</code>, <code>variant-id</code>, <code>uitvoeringsvorm-id</code>, <code>representatie-id</code>.</p>
 <hr />
@@ -3289,7 +3293,7 @@
 </tr>
 <tr>
 <td><strong>R5 — ids canoniek</strong></td>
-<td>In opslag, paden en machine-leesbare referenties: canonieke ids (<code>§ canonieke id’s</code>); aliassen alleen op de invoergrens.</td>
+<td>In opslag, paden en machine-leesbare referenties: <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke ids</a> (<code>§ canonieke id’s</code>); <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a> alleen op de invoergrens.</td>
 </tr>
 </tbody>
 </table>
@@ -3297,7 +3301,7 @@
 <p><strong>Andere repo's:</strong> link naar dit document; geen volledige kopieën (stubs met link zijn oké — zie <a href="../documentatie-eigendom/">documentatie-eigendom.md</a>).</p>
 <hr />
 <h2 id="1-vier-niveaus-overzicht">1. Vier niveaus (overzicht)<a class="headerlink" href="#1-vier-niveaus-overzicht" title="Permanent link">&para;</a></h2>
-<p><strong>Zangstuk → variant → uitvoeringsvorm → representatie (0..n)</strong></p>
+<p><strong><a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">Zangstuk</a> → <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> → <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> → <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> (0..n)</strong></p>
 <table>
 <thead>
 <tr>
@@ -3311,28 +3315,28 @@
 <tbody>
 <tr>
 <td>0</td>
-<td><strong>Zangstuk</strong></td>
+<td><strong><a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">Zangstuk</a></strong></td>
 <td><code>zangstuk-id</code></td>
 <td>—</td>
 <td>metadata</td>
 </tr>
 <tr>
 <td>1</td>
-<td><strong>Variant</strong></td>
+<td><strong><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">Variant</a></strong></td>
 <td><code>variant-id</code></td>
 <td>max. 1× per <code>zangstuk-id</code></td>
 <td>metadata</td>
 </tr>
 <tr>
 <td>2</td>
-<td><strong>Uitvoeringsvorm</strong></td>
+<td><strong><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">Uitvoeringsvorm</a></strong></td>
 <td><code>uitvoeringsvorm-id</code></td>
 <td>max. 1× per <code>(zangstuk-id, variant-id)</code></td>
 <td>metadata</td>
 </tr>
 <tr>
 <td>3</td>
-<td><strong>Representatie</strong></td>
+<td><strong><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a></strong></td>
 <td><code>representatie-id</code></td>
 <td>max. 1× per <code>(zangstuk-id, variant-id, uitvoeringsvorm-id)</code></td>
 <td><code>.vsa</code>, scan, …</td>
@@ -3342,7 +3346,7 @@
 <p>Volledig pad (canoniek): <code>(zangstuk-id, variant-id, uitvoeringsvorm-id, representatie-id)</code>.</p>
 <ul>
 <li>Geen default-id’s (geen <code>variant-id: standaard</code>).</li>
-<li><strong>0 representaties:</strong> uitvoeringsvorm bestaat (herkomst bekend) zonder bronbestand.</li>
+<li><strong>0 representaties:</strong> <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> bestaat (<a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a> bekend) zonder <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a>.</li>
 </ul>
 <h3 id="voorbeeldhierarchie">Voorbeeldhiërarchie<a class="headerlink" href="#voorbeeldhierarchie" title="Permanent link">&para;</a></h3>
 <p><strong>Cherubijnenhymne (meerdere varianten):</strong></p>
@@ -3368,10 +3372,10 @@
 <hr />
 <h2 id="2-canonieke-ids-en-aliassen">2. Canonieke id’s en aliassen<a class="headerlink" href="#2-canonieke-ids-en-aliassen" title="Permanent link">&para;</a></h2>
 <h3 id="21-canonieke-id-vorm">2.1 Canonieke id-vorm<a class="headerlink" href="#21-canonieke-id-vorm" title="Permanent link">&para;</a></h3>
-<p>Elk canoniek id voldoet aan: <code>^[a-z0-9_-]+$</code> (lowercase ASCII, cijfers, <code>-</code>, <code>_</code>).</p>
+<p>Elk <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> voldoet aan: <code>^[a-z0-9_-]+$</code> (lowercase ASCII, cijfers, <code>-</code>, <code>_</code>).</p>
 <ul>
-<li>Geen spaties, hoofdletters, diacritica of Cyrillisch in het <strong>opgeslagen</strong> canonieke id.</li>
-<li>Meertalige of gemixte spelling → <strong>aliassen</strong>, niet in het canonieke id.</li>
+<li>Geen spaties, hoofdletters, diacritica of Cyrillisch in het <strong>opgeslagen</strong> <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke id</a>.</li>
+<li>Meertalige of gemixte spelling → <strong><a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a></strong>, niet in het <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke id</a>.</li>
 <li>Resolver normaliseert invoer naar lowercase; ongeldige tekens → <strong>fout</strong> (geen stille transliteratie tenzij later expliciet gespecificeerd).</li>
 </ul>
 <h3 id="22-aliassen">2.2 Aliassen<a class="headerlink" href="#22-aliassen" title="Permanent link">&para;</a></h3>
@@ -3385,22 +3389,22 @@
 </thead>
 <tbody>
 <tr>
-<td>Zangstuk</td>
+<td><a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">Zangstuk</a></td>
 <td><code>zangstuk-id</code></td>
 <td>“1e antifoon weekdagen”, “8a”, koormap-label</td>
 </tr>
 <tr>
-<td>Variant</td>
+<td><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">Variant</a></td>
 <td><code>variant-id</code></td>
 <td>“Kastorski”, “obikhod”, <code>greek-chant</code></td>
 </tr>
 <tr>
-<td>Uitvoeringsvorm</td>
+<td><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">Uitvoeringsvorm</a></td>
 <td><code>uitvoeringsvorm-id</code></td>
 <td>“Groningen”, “refrein-praktijk”, “Hemelum”</td>
 </tr>
 <tr>
-<td>Representatie</td>
+<td><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a></td>
 <td><code>representatie-id</code></td>
 <td>scan-bestandsnaam, parochie-label</td>
 </tr>
@@ -3417,27 +3421,27 @@
 <tbody>
 <tr>
 <td><strong>Opslag / techniek</strong></td>
-<td>Paden, yaml, git, <code>bron:…</code>-referenties, build-artefacten: <strong>altijd canoniek id</strong> (lowercase).</td>
+<td>Paden, yaml, git, <code>bron:…</code>-referenties, build-artefacten: <strong>altijd <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a></strong> (lowercase).</td>
 </tr>
 <tr>
 <td><strong>Invoer / gebruiker</strong></td>
-<td>Zoeken, specs, UI, CLI: <strong>alias toegestaan</strong> → resolver zet om vóór validate/build/opslag.</td>
+<td>Zoeken, specs, UI, CLI: <strong><a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> toegestaan</strong> → resolver zet om vóór validate/build/opslag.</td>
 </tr>
 </tbody>
 </table>
-<p>Gebruikers hoeven het canonieke id <strong>niet</strong> te kennen als hun alias geregistreerd en binnen scope <strong>eenduidig</strong> is.</p>
+<p>Gebruikers hoeven het <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke id</a> <strong>niet</strong> te kennen als hun <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> geregistreerd en binnen scope <strong>eenduidig</strong> is.</p>
 <h3 id="24-case-insensitive-matching">2.4 Case-insensitive matching<a class="headerlink" href="#24-case-insensitive-matching" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Vergelijking invoer ↔ canoniek id en invoer ↔ alias: <strong>case-insensitive</strong> (Unicode case-folding).</li>
+<li>Vergelijking invoer ↔ <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> en invoer ↔ <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a>: <strong>case-insensitive</strong> (Unicode case-folding).</li>
 <li>Voorbeeld: <code>Groningen</code>, <code>groningen</code>, <code>GRONINGEN</code> → <code>uitvoeringsvorm-id</code> <code>groningen</code>.</li>
-<li>Aliassen mogen willekeurige casing hebben; <strong>canoniek id in opslag</strong> blijft <code>[a-z0-9_-]+</code>.</li>
+<li><a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">Aliassen</a> mogen willekeurige casing hebben; <strong><a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> in opslag</strong> blijft <code>[a-z0-9_-]+</code>.</li>
 </ul>
 <h3 id="25-meertalige-aliassen">2.5 Meertalige aliassen<a class="headerlink" href="#25-meertalige-aliassen" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Aliassen in elke relevante taal (NL, EN, RU, Kerk-Slavisch, …); optioneel <code>lang</code> (BCP 47).</li>
 <li>Geen automatische machinevertaling — elke taalvariant apart registreren.</li>
 </ul>
-<p>Voorbeeld variant <code>kastorski</code> onder <code>cherubijnenhymne</code>:</p>
+<p>Voorbeeld <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> <code>kastorski</code> onder <code>cherubijnenhymne</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Kastorski&quot;</span><span class="p p-Indicator">,</span><span class="nt"> lang</span><span class="p">:</span><span class="w"> </span><span class="nv">en</span><span class="w"> </span><span class="p p-Indicator">}</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Kastorski&quot;</span><span class="p p-Indicator">,</span><span class="nt"> lang</span><span class="p">:</span><span class="w"> </span><span class="nv">nl</span><span class="w"> </span><span class="p p-Indicator">}</span>
@@ -3455,30 +3459,30 @@
 </thead>
 <tbody>
 <tr>
-<td>Zangstuk</td>
+<td><a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">Zangstuk</a></td>
 <td>globale catalogus (bron-index)</td>
 </tr>
 <tr>
-<td>Variant</td>
+<td><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">Variant</a></td>
 <td>één <code>zangstuk-id</code></td>
 </tr>
 <tr>
-<td>Uitvoeringsvorm</td>
+<td><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">Uitvoeringsvorm</a></td>
 <td>één <code>(zangstuk-id, variant-id)</code></td>
 </tr>
 <tr>
-<td>Representatie</td>
+<td><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a></td>
 <td>één <code>(zangstuk-id, variant-id, uitvoeringsvorm-id)</code></td>
 </tr>
 </tbody>
 </table>
-<p>Een alias mag <strong>niet</strong> binnen dezelfde scope op twee verschillende entiteiten wijzen.</p>
+<p>Een <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> mag <strong>niet</strong> binnen dezelfde scope op twee verschillende entiteiten wijzen.</p>
 <h3 id="27-ambiguiteit">2.7 Ambiguïteit<a class="headerlink" href="#27-ambiguiteit" title="Permanent link">&para;</a></h3>
-<p>Meerdere matches na normalisatie → <strong>fout</strong> met kandidaten (canoniek id + context). Geen stille disambiguatie.</p>
+<p>Meerdere matches na normalisatie → <strong>fout</strong> met kandidaten (<a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> + context). Geen stille disambiguatie.</p>
 <h3 id="28-alias-resolver-contract">2.8 Alias-resolver (contract)<a class="headerlink" href="#28-alias-resolver-contract" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Normaliseer invoer (trim; case-fold voor matching).</li>
-<li>Match canoniek id of alias binnen scope → <strong>canoniek id</strong> (lowercase <code>[a-z0-9_-]+</code>).</li>
+<li>Match <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> of <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> binnen scope → <strong><a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a></strong> (lowercase <code>[a-z0-9_-]+</code>).</li>
 <li>Geen match → fout; meerdere matches → ambiguïteitsfout.</li>
 </ol>
 <table>
@@ -3497,7 +3501,7 @@
 </tr>
 <tr>
 <td>CLI</td>
-<td><code>--variant касторский</code> (alias)</td>
+<td><code>--variant касторский</code> (<a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a>)</td>
 <td><code>kastorski</code></td>
 </tr>
 <tr>
@@ -3527,47 +3531,47 @@
 <tbody>
 <tr>
 <td>“Cherubijnenhymne” (verschillende melodieën)</td>
-<td><strong>variant</strong></td>
-<td>uitvoeringsvorm, representatie</td>
+<td><strong><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a></strong></td>
+<td><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>, <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></td>
 </tr>
 <tr>
 <td>“cover” / parochiepraktijk</td>
-<td><strong>uitvoeringsvorm</strong></td>
-<td>variant, representatie</td>
+<td><strong><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a></strong></td>
+<td><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>, <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></td>
 </tr>
 <tr>
 <td>scan, <code>.vsa</code>, notatie</td>
-<td><strong>representatie</strong></td>
-<td>uitvoeringsvorm, variant</td>
+<td><strong><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></strong></td>
+<td><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>, <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a></td>
 </tr>
 <tr>
 <td>werknaam in invoer</td>
-<td><strong>alias</strong> → resolver</td>
-<td>canoniek id in opslag</td>
+<td><strong><a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a></strong> → resolver</td>
+<td><a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> in opslag</td>
 </tr>
 <tr>
 <td>“bron van …” (waar vandaan)</td>
-<td><strong>herkomst</strong></td>
-<td>bronbestand, bron-repository</td>
+<td><strong><a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a></strong></td>
+<td><a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a>, <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a></td>
 </tr>
 <tr>
 <td>“bron” (bestand)</td>
-<td><strong>bronbestand</strong></td>
-<td>bron-repository</td>
+<td><strong><a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a></strong></td>
+<td><a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a></td>
 </tr>
 <tr>
 <td>“bron” (repo)</td>
-<td><strong>bron-repository</strong></td>
-<td>bronbestand</td>
+<td><strong><a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a></strong></td>
+<td><a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a></td>
 </tr>
 <tr>
 <td>“bronvariant” (informeel)</td>
-<td><strong>source-entry</strong> / <strong>representatie</strong></td>
-<td>uitvoeringsvorm</td>
+<td><strong><a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a></strong> / <strong><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></strong></td>
+<td><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a></td>
 </tr>
 <tr>
 <td>“metadata-yaml”, “config” in zangstuk-map</td>
-<td><strong>manifest</strong></td>
+<td><strong><a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifest</a></strong></td>
 <td>npm-/package-manifest, build-manifest, <code>zangstuk.yaml</code></td>
 </tr>
 </tbody>
@@ -3584,31 +3588,31 @@
 </thead>
 <tbody>
 <tr>
-<td>Variant</td>
+<td><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">Variant</a></td>
 <td>andere variant, zelfde zangstuk</td>
 <td>zeldzaam; met onderbouwing</td>
 </tr>
 <tr>
-<td>Uitvoeringsvorm</td>
+<td><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">Uitvoeringsvorm</a></td>
 <td>andere uitvoeringsvorm, zelfde variant</td>
 <td><code>groningen</code> based_on <code>liturgikon</code></td>
 </tr>
 <tr>
-<td>Representatie</td>
+<td><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a></td>
 <td>andere representatie, zelfde uitvoeringsvorm</td>
 <td>VSA-transcriptie based_on scan</td>
 </tr>
 <tr>
-<td>Representatie</td>
+<td><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a></td>
 <td>repr. onder andere uitvoeringsvorm</td>
 <td>alleen mét uitvoeringsvorm <code>based_on</code> peer</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Verboden:</strong> representatie → variant/zangstuk (direct); uitvoeringsvorm → representatie; variant → uitvoeringsvorm/representatie.</p>
+<p><strong>Verboden:</strong> <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> → <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>/<a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> (direct); <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> → <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a>; <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> → <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>/<a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a>.</p>
 <hr />
 <h2 id="5-zangstuk">5. Zangstuk<a class="headerlink" href="#5-zangstuk" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> Entiteit E is een <strong>zangstuk</strong> dan en slechts dan als E een liturgisch-muzikaal geheel identificeert met stabiele <strong><code>zangstuk-id</code></strong>, waarbij onder E nul of meer <strong>varianten</strong> (§6) bestaan.</p>
+<p><strong>Criterium:</strong> Entiteit E is een <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> dan en slechts dan als E een liturgisch-muzikaal geheel identificeert met stabiele <strong><code>zangstuk-id</code></strong>, waarbij onder E nul of meer <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">varianten</a> (§6) bestaan.</p>
 <p><strong>Toelichting:</strong> Antwoord op “welk stuk in de liturgie?” (bijv. “1e antifoon weekdagen”, “Cherubijnenhymne”).</p>
 <table>
 <thead>
@@ -3624,20 +3628,20 @@
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td><code>groningen.vsa</code> (bronbestand); <code>zondag-toon-1.md</code> (samenstelling); SVG na build</td>
+<td><code>groningen.vsa</code> (<a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a>); <code>zondag-toon-1.md</code> (<a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>); SVG na build</td>
 </tr>
 <tr>
 <td><strong>Randgeval</strong></td>
-<td>Werknamen vóór registratie → afstemmen bij promotie; daarna canoniek <code>zangstuk-id</code></td>
+<td>Werknamen vóór registratie → afstemmen bij <a href="/bron/preview/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">promotie</a>; daarna canoniek <code>zangstuk-id</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="6-variant">6. Variant<a class="headerlink" href="#6-variant" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> V is een <strong>variant</strong> onder zangstuk Z dan en slechts dan als:</p>
+<p><strong>Criterium:</strong> V is een <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> onder <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> Z dan en slechts dan als:</p>
 <ol>
-<li>V <strong>dezelfde liturgische functie</strong> vervult als andere varianten onder Z (zelfde liturgische rol/plaats), <strong>en</strong></li>
-<li>een correcte uitvoering (middels een bijbehorende uitvoeringsvorm/representatie) van V <strong>wezenlijk anders klinkt</strong> dan een correcte uitvoering van een andere variant onder Z — niet uitsluitend door uitvoerders (§7).</li>
+<li>V <strong>dezelfde liturgische functie</strong> vervult als andere <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">varianten</a> onder Z (zelfde liturgische rol/plaats), <strong>en</strong></li>
+<li>een correcte uitvoering (middels een bijbehorende <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>/<a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a>) van V <strong>wezenlijk anders klinkt</strong> dan een correcte uitvoering van een andere variant onder Z — niet uitsluitend door uitvoerders (§7).</li>
 </ol>
 <table>
 <thead>
@@ -3653,11 +3657,11 @@
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td><code>groningen</code> vs <code>liturgikon</code> als <strong>uitvoeringsvormen</strong> onder dezelfde variant (§7), geen varianten</td>
+<td><code>groningen</code> vs <code>liturgikon</code> als <strong><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvormen</a></strong> onder dezelfde <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> (§7), geen varianten</td>
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td>Zelfde <code>.vsa</code>, ander koor → geen variant</td>
+<td>Zelfde <code>.vsa</code>, ander koor → geen <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a></td>
 </tr>
 <tr>
 <td><strong>Randgeval</strong></td>
@@ -3667,9 +3671,9 @@
 </table>
 <hr />
 <h2 id="7-uitvoeringsvorm">7. Uitvoeringsvorm<a class="headerlink" href="#7-uitvoeringsvorm" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> U is een <strong>uitvoeringsvorm</strong> onder variant V dan en slechts dan als er tenminste één representatie R van U bestaat die beschrijft <strong>wat je hoort</strong> bij correct uitvoeren van V.</p>
-<p><strong>Operationele test:</strong> Twee representaties R en R' betreffen dezelfde uitvoeringsvorm U als ze dezelfde melodielijn en tekst beschrijven (een verschil tussen de 'do context' of tempo is hierbij niet van belang). Als R en R' dus in hetzelfde tempo en met dezelfde do-context worden gehoord, klinkt dat goed. Als ze grotendeels hetzelfde klinken, maar er zitten kleine verschillen (bijvoorbeeld in loopjes, het net even anders plaatsen van lettergrepen onder noten, of het omhoog-omlaag gaan aan het eind vs. het omlaag-omhoog gaan aan het eind), dan betreffen R en R' verschillende uitvoeringsvormen.</p>
-<p><strong>Toelichting (didactisch, niet-normatief voor liturgie):</strong> een <strong>cover</strong> (zelfde compositie, andere invulling) of een lichter <strong>arrangement</strong> met herkenbare muzieklijn kan analoog zijn aan verschillende uitvoeringsvormen onder dezelfde variant — classificatie is niet altijd eenduidig; documenteer via <code>based_on</code> en herkomst.</p>
+<p><strong>Criterium:</strong> U is een <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> onder <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> V dan en slechts dan als er tenminste één <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> R van U bestaat die beschrijft <strong>wat je hoort</strong> bij correct uitvoeren van V.</p>
+<p><strong>Operationele test:</strong> Twee <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a> R en R' betreffen dezelfde <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> U als ze dezelfde melodielijn en tekst beschrijven (een verschil tussen de 'do context' of tempo is hierbij niet van belang). Als R en R' dus in hetzelfde tempo en met dezelfde do-context worden gehoord, klinkt dat goed. Als ze grotendeels hetzelfde klinken, maar er zitten kleine verschillen (bijvoorbeeld in loopjes, het net even anders plaatsen van lettergrepen onder noten, of het omhoog-omlaag gaan aan het eind vs. het omlaag-omhoog gaan aan het eind), dan betreffen R en R' verschillende uitvoeringsvormen.</p>
+<p><strong>Toelichting (didactisch, niet-normatief voor liturgie):</strong> een <strong>cover</strong> (zelfde compositie, andere invulling) of een lichter <strong>arrangement</strong> met herkenbare muzieklijn kan analoog zijn aan verschillende <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvormen</a> onder dezelfde <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> — classificatie is niet altijd eenduidig; documenteer via <code>based_on</code> en <a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a>.</p>
 <table>
 <thead>
 <tr>
@@ -3684,22 +3688,22 @@
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td>Scan en getrouwe VSA van <strong>dezelfde</strong> uitvoering → twee <strong>representaties</strong> (§8), één uitvoeringsvorm</td>
+<td>Scan en getrouwe VSA van <strong>dezelfde</strong> uitvoering → twee <strong><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a></strong> (§8), één <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a></td>
 </tr>
 <tr>
 <td><strong>Randgeval</strong></td>
-<td>0 representaties; uitvoeringsvorm bestaat met herkomst “mondeling / koorleider”</td>
+<td>0 <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a>; <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> bestaat met <a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a> “mondeling / koorleider”</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="8-representatie">8. Representatie<a class="headerlink" href="#8-representatie" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> R is een <strong>representatie</strong> onder uitvoeringsvorm U dan en slechts dan als:</p>
+<p><strong>Criterium:</strong> R is een <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> onder <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> U dan en slechts dan als:</p>
 <ol>
-<li>R is een bestand waarmee uitvoeringsvorm U concreet is vastgelegd (VSA, scan, MusicXML), <strong>en</strong></li>
-<li>R is onderscheidbaar van andere representaties onder <strong>dezelfde</strong> U (<code>representatie-id</code>, herkomst).</li>
+<li>R is een bestand waarmee <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> U concreet is vastgelegd (VSA, scan, MusicXML), <strong>en</strong></li>
+<li>R is onderscheidbaar van andere <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a> onder <strong>dezelfde</strong> U (<code>representatie-id</code>, <a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a>).</li>
 </ol>
-<p><strong>Toelichting:</strong> Representatie specificeert U; U hoort bij variant V en zangstuk Z. Twee representaties onder <strong>dezelfde</strong> U documenteren <strong>dezelfde</strong> uitvoeringsvorm (bijv. scan + transcriptie). Verschillende muziek onder dezelfde U → classificatiefout of extra uitvoeringsvorm (§7).</p>
+<p><strong>Toelichting:</strong> <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a> specificeert U; U hoort bij <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> V en <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> Z. Twee representaties onder <strong>dezelfde</strong> U documenteren <strong>dezelfde</strong> <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> (bijv. scan + transcriptie). Verschillende muziek onder dezelfde U → classificatiefout of extra uitvoeringsvorm (§7).</p>
 <table>
 <thead>
 <tr>
@@ -3714,11 +3718,11 @@
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td>Abstract zangstuk; <code>melodie.svg</code> (afgeleide); manifest (§16) zonder bronbestand</td>
+<td>Abstract <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>; <code>melodie.svg</code> (<a href="/bron/preview/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a>); <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifest</a> (§16) zonder <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a></td>
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td>Tweede melodie Cherubijnenhymne → andere <strong>variant</strong>, geen tweede repr. onder dezelfde U</td>
+<td>Tweede melodie Cherubijnenhymne → andere <strong><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a></strong>, geen tweede repr. onder dezelfde U</td>
 </tr>
 <tr>
 <td><strong>Randgeval</strong></td>
@@ -3729,7 +3733,7 @@
 <p><strong>Legacy bron-repo:</strong> veld <code>sources[].id</code> in <code>zangstuk.yaml</code> ≈ <strong><code>representatie-id</code></strong> (historische naam “source-id”); migreer terminologie in docs naar <code>representatie-id</code>.</p>
 <hr />
 <h2 id="9-herkomst">9. Herkomst<a class="headerlink" href="#9-herkomst" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> H is <strong>herkomst</strong> van entiteit X dan en slechts dan als H metadata beschrijft <em>waar X vandaan komt</em> (mens, traditie, publicatie, parochie), <strong>niet</strong> zijnde bronbestand of bron-repository.</p>
+<p><strong>Criterium:</strong> H is <a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a> van entiteit X dan en slechts dan als H metadata beschrijft <em>waar X vandaan komt</em> (mens, traditie, publicatie, parochie), <strong>niet</strong> zijnde <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> of <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>.</p>
 <table>
 <thead>
 <tr>
@@ -3739,27 +3743,27 @@
 </thead>
 <tbody>
 <tr>
-<td>Zangstuk</td>
+<td><a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">Zangstuk</a></td>
 <td><code>reference: "Liturgikon, weekdagen"</code></td>
 </tr>
 <tr>
-<td>Variant</td>
+<td><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">Variant</a></td>
 <td><code>"Obikhod-traditie"</code>; <code>"A. Kastorski, koormap 15c"</code></td>
 </tr>
 <tr>
-<td>Uitvoeringsvorm</td>
+<td><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">Uitvoeringsvorm</a></td>
 <td><code>"Parochie Groningen, refreinpraktijk"</code></td>
 </tr>
 <tr>
-<td>Representatie</td>
+<td><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a></td>
 <td>transcribent, <code>based_on</code> scan</td>
 </tr>
 </tbody>
 </table>
-<p>Herkomst mag <strong>onbekend</strong> zijn — entiteit bestaat desondanks.</p>
+<p><a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">Herkomst</a> mag <strong>onbekend</strong> zijn — entiteit bestaat desondanks.</p>
 <hr />
 <h2 id="10-bronbestand">10. Bronbestand<a class="headerlink" href="#10-bronbestand" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> Bestand F is een <strong>bronbestand</strong> dan en slechts dan als in die repository geen geautomatiseerd, herhaalbaar conversiemechanisme F volledig uit een ander <em>getrackt</em> bestand genereert.</p>
+<p><strong>Criterium:</strong> Bestand F is een <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> dan en slechts dan als in die repository geen geautomatiseerd, herhaalbaar <a href="/bron/preview/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanisme</a> F volledig uit een ander <em>getrackt</em> bestand genereert.</p>
 <table>
 <thead>
 <tr>
@@ -3778,13 +3782,13 @@
 </tr>
 <tr>
 <td><strong>Randgeval</strong></td>
-<td><code>.coria.html</code> naast <code>.vsa</code> → voorlopig bronbestand; herbeoordelen bij Coria-spec</td>
+<td><code>.coria.html</code> naast <code>.vsa</code> → voorlopig <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a>; herbeoordelen bij Coria-spec</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="11-afgeleide">11. Afgeleide<a class="headerlink" href="#11-afgeleide" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> G is <strong>afgeleide</strong> van bronbestand B dan en slechts dan als conversiemechanisme M met M(B)=G bestaat, M geautomatiseerd/herhaalbaar is, en G niet als bron in bron-repository staat.</p>
+<p><strong>Criterium:</strong> G is <a href="/bron/preview/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> van <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> B dan en slechts dan als <a href="/bron/preview/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanisme</a> M met M(B)=G bestaat, M geautomatiseerd/herhaalbaar is, en G niet als bron in <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> staat.</p>
 <table>
 <thead>
 <tr>
@@ -3805,7 +3809,7 @@
 </table>
 <hr />
 <h2 id="12-bron-repository">12. Bron-repository<a class="headerlink" href="#12-bron-repository" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> R is de <strong>bron-repository</strong> dan en slechts dan als R de git-repo <code>orthodox-groningen/bron</code> is (of expliciet aangewezen opvolger).</p>
+<p><strong>Criterium:</strong> R is de <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> dan en slechts dan als R de git-repo <code>orthodox-groningen/bron</code> is (of expliciet aangewezen opvolger).</p>
 <table>
 <thead>
 <tr>
@@ -3820,14 +3824,14 @@
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td>VSA-tooling; parochie Hugo-repo; vendor-checkout</td>
+<td><a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>; parochie Hugo-repo; vendor-checkout</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="13-source-entry">13. Source-entry<a class="headerlink" href="#13-source-entry" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> S is een <strong>source-entry</strong> dan en slechts dan als S een element is in <code>sources:</code> van <code>zangstuk.yaml</code> in bron-repository, met uniek <code>id</code> (≈ <code>representatie-id</code>) binnen dat zangstuk <strong>op het huidige platte model</strong>.</p>
-<p><strong>Toelichting:</strong> Registreert een <strong>representatie</strong> (of placeholder). Meerdere entries = meerdere representaties <strong>of</strong> (legacy) nog niet onderscheiden variant/uitvoeringsvorm — bij nieuw werk vier-niveau-metadata gebruiken.</p>
+<p><strong>Criterium:</strong> S is een <a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> dan en slechts dan als S een element is in <code>sources:</code> van <code>zangstuk.yaml</code> in <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>, met uniek <code>id</code> (≈ <code>representatie-id</code>) binnen dat <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> <strong>op het huidige platte model</strong>.</p>
+<p><strong>Toelichting:</strong> Registreert een <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> (of placeholder). Meerdere entries = meerdere <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a> <strong>of</strong> (legacy) nog niet onderscheiden <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>/<a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> — bij nieuw werk vier-niveau-metadata gebruiken.</p>
 <table>
 <thead>
 <tr>
@@ -3852,7 +3856,7 @@
 </table>
 <hr />
 <h2 id="14-geregistreerde-representatie">14. Geregistreerde representatie<a class="headerlink" href="#14-geregistreerde-representatie" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> R is <strong>geregistreerd</strong> dan en slechts dan als een source-entry S in bron-repository bestaat die R koppelt via <code>file:</code>, <code>access:</code>, of <code>status:</code>.</p>
+<p><strong>Criterium:</strong> R is <a href="/bron/preview/terms/geregistreerde-representatie" title="Geregistreerde representatie: Een Representatie waarvoor een Source-entry bestaat in de Bron-repository die haar koppelt via <code>file:</code>, <code>access:</code> of <code>status:</code>.">geregistreerde representatie</a> dan en slechts dan als een <a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> S in <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> bestaat die R koppelt via <code>file:</code>, <code>access:</code>, of <code>status:</code>.</p>
 <table>
 <thead>
 <tr>
@@ -3877,7 +3881,7 @@
 </table>
 <hr />
 <h2 id="15-parochie-lokale-representatie">15. Parochie-lokale representatie<a class="headerlink" href="#15-parochie-lokale-representatie" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> R is <strong>parochie-lokaal</strong> dan en slechts dan als R bronbestand of inline-notatie in een parochie-repo is <strong>en</strong> R niet geregistreerd is.</p>
+<p><strong>Criterium:</strong> R is <a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">parochie-lokaal</a> dan en slechts dan als R <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> of inline-notatie in een parochie-repo is <strong>en</strong> R niet <a href="/bron/preview/terms/geregistreerde-representatie" title="Geregistreerde representatie: Een Representatie waarvoor een Source-entry bestaat in de Bron-repository die haar koppelt via <code>file:</code>, <code>access:</code> of <code>status:</code>.">geregistreerd</a> is.</p>
 <table>
 <thead>
 <tr>
@@ -3888,11 +3892,11 @@
 <tbody>
 <tr>
 <td><strong>Ja</strong></td>
-<td><code>content-source/lokaal/.../hemelum.vsa</code> vóór promotie</td>
+<td><code>content-source/lokaal/.../hemelum.vsa</code> vóór <a href="/bron/preview/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">promotie</a></td>
 </tr>
 <tr>
 <td><strong>Ja</strong></td>
-<td>Inline VSA in samenstelling</td>
+<td>Inline VSA in <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a></td>
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
@@ -3903,11 +3907,11 @@
 <p>Zie <a href="../../manuals/parochie-lokaal-zangstukken/">parochie-lokaal zangstukken</a>.</p>
 <hr />
 <h2 id="16-manifest">16. Manifest<a class="headerlink" href="#16-manifest" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> Bestand M is een <strong>manifest</strong> dan en slechts dan als:</p>
+<p><strong>Criterium:</strong> Bestand M is een <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifest</a> dan en slechts dan als:</p>
 <ol>
-<li>M is een YAML-bestand met <strong>vaste bestandsnaam</strong> op één van de twee niveaus <strong>variant</strong> (§6) of <strong>uitvoeringsvorm</strong> (§7) binnen het vier-niveaumodel (§1), <strong>en</strong></li>
+<li>M is een YAML-bestand met <strong>vaste bestandsnaam</strong> op één van de twee niveaus <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> (§6) of <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> (§7) binnen het vier-niveaumodel (§1), <strong>en</strong></li>
 <li>M registreert precies <strong>één</strong> entiteit op dat niveau via het bijbehorende id-veld (<code>variant-id</code> of <code>uitvoeringsvorm-id</code>), <strong>en</strong></li>
-<li>M beschrijft uitsluitend <strong>metadata</strong> over die entiteit (titels, aliassen, herkomst, <code>based_on</code>, verwijzingen naar representaties) — M is zelf <strong>geen</strong> representatie (§8), bronbestand (§10) of samenstelling (§18).</li>
+<li>M beschrijft uitsluitend <strong>metadata</strong> over die entiteit (titels, <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a>, <a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a>, <code>based_on</code>, verwijzingen naar <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a>) — M is zelf <strong>geen</strong> <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> (§8), <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> (§10) of <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> (§18).</li>
 </ol>
 <p><strong>Vaste bestandsnamen (canoniek):</strong></p>
 <table>
@@ -3920,22 +3924,22 @@
 </thead>
 <tbody>
 <tr>
-<td>Variant</td>
+<td><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">Variant</a></td>
 <td><code>variant.yaml</code></td>
 <td><code>variant-id</code></td>
 </tr>
 <tr>
-<td>Uitvoeringsvorm</td>
+<td><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">Uitvoeringsvorm</a></td>
 <td><code>uitvoeringsvorm.yaml</code></td>
 <td><code>uitvoeringsvorm-id</code></td>
 </tr>
 </tbody>
 </table>
-<p>Meerdere manifesten in dezelfde mappenstructuur noemen wij <strong>manifesten</strong> (meervoud).</p>
-<p><strong>Toelichting:</strong> Een manifest is de machine-leesbare registratie van variant- of uitvoeringsvorm-metadata. Op uitvoeringsvorm-niveau mag een manifest representaties <strong>verwijzen</strong> (<code>representaties:</code> met <code>representatie-id</code> en relatief <code>file:</code>), zonder zelf notatie te bevatten.</p>
-<p><strong>Parochie-lokaal:</strong> manifesten staan onder <code>content-source/lokaal/&lt;zangstuk-id&gt;/&lt;variant-id&gt;/…</code> — zie <a href="../../manuals/parochie-lokaal-zangstukken/">parochie-lokaal zangstukken</a>.</p>
-<p><strong>Relatie tot bron-repository:</strong> <code>zangstuk.yaml</code> en <code>sources:</code> (§13 source-entry) zijn <strong>geen</strong> manifest — ander plat model, andere bestandsnaam.</p>
-<p><strong>Implementatiestatus:</strong> velden zijn vandaag vooral <strong>informatief</strong> voor beheerders; validatie in tooling richt zich primair op bronbestanden en samenstelling-includes.</p>
+<p>Meerdere <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifesten</a> in dezelfde mappenstructuur noemen wij <strong>manifesten</strong> (meervoud).</p>
+<p><strong>Toelichting:</strong> Een <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifest</a> is de machine-leesbare registratie van variant- of uitvoeringsvorm-metadata. Op uitvoeringsvorm-niveau mag een manifest <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a> <strong>verwijzen</strong> (<code>representaties:</code> met <code>representatie-id</code> en relatief <code>file:</code>), zonder zelf notatie te bevatten.</p>
+<p><strong>Parochie-lokaal:</strong> <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifesten</a> staan onder <code>content-source/lokaal/&lt;zangstuk-id&gt;/&lt;variant-id&gt;/…</code> — zie <a href="../../manuals/parochie-lokaal-zangstukken/">parochie-lokaal zangstukken</a>.</p>
+<p><strong>Relatie tot <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>:</strong> <code>zangstuk.yaml</code> en <code>sources:</code> (§13 <a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a>) zijn <strong>geen</strong> <a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">manifest</a> — ander plat model, andere bestandsnaam.</p>
+<p><strong>Implementatiestatus:</strong> velden zijn vandaag vooral <strong>informatief</strong> voor beheerders; validatie in tooling richt zich primair op <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestanden</a> en <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>-includes.</p>
 <table>
 <thead>
 <tr>
@@ -3954,15 +3958,15 @@
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td><code>hemelum.vsa</code> (bronbestand / representatie)</td>
+<td><code>hemelum.vsa</code> (<a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> / <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a>)</td>
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td><code>zangstuk.yaml</code> in bron-repository (source-entry-model)</td>
+<td><code>zangstuk.yaml</code> in <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> (<a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a>-model)</td>
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td><code>antifonen-hemelum.md</code> (samenstelling)</td>
+<td><code>antifonen-hemelum.md</code> (<a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>)</td>
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
@@ -3970,13 +3974,13 @@
 </tr>
 <tr>
 <td><strong>Randgeval</strong></td>
-<td>Manifest zonder representatie-verwijzing — uitvoeringsvorm met 0 representaties (§1)</td>
+<td><a href="/bron/preview/terms/manifest" title="Manifest: Een YAML-bestand met vaste bestandsnaam (<code>variant.yaml</code> of <code>uitvoeringsvorm.yaml</code>) dat precies één entiteit op Variant- of Uitvoeringsvorm-niveau registreert en uitsluitend metadata over die entiteit beschrijft.">Manifest</a> zonder representatie-verwijzing — <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> met 0 <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a> (§1)</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="17-promotie-registratie">17. Promotie (registratie)<a class="headerlink" href="#17-promotie-registratie" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> <strong>Promotie</strong> is overgang parochie-lokaal → geregistreerd door source-entry (+ bronbestand) in bron-repository, met behoud van canonieke ids.</p>
+<p><strong>Criterium:</strong> <a href="/bron/preview/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">Promotie</a> is overgang <a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">parochie-lokaal</a> → <a href="/bron/preview/terms/geregistreerde-representatie" title="Geregistreerde representatie: Een Representatie waarvoor een Source-entry bestaat in de Bron-repository die haar koppelt via <code>file:</code>, <code>access:</code> of <code>status:</code>.">geregistreerd</a> door <a href="/bron/preview/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> (+ <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a>) in <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>, met behoud van <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke ids</a>.</p>
 <table>
 <thead>
 <tr>
@@ -3991,13 +3995,13 @@
 </tr>
 <tr>
 <td><strong>Nee</strong></td>
-<td>Nieuw zangstuk-map terwijl extra representatie onder bestaand zangstuk volstaat</td>
+<td>Nieuw <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>-map terwijl extra <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> onder bestaand zangstuk volstaat</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="18-samenstelling">18. Samenstelling<a class="headerlink" href="#18-samenstelling" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> D is een <strong>samenstelling</strong> dan en slechts dan als D markdown (met VSA-directives) representaties ordent voor een lezersdoel, zonder zelf representatie te zijn.</p>
+<p><strong>Criterium:</strong> D is een <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> dan en slechts dan als D markdown (met VSA-directives) <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representaties</a> ordent voor een lezersdoel, zonder zelf <a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> te zijn.</p>
 <table>
 <thead>
 <tr>
@@ -4018,11 +4022,11 @@
 </table>
 <hr />
 <h2 id="19-compositie">19. Compositie<a class="headerlink" href="#19-compositie" title="Permanent link">&para;</a></h2>
-<p><strong>Criterium:</strong> C is een <strong>compositie</strong> dan en slechts dan als C YAML onder <code>composities/</code> in <strong>bron-repository</strong> is met geordende verwijzingen naar zangstukken (toekomst: <code>(zangstuk-id, variant-id, uitvoeringsvorm-id)</code>).</p>
+<p><strong>Criterium:</strong> C is een <a href="/bron/preview/terms/compositie" title="Compositie: Een YAML-bestand onder <code>composities/</code> in de Bron-repository met geordende verwijzingen naar Zangstukken (toekomstig: via <code>zangstuk-id</code>, <code>variant-id</code>, <code>uitvoeringsvorm-id</code>). Nog niet geïmplementeerd.">compositie</a> dan en slechts dan als C YAML onder <code>composities/</code> in <strong><a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a></strong> is met geordende verwijzingen naar <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstukken</a> (toekomst: <code>(zangstuk-id, variant-id, uitvoeringsvorm-id)</code>).</p>
 <p><em>(Nog niet geïmplementeerd in bron.)</em></p>
 <p><strong>Niet verwarren met sjabloon:</strong> een parochie-<strong>sjabloon</strong> is markdown in de
 content-source (dienst-, koormap- of herkomst-sjabloon) met <strong><code>:::include zoek="…"</code></strong>;
-ingevuld (opgelost pad) is een <strong>samenstelling</strong> (§18). Zie
+ingevuld (opgelost pad) is een <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> (§18). Zie
 <a href="../catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.</p>
 <table>
 <thead>
@@ -4034,7 +4038,7 @@ ingevuld (opgelost pad) is een <strong>samenstelling</strong> (§18). Zie
 </thead>
 <tbody>
 <tr>
-<td><strong>Compositie</strong></td>
+<td><strong><a href="/bron/preview/terms/compositie" title="Compositie: Een YAML-bestand onder <code>composities/</code> in de Bron-repository met geordende verwijzingen naar Zangstukken (toekomstig: via <code>zangstuk-id</code>, <code>variant-id</code>, <code>uitvoeringsvorm-id</code>). Nog niet geïmplementeerd.">Compositie</a></strong></td>
 <td>org-brede ordered list (toekomst)</td>
 <td>yaml in <code>bron/composities/</code></td>
 </tr>
@@ -4044,7 +4048,7 @@ ingevuld (opgelost pad) is een <strong>samenstelling</strong> (§18). Zie
 <td>markdown + <code>default.gelegenheidstype</code> + <code>:::include zoek=</code></td>
 </tr>
 <tr>
-<td><strong>Samenstelling</strong></td>
+<td><strong><a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">Samenstelling</a></strong></td>
 <td>parochie-publicatie</td>
 <td>markdown + <code>:::include</code> met catalogus-pad (§18)</td>
 </tr>
@@ -4052,9 +4056,9 @@ ingevuld (opgelost pad) is een <strong>samenstelling</strong> (§18). Zie
 </table>
 <hr />
 <h2 id="20-conversiemechanisme-exportmechanisme-exporttype">20. Conversiemechanisme, exportmechanisme, exporttype<a class="headerlink" href="#20-conversiemechanisme-exportmechanisme-exporttype" title="Permanent link">&para;</a></h2>
-<p><strong>Conversiemechanisme M:</strong> gedefinieerde tool M(B)=G; G is <strong>afgeleide</strong>.</p>
-<p><strong>Exportmechanisme:</strong> hoe een samenstelling bronbestand of afgeleide ontsluit.</p>
-<p><strong>Exporttype:</strong> naam in <code>:::include &lt;type&gt;</code> — <code>svg</code>, <code>coria</code>, <code>mxl</code>.</p>
+<p><strong><a href="/bron/preview/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">Conversiemechanisme</a> M:</strong> gedefinieerde tool M(B)=G; G is <a href="/bron/preview/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a>.</p>
+<p><strong><a href="/bron/preview/terms/exportmechanisme" title="Exportmechanisme: De manier waarop een Samenstelling een Bronbestand of Afgeleide ontsluit voor een lezersdoel, via een <code>:::include</code>-directive met een Exporttype.">Exportmechanisme</a>:</strong> hoe een <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> of <a href="/bron/preview/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> ontsluit.</p>
+<p><strong><a href="/bron/preview/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">Exporttype</a>:</strong> naam in <code>:::include &lt;type&gt;</code> — <code>svg</code>, <code>coria</code>, <code>mxl</code>.</p>
 <hr />
 <h2 id="21-disambiguatie-variant">21. Disambiguatie “variant”<a class="headerlink" href="#21-disambiguatie-variant" title="Permanent link">&para;</a></h2>
 <table>
@@ -4067,23 +4071,23 @@ ingevuld (opgelost pad) is een <strong>samenstelling</strong> (§18). Zie
 </thead>
 <tbody>
 <tr>
-<td>Andere vastlegging, <strong>zelfde</strong> uitvoeringsvorm</td>
-<td><strong>representatie</strong></td>
+<td>Andere vastlegging, <strong>zelfde</strong> <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a></td>
+<td><strong><a href="/bron/preview/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></strong></td>
 <td>Zelfde U; zelfde hoorbare uitvoering</td>
 </tr>
 <tr>
 <td><strong>Andere</strong> muziek, <strong>zelfde</strong> liturgische functie onder Z</td>
-<td><strong>variant</strong></td>
+<td><strong><a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a></strong></td>
 <td>Wezenlijk andere melodie t.o.v. andere variant onder Z</td>
 </tr>
 <tr>
-<td><strong>Zelfde</strong> variant, <strong>andere</strong> hoorbare invulling</td>
-<td><strong>uitvoeringsvorm</strong></td>
+<td><strong>Zelfde</strong> <a href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>, <strong>andere</strong> hoorbare invulling</td>
+<td><strong><a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a></strong></td>
 <td>Operationele test §7</td>
 </tr>
 <tr>
 <td>Waar iets vandaan komt</td>
-<td><strong>herkomst</strong></td>
+<td><strong><a href="/bron/preview/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a></strong></td>
 <td>Metadata, geen bestand</td>
 </tr>
 </tbody>

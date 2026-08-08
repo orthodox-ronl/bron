@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 20:24 CEST.
+  , gebouwd 2026-08-08 21:22 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -351,7 +351,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -1158,7 +1158,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1804,7 +1804,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -1820,7 +1820,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2290,6 +2290,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#zangstukmodel-termrefs-gedaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zangstukmodel-TermRefs — gedaan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#backlog-later" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2594,6 +2605,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#zangstukmodel-termrefs-gedaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zangstukmodel-TermRefs — gedaan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#backlog-later" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2651,7 +2673,7 @@
 <tbody>
 <tr>
 <td><strong>Status</strong></td>
-<td>tweede golf gedaan; rest backlog</td>
+<td>tweede golf + Zangstukmodel-TermRefs; rest backlog</td>
 </tr>
 <tr>
 <td><strong>Repo</strong></td>
@@ -2694,7 +2716,11 @@ history — zodat gedefinieerde begrippen consequent hoverbaar zijn.</p>
 </tr>
 <tr>
 <td>E.2b</td>
-<td>Tweede golf: specs + exporttypes + eigendom (onder)</td>
+<td>Tweede golf: specs + exporttypes + eigendom</td>
+</tr>
+<tr>
+<td>E.2c</td>
+<td>Zangstukmodel (<code>terminologie.md</code>): TermRefs op criteria/samenhang</td>
 </tr>
 </tbody>
 </table>
@@ -2778,21 +2804,41 @@ history — zodat gedefinieerde begrippen consequent hoverbaar zijn.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="zangstukmodel-termrefs-gedaan">Zangstukmodel-TermRefs — gedaan<a class="headerlink" href="#zangstukmodel-termrefs-gedaan" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Pad</th>
+<th>Notitie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec</td>
+<td><code>docs/specs/terminologie.md</code> (Zangstukmodel)</td>
+<td>TermRefs op niveaus + §5–§21 (~145)</td>
+</tr>
+</tbody>
+</table>
+<p>Ook: nav <strong>Begrippenlijst</strong>; Gerelateerd aangevuld op <code>variant</code> / <code>uitvoeringsvorm</code>.</p>
 <p>Geen nieuwe glossary-termen in deze golven (sjabloon, content-source, frontmatter,
 catalogus-pad blijven uncured jargon tot eigen PR).</p>
 <h2 id="backlog-later">Backlog (later)<a class="headerlink" href="#backlog-later" title="Permanent link">&para;</a></h2>
 <ol>
-<li><code>catalogus-architectuur.md</code>, <code>catalogus-zoek-api.md</code>, <code>catalogus-cli.md</code> (selectief)</li>
-<li><code>zangstuk-formaat.md</code> / overige reference densify</li>
-<li>Dunne manuals / <code>rene-*</code> stories (selectief)</li>
+<li>~~Frontmatter <code>doc_type</code>/<code>audience</code> roll-out op bestaande pagina’s~~ <strong>gedaan</strong> (alle MkDocs-nav)</li>
+<li><code>catalogus-architectuur.md</code>, <code>catalogus-zoek-api.md</code>, <code>catalogus-cli.md</code> (selectief TermRefs)</li>
+<li><code>zangstuk-formaat.md</code> / overige reference densify (TermRefs)</li>
+<li>Dunne manuals / <code>rene-*</code> stories (selectief TermRefs)</li>
 <li>VSA-tooling tool-docs waar org-termen bare blijven (<code>@bron</code>)</li>
 <li>Alleen inkorten waar hover de definitie al dekt (schrijfconventies)</li>
 <li><code>docs-build-tev2</code> / TermRef-check groen houden</li>
 <li>Geen normatieve betekenis wijzigen zonder glossary-PR</li>
+<li>E.3 optioneel: <code>catalogus-cli</code> splitsen (groot)</li>
 </ol>
 <h2 id="niet-in-scope">Niet in scope<a class="headerlink" href="#niet-in-scope" title="Permanent link">&para;</a></h2>
 <p>Nieuwe termen bedenken zonder glossary-PR; synoniembeleid opnieuw openbreken;
-dark mode / IA; volledige <code>terminologie.md</code>-herhaling (is zelf de glossary).</p>
+dark mode / IA.</p>
 <p>Eigen PR(s); niet mengen met ongerelateerde docs-wijzigingen.</p>
 
 

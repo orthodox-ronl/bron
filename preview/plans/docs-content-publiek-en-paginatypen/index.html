@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 20:24 CEST.
+  , gebouwd 2026-08-08 21:22 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -351,7 +351,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -1158,7 +1158,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1804,7 +1804,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -1820,7 +1820,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2480,10 +2480,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fase-a-kaders-aanscherpen-bron-gedaan-2026-08-08-a3-uitgesteld" class="md-nav__link">
+  <a href="#fase-a-kaders-aanscherpen-bron-gedaan-2026-08-08" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fase A — Kaders aanscherpen (bron) — gedaan (2026-08-08), A.3 uitgesteld
+        Fase A — Kaders aanscherpen (bron) — gedaan (2026-08-08)
       
     </span>
   </a>
@@ -3000,10 +3000,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fase-a-kaders-aanscherpen-bron-gedaan-2026-08-08-a3-uitgesteld" class="md-nav__link">
+  <a href="#fase-a-kaders-aanscherpen-bron-gedaan-2026-08-08" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fase A — Kaders aanscherpen (bron) — gedaan (2026-08-08), A.3 uitgesteld
+        Fase A — Kaders aanscherpen (bron) — gedaan (2026-08-08)
       
     </span>
   </a>
@@ -3556,11 +3556,11 @@ Zonder landingsbewijs blijft de eis open — ook als hij al in dit plan staat.</
 <td>gedaan (bron)</td>
 </tr>
 <tr>
-<td>Nav “Begrippenlijst” (indien akkoord §8.1)</td>
-<td><code>bron/mkdocs.yml</code> + <code>glossary.md</code> shell</td>
+<td>Nav “Begrippenlijst” (HRG) + rol <code>terminologie.md</code> als samenhang-spec</td>
+<td><code>bron/mkdocs.yml</code> + <code>glossary.md</code> + titel <code>terminologie.md</code></td>
 <td><strong>A.3</strong></td>
 <td>Diff</td>
-<td>uitgesteld</td>
+<td>gedaan</td>
 </tr>
 <tr>
 <td>Agent/contributor-reminder (niet normatief)</td>
@@ -3582,8 +3582,8 @@ Zonder landingsbewijs blijft de eis open — ook als hij al in dit plan staat.</
 matrix (of direct in schrijfconventies landen), <strong>daarna</strong> content wijzigen.</p>
 <h3 id="definition-of-done-per-fase-pr">Definition of Done per fase-PR<a class="headerlink" href="#definition-of-done-per-fase-pr" title="Permanent link">&para;</a></h3>
 <ul>
-<li>[x] Landingsmatrix-rijen voor fase A: gedaan of uitgesteld (A.3 wacht §8.1).</li>
-<li>[x] Geen “alleen in het plan”-norm meer die al in A had moeten landen (behalve A.3).</li>
+<li>[x] Landingsmatrix-rijen voor fase A: allemaal gedaan (incl. A.3 Begrippenlijst/Zangstukmodel).</li>
+<li>[x] Geen “alleen in het plan”-norm meer die al in A had moeten landen.</li>
 <li>[ ] Content-PR’s na A citeren schrijfconventies (of term-sjabloon), niet dit plan,
       als acceptatiebron.</li>
 </ul>
@@ -3621,7 +3621,7 @@ PR + checklist in docs-bijdragen. Optioneel later: litmus-test in review
 </table>
 <p>Succespad overal: <code>examples\minimal\001_plain_text.vsa</code>. <code>050_svg_demo.vsa</code> blijft
 bij svg/parse/musicxml en als <strong>faalvoorbeeld</strong> in <code>reference/cli/validate.md</code>.</p>
-<h3 id="fase-a-kaders-aanscherpen-bron-gedaan-2026-08-08-a3-uitgesteld">Fase A — Kaders aanscherpen (bron) — <strong>gedaan</strong> (2026-08-08), A.3 uitgesteld<a class="headerlink" href="#fase-a-kaders-aanscherpen-bron-gedaan-2026-08-08-a3-uitgesteld" title="Permanent link">&para;</a></h3>
+<h3 id="fase-a-kaders-aanscherpen-bron-gedaan-2026-08-08">Fase A — Kaders aanscherpen (bron) — <strong>gedaan</strong> (2026-08-08)<a class="headerlink" href="#fase-a-kaders-aanscherpen-bron-gedaan-2026-08-08" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3646,9 +3646,9 @@ bij svg/parse/musicxml en als <strong>faalvoorbeeld</strong> in <code>reference/
 </tr>
 <tr>
 <td>A.3</td>
-<td>Nav-label glossary: bijv. “Begrippenlijst” i.p.v. tweede “Terminologie” (alleen na akkoord §8.1)</td>
-<td>mkdocs.yml + glossary-shelltekst; of rij <code>uitgesteld</code></td>
-<td><strong>uitgesteld</strong> (wacht §8.1)</td>
+<td>Nav HRG: “Begrippenlijst”; <code>terminologie.md</code> = Zangstukmodel; terms in <code>docs/terms/</code> + TermRefs</td>
+<td>mkdocs.yml + glossary + titel + TermRefs in terminologie</td>
+<td><strong>gedaan</strong></td>
 </tr>
 </tbody>
 </table>
@@ -3658,7 +3658,7 @@ bij svg/parse/musicxml en als <strong>faalvoorbeeld</strong> in <code>reference/
 <li><code>Landing: docs/specs/term-entry-sjabloon.md</code> ← term-entry-sjabloon (+ link vanuit schrijfconventies)</li>
 <li><code>Landing: docs/manuals/docs-bijdragen.md</code> ← review-checklist (E.1 meegelift)</li>
 <li><code>Landing: AGENTS.md</code> ← pointer (geen tweede normtekst)</li>
-<li>A.3: uitgesteld tot akkoord open vraag §8.1</li>
+<li>A.3: Begrippenlijst-nav + Zangstukmodel-titel + TermRefs in terminologie</li>
 </ul>
 <h3 id="fase-b-term-entries-bron-daarna-vsa-lokaal-gedaan-2026-08-08">Fase B — Term entries (bron, daarna VSA-lokaal) — <strong>gedaan</strong> (2026-08-08)<a class="headerlink" href="#fase-b-term-entries-bron-daarna-vsa-lokaal-gedaan-2026-08-08" title="Permanent link">&para;</a></h3>
 <table>
@@ -3874,13 +3874,20 @@ waartoe/foutpad-norm toetsen — niet allemaal in deze fase.</p>
 <hr />
 <h2 id="8-open-vragen-voor-akkoord">8. Open vragen voor akkoord<a class="headerlink" href="#8-open-vragen-voor-akkoord" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Nav-hernoaming</strong> glossary → “Begrippenlijst”: akkoord, of liever “Glossary” houden?</li>
+<li><strong>Nav-hernoaming</strong> glossary → “Begrippenlijst”: akkoord, of liever “Glossary” houden?
+   → <strong>Beslist:</strong> HRG-nav = <strong>Begrippenlijst</strong>. Spec <code>terminologie.md</code> blijft
+   (mag hernoemd); beschrijft <strong>samenhang</strong> van begrippen. Definities +
+   term-eigen samenhang → curated texts in <code>docs/terms/</code> + TermRefs.</li>
 <li><strong>Schrijfconventies aanscherpen</strong> (fase A) vóór pagina-rewrites, of parallel met B1?
    → <strong>Beslist door uitvoering:</strong> A eerst (nu gedaan); B volgt.</li>
-<li><strong>User-guide VSA</strong>: inkorten (D.2) of tijdelijk <code>not_in_nav</code> / archief?</li>
-<li><strong>Frontmatter <code>doc_type</code> / <code>audience</code></strong>: nu meenemen, of alleen checklist in prose?</li>
+<li><strong>User-guide VSA</strong>: inkorten (D.2) of tijdelijk <code>not_in_nav</code> / archief?
+   → <strong>Beslist:</strong> voorlopig <strong>houden</strong> in nav (tour zoals D.2).</li>
+<li><strong>Frontmatter <code>doc_type</code> / <code>audience</code></strong>: nu meenemen, of alleen checklist in prose?
+   → <strong>Beslist:</strong> <strong>meenemen</strong>. <code>audience</code> als herkenbare tekst, bijv.
+   <code>P3 — Notatie-auteur</code> (niet alleen <code>P3</code>).</li>
 <li>Scope <strong>alleen bron</strong> eerst, of bron+VSA in één programma met gescheiden PR’s
-  (aanbevolen: gescheiden PR’s, één programmaplan = dit document)?</li>
+  (aanbevolen: gescheiden PR’s, één programmaplan = dit document)?
+   → <strong>Beslist door uitvoering:</strong> gescheiden PR’s, één plan in bron.</li>
 </ol>
 <hr />
 <h2 id="9-wijzigingslog">9. Wijzigingslog<a class="headerlink" href="#9-wijzigingslog" title="Permanent link">&para;</a></h2>
@@ -3931,6 +3938,10 @@ waartoe/foutpad-norm toetsen — niet allemaal in deze fase.</p>
 <tr>
 <td>2026-08-08</td>
 <td>TermRef-campagne tweede golf: repo-structuur, identificatie, catalogus-sjabloon, conversie/exporttypes</td>
+</tr>
+<tr>
+<td>2026-08-08</td>
+<td>§8 beslist: Begrippenlijst-nav; user-guide houden; frontmatter <code>doc_type</code>/<code>audience</code> met persona-naam; terminologie=samenhang</td>
 </tr>
 </tbody>
 </table>

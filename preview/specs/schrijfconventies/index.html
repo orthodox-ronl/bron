@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 20:24 CEST.
+  , gebouwd 2026-08-08 21:22 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -353,7 +353,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -1161,7 +1161,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1299,6 +1299,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Pagina-kopnorm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontmatter-doc_type-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontmatter doc_type / audience
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2042,7 +2059,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -2058,7 +2075,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2699,6 +2716,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Pagina-kopnorm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontmatter-doc_type-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontmatter doc_type / audience
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3052,8 +3086,33 @@ in bron-referentie</strong> — link naar de man-page.</p>
 <li>Onderaan: <strong>Zie ook</strong> (how-to ↔ spec ↔ CLI ↔ term).</li>
 </ol>
 <p>Expertpagina’s (P5/P6) mogen dichter zijn, mits 1–2 duidelijk zijn.</p>
-<p>Optioneel later: YAML-frontmatter <code>doc_type</code> / <code>audience</code> (niet verplicht voor
-MkDocs-nav).</p>
+<h3 id="frontmatter-doc_type-audience">Frontmatter <code>doc_type</code> / <code>audience</code><a class="headerlink" href="#frontmatter-doc_type-audience" title="Permanent link">&para;</a></h3>
+<p>Gebruik YAML-frontmatter op gepubliceerde pagina’s (behalve puur gegenereerde
+HRG-cellen). Niet verplicht voor MkDocs-nav; wél voor review en later tooling.</p>
+<table>
+<thead>
+<tr>
+<th>Veld</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>doc_type</code></td>
+<td>Paginatype uit de tabel hierboven, kebab-case: <code>task-guide</code>, <code>normative-spec</code>, <code>wayfinding-hub</code>, <code>cli-man-page</code>, <code>org-contract</code>, <code>workflow-guide</code>, <code>user-story</code>, <code>onboarding</code>, <code>term-entry</code>, <code>generated-glossary</code>, <code>integratie</code>, <code>plan</code></td>
+</tr>
+<tr>
+<td><code>audience</code></td>
+<td>Primaire lezer(s) als <strong>herkenbare tekst</strong>: <code>P3 — Notatie-auteur</code> (niet alleen <code>P3</code>). Meerdere: scheiden met <code>;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">doc_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">task-guide</span>
+<span class="nt">audience</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;P2</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">Bron-contentbeheerder&quot;</span>
+<span class="nn">---</span>
+</code></pre></div>
 <hr />
 <h2 id="lezerstest">Lezerstest<a class="headerlink" href="#lezerstest" title="Permanent link">&para;</a></h2>
 <p>Per sectie (en bij PR-review):</p>

@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 20:24 CEST.
+  , gebouwd 2026-08-08 21:22 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -353,7 +353,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -1349,7 +1349,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1995,7 +1995,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -2011,7 +2011,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2832,7 +2832,7 @@ staat.</em></p>
    Ja → koppelen aan bestaand <code>zangstuk-id</code>. Nee → nieuw id voorstellen (hier:
    bestaand).</li>
 <li><strong>Stap 2 — Variant:</strong> “Kastorski” / <code>Касторский</code> → <code>kastorski</code>.</li>
-<li><strong>Stap 3 — Uitvoeringsvorm:</strong> naam “Groningen”, alias registreren.</li>
+<li><strong>Stap 3 — Uitvoeringsvorm:</strong> naam “Groningen”, <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> registreren.</li>
 <li><strong>Stap 4 — Representatie:</strong> PDF slepen naar <code>repr/</code>; optioneel later VSA
    toevoegen als Nana transcribeert.</li>
 <li><strong>Stap 5 — Manifesten:</strong> tool genereert <code>variant.yaml</code> en
@@ -2892,11 +2892,11 @@ met templates); <a href="../../../reference/catalogus-cli/#catalogus-index-valid
 <p>Rene kopieert Nana's bestand naar <code>repr/nana-partituur.pdf</code> en commit in de
 parochie-repo.</p>
 <h3 id="4-index-valideren">4. Index valideren<a class="headerlink" href="#4-index-valideren" title="Permanent link">&para;</a></h3>
-<p>Controleer dat er geen conflicterende aliassen zijn
+<p>Controleer dat er geen conflicterende <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a> zijn
 (<a href="../../../reference/catalogus-cli/">Catalogus CLI</a>).</p>
 <h3 id="5-resolve-testen">5. Resolve testen<a class="headerlink" href="#5-resolve-testen" title="Permanent link">&para;</a></h3>
-<p>Los de uitvoeringsvorm-alias “Groningen” op binnen
-<code>cherubijnenhymne</code> / <code>kastorski</code> — verwacht canonieke id <code>groningen</code>
+<p>Los de <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> “Groningen” voor de <a href="/bron/preview/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> op binnen
+<code>cherubijnenhymne</code> / <code>kastorski</code> — verwacht <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> <code>groningen</code>
 (<a href="../../../reference/catalogus-cli/">Catalogus CLI — resolve</a>).</p>
 <h3 id="6-gebruik-in-een-sjabloon-of-samenstelling">6. Gebruik in een sjabloon of samenstelling<a class="headerlink" href="#6-gebruik-in-een-sjabloon-of-samenstelling" title="Permanent link">&para;</a></h3>
 <p>In het liturgie-sjabloon (verhaal 1):</p>
@@ -2920,7 +2920,7 @@ zie
 <hr />
 <h2 id="wat-rene-bereikt">Wat Rene bereikt<a class="headerlink" href="#wat-rene-bereikt" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Het stuk is <strong>vindbaar</strong> via aliassen (“Cherubijnenhymne Kastorski Groningen”).</li>
+<li>Het stuk is <strong>vindbaar</strong> via <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a> (“Cherubijnenhymne Kastorski Groningen”).</li>
 <li>Samenstellingen verwijzen stabiel met <code>lokaal:…/…/…</code>.</li>
 <li>Klaar voor <strong>promotie naar bron</strong> (verhaal 3) zonder ids te wijzigen.</li>
 </ul>
