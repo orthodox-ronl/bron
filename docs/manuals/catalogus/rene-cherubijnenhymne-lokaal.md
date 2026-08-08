@@ -7,20 +7,20 @@ audience: "P1 — Parochie-docs-maintainer"
 *Nana stuurt Rene een **PDF** met een Cherubijnenhymne die zij heeft gezet in de
 traditie van **Kastorski**, bewerkt voor hoe de parochie Groningen zingt. Rene
 wil het stuk in de **lokale** parochie-catalogus zodat het in liturgiemappen
-(samenstellingen) kan worden opgenomen, nog vóór het org-breed in **bron**
-staat.*
+([samenstellingen](@)) kan worden opgenomen, nog vóór het org-breed in de
+**[bron-repository](@)** staat.*
 
 ---
 
 ## Situatie
 
-| Aspect            | Waarde                                              |
-| ----------------- | --------------------------------------------------- |
-| Zangstuk          | Cherubijnenhymne (`cherubijnenhymne`)               |
-| Variant           | Kastorski (`kastorski`) — melodie-lijn              |
-| Uitvoeringsvorm   | Parochie Groningen (`groningen`)                    |
-| Brondocument (nu) | PDF-scan van Nana's partituur                       |
-| Status            | Parochie-lokaal — nog niet in org-brede bron        |
+| Aspect                | Waarde                                              |
+| --------------------- | --------------------------------------------------- |
+| [Zangstuk](@)         | Cherubijnenhymne (`cherubijnenhymne`)               |
+| [Variant](@)          | Kastorski (`kastorski`) — melodie-lijn              |
+| [Uitvoeringsvorm](@)  | Parochie Groningen (`groningen`)                    |
+| [Bronbestand](@) (nu) | PDF-scan van Nana's partituur                       |
+| Status                | [Parochie-lokaal](@) — nog niet in org-brede bron   |
 
 Terminologie en mappenstructuur:
 [parochie-lokaal zangstukken](../parochie-lokaal-zangstukken.md).
@@ -29,16 +29,16 @@ Terminologie en mappenstructuur:
 
 ## Beoogde interface (GUI)
 
-Rene kiest in de catalogus *Materiaal toevoegen → Parochie-lokaal*.
+Rene kiest in de catalogus *Materiaal toevoegen → [Parochie-lokaal](@)*.
 
-1. **Wizard stap 1 — Zangstuk:** zoekt “cherubijnenhymne”. Bestaat al in bron?
+1. **Wizard stap 1 — [Zangstuk](@):** zoekt “cherubijnenhymne”. Bestaat al in bron?
    Ja → koppelen aan bestaand `zangstuk-id`. Nee → nieuw id voorstellen (hier:
    bestaand).
-2. **Stap 2 — Variant:** “Kastorski” / `Касторский` → `kastorski`.
-3. **Stap 3 — Uitvoeringsvorm:** naam “Groningen”, [alias](@) registreren.
-4. **Stap 4 — Representatie:** PDF slepen naar `repr/`; optioneel later VSA
+2. **Stap 2 — [Variant](@):** “Kastorski” / `Касторский` → `kastorski`.
+3. **Stap 3 — [Uitvoeringsvorm](@):** naam “Groningen”, [alias](@) registreren.
+4. **Stap 4 — [Representatie](@):** PDF slepen naar `repr/`; optioneel later VSA
    toevoegen als Nana transcribeert.
-5. **Stap 5 — Manifesten:** tool genereert `variant.yaml` en
+5. **Stap 5 — [Manifesten](@):** tool genereert `variant.yaml` en
    `uitvoeringsvorm.yaml` met `aliases:` en `representaties:`.
 6. **Validatie:** groene vinkjes; knop *Open in Verkenner* voor git commit.
 
@@ -120,7 +120,7 @@ Los de [alias](@) “Groningen” voor de [uitvoeringsvorm](@) op binnen
 `cherubijnenhymne` / `kastorski` — verwacht [canoniek id](@) `groningen`
 ([Catalogus CLI — resolve](../../reference/catalogus-cli.md)).
 
-### 6. Gebruik in een sjabloon of samenstelling
+### 6. Gebruik in een sjabloon of [samenstelling](@)
 
 In het liturgie-sjabloon (verhaal 1):
 
@@ -142,17 +142,17 @@ Zoektest:
 ## Afspraken met Nana
 
 - **Copyright:** Nana geeft mondeling toestemming voor parochiegebruik; Rene
-  noteert `herkomst.author` in het manifest. Bij twijfel: [copyright en access](../copyright-access.md).
-- **Transcriptie:** de PDF is de eerste representatie; VSA kan later als tweede
-  representatie onder dezelfde uitvoeringsvorm.
+  noteert `herkomst.author` in het [manifest](@). Bij twijfel: [copyright en access](../copyright-access.md).
+- **Transcriptie:** de PDF is de eerste [representatie](@); VSA kan later als tweede
+  [representatie](@) onder dezelfde [uitvoeringsvorm](@).
 
 ---
 
 ## Wat Rene bereikt
 
 - Het stuk is **vindbaar** via [aliassen](@) (“Cherubijnenhymne Kastorski Groningen”).
-- Samenstellingen verwijzen stabiel met `lokaal:…/…/…`.
-- Klaar voor **promotie naar bron** (verhaal 3) zonder ids te wijzigen.
+- [Samenstellingen](@) verwijzen stabiel met `lokaal:…/…/…`.
+- Klaar voor **[promotie](@) naar [bron-repository](@)** (verhaal 3) zonder ids te wijzigen.
 
 ## Verder lezen
 

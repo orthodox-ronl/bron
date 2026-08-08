@@ -17,7 +17,7 @@ Een **sjabloon** is een herbruikbaar markdown-bestand in de parochie **content-s
 
 - vaste **tekst** (kopjes, liturgische aanwijzingen) — jij schrijft dat zelf;
 - **`default.gelegenheidstype`** (en parochie-defaults) — **geen** individuele feesten;
-- **`:::include`** met exporttype en **`zoek="…"`** — liturgische rol, nog geen pad.
+- **`:::include`** met [exporttype](@) en **`zoek="…"`** — liturgische rol, nog geen pad.
 
 Als jij het sjabloon **gebruikt** voor een concrete dienst, maak je een **sessie**:
 zelfde structuur, plus **`default.gelegenheid`** (en evt. `toon`, titel, datum).
@@ -81,7 +81,7 @@ catalogus negeert ze.
 
 ## Stap 2 — Tekst en includes
 
-Schrijf gewone markdown. Waar notatie komt — meteen het exporttype dat je op de site wilt:
+Schrijf gewone markdown. Waar notatie komt — meteen het [exporttype](@) dat je op de site wilt:
 
 ```markdown
 ## Kleine intocht
@@ -104,7 +104,8 @@ Tekst of aanwijzing voor het koor (vrij).
   die zit in **`default.gelegenheid`** van de sessie.
 - Meerdere `:::include`-regels met **dezelfde** `zoek=` voor svg, coria, mp3-player, …
 - `(Kastorski)` in `zoek=` mag voor disambiguation — bijv. Cherubijnenhymne.
-- Geen `variant-id` tenzij je na review een vast **`bron:…`**-pad zet.
+- Geen `variant-id` tenzij je na review een vast **`bron:…`**-pad zet
+  ([variant](@) alleen dan expliciet).
 
 ---
 

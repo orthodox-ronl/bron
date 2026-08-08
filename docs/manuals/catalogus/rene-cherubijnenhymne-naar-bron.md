@@ -7,19 +7,19 @@ audience: "P1 — Parochie-docs-maintainer"
 *Het lokale stuk uit [verhaal 2](rene-cherubijnenhymne-lokaal.md) bevalt;
 andere parochies zouden het ook moeten kunnen gebruiken. Rene en Nana besluiten
 een **pull request** op **bron** te openen — met dezelfde [canonieke ids](@) als
-lokaal, zodat bestaande samenstellingen blijven werken.*
+lokaal, zodat bestaande [samenstellingen](@) blijven werken.*
 
 ---
 
 ## Situatie
 
-| Lokaal (parochie)                              | Doel in bron                                          |
-| ---------------------------------------------- | ----------------------------------------------------- |
-| `lokaal/cherubijnenhymne/kastorski/groningen/` | `zangstukken/cherubijnenhymne/` + nested manifest     |
-| PDF (+ later VSA) onder `repr/`                | `sources/scan/` en `sources/vsa/`                     |
-| [Aliassen](@) in yaml                          | Zelfde [aliassen](@) in org-brede [manifesten](@)     |
+| Lokaal (parochie)                              | Doel in bron                                           |
+| ---------------------------------------------- | ------------------------------------------------------ |
+| `lokaal/cherubijnenhymne/kastorski/groningen/` | `zangstukken/cherubijnenhymne/` + nested [manifest](@) |
+| PDF (+ later VSA) onder `repr/`                | `sources/scan/` en `sources/vsa/`                      |
+| [Aliassen](@) in yaml                          | Zelfde [aliassen](@) in org-brede [manifesten](@)      |
 
-Promotie-procedure:
+[Promotie](@)-procedure:
 [parochie-lokaal § Promotie](../parochie-lokaal-zangstukken.md#promotie-naar-bron-repository).
 
 ---
@@ -32,16 +32,16 @@ groningen* en kiest **Delen → Voorstel voor bron**.
 1. **Diff-voorbeeld:** links lokaal, rechts voorgestelde bron-structuur.
 2. **Id-check:** groen als `zangstuk-id`, `variant-id`, `uitvoeringsvorm-id`
    en `representatie-id` voldoen aan `[a-z0-9_-]+` en uniek zijn in bron.
-3. **Bestanden:** selectie welke representaties meegaan (PDF, VSA).
+3. **Bestanden:** selectie welke [representaties](@) meegaan (PDF, VSA).
 4. **Metadata:** formulier voor `zangstuk.yaml` (`title`, `gelegenheid`, copyright).
 5. **PR-assistent:** genereert branch-naam, commit-bericht (Conventional Commits)
    en checklist voor validatie
    ([`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/),
    [Catalogus CLI](../../reference/catalogus-cli.md)).
-6. **Na merge:** hint om samenstellingen van `lokaal:` naar `bron:` om te zetten
+6. **Na merge:** hint om [samenstellingen](@) van `lokaal:` naar `bron:` om te zetten
    (optioneel; lokaal mag blijven staan).
 
-!!! note "GUI + promotie-workflow"
+!!! note "GUI + [promotie](@)-workflow"
     Automatische PR-generatie en bron-yaml-assistent zijn **gepland**. Rene voert de stappen
     hieronder handmatig uit volgens bestaande handleidingen.
 
@@ -59,8 +59,8 @@ git checkout -b feat/cherubijnenhymne-kastorski-groningen
 ### 2. Zangstuk-map (als cherubijnenhymne nog niet in bron staat)
 
 Volg [zangstuk toevoegen](../zangstuk-toevoegen.md) of
-[bronvariant toevoegen](../bronvariant-toevoegen.md) als het zangstuk al bestaat
-met andere varianten.
+[bronvariant toevoegen](../bronvariant-toevoegen.md) als het [zangstuk](@) al bestaat
+met andere [varianten](@).
 
 Voorbeeldstructuur (geneste manifesten — org-spec, in uitwerking):
 
@@ -95,7 +95,7 @@ sources:
     note: "Oorspronkelijk parochie-lokaal; bewerking Kastorski-traditie"
 ```
 
-Wanneer VSA klaar is: extra source-entry of representatie onder geneste yaml
+Wanneer VSA klaar is: extra [source-entry](@) of [representatie](@) onder geneste yaml
 (zie [zangstuk-formaat](../../specs/zangstuk-formaat.md)).
 
 ### 4. Validatie vóór PR
@@ -111,9 +111,9 @@ Beide moeten groen zijn.
 
 Rene opent een PR op `orthodox-groningen/bron` met:
 
-- **Summary:** nieuwe uitvoeringsvorm `groningen` onder variant `kastorski`.
+- **Summary:** nieuwe [uitvoeringsvorm](@) `groningen` onder [variant](@) `kastorski`.
 - **Testplan:** catalogus-index OK, VSA-validatie OK.
-- **Links:** verwijzing naar parochie-lokaal herkomst (optioneel in PR-body).
+- **Links:** verwijzing naar [herkomst](@) van de [parochie-lokale representatie](@) (optioneel in PR-body).
 
 Nana reviewt de muziek; een maintainer merge.
 
@@ -138,12 +138,12 @@ Uitvoer blijft: `groningen`.
 
 ## Wat Rene en Nana bereiken
 
-- Eén **canonical** exemplaar in bron; andere parochies hoeven niet Rene's repo
+- Eén **canonical** exemplaar in de [bron-repository](@); andere parochies hoeven niet Rene's repo
   te klonen.
 - **Ids blijven stabiel** — geen brekende wijziging in Groningen-lokaal tot Rene
   sync't.
 - Org-brede **alias-index** dekt “Groningen” zowel lokaal als in bron (scope
-  afhankelijk van `--content-root` / `--bron-root`).
+  afhankelijk van `--content-root` / `--bron-root`); zie [alias](@).
 
 ## Verder lezen
 

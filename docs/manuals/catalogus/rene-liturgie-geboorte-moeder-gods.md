@@ -8,7 +8,7 @@ audience: "P1 — Parochie-docs-maintainer"
 Moeder Gods) voor. Hij start vanuit een **sjabloon** voor de goddelijke liturgie,
 zet **`default.gelegenheid`** in een **sessie**, en laat de catalogus de
 **`zoek=`**-parameters in zijn **`:::include`**-regels oplossen tot een
-**samenstelling** voor de parochie-site.*
+**[samenstelling](@)** voor de parochie-site.*
 
 Normatief contract: [zangstuk-opzoeken in sjablonen](../../specs/catalogus-samenstelling-zangstuk.md).
 
@@ -23,7 +23,7 @@ troparion, kondakion, …) en schrijft zelf tekst tussen de stukken. Het
 `zoek="Troparion geboorte Moeder Gods"`. Het feest zet hij eenmalig in
 **`default.gelegenheid`** van de sessie.
 
-Variant- en uitvoeringsvorm-ids ziet hij **alleen** als de catalogus meerdere
+[Variant](@)- en [uitvoeringsvorm](@)-ids ziet hij **alleen** als de catalogus meerdere
 kandidaten teruggeeft (review).
 
 ---
@@ -54,7 +54,8 @@ kandidaten teruggeeft (review).
 4. **Review** — alleen bij ambiguïteit.
 5. **Tekst aanpassen** — markdown tussen includes blijft van Rene.
 6. **Build** — opgelost bestand valideren en publiceren.
-7. **Opslaan** — bijv. onder `samenstellingen/` in de parochie-content.
+7. **Opslaan** — bijv. onder `samenstellingen/` in de parochie-content
+   ([samenstelling](@)).
 
 !!! note "GUI"
     Stappen 1–2 en 4 zijn in een **grafische catalogus** nog **gepland**. Stappen 3
