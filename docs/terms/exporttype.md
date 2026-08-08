@@ -14,11 +14,11 @@ glossaryNotes:
 
 Het **exporttype** is de naam in een `:::include <exporttype>`-directive die aangeeft welk [exportmechanisme](@) wordt gebruikt om een [representatie](@) te ontsluiten in een [samenstelling](@).
 
-| Exporttype | Wat het doet                                        |
-| ---------- | --------------------------------------------------- |
+| Exporttype | Wat het doet                                                                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `svg`      | Rendert een VSA-[representatie](@) naar een SVG (plaatje), met daarin de te zingen tekst en strepen onder en boven lettergrepen in de tekst (SVG) |
-| `coria`    | Ontsluit een VSA-[representatie](@) voor gebruik in de Coria-oefentool |
-| `mxl`      | Exporteert een VSA-[representatie](@) als MXL (gecomprimeerde MusicXML)  |
+| `coria`    | Ontsluit een VSA-[representatie](@) voor gebruik in de Coria-oefentool                                                                            |
+| `mxl`      | Exporteert een VSA-[representatie](@) als MXL (gecomprimeerde MusicXML)                                                                           |
 
 ## Motivatie
 

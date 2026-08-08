@@ -15,10 +15,10 @@ Authoring-directives worden uitgevoerd door
 
 ## Export vs. conversie
 
-| Begrip        | Vraag die het beantwoordt                     | Voorbeeld                              |
-| ------------- | --------------------------------------------- | -------------------------------------- |
+| Begrip        | Vraag die het beantwoordt                     | Voorbeeld                                           |
+| ------------- | --------------------------------------------- | --------------------------------------------------- |
 | **Conversie** | Hoe maak ik afgeleide uit `.vsa`?             | Zie [conversiemechanismen](conversiemechanismen.md) |
-| **Export**    | Hoe verschijnt afgeleide in de samenstelling? | `:::include svg "lied.vsa" alt="…":::` |
+| **Export**    | Hoe verschijnt afgeleide in de samenstelling? | `:::include svg "lied.vsa" alt="…":::`              |
 
 Eén `.vsa`-bron kan meerdere exporttypes tegelijk hebben (SVG embed + Coria-link
 + MXL-download).
@@ -55,9 +55,9 @@ catalogus-pad:
 
 Zie [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md)
 en
-[parochie-lokaal VSA (`zoek=`)](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus).
+[parochie-lokaal VSA (`zoek=`)](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#include-met-zoek-catalogus).
 Resolve-commando:
-[CLI `vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md).
+[CLI `vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/).
 
 **Beperking:** `coria` / `mxl` op een **`bron:`** catalogus-pad — het `.vsa` ligt
 vaak buiten de content-root; **svg** op `bron:` werkt wel.
@@ -105,4 +105,4 @@ In de bron-repo primair VSA + scans; Coria-HTML kan in parochie-content voorkome
 - [Conversiemechanismen](conversiemechanismen.md)
 - [Schrijfconventies](../specs/schrijfconventies.md)
 - [VSA — directives](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md)
-- [VSA CLI-overzicht](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)
+- [VSA CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)

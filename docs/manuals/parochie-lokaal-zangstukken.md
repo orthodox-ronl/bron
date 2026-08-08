@@ -92,7 +92,9 @@ Yaml-velden zijn **informatief** voor beheerders; de build valideert vandaag voo
 
 **Sjabloon (fase 4, geïmplementeerd):** markdown met `:::include zoek=` — zie
 [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md).
-Resolve naar catalogus-pad via **`vsa resolve-catalogus`** (VSA-tooling).
+Resolve naar catalogus-pad via
+[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)
+(VSA-tooling).
 
 ---
 
@@ -108,12 +110,12 @@ Parochie-lokaal mag als kopie blijven staan; **canonical** is bron na sync.
 
 ## Build-pipeline (algemeen)
 
-| Stap                  | Parochie-lokaal                           |
-| --------------------- | ----------------------------------------- |
-| Sync bron             | Niet nodig — bestanden in git             |
-| **`vsa resolve-catalogus`** | Als markdown **`zoek=`** bevat (VSA-tooling) |
-| Validatie             | Tool valideert `content-source` recursief |
-| Site-build            | Includes op relatief pad / catalogus-pad  |
-| Static site generator | Ongewijzigd t.o.v. bron-materiaal         |
+| Stap                                                                                                         | Parochie-lokaal                              |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- |
+| Sync bron                                                                                                    | Niet nodig — bestanden in git                |
+| [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | Als markdown **`zoek=`** bevat (VSA-tooling) |
+| Validatie                                                                                                    | Tool valideert `content-source` recursief    |
+| Site-build                                                                                                   | Includes op relatief pad / catalogus-pad     |
+| Static site generator                                                                                        | Ongewijzigd t.o.v. bron-materiaal            |
 
-**VSA-tooling:** concrete commando's — [docs/guides/parochie-lokaal-vsa.md](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md).
+**VSA-tooling:** concrete commando's — [docs/guides/parochie-lokaal-vsa.md](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).

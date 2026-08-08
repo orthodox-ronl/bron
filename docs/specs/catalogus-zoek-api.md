@@ -37,10 +37,10 @@ Default **`bestandsextensie`**: `{".vsa"}` — verplicht voor `@include-vsa` en 
 `catalogus` draait in de praktijk **in de context van een parochie-repo** (Hugo
 **content-source**, demo: `VSA-demo/content-source`).
 
-| Root | Betekenis |
-| ---- | --------- |
+| Root                 | Betekenis                                                            |
+| -------------------- | -------------------------------------------------------------------- |
 | **`--content-root`** | Parochie content-source; indexeert **`lokaal/`** (parochie-register) |
-| **`--bron-root`** | Org-bron-repo (`zangstukken/`); optioneel maar gebruikelijk |
+| **`--bron-root`**    | Org-bron-repo (`zangstukken/`); optioneel maar gebruikelijk          |
 
 **Zoekscope:** standaard doorzoekt de catalogus **beide** (`context.bronnen` default
 `bron` + `lokaal`). De implementatie bouwt één index uit beide roots.
@@ -89,10 +89,10 @@ voor de zoekstring; zie [catalogus-samenstelling-zangstuk.md](catalogus-samenste
 
 Zoeken gebruikt **twee** soorten context; die zijn **complementair**, geen dubbeling:
 
-| Laag | Waar | Rol |
-| ---- | ---- | --- |
-| **`ZoekContext`** | `default.*` in **markdown-sessie** of **`default:`** in **ouder-`.vsa`** | *Deze* zoekactie / *deze* samenstelling: welk feest, welke default-uitvoeringsvorm, … |
-| **Catalog-metadata** | `zangstuk.yaml`, `variant.yaml`, `uitvoeringsvorm.yaml`, titels, aliassen | Geïndexeerd materiaal; **`ZoekContext` filtert** welke kandidaten passen |
+| Laag                 | Waar                                                                      | Rol                                                                                   |
+| -------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **`ZoekContext`**    | `default.*` in **markdown-sessie** of **`default:`** in **ouder-`.vsa`**  | *Deze* zoekactie / *deze* samenstelling: welk feest, welke default-uitvoeringsvorm, … |
+| **Catalog-metadata** | `zangstuk.yaml`, `variant.yaml`, `uitvoeringsvorm.yaml`, titels, aliassen | Geïndexeerd materiaal; **`ZoekContext` filtert** welke kandidaten passen              |
 
 **Markdown-samenstelling:** Rene zet `default.gelegenheid` in de **sessie-**frontmatter;
 `zoek="Troparion"` blijft een liturgische rol — zie
@@ -115,15 +115,15 @@ Module: `catalogus.zoek` (pakket **catalogus** in bron-repo).
 
 Liturgische context; spiegelt `default.*` uit markdown- of `.vsa`-frontmatter.
 
-| Veld               | Type              | Betekenis                                              |
-| ------------------ | ----------------- | ------------------------------------------------------ |
-| `gelegenheid`      | `str \| None`     | Canoniek gelegenheid-id (sessie)                       |
-| `gelegenheidstype` | `str \| None`     | `vast-feest` \| `zondag-cyclus`                        |
-| `toon`             | `str \| None`     | Zondagstoonsysteem (canoniek of invoer)                |
-| `uitvoeringsvorm`  | `str \| None`     | Default uitvoeringsvorm (alias toegestaan op invoer)   |
-| `gelegenheidsdatum`| `str \| None`     | `"MM-DD"`                                              |
-| `referentie`       | `str \| None`     | Herkomst-filter ([§9](terminologie.md)); geen pad      |
-| `bronnen`          | `frozenset[str]`  | `"bron"`, `"lokaal"` — default beide                   |
+| Veld                | Type              | Betekenis                                              |
+| ------------------- | ----------------- | ------------------------------------------------------ |
+| `gelegenheid`       | `str \| None`     | Canoniek gelegenheid-id (sessie)                       |
+| `gelegenheidstype`  | `str \| None`     | `vast-feest` \| `zondag-cyclus`                        |
+| `toon`              | `str \| None`     | Zondagstoonsysteem (canoniek of invoer)                |
+| `uitvoeringsvorm`   | `str \| None`     | Default uitvoeringsvorm (alias toegestaan op invoer)   |
+| `gelegenheidsdatum` | `str \| None`     | `"MM-DD"`                                              |
+| `referentie`        | `str \| None`     | Herkomst-filter ([§9](terminologie.md)); geen pad      |
+| `bronnen`           | `frozenset[str]`  | `"bron"`, `"lokaal"` — default beide                   |
 
 Factory:
 
@@ -163,12 +163,12 @@ Property **`catalogus_paden`**: `[m.catalogus_pad for m in matches]`.
 
 Resultaat van **`zoek`** (strict: precies één match).
 
-| Veld               | Type           | Betekenis                    |
-| ------------------ | -------------- | ---------------------------- |
-| `query`            | `str`          | Originele zoekstring         |
-| `query_normalized` | `str`          | Na `normalize_for_match`     |
-| `entry`            | `VsaFileEntry` | Gekozen brondocument         |
-| `catalogus_pad`    | `str`          | `lokaal:…` / `bron:…`        |
+| Veld                   | Type            | Betekenis                                             |
+| ---------------------- | --------------- | ----------------------------------------------------- |
+| `query`                | `str`           | Originele zoekstring                                  |
+| `query_normalized`     | `str`           | Na `normalize_for_match`                              |
+| `entry`                | `VsaFileEntry`  | Gekozen brondocument                                  |
+| `catalogus_pad`        | `str`           | `lokaal:…` / `bron:…`                                 |
 | `ook_gevonden_in_bron` | `tuple[str, …]` | `catalogus_pad` in bron bij lokaal-winst; anders leeg |
 
 Property **`path`**: `entry.path`.
@@ -233,11 +233,11 @@ def zoek(
 
 Strict wrapper om **`zoek_kandidaten`**:
 
-| `len(matches)` | Gedrag |
-| -------------- | ------ |
-| 0              | `NotFoundError` — scope vermeldt query en filter (bijv. geen `.vsa`) |
-| 1              | `ZoekResult` |
-| >1 (zelfde herkomst) | `AmbiguousError` — `candidates` uit die herkomst |
+| `len(matches)`       | Gedrag                                                               |
+| -------------------- | -------------------------------------------------------------------- |
+| 0                    | `NotFoundError` — scope vermeldt query en filter (bijv. geen `.vsa`) |
+| 1                    | `ZoekResult`                                                         |
+| >1 (zelfde herkomst) | `AmbiguousError` — `candidates` uit die herkomst                     |
 
 Bij **lokaal-winst** met bron-matches: vul **`ook_gevonden_in_bron`**; geen exception.
 
@@ -263,25 +263,26 @@ def zoek_met_roots(
 - Consumenten met herhaalde zoekacties: bouw **`AliasIndex` eenmaal**, roep `zoek` /
   `zoek_kandidaten` met `index=` aan (niet per call `*_met_roots`).
 
-**Status:** `zoek_kandidaten()`, `zoek()`, CLI **`catalogus zoek`** en VSA-consumenten
+**Status:** `zoek_kandidaten()`, `zoek()`, CLI
+[`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek) en VSA-consumenten
 zijn geïmplementeerd. Ranking en metadata-dekking worden verder uitgebreid per PR.
 
 ---
 
 ## Consumentenmatrix
 
-| Consument              | Context uit              | `bestandsextensie` | Gebruikt              |
-| ---------------------- | ------------------------ | ------------------ | --------------------- |
-| `@include-vsa zoek=`   | ouder-`.vsa` `default`   | `.vsa` (default)   | `result.path`         |
-| `vsa resolve-catalogus`| markdown `default`       | `.vsa` (default)   | `result.catalogus_pad`|
-| `catalogus zoek` CLI   | flags                    | `.vsa` (default)   | stdout `catalogus_pad`|
-| Review / debug         | idem                     | expliciet          | `zoek_kandidaten`     |
+| Consument                                                                                                    | Context uit              | `bestandsextensie` | Gebruikt               |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ | ---------------------- |
+| `@include-vsa zoek=`                                                                                         | ouder-`.vsa` `default`   | `.vsa` (default)   | `result.path`          |
+| [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | markdown `default`       | `.vsa` (default)   | `result.catalogus_pad` |
+| [`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek) CLI                                         | flags                    | `.vsa` (default)   | stdout `catalogus_pad` |
+| Review / debug                                                                                               | idem                     | expliciet          | `zoek_kandidaten`      |
 
 `result.path` is **leidend**; geen verplichte `resolve_vsa_path`-verificatie daarna.
 
 ---
 
-## CLI — `catalogus zoek`
+## CLI — [`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek)
 
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
@@ -296,19 +297,19 @@ python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
   --default-uitvoeringsvorm Groningen
 ```
 
-| Flag                         | Mapt naar                          |
-| ---------------------------- | ---------------------------------- |
-| `query` (positioneel)        | `zoek(query, …)`                   |
-| `--lijst`                    | `zoek_kandidaten` i.p.v. `zoek`    |
-| `--bestandsextensie`         | suffix-filter (default `vsa`)      |
-| `--default-gelegenheid`      | `context.gelegenheid`              |
-| `--default-gelegenheidstype` | `context.gelegenheidstype`         |
-| `--default-toon`             | `context.toon`                     |
-| `--default-uitvoeringsvorm`  | `context.uitvoeringsvorm`          |
-| `--default-gelegenheidsdatum`| `context.gelegenheidsdatum`        |
-| `--default-referentie`       | `context.referentie`               |
-| `--bronnen`                  | `context.bronnen`                  |
-| `--content-root`, …          | index-roots                        |
+| Flag                          | Mapt naar                          |
+| ----------------------------- | ---------------------------------- |
+| `query` (positioneel)         | `zoek(query, …)`                   |
+| `--lijst`                     | `zoek_kandidaten` i.p.v. `zoek`    |
+| `--bestandsextensie`          | suffix-filter (default `vsa`)      |
+| `--default-gelegenheid`       | `context.gelegenheid`              |
+| `--default-gelegenheidstype`  | `context.gelegenheidstype`         |
+| `--default-toon`              | `context.toon`                     |
+| `--default-uitvoeringsvorm`   | `context.uitvoeringsvorm`          |
+| `--default-gelegenheidsdatum` | `context.gelegenheidsdatum`        |
+| `--default-referentie`        | `context.referentie`               |
+| `--bronnen`                   | `context.bronnen`                  |
+| `--content-root`, …           | index-roots                        |
 
 **Uitvoer:**
 
@@ -325,19 +326,19 @@ python -m catalogus.cli zoek "Cherubijnenhymne (Kastorski)" ^
 **Strict `zoek`** (build, validate, expand) faalt bij **meerdere** kandidaten binnen de
 winnende herkomst — geen stille keuze.
 
-| Situatie | Aanbevolen actie auteur |
-| -------- | ------------------------ |
-| `AmbiguousError` | `catalogus zoek --lijst`; verfijn `zoek=` of `default.*`; of `@include-vsa id=` / `lokaal=` |
+| Situatie          | Aanbevolen actie auteur                                                                           |
+| ----------------- | ------------------------------------------------------------------------------------------------- |
+| `AmbiguousError`  | `catalogus zoek --lijst`; verfijn `zoek=` of `default.*`; of `@include-vsa id=` / `lokaal=`       |
 | `has_ook_in_bron` | Controleren of parochie-lokaal stuk bedoeld is; anders `@include-vsa lokaal=…` / `id=…` expliciet |
-| Geen match | Manifest/index; `default.gelegenheid`; disambiguation in zoekstring |
+| Geen match        | Manifest/index; `default.gelegenheid`; disambiguation in zoekstring                               |
 
 ---
 
 ## Consumentencontract (VSA-tooling)
 
 Normatieve stappen hieronder; concrete CLI-aanroep:
-[`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md)
-en [parochie-lokaal VSA](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md).
+[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)
+en [parochie-lokaal VSA](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).
 
 ### Markdown — `:::include zoek="…"`
 
@@ -356,7 +357,7 @@ en [parochie-lokaal VSA](https://github.com/orthodox-groningen/VSA-tooling/blob/
 VSA-tooling (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
 **`ook_gevonden_in_bron`** → **waarschuwing** (build mag doorgaan). Zie
 [VSA — include-vsa](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/include-vsa.md)
-en [`vsa validate`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md).
+en [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/).
 
 ---
 
@@ -375,23 +376,23 @@ en [`vsa validate`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/
 
 ## Implementatiestatus
 
-| Onderdeel                                              | Status                      |
-| ------------------------------------------------------ | --------------------------- |
-| Contract + datatypes + `format_catalogus_pad`          | **Geïmplementeerd**         |
-| `zoek_kandidaten()` / `zoek()`                         | **Geïmplementeerd** (basis) |
-| `catalogus zoek` CLI                                   | **Geïmplementeerd**         |
-| VSA `@include-vsa zoek=`                               | **Geïmplementeerd**         |
-| `vsa resolve-catalogus`                                | **Geïmplementeerd**         |
-| Interactieve review (`--interactive`)                  | **Gepland**                 |
-| Zoek-UI / fuzzy match                                  | **Gepland**                 |
+| Onderdeel                                                                                                    | Status                      |
+| ------------------------------------------------------------------------------------------------------------ | --------------------------- |
+| Contract + datatypes + `format_catalogus_pad`                                                                | **Geïmplementeerd**         |
+| `zoek_kandidaten()` / `zoek()`                                                                               | **Geïmplementeerd** (basis) |
+| [`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek) CLI                                         | **Geïmplementeerd**         |
+| VSA `@include-vsa zoek=`                                                                                     | **Geïmplementeerd**         |
+| [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | **Geïmplementeerd**         |
+| Interactieve review (`--interactive`)                                                                        | **Gepland**                 |
+| Zoek-UI / fuzzy match                                                                                        | **Gepland**                 |
 
 ---
 
 ## Wijzigingshistorie
 
-| Datum   | Wijziging |
-| ------- | --------- |
-| 2026-07 | Fase 0: normatief API-contract; stub `zoek()`; `@include-vsa` als consument |
-| 2026-07 | Abstract zoekgedrag; `bestandsextensie`; `zoek_kandidaten` / `--lijst`; NL metadata |
+| Datum   | Wijziging                                                                                  |
+| ------- | ------------------------------------------------------------------------------------------ |
+| 2026-07 | Fase 0: normatief API-contract; stub `zoek()`; `@include-vsa` als consument                |
+| 2026-07 | Abstract zoekgedrag; `bestandsextensie`; `zoek_kandidaten` / `--lijst`; NL metadata        |
 | 2026-07 | Parochie-context; lokaal vóór bron; `ook_gevonden_in_bron`; twee contextlagen; ambiguïteit |
-| 2026-07 | Doc-sync: mixed session, liturgikon-voorbeelden, coria-beperking |
+| 2026-07 | Doc-sync: mixed session, liturgikon-voorbeelden, coria-beperking                           |

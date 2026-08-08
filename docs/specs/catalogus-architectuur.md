@@ -12,12 +12,12 @@ canoniek id (`groningen`, `kastorski`).
 
 ## Plaatsing
 
-| Onderdeel        | Locatie                          |
-| ---------------- | -------------------------------- |
-| Python-pakket    | `src/catalogus/` in **bron**     |
-| CLI              | `catalogus` (entry point)        |
+| Onderdeel        | Locatie                                                                                                                                                                                                              |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Python-pakket    | `src/catalogus/` in **bron**                                                                                                                                                                                         |
+| CLI              | `catalogus` (entry point)                                                                                                                                                                                            |
 | Documentatie     | [catalogus-cli.md](../reference/catalogus-cli.md), [catalogus-zoek-api.md](catalogus-zoek-api.md), [gebruikersverhalen](../manuals/catalogus/index.md), [zangstuk in sjablonen](catalogus-samenstelling-zangstuk.md) |
-| Test-fixtures    | `tests/fixtures/alias-index/`    |
+| Test-fixtures    | `tests/fixtures/alias-index/`                                                                                                                                                                                        |
 
 Bron-repo workflows kunnen `catalogus` draaien **zonder** VSA-tooling.
 VSA-tooling wordt in fase 3 **consument** van de library (id-gebaseerde includes).
@@ -42,7 +42,7 @@ sequenceDiagram
 
 | Laag    | Wat                                                         |
 | ------- | ----------------------------------------------------------- |
-| Opslag  | Aliassen verspreid in git (manifesten, mapnamen, titels)  |
+| Opslag  | Aliassen verspreid in git (manifesten, mapnamen, titels)    |
 | Runtime | `AliasIndex` in RAM — lookup per scope, conflict-detectie   |
 
 Geen gegenereerd alias-bestand in git.
@@ -50,7 +50,7 @@ Geen gegenereerd alias-bestand in git.
 ## Scope en uniciteit
 
 Zie terminologie §2.6. Conflicten (zelfde alias → verschillende ids binnen scope)
-worden bij index-build gerapporteerd via `catalogus index validate`.
+worden bij index-build gerapporteerd via [`catalogus index validate`](../reference/catalogus-cli.md#catalogus-index-validate).
 
 ## Bekende randgevallen
 
@@ -101,7 +101,9 @@ sequenceDiagram
   Build-->>Rene: site
 ```
 
-Geïmplementeerd: **`catalogus zoek`**, **`vsa resolve-catalogus`**, **`@include-vsa zoek=`**
+Geïmplementeerd: [`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek),
+[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/),
+**`@include-vsa zoek=`**
 (zie [catalogus-zoek-api.md](catalogus-zoek-api.md)).
 
 **Demo-end-to-end:** sjabloon

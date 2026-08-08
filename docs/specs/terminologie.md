@@ -160,16 +160,16 @@ Meerdere matches na normalisatie → **fout** met kandidaten (canoniek id + cont
 
 Leesvorm: “*gangbaar* noemen wij *precieze term*, niet verwarren met *…*.”
 
-| Gangbaar                                     | Noemen wij                           | Niet verwarren met             |
-| -------------------------------------------- | ------------------------------------ | ------------------------------ |
-| “Cherubijnenhymne” (verschillende melodieën) | **variant**                          | uitvoeringsvorm, representatie |
-| “cover” / parochiepraktijk                   | **uitvoeringsvorm**                  | variant, representatie         |
-| scan, `.vsa`, notatie                        | **representatie**                    | uitvoeringsvorm, variant       |
-| werknaam in invoer                           | **alias** → resolver                 | canoniek id in opslag          |
-| “bron van …” (waar vandaan)                  | **herkomst**                         | bronbestand, bron-repository   |
-| “bron” (bestand)                             | **bronbestand**                      | bron-repository                |
-| “bron” (repo)                                | **bron-repository**                  | bronbestand                    |
-| “bronvariant” (informeel)                    | **source-entry** / **representatie** | uitvoeringsvorm                |
+| Gangbaar                                     | Noemen wij                           | Niet verwarren met                                     |
+| -------------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| “Cherubijnenhymne” (verschillende melodieën) | **variant**                          | uitvoeringsvorm, representatie                         |
+| “cover” / parochiepraktijk                   | **uitvoeringsvorm**                  | variant, representatie                                 |
+| scan, `.vsa`, notatie                        | **representatie**                    | uitvoeringsvorm, variant                               |
+| werknaam in invoer                           | **alias** → resolver                 | canoniek id in opslag                                  |
+| “bron van …” (waar vandaan)                  | **herkomst**                         | bronbestand, bron-repository                           |
+| “bron” (bestand)                             | **bronbestand**                      | bron-repository                                        |
+| “bron” (repo)                                | **bron-repository**                  | bronbestand                                            |
+| “bronvariant” (informeel)                    | **source-entry** / **representatie** | uitvoeringsvorm                                        |
 | “metadata-yaml”, “config” in zangstuk-map    | **manifest**                         | npm-/package-manifest, build-manifest, `zangstuk.yaml` |
 
 ---
@@ -370,12 +370,12 @@ Meerdere manifesten in dezelfde mappenstructuur noemen wij **manifesten** (meerv
 |               | Voorbeeld                                                                                          |
 | ------------- | -------------------------------------------------------------------------------------------------- |
 | **Ja**        | `lokaal/…/liturgikon-weekdagen/variant.yaml`                                                       |
-| **Ja**        | `lokaal/…/hemelum/uitvoeringsvorm.yaml` met `representaties: [{ representatie-id: hemelum, … }]` |
+| **Ja**        | `lokaal/…/hemelum/uitvoeringsvorm.yaml` met `representaties: [{ representatie-id: hemelum, … }]`   |
 | **Nee**       | `hemelum.vsa` (bronbestand / representatie)                                                        |
 | **Nee**       | `zangstuk.yaml` in bron-repository (source-entry-model)                                            |
 | **Nee**       | `antifonen-hemelum.md` (samenstelling)                                                             |
 | **Nee**       | npm `package.json`, PWA manifest, CI build-manifest, `.gitignore`-patroon `*.manifest`             |
-| **Randgeval** | Manifest zonder representatie-verwijzing — uitvoeringsvorm met 0 representaties (§1)              |
+| **Randgeval** | Manifest zonder representatie-verwijzing — uitvoeringsvorm met 0 representaties (§1)               |
 
 ---
 
@@ -412,11 +412,11 @@ content-source (dienst-, koormap- of herkomst-sjabloon) met **`:::include zoek="
 ingevuld (opgelost pad) is een **samenstelling** (§18). Zie
 [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md).
 
-| Term          | Waar                         | Formaat        |
-| ------------- | ---------------------------- | -------------- |
-| **Compositie** | org-brede ordered list (toekomst) | yaml in `bron/composities/` |
-| **Sjabloon**   | parochie                     | markdown + `default.gelegenheidstype` + `:::include zoek=` |
-| **Samenstelling** | parochie-publicatie      | markdown + `:::include` met catalogus-pad (§18) |
+| Term              | Waar                              | Formaat                                                    |
+| ----------------- | --------------------------------- | ---------------------------------------------------------- |
+| **Compositie**    | org-brede ordered list (toekomst) | yaml in `bron/composities/`                                |
+| **Sjabloon**      | parochie                          | markdown + `default.gelegenheidstype` + `:::include zoek=` |
+| **Samenstelling** | parochie-publicatie               | markdown + `:::include` met catalogus-pad (§18)            |
 
 ---
 
@@ -443,16 +443,16 @@ ingevuld (opgelost pad) is een **samenstelling** (§18). Zie
 
 ## 22. Open punten
 
-| Onderwerp                                          | Status     |
-| -------------------------------------------------- | ---------- |
-| Geneste yaml variant→uitvoeringsvorm→repr in bron  | Uitgesteld |
-| Manifest-term bij geneste yaml in bron (§16)       | Open       |
-| Alias-resolver in tooling                          | Geïmplementeerd (basis) — zie [catalogus-architectuur](catalogus-architectuur.md) |
-| Sjabloon `:::include zoek=` + `vsa resolve-catalogus` | **Geïmplementeerd** (basis) — zie [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md) |
-| **referentie** (herkomst) vs **catalogus-pad** in docs | Gedocumenteerd in catalogus-samenstelling-zangstuk.md |
-| Metadata-zoek (`catalogus.zoek` / `zoek_kandidaten`) | **Geïmplementeerd** (basis) |
-| Automatische terminologie-lint (R1–R2)             | Open       |
-| `.coria.html` definitief bron vs afgeleide         | Open       |
+| Onderwerp                                              | Status                                                                                                       |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Geneste yaml variant→uitvoeringsvorm→repr in bron      | Uitgesteld                                                                                                   |
+| Manifest-term bij geneste yaml in bron (§16)           | Open                                                                                                         |
+| Alias-resolver in tooling                              | Geïmplementeerd (basis) — zie [catalogus-architectuur](catalogus-architectuur.md)                            |
+| Sjabloon `:::include zoek=` + `vsa resolve-catalogus`  | **Geïmplementeerd** (basis) — zie [catalogus-samenstelling-zangstuk.md](catalogus-samenstelling-zangstuk.md) |
+| **referentie** (herkomst) vs **catalogus-pad** in docs | Gedocumenteerd in catalogus-samenstelling-zangstuk.md                                                        |
+| Metadata-zoek (`catalogus.zoek` / `zoek_kandidaten`)   | **Geïmplementeerd** (basis)                                                                                  |
+| Automatische terminologie-lint (R1–R2)                 | Open                                                                                                         |
+| `.coria.html` definitief bron vs afgeleide             | Open                                                                                                         |
 
 ---
 

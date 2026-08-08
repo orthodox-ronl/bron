@@ -26,19 +26,19 @@ kandidaten teruggeeft (review).
 
 ## Sjabloon vs sessie
 
-| | **Sjabloon** (parochie-repo) | **Sessie** (deze dienst) |
-| --- | --- | --- |
-| **`default.gelegenheid`** | ontbreekt | `geboorte-moeder-gods` |
-| **`default.gelegenheidstype`** | `vast-feest` | overnemen |
-| **`default.uitvoeringsvorm`** | optioneel (homogene sessies) | **weglaten** bij mixed session |
-| **`zoek=`** | `Troparion`, `Kondakion`, … | zelfde regels |
-| **Tekst ertussen** | wel | wel (aanpassen mag) |
+|                                | **Sjabloon** (parochie-repo) | **Sessie** (deze dienst)       |
+| ------------------------------ | ---------------------------- | ------------------------------ |
+| **`default.gelegenheid`**      | ontbreekt                    | `geboorte-moeder-gods`         |
+| **`default.gelegenheidstype`** | `vast-feest`                 | overnemen                      |
+| **`default.uitvoeringsvorm`**  | optioneel (homogene sessies) | **weglaten** bij mixed session |
+| **`zoek=`**                    | `Troparion`, `Kondakion`, …  | zelfde regels                  |
+| **Tekst ertussen**             | wel                          | wel (aanpassen mag)            |
 
-| Soort sjabloon | Voorbeeld | `default` in sjabloon |
-| -------------- | --------- | ----------------------- |
-| **Dienst** | Goddelijke liturgie | `gelegenheidstype`, `uitvoeringsvorm` |
-| **Koormap** | Zondag per toon | `gelegenheidstype: zondag-cyclus`, `uitvoeringsvorm` |
-| **Herkomst** | VOK-verzameling | `referentie`, `koormap_nummer` |
+| Soort sjabloon | Voorbeeld           | `default` in sjabloon                                |
+| -------------- | ------------------- | ---------------------------------------------------- |
+| **Dienst**     | Goddelijke liturgie | `gelegenheidstype`, `uitvoeringsvorm`                |
+| **Koormap**    | Zondag per toon     | `gelegenheidstype: zondag-cyclus`, `uitvoeringsvorm` |
+| **Herkomst**   | VOK-verzameling     | `referentie`, `koormap_nummer`                       |
 
 ---
 
@@ -112,7 +112,7 @@ default:
 **Mixed session:** geen `default.uitvoeringsvorm` — feest-stukken uit bron (`liturgikon`),
 Cherubijnenhymne lokaal (`groningen`).
 
-Na **`vsa resolve-catalogus`**:
+Na [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/):
 
 ```markdown
 :::include svg bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon alt="Troparion" scale="85%":::
@@ -137,12 +137,12 @@ onder de VSA-demo content-source.
    `Cherubijnenhymne (Kastorski)`. Bij meerdere treffers: lijst bekijken of
    `zoek=` / `default.*` aanscherpen ([Catalogus CLI — zoek](../../reference/catalogus-cli.md)).
 3. **Includes oplossen** — `zoek=` → `bron:…` / `lokaal:…`
-   ([`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md)).
+   ([`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)).
 4. **Valideren** van de content-source
-   ([`vsa validate`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md)).
+   ([`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/)).
 
 Workflow-overzicht:
-[parochie-lokaal VSA](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md).
+[parochie-lokaal VSA](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).
 
 ---
 
@@ -156,5 +156,5 @@ Workflow-overzicht:
 
 - [Sjabloon schrijven](sjabloon-schrijven.md)
 - [Zangstuk-opzoeken in sjablonen](../../specs/catalogus-samenstelling-zangstuk.md)
-- [VSA — `:::include` met `zoek=`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus)
+- [VSA — `:::include` met `zoek=`](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#include-met-zoek-catalogus)
 - [Verhaal 2 — Cherubijnenhymne lokaal opnemen](rene-cherubijnenhymne-lokaal.md)

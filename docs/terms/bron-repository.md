@@ -15,9 +15,9 @@ glossaryNotes:
 
 De **bron-repository** is de git-repository [`orthodox-groningen/bron`](https://github.com/orthodox-groningen/bron) — of een expliciet aangewezen opvolger. Het is de centrale opslagplaats voor [representaties](@) van [uitvoeringsvormen](@) (van [varianten](@)) van [zangstukken](@), alsmede voor de specificaties van de opslag, manieren om daarin te zoeken, handleidingen, enzovoorts.
 
-| Status | Voorbeeld                                        |
-| ------ | ------------------------------------------------ |
-| Ja     | `github.com/orthodox-groningen/bron`             |
+| Status | Voorbeeld                                                                                              |
+| ------ | ------------------------------------------------------------------------------------------------------ |
+| Ja     | `github.com/orthodox-groningen/bron`                                                                   |
 | Nee    | [VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling/); parochie-Hugo-repo; vendor-checkout |
 
 Niet verwarren met [bronbestand](@) (een bestand in een repository) of [herkomst](@) (metadata over oorsprong).

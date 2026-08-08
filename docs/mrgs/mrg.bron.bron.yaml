@@ -428,7 +428,7 @@ entries:
     glossaryTerm: "VSA-tooling"
     glossaryText: "De Python-toolchain (`vsa` CLI) waarmee [vsa-notatie](@)-bestanden worden geparseerd, gevalideerd en omgezet naar [afgeleiden](@) zoals SVG en MusicXML."
     glossaryNotes:
-      - "De `vsa`-CLI biedt subcommando's voor validatie, rendering en export; zie de [CLI-referentie](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md)."
+      - "De `vsa`-CLI biedt subcommando's voor validatie, rendering en export; zie de [CLI-referentie](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)."
       - "VSA-tooling genereert [afgeleiden](@) uit [bronbestanden](@); de [afgeleiden](@) zelf worden niet in de [bron-repository](@) opgeslagen."
       - "De tooling bevindt zich in de repo [orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)."
     formPhrases:

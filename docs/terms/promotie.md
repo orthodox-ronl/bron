@@ -16,9 +16,9 @@ glossaryNotes:
 
 Bij promotie blijven de canonieke ids behouden.
 
-| Status | Voorbeeld                                                                       |
-| ------ | ------------------------------------------------------------------------------- |
-| Ja     | PR: `hemelum.vsa` + yaml `id: hemelum, based_on: liturgikon`                   |
+| Status | Voorbeeld                                                                            |
+| ------ | ------------------------------------------------------------------------------------ |
+| Ja     | PR: `hemelum.vsa` + yaml `id: hemelum, based_on: liturgikon`                         |
 | Nee    | Nieuw zangstuk-map terwijl extra [representatie](@) onder bestaand zangstuk volstaat |
 
 ## Motivatie

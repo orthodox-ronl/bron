@@ -40,7 +40,7 @@ Rene kiest in de catalogus *Materiaal toevoegen → Parochie-lokaal*.
 
 !!! note "GUI + lokaal-wizard"
     De wizard is **gepland**. Rene maakt de mappen en yaml vandaag handmatig (of
-    met templates); **`catalogus index validate`** en **`catalogus zoek`** werken op CLI.
+    met templates); [`catalogus index validate`](../../reference/catalogus-cli.md#catalogus-index-validate) en [`catalogus zoek`](../../reference/catalogus-cli.md#catalogus-zoek) werken op CLI.
 
 ---
 
@@ -128,7 +128,7 @@ Met `default.uitvoeringsvorm: Groningen` in de **sessie** (homogene liturgie) of
 disambiguation `Cherubijnenhymne (Kastorski)` in mixed session. Na oplossen van
 `zoek=` (bijv. `:::include svg lokaal:cherubijnenhymne/kastorski/groningen:::`) —
 zie
-[`vsa resolve-catalogus`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md).
+[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/).
 
 Zoektest:
 [Catalogus CLI — zoek](../../reference/catalogus-cli.md).

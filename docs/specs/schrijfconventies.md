@@ -47,12 +47,12 @@ in bron-referentie** — link naar de man-page.
   definitie niet in de lopende tekst; één TermRef volstaat voor de lezer
   (hover / termpagina).
 
-| Term / frase              | Gebruik                                                                 |
-| ------------------------- | ----------------------------------------------------------------------- |
-| **Conversie**             | Tool met vaste I/O (`vsa svg`, `vsa musicxml`)                          |
-| **Export**                | Hoe een afgeleide in een samenstelling verschijnt (`:::include …`)      |
-| **Kanaal**                | Verouderd — gebruik *conversie* of *exporttype*                         |
-| **geldige VSA-notatie**   | Voorkeur boven “VSA klopt” / “kloppende VSA” (tool-docs, VSA-tooling)   |
+| Term / frase              | Gebruik                                                                                                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Conversie**             | Tool met vaste I/O ([`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/), [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)) |
+| **Export**                | Hoe een afgeleide in een samenstelling verschijnt (`:::include …`)                                                                                                                                |
+| **Kanaal**                | Verouderd — gebruik *conversie* of *exporttype*                                                                                                                                                   |
+| **geldige VSA-notatie**   | Voorkeur boven “VSA klopt” / “kloppende VSA” (tool-docs, VSA-tooling)                                                                                                                             |
 
 ---
 
@@ -113,7 +113,7 @@ Voor elke CLI (bijv. `vsa`, later ook `catalogus`):
 
 Workflow-guides vatten ketens samen en **verwijzen** naar deze man-pages.
 
-Canonieke `vsa`-CLI: [VSA-tooling CLI-referentie](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/index.md).
+Canonieke `vsa`-CLI: [VSA-tooling CLI-referentie](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/).
 
 ---
 
