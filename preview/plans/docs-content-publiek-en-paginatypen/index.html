@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 14:47 CEST.
+  , gebouwd 2026-08-08 15:24 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2513,10 +2513,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fase-d-vsa-leesbaarheid-hubs" class="md-nav__link">
+  <a href="#fase-d-vsa-leesbaarheid-hubs-gedaan-2026-08-08" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fase D — VSA leesbaarheid &amp; hubs
+        Fase D — VSA leesbaarheid &amp; hubs — gedaan (2026-08-08)
       
     </span>
   </a>
@@ -3033,10 +3033,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fase-d-vsa-leesbaarheid-hubs" class="md-nav__link">
+  <a href="#fase-d-vsa-leesbaarheid-hubs-gedaan-2026-08-08" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fase D — VSA leesbaarheid &amp; hubs
+        Fase D — VSA leesbaarheid &amp; hubs — gedaan (2026-08-08)
       
     </span>
   </a>
@@ -3742,53 +3742,81 @@ bij svg/parse/musicxml en als <strong>faalvoorbeeld</strong> in <code>reference/
 <li><code>Landing: docs/index.md</code> + <code>docs/getting-started/index.md</code> ← C.3</li>
 <li><code>Landing: docs/reference/exporttype-svg.md</code> + <code>docs/manuals/catalogus/index.md</code> ← C.4</li>
 </ul>
-<h3 id="fase-d-vsa-leesbaarheid-hubs">Fase D — VSA leesbaarheid &amp; hubs<a class="headerlink" href="#fase-d-vsa-leesbaarheid-hubs" title="Permanent link">&para;</a></h3>
+<h3 id="fase-d-vsa-leesbaarheid-hubs-gedaan-2026-08-08">Fase D — VSA leesbaarheid &amp; hubs — <strong>gedaan</strong> (2026-08-08)<a class="headerlink" href="#fase-d-vsa-leesbaarheid-hubs-gedaan-2026-08-08" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>#</th>
 <th>Taak</th>
 <th>Acceptatie</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>D.0</td>
+<td>Home + Starten persona-router (VSA; §7 restant van C.3)</td>
+<td>Eerste scherm beantwoordt “wie ben ik?”; P7-niet-hier</td>
+<td>gedaan</td>
+</tr>
+<tr>
 <td>D.1</td>
 <td>Eén hub: <code>manuals/index</code>; <code>guides/README</code> → stub/exclude</td>
 <td>Geen tweede startpunt</td>
+<td>gedaan</td>
 </tr>
 <tr>
 <td>D.2</td>
 <td>User-guide inkorten tot tour + links (geen tweede CLI); eenvoudige taal waar P3 meekijkt</td>
 <td>Flags alleen in <code>reference/cli/</code></td>
+<td>gedaan</td>
 </tr>
 <tr>
 <td>D.3</td>
 <td>Validatie-guide naar niveau svg-export: waartoe/wanneer, validate≠svg, diagnose + fix</td>
 <td>Zelfde sectiestructuur; foutpad concreet</td>
+<td>gedaan</td>
 </tr>
 <tr>
 <td>D.4</td>
 <td>Spec <code>overview.md</code>: termtabel → glossary; Export/conversie-woordgebruik; sectienummers</td>
 <td>Geen parallelle glossary</td>
+<td>gedaan</td>
 </tr>
 <tr>
 <td>D.5</td>
 <td>Consumer-site: “pointer-only” of minimale end-to-end</td>
 <td>Titel dekt lading</td>
+<td>gedaan</td>
 </tr>
 <tr>
 <td>D.6</td>
 <td>Nav-titels NL waar nu Engels (<code>Conformance</code>, …)</td>
 <td>Consistente NL-nav</td>
+<td>gedaan</td>
 </tr>
 <tr>
 <td>D.7</td>
 <td>CLI man-pages steekproef: “waartoe” bovenaan + foutvoorbeeld met oplossing (schrijfconventies)</td>
 <td>Min. validate + svg voldoen; overige in backlog noteren</td>
+<td>gedaan</td>
 </tr>
 </tbody>
 </table>
+<p>PR-body bij landings (VSA-repo):</p>
+<ul>
+<li><code>Landing: docs/index.md</code> + <code>docs/getting-started/README.md</code> ← D.0</li>
+<li><code>Landing: docs/manuals/index.md</code> + <code>docs/guides/README.md</code> ← D.1</li>
+<li><code>Landing: docs/guides/user-guide.md</code> ← D.2</li>
+<li><code>Landing: docs/guides/validation.md</code> ← D.3</li>
+<li><code>Landing: docs/specification/overview.md</code> ← D.4</li>
+<li><code>Landing: docs/manuals/consumer-site.md</code> ← D.5</li>
+<li><code>Landing: mkdocs.yml</code> (+ H1s conformance/error-handling/versioning/…) ← D.6</li>
+<li><code>Landing: docs/reference/cli/validate.md</code> + <code>svg.md</code> ← D.7</li>
+</ul>
+<p><strong>Backlog D.7 (later):</strong> overige CLI man-pages (<code>parse</code>, <code>blocks</code>, <code>process</code>,
+<code>build-markdown</code>, <code>musicxml</code>, <code>resolve-catalogus</code>) op dezelfde
+waartoe/foutpad-norm toetsen — niet allemaal in deze fase.</p>
 <h3 id="fase-e-cross-cutting-na-of-parallel-met-termref-campagne">Fase E — Cross-cutting (na of parallel met TermRef-campagne)<a class="headerlink" href="#fase-e-cross-cutting-na-of-parallel-met-termref-campagne" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -3832,9 +3860,8 @@ bij svg/parse/musicxml en als <strong>faalvoorbeeld</strong> in <code>reference/
 <li>[x] <code>representatie</code> en <code>zangstuk</code> term-entries volgen sjabloon (incl. waartoe /
       gerelateerd / verder lezen) en matchen de spec.</li>
 <li>[x] Kern-task-guides P2 hebben voorbeeld + checklist + “wanneer” + foutpad.</li>
-<li>[ ] Home (bron + VSA) routeren op persona en benoemen P7-niet-hier.
-      (bron gedaan in C.3; VSA volgt in fase D)</li>
-<li>[ ] Geen tweede docs-hub in VSA-guides-README.</li>
+<li>[x] Home (bron + VSA) routeren op persona en benoemen P7-niet-hier.</li>
+<li>[x] Geen tweede docs-hub in VSA-guides-README.</li>
 <li>[ ] Steekproef (min. 1 pagina per type) doorstaat de lezerstest voor dat type.</li>
 <li>[ ] Landingsmatrix §5a: alle “moet in A”-rijen geland of expliciet uitgesteld;
       latere fasen toetsen tegen schrijfconventies, niet alleen tegen dit plan.</li>
@@ -3887,6 +3914,10 @@ bij svg/parse/musicxml en als <strong>faalvoorbeeld</strong> in <code>reference/
 <tr>
 <td>2026-08-08</td>
 <td>Fase C gedaan: P2 task guides + Home/Starten persona-router + pad/<code>zoek=</code>-brug</td>
+</tr>
+<tr>
+<td>2026-08-08</td>
+<td>Fase D gedaan (VSA): hubs, user-guide tour, validation, overview, NL-nav, CLI validate/svg; Home persona-router</td>
 </tr>
 </tbody>
 </table>
