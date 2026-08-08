@@ -342,7 +342,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -515,7 +515,7 @@
   <span class="md-ellipsis">
     
   
-    Overzicht
+    Lokaal ontwikkelen
   
 
     
@@ -1147,7 +1147,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1204,6 +1204,34 @@
     
   
     Schrijfconventies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specs/term-entry-sjabloon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Term-entry-sjabloon (curated texts)
   
 
     
@@ -1765,7 +1793,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -1781,7 +1809,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2148,7 +2176,35 @@
   <span class="md-ellipsis">
     
   
-    TEv2 — bredere TermRef-campagne (later)
+    TEv2 — bredere TermRef-campagne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/docs-content-publiek-en-paginatypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs-content: publiek, paginatypen en werkplan
   
 
     
@@ -2374,6 +2430,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gerelateerd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gerelateerd
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2400,12 +2467,42 @@
 
 
 <h1 id="exportmechanisme">Exportmechanisme<a class="headerlink" href="#exportmechanisme" title="Permanent link">&para;</a></h1>
-<p>Een <strong>exportmechanisme</strong> beschrijft hoe een <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> een <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> of <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> ontsluit voor een lezersdoel. Het exportmechanisme wordt in een <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> aangeroepen via een <code>:::include</code>-directive met een <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a>.</p>
+<p>Een <strong>exportmechanisme</strong> beschrijft hoe een <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> een <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a>
+of <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> ontsluit voor een lezersdoel, via een <code>:::include</code>-directive
+met een <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a>.</p>
 <div class="highlight"><pre><span></span><code>:::include svg zoek=&quot;antifoon-1 / weekdagen / liturgikon&quot; :::
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Voorbeeld</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ja</td>
+<td>SVG in een koormap; Coria-oefenlink; MXL-download in een samenstelling</td>
+</tr>
+<tr>
+<td>Nee</td>
+<td><code>vsa svg</code> als losse conversie zonder <code>:::include</code> (<a href="/bron/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanisme</a>)</td>
+</tr>
+<tr>
+<td>Nee</td>
+<td>Het <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> zelf kopiëren in plaats van includen</td>
+</tr>
+</tbody>
+</table>
 <h2 id="motivatie">Motivatie<a class="headerlink" href="#motivatie" title="Permanent link">&para;</a></h2>
-<p>Een <a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een uitvoeringsvorm concreet is vastgelegd.">representatie</a> (bijv. een <code>.vsa</code>-bestand) kan voor verschillende doelen worden ontsloten: als notenbalken voor een koormap, als oefenmateriaal in Coria, als MusicXML voor een muziekprogramma. Het exportmechanisme maakt die keuze expliciet en configureerbaar via de <code>:::include</code>-directive in de <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>, zodat dezelfde <a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een uitvoeringsvorm concreet is vastgelegd.">representatie</a> in meerdere contexten bruikbaar is zonder het <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> te kopiëren of aan te passen.</p>
-<p>Zie ook: <a href="../../specs/terminologie/#20-conversiemechanisme-exportmechanisme-exporttype">Terminologie, paragraaf 20</a>, <a href="/bron/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanisme</a>, <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a>.</p>
+<p>Een <a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> kan voor verschillende lezersdoelen nodig zijn
+(notenbalken, oefentool, MusicXML). Het exportmechanisme maakt die keuze
+expliciet in de <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>, zonder het <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> te kopiëren.</p>
+<h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a>, <a href="/bron/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanisme</a>, <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a></li>
+<li><a href="../../specs/terminologie/#20-conversiemechanisme-exportmechanisme-exporttype">Terminologie, paragraaf 20</a></li>
+</ul>
 
 
 
@@ -2442,7 +2539,7 @@
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-07-11
+        Bijgewerkt: 2026-08-08
         
       </p>
       

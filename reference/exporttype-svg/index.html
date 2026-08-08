@@ -348,7 +348,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -521,7 +521,7 @@
   <span class="md-ellipsis">
     
   
-    Overzicht
+    Lokaal ontwikkelen
   
 
     
@@ -1153,7 +1153,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1210,6 +1210,34 @@
     
   
     Schrijfconventies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specs/term-entry-sjabloon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Term-entry-sjabloon (curated texts)
   
 
     
@@ -1696,10 +1724,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#doelsyntax" class="md-nav__link">
+  <a href="#doelsyntax-pad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Doelsyntax
+        Doelsyntax (pad)
       
     </span>
   </a>
@@ -2020,7 +2048,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -2036,7 +2064,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2403,7 +2431,35 @@
   <span class="md-ellipsis">
     
   
-    TEv2 — bredere TermRef-campagne (later)
+    TEv2 — bredere TermRef-campagne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/docs-content-publiek-en-paginatypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs-content: publiek, paginatypen en werkplan
   
 
     
@@ -2653,10 +2709,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#doelsyntax" class="md-nav__link">
+  <a href="#doelsyntax-pad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Doelsyntax
+        Doelsyntax (pad)
       
     </span>
   </a>
@@ -2843,18 +2899,18 @@
 
 
 <h1 id="exporttype-embed-svg">Exporttype: embed SVG<a class="headerlink" href="#exporttype-embed-svg" title="Permanent link">&para;</a></h1>
-<p>Contract voor het <strong>svg</strong>-exporttype: <a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> als schaalbare
-vectorafbeelding in een samenstelling (HTML, afdruk).</p>
+<p>Contract voor het <strong>svg</strong>-<a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a>: <a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> als schaalbare
+vectorafbeelding in een <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> (HTML, afdruk).</p>
 <p>Technische build-stappen (shortcodes, asset-mappen): zie
 <a href="https://orthodox-groningen.github.io/VSA-tooling/guides/svg-export/">SVG exporteren</a>
 en <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/">CLI <code>vsa build-markdown</code></a>.</p>
 <hr />
 <h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">&para;</a></h2>
-<p>Met exporttype <strong>svg</strong> toon je de muzieknotatie van een <a href="/bron/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a> als SVG
+<p>Met <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a> <strong>svg</strong> toon je de muzieknotatie van een <a href="/bron/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a> als SVG
 in de pagina. De lezer ziet dezelfde glyphs en omringende tekst als in VSA,
-geschikt voor scherm en papier. De SVG ontstaat via conversie
+geschikt voor scherm en papier. De SVG ontstaat via een <a href="/bron/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanisme</a>
 (<a href="../conversie-vsa-svg/">conversie-vsa-svg</a>); export bepaalt alleen <em>hoe</em> die SVG
-in de samenstelling wordt ingebed.</p>
+in de <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> wordt ingebed.</p>
 <hr />
 <h2 id="beoogde-doelen">Beoogde doelen<a class="headerlink" href="#beoogde-doelen" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2866,14 +2922,23 @@ in de samenstelling wordt ingebed.</p>
 </ul>
 <hr />
 <h2 id="authoring">Authoring<a class="headerlink" href="#authoring" title="Permanent link">&para;</a></h2>
-<h3 id="doelsyntax">Doelsyntax<a class="headerlink" href="#doelsyntax" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Twee manieren om een <code>.vsa</code> te kiezen</p>
+<p>Deze pagina beschrijft <strong>pad-<code>:::include</code></strong>: je noemt een bestaand relatief
+pad naar een <code>.vsa</code> (vaste bron in de consumer- of demo-repo).</p>
+<p>In <strong>catalogus-sjablonen</strong> kies je vaak nog geen pad, maar een liturgische
+rol via <strong><code>zoek=</code></strong>; resolve zet dat later om naar <code>bron:</code> / <code>lokaal:</code>-paden.
+Zie <a href="../../manuals/catalogus/sjabloon-schrijven/">Sjabloon schrijven</a> en
+<a href="../../manuals/catalogus/">Catalogus-handleidingen</a>.</p>
+</div>
+<h3 id="doelsyntax-pad">Doelsyntax (pad)<a class="headerlink" href="#doelsyntax-pad" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>:::include svg &quot;praktijk/zondagen/tropaar-zondag-toon-3.vsa&quot; alt=&quot;Tropaar van de zondag, Toon 3&quot; scale=&quot;85%&quot;:::
 </code></pre></div>
 <h3 id="equivalent-zonder-expliciet-type-ook-geldig">Equivalent zonder expliciet type (ook geldig)<a class="headerlink" href="#equivalent-zonder-expliciet-type-ook-geldig" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>:::include &quot;praktijk/zondagen/tropaar-zondag-toon-3.vsa&quot; alt=&quot;Tropaar van de zondag, Toon 3&quot; scale=&quot;85%&quot;:::
 </code></pre></div>
 <p>Zonder het woord <code>svg</code> wordt een <code>.vsa</code>-include als VSA-blok behandeld en bij
-document-build naar SVG gerenderd. Functioneel komt dat overeen met exporttype
+document-build naar SVG gerenderd. Functioneel komt dat overeen met <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a>
 svg.</p>
 <h3 id="pad-naar-de-bron">Pad naar de bron<a class="headerlink" href="#pad-naar-de-bron" title="Permanent link">&para;</a></h3>
 <table>
@@ -3063,7 +3128,7 @@ een JPG-scan.</p>
 <td>content-source of gekopieerd uit <code>bron/zangstukken/</code></td>
 </tr>
 <tr>
-<td><code>.svg</code> afgeleide</td>
+<td><code>.svg</code> <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a></td>
 <td>Impliciet</td>
 <td>Wordt bij build of via <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/"><code>vsa svg</code></a> gegenereerd</td>
 </tr>

@@ -348,7 +348,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -521,7 +521,7 @@
   <span class="md-ellipsis">
     
   
-    Overzicht
+    Lokaal ontwikkelen
   
 
     
@@ -766,10 +766,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vsa-tooling" class="md-nav__link">
+  <a href="#vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VSA-tooling
+        vsa CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling
       
     </span>
   </a>
@@ -1272,7 +1272,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1329,6 +1329,34 @@
     
   
     Schrijfconventies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specs/term-entry-sjabloon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Term-entry-sjabloon (curated texts)
   
 
     
@@ -1890,7 +1918,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -1906,7 +1934,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2273,7 +2301,35 @@
   <span class="md-ellipsis">
     
   
-    TEv2 — bredere TermRef-campagne (later)
+    TEv2 — bredere TermRef-campagne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/docs-content-publiek-en-paginatypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs-content: publiek, paginatypen en werkplan
   
 
     
@@ -2533,10 +2589,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vsa-tooling" class="md-nav__link">
+  <a href="#vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VSA-tooling
+        vsa CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling
       
     </span>
   </a>
@@ -2580,8 +2636,8 @@
 
 
 <h1 id="documentatie-bijdragen">Documentatie bijdragen<a class="headerlink" href="#documentatie-bijdragen" title="Permanent link">&para;</a></h1>
-<p>Handleiding voor wie <strong>docs</strong> in bron (of parallel in VSA-tooling) wijzigt:
-TermRefs, tabellen, lokale builds en wat CI controleert.</p>
+<p>Handleiding voor wie <strong>docs</strong> in de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> (of parallel in
+<a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>) wijzigt: TermRefs, tabellen, lokale builds en wat CI controleert.</p>
 <h2 id="scripts-bron">Scripts (bron)<a class="headerlink" href="#scripts-bron" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2619,7 +2675,7 @@ Voorkeur: <code>npm install</code> (lokaal <code>node_modules</code>), niet alle
 gebruik <code>*-tev2</code> als je hover of glossary wilt controleren.</p>
 <h2 id="termrefs">TermRefs<a class="headerlink" href="#termrefs" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Org-termen: <code>[zangstuk](@)</code> in bron; in VSA-tooling bij voorkeur <code>[zangstuk](@bron)</code>
+<li>Org-termen: <code>[zangstuk](@)</code> in bron; in <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> bij voorkeur <code>[zangstuk](@bron)</code>
   tenzij de tool-repo een bewuste lokale herdefinitie heeft.</li>
 <li>Na TRRT mogen geen <code>[…](@…)</code>-vormen meer in <code>generated/docs</code> staan —
   CI draait <code>python scripts/check-tev2-termrefs.py generated/docs</code>.</li>
@@ -2658,16 +2714,30 @@ python scripts\align_markdown_tables.py ..\bron\docs\
 </tr>
 </tbody>
 </table>
-<p>Houd pins gelijk tussen bron en VSA-tooling tenzij er een bewuste drift-PR is.</p>
-<h2 id="vsa-tooling">VSA-tooling<a class="headerlink" href="#vsa-tooling" title="Permanent link">&para;</a></h2>
+<p>Houd pins gelijk tussen bron en <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> tenzij er een bewuste drift-PR is.</p>
+<h2 id="vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling"><a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a><a class="headerlink" href="#vsa-cli-waarmee-vsa-notatie-bestanden-worden-geparseerd-gevalideerd-en-omgezet-naar-afgeleiden-zoals-svg-en-musicxmlvsa-tooling" title="Permanent link">&para;</a></h2>
 <p>Zelfde scriptnamen; mrg-import is daar standaard (bron-MRG voor <code>*@bron</code>).
 Zie <a href="https://orthodox-groningen.github.io/VSA-tooling/guides/tev2-docs/">TEv2 in tool-docs</a>.</p>
 <h2 id="checklist-voor-pr">Checklist vóór PR<a class="headerlink" href="#checklist-voor-pr" title="Permanent link">&para;</a></h2>
 <ul>
 <li>[ ] <code>scripts\docs-build-tev2.cmd</code> groen (of CI <code>docs-pages</code> / docs-build)</li>
-<li>[ ] Nieuwe/gewijzigde termen: curated text + TermRefs waar de term voorkomt</li>
-<li>[ ] Tabellen uitgelijnd</li>
-<li>[ ] Geen afgeleide SVG/MXL in bron committen</li>
+<li>[ ] <strong>Type + publiek</strong> benoemd (of evident uit hub/pad): zie
+      <a href="../../specs/schrijfconventies/">schrijfconventies</a> — paginatypen / persona’s</li>
+<li>[ ] <strong>Lezerstest</strong> voor dat type: kan de beoogde lezer in één scan antwoorden op
+      <em>voor wie / wanneer / wat moet ik doen of weten?</em> (hub = route; task =
+      stappen + voorbeeld; term = waartoe; CLI = SYNOPSIS-achtig + foutpad)</li>
+<li>[ ] Nieuwe/gewijzigde termen: curated text + TermRefs waar de term voorkomt
+      (<a href="../../specs/term-entry-sjabloon/">term-sjabloon</a>; jargon alleen via glossary)</li>
+<li>[ ] Jargon op de pagina → TermRef of expliciet “niet in glossary” (geen ad-hoc term)</li>
+<li>[ ] Pagina voldoet aan <a href="../../specs/schrijfconventies/">schrijfconventies</a>:
+      kopnorm (voor wie / wanneer / antwoord eerst), toon welwillende volwassene
+      tenzij docs-/tool-contributor of spec-/PR-reviewer; task/CLI/workflow hebben
+      <strong>foutpad</strong>; lezerstekst gebruikt persona-<strong>namen</strong> (geen kale <code>P3</code>)</li>
+<li>[ ] Frontmatter waar van toepassing: <code>doc_type</code> + <code>audience</code> als
+      <code>P3 — Notatie-auteur</code> (niet alleen <code>P3</code>)</li>
+<li>[ ] Nagelezen als de bedoelde lezer: zou iemand zonder voorkennis begrijpen
+      wat je bedoelde?- [ ] Tabellen uitgelijnd</li>
+<li>[ ] Geen <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> SVG/MXL in bron committen</li>
 </ul>
 
 

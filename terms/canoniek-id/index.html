@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://orthodox-groningen.github.io/bron/terms/source-entry/">
+        <link rel="canonical" href="https://orthodox-groningen.github.io/bron/terms/canoniek-id/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Source-entry - bron — documentatie</title>
+        <title>Canonieke id - bron — documentatie</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#source-entry" class="md-skip">
+        <a href="#canonieke-id" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Source-entry
+              Canonieke id
             
           </span>
         </div>
@@ -2430,6 +2430,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gerelateerd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gerelateerd
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2447,7 +2458,7 @@
 
 
   
-    <a href="https://github.com/orthodox-groningen/bron/edit/main/docs/terms/source-entry.md" title="Wijzig deze pagina" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/orthodox-groningen/bron/edit/main/docs/terms/canoniek-id.md" title="Wijzig deze pagina" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2455,17 +2466,43 @@
   
 
 
-<h1 id="source-entry">Source-entry<a class="headerlink" href="#source-entry" title="Permanent link">&para;</a></h1>
-<p>Een <strong>source-entry</strong> is een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>. Elke entry heeft een uniek <code>id</code> binnen dat <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> en registreert een <a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> (of een placeholder daarvoor) op het huidige platte model.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># voorbeelden van source-entries</span>
-<span class="nt">sources</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">groningen</span>
-<span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sources/vsa/groningen.vsa</span>
-<span class="w">    </span><span class="nt">based_on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">liturgikon</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">liturgikon</span>
-<span class="w">    </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nog-niet-getranscribeerd</span>
-</code></pre></div>
-<p>Het <code>id</code>-veld van een source-entry correspondeert met het <code>representatie-id</code>. Bij nieuw werk is het vier-niveaumodel leidend; <a href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entries</a> kunnen legacy-structuur bevatten die niet altijd <a href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> en <a href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> onderscheidt.</p>
+<h1 id="canonieke-id">Canonieke id<a class="headerlink" href="#canonieke-id" title="Permanent link">&para;</a></h1>
+<p>Een <strong>canoniek id</strong> (ook: <strong>canonieke id</strong>) is de stabiele identifier van een
+entiteit in het vier-niveaumodel die in <strong>opslag en techniek</strong> wordt gebruikt:
+paden, yaml, git, <code>bron:…</code>-referenties, build-artefacten.</p>
+<p>Vorm (normatief): <code>^[a-z0-9_-]+$</code> — lowercase ASCII, cijfers, <code>-</code> en <code>_</code>. Geen
+spaties, hoofdletters, diacritica of Cyrillisch in het <strong>opgeslagen</strong> id.</p>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Id-veld</th>
+<th>Voorbeeld canoniek id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">Zangstuk</a></td>
+<td><code>zangstuk-id</code></td>
+<td><code>antifoon-1-weekdagen</code></td>
+</tr>
+<tr>
+<td><a href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">Variant</a></td>
+<td><code>variant-id</code></td>
+<td><code>kastorski</code></td>
+</tr>
+<tr>
+<td><a href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">Uitvoeringsvorm</a></td>
+<td><code>uitvoeringsvorm-id</code></td>
+<td><code>groningen</code></td>
+</tr>
+<tr>
+<td><a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a></td>
+<td><code>representatie-id</code></td>
+<td><code>hemelum</code></td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -2476,22 +2513,37 @@
 <tbody>
 <tr>
 <td>Ja</td>
-<td><code>{ id: groningen, file: sources/vsa/groningen.vsa, based_on: liturgikon }</code></td>
-</tr>
-<tr>
-<td>Ja</td>
-<td><code>{ id: liturgikon, status: nog-niet-getranscribeerd }</code></td>
+<td><code>groningen</code>, <code>troparion-zondag-toon-1</code>, <code>liturgikon</code></td>
 </tr>
 <tr>
 <td>Nee</td>
-<td>Alleen een <code>.vsa</code> op schijf zonder yaml-entry</td>
+<td><code>Groningen</code>, <code>1e antifoon weekdagen</code>, <code>Касторский</code></td>
+</tr>
+<tr>
+<td>Nee</td>
+<td>Spaties of diacritica in het <strong>opgeslagen</strong> id</td>
 </tr>
 </tbody>
 </table>
+<p>Invoer zoals <code>Groningen</code> mag als <a href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> (of case-variatie); na resolve is het
+<a href="/bron/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke id</a> in opslag altijd <code>groningen</code>.</p>
 <h2 id="motivatie">Motivatie<a class="headerlink" href="#motivatie" title="Permanent link">&para;</a></h2>
-<p>De <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> gebruikt een plat model (<code>sources:</code> in <code>zangstuk.yaml</code>) als brug naar het vier-niveaumodel. Een source-entry is de schakel: hij registreert een <a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> (of placeholder) en maakt het mogelijk voor tooling en CI om te weten welke <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestanden</a> bij een <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> horen, wat hun status is, en of ze toegankelijk zijn.</p>
-<p>Zonder source-entries zou een <code>.vsa</code>-bestand in de repository onzichtbaar zijn voor de catalogus: er is geen registratie, geen vindbare koppeling aan een <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>, <a href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> of <a href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>.</p>
-<p>Zie ook: <a href="../../specs/terminologie/#13-source-entry">Terminologie, paragraaf 13</a>.</p>
+<p>Builds, catalogus-paden en git moeten <strong>stabiel en eenduidig</strong> zijn. Menselijke
+spelling wisselt (<code>Hemelum</code> / <code>hemelum</code> / Cyrillisch); machine-ids niet. Het
+<a href="/bron/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke id</a> is die vaste kern: alles wat in de repository of in
+machine-leesbare referenties terechtkomt, gebruikt precies die vorm (R5).</p>
+<p>Zonder dit begrip zouden <a href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a> en ids door elkaar lopen — of elke UI
+zou rechtstreeks fragile strings in paden schrijven.</p>
+<h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> — invoernaam die naar dit id resolve’t</li>
+<li>Id-velden van <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>, <a href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>, <a href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>,
+  <a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></li>
+<li><a href="/bron/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">promotie</a> — behoudt <a href="/bron/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke ids</a> bij overgang naar de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a></li>
+<li><a href="../../specs/terminologie/#2-canonieke-ids-en-aliassen">Zangstukmodel §2</a>;
+  R5 in <a href="../../specs/terminologie/#0-gebruiksregels-alle-repos-orthodox-groningen">§0</a>;
+  contrast in <a href="../../specs/terminologie/#3-gangbare-taal-vs-precieze-termen">§3</a></li>
+</ul>
 
 
 

@@ -348,7 +348,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -521,7 +521,7 @@
   <span class="md-ellipsis">
     
   
-    Overzicht
+    Lokaal ontwikkelen
   
 
     
@@ -1278,7 +1278,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1335,6 +1335,34 @@
     
   
     Schrijfconventies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specs/term-entry-sjabloon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Term-entry-sjabloon (curated texts)
   
 
     
@@ -1896,7 +1924,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -1912,7 +1940,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2279,7 +2307,35 @@
   <span class="md-ellipsis">
     
   
-    TEv2 — bredere TermRef-campagne (later)
+    TEv2 — bredere TermRef-campagne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/docs-content-publiek-en-paginatypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs-content: publiek, paginatypen en werkplan
   
 
     
@@ -2595,9 +2651,10 @@
 <p>Deze pagina verzamelt <strong>gebruikersverhalen</strong> over de catalogus-tool. Ze
 beschrijven hoe <strong>Rene</strong> (liturgiecoördinator in de parochie Groningen) en
 <strong>Nana</strong> (parochie-componist) zangmateriaal vinden, lokaal toevoegen,
-<strong>sjablonen</strong> vullen tot <strong>samenstellingen</strong>, en materiaal delen via <strong>bron</strong>.</p>
+sjablonen vullen tot <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstellingen</a>, en materiaal delen via de
+<a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>.</p>
 <p>De verhalen zijn <strong>voorbeelden</strong> (parochie Groningen), bedoeld als
-userdocumentatie voor vrijwilligers en als basis voor latere handleidingen.</p>
+bruikdocumentatie voor vrijwilligers en als basis voor latere handleidingen.</p>
 <h2 id="kernworkflow-doelbeeld">Kernworkflow (doelbeeld)<a class="headerlink" href="#kernworkflow-doelbeeld" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Rene opent een <strong>markdown-sjabloon</strong> (dienst, koormap of herkomst) — zonder
@@ -2608,7 +2665,17 @@ userdocumentatie voor vrijwilligers en als basis voor latere handleidingen.</p>
    ambiguïteit.</li>
 <li>Hij <strong>bouwt</strong> het opgeloste bestand naar de site / export.</li>
 </ol>
-<p>Contract: <a href="../../specs/catalogus-samenstelling-zangstuk/">zangstuk in samenstelling-sjablonen</a>.</p>
+<p>Contract: <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> in
+<a href="../../specs/catalogus-samenstelling-zangstuk/">samenstelling-sjablonen</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Pad-<code>:::include</code> vs catalogus-<code>zoek=</code></p>
+<p><strong><code>zoek=</code></strong> (deze handleidingen): liturgische rol in het sjabloon; resolve
+kiest later het concrete <code>.vsa</code>-pad (<a href="/bron/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a>). Geschikt voor
+diensten die per gelegenheid wisselen.</p>
+<p><strong>Pad-<code>:::include</code></strong>: vast relatief pad naar een <code>.vsa</code> — zie
+<a href="../../reference/exporttype-svg/">Exporttype SVG</a> (<a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a> <code>svg</code>).
+Geschikt wanneer de bron al bekend is (demo, vaste pagina, na resolve).</p>
+</div>
 <p>Commando’s (wanneer je CLI gebruikt):
 <a href="../../reference/catalogus-cli/">Catalogus CLI</a>,
 <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a>,
@@ -2626,12 +2693,12 @@ userdocumentatie voor vrijwilligers en als basis voor latere handleidingen.</p>
 <tr>
 <td>Rene</td>
 <td>Liturgiecoördinator, parochie Groningen</td>
-<td>Sjablonen, samenstellingen, parochie-repo, PR's naar bron</td>
+<td>Sjablonen, <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstellingen</a>, parochie-repo, PR's naar <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron</a></td>
 </tr>
 <tr>
 <td>Nana</td>
 <td>Componist / arrangeur in de parochie</td>
-<td>Nieuwe stukken (PDF, VSA, MusicXML)</td>
+<td>Nieuwe stukken (PDF, <a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a>, MusicXML)</td>
 </tr>
 </tbody>
 </table>
@@ -2648,17 +2715,18 @@ userdocumentatie voor vrijwilligers en als basis voor latere handleidingen.</p>
 <tr>
 <td><strong>bron</strong></td>
 <td><code>C:\Git\orthodox-groningen\bron</code></td>
-<td>Org-brede zangstukken (<code>zangstukken/</code>)</td>
+<td>Org-brede <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstukken</a> (<code>zangstukken/</code>) in de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a></td>
 </tr>
 <tr>
 <td><strong>parochie-site</strong></td>
 <td><code>C:\Git\orthodox-groningen\VSA-demo\content-source</code></td>
-<td>Sjablonen, samenstellingen, <code>lokaal/</code> (demo)</td>
+<td>Sjablonen, <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstellingen</a>, <code>lokaal/</code> (<a href="/bron/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">parochie-lokaal</a>; demo)</td>
 </tr>
 </tbody>
 </table>
 <p>Terminologie: <a href="../../specs/terminologie/">terminologie §2</a> — opslag blijft vier
-niveaus; Rene typt vooral <strong>zoektekst</strong>.</p>
+niveaus (<code>zangstuk-id</code> → <code>variant-id</code> → <code>uitvoeringsvorm-id</code> → <code>representatie-id</code>);
+Rene typt vooral <strong>zoektekst</strong>.</p>
 <h3 id="groningen-groningen-en-vokn-in-deze-verhalen"><code>Groningen</code>, <code>groningen</code> en <code>vokn</code> in deze verhalen<a class="headerlink" href="#groningen-groningen-en-vokn-in-deze-verhalen" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2674,15 +2742,15 @@ niveaus; Rene typt vooral <strong>zoektekst</strong>.</p>
 </tr>
 <tr>
 <td><strong><code>default.uitvoeringsvorm: Groningen</code></strong></td>
-<td>Parochie-default bij zoeken (invoer alias) — <strong>niet</strong> in mixed session</td>
+<td>Parochie-default bij zoeken (invoer <a href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a>) — <strong>niet</strong> in mixed session</td>
 </tr>
 <tr>
 <td><strong><code>uitvoeringsvorm-id: groningen</code></strong></td>
-<td>Parochie-specifieke uitvoeringsvorm (bijv. Nana's Kastorski-bewerking)</td>
+<td>Parochie-specifieke <a href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> (bijv. Nana's Kastorski-bewerking)</td>
 </tr>
 <tr>
 <td><strong><code>uitvoeringsvorm-id: liturgikon</code></strong></td>
-<td>Bron-uitvoeringsvorm (Liturgikon-model; demo feest-stukken)</td>
+<td>Bron-<a href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a> (Liturgikon-model; demo feest-stukken)</td>
 </tr>
 <tr>
 <td><strong><code>vokn</code></strong></td>
@@ -2728,17 +2796,17 @@ interactieve review bij ambiguïteit) is nog <strong>gepland</strong>.</p>
 <tr>
 <td>2</td>
 <td><a href="rene-cherubijnenhymne-lokaal/">Cherubijnenhymne lokaal opnemen</a></td>
-<td>PDF/VSA in <code>lokaal/</code></td>
+<td>PDF/<a href="/bron/terms/vsa" title="Vereenvoudigde Slavische Accentnotatie: Overkoepelend begrip voor zowel de Vsa-notatie (het notatieformaat voor liturgische zangteksten) als de Vsa-tooling (de CLI en toolchain voor validatie en publicatie).">VSA</a> in <code>lokaal/</code> (<a href="/bron/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">parochie-lokaal</a>)</td>
 </tr>
 <tr>
 <td>3</td>
 <td><a href="rene-cherubijnenhymne-naar-bron/">Cherubijnenhymne naar bron</a></td>
-<td>Promotie via pull request</td>
+<td><a href="/bron/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">Promotie</a> via pull request</td>
 </tr>
 <tr>
 <td>4</td>
 <td><a href="rene-cherubijnenhymne-musicxml/">MusicXML delen</a></td>
-<td>MXL als bron</td>
+<td>MXL als <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a></td>
 </tr>
 </tbody>
 </table>

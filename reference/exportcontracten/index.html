@@ -348,7 +348,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -521,7 +521,7 @@
   <span class="md-ellipsis">
     
   
-    Overzicht
+    Lokaal ontwikkelen
   
 
     
@@ -1153,7 +1153,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1210,6 +1210,34 @@
     
   
     Schrijfconventies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specs/term-entry-sjabloon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Term-entry-sjabloon (curated texts)
   
 
     
@@ -1904,7 +1932,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -1920,7 +1948,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2287,7 +2315,35 @@
   <span class="md-ellipsis">
     
   
-    TEv2 — bredere TermRef-campagne (later)
+    TEv2 — bredere TermRef-campagne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/docs-content-publiek-en-paginatypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs-content: publiek, paginatypen en werkplan
   
 
     
@@ -2611,13 +2667,13 @@
 
 
 <h1 id="exportcontracten">Exportcontracten<a class="headerlink" href="#exportcontracten" title="Permanent link">&para;</a></h1>
-<p>Referentie voor <strong>exportmechanismen</strong>: hoe afgeleiden (of handmatige siblings) in
-een <strong>samenstelling</strong> (Markdown-bundel voor parochie-uitgave) worden ontsloten.</p>
-<p>Export is <strong>geen</strong> conversie: export verwijst naar reeds gemaakte afgeleiden
-(bijv. <code>.svg</code>, <code>.mxl</code>) of naar handmatige siblings (<code>.coria.html</code>). Conversie
-staat in <a href="../conversiemechanismen/">Conversiemechanismen</a>.</p>
+<p>Referentie voor <strong><a href="/bron/terms/exportmechanisme" title="Exportmechanisme: De manier waarop een Samenstelling een Bronbestand of Afgeleide ontsluit voor een lezersdoel, via een <code>:::include</code>-directive met een Exporttype.">exportmechanismen</a></strong> (incl. handmatige siblings) in een
+<strong><a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a></strong>.</p>
+<p>Export is <strong>geen</strong> <a href="../conversiemechanismen/">conversie</a>: export verwijst naar
+reeds gemaakte <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleiden</a> (bijv. <code>.svg</code>, <code>.mxl</code>) of naar handmatige siblings
+(<code>.coria.html</code>). Conversie staat in <a href="../conversiemechanismen/">Conversiemechanismen</a>.</p>
 <p>Authoring-directives worden uitgevoerd door
-<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md">VSA-tooling</a>;
+<a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>;
 <strong>normatieve contracten</strong> (wat/wanneer) staan op deze pagina’s.</p>
 <hr />
 <h2 id="export-vs-conversie">Export vs. conversie<a class="headerlink" href="#export-vs-conversie" title="Permanent link">&para;</a></h2>
@@ -2631,19 +2687,19 @@ staat in <a href="../conversiemechanismen/">Conversiemechanismen</a>.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Conversie</strong></td>
-<td>Hoe maak ik afgeleide uit <code>.vsa</code>?</td>
+<td><strong><a href="/bron/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">Conversiemechanisme</a></strong></td>
+<td>Hoe maak ik <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> uit <code>.vsa</code>?</td>
 <td>Zie <a href="../conversiemechanismen/">conversiemechanismen</a></td>
 </tr>
 <tr>
-<td><strong>Export</strong></td>
-<td>Hoe verschijnt afgeleide in de samenstelling?</td>
+<td><strong><a href="/bron/terms/exportmechanisme" title="Exportmechanisme: De manier waarop een Samenstelling een Bronbestand of Afgeleide ontsluit voor een lezersdoel, via een <code>:::include</code>-directive met een Exporttype.">Exportmechanisme</a></strong></td>
+<td>Hoe verschijnt <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> in de <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>?</td>
 <td><code>:::include svg "lied.vsa" alt="…":::</code></td>
 </tr>
 </tbody>
 </table>
-<p>Eén <code>.vsa</code>-bron kan meerdere exporttypes tegelijk hebben (SVG embed + Coria-link
-+ MXL-download).</p>
+<p>Eén <code>.vsa</code>-bron (<a href="/bron/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a>) kan meerdere <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttypes</a> tegelijk hebben
+(SVG embed + Coria-link + MXL-download).</p>
 <hr />
 <h2 id="geregistreerde-exporttypes">Geregistreerde exporttypes<a class="headerlink" href="#geregistreerde-exporttypes" title="Permanent link">&para;</a></h2>
 <table>
@@ -2709,7 +2765,7 @@ vaak buiten de content-root; <strong>svg</strong> op <code>bron:</code> werkt we
 <tr>
 <td><code>:::coria "melodie.vsa"</code></td>
 <td><strong>Geïmplementeerd</strong></td>
-<td>Alias voor exporttype <code>coria</code></td>
+<td>Alias voor <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a> <code>coria</code></td>
 </tr>
 <tr>
 <td><code>:::include svg\|coria\|mxl "…"</code></td>
@@ -2729,19 +2785,19 @@ vaak buiten de content-root; <strong>svg</strong> op <code>bron:</code> werkt we
 <tr>
 <td><code>:::include mp3-player</code></td>
 <td><strong>Gepland</strong></td>
-<td>Exporttype nog niet in VSA-tooling</td>
+<td><a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">Exporttype</a> nog niet in <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="uitgaveprofielen">Uitgaveprofielen<a class="headerlink" href="#uitgaveprofielen" title="Permanent link">&para;</a></h2>
-<p>Profielen zijn <strong>geen</strong> aparte pipelines. Eén samenstelling; export en CSS
+<p>Profielen zijn <strong>geen</strong> aparte pipelines. Eén <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>; export en CSS
 bepalen wat zichtbaar is.</p>
 <table>
 <thead>
 <tr>
 <th>Profiel</th>
-<th>Typische exporttypes</th>
+<th>Typische <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttypes</a></th>
 <th>Conversie nodig</th>
 </tr>
 </thead>
@@ -2780,7 +2836,7 @@ bepalen wat zichtbaar is.</p>
 </tr>
 </tbody>
 </table>
-<p>In de bron-repo primair VSA + scans; Coria-HTML kan in parochie-content voorkomen.</p>
+<p>In de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> primair VSA + scans; Coria-HTML kan in parochie-content voorkomen.</p>
 <hr />
 <h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>
 <ul>

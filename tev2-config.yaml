@@ -8,9 +8,9 @@ mrgt:
   vsntag:
 
 hrgt:
-  converter[1]: "| [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}](terms/{{term}}.md) | {{#if glossaryText}}{{noRefs glossaryText}}{{else}}Geen `glossaryText` opgegeven voor deze term.{{/if}}{{#if glossaryNotes}}<br>{{#each glossaryNotes}}{{#if this.heading}}{{#if @first}}**Opmerkingen:**<br>{{else}}<br>{{/if}}- **{{this.heading}}**:{{#each this.items}}<br>&nbsp;&nbsp;- {{this}}{{/each}}{{else}}{{#if @first}}{{#if @last}}**Opmerking**: {{this}}{{else}}**Opmerkingen:**<br>- {{this}}{{/if}}{{else}}<br>- {{this}}{{/if}}{{/if}}{{/each}}{{/if}} |\n"
-  converter[2]: "{{#if glossaryAbbr}}| [{{glossaryAbbr}}](terms/{{term}}.md) | Afkorting van [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}](terms/{{term}}.md). |\n{{else}}{{log level='silent'}}{{/if}}"
-  converter[3]: "{{#if glossaryAlias}}| [{{glossaryAlias}}](terms/{{term}}.md) | Alias voor [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}](terms/{{term}}.md). |\n{{else}}{{log level='silent'}}{{/if}}"
+  converter[1]: "| [{{#if glossaryTerm}}{{noRefs glossaryTerm}}{{else}}{{capFirst term}}{{/if}}](terms/{{term}}.md) | {{#if glossaryText}}{{glossaryText}}{{else}}Geen `glossaryText` opgegeven voor deze term.{{/if}}{{#if glossaryNotes}}<br>{{#each glossaryNotes}}{{#if this.heading}}{{#if @first}}**Opmerkingen:**<br>{{else}}<br>{{/if}}- **{{this.heading}}**:{{#each this.items}}<br>&nbsp;&nbsp;- {{this}}{{/each}}{{else}}{{#if @first}}{{#if @last}}**Opmerking**: {{this}}{{else}}**Opmerkingen:**<br>- {{this}}{{/if}}{{else}}<br>- {{this}}{{/if}}{{/if}}{{/each}}{{/if}} |\n"
+  converter[2]: "{{#if glossaryAbbr}}| [{{glossaryAbbr}}](terms/{{term}}.md) | Afkorting van [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{term}}@). |\n{{else}}{{log level='silent'}}{{/if}}"
+  converter[3]: "{{#if glossaryAlias}}| [{{glossaryAlias}}](terms/{{term}}.md) | Alias voor [{{#if glossaryTerm}}{{glossaryTerm}}{{else}}{{capFirst term}}{{/if}}]({{term}}@). |\n{{else}}{{log level='silent'}}{{/if}}"
   sorter: "{{noRefs glossaryTerm}}"
   input:
     - "*.md"

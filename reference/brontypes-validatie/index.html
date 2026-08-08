@@ -348,7 +348,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -521,7 +521,7 @@
   <span class="md-ellipsis">
     
   
-    Overzicht
+    Lokaal ontwikkelen
   
 
     
@@ -1153,7 +1153,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1210,6 +1210,34 @@
     
   
     Schrijfconventies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specs/term-entry-sjabloon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Term-entry-sjabloon (curated texts)
   
 
     
@@ -1876,7 +1904,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -1892,7 +1920,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2259,7 +2287,35 @@
   <span class="md-ellipsis">
     
   
-    TEv2 — bredere TermRef-campagne (later)
+    TEv2 — bredere TermRef-campagne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plans/docs-content-publiek-en-paginatypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs-content: publiek, paginatypen en werkplan
   
 
     
@@ -2555,10 +2611,12 @@
 
 
 <h1 id="brontypes-en-validatie">Brontypes en validatie<a class="headerlink" href="#brontypes-en-validatie" title="Permanent link">&para;</a></h1>
-<p>Overzicht van validatieregels per brontype in <code>zangstukken/</code>.</p>
+<p>Overzicht van validatieregels per type <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> in <code>zangstukken/</code>
+(<a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>).</p>
 <h2 id="vsa"><code>.vsa</code><a class="headerlink" href="#vsa" title="Permanent link">&para;</a></h2>
 <p>Validatie van <a href="/bron/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestanden</a> — bestanden met <a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">vsa-notatie</a>.</p>
-<p>Installatie: <a href="https://github.com/orthodox-groningen/VSA-tooling">VSA-tooling</a>.</p>
+<p>Installatie: <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>
+(<a href="https://github.com/orthodox-groningen/VSA-tooling">GitHub</a>).</p>
 <table>
 <thead>
 <tr>
@@ -2647,7 +2705,8 @@
 </tr>
 </tbody>
 </table>
-<p>Alleen wanneer MusicXML <strong>zelfstandige bron</strong> is, niet wanneer het afgeleide van <a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">vsa-notatie</a> is.</p>
+<p>Alleen wanneer MusicXML <strong>zelfstandig <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a></strong> is, niet wanneer het
+<a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> van <a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">vsa-notatie</a> is.</p>
 <h2 id="zangstukyaml"><code>zangstuk.yaml</code><a class="headerlink" href="#zangstukyaml" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2669,7 +2728,7 @@
 <td>CI (gepland)</td>
 </tr>
 <tr>
-<td>Eén status per source</td>
+<td>Eén status per <a href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a></td>
 <td>script</td>
 <td>CI (gepland)</td>
 </tr>

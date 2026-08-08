@@ -348,7 +348,7 @@
           
   
   
-  Terminologie
+  Begrippenlijst
 
         </a>
       </li>
@@ -521,7 +521,7 @@
   <span class="md-ellipsis">
     
   
-    Overzicht
+    Lokaal ontwikkelen
   
 
     
@@ -1283,7 +1283,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie — zangstukken, bronnen en publicatie
+    Zangstukmodel
   
 
     
@@ -1340,6 +1340,34 @@
     
   
     Schrijfconventies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specs/term-entry-sjabloon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Term-entry-sjabloon (curated texts)
   
 
     
@@ -1901,7 +1929,7 @@
   <span class="md-ellipsis">
     
   
-    Terminologie
+    Begrippenlijst
   
 
     
@@ -1917,7 +1945,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Terminologie
+    Begrippenlijst
   
 
           </label>
@@ -2284,7 +2312,35 @@
   <span class="md-ellipsis">
     
   
-    TEv2 — bredere TermRef-campagne (later)
+    TEv2 — bredere TermRef-campagne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plans/docs-content-publiek-en-paginatypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs-content: publiek, paginatypen en werkplan
   
 
     
@@ -2611,7 +2667,7 @@
 <ul>
 <li>vaste <strong>tekst</strong> (kopjes, liturgische aanwijzingen) — jij schrijft dat zelf;</li>
 <li><strong><code>default.gelegenheidstype</code></strong> (en parochie-defaults) — <strong>geen</strong> individuele feesten;</li>
-<li><strong><code>:::include</code></strong> met exporttype en <strong><code>zoek="…"</code></strong> — liturgische rol, nog geen pad.</li>
+<li><strong><code>:::include</code></strong> met <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a> en <strong><code>zoek="…"</code></strong> — liturgische rol, nog geen pad.</li>
 </ul>
 <p>Als jij het sjabloon <strong>gebruikt</strong> voor een concrete dienst, maak je een <strong>sessie</strong>:
 zelfde structuur, plus <strong><code>default.gelegenheid</code></strong> (en evt. <code>toon</code>, titel, datum).</p>
@@ -2678,7 +2734,7 @@ parochie-default dekt beide niet. Zie <a href="../../../specs/catalogus-samenste
 catalogus negeert ze.</p>
 <hr />
 <h2 id="stap-2-tekst-en-includes">Stap 2 — Tekst en includes<a class="headerlink" href="#stap-2-tekst-en-includes" title="Permanent link">&para;</a></h2>
-<p>Schrijf gewone markdown. Waar notatie komt — meteen het exporttype dat je op de site wilt:</p>
+<p>Schrijf gewone markdown. Waar notatie komt — meteen het <a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttype</a> dat je op de site wilt:</p>
 <div class="highlight"><pre><span></span><code><span class="gu">## Kleine intocht</span>
 
 <span class="gu">### Troparion</span>
@@ -2698,7 +2754,8 @@ Tekst of aanwijzing voor het koor (vrij).
   die zit in <strong><code>default.gelegenheid</code></strong> van de sessie.</li>
 <li>Meerdere <code>:::include</code>-regels met <strong>dezelfde</strong> <code>zoek=</code> voor svg, coria, mp3-player, …</li>
 <li><code>(Kastorski)</code> in <code>zoek=</code> mag voor disambiguation — bijv. Cherubijnenhymne.</li>
-<li>Geen <code>variant-id</code> tenzij je na review een vast <strong><code>bron:…</code></strong>-pad zet.</li>
+<li>Geen <code>variant-id</code> tenzij je na review een vast <strong><code>bron:…</code></strong>-pad zet
+  (<a href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a> alleen dan expliciet).</li>
 </ul>
 <hr />
 <h2 id="stap-3-koormap-sjabloon-voorbeeld">Stap 3 — Koormap-sjabloon (voorbeeld)<a class="headerlink" href="#stap-3-koormap-sjabloon-voorbeeld" title="Permanent link">&para;</a></h2>
