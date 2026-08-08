@@ -233,13 +233,16 @@ PR + checklist in docs-bijdragen. Optioneel later: litmus-test in review
 
 
 
-### Fase 0 — Juistheid (VSA-tooling, snel)
+### Fase 0 — Juistheid (VSA-tooling, snel) — **gedaan** (2026-08-08)
 
 
-| #   | Taak                                                                                                     | Acceptatie                               |
-| --- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| 0.1 | Vervang succes-`validate` op Home/Starten/validation/cli-taken/user-guide door bestand dat echt OK geeft | Geen pad claimt succes op `050_svg_demo` |
-| 0.2 | Houd `050_svg_demo` alleen bij svg/parse met bestaande waarschuwing                                      | validate.md en svg.md blijven consistent |
+| #   | Taak                                                                                                     | Acceptatie                               | Status   |
+| --- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
+| 0.1 | Vervang succes-`validate` op Home/Starten/validation/cli-taken/user-guide door bestand dat echt OK geeft | Geen pad claimt succes op `050_svg_demo` | gedaan   |
+| 0.2 | Houd `050_svg_demo` alleen bij svg/parse met bestaande waarschuwing                                      | validate.md en svg.md blijven consistent | gedaan   |
+
+Succespad overal: `examples\minimal\001_plain_text.vsa`. `050_svg_demo.vsa` blijft
+bij svg/parse/musicxml en als **faalvoorbeeld** in `reference/cli/validate.md`.
 
 
 
@@ -329,7 +332,7 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
       volwassenen** (geen techneut aannemen) op hubs/task guides/onboarding/P3-workflows;
       expertpagina’s mogen dichter met duidelijk “voor wie”.
 - [ ] Jargon-regel staat in schrijfconventies: nodig jargon → curated text + TermRef.
-- [ ] P0-demo-bug in VSA is weg.
+- [x] P0-demo-bug in VSA is weg.
 - [ ] `representatie` en `zangstuk` term-entries volgen sjabloon (incl. waartoe /
       gerelateerd / verder lezen) en matchen de spec.
 - [ ] Kern-task-guides P2 hebben voorbeeld + checklist + “wanneer” + foutpad.
@@ -364,5 +367,6 @@ Elke fase = eigen PR(s); geen mengeling met ongerelateerde features.
 | 2026-08-08 | Eerste voorstel na content-audit bron + VSA                                                                                        |
 | 2026-08-08 | Aanvullingen (P3-taal, waartoe, foutpaden, jargon→curated, welwillende volwassenen) doorgewerkt in §3-richtlijnen, fasen A–E en §7 |
 | 2026-08-08 | §5a Landingsgarantie: matrix plan→canonieke plek + PR DoD `Landing:`                                                               |
+| 2026-08-08 | Fase 0 gedaan (VSA): succes-`validate` → `001_plain_text.vsa`                                                                      |
 
 
