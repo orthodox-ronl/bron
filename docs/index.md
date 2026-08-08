@@ -13,16 +13,16 @@ koor dat een dienst oefent of een partituur volgt. Daarvoor: de parochie-site
 
 ## Wie ben je? (kies je route)
 
-| Ik wil …                                               | Persona | Start hier                                                                                          |
-| ------------------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------- |
-| Sjablonen / `zoek=` / catalogus voor de parochie       | P1      | [Catalogus-handleidingen](manuals/catalogus/index.md)                                               |
-| Een [zangstuk](@) of bronvariant toevoegen / `access:` | P2      | [Zangstuk toevoegen](manuals/zangstuk-toevoegen.md) · [Handleidingen](manuals/index.md)             |
-| Begrijpen wat wel/niet mag (afgeleide, ids, …)         | P6      | [Specificaties](specs/index.md) · [Terminologie](glossary.md)                                       |
-| Docs of TEv2 bijdragen                                 | P5      | [Documentatie bijdragen](manuals/docs-bijdragen.md)                                                 |
-| VSA schrijven / CLI / SVG / MusicXML                   | P3/P4   | [VSA-tooling — documentatie](https://orthodox-groningen.github.io/VSA-tooling/)                     |
-| Partituur oefenen / liturgie volgen                    | P7      | **Niet hier** — parochie-site / demo                                                                |
+| Ik wil …                                               | Voor wie                               | Start hier                                                                              |
+| ------------------------------------------------------ | -------------------------------------- | --------------------------------------------------------------------------------------- |
+| Sjablonen / `zoek=` / catalogus voor de parochie       | Parochie-docs-maintainer               | [Catalogus-handleidingen](manuals/catalogus/index.md)                                   |
+| Een [zangstuk](@) of bronvariant toevoegen / `access:` | Bron-contentbeheerder                  | [Zangstuk toevoegen](manuals/zangstuk-toevoegen.md) · [Handleidingen](manuals/index.md) |
+| Begrijpen wat wel/niet mag (afgeleide, ids, …)         | Spec-/PR-reviewer                      | [Specificaties](specs/index.md) · [Terminologie](glossary.md)                           |
+| Docs of TEv2 bijdragen                                 | Docs-/tool-contributor                 | [Documentatie bijdragen](manuals/docs-bijdragen.md)                                     |
+| VSA schrijven / CLI / SVG / MusicXML                   | Notatie-auteur / consumer-site builder | [VSA-tooling — documentatie](https://orthodox-groningen.github.io/VSA-tooling/)         |
+| Partituur oefenen / liturgie volgen                    | Koor / liturgie                        | **Niet hier** — parochie-site / demo                                                    |
 
-Persona’s en toon: [Schrijfconventies](specs/schrijfconventies.md).
+Rollen en toon: [Schrijfconventies](specs/schrijfconventies.md).
 
 ## Wat vind je hier
 

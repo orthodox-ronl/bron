@@ -31,7 +31,19 @@ bij conflict geldt dit document boven plannen.
 | **P6** | Spec-/PR-reviewer             | Wat mag wel/niet? Wanneer is iets een afgeleide?       | bron specs + terms + glossary                      |
 | **P7** | Eindgebruiker koor / liturgie | Partituur oefenen, dienst volgen                       | **Niet** deze docs (parochie-site / VSA-demo)      |
 
-Op Home/Starten: hard zeggen dat P7 hier niet bediend wordt (doorverwijzen).
+Op Home/Starten: hard zeggen dat **koor / liturgie** hier niet bediend wordt
+(doorverwijzen).
+
+### Persona’s in lezerstekst
+
+Ids `P1`–`P7` zijn **interne labels** (frontmatter, plannen, review). Op
+pagina’s die lezers zien (hubs, “Voor wie”, route-tabellen, admonitions):
+
+- Gebruik de **persona-naam** (`Notatie-auteur`, `Bron-contentbeheerder`, …).
+- **Niet** alleen `P3`, `P4`, … — dat zegt een lezer niets.
+- Optioneel in contributor-docs: `Notatie-auteur (P3)` of frontmatter
+  `P3 — Notatie-auteur`.
+- Kolomkop op route-tabellen: **Voor wie** (niet “Persona” met alleen een code).
 
 ---
 
@@ -69,12 +81,13 @@ in bron-referentie** — link naar de man-page.
 
 Elke gepubliceerde pagina (behalve puur gegenereerde shelltekst) begint met:
 
-1. **Voor wie** (één zin of admonition; persona-id mag).
+1. **Voor wie** (één zin of admonition; **persona-naam**, geen kale `P`-code).
 2. **Wanneer lees je dit** (en wanneer *niet* — link naar het juiste type).
 3. **Antwoord eerst** (1–3 zinnen), daarna diepte.
 4. Onderaan: **Zie ook** (how-to ↔ spec ↔ CLI ↔ term).
 
-Expertpagina’s (P5/P6) mogen dichter zijn, mits 1–2 duidelijk zijn.
+Expertpagina’s (docs-/tool-contributor, spec-/PR-reviewer) mogen dichter zijn,
+mits 1–2 duidelijk zijn.
 
 ### Frontmatter `doc_type` / `audience`
 
@@ -99,13 +112,21 @@ audience: "P2 — Bron-contentbeheerder"
 
 ## Lezerstest
 
+**Staande regel:** na schrijven of herschrijven **nalezen alsof je de bedoelde
+lezer bent**. Begrijp je zonder voorkennis van dit project wat de schrijver
+bedoelde? Zo nee: herschrijf tot dat wel zo is. Codes, afkortingen en
+interne ids (`P3`, `E.3`, …) horen niet in lezerstekst tenzij de pagina
+expliciet uitlegt wat ze betekenen.
+
 Per sectie (en bij PR-review):
 
 1. Welke vraag beantwoordt dit?
 2. Staat het antwoord eerst in gewone taal, daarna pas formele tabellen?
 3. Past de toon bij het paginatype en de primaire persona (welwillende volwassene
-   tenzij P5/P6)?
+   tenzij docs-/tool-contributor of spec-/PR-reviewer)?
 4. Bij task guide / CLI / workflow: is er een **foutpad** (melding → oorzaak → fix)?
+5. Zou een lezer zonder dit document te kennen de labels en tabellen begrijpen
+   (geen kale `P3` / jargon zonder TermRef of uitleg)?
 
 ---
 

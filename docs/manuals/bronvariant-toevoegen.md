@@ -5,7 +5,7 @@ audience: "P2 — Bron-contentbeheerder"
 # Bronvariant toevoegen
 
 !!! note "Voor wie / wanneer"
-    **Voor:** bron-contentbeheerder (P2) die onder een **bestaand** [zangstuk](@)
+    **Voor:** bron-contentbeheerder die onder een **bestaand** [zangstuk](@)
     een nieuwe [source-entry](@) / [representatie](@) (of [variant](@)-materiaal)
     toevoegt.
 

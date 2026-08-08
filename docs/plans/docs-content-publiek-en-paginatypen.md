@@ -345,7 +345,9 @@ waartoe/foutpad-norm toetsen — niet allemaal in deze fase.
 | --- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | -------------------------------- |
 | E.1 | Review-checklist in docs-bijdragen: type, publiek, lezerstest, jargon→TermRef/curated, foutpad waar verplicht | Contributors weten waarop te toetsen                  | gedaan (lezerstest aangescherpt) |
 | E.2 | TermRef-campagne op specs/reference/dunne manuals; bij ontbrekend jargon: term eerst curaten                  | Zie [tev2-termref-campagne](tev2-termref-campagne.md) | eerste golf gedaan; rest backlog |
-| E.3 | Optioneel: `catalogus-cli` splitsen gebruikers-CLI vs library                                                 | Schrijfconventies man-page-vorm                       | uitgesteld (optioneel, groot)    |
+| E.3 | Optioneel: `catalogus-cli` splitsen gebruikers-CLI vs library                                                 | Schrijfconventies man-page-vorm                       | uitgesteld (optioneel, groot) — als issue vastleggen |
+
+
 
 
 

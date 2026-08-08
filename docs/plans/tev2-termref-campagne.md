@@ -78,7 +78,8 @@ catalogus-pad blijven uncured jargon tot eigen PR).
 6. ~~Alleen inkorten waar hover de definitie al dekt (schrijfconventies)~~ **gedaan** (selectief)
 7. ~~`docs-build-tev2` / TermRef-check groen houden~~ **gedaan** (lokaal groen; MRG bijgewerkt)
 8. Geen normatieve betekenis wijzigen zonder glossary-PR
-9. E.3 optioneel: `catalogus-cli` splitsen (groot)
+9. E.3 optioneel: `catalogus-cli` splitsen (groot) — contentplan E.3; als GitHub-issue
+   vastleggen en hier linken
 
 ## Niet in scope
 

@@ -75,8 +75,10 @@ Zie [TEv2 in tool-docs](https://orthodox-groningen.github.io/VSA-tooling/guides/
 - [ ] Jargon op de pagina → TermRef of expliciet “niet in glossary” (geen ad-hoc term)
 - [ ] Pagina voldoet aan [schrijfconventies](../specs/schrijfconventies.md):
       kopnorm (voor wie / wanneer / antwoord eerst), toon welwillende volwassene
-      tenzij P5/P6; task/CLI/workflow hebben **foutpad**
+      tenzij docs-/tool-contributor of spec-/PR-reviewer; task/CLI/workflow hebben
+      **foutpad**; lezerstekst gebruikt persona-**namen** (geen kale `P3`)
 - [ ] Frontmatter waar van toepassing: `doc_type` + `audience` als
       `P3 — Notatie-auteur` (niet alleen `P3`)
-- [ ] Tabellen uitgelijnd
+- [ ] Nagelezen als de bedoelde lezer: zou iemand zonder voorkennis begrijpen
+      wat je bedoelde?- [ ] Tabellen uitgelijnd
 - [ ] Geen [afgeleide](@) SVG/MXL in bron committen

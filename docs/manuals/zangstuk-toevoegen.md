@@ -5,7 +5,7 @@ audience: "P2 — Bron-contentbeheerder"
 # Zangstuk toevoegen
 
 !!! note "Voor wie / wanneer"
-    **Voor:** bron-contentbeheerder (P2) die een **nieuw** [zangstuk](@) met
+    **Voor:** bron-contentbeheerder die een **nieuw** [zangstuk](@) met
     nieuw `zangstuk-id` in de [bron-repository](@) zet.
 
     **Wanneer:** je hebt een nieuw liturgisch stuk (nieuwe map + `zangstuk.yaml`).

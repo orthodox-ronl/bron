@@ -5,7 +5,7 @@ audience: "P2 — Bron-contentbeheerder"
 # Copyright en access
 
 !!! note "Voor wie / wanneer"
-    **Voor:** bron-contentbeheerder (P2) die copyright-gevoelig materiaal wil
+    **Voor:** bron-contentbeheerder die copyright-gevoelig materiaal wil
     registreren **zonder** het bestand in git te zetten.
 
     **Wanneer:** `copyright_status` is `copyrighted` of `onbekend` en het
