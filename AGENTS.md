@@ -75,11 +75,20 @@ python -m catalogus.cli index validate --bron-root .
 
 ### Documentatie (MkDocs)
 
+| Script                    | Doel                                              |
+| ------------------------- | ------------------------------------------------- |
+| `scripts\docs-serve.cmd`  | Snelle preview zonder TEv2                        |
+| `scripts\docs-serve-tev2.cmd` | Preview met TermRefs (CI-parity)              |
+| `scripts\docs-build.cmd`  | `mkdocs build --strict` zonder TEv2               |
+| `scripts\docs-build-tev2.cmd` | TEv2 + TermRef-check + MkDocs (CI)            |
+
 ```cmd
 cd /d C:\Git\orthodox-groningen\bron
-scripts\docs-build.cmd
-scripts\docs-serve.cmd
+npm install
+scripts\docs-build-tev2.cmd
 ```
+
+Handleiding: [docs/manuals/docs-bijdragen.md](docs/manuals/docs-bijdragen.md).
 
 ### Zangstukken valideren
 

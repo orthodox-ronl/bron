@@ -59,8 +59,21 @@ nav:
   - Home: index.md
   - Starten:
     - Overzicht: getting-started/index.md
-  - Terminologie:
-    - Overzicht: glossary.md
+  - Handleidingen:
+    - Overzicht: manuals/index.md
+    - manuals/github-pages-setup.md
+    - manuals/docs-bijdragen.md
+    - manuals/zangstuk-toevoegen.md
+    - manuals/bronvariant-toevoegen.md
+    - manuals/copyright-access.md
+    - manuals/parochie-lokaal-zangstukken.md
+    - Catalogus:
+      - Overzicht: manuals/catalogus/index.md
+      - manuals/catalogus/sjabloon-schrijven.md
+      - manuals/catalogus/rene-liturgie-geboorte-moeder-gods.md
+      - manuals/catalogus/rene-cherubijnenhymne-lokaal.md
+      - manuals/catalogus/rene-cherubijnenhymne-naar-bron.md
+      - manuals/catalogus/rene-cherubijnenhymne-musicxml.md
   - Specificaties:
     - Overzicht: specs/index.md
     - specs/documentatie-eigendom.md
@@ -73,20 +86,6 @@ nav:
     - specs/catalogus-architectuur.md
     - specs/catalogus-zoek-api.md
     - specs/catalogus-samenstelling-zangstuk.md
-  - Handleidingen:
-    - Overzicht: manuals/index.md
-    - manuals/github-pages-setup.md
-    - manuals/zangstuk-toevoegen.md
-    - manuals/bronvariant-toevoegen.md
-    - manuals/copyright-access.md
-    - manuals/parochie-lokaal-zangstukken.md
-    - Catalogus:
-      - Overzicht: manuals/catalogus/index.md
-      - manuals/catalogus/sjabloon-schrijven.md
-      - manuals/catalogus/rene-liturgie-geboorte-moeder-gods.md
-      - manuals/catalogus/rene-cherubijnenhymne-lokaal.md
-      - manuals/catalogus/rene-cherubijnenhymne-naar-bron.md
-      - manuals/catalogus/rene-cherubijnenhymne-musicxml.md
   - Referentie:
     - Overzicht: reference/index.md
     - reference/conversiemechanismen.md
@@ -98,6 +97,8 @@ nav:
     - reference/exporttype-mxl.md
     - reference/brontypes-validatie.md
     - reference/catalogus-cli.md
+  - Terminologie:
+    - Overzicht: glossary.md
   - Plannen:
     - Overzicht: plans/README.md
     - Ideeën:
@@ -106,6 +107,7 @@ nav:
       - plans/ideeen/tev2-terminologie.md
     - plans/tev2-h4-eenvoudige-termrefs.md
     - plans/tev2-h5-meerwoordige-termrefs.md
+    - plans/tev2-h6-toolchain.md
     - plans/ci-architectuur.md
     - plans/alias-blokken-ontwerp.md
     - plans/migratie-zondag-zangstukken.md

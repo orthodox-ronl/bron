@@ -1,6 +1,9 @@
 {
   "name": "bron-docs",
   "private": true,
+  "scripts": {
+    "tev2:docs": "scripts\\docs-build-tev2.cmd"
+  },
   "devDependencies": {
     "@tno-terminology-design/hrgt": "1.2.0",
     "@tno-terminology-design/mrg-import": "1.2.0",
