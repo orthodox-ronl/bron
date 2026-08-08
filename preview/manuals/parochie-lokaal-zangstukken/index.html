@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 21:37 CEST.
+  , gebouwd 2026-08-08 21:43 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2764,7 +2764,7 @@ naast materiaal uit de <a href="/bron/preview/terms/bron-repository" title="Bron
                 └── repr/
                     └── &lt;representatie-id&gt;.&lt;ext&gt;
 </code></pre></div>
-<p><strong><a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">Canonieke ids</a>:</strong> <code>^[a-z0-9_-]+$</code> — zie <a href="../../specs/terminologie/">terminologie</a>
+<p><strong><a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">Canonieke ids</a></strong> — zie <a href="../../specs/terminologie/">terminologie</a>
 (<code>zangstuk-id</code> → <code>variant-id</code> → <code>uitvoeringsvorm-id</code> → <code>representatie-id</code>).</p>
 <p><strong>Referentie-implementatie (<a href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> / demo):</strong>
 <a href="https://github.com/orthodox-groningen/VSA-demo/tree/main/content-source/lokaal">VSA-demo — content-source/lokaal</a>.</p>
@@ -2834,15 +2834,13 @@ Resolve naar catalogus-pad via
 <hr />
 <h2 id="promotie-naar-bron-repository">Promotie naar bron-repository<a class="headerlink" href="#promotie-naar-bron-repository" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Behoud <strong><a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke ids</a></strong> (<code>variant-id</code>, <code>uitvoeringsvorm-id</code>, <code>representatie-id</code>).</li>
+<li>Behoud <strong><a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke ids</a></strong>.</li>
 <li>Open PR naar <code>orthodox-groningen/bron</code> met <a href="/bron/preview/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> + metadata (zie
    <a href="../zangstuk-toevoegen/">zangstuk toevoegen</a> /
    <a href="../bronvariant-toevoegen/">bronvariant toevoegen</a>).</li>
 <li>Na merge: <a href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> kan bron-referentie gebruiken i.p.v. <code>lokaal/</code>-pad.</li>
 </ol>
-<p><a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">Parochie-lokaal</a> mag als kopie blijven staan; <strong>canonical</strong> is bron na sync.
-<a href="/bron/preview/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">Promotie</a> is de overgang van parochie-lokaal naar geregistreerd in de
-<a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>.</p>
+<p><a href="/bron/preview/terms/parochie-lokale-representatie" title="Parochie-lokale representatie: Een Bronbestand of inline-notatie in een parochie-repo die nog niet Geregistreerd is in de Bron-repository.">Parochie-lokaal</a> mag als kopie blijven staan; <strong>canonical</strong> is bron na sync.</p>
 <hr />
 <h2 id="build-pipeline-algemeen">Build-pipeline (algemeen)<a class="headerlink" href="#build-pipeline-algemeen" title="Permanent link">&para;</a></h2>
 <table>

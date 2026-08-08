@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 21:37 CEST.
+  , gebouwd 2026-08-08 21:43 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2943,7 +2943,7 @@ python -m catalogus.cli aliases sync --dry-run --bron-root .
 <ol>
 <li>Normaliseer invoer: <code>strip()</code> + Unicode <code>casefold()</code></li>
 <li>Match <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> of geregistreerde <a href="/bron/preview/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> binnen scope</li>
-<li>Resultaat: <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a> <code>[a-z0-9_-]+</code>, of fout (<code>NotFoundError</code>, <code>AmbiguousError</code>)</li>
+<li>Resultaat: <a href="/bron/preview/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canoniek id</a>, of fout (<code>NotFoundError</code>, <code>AmbiguousError</code>)</li>
 </ol>
 <p><code>lang</code> in alias-yaml is metadata; matching negeert taal (casefold op <code>text</code>).</p>
 <h2 id="python-library">Python-library<a class="headerlink" href="#python-library" title="Permanent link">&para;</a></h2>

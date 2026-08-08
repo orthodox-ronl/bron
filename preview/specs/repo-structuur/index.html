@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/hrg-termrefs-en-contentplan</code>
-  , gebouwd 2026-08-08 21:37 CEST.
+  , gebouwd 2026-08-08 21:43 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -2740,9 +2740,8 @@
 <h1 id="repo-structuur">Repo-structuur<a class="headerlink" href="#repo-structuur" title="Permanent link">&para;</a></h1>
 <p>Status: specificatie (juni 2026).</p>
 <h2 id="doel-en-scope">Doel en scope<a class="headerlink" href="#doel-en-scope" title="Permanent link">&para;</a></h2>
-<p>De <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> is de centrale bron van waarheid voor muzikale inhoud binnen
-<code>orthodox-groningen</code>. Parochie-sites consumeren deze repository; ze bewerken hem
-niet rechtstreeks.</p>
+<p>De <a href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> bevat de muzikale inhoud voor <code>orthodox-groningen</code>.
+Parochie-sites consumeren deze repository; ze bewerken hem niet rechtstreeks.</p>
 <p>De repository bevat <strong>bronnen</strong> en metadata. Geen <a href="/bron/preview/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> bestanden (SVG, MXL
 uit <a href="/bron/preview/terms/vsa" title="Vereenvoudigde Slavische Accentnotatie: Overkoepelend begrip voor zowel de Vsa-notatie (het notatieformaat voor liturgische zangteksten) als de Vsa-tooling (de CLI en toolchain voor validatie en publicatie).">VSA</a>) in git, en geen parochie-specifiek gebruik.</p>
 <h2 id="top-level-structuur">Top-level structuur<a class="headerlink" href="#top-level-structuur" title="Permanent link">&para;</a></h2>
@@ -2800,8 +2799,7 @@ uit <a href="/bron/preview/terms/vsa" title="Vereenvoudigde Slavische Accentnota
 </table>
 <h2 id="het-zangstuk">Het zangstuk<a class="headerlink" href="#het-zangstuk" title="Permanent link">&para;</a></h2>
 <h3 id="definitie">Definitie<a class="headerlink" href="#definitie" title="Permanent link">&para;</a></h3>
-<p>Een <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> is de eenheid waarvoor één of meer bronnen bestaan. Mapnaam =
-stabiele <code>id</code> onder <code>zangstukken/</code>.</p>
+<p>Mapnaam van een <a href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> = stabiele <code>id</code> onder <code>zangstukken/</code>.</p>
 <h3 id="bron-versus-afgeleid">Bron versus afgeleid<a class="headerlink" href="#bron-versus-afgeleid" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Bron:</strong> geen geautomatiseerd generatiepad vanuit een ander bestand <em>in deze repo</em>
