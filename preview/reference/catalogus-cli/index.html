@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/professionalisering-vervolg</code>
-  , gebouwd 2026-08-07 22:47 CEST.
+  , gebouwd 2026-08-08 08:06 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -1675,7 +1675,7 @@
   <span class="md-ellipsis">
     
   
-    Exporttype svg
+    Exporttype: embed SVG
   
 
     
@@ -2645,7 +2645,7 @@
 <p>De <strong>catalogus</strong>-CLI bouwt een alias-index uit manifesten en mappad, en lost
 invoer op naar <strong>canoniek id</strong> volgens <a href="../../specs/terminologie/">terminologie §2.8</a>.</p>
 <p><strong>Gebruikersverhalen</strong> (workflows, beoogde GUI): <a href="../../manuals/catalogus/">Catalogus — handleidingen</a>.</p>
-<p><strong>Sjablonen</strong> (<code>:::include zoek=</code>, <code>default</code>, <code>vsa resolve-catalogus</code>): <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.</p>
+<p><strong>Sjablonen</strong> (<code>:::include zoek=</code>, <code>default</code>, <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a>): <a href="../../specs/catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.</p>
 <h2 id="installatie">Installatie<a class="headerlink" href="#installatie" title="Permanent link">&para;</a></h2>
 <p>Gebruik steeds <strong><code>python -m</code></strong> voor pip, pytest en catalogus — dan hoef je
 <code>Scripts</code> niet op PATH te zetten en voorkom je mismatch tussen meerdere
@@ -2660,6 +2660,36 @@ python -m pip install -e &quot;.[dev]&quot;
 <div class="highlight"><pre><span></span><code>scripts\test.cmd
 </code></pre></div>
 <h2 id="commandos-fase-2">Commando's (fase 2)<a class="headerlink" href="#commandos-fase-2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Commando</th>
+<th>Doel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#catalogus-zoek"><code>catalogus zoek</code></a></td>
+<td>Vrije tekst + context → catalogus-pad</td>
+</tr>
+<tr>
+<td><a href="#catalogus-resolve"><code>catalogus resolve</code></a></td>
+<td>Alias → canoniek id (per niveau)</td>
+</tr>
+<tr>
+<td><a href="#catalogus-index-validate"><code>catalogus index validate</code></a></td>
+<td>Manifesten en alias-conflicten controleren</td>
+</tr>
+<tr>
+<td><a href="#catalogus-aliases-validate"><code>catalogus aliases validate</code></a></td>
+<td>Org-breed alias-blokkenregister valideren</td>
+</tr>
+<tr>
+<td><a href="#catalogus-aliases-sync"><code>catalogus aliases sync</code></a></td>
+<td>Gegenereerde alias-blokken naar yaml schrijven</td>
+</tr>
+</tbody>
+</table>
 <h3 id="catalogus-zoek"><code>catalogus zoek</code><a class="headerlink" href="#catalogus-zoek" title="Permanent link">&para;</a></h3>
 <p>Vrije tekst + <code>default.*</code>-context → <strong>catalogus-pad</strong> (<code>lokaal:…</code> / <code>bron:…</code>).</p>
 <p>Normatief contract: <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
@@ -2812,7 +2842,7 @@ python -m catalogus.cli aliases sync --dry-run --bron-root .
   → catalogus-pad — <a href="../../specs/catalogus-zoek-api/">catalogus-zoek-api.md</a> (<strong>geïmplementeerd</strong>, basis).</li>
 </ul>
 <p>Zie <a href="../../manuals/catalogus/rene-liturgie-geboorte-moeder-gods/">verhaal 1</a> en
-<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#vsa-resolve-catalogus">VSA — resolve-catalogus</a>.</p>
+<a href="https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#vsa-resolve-catalogus">VSA — resolve-catalogus</a>.</p>
 <h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 scripts\test.cmd
@@ -2857,7 +2887,7 @@ python -m pytest
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-08-01
+        Bijgewerkt: 2026-08-08
         
       </p>
       

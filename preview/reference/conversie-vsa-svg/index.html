@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/professionalisering-vervolg</code>
-  , gebouwd 2026-08-07 22:47 CEST.
+  , gebouwd 2026-08-08 08:06 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -1821,7 +1821,7 @@
   <span class="md-ellipsis">
     
   
-    Exporttype svg
+    Exporttype: embed SVG
   
 
     
@@ -2564,13 +2564,14 @@
 
 
 <h1 id="conversie-vsa-svg">Conversie: vsa svg<a class="headerlink" href="#conversie-vsa-svg" title="Permanent link">&para;</a></h1>
-<p>Contract voor het conversiemechanisme <strong><code>vsa svg</code></strong>: een <a href="/bron/preview/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a>
-omzetten naar een schaalbare vectorafbeelding (<code>.svg</code>).</p>
+<p>Contract voor het conversiemechanisme
+<a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/"><code>vsa svg</code></a>:
+een <a href="/bron/preview/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a> omzetten naar een schaalbare vectorafbeelding (<code>.svg</code>).</p>
 <p>Dit document beschrijft <strong>wat</strong> de conversie doet en <strong>wanneer</strong> je die gebruikt.
 Hoe je het commando precies aanroept (syntax, opties, voorbeelden): zie de
-<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/svg.md">CLI man-page <code>vsa svg</code></a>
+<a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/">CLI man-page <code>vsa svg</code></a>
 en de workflow-guide
-<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/svg-export.md">SVG exporteren</a>.</p>
+<a href="https://orthodox-groningen.github.io/VSA-tooling/guides/svg-export/">SVG exporteren</a>.</p>
 <hr />
 <h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">&para;</a></h2>
 <p>De conversie leest een <a href="/bron/preview/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a> en schrijft een SVG met VSA-glyphs,
@@ -2598,7 +2599,7 @@ een parochiesite.</p>
 </tr>
 <tr>
 <td>Inline tijdens document-build</td>
-<td>Zelfde resultaat via <code>build-markdown</code> (zie tooling)</td>
+<td>Zelfde resultaat via <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/"><code>vsa build-markdown</code></a></td>
 </tr>
 </tbody>
 </table>
@@ -2620,7 +2621,7 @@ Coria — daarvoor is <a href="../conversie-vsa-musicxml/">vsa musicxml</a>.</p>
 </tr>
 <tr>
 <td>Validatie</td>
-<td>Moet slagen met <code>vsa validate</code> vóór een betrouwbare SVG</td>
+<td>Moet slagen met <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/"><code>vsa validate</code></a> vóór een betrouwbare SVG</td>
 </tr>
 <tr>
 <td>Frontmatter</td>
@@ -2672,7 +2673,7 @@ Coria — daarvoor is <a href="../conversie-vsa-musicxml/">vsa musicxml</a>.</p>
 <tbody>
 <tr>
 <td>Parse / semantiek</td>
-<td>Ja — eerst <code>vsa validate</code></td>
+<td>Ja — eerst <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/"><code>vsa validate</code></a></td>
 </tr>
 <tr>
 <td>Ontbrekend bestand</td>
@@ -2734,7 +2735,9 @@ Coria — daarvoor is <a href="../conversie-vsa-musicxml/">vsa musicxml</a>.</p>
 </tr>
 </tbody>
 </table>
-<p>Concrete foutteksten en commandovoorbeelden: CLI man-page <code>vsa svg</code> / <code>vsa validate</code>.</p>
+<p>Concrete foutteksten en commandovoorbeelden: CLI man-pages
+<a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/"><code>vsa svg</code></a> /
+<a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/"><code>vsa validate</code></a>.</p>
 <hr />
 <h2 id="open-punten-tbd">Open punten (TBD)<a class="headerlink" href="#open-punten-tbd" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2746,8 +2749,8 @@ Coria — daarvoor is <a href="../conversie-vsa-musicxml/">vsa musicxml</a>.</p>
 <ul>
 <li><a href="../exporttype-svg/">Exporttype svg</a></li>
 <li><a href="../conversiemechanismen/">Conversiemechanismen — overzicht</a></li>
-<li><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/svg.md">CLI: <code>vsa svg</code></a></li>
-<li><a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/svg-export.md">Guide: SVG exporteren</a></li>
+<li><a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/">CLI: <code>vsa svg</code></a></li>
+<li><a href="https://orthodox-groningen.github.io/VSA-tooling/guides/svg-export/">Guide: SVG exporteren</a></li>
 </ul>
 
 
@@ -2785,7 +2788,7 @@ Coria — daarvoor is <a href="../conversie-vsa-musicxml/">vsa musicxml</a>.</p>
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-08-02
+        Bijgewerkt: 2026-08-08
         
       </p>
       

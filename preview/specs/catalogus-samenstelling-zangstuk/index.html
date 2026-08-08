@@ -98,7 +98,7 @@
   
   <strong>Preview</strong>
    — branch <code>docs/professionalisering-vervolg</code>
-  , gebouwd 2026-08-07 22:47 CEST.
+  , gebouwd 2026-08-08 08:06 CEST.
   <a href="https://orthodox-groningen.github.io/bron/">Live documentatie (main)</a>.
   
 
@@ -1916,7 +1916,7 @@
   <span class="md-ellipsis">
     
   
-    Exporttype svg
+    Exporttype: embed SVG
   
 
     
@@ -2764,8 +2764,8 @@ staat <strong><code>:::include</code></strong> met exporttype (<code>svg</code>,
 <strong><code>zoek="…"</code></strong> — nog geen catalogus-pad. Tussen de includes: gewone markdown
 (kopjes, liturgische aanwijzingen).</p>
 <p>De <strong>catalogus</strong> zoekt het stuk op (met <strong><code>default.*</code></strong> uit de sessie) en levert een
-<strong>catalogus-pad</strong>. <strong><code>vsa resolve-catalogus</code></strong> schrijft dat pad in het markdown-bestand;
-pas daarna mag <strong><code>vsa build-markdown</code></strong> / export draaien.</p>
+<strong>catalogus-pad</strong>. <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a> schrijft dat pad in het markdown-bestand;
+pas daarna mag <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/"><code>vsa build-markdown</code></a> / export draaien.</p>
 <p>VSA-build (<code>:::include</code> zonder <code>zoek=</code>) en <strong><code>@include-vsa</code></strong> in <code>.vsa</code>-brontekst vallen buiten dit
 document qua syntax; beide <strong><code>zoek=</code></strong>-varianten gebruiken dezelfde resolver — zie
 <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
@@ -2897,7 +2897,7 @@ resolve levert <code>bron:…/liturgikon</code> voor Troparion/Kondakion en
 </tr>
 <tr>
 <td><strong>Includes met <code>zoek=</code></strong></td>
-<td>Catalogus + <code>vsa resolve-catalogus</code></td>
+<td>Catalogus + <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a></td>
 <td><code>:::include &lt;exporttype&gt; zoek="…" …</code></td>
 </tr>
 <tr>
@@ -3025,7 +3025,7 @@ Tekst of aanwijzing voor het koor (vrij).
 <li>Geen <code>variant-id</code> of <code>uitvoeringsvorm-id</code> — tenzij na review handmatig
   catalogus-pad.</li>
 </ul>
-<h3 id="resolver-gedrag-catalogus-zoek">Resolver-gedrag (<code>catalogus zoek</code>)<a class="headerlink" href="#resolver-gedrag-catalogus-zoek" title="Permanent link">&para;</a></h3>
+<h3 id="resolver-gedrag-catalogus-zoek">Resolver-gedrag (<a href="../../reference/catalogus-cli/#catalogus-zoek"><code>catalogus zoek</code></a>)<a class="headerlink" href="#resolver-gedrag-catalogus-zoek" title="Permanent link">&para;</a></h3>
 <p>Normatief API-contract: <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a>.</p>
 <ol>
 <li>Lees <strong><code>default.*</code></strong> uit frontmatter van het markdown- of <code>.vsa</code>-bestand.</li>
@@ -3036,7 +3036,7 @@ Tekst of aanwijzing voor het koor (vrij).
 </ol>
 <hr />
 <h2 id="na-resolve-catalogus-pad-in-include">Na resolve — catalogus-pad in <code>:::include</code><a class="headerlink" href="#na-resolve-catalogus-pad-in-include" title="Permanent link">&para;</a></h2>
-<p><code>vsa resolve-catalogus</code> vervangt <code>zoek="…"</code> door het opgeloste pad; overige parameters
+<p><a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a> vervangt <code>zoek="…"</code> door het opgeloste pad; overige parameters
 (<code>alt</code>, <code>label</code>, <code>scale</code>, …) blijven staan.</p>
 <div class="highlight"><pre><span></span><code>:::include svg bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon alt=&quot;Troparion&quot; scale=&quot;85%&quot;:::
 :::include svg bron:kondak-geboorte-moeder-gods/kondak-geboorte-moeder-gods/liturgikon alt=&quot;Kondakion&quot;:::
@@ -3086,10 +3086,10 @@ faalt bij build zolang het <code>.vsa</code> <strong>buiten</strong> <code>--con
 <li>Sjabloon bevat al <code>:::include … zoek="…"</code> en vrije tekst ertussen.</li>
 <li>Catalogus-index controleren (<a href="../../reference/catalogus-cli/">Catalogus CLI</a>).</li>
 <li>Alle <code>zoek=</code> oplossen tot catalogus-pad; review bij ambiguïteit
-   (<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/resolve-catalogus.md"><code>vsa resolve-catalogus</code></a>).</li>
+   (<a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a>).</li>
 <li>Valideren / bouwen — alleen op <strong>opgelost</strong> bestand
-   (<a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/validate.md"><code>vsa validate</code></a>,
-   <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/cli/build-markdown.md"><code>vsa build-markdown</code></a>).</li>
+   (<a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/"><code>vsa validate</code></a>,
+   <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/"><code>vsa build-markdown</code></a>).</li>
 <li>Site / export.</li>
 </ol>
 <pre class="mermaid"><code>sequenceDiagram
@@ -3105,7 +3105,7 @@ faalt bij build zolang het <code>.vsa</code> <strong>buiten</strong> <code>--con
   VSA--&gt;&gt;Rene: sessie-opgelost.md
   Rene-&gt;&gt;Build: build (geen zoek= meer)
   Build--&gt;&gt;Rene: site / export</code></pre>
-<p><strong>Harde regel:</strong> document-build (<code>vsa build-markdown</code>) met nog open <code>zoek=</code> → <strong>fout</strong>
+<p><strong>Harde regel:</strong> document-build (<a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/"><code>vsa build-markdown</code></a>) met nog open <code>zoek=</code> → <strong>fout</strong>
 (geen stille fallback).</p>
 <hr />
 <h2 id="verouderd-zangstuk">Verouderd: <code>:::zangstuk</code><a class="headerlink" href="#verouderd-zangstuk" title="Permanent link">&para;</a></h2>
@@ -3115,7 +3115,7 @@ exportkeuzes (svg, coria, …) vanaf het begin.</p>
 <hr />
 <h2 id="handleiding">Handleiding<a class="headerlink" href="#handleiding" title="Permanent link">&para;</a></h2>
 <p>Praktisch voor Rene: <a href="../../manuals/catalogus/sjabloon-schrijven/">Sjabloon schrijven</a>.</p>
-<p>Tooling: <a href="https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/guides/parochie-lokaal-vsa.md#include-met-zoek-catalogus">VSA — <code>:::include</code> met <code>zoek=</code></a>.</p>
+<p>Tooling: <a href="https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#include-met-zoek-catalogus">VSA — <code>:::include</code> met <code>zoek=</code></a>.</p>
 <hr />
 <h2 id="implementatiestatus">Implementatiestatus<a class="headerlink" href="#implementatiestatus" title="Permanent link">&para;</a></h2>
 <table>
@@ -3127,11 +3127,11 @@ exportkeuzes (svg, coria, …) vanaf het begin.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>catalogus resolve</code> per niveau</td>
+<td><a href="../../reference/catalogus-cli/#catalogus-resolve"><code>catalogus resolve</code></a> per niveau</td>
 <td><strong>Geïmplementeerd</strong> (basis)</td>
 </tr>
 <tr>
-<td><strong><code>catalogus zoek</code> API</strong></td>
+<td><a href="../../reference/catalogus-cli/#catalogus-zoek"><code>catalogus zoek</code></a> API</td>
 <td><strong>Geïmplementeerd</strong> (basis) — <a href="../catalogus-zoek-api/">catalogus-zoek-api.md</a></td>
 </tr>
 <tr>
@@ -3143,7 +3143,7 @@ exportkeuzes (svg, coria, …) vanaf het begin.</p>
 <td><strong>Geïmplementeerd</strong> (VSA-tooling)</td>
 </tr>
 <tr>
-<td><code>vsa resolve-catalogus</code></td>
+<td><a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/"><code>vsa resolve-catalogus</code></a></td>
 <td><strong>Geïmplementeerd</strong> (VSA-tooling)</td>
 </tr>
 <tr>
@@ -3228,7 +3228,7 @@ exportkeuzes (svg, coria, …) vanaf het begin.</p>
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-08-02
+        Bijgewerkt: 2026-08-08
         
       </p>
       
