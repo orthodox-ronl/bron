@@ -2791,7 +2791,7 @@
 <h1 id="inhoudslevenscyclus">Inhoudslevenscyclus<a class="headerlink" href="#inhoudslevenscyclus" title="Permanent link">&para;</a></h1>
 <p>Status: specificatie v1 (juni 2026). Beschrijft de keten van brondocumenten via
 <a href="../../reference/conversiemechanismen/">conversie</a> naar <a href="../../reference/exportcontracten/">export</a>
-in <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstellingen</a>.</p>
+in <a class="og-termref" href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstellingen</a>.</p>
 <hr />
 <h2 id="overzicht">Overzicht<a class="headerlink" href="#overzicht" title="Permanent link">&para;</a></h2>
 <p>Drie lagen — <strong>niet</strong> door elkaar halen:</p>
@@ -2811,12 +2811,12 @@ in <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-docume
 </tr>
 <tr>
 <td><strong>Conversie</strong></td>
-<td>Tools met vaste input/output → <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a></td>
+<td>Tools met vaste input/output → <a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a></td>
 <td>Deel 2; <a href="../../reference/conversiemechanismen/">Conversiemechanismen</a></td>
 </tr>
 <tr>
 <td><strong>Export</strong></td>
-<td>Hoe <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> in een uitgave verschijnen</td>
+<td>Hoe <a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> in een uitgave verschijnen</td>
 <td>Deel 3; <a href="../../reference/exportcontracten/">Exportcontracten</a></td>
 </tr>
 </tbody>
@@ -2865,7 +2865,7 @@ gedeelde scans.</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a></td>
+<td><a class="og-termref" href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a></td>
 <td><code>sources/vsa/</code></td>
 <td>ja</td>
 <td>Primaire tekstbron voor conversie</td>
@@ -2874,7 +2874,7 @@ gedeelde scans.</p>
 <td>Scan (PDF, raster)</td>
 <td><code>sources/scan/</code></td>
 <td>ja</td>
-<td>Niet splitsen bij meerdere <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstukken</a> op één blad</td>
+<td>Niet splitsen bij meerdere <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstukken</a> op één blad</td>
 </tr>
 <tr>
 <td>MusicXML als bron</td>
@@ -2925,15 +2925,15 @@ gedeelde scans.</p>
 </ul>
 <p><strong>Voorrangsregel:</strong> binnen deze repository is <code>zangstuk.yaml</code> leidend voor metadata
 die ook in VSA-frontmatter kan staan (<code>title</code>, auteurschap, taal, toon). Frontmatter
-in <code>.vsa</code> is bedoeld voor gebruik <em>buiten</em> deze repo (bijv. losse export met <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>).</p>
+in <code>.vsa</code> is bedoeld voor gebruik <em>buiten</em> deze repo (bijv. losse export met <a class="og-termref" href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>).</p>
 <h3 id="validatie-en-compleetheid-metadata">Validatie en compleetheid metadata<a class="headerlink" href="#validatie-en-compleetheid-metadata" title="Permanent link">&para;</a></h3>
 <p>Minimaal (handmatig of CI):</p>
 <ul>
 <li><code>id</code> gelijk aan mapnaam; <code>title</code> aanwezig</li>
-<li>Minstens één <code>sources</code>-entry (<a href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a>)</li>
+<li>Minstens één <code>sources</code>-entry (<a class="og-termref" href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a>)</li>
 <li>Per source: <strong>exact één</strong> van <code>file:</code> / <code>access:</code> / <code>status: nog-niet-getranscribeerd</code></li>
-<li>Elk <code>file:</code>-pad bestaat relatief aan de <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>-map</li>
-<li><code>based_on</code> verwijst naar bestaande source-id binnen hetzelfde <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a></li>
+<li>Elk <code>file:</code>-pad bestaat relatief aan de <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>-map</li>
+<li><code>based_on</code> verwijst naar bestaande source-id binnen hetzelfde <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a></li>
 <li>Liturgische velden waar van toepassing (<code>gelegenheidstype</code>, <code>toon</code>, …)</li>
 <li><code>copyright_status: copyrighted</code> ⇒ geen <code>file:</code>; wel <code>access:</code></li>
 </ul>
@@ -2947,7 +2947,7 @@ in <code>.vsa</code> is bedoeld voor gebruik <em>buiten</em> deze repo (bijv. lo
 </thead>
 <tbody>
 <tr>
-<td>Nieuw <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a></td>
+<td>Nieuw <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a></td>
 <td><a href="../../manuals/zangstuk-toevoegen/">Zangstuk toevoegen</a></td>
 </tr>
 <tr>
@@ -2963,22 +2963,22 @@ in <code>.vsa</code> is bedoeld voor gebruik <em>buiten</em> deze repo (bijv. lo
 <hr />
 <h2 id="deel-2-conversiemechanismen">Deel 2 — Conversiemechanismen<a class="headerlink" href="#deel-2-conversiemechanismen" title="Permanent link">&para;</a></h2>
 <p><a href="../../reference/conversiemechanismen/">Conversie</a> verandert <strong>formaat</strong>
-(<a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> → <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a>). <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">Afgeleiden</a> ontstaan in de build.</p>
-<p>Geregistreerde <a href="/bron/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanismen</a>:</p>
+(<a class="og-termref" href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> → <a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a>). <a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">Afgeleiden</a> ontstaan in de build.</p>
+<p>Geregistreerde <a class="og-termref" href="/bron/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanismen</a>:</p>
 <ul>
 <li><a href="../../reference/conversiemechanismen/">Conversiemechanismen — overzicht</a></li>
 <li><a href="../../reference/conversie-vsa-svg/">Conversie vsa svg</a></li>
 <li><a href="../../reference/conversie-vsa-musicxml/">Conversie vsa musicxml</a></li>
 </ul>
 <p><strong>Trigger (doel):</strong> na merge naar <code>main</code> of bij parochie-build wanneer een
-<a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> wordt opgenomen in een <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>.</p>
-<p><strong>Huidige stand:</strong> conversie draait deels inline in <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>
-<code>build-markdown</code>; expliciete vooraf-build voor alle <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleiden</a> is gepland —
+<a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> wordt opgenomen in een <a class="og-termref" href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>.</p>
+<p><strong>Huidige stand:</strong> conversie draait deels inline in <a class="og-termref" href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>
+<code>build-markdown</code>; expliciete vooraf-build voor alle <a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleiden</a> is gepland —
 zie <a href="../../plans/ci-architectuur/">CI-architectuur</a>.</p>
 <hr />
 <h2 id="deel-3-exportmechanismen">Deel 3 — Exportmechanismen<a class="headerlink" href="#deel-3-exportmechanismen" title="Permanent link">&para;</a></h2>
-<p><a href="../../reference/exportcontracten/">Export</a> bepaalt <strong>hoe</strong> een <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a>
-(of handmatige sibling) in een <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> verschijnt.</p>
+<p><a href="../../reference/exportcontracten/">Export</a> bepaalt <strong>hoe</strong> een <a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a>
+(of handmatige sibling) in een <a class="og-termref" href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> verschijnt.</p>
 <p>Exportcontracten:</p>
 <ul>
 <li><a href="../../reference/exportcontracten/">Exportcontracten — overzicht</a></li>
@@ -2986,12 +2986,12 @@ zie <a href="../../plans/ci-architectuur/">CI-architectuur</a>.</p>
 <li><a href="../../reference/exporttype-coria/">Exporttype coria</a></li>
 <li><a href="../../reference/exporttype-mxl/">Exporttype mxl</a></li>
 </ul>
-<p>Authoring-syntax in parochie-/<a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>-repositories (<a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>):</p>
+<p>Authoring-syntax in parochie-/<a class="og-termref" href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>-repositories (<a class="og-termref" href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>):</p>
 <div class="highlight"><pre><span></span><code>:::include svg &quot;melodie.vsa&quot; alt=&quot;…&quot;:::
 :::include coria &quot;melodie.vsa&quot; label=&quot;Oefenen in Coria&quot;:::
 :::include mxl &quot;melodie.vsa&quot; label=&quot;Download MusicXML&quot;:::
 </code></pre></div>
-<p>Dat zijn <strong><a href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttypes</a></strong>, geen conversie-commando's.</p>
+<p>Dat zijn <strong><a class="og-termref" href="/bron/terms/exporttype" title="Exporttype: De naam die in een <code>:::include &lt;exporttype&gt;</code>-directive aangeeft welk Exportmechanisme wordt gebruikt, zoals <code>svg</code>, <code>coria</code> of <code>mxl</code>.">exporttypes</a></strong>, geen conversie-commando's.</p>
 <h3 id="uitgaveprofielen">Uitgaveprofielen<a class="headerlink" href="#uitgaveprofielen" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -3019,7 +3019,7 @@ zie <a href="../../plans/ci-architectuur/">CI-architectuur</a>.</p>
 </tr>
 </tbody>
 </table>
-<p>Profielen zijn geen aparte pipelines: één <a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>, conditionele
+<p>Profielen zijn geen aparte pipelines: één <a class="og-termref" href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>, conditionele
 export en CSS.</p>
 <hr />
 <h2 id="gerelateerde-documentatie">Gerelateerde documentatie<a class="headerlink" href="#gerelateerde-documentatie" title="Permanent link">&para;</a></h2>

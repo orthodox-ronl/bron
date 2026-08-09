@@ -2685,7 +2685,7 @@
 <p><strong>Voor:</strong> bron-contentbeheerder die copyright-gevoelig materiaal wil
 registreren <strong>zonder</strong> het bestand in git te zetten.</p>
 <p><strong>Wanneer:</strong> <code>copyright_status</code> is <code>copyrighted</code> of <code>onbekend</code> en het
-<a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> mag niet in de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>.
+<a class="og-termref" href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> mag niet in de <a class="og-termref" href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a>.
 <strong>Niet</strong> wanneer het materiaal wel vrij in de repo mag (<code>file:</code> + passende
 <code>copyright_status</code>).</p>
 </div>
@@ -2702,7 +2702,7 @@ en laat het beschermde bestand buiten de repository.</p>
 </code></pre></div>
 <h2 id="stappen">Stappen<a class="headerlink" href="#stappen" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Zet <code>copyright_status: copyrighted</code> (of <code>onbekend</code>) op de <a href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a>.</li>
+<li>Zet <code>copyright_status: copyrighted</code> (of <code>onbekend</code>) op de <a class="og-termref" href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a>.</li>
 <li>Vervang <code>file:</code> door <code>access:</code> met <code>note:</code> en <code>contact:</code> en/of <code>url:</code>.</li>
 <li>Neem het bronbestand <strong>niet</strong> op in de repository (of verwijder het indien
    al aanwezig) en controleer dat git het niet meer tracked.</li>
@@ -2712,12 +2712,12 @@ en laat het beschermde bestand buiten de repository.</p>
 <li><code>zangstuk.yaml</code> beschrijft de source via <code>access:</code>; er is geen <code>file:</code>-pad
   naar het beschermde document.</li>
 <li><code>git status</code> toont het bestand niet als toe te voegen inhoud.</li>
-<li>Publieke metadata (titel, liturgische context, <a href="/bron/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a>) blijft wel in
+<li>Publieke metadata (titel, liturgische context, <a class="og-termref" href="/bron/terms/herkomst" title="Herkomst: Metadata die beschrijft *waar* een Zangstuk, Variant, Uitvoeringsvorm of Representatie vandaan komt — mens, traditie, publicatie of parochie — maar niet zijnde een Bronbestand of de Bron-repository zelf.">herkomst</a>) blijft wel in
   de repo.</li>
 </ul>
 <h2 id="wat-blijft-wel-in-de-repo">Wat blijft wel in de repo<a class="headerlink" href="#wat-blijft-wel-in-de-repo" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Het <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> en <code>zangstuk.yaml</code> met metadata</li>
+<li>Het <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> en <code>zangstuk.yaml</code> met metadata</li>
 <li>Publieke titel, liturgische context, herkomst — <strong>zonder</strong> het beschermde bestand</li>
 </ul>
 <h2 id="rights-in-vsa-frontmatter"><code>rights</code> in VSA-frontmatter<a class="headerlink" href="#rights-in-vsa-frontmatter" title="Permanent link">&para;</a></h2>

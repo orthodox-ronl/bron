@@ -2482,22 +2482,22 @@ spaties, hoofdletters, diacritica of Cyrillisch in het <strong>opgeslagen</stron
 </thead>
 <tbody>
 <tr>
-<td><a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">Zangstuk</a></td>
+<td><a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">Zangstuk</a></td>
 <td><code>zangstuk-id</code></td>
 <td><code>antifoon-1-weekdagen</code></td>
 </tr>
 <tr>
-<td><a href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">Variant</a></td>
+<td><a class="og-termref" href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">Variant</a></td>
 <td><code>variant-id</code></td>
 <td><code>kastorski</code></td>
 </tr>
 <tr>
-<td><a href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">Uitvoeringsvorm</a></td>
+<td><a class="og-termref" href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">Uitvoeringsvorm</a></td>
 <td><code>uitvoeringsvorm-id</code></td>
 <td><code>groningen</code></td>
 </tr>
 <tr>
-<td><a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a></td>
+<td><a class="og-termref" href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">Representatie</a></td>
 <td><code>representatie-id</code></td>
 <td><code>hemelum</code></td>
 </tr>
@@ -2525,21 +2525,21 @@ spaties, hoofdletters, diacritica of Cyrillisch in het <strong>opgeslagen</stron
 </tr>
 </tbody>
 </table>
-<p>Invoer zoals <code>Groningen</code> mag als <a href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> (of case-variatie); na resolve is het
-<a href="/bron/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke id</a> in opslag altijd <code>groningen</code>.</p>
+<p>Invoer zoals <code>Groningen</code> mag als <a class="og-termref" href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> (of case-variatie); na resolve is het
+<a class="og-termref" href="/bron/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke id</a> in opslag altijd <code>groningen</code>.</p>
 <h2 id="motivatie">Motivatie<a class="headerlink" href="#motivatie" title="Permanent link">&para;</a></h2>
 <p>Builds, catalogus-paden en git moeten <strong>stabiel en eenduidig</strong> zijn. Menselijke
 spelling wisselt (<code>Hemelum</code> / <code>hemelum</code> / Cyrillisch); machine-ids niet. Het
-<a href="/bron/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke id</a> is die vaste kern: alles wat in de repository of in
+<a class="og-termref" href="/bron/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke id</a> is die vaste kern: alles wat in de repository of in
 machine-leesbare referenties terechtkomt, gebruikt precies die vorm (R5).</p>
-<p>Zonder dit begrip zouden <a href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a> en ids door elkaar lopen — of elke UI
+<p>Zonder dit begrip zouden <a class="og-termref" href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">aliassen</a> en ids door elkaar lopen — of elke UI
 zou rechtstreeks fragile strings in paden schrijven.</p>
 <h2 id="gerelateerd">Gerelateerd<a class="headerlink" href="#gerelateerd" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> — invoernaam die naar dit id resolve’t</li>
-<li>Id-velden van <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>, <a href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>, <a href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>,
-  <a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></li>
-<li><a href="/bron/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">promotie</a> — behoudt <a href="/bron/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke ids</a> bij overgang naar de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a></li>
+<li><a class="og-termref" href="/bron/terms/alias" title="Alias: Een voor mensen leesbare naam of werknaam voor een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie), die op de invoergrens mag worden gebruikt en door een resolver wordt omgezet naar het Canonieke Id in opslag.">alias</a> — invoernaam die naar dit id resolve’t</li>
+<li>Id-velden van <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>, <a class="og-termref" href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>, <a class="og-termref" href="/bron/terms/uitvoeringsvorm" title="Uitvoeringsvorm: Een concrete realisatie van een bepaalde Variant van een Zangstuk, waarbij de muzikale identiteit van die variant behouden blijft.">uitvoeringsvorm</a>,
+  <a class="og-termref" href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a></li>
+<li><a class="og-termref" href="/bron/terms/promotie" title="Promotie (registratie): De overgang van een Parochie-lokale Representatie naar een Geregistreerde Representatie, door het toevoegen van een Source-entry en bijbehorend Bronbestand in de Bron-repository via een PR.">promotie</a> — behoudt <a class="og-termref" href="/bron/terms/canoniek-id" title="Canonieke id: De stabiele, machine-leesbare identifier van een entiteit (Zangstuk, Variant, Uitvoeringsvorm of Representatie) in opslag: lowercase ASCII volgens <code>^[a-z0-9_-]+$</code>, zonder spaties, diacritica of Cyrillisch.">canonieke ids</a> bij overgang naar de <a class="og-termref" href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a></li>
 <li><a href="../../specs/terminologie/#2-canonieke-ids-en-aliassen">Zangstukmodel §2</a>;
   R5 in <a href="../../specs/terminologie/#0-gebruiksregels-alle-repos-orthodox-groningen">§0</a>;
   contrast in <a href="../../specs/terminologie/#3-gangbare-taal-vs-precieze-termen">§3</a></li>

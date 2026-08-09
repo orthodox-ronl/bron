@@ -2682,14 +2682,14 @@
 <h1 id="bronvariant-toevoegen">Bronvariant toevoegen<a class="headerlink" href="#bronvariant-toevoegen" title="Permanent link">&para;</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Voor wie / wanneer</p>
-<p><strong>Voor:</strong> bron-contentbeheerder die onder een <strong>bestaand</strong> <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>
-een nieuwe <a href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> / <a href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> (of <a href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>-materiaal)
+<p><strong>Voor:</strong> bron-contentbeheerder die onder een <strong>bestaand</strong> <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a>
+een nieuwe <a class="og-termref" href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> / <a class="og-termref" href="/bron/terms/representatie" title="Representatie: Een bestand waarin een Uitvoeringsvorm concreet is vastgelegd.">representatie</a> (of <a class="og-termref" href="/bron/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>-materiaal)
 toevoegt.</p>
 <p><strong>Wanneer:</strong> het <code>zangstuk-id</code> bestaat al; je voegt scan, VSA of andere bron toe.
 <strong>Niet</strong> wanneer je een nieuw liturgisch stuk met nieuw id nodig hebt →
 <a href="../zangstuk-toevoegen/">Zangstuk toevoegen</a>.</p>
 </div>
-<p><strong>Antwoord in het kort:</strong> plaats het <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> onder het bestaande
+<p><strong>Antwoord in het kort:</strong> plaats het <a class="og-termref" href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> onder het bestaande
 zangstuk, voeg een unieke source-entry toe (eventueel <code>based_on:</code>), valideer,
 commit.</p>
 <h2 id="voorbeeld-tweede-source-entry">Voorbeeld: tweede source-entry<a class="headerlink" href="#voorbeeld-tweede-source-entry" title="Permanent link">&para;</a></h2>
@@ -2706,10 +2706,10 @@ commit.</p>
 </code></pre></div>
 <h2 id="stappen">Stappen<a class="headerlink" href="#stappen" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Controleer dat het om het <strong>zelfde</strong> <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> gaat (zelfde map /
+<li>Controleer dat het om het <strong>zelfde</strong> <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> gaat (zelfde map /
    <code>zangstuk-id</code>), niet een nieuw zangstuk.</li>
-<li>Plaats het <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> in <code>sources/&lt;formaat&gt;/</code> van dat zangstuk.</li>
-<li>Voeg een <a href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> toe aan <code>zangstuk.yaml</code> met unieke <code>id:</code>.</li>
+<li>Plaats het <a class="og-termref" href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a> in <code>sources/&lt;formaat&gt;/</code> van dat zangstuk.</li>
+<li>Voeg een <a class="og-termref" href="/bron/terms/source-entry" title="Source-entry: Een element in de <code>sources:</code>-lijst van <code>zangstuk.yaml</code> in de Bron-repository, met een uniek <code>id</code> binnen dat Zangstuk; registreert een Representatie of placeholder op het huidige platte model.">source-entry</a> toe aan <code>zangstuk.yaml</code> met unieke <code>id:</code>.</li>
 <li>Zet <code>based_on:</code> naar de oorspronkelijke source indien van toepassing.</li>
 <li>Valideer <code>.vsa</code> indien van toepassing:</li>
 </ol>
@@ -2727,7 +2727,7 @@ vsa validate zangstukken\&lt;zangstuk-id&gt;
 <li><code>vsa validate</code> groen als er nieuwe <code>.vsa</code> is.</li>
 </ul>
 <h2 id="scan-vsa-definitievere-bron">Scan → VSA (definitievere bron)<a class="headerlink" href="#scan-vsa-definitievere-bron" title="Permanent link">&para;</a></h2>
-<p>Voeg <a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> toe als <strong>nieuwe</strong> source-entry; verwijder de scan-source
+<p>Voeg <a class="og-termref" href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> toe als <strong>nieuwe</strong> source-entry; verwijder de scan-source
 niet automatisch. Gebruik <code>based_on</code> en eventueel <code>note:</code> over de status van de
 scan.</p>
 <h2 id="bron-vervangen">Bron vervangen<a class="headerlink" href="#bron-vervangen" title="Permanent link">&para;</a></h2>

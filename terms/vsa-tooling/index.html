@@ -2490,9 +2490,9 @@
 
 <h1 id="vsa-tooling">VSA-tooling<a class="headerlink" href="#vsa-tooling" title="Permanent link">&para;</a></h1>
 <p><strong>VSA-tooling</strong> is de Python-toolchain voor het verwerken van
-<a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a>-bestanden. De kern is de <code>vsa</code> CLI: die parseert, valideert en
-zet <a href="/bron/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestanden</a> om naar <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleiden</a> (bijv. <code>.svg</code>, <code>.mxl</code>). Die
-afgeleiden worden <strong>niet</strong> in de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> bewaard, maar bij de build
+<a class="og-termref" href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a>-bestanden. De kern is de <code>vsa</code> CLI: die parseert, valideert en
+zet <a class="og-termref" href="/bron/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestanden</a> om naar <a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleiden</a> (bijv. <code>.svg</code>, <code>.mxl</code>). Die
+afgeleiden worden <strong>niet</strong> in de <a class="og-termref" href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> bewaard, maar bij de build
 opnieuw gemaakt.</p>
 <p>Volledige commando’s, opties en voorbeelden:
 <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/">CLI-referentie (<code>vsa</code>)</a>.</p>
@@ -2527,20 +2527,20 @@ opnieuw gemaakt.</p>
 </tr>
 </tbody>
 </table>
-<p>VSA-tooling is een <a href="/bron/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanisme</a>: het zet bronbestanden om naar
+<p>VSA-tooling is een <a class="og-termref" href="/bron/terms/conversiemechanisme" title="Conversiemechanisme: Een gedefinieerde, geautomatiseerde en herhaalbare tool CM die een Bronbestand B omzet naar een Afgeleide AB = CM(B).">conversiemechanisme</a>: het zet bronbestanden om naar
 afgeleiden. Org-contracten (wat/wanneer):
 <a href="../../reference/conversiemechanismen/">conversiemechanismen</a>.</p>
 <h2 id="installatie-kort">Installatie (kort)<a class="headerlink" href="#installatie-kort" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\VSA-tooling
 scripts\bootstrap.cmd
 </code></pre></div>
-<p>Daarna kun je in de <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> valideren:</p>
+<p>Daarna kun je in de <a class="og-termref" href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> valideren:</p>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-groningen\bron
 vsa validate zangstukken
 </code></pre></div>
 <p>Details: <a href="https://orthodox-groningen.github.io/VSA-tooling/reference/cli/">CLI-overzicht</a>.</p>
 <h2 id="motivatie">Motivatie<a class="headerlink" href="#motivatie" title="Permanent link">&para;</a></h2>
-<p><a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a>-bestanden zijn tekst die mensen schrijven. Zonder tooling is er
+<p><a class="og-termref" href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a>-bestanden zijn tekst die mensen schrijven. Zonder tooling is er
 geen garantie dat ze syntactisch kloppen, en is omzetten naar SVG of MusicXML
 handmatig en foutgevoelig. VSA-tooling maakt dat automatisch en
 reproduceerbaar — elke build genereert afgeleiden opnieuw uit de getrackte

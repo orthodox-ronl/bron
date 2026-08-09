@@ -2735,10 +2735,10 @@
 <h1 id="repo-structuur">Repo-structuur<a class="headerlink" href="#repo-structuur" title="Permanent link">&para;</a></h1>
 <p>Status: specificatie (juni 2026).</p>
 <h2 id="doel-en-scope">Doel en scope<a class="headerlink" href="#doel-en-scope" title="Permanent link">&para;</a></h2>
-<p>De <a href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> bevat de muzikale inhoud voor <code>orthodox-groningen</code>.
+<p>De <a class="og-termref" href="/bron/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-groningen/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> bevat de muzikale inhoud voor <code>orthodox-groningen</code>.
 Parochie-sites consumeren deze repository; ze bewerken hem niet rechtstreeks.</p>
-<p>De repository bevat <strong>bronnen</strong> en metadata. Geen <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> bestanden (SVG, MXL
-uit <a href="/bron/terms/vsa" title="Vereenvoudigde Slavische Accentnotatie: Overkoepelend begrip voor zowel de Vsa-notatie (het notatieformaat voor liturgische zangteksten) als de Vsa-tooling (de CLI en toolchain voor validatie en publicatie).">VSA</a>) in git, en geen parochie-specifiek gebruik.</p>
+<p>De repository bevat <strong>bronnen</strong> en metadata. Geen <a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> bestanden (SVG, MXL
+uit <a class="og-termref" href="/bron/terms/vsa" title="Vereenvoudigde Slavische Accentnotatie: Overkoepelend begrip voor zowel de Vsa-notatie (het notatieformaat voor liturgische zangteksten) als de Vsa-tooling (de CLI en toolchain voor validatie en publicatie).">VSA</a>) in git, en geen parochie-specifiek gebruik.</p>
 <h2 id="top-level-structuur">Top-level structuur<a class="headerlink" href="#top-level-structuur" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>bron/
 ├── README.md
@@ -2794,12 +2794,12 @@ uit <a href="/bron/terms/vsa" title="Vereenvoudigde Slavische Accentnotatie: Ove
 </table>
 <h2 id="het-zangstuk">Het zangstuk<a class="headerlink" href="#het-zangstuk" title="Permanent link">&para;</a></h2>
 <h3 id="definitie">Definitie<a class="headerlink" href="#definitie" title="Permanent link">&para;</a></h3>
-<p>Mapnaam van een <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> = stabiele <code>id</code> onder <code>zangstukken/</code>.</p>
+<p>Mapnaam van een <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> = stabiele <code>id</code> onder <code>zangstukken/</code>.</p>
 <h3 id="bron-versus-afgeleid">Bron versus afgeleid<a class="headerlink" href="#bron-versus-afgeleid" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Bron:</strong> geen geautomatiseerd generatiepad vanuit een ander bestand <em>in deze repo</em>
-  (<a href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a>, scan, MusicXML uit MuseScore, …) — een <a href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a>.</li>
-<li><strong><a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">Afgeleide</a>:</strong> geautomatiseerd uit bron (SVG/MXL via <a href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>). Niet in git.</li>
+  (<a class="og-termref" href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a>, scan, MusicXML uit MuseScore, …) — een <a class="og-termref" href="/bron/terms/bronbestand" title="Bronbestand: Een bestand waarvoor geen geautomatiseerd, herhaalbaar Conversiemechanisme bestaat dat het volledig uit een ander getrackt bestand in dezelfde repository genereert.">bronbestand</a>.</li>
+<li><strong><a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">Afgeleide</a>:</strong> geautomatiseerd uit bron (SVG/MXL via <a class="og-termref" href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a>). Niet in git.</li>
 </ul>
 <h3 id="naamgeving-zangstuk-id">Naamgeving <code>zangstuk-id</code><a class="headerlink" href="#naamgeving-zangstuk-id" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2811,8 +2811,8 @@ uit <a href="/bron/terms/vsa" title="Vereenvoudigde Slavische Accentnotatie: Ove
 </ul>
 <h2 id="een-bronbestand-meerdere-zangstukken">Eén bronbestand, meerdere zangstukken<a class="headerlink" href="#een-bronbestand-meerdere-zangstukken" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>VSA/tekst:</strong> splitsen — één <code>.vsa</code> per <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> in de juiste map</li>
-<li><strong>Scan/PDF:</strong> niet splitsen; tweede <a href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> verwijst met relatief <code>file:</code> naar scan
+<li><strong>VSA/tekst:</strong> splitsen — één <code>.vsa</code> per <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> in de juiste map</li>
+<li><strong>Scan/PDF:</strong> niet splitsen; tweede <a class="og-termref" href="/bron/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstuk</a> verwijst met relatief <code>file:</code> naar scan
   bij het eerste zangstuk</li>
 </ul>
 <h2 id="composities-en-sjablonen">Composities en sjablonen<a class="headerlink" href="#composities-en-sjablonen" title="Permanent link">&para;</a></h2>
@@ -2826,7 +2826,7 @@ uit <a href="/bron/terms/vsa" title="Vereenvoudigde Slavische Accentnotatie: Ove
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="/bron/terms/compositie" title="Compositie: Een YAML-bestand onder <code>composities/</code> in de Bron-repository met geordende verwijzingen naar Zangstukken (toekomstig: via <code>zangstuk-id</code>, <code>variant-id</code>, <code>uitvoeringsvorm-id</code>). Nog niet geïmplementeerd.">Compositie</a></strong> (org)</td>
+<td><strong><a class="og-termref" href="/bron/terms/compositie" title="Compositie: Een YAML-bestand onder <code>composities/</code> in de Bron-repository met geordende verwijzingen naar Zangstukken (toekomstig: via <code>zangstuk-id</code>, <code>variant-id</code>, <code>uitvoeringsvorm-id</code>). Nog niet geïmplementeerd.">Compositie</a></strong> (org)</td>
 <td><code>composities/*.yaml</code> in <strong>bron</strong></td>
 <td>Toekomst — geordende yaml-lijst</td>
 </tr>
@@ -2836,7 +2836,7 @@ uit <a href="/bron/terms/vsa" title="Vereenvoudigde Slavische Accentnotatie: Ove
 <td><strong>Geïmplementeerd</strong> — <code>default.gelegenheidstype</code>, <code>:::include zoek=</code></td>
 </tr>
 <tr>
-<td><strong><a href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">Samenstelling</a></strong></td>
+<td><strong><a class="og-termref" href="/bron/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">Samenstelling</a></strong></td>
 <td>markdown publicatie parochie</td>
 <td>§18 terminologie</td>
 </tr>
@@ -2846,7 +2846,7 @@ uit <a href="/bron/terms/vsa" title="Vereenvoudigde Slavische Accentnotatie: Ove
 Sjabloon-contract: <a href="../catalogus-samenstelling-zangstuk/">catalogus-samenstelling-zangstuk.md</a>.</p>
 <h2 id="nog-te-ontwerpen">Nog te ontwerpen<a class="headerlink" href="#nog-te-ontwerpen" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Build-stap voor <a href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> + publieke index (JSON) voor parochie-builds</li>
+<li>Build-stap voor <a class="og-termref" href="/bron/terms/afgeleide" title="Afgeleide: Een bestand dat volledig en herhaalbaar door een Conversiemechanisme uit een Bronbestand wordt gegenereerd, en dat (dus) niet als Bronbestand in de Bron-repository staat.">afgeleide</a> + publieke index (JSON) voor parochie-builds</li>
 <li>Filter: <code>file:</code> wel meenemen, <code>access:</code> niet in gepubliceerde index</li>
 </ul>
 <p>Zie <a href="../inhoudslevenscyclus/">Inhoudslevenscyclus</a>.</p>
