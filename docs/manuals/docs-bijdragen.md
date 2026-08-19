@@ -17,7 +17,7 @@ Handleiding voor wie **docs** in de [bron-repository](@) (of parallel in
 | `scripts\docs-build-tev2.cmd`  | Volledige keten: TEv2 + TermRef-check + `mkdocs build --strict` (= CI-parity) |
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 npm install
 scripts\docs-serve-tev2.cmd
 ```
@@ -41,7 +41,7 @@ gebruik `*-tev2` als je hover of glossary wilt controleren.
 Kolommen in de bron aligneren (spaties). Bulk:
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\VSA-tooling
+cd /d C:\Git\orthodox-ronl\VSA-tooling
 python scripts\align_markdown_tables.py ..\bron\docs\
 ```
 
@@ -60,7 +60,7 @@ Houd pins gelijk tussen bron en [VSA-tooling](@) tenzij er een bewuste drift-PR 
 ## [VSA-tooling](@)
 
 Zelfde scriptnamen; mrg-import is daar standaard (bron-MRG voor `*@bron`).
-Zie [TEv2 in tool-docs](https://orthodox-groningen.github.io/VSA-tooling/guides/tev2-docs/).
+Zie [TEv2 in tool-docs](https://orthodox-ronl.github.io/VSA-tooling/guides/tev2-docs/).
 
 ## Checklist vóór PR
 

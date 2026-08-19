@@ -16,18 +16,18 @@ gepusht. GitHub Pages moet die branch **serveren** — niet `main`.
 
 Boven aan de pagina moet verschijnen:
 
-> Your site is live at **https://orthodox-groningen.github.io/bron/**
+> Your site is live at **https://orthodox-ronl.github.io/bron/**
 
 ## Deploy via workflow
 
 | Push naar     | Doel op `gh-pages` | URL                                                |
 | ------------- | ------------------ | -------------------------------------------------- |
-| `main`        | root (productie)   | https://orthodox-groningen.github.io/bron/         |
-| andere branch | `preview/`         | https://orthodox-groningen.github.io/bron/preview/ |
+| `main`        | root (productie)   | https://orthodox-ronl.github.io/bron/         |
+| andere branch | `preview/`         | https://orthodox-ronl.github.io/bron/preview/ |
 
 Workflow: `.github/workflows/docs-pages.yml` — bouwt MkDocs, uploadt een artifact,
 en roept de herbruikbare deploy-workflow uit
-[`VSA-tooling/pages-deploy-reusable.yml`](https://github.com/orthodox-groningen/VSA-tooling/blob/main/.github/workflows/pages-deploy-reusable.yml)
+[`VSA-tooling/pages-deploy-reusable.yml`](https://github.com/orthodox-ronl/VSA-tooling/blob/main/.github/workflows/pages-deploy-reusable.yml)
 aan (`keep_files: true`, publicatiecheck vóór deploy).
 
 ## Veelvoorkomend probleem: je ziet README i.p.v. MkDocs
@@ -57,7 +57,7 @@ via `mkdocs.yml` / theme meegebouwd.
 ## Lokaal
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 scripts\docs-serve.cmd
 ```
 

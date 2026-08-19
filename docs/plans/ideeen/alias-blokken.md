@@ -49,7 +49,7 @@ register geldt voor **bron** en **lokaal**.
 3. **Architectuur-spanning expliciet houden:** [catalogus-architectuur § Index vs opslag](../../specs/catalogus-architectuur.md)
    zegt “geen gegenereerd alias-bestand in git”. Oplossing bij implementatie: het
    **register** is bron; **uitgebreide `aliases:` in yaml** zijn afgeleid (vergelijkbaar
-   met [`scripts/sync_zangstuk_yaml_from_vsa.py`](https://github.com/orthodox-groningen/bron/blob/main/scripts/sync_zangstuk_yaml_from_vsa.py)).
+   met [`scripts/sync_zangstuk_yaml_from_vsa.py`](https://github.com/orthodox-ronl/bron/blob/main/scripts/sync_zangstuk_yaml_from_vsa.py)).
 4. **Terminologie:** `alias-blok` is een nieuwe term — pas bij implementatie via
    glossary-PR op [terminologie.md](../../specs/terminologie.md) (R3); tot die tijd
    alleen in dit idee-document.
@@ -75,10 +75,10 @@ register-validatie zijn geïmplementeerd; yaml-sync en glossary volgen.
 
 | Onderdeel                                                                                    | Rol                                                                 |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [`src/catalogus/alias_index.py`](https://github.com/orthodox-groningen/bron/blob/main/src/catalogus/alias_index.py) | Aliassen per entiteit uit yaml en manifesten; runtime `AliasIndex`  |
+| [`src/catalogus/alias_index.py`](https://github.com/orthodox-ronl/bron/blob/main/src/catalogus/alias_index.py) | Aliassen per entiteit uit yaml en manifesten; runtime `AliasIndex`  |
 | [catalogus-architectuur](../../specs/catalogus-architectuur.md)                              | Resolver en index-build; spannt met afgeleide yaml-aliassen         |
 | [catalogus-zoek-api](../../specs/catalogus-zoek-api.md)                                        | Zoek op geïndexeerde teksten; profiteert van volledige blok-sets    |
-| [`scripts/sync_zangstuk_yaml_from_vsa.py`](https://github.com/orthodox-groningen/bron/blob/main/scripts/sync_zangstuk_yaml_from_vsa.py) | Precedent: yaml afgeleid uit VSA-frontmatter, brondocument ongewijzigd |
+| [`scripts/sync_zangstuk_yaml_from_vsa.py`](https://github.com/orthodox-ronl/bron/blob/main/scripts/sync_zangstuk_yaml_from_vsa.py) | Precedent: yaml afgeleid uit VSA-frontmatter, brondocument ongewijzigd |
 
 ```mermaid
 flowchart LR

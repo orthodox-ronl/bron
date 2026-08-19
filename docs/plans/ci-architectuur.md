@@ -47,7 +47,7 @@ flowchart TB
 
 | Laag              | Repo                   | Workflow (nu)                                                                                           | Richting              |
 | ----------------- | ---------------------- | ------------------------------------------------------------------------------------------------------- | --------------------- |
-| Documentatie      | `bron`                 | [docs-pages.yml](https://github.com/orthodox-groningen/bron/blob/main/.github/workflows/docs-pages.yml) | Blijft apart          |
+| Documentatie      | `bron`                 | [docs-pages.yml](https://github.com/orthodox-ronl/bron/blob/main/.github/workflows/docs-pages.yml) | Blijft apart          |
 | Kwaliteit tooling | VSA-tooling            | `vsa-ci.yml`                                                                                            | Blijft                |
 | Conversie         | VSA-tooling / parochie | Deels inline in `site-build`                                                                            | Expliciete derive-job |
 | Export + site     | VSA-tooling / parochie | `site-build`, reusable `vsa-render`                                                                     | Eén compose-job       |

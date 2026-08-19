@@ -43,7 +43,7 @@ sources:
 5. Valideer `.vsa` indien van toepassing:
 
    ```cmd
-   cd /d C:\Git\orthodox-groningen\bron
+   cd /d C:\Git\orthodox-ronl\bron
    vsa validate zangstukken\<zangstuk-id>
    ```
 
@@ -74,7 +74,7 @@ Oudere sources blijven behouden tenzij expliciet opgeruimd — zie
 | Dubbele `id:` in `sources:`           | Kopie zonder hernoemen          | Unieke `id` per entry                                                                      |
 | Nieuwe map i.p.v. bestaande           | Verkeerde handleiding gekozen   | Onder bestaand `zangstuk-id` werken                                                        |
 | `based_on` wijst naar onbekende id    | Typo of oude id                 | Id van bestaande source-entry gebruiken                                                    |
-| Validate faalt na nieuwe `.vsa`       | Notatiefout                     | [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) |
+| Validate faalt na nieuwe `.vsa`       | Notatiefout                     | [`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/) |
 
 ## Checklist
 

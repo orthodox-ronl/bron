@@ -132,7 +132,7 @@ Met `default.uitvoeringsvorm: Groningen` in de **sessie** (homogene liturgie) of
 disambiguation `Cherubijnenhymne (Kastorski)` in mixed session. Na oplossen van
 `zoek=` (bijv. `:::include svg lokaal:cherubijnenhymne/kastorski/groningen:::`) —
 zie
-[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/).
+[`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/).
 
 Zoektest:
 [Catalogus CLI — zoek](../../reference/catalogus-cli.md).

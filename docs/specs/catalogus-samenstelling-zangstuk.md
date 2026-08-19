@@ -20,9 +20,9 @@ staat **`:::include`** met [exporttype](@) (`svg`, `coria`, `mxl`, …) en param
 (kopjes, liturgische aanwijzingen).
 
 De **catalogus** zoekt het [zangstuk](@) op (met **`default.*`** uit de sessie) en levert een
-**catalogus-pad**. [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)
+**catalogus-pad**. [`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/)
 ([VSA-tooling](@)) schrijft dat pad in het markdown-bestand;
-pas daarna mag [`vsa build-markdown`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/) / export draaien.
+pas daarna mag [`vsa build-markdown`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/build-markdown/) / export draaien.
 
 VSA-build (`:::include` zonder `zoek=`) en **`@include-vsa`** in `.vsa`-brontekst vallen buiten dit
 document qua syntax; beide **`zoek=`**-varianten gebruiken dezelfde resolver — zie
@@ -83,7 +83,7 @@ Het sjabloon beschrijft **structuur** en **liturgische rol** (`Troparion`, `Kond
 | Laag                     | Wie                                                                                                                      | Inhoud                                         |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
 | **Sessie**               | Rene                                                                                                                     | Frontmatter: `sjabloon`, `titel`, `default`, … |
-| **Includes met `zoek=`** | Catalogus + [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | `:::include <exporttype> zoek="…" …`           |
+| **Includes met `zoek=`** | Catalogus + [`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | `:::include <exporttype> zoek="…" …`           |
 | **Vrije frontmatter**    | Rene                                                                                                                     | Eigen sleutels; catalogus **negeert**          |
 
 Tussen includes: gewone markdown.
@@ -175,7 +175,7 @@ Normatief API-contract: [catalogus-zoek-api.md](catalogus-zoek-api.md).
 
 ## Na resolve — catalogus-pad in `:::include`
 
-[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) vervangt `zoek="…"` door het opgeloste pad; overige parameters
+[`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/) vervangt `zoek="…"` door het opgeloste pad; overige parameters
 (`alt`, `label`, `scale`, …) blijven staan.
 
 ```markdown
@@ -218,10 +218,10 @@ Expliciete ids (na review): `zangstuk`, `variant`, `uitvoeringsvorm`, `represent
 2. Sjabloon bevat al `:::include … zoek="…"` en vrije tekst ertussen.
 3. Catalogus-index controleren ([Catalogus CLI](../reference/catalogus-cli.md)).
 4. Alle `zoek=` oplossen tot catalogus-pad; review bij ambiguïteit
-   ([`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)).
+   ([`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/)).
 5. Valideren / bouwen — alleen op **opgelost** bestand
-   ([`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/),
-   [`vsa build-markdown`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/)).
+   ([`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/),
+   [`vsa build-markdown`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/build-markdown/)).
 6. Site / export.
 
 ```mermaid
@@ -240,7 +240,7 @@ sequenceDiagram
   Build-->>Rene: site / export
 ```
 
-**Harde regel:** document-build ([`vsa build-markdown`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/)) met nog open `zoek=` → **fout**
+**Harde regel:** document-build ([`vsa build-markdown`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/build-markdown/)) met nog open `zoek=` → **fout**
 (geen stille fallback).
 
 ---
@@ -257,7 +257,7 @@ exportkeuzes (svg, coria, …) vanaf het begin.
 
 Praktisch voor Rene: [Sjabloon schrijven](../manuals/catalogus/sjabloon-schrijven.md).
 
-Tooling: [VSA — `:::include` met `zoek=`](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#include-met-zoek-catalogus).
+Tooling: [VSA — `:::include` met `zoek=`](https://orthodox-ronl.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#include-met-zoek-catalogus).
 
 ---
 
@@ -269,7 +269,7 @@ Tooling: [VSA — `:::include` met `zoek=`](https://orthodox-groningen.github.io
 | [`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek) API                                         | **Geïmplementeerd** (basis) — [catalogus-zoek-api.md](catalogus-zoek-api.md) |
 | `:::include` parameter `zoek=`                                                                               | **Geïmplementeerd** (VSA-tooling)                                            |
 | `@include-vsa zoek=`                                                                                         | **Geïmplementeerd** (VSA-tooling)                                            |
-| [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | **Geïmplementeerd** (VSA-tooling)                                            |
+| [`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | **Geïmplementeerd** (VSA-tooling)                                            |
 | `coria` / `mxl` op `bron:` catalogus-pad                                                                     | **Beperkt** — `.vsa` buiten content-root                                     |
 | Review-UI / `--interactive`                                                                                  | **Gepland**                                                                  |
 | `:::include mp3-player`                                                                                      | **Gepland** (exporttype)                                                     |

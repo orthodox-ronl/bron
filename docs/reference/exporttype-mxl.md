@@ -8,8 +8,8 @@ Contract voor het **mxl**-[exporttype](@): downloadlink naar MusicXML (`.mxl`) v
 bewerking in MuseScore of als fallback voor Coria.
 
 Technische resolver- en shortcode-details: zie
-[MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/)
-en [CLI `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)
+[MusicXML exporteren](https://orthodox-ronl.github.io/VSA-tooling/guides/musicxml-export/)
+en [CLI `vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/)
 ([VSA-tooling](@)).
 
 ---
@@ -124,7 +124,7 @@ extensie).
 
 | Situatie                    | Typische oorzaak               | Richting oplossing                                                                                      |
 | --------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| 404 op download             | MXL niet in static             | [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) + publiceren |
+| 404 op download             | MXL niet in static             | [`vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/) + publiceren |
 | Verkeerde toonsoort in MXL  | Verkeerd conversieprofiel      | Zie [conversie musicxml](conversie-vsa-musicxml.md)                                                     |
 | Verwacht een `.vsa`-bestand | Pad naar `.mxl` i.p.v. `.vsa`  | Eerste argument moet `.vsa` zijn                                                                        |
 
@@ -143,4 +143,4 @@ extensie).
 
 - [Conversie vsa musicxml](conversie-vsa-musicxml.md)
 - [Exporttype coria](exporttype-coria.md) (deelt MXL-URL)
-- [CLI: `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)
+- [CLI: `vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/)

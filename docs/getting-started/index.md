@@ -20,18 +20,18 @@ procedures staan onder [Handleidingen](../manuals/index.md).
 | Alleen lokaal opstarten          | Stappen 1–3 hieronder                                                           |
 | Nieuw zangstuk / copyright       | [Handleidingen](../manuals/index.md)                                            |
 | Catalogus / sjablonen            | [Catalogus](../manuals/catalogus/index.md)                                      |
-| VSA schrijven of CLI             | [VSA-tooling](https://orthodox-groningen.github.io/VSA-tooling/)                |
+| VSA schrijven of CLI             | [VSA-tooling](https://orthodox-ronl.github.io/VSA-tooling/)                |
 
 ## 1. Repository openen
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 ```
 
 ## 2. Documentatie lokaal bekijken
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 scripts\docs-serve.cmd
 ```
 
@@ -43,12 +43,12 @@ De site opent typisch op `http://127.0.0.1:8000/`. Voor glossary en TermRef-hove
 
 Validatie van [VSA-notatie](@) in deze repo gebeurt met de CLI uit
 [VSA-tooling](@)
-([documentatiesite](https://orthodox-groningen.github.io/VSA-tooling/)):
+([documentatiesite](https://orthodox-ronl.github.io/VSA-tooling/)):
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\VSA-tooling
+cd /d C:\Git\orthodox-ronl\VSA-tooling
 scripts\bootstrap.cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 vsa validate zangstukken
 ```
 
@@ -59,4 +59,4 @@ vsa validate zangstukken
 | Nieuw [zangstuk](@) toevoegen             | [Zangstuk toevoegen](../manuals/zangstuk-toevoegen.md)                          |
 | Copyright zonder bestand in de repo       | [Copyright en access](../manuals/copyright-access.md)                           |
 | Begrijpen wat waar mag staan              | [Documentatie-eigendom](../specs/documentatie-eigendom.md)                      |
-| Tool-docs (parser, CLI, export)           | [VSA-tooling — documentatie](https://orthodox-groningen.github.io/VSA-tooling/) |
+| Tool-docs (parser, CLI, export)           | [VSA-tooling — documentatie](https://orthodox-ronl.github.io/VSA-tooling/) |

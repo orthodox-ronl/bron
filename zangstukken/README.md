@@ -2,7 +2,7 @@
 
 Deze map bevat zangstuk-metadata en brondocumenten. Zie de documentatiesite:
 
-https://orthodox-groningen.github.io/bron/specs/inhoudslevenscyclus/
+https://orthodox-ronl.github.io/bron/specs/inhoudslevenscyclus/
 
 Structuur per zangstuk:
 

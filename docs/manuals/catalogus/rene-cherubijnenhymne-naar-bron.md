@@ -36,7 +36,7 @@ groningen* en kiest **Delen → Voorstel voor bron**.
 4. **Metadata:** formulier voor `zangstuk.yaml` (`title`, `gelegenheid`, copyright).
 5. **PR-assistent:** genereert branch-naam, commit-bericht (Conventional Commits)
    en checklist voor validatie
-   ([`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/),
+   ([`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/),
    [Catalogus CLI](../../reference/catalogus-cli.md)).
 6. **Na merge:** hint om [samenstellingen](@) van `lokaal:` naar `bron:` om te zetten
    (optioneel; lokaal mag blijven staan).
@@ -52,7 +52,7 @@ groningen* en kiest **Delen → Voorstel voor bron**.
 ### 1. Voorbereiden in bron (fork / branch)
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 git checkout -b feat/cherubijnenhymne-kastorski-groningen
 ```
 
@@ -109,7 +109,7 @@ Beide moeten groen zijn.
 
 ### 5. Pull request
 
-Rene opent een PR op `orthodox-groningen/bron` met:
+Rene opent een PR op `orthodox-ronl/bron` met:
 
 - **Summary:** nieuwe [uitvoeringsvorm](@) `groningen` onder [variant](@) `kastorski`.
 - **Testplan:** catalogus-index OK, VSA-validatie OK.
@@ -129,7 +129,7 @@ de catalogus wijst dan naar **bron** i.p.v. **lokaal**. Of expliciet:
 Of de zoekregel `zoek="Cherubijnenhymne (Kastorski)"` laten staan tot resolve naar **bron** wijst.
 
 ```cmd
-python -m catalogus.cli resolve uitvoeringsvorm --zangstuk cherubijnenhymne --variant kastorski Groningen --bron-root C:\Git\orthodox-groningen\bron
+python -m catalogus.cli resolve uitvoeringsvorm --zangstuk cherubijnenhymne --variant kastorski Groningen --bron-root C:\Git\orthodox-ronl\bron
 ```
 
 Uitvoer blijft: `groningen`.

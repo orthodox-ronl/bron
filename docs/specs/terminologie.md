@@ -20,9 +20,9 @@ Gerelateerd: [parochie-lokaal zangstukken](../manuals/parochie-lokaal-zangstukke
 
 ---
 
-## 0. Gebruiksregels (alle repo’s `orthodox-groningen`)
+## 0. Gebruiksregels (alle repo’s `orthodox-ronl`)
 
-Deze glossary is **bindend** voor documentatie, metadata, code-commentaar, issues, PR-beschrijvingen en user-facing teksten in alle repository’s van [github.com/orthodox-groningen](https://github.com/orthodox-groningen).
+Deze glossary is **bindend** voor documentatie, metadata, code-commentaar, issues, PR-beschrijvingen en user-facing teksten in alle repository’s van [github.com/orthodox-ronl](https://github.com/orthodox-ronl).
 
 | Regel                                  | Inhoud                                                                                                                                                                        |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -303,11 +303,11 @@ Leesvorm: “*gangbaar* noemen wij *precieze term*, niet verwarren met *…*.”
 
 ## 12. Bron-repository
 
-**Criterium:** R is de [bron-repository](@) dan en slechts dan als R de git-repo `orthodox-groningen/bron` is (of expliciet aangewezen opvolger).
+**Criterium:** R is de [bron-repository](@) dan en slechts dan als R de git-repo `orthodox-ronl/bron` is (of expliciet aangewezen opvolger).
 
 |         | Voorbeeld                                             |
 | ------- | ----------------------------------------------------- |
-| **Ja**  | `github.com/orthodox-groningen/bron`                  |
+| **Ja**  | `github.com/orthodox-ronl/bron`                  |
 | **Nee** | [VSA-tooling](@); parochie Hugo-repo; vendor-checkout |
 
 ---

@@ -80,7 +80,7 @@ sources:
     note: "Handmatig geëxporteerd MusicXML; geen vsa musicxml-afgeleide"
 ```
 
-**Niet** committen: MXL gegenereerd met [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) — die hoort bij build-time
+**Niet** committen: MXL gegenereerd met [`vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/) — die hoort bij build-time
 ([conversie vsa musicxml](../../reference/conversie-vsa-musicxml.md)) als [afgeleide](@).
 
 ### 3. Catalogus — representatie-id
@@ -108,7 +108,7 @@ In het sjabloon (verhaal 1) blijven de includes met **`zoek=`**:
 ```
 
 Resolve:
-[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/).
+[`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/).
 
 **Beperking:** `mxl` / `coria` op **`bron:`** catalogus-pad — `.vsa` buiten
 content-root. Handmatig MXL in repo blijft geldig; de build levert een

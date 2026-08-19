@@ -9,7 +9,7 @@ betekenen voor auteurs en tooling, en hoe brontypes worden gevalideerd. Het zijn
 geen stap-voor-stap handleidingen; die staan onder
 [Handleidingen](../manuals/index.md). CLI-details van `vsa` staan in de
 [VSA-tooling](@)-documentatie
-([site](https://orthodox-groningen.github.io/VSA-tooling/)).
+([site](https://orthodox-ronl.github.io/VSA-tooling/)).
 
 ## Conversie
 

@@ -6,7 +6,7 @@ audience: "P1 — Parochie-docs-maintainer; P2 — Bron-contentbeheerder"
 
 Handleiding voor [parochie-lokale representaties](@) in een Hugo/content-source-repo,
 naast materiaal uit de [bron-repository](@)
-([orthodox-groningen/bron](https://github.com/orthodox-groningen/bron)).
+([orthodox-ronl/bron](https://github.com/orthodox-ronl/bron)).
 
 Terminologie: [specs/terminologie.md](../specs/terminologie.md),
 [specs/zangstuk-identificatie.md](../specs/zangstuk-identificatie.md).
@@ -42,7 +42,7 @@ content-source/
 (`zangstuk-id` → `variant-id` → `uitvoeringsvorm-id` → `representatie-id`).
 
 **Referentie-implementatie ([VSA-tooling](@) / demo):**
-[VSA-demo — content-source/lokaal](https://github.com/orthodox-groningen/VSA-demo/tree/main/content-source/lokaal).
+[VSA-demo — content-source/lokaal](https://github.com/orthodox-ronl/VSA-demo/tree/main/content-source/lokaal).
 
 ---
 
@@ -105,7 +105,7 @@ Yaml-velden zijn **informatief** voor beheerders; de build valideert vandaag voo
 **Sjabloon (fase 4, geïmplementeerd):** markdown met `:::include zoek=` — zie
 [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md).
 Resolve naar catalogus-pad via
-[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)
+[`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/)
 ([VSA-tooling](@)).
 
 ---
@@ -113,7 +113,7 @@ Resolve naar catalogus-pad via
 ## Promotie naar bron-repository
 
 1. Behoud **[canonieke ids](@)**.
-2. Open PR naar `orthodox-groningen/bron` met [bronbestand](@) + metadata (zie
+2. Open PR naar `orthodox-ronl/bron` met [bronbestand](@) + metadata (zie
    [zangstuk toevoegen](zangstuk-toevoegen.md) /
    [bronvariant toevoegen](bronvariant-toevoegen.md)).
 3. Na merge: [samenstelling](@) kan bron-referentie gebruiken i.p.v. `lokaal/`-pad.
@@ -127,10 +127,10 @@ Resolve naar catalogus-pad via
 | Stap                                                                                                         | Parochie-lokaal                                   |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
 | Sync bron                                                                                                    | Niet nodig — bestanden in git                     |
-| [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | Als markdown **`zoek=`** bevat ([VSA-tooling](@)) |
+| [`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | Als markdown **`zoek=`** bevat ([VSA-tooling](@)) |
 | Validatie                                                                                                    | Tool valideert `content-source` recursief         |
 | Site-build                                                                                                   | Includes op relatief pad / catalogus-pad          |
 | Static site generator                                                                                        | Ongewijzigd t.o.v. bron-materiaal                 |
 
 **[VSA-tooling](@):** concrete commando's —
-[docs/guides/parochie-lokaal-vsa.md](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).
+[docs/guides/parochie-lokaal-vsa.md](https://orthodox-ronl.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).

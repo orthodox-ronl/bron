@@ -23,6 +23,6 @@ Een `.vsa`-bestand is een [bronbestand](@) in de [bron-repository](@) en fungeer
 
 ## Motivatie
 
-De afkorting VSA wordt in de praktijk gebruikt voor zowel het notatieformaat ("schrijf het in VSA") als voor de tooling ("draai [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/)"). Door VSA als parapluterm te definiëren met twee sub-termen, wordt die dubbelzinnigheid opgelost: documentatie, code-commentaar en issues kunnen de juiste specifieke term gebruiken.
+De afkorting VSA wordt in de praktijk gebruikt voor zowel het notatieformaat ("schrijf het in VSA") als voor de tooling ("draai [`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/)"). Door VSA als parapluterm te definiëren met twee sub-termen, wordt die dubbelzinnigheid opgelost: documentatie, code-commentaar en issues kunnen de juiste specifieke term gebruiken.
 
-Zie ook: [VSA-demo](https://orthodox-groningen.github.io/VSA-demo/), [vsa-notatie](vsa-notatie.md), [vsa-tooling](vsa-tooling.md).
+Zie ook: [VSA-demo](https://orthodox-ronl.github.io/VSA-demo/), [vsa-notatie](vsa-notatie.md), [vsa-tooling](vsa-tooling.md).

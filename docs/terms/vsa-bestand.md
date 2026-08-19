@@ -15,7 +15,7 @@ formPhrases:
 # vsa-bestand
 
 Een **vsa-bestand** is een bestand met de extensie `.vsa` waarvan de inhoud uitsluitend syntactisch geldige [vsa-notatie](@) bevat. Dat betekent concreet: het bestand wordt door de [vsa-tooling](@) foutloos geparseerd en gevalideerd
-([`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/)).
+([`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/)).
 
 Een vsa-bestand is een [bronbestand](@): het staat in git, is door mensen geschreven (of herleiding van een scan), en vormt de primaire bron voor alle afgeleide publicatievormen. Tegelijk is het een [representatie](@) van een [uitvoeringsvorm](@): het legt de melodie en tekst van één concrete uitvoeringswijze eenduidig vast.
 
@@ -66,5 +66,5 @@ Het begrip *vsa-bestand* maakt duidelijk dat niet elk bestand met de extensie `.
 
 ## Zie ook:
 
-- [VSA-demo](https://orthodox-groningen.github.io/VSA-demo/)
-- [GitHub orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)
+- [VSA-demo](https://orthodox-ronl.github.io/VSA-demo/)
+- [GitHub orthodox-ronl/VSA-tooling](https://github.com/orthodox-ronl/VSA-tooling)

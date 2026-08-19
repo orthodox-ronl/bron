@@ -2,7 +2,7 @@
 
 Centrale bronrepository van zangstukken voor orthodoxe kerkmuziek (Slavische
 traditie, Vereenvoudigde Slavische Accentnotatie / VSA), beheerd binnen de
-GitHub-organisatie [orthodox-groningen](https://github.com/orthodox-groningen).
+GitHub-organisatie [orthodox-ronl](https://github.com/orthodox-ronl).
 
 Deze repository is de **single source of truth** voor de muzikale inhoud die
 door verschillende parochies wordt gebruikt. Parochies bouwen hun eigen site
@@ -10,22 +10,22 @@ door verschillende parochies wordt gebruikt. Parochies bouwen hun eigen site
 
 ## Documentatie (GitHub Pages)
 
-**https://orthodox-groningen.github.io/bron/**
+**https://orthodox-ronl.github.io/bron/**
 
 Specificaties, handleidingen, referentie en ontwikkelplannen — gebouwd met MkDocs
-Material. Preview van branches: **https://orthodox-groningen.github.io/bron/preview/**
+Material. Preview van branches: **https://orthodox-ronl.github.io/bron/preview/**
 
 Lokaal:
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 scripts\docs-serve.cmd
 ```
 
 TEV2 + MkDocs lokaal bouwen:
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 npm install -g @tno-terminology-design/trrt @tno-terminology-design/hrgt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
 scripts\docs-build-tev2.cmd
 ```

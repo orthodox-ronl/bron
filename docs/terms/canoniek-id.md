@@ -56,5 +56,5 @@ zou rechtstreeks fragile strings in paden schrijven.
   [representatie](@)
 - [promotie](@) — behoudt [canonieke ids](@) bij overgang naar de [bron-repository](@)
 - [Zangstukmodel §2](../specs/terminologie.md#2-canonieke-ids-en-aliassen);
-  R5 in [§0](../specs/terminologie.md#0-gebruiksregels-alle-repos-orthodox-groningen);
+  R5 in [§0](../specs/terminologie.md#0-gebruiksregels-alle-repos-orthodox-ronl);
   contrast in [§3](../specs/terminologie.md#3-gangbare-taal-vs-precieze-termen)

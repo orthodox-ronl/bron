@@ -1,9 +1,9 @@
 # AGENTS.md
 
 Richtlijnen voor AI-assistenten in
-[orthodox-groningen/bron](https://github.com/orthodox-groningen/bron).
+[orthodox-ronl/bron](https://github.com/orthodox-ronl/bron).
 
-Zuster-repo tooling: [VSA-tooling/AGENTS.md](https://github.com/orthodox-groningen/VSA-tooling/blob/main/AGENTS.md).
+Zuster-repo tooling: [VSA-tooling/AGENTS.md](https://github.com/orthodox-ronl/VSA-tooling/blob/main/AGENTS.md).
 
 ---
 
@@ -12,8 +12,8 @@ Zuster-repo tooling: [VSA-tooling/AGENTS.md](https://github.com/orthodox-groning
 **bron** is de centrale bronrepository voor orthodoxe kerkmuziek (VSA). Parochies consumeren
 deze repo via build-time fetch (geen submodule). Documentatie op GitHub Pages:
 
-- Productie: https://orthodox-groningen.github.io/bron/
-- Preview (niet-`main`): https://orthodox-groningen.github.io/bron/preview/
+- Productie: https://orthodox-ronl.github.io/bron/
+- Preview (niet-`main`): https://orthodox-ronl.github.io/bron/preview/
 
 **Wel:** zangstukken (`zangstukken/`), `zangstuk.yaml`, scans, `.vsa`, metadata bij copyright (`access:`).
 
@@ -45,16 +45,16 @@ Docs-prose (persona’s, paginatypen, jargon→TermRef, foutpaden, term-sjabloon
 | VSA-validatie | `vsa` CLI uit repo VSA-tooling            |
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 scripts\docs-serve.cmd
 ```
 
 VSA-validatie (VSA-tooling naast `bron`):
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\VSA-tooling
+cd /d C:\Git\orthodox-ronl\VSA-tooling
 scripts\bootstrap.cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 vsa validate zangstukken
 ```
 
@@ -72,7 +72,7 @@ Sjablonen: [sjabloon schrijven](docs/manuals/catalogus/sjabloon-schrijven.md),
 spec [catalogus-samenstelling-zangstuk.md](docs/specs/catalogus-samenstelling-zangstuk.md).
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 scripts\test.cmd
 python -m catalogus.cli index validate --bron-root .
 ```
@@ -87,7 +87,7 @@ python -m catalogus.cli index validate --bron-root .
 | `scripts\docs-build-tev2.cmd` | TEv2 + TermRef-check + MkDocs (CI)            |
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 npm install
 scripts\docs-build-tev2.cmd
 ```
@@ -97,7 +97,7 @@ Handleiding: [docs/manuals/docs-bijdragen.md](docs/manuals/docs-bijdragen.md).
 ### Zangstukken valideren
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 vsa validate zangstukken
 ```
 
@@ -168,7 +168,7 @@ fix(zangstukken): corrigeer tone in troparion-zondag-toon-3
 Gebruik **`gh` CLI**. Stel titel, body en commando **voor aan de gebruiker** vóór uitvoering.
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 git push -u origin HEAD
 gh pr create --title "docs(specs): korte beschrijving" --body "## Summary
 - …

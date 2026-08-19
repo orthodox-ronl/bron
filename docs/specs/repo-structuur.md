@@ -8,7 +8,7 @@ Status: specificatie (juni 2026).
 
 ## Doel en scope
 
-De [bron-repository](@) bevat de muzikale inhoud voor `orthodox-groningen`.
+De [bron-repository](@) bevat de muzikale inhoud voor `orthodox-ronl`.
 Parochie-sites consumeren deze repository; ze bewerken hem niet rechtstreeks.
 
 De repository bevat **bronnen** en metadata. Geen [afgeleide](@) bestanden (SVG, MXL
@@ -27,7 +27,7 @@ bron/
 ├── src/
 │   └── catalogus/              # alias-index en resolver
 ├── tests/
-├── docs/                       # → orthodox-groningen.github.io/bron/
+├── docs/                       # → orthodox-ronl.github.io/bron/
 │   ├── specs/
 │   ├── manuals/
 │   ├── reference/

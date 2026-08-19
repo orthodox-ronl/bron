@@ -117,7 +117,7 @@ default:
 **Mixed session:** geen `default.uitvoeringsvorm` — feest-stukken uit bron (`liturgikon`),
 Cherubijnenhymne lokaal (`groningen`).
 
-Na [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/):
+Na [`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/):
 
 ```markdown
 :::include svg bron:troparion-geboorte-moeder-gods/troparion-geboorte-moeder-gods/liturgikon alt="Troparion" scale="85%":::
@@ -142,12 +142,12 @@ onder de VSA-demo content-source.
    `Cherubijnenhymne (Kastorski)`. Bij meerdere treffers: lijst bekijken of
    `zoek=` / `default.*` aanscherpen ([Catalogus CLI — zoek](../../reference/catalogus-cli.md)).
 3. **Includes oplossen** — `zoek=` → `bron:…` / `lokaal:…`
-   ([`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)).
+   ([`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/)).
 4. **Valideren** van de content-source
-   ([`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/)).
+   ([`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/)).
 
 Workflow-overzicht:
-[parochie-lokaal VSA](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).
+[parochie-lokaal VSA](https://orthodox-ronl.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).
 
 ---
 
@@ -161,5 +161,5 @@ Workflow-overzicht:
 
 - [Sjabloon schrijven](sjabloon-schrijven.md)
 - [Zangstuk-opzoeken in sjablonen](../../specs/catalogus-samenstelling-zangstuk.md)
-- [VSA — `:::include` met `zoek=`](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#include-met-zoek-catalogus)
+- [VSA — `:::include` met `zoek=`](https://orthodox-ronl.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#include-met-zoek-catalogus)
 - [Verhaal 2 — Cherubijnenhymne lokaal opnemen](rene-cherubijnenhymne-lokaal.md)

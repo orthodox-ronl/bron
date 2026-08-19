@@ -1,8 +1,8 @@
 site_name: bron — documentatie
 site_description: Documentatie van de centrale bronrepository voor orthodoxe kerkmuziek (VSA)
-site_url: https://orthodox-groningen.github.io/bron/
-repo_url: https://github.com/orthodox-groningen/bron
-repo_name: orthodox-groningen/bron
+site_url: https://orthodox-ronl.github.io/bron/
+repo_url: https://github.com/orthodox-ronl/bron
+repo_name: orthodox-ronl/bron
 edit_uri: edit/main/docs/
 
 exclude_docs: |
@@ -128,11 +128,11 @@ extra:
   branch: ""
   social:
     - icon: fontawesome/solid/book-bible
-      link: https://orthodox-groningen.github.io/bron/
+      link: https://orthodox-ronl.github.io/bron/
       name: bron — documentatie
     - icon: fontawesome/solid/code
-      link: https://orthodox-groningen.github.io/VSA-tooling/
+      link: https://orthodox-ronl.github.io/VSA-tooling/
       name: VSA-tooling — documentatie
     - icon: fontawesome/solid/globe
-      link: https://orthodox-groningen.github.io/VSA-demo/
+      link: https://orthodox-ronl.github.io/VSA-demo/
       name: VSA-demo

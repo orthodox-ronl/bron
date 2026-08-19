@@ -5,7 +5,7 @@ audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
 # Gebruikseisen dragers (stub)
 
 **Canonieke documentatie:**
-[VSA-tooling — gebruikseisen-dragers.md](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/plans/gebruikseisen-dragers.md)
+[VSA-tooling — gebruikseisen-dragers.md](https://github.com/orthodox-ronl/VSA-tooling/blob/main/docs/plans/gebruikseisen-dragers.md)
 
 Product- en UX-eisen voor presentatie op **papier / tablet / telefoon** horen bij
 VSA-tooling (rendering, samenstelling, export), niet bij org-specs in `bron`.

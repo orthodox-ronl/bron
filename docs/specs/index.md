@@ -4,7 +4,7 @@ audience: "P6 — Spec-/PR-reviewer; P5 — Docs-/tool-contributor"
 ---
 # Overzicht
 
-Hier staan de **normatieve** organisatiedocumenten van orthodox-groningen. Ze
+Hier staan de **normatieve** organisatiedocumenten van orthodox-ronl. Ze
 gelden voor alle repo’s van de organisatie; andere sites linken ernaar in plaats
 van ze te kopiëren.
 

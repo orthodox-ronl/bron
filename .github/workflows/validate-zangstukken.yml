@@ -20,7 +20,7 @@ jobs:
       - name: Checkout VSA-tooling
         uses: actions/checkout@v4
         with:
-          repository: orthodox-groningen/VSA-tooling
+          repository: orthodox-ronl/VSA-tooling
           path: vendor/vsa-tooling
           ref: main
 

@@ -9,8 +9,8 @@ audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
 
 ## Bronnen
 
-- **Bron-repo:** `C:\Git\orthodox-groningen\bron`
-- **Content-root (lokaal):** `C:\Git\orthodox-groningen\VSA-demo\content-source`
+- **Bron-repo:** `C:\Git\orthodox-ronl\bron`
+- **Content-root (lokaal):** `C:\Git\orthodox-ronl\VSA-demo\content-source`
 
 ---
 
@@ -157,7 +157,7 @@ Per rij met flags:
 ## Herhaalbaar maken
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 python -m pip install -e ".[dev]"
 python -m catalogus.cli index validate --bron-root . --content-root ..\VSA-demo\content-source
 vsa validate zangstukken

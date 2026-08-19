@@ -17,4 +17,4 @@ audience: "P6 — Spec-/PR-reviewer; P2 — Bron-contentbeheerder"
 `variant-id`, `uitvoeringsvorm-id`, `representatie-id`. Parochie-lokaal metadata:
 **[manifest](@)** (§16 in terminologie).
 
-**Demo-site (VSA-demo):** [VSA-demo](https://github.com/orthodox-groningen/VSA-demo).
+**Demo-site (VSA-demo):** [VSA-demo](https://github.com/orthodox-ronl/VSA-demo).

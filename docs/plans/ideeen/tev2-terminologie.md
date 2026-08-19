@@ -65,7 +65,7 @@ VSA-tooling; org-termen blijven canoniek in `bron`.
   overgang nodig.
 - MkDocs Material ≠ Docusaurus (tev2-mve); integratie (CI-stap, plugin, preprocess) moet worden
   uitgezocht.
-- Cursor-regel [`.cursor/rules/orthodox-groningen-terminologie.mdc`](https://github.com/orthodox-groningen/bron/blob/main/.cursor/rules/orthodox-groningen-terminologie.mdc)
+- Cursor-regel [`.cursor/rules/orthodox-ronl-terminologie.mdc`](https://github.com/orthodox-ronl/bron/blob/main/.cursor/rules/orthodox-ronl-terminologie.mdc)
   en stubs in andere repo's moeten synchroon blijven met de TEv2-bron.
 
 ## Nu al organiseren

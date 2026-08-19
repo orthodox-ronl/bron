@@ -33,7 +33,7 @@ zelfde structuur, plus **`default.gelegenheid`** (en evt. `toon`, titel, datum).
 | **Herkomst** | Verzameling uit één bron (bijv. VOK)    | `referentie`, `koormap_nummer`                       |
 
 **Legacy (niet meer aanbevolen):** yaml-inventarisatie
-[goddelijke-liturgie.yaml](https://github.com/orthodox-groningen/VSA-demo/blob/main/content-source/praktijk/goddelijke-liturgie.yaml)
+[goddelijke-liturgie.yaml](https://github.com/orthodox-ronl/VSA-demo/blob/main/content-source/praktijk/goddelijke-liturgie.yaml)
 in de VSA-demo — ruwe VOKN-koormap-notities, **geen** geldig sjabloon- of
 compositie-schema. Nieuw werk: markdown-sjablonen (hierboven) en
 [catalogus-samenstelling-zangstuk](../../specs/catalogus-samenstelling-zangstuk.md).
@@ -137,17 +137,17 @@ Rene zet in de sessie **`default.toon`**. In `zoek=` geen toon herhalen:
 1. Controleer dat de catalogus-index in orde is
    ([Catalogus CLI](../../reference/catalogus-cli.md)).
 2. Los elke `zoek=` op tot `bron:…` / `lokaal:…`
-   ([`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)).
+   ([`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/)).
    Bij meerdere treffers: lijst bekijken of `default.*` / `zoek=` verfijnen
    ([`catalogus zoek`](../../reference/catalogus-cli.md#catalogus-zoek)).
 3. Valideer en bouw het **opgeloste** bestand
-   ([`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/),
-   [`vsa build-markdown`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/)).
+   ([`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/),
+   [`vsa build-markdown`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/build-markdown/)).
 
 **Let op (demo):** mappen `samenstellingen/` en `sjablonen/` worden in de
 Hugo-demo niet automatisch gepubliceerd. Kopieer opgeloste inhoud naar een
 publishbare content-map, of pas de build-config aan — zie
-[parochie-lokaal VSA](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).
+[parochie-lokaal VSA](https://orthodox-ronl.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).
 
 **Export:** **`:::include svg`** op `bron:` werkt; **`:::include coria`** op
 `bron:` faalt zolang het `.vsa` buiten de content-root staat (org-bron). Coria

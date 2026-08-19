@@ -57,9 +57,9 @@ sources:
 6. **Valideer** `.vsa` (indien aanwezig):
 
    ```cmd
-   cd /d C:\Git\orthodox-groningen\VSA-tooling
+   cd /d C:\Git\orthodox-ronl\VSA-tooling
    scripts\bootstrap.cmd
-   cd /d C:\Git\orthodox-groningen\bron
+   cd /d C:\Git\orthodox-ronl\bron
    vsa validate zangstukken\<zangstuk-id>
    ```
 
@@ -86,7 +86,7 @@ sources:
 | Mapnaam ≠ `id:` in yaml                    | Typo of hernoemen vergeten                     | Gelijk trekken; zie checklist                                                                                      |
 | Twee van `file:` / `access:` / `status:`   | Meer dan één statusveld op één source-entry    | Precies één houden                                                                                                 |
 | `file:`-pad bestaat niet                   | Verkeerde relatieve pad t.o.v. `zangstuk.yaml` | Pad controleren onder `sources/…`                                                                                  |
-| `vsa validate` faalt (syntax/semantiek)    | Ongeldige [VSA-notatie](@)                     | Melding lezen; man-page [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) |
+| `vsa validate` faalt (syntax/semantiek)    | Ongeldige [VSA-notatie](@)                     | Melding lezen; man-page [`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/) |
 
 ## Checklist metadata
 

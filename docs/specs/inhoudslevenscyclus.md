@@ -73,7 +73,7 @@ gedeelde scans.
 
 | Brontype                    | Check                           | Tool / moment                                                                                                       |
 | --------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `.vsa`                      | Parse + semantische validatie   | [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) (CI, lokaal vóór commit) |
+| `.vsa`                      | Parse + semantische validatie   | [`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/) (CI, lokaal vóór commit) |
 | `.pdf`                      | Geldig PDF, minstens één pagina | CI-script (toekomst); visuele controle                                                                              |
 | `.png`/`.jpg`               | Geldig raster                   | CI-script (toekomst)                                                                                                |
 | `.musicxml`/`.mxl` als bron | Well-formed XML                 | toekomst                                                                                                            |
@@ -158,9 +158,9 @@ Dat zijn **[exporttypes](@)**, geen conversie-commando's.
 
 | Profiel           | Conversie nodig                                                                                                                                                                   | Export / layout                            |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Afdruk / download | [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/)                                                                                                  | embed svg, `keep-together`, `@media print` |
-| Online            | [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/), evt. [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) | embed svg, Coria, `web-only`               |
-| Bewerking         | [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)                                                                                        | mxl-download                               |
+| Afdruk / download | [`vsa svg`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/svg/)                                                                                                  | embed svg, `keep-together`, `@media print` |
+| Online            | [`vsa svg`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/svg/), evt. [`vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/) | embed svg, Coria, `web-only`               |
+| Bewerking         | [`vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/)                                                                                        | mxl-download                               |
 
 Profielen zijn geen aparte pipelines: één [samenstelling](@), conditionele
 export en CSS.
@@ -171,4 +171,4 @@ export en CSS.
 
 - [Repo-structuur](repo-structuur.md)
 - [Zangstuk-formaat](zangstuk-formaat.md)
-- [VSA-tooling — document samenstellen](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md)
+- [VSA-tooling — document samenstellen](https://github.com/orthodox-ronl/VSA-tooling/blob/main/docs/specification/directives.md)

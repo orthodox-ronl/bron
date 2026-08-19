@@ -12,7 +12,7 @@ Claude als het huidige gesprek de sessielimiet bereikt.
 Een systeem voor orthodoxe kerkmuziek (Slavische traditie) waarmee parochies
 zangmateriaal kunnen beheren, delen en gebruiken voor de liturgie en voor het
 instuderen van stemmen door koorleden. Het geheel wordt opgezet binnen de
-GitHub-organisatie `github.com/orthodox-groningen`, ontsloten via
+GitHub-organisatie `github.com/orthodox-ronl`, ontsloten via
 GitHub Pages (`*.github.io`).
 
 ## Huidig experiment

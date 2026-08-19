@@ -76,7 +76,7 @@ Status: **geïmplementeerd (basis)**.
 
 [VSA-tooling](@) importeert `catalogus` en lost catalogus-paden op tijdens de
 markdown-include-stap. Relatieve pad-includes blijven werken. Zie
-[directives](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md).
+[directives](https://github.com/orthodox-ronl/VSA-tooling/blob/main/docs/specification/directives.md).
 
 ## Fase 4 — sjablonen, sessies, resolve
 
@@ -106,7 +106,7 @@ sequenceDiagram
 ```
 
 Geïmplementeerd: [`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek),
-[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/),
+[`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/),
 **`@include-vsa zoek=`**
 (zie [catalogus-zoek-api.md](catalogus-zoek-api.md)).
 

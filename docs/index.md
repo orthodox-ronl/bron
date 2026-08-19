@@ -5,11 +5,11 @@ audience: "P1 — Parochie-docs-maintainer; P2 — Bron-contentbeheerder; P5 —
 # Documentatie — bron repository
 
 Welkom bij de documentatie van de **bron**-repository: de centrale bron van
-waarheid voor [zangstukken](@) binnen [orthodox-groningen](https://github.com/orthodox-groningen).
+waarheid voor [zangstukken](@) binnen [orthodox-ronl](https://github.com/orthodox-ronl).
 
 Deze site is voor **wie zangstukken of documentatie beheert** — niet voor het
 koor dat een dienst oefent of een partituur volgt. Daarvoor: de parochie-site
-(bijv. [VSA-demo](https://github.com/orthodox-groningen/VSA-demo)).
+(bijv. [VSA-demo](https://github.com/orthodox-ronl/VSA-demo)).
 
 ## Wie ben je? (kies je route)
 
@@ -19,7 +19,7 @@ koor dat een dienst oefent of een partituur volgt. Daarvoor: de parochie-site
 | Een [zangstuk](@) of bronvariant toevoegen / `access:` | Bron-contentbeheerder                  | [Zangstuk toevoegen](manuals/zangstuk-toevoegen.md) · [Handleidingen](manuals/index.md) |
 | Begrijpen wat wel/niet mag (afgeleide, ids, …)         | Spec-/PR-reviewer                      | [Specificaties](specs/index.md) · [Terminologie](glossary.md)                           |
 | Docs of TEv2 bijdragen                                 | Docs-/tool-contributor                 | [Documentatie bijdragen](manuals/docs-bijdragen.md)                                     |
-| VSA schrijven / CLI / SVG / MusicXML                   | Notatie-auteur / consumer-site builder | [VSA-tooling — documentatie](https://orthodox-groningen.github.io/VSA-tooling/)         |
+| VSA schrijven / CLI / SVG / MusicXML                   | Notatie-auteur / consumer-site builder | [VSA-tooling — documentatie](https://orthodox-ronl.github.io/VSA-tooling/)         |
 | Partituur oefenen / liturgie volgen                    | Koor / liturgie                        | **Niet hier** — parochie-site / demo                                                    |
 
 Rollen en toon: [Schrijfconventies](specs/schrijfconventies.md).
@@ -41,7 +41,7 @@ Rollen en toon: [Schrijfconventies](specs/schrijfconventies.md).
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | Hoe voer ik een taak uit in de bron-repo?          | [Handleidingen](manuals/index.md)                                                               |
 | Wat betekent een term, en wat mag wel/niet?        | [Specificaties](specs/index.md) en [Terminologie](glossary.md) in **deze** site                 |
-| Hoe werkt de VSA-CLI (validate, svg, MusicXML)?    | [VSA-tooling — documentatie](https://orthodox-groningen.github.io/VSA-tooling/)                 |
+| Hoe werkt de VSA-CLI (validate, svg, MusicXML)?    | [VSA-tooling — documentatie](https://orthodox-ronl.github.io/VSA-tooling/)                 |
 
 Zie ook [Documentatie-eigendom](specs/documentatie-eigendom.md): normatieve
 org-specs horen alleen in bron; tool-docs horen in [VSA-tooling](@).
@@ -58,7 +58,7 @@ die inhoud rechtstreeks uit de repository.
 ## Lokaal bekijken
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 scripts\docs-serve.cmd
 ```
 
@@ -68,7 +68,7 @@ Met TermRefs (na `npm install`): `scripts\docs-serve-tev2.cmd`.
 
 Conversie en validatie van [vsa-bestanden](@) gebeurt met
 [VSA-tooling](@)
-([documentatiesite](https://orthodox-groningen.github.io/VSA-tooling/))
-([`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/),
-[`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/),
-[`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)).
+([documentatiesite](https://orthodox-ronl.github.io/VSA-tooling/))
+([`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/),
+[`vsa svg`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/svg/),
+[`vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/)).

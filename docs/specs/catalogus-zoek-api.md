@@ -278,7 +278,7 @@ zijn geïmplementeerd. Ranking en metadata-dekking worden verder uitgebreid per 
 | Consument                                                                                                    | Context uit              | `bestandsextensie` | Gebruikt               |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ | ---------------------- |
 | `@include-vsa zoek=`                                                                                         | ouder-`.vsa` `default`   | `.vsa` (default)   | `result.path`          |
-| [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | markdown `default`       | `.vsa` (default)   | `result.catalogus_pad` |
+| [`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | markdown `default`       | `.vsa` (default)   | `result.catalogus_pad` |
 | [`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek) CLI                                         | flags                    | `.vsa` (default)   | stdout `catalogus_pad` |
 | Review / debug                                                                                               | idem                     | expliciet          | `zoek_kandidaten`      |
 
@@ -289,7 +289,7 @@ zijn geïmplementeerd. Ranking en metadata-dekking worden verder uitgebreid per 
 ## CLI — [`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek)
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 python -m catalogus.cli zoek "Troparion" ^
   --content-root ..\VSA-demo\content-source ^
   --bron-root . ^
@@ -341,8 +341,8 @@ winnende herkomst — geen stille keuze.
 ## Consumentencontract ([VSA-tooling](@))
 
 Normatieve stappen hieronder; concrete CLI-aanroep:
-[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)
-en [parochie-lokaal VSA](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).
+[`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/)
+en [parochie-lokaal VSA](https://orthodox-ronl.github.io/VSA-tooling/guides/parochie-lokaal-vsa/).
 
 ### Markdown — `:::include zoek="…"`
 
@@ -360,8 +360,8 @@ en [parochie-lokaal VSA](https://orthodox-groningen.github.io/VSA-tooling/guides
 
 [VSA-tooling](@) (`@include-vsa`, `vsa validate`): **`AmbiguousError`** → **fout**;
 **`ook_gevonden_in_bron`** → **waarschuwing** (build mag doorgaan). Zie
-[VSA — include-vsa](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/reference/include-vsa.md)
-en [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/).
+[VSA — include-vsa](https://github.com/orthodox-ronl/VSA-tooling/blob/main/docs/reference/include-vsa.md)
+en [`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/).
 
 ---
 
@@ -386,7 +386,7 @@ en [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/c
 | `zoek_kandidaten()` / `zoek()`                                                                               | **Geïmplementeerd** (basis) |
 | [`catalogus zoek`](../reference/catalogus-cli.md#catalogus-zoek) CLI                                         | **Geïmplementeerd**         |
 | VSA `@include-vsa zoek=`                                                                                     | **Geïmplementeerd**         |
-| [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | **Geïmplementeerd**         |
+| [`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/) | **Geïmplementeerd**         |
 | Interactieve review (`--interactive`)                                                                        | **Gepland**                 |
 | Zoek-UI / fuzzy match                                                                                        | **Gepland**                 |
 

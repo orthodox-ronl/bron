@@ -59,9 +59,9 @@ catalogus-pad:
 
 Zie [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md)
 en
-[parochie-lokaal VSA (`zoek=`)](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#include-met-zoek-catalogus).
+[parochie-lokaal VSA (`zoek=`)](https://orthodox-ronl.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#include-met-zoek-catalogus).
 Resolve-commando:
-[CLI `vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/).
+[CLI `vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/).
 
 **Beperking:** `coria` / `mxl` op een **`bron:`** catalogus-pad — het `.vsa` ligt
 vaak buiten de content-root; **svg** op `bron:` werkt wel.
@@ -108,5 +108,5 @@ In de [bron-repository](@) primair VSA + scans; Coria-HTML kan in parochie-conte
 
 - [Conversiemechanismen](conversiemechanismen.md)
 - [Schrijfconventies](../specs/schrijfconventies.md)
-- [VSA — directives](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/specification/directives.md)
-- [VSA CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)
+- [VSA — directives](https://github.com/orthodox-ronl/VSA-tooling/blob/main/docs/specification/directives.md)
+- [VSA CLI-overzicht](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/)

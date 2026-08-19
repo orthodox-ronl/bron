@@ -37,8 +37,8 @@ Contract: [zangstuk](@) in
 
 Commando’s (wanneer je CLI gebruikt):
 [Catalogus CLI](../../reference/catalogus-cli.md),
-[`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/),
-[`vsa build-markdown`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/build-markdown/).
+[`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/),
+[`vsa build-markdown`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/build-markdown/).
 
 ## Persona's en context
 
@@ -51,8 +51,8 @@ Commando’s (wanneer je CLI gebruikt):
 
 | Repo              | Pad (voorbeeld)                                              | Inhoud                                                                              |
 | ----------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
-| **bron**          | `C:\Git\orthodox-groningen\bron`                             | Org-brede [zangstukken](@) (`zangstukken/`) in de [bron-repository](@)              |
-| **parochie-site** | `C:\Git\orthodox-groningen\VSA-demo\content-source`          | Sjablonen, [samenstellingen](@), `lokaal/` ([parochie-lokaal](@); demo)             |
+| **bron**          | `C:\Git\orthodox-ronl\bron`                             | Org-brede [zangstukken](@) (`zangstukken/`) in de [bron-repository](@)              |
+| **parochie-site** | `C:\Git\orthodox-ronl\VSA-demo\content-source`          | Sjablonen, [samenstellingen](@), `lokaal/` ([parochie-lokaal](@); demo)             |
 
 Terminologie: [terminologie §2](../../specs/terminologie.md) — opslag blijft vier
 niveaus (`zangstuk-id` → `variant-id` → `uitvoeringsvorm-id` → `representatie-id`);
@@ -76,7 +76,7 @@ VOKN-standaardkoormap krijgt later **`uitvoeringsvorm-id: vokn`**; zie
 ## Interface: GUI (beoogd) en CLI (nu)
 
 !!! note "CLI vs GUI"
-    [`catalogus zoek`](../../reference/catalogus-cli.md#catalogus-zoek), [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/) en **`:::include zoek=`** zijn
+    [`catalogus zoek`](../../reference/catalogus-cli.md#catalogus-zoek), [`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/) en **`:::include zoek=`** zijn
     **geïmplementeerd** (CLI). Een **grafische catalogus** (sessie-wizard,
     interactieve review bij ambiguïteit) is nog **gepland**.
 

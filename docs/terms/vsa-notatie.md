@@ -36,5 +36,5 @@ VSA-notatie formaliseert die praktijk: door een expliciete grammatica te defini√
 
 ## Zie ook:
 
-- [VSA-demo](https://orthodox-groningen.github.io/VSA-demo/)
-- [GitHub orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)
+- [VSA-demo](https://orthodox-ronl.github.io/VSA-demo/)
+- [GitHub orthodox-ronl/VSA-tooling](https://github.com/orthodox-ronl/VSA-tooling)

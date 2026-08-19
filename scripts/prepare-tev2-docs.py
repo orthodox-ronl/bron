@@ -79,7 +79,7 @@ def _patch_saf_website(generated_docs: Path, mkdocs_path: Path) -> None:
     """Patch saf.yaml website to match the site_url already set in mkdocs.yml.
 
     TRRT uses saf.yaml's `website` to build absolute navurls (e.g.
-    https://orthodox-groningen.github.io/bron/preview/terms/representatie).
+    https://orthodox-ronl.github.io/bron/preview/terms/representatie).
     The publication check then verifies those localized links start with the
     correct URL prefix.  When building for a preview branch the prefix is
     /bron/preview/, but a hardcoded production website value in saf.yaml would

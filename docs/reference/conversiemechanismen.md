@@ -11,7 +11,7 @@ Conversie is **geen** export: conversie verandert het formaat; export bepaalt ho
 ([Exportcontracten](exportcontracten.md) — [exportmechanismen](@)).
 
 Uitvoering gebeurt met [VSA-tooling](@)
-([CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)).
+([CLI-overzicht](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/)).
 [Afgeleide](@) output hoort **niet** in de [bron-repository](@).
 
 ---
@@ -29,8 +29,8 @@ Uitvoering gebeurt met [VSA-tooling](@)
 
 | Mechanisme                                                                                 | Contract                                            | Output               | CLI                                                                                  |
 | ------------------------------------------------------------------------------------------ | --------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------ |
-| [`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/)           | [conversie-vsa-svg](conversie-vsa-svg.md)           | `.svg`               | [man-page](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/)      |
-| [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) | [conversie-vsa-musicxml](conversie-vsa-musicxml.md) | `.mxl` / `.musicxml` | [man-page](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/) |
+| [`vsa svg`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/svg/)           | [conversie-vsa-svg](conversie-vsa-svg.md)           | `.svg`               | [man-page](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/svg/)      |
+| [`vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/) | [conversie-vsa-musicxml](conversie-vsa-musicxml.md) | `.mxl` / `.musicxml` | [man-page](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/) |
 
 ---
 
@@ -72,4 +72,4 @@ Nieuwe [conversiemechanismen](@) krijgen een volledig org-contract **vóór** op
 - [Exportcontracten](exportcontracten.md)
 - [Inhoudslevenscyclus](../specs/inhoudslevenscyclus.md) Deel 2
 - [Schrijfconventies](../specs/schrijfconventies.md)
-- [VSA CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)
+- [VSA CLI-overzicht](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/)

@@ -9,7 +9,7 @@ invoer op naar **[canoniek id](@)** volgens [terminologie §2.8](../specs/termin
 
 **Gebruikersverhalen** (workflows, beoogde GUI): [Catalogus — handleidingen](../manuals/catalogus/index.md).
 
-**Sjablonen** (`:::include zoek=`, `default`, [`vsa resolve-catalogus`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/resolve-catalogus/)): [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md).
+**Sjablonen** (`:::include zoek=`, `default`, [`vsa resolve-catalogus`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/resolve-catalogus/)): [catalogus-samenstelling-zangstuk.md](../specs/catalogus-samenstelling-zangstuk.md).
 
 ## Installatie
 
@@ -18,7 +18,7 @@ Gebruik steeds **`python -m`** voor pip, pytest en catalogus — dan hoef je
 Python-installaties op Windows.
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 python -m pip install -e ".[dev]"
 ```
 
@@ -195,12 +195,12 @@ Zie [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) voor volledig contra
   → catalogus-pad — [catalogus-zoek-api.md](../specs/catalogus-zoek-api.md) (**geïmplementeerd**, basis).
 
 Zie [verhaal 1](../manuals/catalogus/rene-liturgie-geboorte-moeder-gods.md) en
-[VSA — resolve-catalogus](https://orthodox-groningen.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#vsa-resolve-catalogus).
+[VSA — resolve-catalogus](https://orthodox-ronl.github.io/VSA-tooling/guides/parochie-lokaal-vsa/#vsa-resolve-catalogus).
 
 ## Tests
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 scripts\test.cmd
 ```
 

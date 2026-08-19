@@ -5,14 +5,14 @@ audience: "P6 — Spec-/PR-reviewer; P4 — Consumer-site builder"
 # Conversie: vsa musicxml
 
 Contract voor het [conversiemechanisme](@)
-[`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/):
+[`vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/):
 een [vsa-bestand](@) omzetten naar MusicXML (`.mxl` of `.musicxml`).
 
 Dit document beschrijft **wat** de conversie doet en **wanneer** je die gebruikt.
 Hoe je het commando aanroept: zie de
-[CLI man-page `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)
+[CLI man-page `vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/)
 en de workflow-guide
-[MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/).
+[MusicXML exporteren](https://orthodox-ronl.github.io/VSA-tooling/guides/musicxml-export/).
 
 ---
 
@@ -45,7 +45,7 @@ daarvoor is [vsa svg](conversie-vsa-svg.md).
 | Eis            | Toelichting                                                                                                          |
 | -------------- | -------------------------------------------------------------------------------------------------------------------- |
 | Bestand        | `.vsa`, UTF-8                                                                                                        |
-| Validatie      | [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) aanbevolen vóór conversie |
+| Validatie      | [`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/) aanbevolen vóór conversie |
 | Frontmatter    | Aanbevolen: titel, toon, tempo                                                                                       |
 | Notatie-inhoud | Moet structuren bevatten die naar MusicXML te exporteren zijn                                                        |
 
@@ -83,7 +83,7 @@ Welke vlag je daarvoor zet: zie de CLI man-page.
 
 | Check                                                                                      | Blokkeert?                                              |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| [`vsa validate`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/validate/) | Aanbevolen; ongeldige `.vsa` geeft slechte of geen MXL  |
+| [`vsa validate`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/validate/) | Aanbevolen; ongeldige `.vsa` geeft slechte of geen MXL  |
 | Ontbrekend inputbestand                                                                    | Ja                                                      |
 
 Export-resolve controleert de MXL-inhoud **niet** opnieuw op build-time.
@@ -122,5 +122,5 @@ Export-resolve controleert de MXL-inhoud **niet** opnieuw op build-time.
 - [Exporttype mxl](exporttype-mxl.md)
 - [Exporttype coria](exporttype-coria.md)
 - [Conversiemechanismen — overzicht](conversiemechanismen.md)
-- [CLI: `vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)
-- [Guide: MusicXML exporteren](https://orthodox-groningen.github.io/VSA-tooling/guides/musicxml-export/)
+- [CLI: `vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/)
+- [Guide: MusicXML exporteren](https://orthodox-ronl.github.io/VSA-tooling/guides/musicxml-export/)

@@ -147,7 +147,7 @@ Per sectie (en bij PR-review):
 
 | Term / frase            | Gebruik                                                                                                                                                                                           |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Conversie**           | Tool met vaste I/O ([`vsa svg`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/svg/), [`vsa musicxml`](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/musicxml/)) |
+| **Conversie**           | Tool met vaste I/O ([`vsa svg`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/svg/), [`vsa musicxml`](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/musicxml/)) |
 | **Export**              | Hoe een afgeleide in een samenstelling verschijnt (`:::include …`)                                                                                                                                |
 | **Kanaal**              | Verouderd — gebruik *conversie* of *exporttype*                                                                                                                                                   |
 | **geldige VSA-notatie** | Voorkeur boven “VSA klopt” / “kloppende VSA” (tool-docs, VSA-tooling)                                                                                                                             |
@@ -222,7 +222,7 @@ Voor elke CLI (bijv. `vsa`, later ook `catalogus`):
 
 Workflow-guides vatten ketens samen en **verwijzen** naar deze man-pages.
 
-Canonieke `vsa`-CLI: [VSA-tooling CLI-referentie](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/).
+Canonieke `vsa`-CLI: [VSA-tooling CLI-referentie](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/).
 
 ---
 

@@ -6,7 +6,7 @@ audience: "P5 — Docs-/tool-contributor; P6 — Spec-/PR-reviewer"
 
 Status: plan (juni 2026; paden bijgewerkt augustus 2026).  
 Einddoel: alle `zondag-toon-<y>.md` (y = 1…8) in **VSA-demo** werken, met
-bronnen in `orthodox-groningen/bron` en ophalen via GitHub-checkout (geen
+bronnen in `orthodox-ronl/bron` en ophalen via GitHub-checkout (geen
 github.io voor assets).
 
 **Repo-rollen:**
@@ -213,6 +213,6 @@ Behoud alleen `.md` samenstellingen + sync-output (gitignored) of altijd sync in
 - [Repo-structuur](../specs/repo-structuur.md)
 - [Zangstuk-formaat](../specs/zangstuk-formaat.md)
 - [Zangstuk toevoegen](../manuals/zangstuk-toevoegen.md)
-- [VSA-demo](https://github.com/orthodox-groningen/VSA-demo) — content-source / sync
-- VSA-tooling: [uitgaveprofielen.md](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/plans/uitgaveprofielen.md),
-  [gebruikseisen-dragers.md](https://github.com/orthodox-groningen/VSA-tooling/blob/main/docs/plans/gebruikseisen-dragers.md)
+- [VSA-demo](https://github.com/orthodox-ronl/VSA-demo) — content-source / sync
+- VSA-tooling: [uitgaveprofielen.md](https://github.com/orthodox-ronl/VSA-tooling/blob/main/docs/plans/uitgaveprofielen.md),
+  [gebruikseisen-dragers.md](https://github.com/orthodox-ronl/VSA-tooling/blob/main/docs/plans/gebruikseisen-dragers.md)

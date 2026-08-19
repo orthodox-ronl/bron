@@ -20,7 +20,7 @@ def test_docs_pages_uses_reusable_deploy_workflow():
     text = WORKFLOW.read_text(encoding="utf-8")
 
     assert "pages-deploy-reusable.yml" in text
-    assert "orthodox-groningen/VSA-tooling" in text
+    assert "orthodox-ronl/VSA-tooling" in text
     assert "artifact_name: pages-docs-site" in text
 
 

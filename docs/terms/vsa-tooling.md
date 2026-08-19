@@ -4,9 +4,9 @@ termType: concept
 glossaryTerm: "VSA-tooling"
 glossaryText: "De Python-toolchain (`vsa` CLI) waarmee [vsa-notatie](@)-bestanden worden geparseerd, gevalideerd en omgezet naar [afgeleiden](@) zoals SVG en MusicXML."
 glossaryNotes:
-  - "De `vsa`-CLI biedt subcommando's voor validatie, rendering en export; zie de [CLI-referentie](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)."
+  - "De `vsa`-CLI biedt subcommando's voor validatie, rendering en export; zie de [CLI-referentie](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/)."
   - "VSA-tooling genereert [afgeleiden](@) uit [bronbestanden](@); de [afgeleiden](@) zelf worden niet in de [bron-repository](@) opgeslagen."
-  - "De tooling bevindt zich in de repo [orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)."
+  - "De tooling bevindt zich in de repo [orthodox-ronl/VSA-tooling](https://github.com/orthodox-ronl/VSA-tooling)."
 formPhrases:
   - vsa-tooling
   - vsa-tool
@@ -22,7 +22,7 @@ afgeleiden worden **niet** in de [bron-repository](@) bewaard, maar bij de build
 opnieuw gemaakt.
 
 Volledige commando’s, opties en voorbeelden:
-[CLI-referentie (`vsa`)](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/).
+[CLI-referentie (`vsa`)](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/).
 
 ## Wat je ermee doet
 
@@ -41,18 +41,18 @@ afgeleiden. Org-contracten (wat/wanneer):
 ## Installatie (kort)
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\VSA-tooling
+cd /d C:\Git\orthodox-ronl\VSA-tooling
 scripts\bootstrap.cmd
 ```
 
 Daarna kun je in de [bron-repository](@) valideren:
 
 ```cmd
-cd /d C:\Git\orthodox-groningen\bron
+cd /d C:\Git\orthodox-ronl\bron
 vsa validate zangstukken
 ```
 
-Details: [CLI-overzicht](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/).
+Details: [CLI-overzicht](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/).
 
 ## Motivatie
 
@@ -64,6 +64,6 @@ bronbestanden. In CI valideert `vsa validate zangstukken` bij push of PR.
 
 ## Zie ook
 
-- [CLI-referentie](https://orthodox-groningen.github.io/VSA-tooling/reference/cli/)
-- [VSA-demo](https://orthodox-groningen.github.io/VSA-demo/)
-- [GitHub orthodox-groningen/VSA-tooling](https://github.com/orthodox-groningen/VSA-tooling)
+- [CLI-referentie](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/)
+- [VSA-demo](https://orthodox-ronl.github.io/VSA-demo/)
+- [GitHub orthodox-ronl/VSA-tooling](https://github.com/orthodox-ronl/VSA-tooling)
