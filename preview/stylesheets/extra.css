@@ -1,5 +1,5 @@
 /*
-  orthodox-groningen docs — gedeelde look & feel (bron ↔ VSA-tooling).
+  orthodox-ronl docs — gedeelde look & feel (bron ↔ VSA-tooling).
   Spiegel dit bestand in beide repo's bij themawijzigingen.
 */
 
@@ -114,4 +114,20 @@
 .md-tabs__link:hover {
   color: var(--og-primary);
   opacity: 1;
+}
+
+/* TermRefs (TEv2/trrt): subtiel onderscheidbaar van gewone links */
+a.og-termref {
+  color: var(--og-accent);
+  text-decoration: underline dotted;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, var(--og-accent) 55%, transparent);
+}
+
+a.og-termref:hover,
+a.og-termref:focus {
+  color: var(--og-accent-light);
+  text-decoration-color: var(--og-accent);
+  background-color: color-mix(in srgb, var(--og-accent) 8%, transparent);
 }

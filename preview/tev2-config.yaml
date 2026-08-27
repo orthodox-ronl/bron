@@ -16,6 +16,7 @@ hrgt:
     - "*.md"
 
 trrt:
-  converter: html-hovertext-link
+  # Custom converter = html-hovertext-link + class="og-termref" (styling in stylesheets/extra.css).
+  converter: '<a class="og-termref" href="{{localize entry.navurl}}{{#if ref.trait}}#{{ref.trait}}{{/if}}" title="{{#if entry.hoverText}}{{entry.hoverText}}{{else}}{{#if entry.glossaryTerm}}{{entry.glossaryTerm}}{{else}}{{capFirst entry.term}}{{/if}}: {{noRefs entry.glossaryText type="markdown"}}{{/if}}">{{ref.showtext}}</a>'
   input:
     - "**/*.md"

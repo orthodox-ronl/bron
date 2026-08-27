@@ -1,10 +1,10 @@
 scope:
   scopetag: bron
-  scopedir: https://github.com/orthodox-groningen/bron/tree/main/docs
+  scopedir: https://github.com/orthodox-ronl/bron/tree/main/docs
   curatedir: terms
   glossarydir: mrgs
   defaultvsn: bron
-  website: https://orthodox-groningen.github.io/bron/preview
+  website: https://orthodox-ronl.github.io/bron/preview
   navpath: /terms
   navid: term
 
