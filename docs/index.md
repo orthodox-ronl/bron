@@ -59,10 +59,10 @@ die inhoud rechtstreeks uit de repository.
 
 ```cmd
 cd /d C:\Git\orthodox-ronl\bron
-scripts\docs-serve.cmd
+serve
 ```
 
-Met TermRefs (na `npm install`): `scripts\docs-serve-tev2.cmd`.
+Met TermRefs: `serve-tev2`.
 
 ## Externe tools
 

@@ -33,5 +33,6 @@ site-*/
 .venv/
 __pycache__/
 .pytest_cache/
+.ensure-stamp
 *.egg-info/
 node_modules/

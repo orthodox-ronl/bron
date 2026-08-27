@@ -9,7 +9,7 @@ audience: "P6 — Spec-/PR-reviewer; P5 — Docs-/tool-contributor"
 Deze pagina toont de **mensleesbare begrippenlijst** (HRG) van org-brede termen.
 De tabel wordt gevuld door de TEv2-pipeline (`hrgt`) vanuit de curated texts in
 `docs/terms/`. Zonder die build kan de tabel leeg of onvolledig lijken; lokaal:
-`scripts\docs-build-tev2.cmd`.
+`build`.
 
 **Samenhang en criteria** (vier niveaus, R1–R5): zie
 [Zangstukmodel](specs/terminologie.md). Per term: hover (TermRef) of de

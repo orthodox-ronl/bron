@@ -14,7 +14,7 @@ Voorkomt dubbele, uit elkaar lopende specificaties tussen repository's.
 
 | Type documentatie                                              | Canonieke repo           | Voorbeelden                                                                                                                                                                                                |
 | -------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Organisatie-breed, tool-onafhankelijk                          | **`bron`**               | [terminologie.md](terminologie.md), [inhoudslevenscyclus.md](inhoudslevenscyclus.md), [zangstuk-formaat.md](zangstuk-formaat.md), [parochie-lokaal zangstukken](../manuals/parochie-lokaal-zangstukken.md) |
+| Organisatie-breed, tool-onafhankelijk                          | **`bron`**               | [terminologie.md](terminologie.md), [repo-scripts.md](repo-scripts.md), [inhoudslevenscyclus.md](inhoudslevenscyclus.md), [zangstuk-formaat.md](zangstuk-formaat.md), [parochie-lokaal zangstukken](../manuals/parochie-lokaal-zangstukken.md) |
 | Org-contracten conversie/export (wat/wanneer)                  | **`bron`**               | [conversiemechanismen](../reference/conversiemechanismen.md), [exportcontracten](../reference/exportcontracten.md), [exporttype](@)-/[conversiemechanisme](@)-pagina's                                     |
 | Tool-specifiek (VSA), incl. CLI man-pages en Hugo-build        | **[VSA-tooling](@)**     | VSA-syntax, parser, SVG-rendering, Hugo-build, [`vsa` CLI-referentie](https://orthodox-ronl.github.io/VSA-tooling/reference/cli/)                                                                     |
 | Product-/gebruikseisen presentatie (dragers, uitgaveprofielen) | **VSA-tooling**          | [gebruikseisen-dragers](https://github.com/orthodox-ronl/VSA-tooling/blob/main/docs/plans/gebruikseisen-dragers.md); stub in bron toegestaan                                                          |
@@ -43,5 +43,5 @@ Elke repository onder `github.com/orthodox-ronl` hoort het bestand `.cursor/rule
 ## Gerelateerd
 
 - [Specificaties — index](index.md)
-- [Terminologie](terminologie.md)
+- [Repo-scripts](repo-scripts.md)
 - [VSA-tooling](https://github.com/orthodox-ronl/VSA-tooling) — tool-specifieke documentatie

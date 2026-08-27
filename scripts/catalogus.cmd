@@ -1,6 +1,7 @@
 @echo off
-REM Wrapper voor catalogus CLI — zelfde gedrag als `catalogus` op PATH.
 setlocal
 cd /d "%~dp0.."
+call scripts\_ensure.cmd --pip-e ".[dev]" --import catalogus
+if errorlevel 1 exit /b 1
 python -m catalogus.cli %*
 exit /b %errorlevel%

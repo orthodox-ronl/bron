@@ -11,6 +11,7 @@ van ze te kopiëren.
 | Document                                                                                         | Wat je er leest                                                                                                      |
 | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
 | [Documentatie-eigendom](documentatie-eigendom.md)                                                | Waar org-specs mogen staan, hoe stubs werken, en waarom je geen tweede volledige kopie in een tool-repo zet.         |
+| [Repo-scripts](repo-scripts.md)                                                                  | `scripts/`-commando's, PATH, `_ensure`, canonieke namen, toolchain (Python/Hugo/Node).                               |
 | [Zangstukmodel](terminologie.md)                                                                 | Vier niveaus, criteria en **samenhang**; gebruiksregels R1–R5. Definities ook in `docs/terms/`.                      |
 | [Zangstuk-identificatie](zangstuk-identificatie.md)                                              | Beknopte index naar ids/[aliassen](@); aanvulling op het Zangstukmodel.                                              |
 | [Begrippenlijst](../glossary.md)                                                                 | HRG-tabel (hoverdefinities) uit curated texts.                                                                       |

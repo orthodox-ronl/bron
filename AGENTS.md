@@ -39,23 +39,23 @@ Docs-prose (persona’s, paginatypen, jargon→TermRef, foutpaden, term-sjabloon
 
 | Vereiste      | Versie / tool                             |
 | ------------- | ----------------------------------------- |
-| Python        | ≥ 3.12                                    |
+| Python        | 3.14                                      |
 | Docs lokaal   | MkDocs Material (`requirements-docs.txt`) |
 | Catalogus     | `pip install -e ".[dev]"` in bron-root    |
 | VSA-validatie | `vsa` CLI uit repo VSA-tooling            |
 
+Scripts: [docs/specs/repo-scripts.md](docs/specs/repo-scripts.md).
+
 ```cmd
 cd /d C:\Git\orthodox-ronl\bron
-scripts\docs-serve.cmd
+serve
 ```
 
-VSA-validatie (VSA-tooling naast `bron`):
+VSA-validatie (`vsa` op PATH, VSA-tooling-venv):
 
 ```cmd
-cd /d C:\Git\orthodox-ronl\VSA-tooling
-scripts\bootstrap.cmd
 cd /d C:\Git\orthodox-ronl\bron
-vsa validate zangstukken
+validate
 ```
 
 **Commando's voor de gebruiker:** één kopieerbaar cmd-blok, Windows-paden (`\`).
@@ -73,7 +73,7 @@ spec [catalogus-samenstelling-zangstuk.md](docs/specs/catalogus-samenstelling-za
 
 ```cmd
 cd /d C:\Git\orthodox-ronl\bron
-scripts\test.cmd
+test
 python -m catalogus.cli index validate --bron-root .
 ```
 
@@ -81,15 +81,15 @@ python -m catalogus.cli index validate --bron-root .
 
 | Script                    | Doel                                              |
 | ------------------------- | ------------------------------------------------- |
-| `scripts\docs-serve.cmd`  | Snelle preview zonder TEv2                        |
-| `scripts\docs-serve-tev2.cmd` | Preview met TermRefs (CI-parity)              |
-| `scripts\docs-build.cmd`  | `mkdocs build --strict` zonder TEv2               |
-| `scripts\docs-build-tev2.cmd` | TEv2 + TermRef-check + MkDocs (CI)            |
+| `serve`                   | Snelle preview zonder TEv2                        |
+| `serve-tev2`              | Preview met TermRefs (CI-parity)                  |
+| `build --no-tev2`         | `mkdocs build --strict` zonder TEv2               |
+| `build`                   | TEv2 + TermRef-check + MkDocs (CI)                |
 
 ```cmd
 cd /d C:\Git\orthodox-ronl\bron
 npm install
-scripts\docs-build-tev2.cmd
+build
 ```
 
 Handleiding: [docs/manuals/docs-bijdragen.md](docs/manuals/docs-bijdragen.md).
@@ -98,7 +98,7 @@ Handleiding: [docs/manuals/docs-bijdragen.md](docs/manuals/docs-bijdragen.md).
 
 ```cmd
 cd /d C:\Git\orthodox-ronl\bron
-vsa validate zangstukken
+validate
 ```
 
 Zelfde stap als CI (`.github/workflows/validate-zangstukken.yml`).

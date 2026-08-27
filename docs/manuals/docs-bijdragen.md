@@ -11,22 +11,22 @@ Handleiding voor wie **docs** in de [bron-repository](@) (of parallel in
 
 | Script                         | Wanneer                                                                       |
 | ------------------------------ | ----------------------------------------------------------------------------- |
-| `scripts\docs-serve.cmd`       | Snelle lokale preview **zonder** glossary/TermRef-hover                       |
-| `scripts\docs-serve-tev2.cmd`  | Preview **met** TEv2 (zoals CI) — herhaal na term-/TermRef-wijzigingen        |
-| `scripts\docs-build.cmd`       | Alleen `mkdocs build --strict` (geen TEv2)                                    |
-| `scripts\docs-build-tev2.cmd`  | Volledige keten: TEv2 + TermRef-check + `mkdocs build --strict` (= CI-parity) |
+| `serve`                        | Snelle lokale preview **zonder** glossary/TermRef-hover                       |
+| `serve-tev2`                   | Preview **met** TEv2 (zoals CI) — herhaal na term-/TermRef-wijzigingen        |
+| `build --no-tev2`              | Alleen `mkdocs build --strict` (geen TEv2)                                    |
+| `build`                        | Volledige keten: TEv2 + TermRef-check + `mkdocs build --strict` (= CI-parity) |
 
 ```cmd
 cd /d C:\Git\orthodox-ronl\bron
 npm install
-scripts\docs-serve-tev2.cmd
+serve-tev2
 ```
 
 TEv2-tools: pins in root-`package.json` (`@tno-terminology-design/*` **1.2.0**).
 Voorkeur: `npm install` (lokaal `node_modules`), niet alleen globale installs.
 
-`docs-serve.cmd` / plain `docs-build.cmd` tonen **geen** opgeloste TermRefs;
-gebruik `*-tev2` als je hover of glossary wilt controleren.
+`serve` / `build --no-tev2` tonen **geen** opgeloste TermRefs;
+gebruik `serve-tev2` / `build` als je hover of glossary wilt controleren.
 
 ## TermRefs
 
@@ -64,7 +64,7 @@ Zie [TEv2 in tool-docs](https://orthodox-ronl.github.io/VSA-tooling/guides/tev2-
 
 ## Checklist vóór PR
 
-- [ ] `scripts\docs-build-tev2.cmd` groen (of CI `docs-pages` / docs-build)
+- [ ] `build` groen (of CI `docs-pages` / docs-build)
 - [ ] **Type + publiek** benoemd (of evident uit hub/pad): zie
       [schrijfconventies](../specs/schrijfconventies.md) — paginatypen / persona’s
 - [ ] **Lezerstest** voor dat type: kan de beoogde lezer in één scan antwoorden op
