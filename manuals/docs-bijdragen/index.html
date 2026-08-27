@@ -1265,6 +1265,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../specs/repo-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo-scripts (orthodox-ronl)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../specs/terminologie/" class="md-nav__link">
         
   
@@ -2648,31 +2676,31 @@
 </thead>
 <tbody>
 <tr>
-<td><code>scripts\docs-serve.cmd</code></td>
+<td><code>serve</code></td>
 <td>Snelle lokale preview <strong>zonder</strong> glossary/TermRef-hover</td>
 </tr>
 <tr>
-<td><code>scripts\docs-serve-tev2.cmd</code></td>
+<td><code>serve-tev2</code></td>
 <td>Preview <strong>met</strong> TEv2 (zoals CI) — herhaal na term-/TermRef-wijzigingen</td>
 </tr>
 <tr>
-<td><code>scripts\docs-build.cmd</code></td>
+<td><code>build --no-tev2</code></td>
 <td>Alleen <code>mkdocs build --strict</code> (geen TEv2)</td>
 </tr>
 <tr>
-<td><code>scripts\docs-build-tev2.cmd</code></td>
+<td><code>build</code></td>
 <td>Volledige keten: TEv2 + TermRef-check + <code>mkdocs build --strict</code> (= CI-parity)</td>
 </tr>
 </tbody>
 </table>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-ronl\bron
 npm install
-scripts\docs-serve-tev2.cmd
+serve-tev2
 </code></pre></div>
 <p>TEv2-tools: pins in root-<code>package.json</code> (<code>@tno-terminology-design/*</code> <strong>1.2.0</strong>).
 Voorkeur: <code>npm install</code> (lokaal <code>node_modules</code>), niet alleen globale installs.</p>
-<p><code>docs-serve.cmd</code> / plain <code>docs-build.cmd</code> tonen <strong>geen</strong> opgeloste TermRefs;
-gebruik <code>*-tev2</code> als je hover of glossary wilt controleren.</p>
+<p><code>serve</code> / <code>build --no-tev2</code> tonen <strong>geen</strong> opgeloste TermRefs;
+gebruik <code>serve-tev2</code> / <code>build</code> als je hover of glossary wilt controleren.</p>
 <h2 id="termrefs">TermRefs<a class="headerlink" href="#termrefs" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Org-termen: <code>[zangstuk](@)</code> in bron; in <a class="og-termref" href="/bron/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">VSA-tooling</a> bij voorkeur <code>[zangstuk](@bron)</code>
@@ -2720,7 +2748,7 @@ python scripts\align_markdown_tables.py ..\bron\docs\
 Zie <a href="https://orthodox-ronl.github.io/VSA-tooling/guides/tev2-docs/">TEv2 in tool-docs</a>.</p>
 <h2 id="checklist-voor-pr">Checklist vóór PR<a class="headerlink" href="#checklist-voor-pr" title="Permanent link">&para;</a></h2>
 <ul>
-<li>[ ] <code>scripts\docs-build-tev2.cmd</code> groen (of CI <code>docs-pages</code> / docs-build)</li>
+<li>[ ] <code>build</code> groen (of CI <code>docs-pages</code> / docs-build)</li>
 <li>[ ] <strong>Type + publiek</strong> benoemd (of evident uit hub/pad): zie
       <a href="../../specs/schrijfconventies/">schrijfconventies</a> — paginatypen / persona’s</li>
 <li>[ ] <strong>Lezerstest</strong> voor dat type: kan de beoogde lezer in één scan antwoorden op
@@ -2775,7 +2803,7 @@ Zie <a href="https://orthodox-ronl.github.io/VSA-tooling/guides/tev2-docs/">TEv2
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-08-19
+        Bijgewerkt: 2026-08-27
         
       </p>
       

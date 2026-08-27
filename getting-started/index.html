@@ -1251,6 +1251,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../specs/repo-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo-scripts (orthodox-ronl)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../specs/terminologie/" class="md-nav__link">
         
   
@@ -2652,10 +2680,10 @@ willen draaien — niet voor koorzangers die een dienst willen oefenen
 </code></pre></div>
 <h2 id="2-documentatie-lokaal-bekijken">2. Documentatie lokaal bekijken<a class="headerlink" href="#2-documentatie-lokaal-bekijken" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>cd /d C:\Git\orthodox-ronl\bron
-scripts\docs-serve.cmd
+serve
 </code></pre></div>
 <p>De site opent typisch op <code>http://127.0.0.1:8000/</code>. Voor glossary en TermRef-hover
-(zoals in CI): <code>scripts\docs-serve-tev2.cmd</code> (eerst <code>npm install</code>). Zie
+(zoals in CI): <code>serve-tev2</code> (eerst <code>npm install</code> of laat <code>_ensure</code> dat doen). Zie
 <a href="../manuals/docs-bijdragen/">Documentatie bijdragen</a>.</p>
 <h2 id="3-zangstukken-valideren">3. Zangstukken valideren<a class="headerlink" href="#3-zangstukken-valideren" title="Permanent link">&para;</a></h2>
 <p>Validatie van <a class="og-termref" href="/bron/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">VSA-notatie</a> in deze repo gebeurt met de CLI uit
@@ -2729,7 +2757,7 @@ vsa validate zangstukken
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-08-19
+        Bijgewerkt: 2026-08-27
         
       </p>
       
