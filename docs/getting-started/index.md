@@ -32,11 +32,11 @@ cd /d C:\Git\orthodox-ronl\bron
 
 ```cmd
 cd /d C:\Git\orthodox-ronl\bron
-scripts\docs-serve.cmd
+serve
 ```
 
 De site opent typisch op `http://127.0.0.1:8000/`. Voor glossary en TermRef-hover
-(zoals in CI): `scripts\docs-serve-tev2.cmd` (eerst `npm install`). Zie
+(zoals in CI): `serve-tev2` (eerst `npm install` of laat `_ensure` dat doen). Zie
 [Documentatie bijdragen](../manuals/docs-bijdragen.md).
 
 ## 3. Zangstukken valideren

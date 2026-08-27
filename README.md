@@ -15,19 +15,23 @@ door verschillende parochies wordt gebruikt. Parochies bouwen hun eigen site
 Specificaties, handleidingen, referentie en ontwikkelplannen — gebouwd met MkDocs
 Material. Preview van branches: **https://orthodox-ronl.github.io/bron/preview/**
 
-Lokaal:
+## Commando's
+
+Org-conventie: [repo-scripts](docs/specs/repo-scripts.md). Python **3.14**.
+
+| Commando | Doel |
+| -------- | ---- |
+| `test` | catalogus-pytest |
+| `validate` | catalogus index validate + `vsa validate zangstukken` |
+| `catalogus` | catalogus CLI |
+| `serve` | MkDocs preview zonder TEv2 |
+| `serve-tev2` | MkDocs preview met TEv2 |
+| `build` | TEv2 + MkDocs `--strict` (CI-pariteit) |
+| `build --no-tev2` | MkDocs zonder TEv2 |
 
 ```cmd
 cd /d C:\Git\orthodox-ronl\bron
-scripts\docs-serve.cmd
-```
-
-TEV2 + MkDocs lokaal bouwen:
-
-```cmd
-cd /d C:\Git\orthodox-ronl\bron
-npm install -g @tno-terminology-design/trrt @tno-terminology-design/hrgt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
-scripts\docs-build-tev2.cmd
+serve
 ```
 
 ## Wat staat hier wel, en wat niet

@@ -273,6 +273,6 @@ Korte alinea’s; genummerde stappen in workflows; admonitions (`!!! note`,
 
 - Nederlandse prose; code en paden in monospace
 - Mermaid-diagrammen voor ketens en pipeline-fases
-- Lokaal: `docs-serve.cmd` (snel) of `docs-serve-tev2.cmd` (TermRefs zoals CI)
-- `scripts\docs-build-tev2.cmd` / CI moet slagen vóór merge (`check-tev2-termrefs.py`)
+- Lokaal: `serve` (snel) of `serve-tev2` (TermRefs zoals CI)
+- `build` / CI moet slagen vóór merge (`check-tev2-termrefs.py`)
 - Contributor-checklist: [Documentatie bijdragen](../manuals/docs-bijdragen.md)

@@ -5,6 +5,8 @@ REM   npm install   (preferred; uses package.json pins)
 REM   of: npm install -g @tno-terminology-design/trrt @tno-terminology-design/hrgt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
 setlocal
 cd /d "%~dp0.."
+call scripts\_ensure.cmd --node --npm-install --pip-r requirements-docs.txt --import mkdocs
+if errorlevel 1 exit /b 1
 set NO_MKDOCS_2_WARNING=1
 
 if exist "%APPDATA%\npm" set "PATH=%APPDATA%\npm;%PATH%"
