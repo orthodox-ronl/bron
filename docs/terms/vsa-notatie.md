@@ -7,6 +7,7 @@ glossaryNotes:
   - "Een [vsa-bestand](@) is een [bronbestand](@) en tevens een [representatie](@) van een [uitvoeringsvorm](@)."
   - "VSA-notatie sluit aan bij de notatiepraktijk zoals beschreven in het Nederlandse Liturgikon (Den Haag, 1968)."
   - "VSA-notatie is niet bedoeld als vervanging van historische neumennotaties, maar als een formeel definieerbare variant van de vereenvoudigde praktijk in Nederlandse orthodoxe parochies."
+  - "Bracket-tokens zoals hoogte-markeringen en [toonhoogte-overgang](@) zijn onderdeel van de notatiesyntaxis; de normatieve grammatica staat in [vsa-tooling](@)."
 formPhrases:
   - vsa-notatie
   - vsa-notaties
