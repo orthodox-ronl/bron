@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://orthodox-ronl.github.io/bron/preview/terms/compositie/">
+        <link rel="canonical" href="https://orthodox-ronl.github.io/bron/preview/terms/toonhoogte-overgang/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Compositie - bron — documentatie</title>
+        <title>Toonhoogte-overgang - bron — documentatie</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#compositie" class="md-skip">
+        <a href="#toonhoogte-overgang" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Compositie
+              Toonhoogte-overgang
             
           </span>
         </div>
@@ -2471,6 +2471,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gerelateerd-verder-lezen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gerelateerd / verder lezen
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2488,7 +2499,7 @@
 
 
   
-    <a href="https://github.com/orthodox-ronl/bron/edit/main/docs/terms/compositie.md" title="Wijzig deze pagina" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/orthodox-ronl/bron/edit/main/docs/terms/toonhoogte-overgang.md" title="Wijzig deze pagina" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2496,40 +2507,49 @@
   
 
 
-<h1 id="compositie">Compositie<a class="headerlink" href="#compositie" title="Permanent link">&para;</a></h1>
-<p>Een <strong>compositie</strong> is een YAML-bestand onder <code>composities/</code> in de <a class="og-termref" href="/bron/preview/terms/bron-repository" title="Bron-repository: De git-repository <code>orthodox-ronl/bron</code> (of een expliciet aangewezen opvolger); de centrale opslagplaats voor Representaties van Uitvoeringsvormen (van Varianten) van Zangstukken, alsmede voor de specificaties van de opslag, en van manieren om daarin te zoeken.">bron-repository</a> met geordende verwijzingen naar <a class="og-termref" href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstukken</a> — in de toekomst via het volledige pad <code>(zangstuk-id, variant-id, uitvoeringsvorm-id)</code>.</p>
-<p><em>(Nog niet geïmplementeerd in de bron-repository.)</em></p>
+<h1 id="toonhoogte-overgang">Toonhoogte-overgang<a class="headerlink" href="#toonhoogte-overgang" title="Permanent link">&para;</a></h1>
+<p>Een <strong>toonhoogte-overgang</strong> is een stil token in <a class="og-termref" href="/bron/preview/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">vsa-notatie</a> waarmee je een
+bewuste sprong in relatieve toonhoogte tussen opeenvolgende stukken in één
+bron aangeeft, zonder de gezongen tekst te verdraaien en zonder iets op het
+blad te tonen.</p>
+<p>Vorm: <code>[&lt;oude-EHM&gt;:&lt;nieuwe-EHM&gt;]</code> — bijvoorbeeld <code>[//:/]</code> (van <code>//</code> naar <code>/</code>).</p>
 <table>
 <thead>
 <tr>
-<th>Term</th>
-<th>Waar</th>
-<th>Formaat</th>
+<th>Status</th>
+<th>Voorbeeld</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Compositie</strong></td>
-<td>org-brede ordered list (toekomst)</td>
-<td>yaml in <code>bron/composities/</code></td>
+<td>Wel</td>
+<td><code>[//:/]</code>, <code>[/://]</code>, <code>[:/]</code></td>
 </tr>
 <tr>
-<td><strong>Sjabloon</strong></td>
-<td>parochie</td>
-<td>markdown + <code>default.gelegenheidstype</code> + <code>:::include zoek=</code></td>
+<td>Niet</td>
+<td><code>[/:]</code> of <code>[//:]</code> (hoogte-markering, zichtbaar)</td>
 </tr>
 <tr>
-<td><strong>Samenstelling</strong></td>
-<td>parochie-publicatie</td>
-<td>markdown + <code>:::include</code> met catalogus-pad</td>
+<td>Niet</td>
+<td>Kunstmatige dalende EHM op het eerste woord</td>
 </tr>
 </tbody>
 </table>
-<p>Niet verwarren met <a class="og-termref" href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> (een ingevuld parochie-document) of sjabloon.</p>
 <h2 id="motivatie">Motivatie<a class="headerlink" href="#motivatie" title="Permanent link">&para;</a></h2>
-<p>Op organisatieniveau kan het nuttig zijn om een geordende lijst van <a class="og-termref" href="/bron/preview/terms/zangstuk" title="Zangstuk: Een liturgisch-muzikaal geheel met een stabiele <code>zangstuk-id</code>, waaronder nul of meer Varianten bestaan.">zangstukken</a> te hebben die bij een bepaalde dienst of gelegenheid horen — los van welke parochie die dienst viert. Dat is iets fundamenteel anders dan een parochie-specifieke <a class="og-termref" href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a>: een compositie beschrijft de <em>structuur</em> van een dienst vanuit de bron-repository, niet een concrete publicatie voor een specifiek koor.</p>
-<p>De term reserveert een plek voor dit concept, zodat het niet verward wordt met <a class="og-termref" href="/bron/preview/terms/samenstelling" title="Samenstelling: Een markdown-document (met VSA-directives) dat Representaties ordent voor een lezersdoel, zonder zelf Representatie te zijn.">samenstelling</a> of <a class="og-termref" href="/bron/preview/terms/variant" title="Variant (van een Zangstuk): Een zekere zelfstandige muzikale realisatie van het Zangstuk, dat zich van andere varianten van datzelfde Zangstuk onderscheidt door geheel eigen en wezenlijk andere muzikale kenmerken.">variant</a>, en zodat toekomstige tooling een duidelijk aanknopingspunt heeft.</p>
-<p>Zie ook: <a href="../../specs/terminologie/#19-compositie">Terminologie, paragraaf 19</a>.</p>
+<p>Zonder dit begrip moeten opeenvolgende stukken met verschillende relatieve
+starthoogte óf een validatiefout geven, óf de melodie verdraaien met
+kunstmatige modifiers. De toonhoogte-overgang maakt de sprong expliciet voor
+validatie en export, terwijl zangers op het blad alleen de gewone
+hoogte-markeringen blijven zien.</p>
+<h2 id="gerelateerd-verder-lezen">Gerelateerd / verder lezen<a class="headerlink" href="#gerelateerd-verder-lezen" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a class="og-termref" href="/bron/preview/terms/vsa-notatie" title="VSA-notatie: Het tekstgebaseerde notatieformaat waarmee liturgische zangteksten worden vastgelegd: een formeel gespecificeerde taal met scopes, modifiers en bracket-directives, parseeerbaar en valideerbaar door Vsa-tooling.">vsa-notatie</a>, <a class="og-termref" href="/bron/preview/terms/vsa-tooling" title="VSA-tooling: De Python-toolchain (<code>vsa</code> CLI) waarmee Vsa-notatie-bestanden worden geparseerd, gevalideerd en omgezet naar Afgeleiden zoals SVG en MusicXML.">vsa-tooling</a>, <a class="og-termref" href="/bron/preview/terms/vsa-bestand" title="vsa-bestand: Een bestand met de extensie <code>.vsa</code> waarvan de inhoud uitsluitend syntactisch geldige Vsa-notatie bevat — d.w.z. door de Vsa-tooling foutloos wordt geparseerd en gevalideerd.">vsa-bestand</a></li>
+<li>Normatieve tool-spec (syntax, semantiek, rendering):
+  <a href="https://github.com/orthodox-ronl/VSA-tooling/blob/development/docs/terminologie/toonhoogte-overgang.md">VSA-tooling — toonhoogte-overgang</a>
+  en <a href="https://github.com/orthodox-ronl/VSA-tooling/blob/development/docs/specification/syntax.md">syntax</a></li>
+<li>Documentatie-eigendom: VSA-syntax is tool-specifiek
+  (<a href="../../specs/documentatie-eigendom/">documentatie-eigendom</a>)</li>
+</ul>
 
 
 
@@ -2566,7 +2586,7 @@
       
       
       <p class="og-footer-stamps">
-        Bijgewerkt: 2026-07-11
+        Bijgewerkt: 2026-10-03
         
       </p>
       
