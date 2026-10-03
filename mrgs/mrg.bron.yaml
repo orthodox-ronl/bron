@@ -363,6 +363,30 @@ entries:
     termType: "concept"
     termid: "concept:source-entry"
     vsntag: "bron"
+  - git_date: 2026-10-03T00:00:00.000Z
+    term: "toonhoogte-overgang"
+    termType: "concept"
+    glossaryTerm: "Toonhoogte-overgang"
+    glossaryAlias: "Pitch-transition"
+    glossaryText: "Een stil bracket-token in [vsa-notatie](@) van de vorm `[<oude-EHM>:<nieuwe-EHM>]` dat een bewuste sprong in relatieve toonhoogte aangeeft zonder iets op het blad te tonen."
+    glossaryNotes:
+      - "Normatieve syntax, semantiek en rendering staan in VSA-tooling (tool-specifiek), niet in dit Zangstukmodel."
+      - "Onderscheid met een hoogte-markering `[<EHM>:]`: die eindigt op `:]` en is zichtbaar op het blad; een toonhoogte-overgang heeft niet-lege inhoud na de middelste `:` vóór `]`."
+      - "Voorbeeld: `[//:/]` springt van relatieve hoogte `//` naar `/` tussen opeenvolgende stukken in één bron."
+    formPhrases:
+      - "toonhoogte-overgang"
+      - "toonhoogte-overgangen"
+      - "pitch-transition"
+      - "pitch-transitions"
+    scopetag: "bron"
+    locator: "toonhoogte-overgang.md"
+    navurl: "https://orthodox-ronl.github.io/bron/terms/toonhoogte-overgang"
+    headingids:
+      - "toonhoogte-overgang"
+      - "motivatie"
+      - "gerelateerd-/-verder-lezen"
+    termid: "concept:toonhoogte-overgang"
+    vsntag: "bron"
   - git_date: 2026-08-08T00:00:00.000Z
     term: "uitvoeringsvorm"
     formPhrases:
@@ -452,7 +476,7 @@ entries:
       - "zie-ook:"
     termid: "concept:vsa-bestand"
     vsntag: "bron"
-  - git_date: 2026-08-19T00:00:00.000Z
+  - git_date: 2026-10-03T00:00:00.000Z
     term: "vsa-notatie"
     termType: "concept"
     glossaryTerm: "VSA-notatie"
@@ -461,6 +485,7 @@ entries:
       - "Een [vsa-bestand](@) is een [bronbestand](@) en tevens een [representatie](@) van een [uitvoeringsvorm](@)."
       - "VSA-notatie sluit aan bij de notatiepraktijk zoals beschreven in het Nederlandse Liturgikon (Den Haag, 1968)."
       - "VSA-notatie is niet bedoeld als vervanging van historische neumennotaties, maar als een formeel definieerbare variant van de vereenvoudigde praktijk in Nederlandse orthodoxe parochies."
+      - "Bracket-tokens zoals hoogte-markeringen en [toonhoogte-overgang](@) zijn onderdeel van de notatiesyntaxis; de normatieve grammatica staat in [vsa-tooling](@)."
     formPhrases:
       - "vsa-notatie"
       - "vsa-notaties"
